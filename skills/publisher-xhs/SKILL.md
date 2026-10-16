@@ -1,11 +1,11 @@
 ---
 name: publisher-xhs
-description: 小红书发布（草稿模式）— 默认**只把 xhs.txt + screenshots 路径交给 Fang 手贴**。只有当 `state/account-safety.yaml#xhs.ban_status.is_banned == false` **且** Fang 明确说「可以存草稿了」时，才用 browser use 登录创作者中心，**只存草稿、绝不点发布**。
+description: 小红书发布（草稿模式）— 默认**只把 xhs.txt + screenshots 路径交给 Fang 手贴**。只有当 `private/account-safety.yaml#xhs.ban_status.is_banned == false` **且** Fang 明确说「可以存草稿了」时，才用 browser use 登录创作者中心，**只存草稿、绝不点发布**。
 ---
 
 # 小红书发布
 
-## 决策（每次执行前先查 `state/account-safety.yaml#xhs.ban_status`）
+## 决策（每次执行前先查 `private/account-safety.yaml#xhs.ban_status`）
 
 | is_banned | Fang 授权「可以存草稿」 | 动作 |
 |-----------|----------------------|------|

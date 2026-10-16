@@ -23,7 +23,7 @@ description: X 转评赞 pulse — 给 @FrankFika 主账号提活跃度。**只 
 - ❌ 不写 AI 生成图、不堆 hashtag(≤ 1 个或不用)
 - ❌ 不写「配图如下 / 见下图 / 快去看」
 
-XHS 默认停手(`state/account-safety.yaml#xhs.ban_status.is_banned = true`)。
+XHS 默认停手(`private/account-safety.yaml#xhs.ban_status.is_banned = true`)。
 
 ## 配额(每轮)
 
@@ -136,7 +136,7 @@ XHS 默认停手(`state/account-safety.yaml#xhs.ban_status.is_banned = true`)。
 - `state/style-x.yaml` — 口语爆款风 style
 - `state/watchlist.yaml` — 46 个 X 账号名单
 - `state/forbidden.yaml` — 硬红线
-- `state/account-safety.yaml` — 登录态 + XHS ban 状态
+- `private/account-safety.yaml` — 登录态 + XHS ban 状态
 - `$CODEX_HOME/automations/x-engagement-pulse-30min/automation.toml` — cron prompt(精简版,引用本 skill)
 - `$CODEX_HOME/automations/x-engagement-pulse-30min/memory.md` — 轮次进度
 

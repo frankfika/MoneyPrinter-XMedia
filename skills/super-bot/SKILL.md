@@ -51,7 +51,7 @@ state/inbound-replies.json    # inbound reply 记录
 state/seen-posts.json         # outbound 全部记录
 
 # 账号状态
-state/account-safety.yaml     # X login_state + last_published + 限流历史
+private/account-safety.yaml     # X login_state + last_published + 限流历史
 
 # 当日 outputs 落盘
 ls -la outputs/$(date +%m%d)/  # 今日完成版目录

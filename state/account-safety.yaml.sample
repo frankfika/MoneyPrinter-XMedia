@@ -1,0 +1,70 @@
+# ============================================================
+# account-safety.yaml — 模板(本文件可分享)
+# ============================================================
+# 真正的运行时文件:private/account-safety.yaml(.gitignore 屏蔽)
+# 用法:复制本文件 → private/account-safety.yaml,填入你自己的账号信息
+# ============================================================
+
+x:
+  # 账号昵称(自己看懂的描述)
+  account_label: "你的 X 账号描述"
+
+  # 登录状态:logged_in / logged_out / unknown
+  login_state: unknown
+
+  # 上次确认登录的时间(ISO 8601 + 时区)
+  last_login_check: null
+
+  # 发布模式:
+  #   agent   = Codex 用 browser use 真实发帖
+  #   draft_only = Codex 只生成文案,不探后台
+  #   paused  = 停手
+  publish_mode: draft_only
+
+  # 限流历史:每次被 X 限流时追加一条
+  rate_limit_incidents: []
+
+  # 自由备注(接手说明、决策规则、特殊授权记录等)
+  notes: |
+    - 你接手这个账号的说明
+    - 需要主人决策的场景:验证码、二次验证、敏感授权
+
+  # 当前登录的用户(便于 Codex 校验是不是登错号)
+  logged_in_as: '@your_handle'
+
+  # 上一次发出去的帖子(便于追踪)
+  last_published: null
+
+xhs:
+  account_label: "你的小红书账号描述"
+
+  login_state: unknown
+  last_login_check: null
+
+  publish_mode: draft_only
+
+  ban_status:
+    # 是否被封禁
+    is_banned: true
+    # 封禁原因(便于复核)
+    ban_reason: ''
+    # 解封时间(若已知)
+    unbanned_at: null
+    # 谁做的申诉
+    appeal_done_by: null
+
+  notes: |
+    - 默认:只把标题/正文/标签+图交给主人手贴
+    - 解封后必须主人显式说"可以存草稿了",才用 browser use 登录创作者中心
+
+# Codex 解封小红书的合法指令(来自主人的明文授权)
+unban_required_phrases:
+  from_fang:
+    - 可以存草稿了
+    - 小红书解封了
+    - XHS 解封了
+
+  # 绝不能做的 AI 自作主张动作
+  forbidden_ai_initiative:
+    - 不要在未授权时登录创作者中心
+    - 不要尝试自动申诉

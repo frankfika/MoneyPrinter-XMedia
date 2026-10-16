@@ -254,7 +254,7 @@ fs.writeFileSync(base + "/screenshots/x-live-post.png", live);
 
 - **`state/published-posts.json`** — 加新条目（最前面，倒序）
 - **`state/seen-posts.json`** — `entries[i].posted_to_x` 加子对象（own_post_id / url / at / treatment_used / media_count）
-- **`state/account-safety.yaml#x.last_published`** — 更新 latest post
+- **`private/account-safety.yaml#x.last_published`** — 更新 latest post
 - **`x.txt` 末尾** — 加 `# posted_url: ...` + `# posted_at: ...`
 
 Python 一把梭：

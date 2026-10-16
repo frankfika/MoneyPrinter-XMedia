@@ -95,7 +95,7 @@
 ## 共同约束
 
 - 读 `state/forbidden.yaml` 当红线
-- 读 `state/account-safety.yaml` 决定 publish_mode
+- 读 `private/account-safety.yaml` 决定 publish_mode
 - 读 `seen-posts.json` + `recent-picks.json` 去重
 - XHS 默认停手（`account-safety.yaml#xhs.ban_status.is_banned = true`）
 
@@ -109,7 +109,7 @@
 - **screenshots/ 必抓真图**（cua_repl browser use）
   - 一条候选 4-6 张，按内容相关性，命名按 skill 协议
   - 存好后 `ls` 确认非空，写进 status
-- **XHS 默认停手**（`state/account-safety.yaml#xhs.ban_status.is_banned = true`）
+- **XHS 默认停手**（`private/account-safety.yaml#xhs.ban_status.is_banned = true`）
 - **诚实原则**：任何环节拿不到真实结果就写"未发"并给原因，不许装忙
 - **cooldown**：`schedule.yaml#cooldown_between_posts_min = 30` 分钟（同一 slot 内）
 

@@ -6,7 +6,7 @@ description: X 发布 — 接 post-writer-x 出的 x.txt，**用 browser use 在
 # X 发布
 
 ## 前置
-- 读 `state/account-safety.yaml#x`
+- 读 `private/account-safety.yaml#x`
   - `publish_mode == agent` 才能自动发；`draft_only` / `manual` 退化为只出草稿
   - `login_state == logged_in` 才走浏览器路径；否则把链接给 Fang
 - 读 `state/forbidden.yaml#login_rules.x_login`

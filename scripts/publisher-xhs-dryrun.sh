@@ -20,7 +20,7 @@ python3 - "${OUT_DIR}" > "${TMP}" <<'PY'
 import yaml, json, sys, pathlib
 
 out_dir = sys.argv[1]
-safety = yaml.safe_load(pathlib.Path("state/account-safety.yaml").read_text())
+safety = yaml.safe_load(pathlib.Path("private/account-safety.yaml").read_text())
 xhs = safety["xhs"]
 
 is_banned = xhs["ban_status"]["is_banned"]

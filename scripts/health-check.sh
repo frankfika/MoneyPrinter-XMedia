@@ -10,6 +10,7 @@ python3 <<'PY'
 import yaml, json, pathlib, sys
 ok = True
 state = pathlib.Path("state")
+private = pathlib.Path("private")
 
 def fail(msg):
     global ok
@@ -34,7 +35,7 @@ s = yaml.safe_load((state / "schedule.yaml").read_text())
 good(f"schedule slots = {[c['id'] for c in s['cron_slots']]}")
 
 # account-safety
-a = yaml.safe_load((state / "account-safety.yaml").read_text())
+a = yaml.safe_load((private / "account-safety.yaml").read_text())
 good(f"x login_state = {a['x'].get('login_state', '?')}  publish_mode = {a['x']['publish_mode']}")
 if a['x'].get('last_published'):
     good(f"x last_published: {a['x']['last_published'].get('post_id', '?')} @ {a['x']['last_published'].get('at', '?')}")

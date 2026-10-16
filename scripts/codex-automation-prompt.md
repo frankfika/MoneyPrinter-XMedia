@@ -21,7 +21,7 @@ Heartbeat（attach 到当前短文助手 thread，最稳；如要 standalone cro
 ```
 按 `/Users/fangchen/Documents/短文助手/skills/README.md` 入口协议跑一轮完整链路：
 
-1. 读 state/watchlist.yaml + state/filter-rules.yaml + state/account-safety.yaml
+1. 读 state/watchlist.yaml + state/filter-rules.yaml + private/account-safety.yaml
 2. 跑 bash /Users/fangchen/Documents/短文助手/scripts/run-all-slots.sh
 3. 看新生成的 outputs/<MMDD>-<slot>/ 下有没有 material.yaml；若有 →
    跑完整链路（browser use 抓真图 → 写 x.txt/xhs.txt → QA）

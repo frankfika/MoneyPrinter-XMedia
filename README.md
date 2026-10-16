@@ -59,11 +59,14 @@ X 账号 `@FrankFika` 已登录在 Codex in-app browser 里。
 │   ├── style-x.yaml                   # X 写作规范(口语爆款风 + quote embed)
 │   ├── style-xhs.yaml                 # 小红书写作规范(普通版)
 │   ├── forbidden.yaml                 # 红线清单(发前必读)
-│   ├── account-safety.yaml            # X / 小红书账号安全状态 + login_state
+│   ├── account-safety.yaml.sample     # account-safety.yaml 的模板(可分享)
 │   ├── seen-posts.json                # 去重:已发的 post_id
 │   ├── recent-picks.json              # 去重:近期选题记忆(7 天 expire)
 │   ├── published-posts.json           # 所有成功发出的帖(发布历史唯一事实源)
 │   └── inbound-replies.json           # 🆕 inbound 已回 reply 记录(2026-10-16 起)
+│
+├── private/                           # 本机私有(.gitignore)— 真人账号凭据,真人写真数据
+│   └── account-safety.yaml            # X / 小红书账号安全状态 + login_state(从 state/ 移过来,模板见 state/account-safety.yaml.sample)
 │
 ├── skills/                            # 7 个 skill(每个一份 SKILL.md)
 │   ├── README.md                      # skill 索引 + 流程图 + 共同约束
@@ -356,7 +359,7 @@ cat ~/.codex/automations/<id>/memory.md
 **这一轮做什么**:
 - 读 worker bot #1 + #2 的 `memory.md` 最近 24h
 - 读 `state/published-posts.json` + `inbound-replies.json` + `seen-posts.json` 当日新增
-- 读 `state/account-safety.yaml`(X login + 限流)
+- 读 `private/account-safety.yaml`(X login + 限流)
 - 扫 `outputs/$(date +%m%d)/` 当日完成版
 - 出结构化日报(创作 pipeline / engagement pulse / 异常 / 明日建议)
 - emit inbox-item 给 Fang
@@ -547,7 +550,7 @@ bash scripts/health-check.sh
 
 ### 给其他人同步(去掉私人内容)
 
-最小同步包(去掉 `account-safety.yaml` 和所有 `outputs/`,只保留可分享的 workflow / skill / state 模板):
+最小同步包(去掉 `private/account-safety.yaml` 和所有 `outputs/`,只保留可分享的 workflow / skill / state 模板 + `state/account-safety.yaml.sample` 模板):
 
 ```
 state/watchlist.yaml      (46 账号名单 = 公开)
@@ -556,6 +559,7 @@ state/schedule.yaml
 state/style-x.yaml
 state/style-xhs.yaml
 state/forbidden.yaml      (红线 = 公开)
+state/account-safety.yaml.sample  (模板,公开;接收方复制到 private/account-safety.yaml 后填写真实信息)
 state/seen-posts.json     (脱敏:删掉 own_post_id,保留 post_id dedup 模式)
 state/recent-picks.json   (脱敏:删掉 own_post_id)
 state/published-posts.json(脱敏:删掉 own_post_id)
@@ -566,7 +570,7 @@ scripts/                  (整份公开,launchd plist 需改路径)
 README.md                 (本文件)
 ```
 
-**不能分享**:`account-safety.yaml`(含登录态 + 个人信息)、`inbound-replies.json`、`outputs/`(含真图,可能是 Fang 私人素材)。
+**不能分享**:`private/account-safety.yaml`(含登录态 + 个人信息)、`inbound-replies.json`、`outputs/`(含真图,可能是 Fang 私人素材)。
 
 ### 部署到第二台机器 checklist
 
@@ -576,6 +580,8 @@ README.md                 (本文件)
 - [ ] `~/.codex/automations/super-bot/` 复制过去
 - [ ] 启动 Codex session,确认 `mcp__cua_repl__js` 在工具列表里
 - [ ] 在 Codex in-app browser 里登录 X 账号 @FrankFika
+- [ ] 从模板创建 `private/account-safety.yaml`:
+      `cp state/account-safety.yaml.sample private/account-safety.yaml && vim private/account-safety.yaml`
 - [ ] 跑 `bash scripts/health-check.sh` 看 12/12 PASS
 - [ ] 手动跑一轮 pulse 确认链路:
       > 「按 `/path/to/短文助手/skills/x-engagement-pulse/SKILL.md` 跑一轮 pulse」
