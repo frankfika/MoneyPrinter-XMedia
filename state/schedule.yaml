@@ -1,0 +1,48 @@
+timezone: Asia/Shanghai
+cron_slots:
+- id: am
+  cron: 0 9 * * *
+  label: 早间
+- id: noon
+  cron: 0 12 * * *
+  label: 午间
+- id: pm
+  cron: 0 15 * * *
+  label: 下午
+- id: eve
+  cron: 0 18 * * *
+  label: 傍晚
+- id: night
+  cron: 0 21 * * *
+  label: 夜间
+max_picks_per_slot: 3
+cooldown_between_posts_min: 30
+output_root: /Users/fangchen/Documents/短文助手/outputs
+output_naming: <MMDD>-<topic-slug-or-A|B|C>
+output_files:
+- x.txt
+- xhs.txt
+- screenshots/*.png
+install_hint: '# 在 macOS 用户 crontab 里加：
+
+  #   0 9,12,15,18,21 * * *  cd /Users/fangchen/Documents/短文助手 && bash scripts/run_slot.sh
+  >> logs/cron.log 2>&1
+
+  # 或者用 launchd（更稳），见 scripts/launchd/com.codex.short-posts.plist
+
+  '
+cron_runner_implementation:
+  scripts:
+    scripts/run-all-slots.sh: 顺序跑 5 个 slot 的入口
+    scripts/scan-slot.sh: 单 slot 的 lite 扫描（mmx web search）
+    scripts/launchd/com.codex.short-posts.scheduler.plist: macOS launchd 配置（每 slot
+      触发 run-all-slots.sh）
+  limitations:
+    mmx_search_does_not_index_x: 'mmx 是通用 web 搜索，不支持 from: / site:x.com 准确过滤，X 反爬让多数
+      x.com URL 不出现在搜索结果里 → scan-slot.sh 在多数 slot 会 found 0 candidate(s)'
+    real_x_scan_needs_browser: 想真扫 X 时间线 + 抓实时浏览量，必须走 skills/hot-topic-tracker/SKILL.md
+      描述的 browser use 路径（mcp__cua_repl__js + x.com/<handle>）
+  install_hint_crontab: 0 9,12,15,18,21 * * *  cd /Users/fangchen/Documents/短文助手 &&
+    bash scripts/run-all-slots.sh >> logs/cron.log 2>&1
+  install_hint_launchd: cp scripts/launchd/com.codex.short-posts.scheduler.plist ~/Library/LaunchAgents/
+    && launchctl load ~/Library/LaunchAgents/com.codex.short-posts.scheduler.plist

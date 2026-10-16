@@ -1,0 +1,45 @@
+# 小红书写作规范（普通版 · 2026-10-15 起默认）
+# 来源：HANDOFF-短文助手流程.md §5
+
+voice:
+  language: zh-CN
+  tone: 自然口语 / 像人分享科技见闻
+  avoid_terms:
+    - MCP
+    - Agent 托管
+    - 自动发文
+    - AI 托管发文
+    - Token
+    - 提示词工程
+    - RAG (RAG 也少用，用「资料库」替代)
+  emoji: 适量（标题 0，正文 1~3）
+
+# 结构（手贴友好）
+structure:
+  title: ≤20 单位（汉字约 1、ASCII 约 0.5）
+  body_lines: 多段落 / 多换行 / 多 emoji
+  tags: 适量（3~8 个），放文末
+
+# 长度
+length:
+  title_units: 20
+  body_chars_zh: 300~700
+
+# 必含
+must_have:
+  - 真实截图 ≥2 张（原帖 / 官网 / 论文 / GitHub）
+  - 一句「为什么值得看」
+  - 至少一个具体数字 / 链接 / 对比
+
+# 自检
+self_check:
+  - "标题 ≤20 单位？"
+  - "无 AI 托管 / 自动发文相关字眼？"
+  - "无 OpenCSG / 公司字样？"
+  - "≥2 张真图？"
+  - "无 AI 生成图？"
+
+# 发布策略（由 account-safety.yaml 控制）
+publish_strategy_default: |
+    只出标题 / 正文 / 标签 + 图路径，Fang 在 App 内粘贴发布。
+    不要在未授权时登录创作者中心。

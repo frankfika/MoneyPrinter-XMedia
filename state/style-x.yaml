@@ -1,0 +1,56 @@
+voice:
+  language: zh-CN
+  tone: 口语爆款风（对标 @canghe / @NFTCPS）
+  allowed_emotion_hooks:
+  - 卧槽
+  - 舒服了
+  - 太牛了
+  - 离谱
+  - 笑了
+  - 服了
+  - 牛
+  - 真的猛
+  emoji: 极简（0~2 个，行末偶尔一个）
+  hashtag: 0~1 个（或不用）
+structure:
+  opening: 冲击钩子（数字 / 反差 / 意外结果 / 福利）
+  body: 具体步骤 / 坑点 / 对比
+  ending: 一句轻收尾或行动号召（不写「快去看」式安利腔）
+length:
+  target_chars_zh: 180~320
+  min_chars_zh: 80
+  max_chars_zh: 500
+must_have:
+- 1 个可核对数字 / 事实 / 链接
+- ≥2 张真实截图（能多张就多张）
+- 原帖或官网链接（帖末或第一条评论）
+forbidden_phrases:
+- 配图如下
+- 见上图
+- 快去看
+- 一定要
+- AI 总结
+- 一键
+- 保姆级
+self_check:
+- 是否含 1 个具体数字 / 链接？
+- 是否含 ≥2 张真图？
+- 是否无 OpenCSG / 公司字样？
+- 是否无 hashtag 风暴？
+- 是否无 AI 生成图？
+treatment:
+  first_person_original: '适用：产品/发布/公共新闻 → 可用 Fang 自己的口吻原创改写，附原帖或官网截图/链接
+
+    '
+  quote_retweet: '适用：他人个人经历 / 故事 → X 应用「引用转发 + 你的短评」，不要改写成 Fang 第一人称
+
+    '
+x_auto_behavior:
+  auto_quote_embed:
+    trigger: 正文里出现任意 x.com / twitter.com 链接（被 X 解析为原帖）
+    result: X 自动把这条帖渲染成 Quote Repost，原帖卡片嵌在文末
+    implication_for_writer: 如果是 quote_retweet 类选题，不必自己手动 Quote Repost；只要把原帖 URL 放在正文末尾，常规
+      Post 即可，X 会自动完成引用嵌入
+    implication_for_seen: 这种 regular_post_x_auto_quoteembed 也算 quote_retweet 成功，seen-posts.json#posted_to_x.treatment_used
+      标这个值
+  verified_in_production: 2026-10-15 post_id=2110416897112248372

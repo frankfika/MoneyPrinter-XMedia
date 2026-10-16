@@ -1,0 +1,7 @@
+# material_id:
+# author_handle:
+# source_url:
+# draft_at:
+# screenshots: [x-1.png, x-2.png]
+#
+# 正文从这里开始（# 行是注释，发布脚本会过滤；正文每行 ≤80 字，短句换行）

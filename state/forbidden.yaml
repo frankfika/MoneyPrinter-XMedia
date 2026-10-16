@@ -1,0 +1,70 @@
+# 禁忌清单（写作 / 截图 / 发布 全部不许踩）
+# 来源：HANDOFF-短文助手流程.md §1 / §4 / §5
+# 这一份是硬红线，写稿前先 grep 一下自己生成的文案
+
+# —— 内容红线 —— #
+forbidden_content:
+  - id: no_opencsg
+    desc: "X 上不出现任何 OpenCSG / 公司业务宣传"
+    scope: [x, xhs]
+    severity: hard
+  - id: no_ai_images
+    desc: "禁止用 AI 生成 / 拼贴配图（ImageGen / 卡通 / 抽象画）"
+    scope: [x, xhs]
+    severity: hard
+  - id: no_fabricated_experience
+    desc: "不为原创分编造 Fang 没做过的个人经历"
+    scope: [x, xhs]
+    severity: hard
+  - id: no_ai_hosting_wording
+    desc: "小红书不出现「AI 托管发文 / 自动互动」相关字眼"
+    scope: [xhs]
+    severity: hard
+  - id: no_pure_hype
+    desc: "不能只发情绪腔，至少含 1 个可核对数字 / 事实 / 链接"
+    scope: [x, xhs]
+    severity: soft
+  - id: no_hashtag_storm
+    desc: "X 不堆 hashtag（≤1 个或不用）"
+    scope: [x]
+    severity: soft
+  - id: no_placeholder_captions
+    desc: "文案不写「配图如下 / 见下图」等元说明（发出时图就在帖下）"
+    scope: [x, xhs]
+    severity: soft
+
+# —— 截图要求 —— #
+screenshot_rules:
+  must_be_real: true
+  allowed_sources:
+    - 原帖自带媒体（下载保存）
+    - 官网 / 官方博客
+    - GitHub 仓库 / README
+    - arXiv / 论文页
+    - 产品发布页 / dashboard
+  forbidden_sources:
+    - AI 生成的图
+    - 自己拼贴的对比图
+    - 模糊看不清的截图
+
+# —— 风格红线 —— #
+style_red_flags:
+  x:
+    - 大段空话总结腔
+    - 长段落不换行
+    - 强推「快去看」式安利腔
+    - 跨平台复制粘贴同一段文案
+  xhs:
+    - 大段工具黑话堆砌（MCP / Agent / 托管 / Token / 提示词）
+    - 「AI 托管发文」「自动发文」相关表述
+    - 标题超过 20 单位（汉字约 1、ASCII 约 0.5）
+
+# —— 申诉 / 登录红线 —— #
+login_rules:
+  xhs_creator_center:
+    - "账号曾因「利用 AI 托管进行发文/互动」多篇未通过 → 已停代发"
+    - "未解封前严禁登录创作者中心代发、自动互动"
+    - "解封且 Fang 明确说「可以存草稿了」：浏览器只存草稿、绝不点发布"
+  x_login:
+    - "遇到 'We’ve temporarily limited your login' 立即停手，告诉 Fang，不要硬刷"
+    - "验证码 / 二次验证由 Fang 处理，不自动过"

@@ -1,0 +1,74 @@
+# 热点追踪账号名单（46）
+# 来源：HANDOFF-短文助手流程.md §10；2026-10-15 确认
+# 字段：
+#   handle      X 用户名（不含 @）
+#   lang        en / zh
+#   tier        official / executive / media / creator
+#   follow_for  为什么跟（一句话）
+#   status      active / dropped（已 dropped 不再扫描）
+
+accounts:
+  # ── 英文 / 机构 (25) ─────────────────────────
+  - { handle: elonmusk,         lang: en, tier: executive, follow_for: "xAI / Grok",                status: active }
+  - { handle: JensenHuang,      lang: en, tier: executive, follow_for: "NVIDIA",                    status: active }
+  - { handle: nvidia,           lang: en, tier: official,  follow_for: "NVIDIA AI 硬件与生态",      status: active }
+  - { handle: sama,             lang: en, tier: executive, follow_for: "OpenAI",                    status: active }
+  - { handle: gdb,              lang: en, tier: executive, follow_for: "OpenAI",                    status: active }
+  - { handle: ilyasut,          lang: en, tier: executive, follow_for: "OpenAI",                    status: active }
+  - { handle: johnschulman2,    lang: en, tier: executive, follow_for: "OpenAI",                    status: active }
+  - { handle: OpenAI,           lang: en, tier: official,  follow_for: "OpenAI 官方",               status: active }
+  - { handle: karpathy,         lang: en, tier: creator,   follow_for: "AI 教育 / 前 OpenAI·Tesla", status: active }
+  - { handle: AndrewYNg,        lang: en, tier: executive, follow_for: "deeplearning.ai",           status: active }
+  - { handle: demishassabis,    lang: en, tier: executive, follow_for: "DeepMind / Gemini",         status: active }
+  - { handle: GoogleDeepMind,   lang: en, tier: official,  follow_for: "DeepMind 官方",             status: active }
+  - { handle: ylecun,           lang: en, tier: executive, follow_for: "Meta AI",                   status: active }
+  - { handle: DrJimFan,         lang: en, tier: creator,   follow_for: "NVIDIA 研究",               status: active }
+  - { handle: rowancheung,      lang: en, tier: media,     follow_for: "AI 资讯",                   status: active }
+  - { handle: _akhaliq,         lang: en, tier: creator,   follow_for: "论文 / Demo 聚合",          status: active }
+  - { handle: emollick,         lang: en, tier: creator,   follow_for: "AI 商业与教育",             status: active }
+  - { handle: bindureddy,       lang: en, tier: creator,   follow_for: "AI 产品",                   status: active }
+  - { handle: swyx,             lang: en, tier: creator,   follow_for: "AI 工程",                   status: active }
+  - { handle: testingcatalog,   lang: en, tier: media,     follow_for: "AI 产品爆料/动态",          status: active }
+  - { handle: SemiAnalysis_,    lang: en, tier: media,     follow_for: "半导体 / AI 基建",          status: active }
+  - { handle: AnthropicAI,      lang: en, tier: official,  follow_for: "Anthropic / Claude",        status: active }
+  - { handle: huggingface,      lang: en, tier: official,  follow_for: "开源 ML",                   status: active }
+  - { handle: deepseek_ai,      lang: en, tier: official,  follow_for: "DeepSeek",                  status: active }
+  - { handle: Alibaba_Qwen,     lang: en, tier: official,  follow_for: "通义 Qwen",                 status: active }
+
+  # ── 中文 KOL (21) ────────────────────────────
+  - { handle: dotey,            lang: zh, tier: creator,   follow_for: "中文 AI 用法/资讯",         status: active }
+  - { handle: oran_ge,          lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: op7418,           lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: FinanceYF5,       lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: vista8,           lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: xiaohu,           lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: Gorden_Sun,       lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: berryxia,         lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: servasyy_ai,      lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: aigclink,         lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: shao__meng,       lang: zh, tier: creator,   follow_for: "中文 AI 资讯/工具",         status: active }
+  - { handle: jiqizhixin,       lang: zh, tier: media,     follow_for: "机器之心",                  status: active }
+  - { handle: lxfater,          lang: zh, tier: creator,   follow_for: "中文 AI 开发者/KOL",        status: active }
+  - { handle: Barret_China,     lang: zh, tier: creator,   follow_for: "中文 AI 开发者/KOL",        status: active }
+  - { handle: CuiMao,           lang: zh, tier: creator,   follow_for: "中文 AI 开发者/KOL",        status: active }
+  - { handle: AI_Jasonyu,       lang: zh, tier: creator,   follow_for: "中文 AI 开发者/KOL",        status: active }
+  - { handle: AlchainHust,      lang: zh, tier: creator,   follow_for: "花叔/花生",                 status: active }
+  - { handle: howie_serious,    lang: zh, tier: creator,   follow_for: "中文 AI 内容/教程",          status: active }
+  - { handle: Pluvio9yte,       lang: zh, tier: creator,   follow_for: "中文 AI 内容/教程",          status: active }
+  - { handle: tuturetom,        lang: zh, tier: creator,   follow_for: "中文 AI 内容/教程",          status: active }
+  - { handle: karminski3,       lang: zh, tier: creator,   follow_for: "中文 AI 内容/教程",          status: active }
+
+# 已取消/不跟的账号（保留记录，防再加回来）
+dropped:
+  - { handle: turingou, reason: "Fang 明确不再跟", dropped_at: "2026-10-15" }
+
+# 文风对标（仅供写稿时参考口吻，不是抓取名单）
+style_refs:
+  - canghe
+  - NFTCPS
+  - NFT_Chen
+
+meta:
+  total_active: 46
+  last_updated: "2026-10-15"
+  source_doc: "HANDOFF-短文助手流程.md §10"

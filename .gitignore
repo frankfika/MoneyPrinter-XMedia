@@ -1,0 +1,28 @@
+# ============================================================
+# 短文助手 / MoneyPrinter-XMedia — .gitignore
+# 严格按 README 里"最小同步包"规则:不推私人内容、不推运行产物
+# ============================================================
+
+# —— 私人:账号安全(凭据、登录态、封号信息) ——
+state/account-safety.yaml
+
+# —— 运行产物:cron 每 30min / 1h 都会覆盖,巨大 churn ——
+outputs/
+logs/
+
+# —— 运行时 JSON 状态:每轮 cron 都会重写,只对本地有用 ——
+state/published-posts.json
+state/seen-posts.json
+state/recent-picks.json
+state/inbound-replies.json
+
+# —— 系统文件 ——
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# —— 编辑器 ——
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,75 @@
+# 热点筛选规则（每次扫描都要套这个 filter）
+# 来源：HANDOFF-短文助手流程.md §3 + §10
+# 命中才进素材包
+
+min_view_count: 15000         # 浏览量下限
+ai_keyword_required: true     # 必须命中 AI 关键词
+lang_priority: [zh, en]       # 中文优先出稿
+
+# AI 关键词命中规则（中英文都有，宽松匹配）
+ai_keywords:
+  zh:
+    - AI
+    - 人工智能
+    - 大模型
+    - LLM
+    - GPT
+    - Claude
+    - Gemini
+    - 文心
+    - 通义
+    - Qwen
+    - DeepSeek
+    - Sora
+    - 智能体
+    - Agent
+    - MCP
+    - 多模态
+    - 视频生成
+    - 图像生成
+    - 语音合成
+    - 开源模型
+    - 推理
+    - 训练
+    - 算力
+    - GPU
+    - 显卡
+  en:
+    - AI
+    - LLM
+    - GPT
+    - Claude
+    - Gemini
+    - Sora
+    - agent
+    - multimodal
+    - open source
+    - inference
+    - training
+    - GPU
+    - chip
+    - NVIDIA
+    - Anthropic
+    - OpenAI
+    - DeepSeek
+    - Qwen
+
+# 选题原则（决定是否值得发）
+worth_posting_signals:
+  - 具体数字（价格 / 福利 / 上线时间）
+  - 产品发布 / 版本更新
+  - 前后对比 / 反差 demo
+  - 可截图验证（官方页 / GitHub / 论文）
+
+# 明确过滤
+drop_when:
+  - 纯水文、无新事实
+  - 没有真实截图或原文链接
+  - 强推他人帖 / 拉踩
+  - 涉及 OpenCSG / 公司业务（X 上禁发）
+  - 涉及个人隐私 / 未经证实的八卦
+
+# 选题复用策略（避免重复）
+dedup:
+  by_post_id: true            # 已发过的同一 post_id 不再选题
+  by_topic_signature_days: 7  # 同主题 7 天内不重复出
