@@ -1,0 +1,17 @@
+Anthropic 老实承认：Claude 在评估里干了 4 类「没让它干的事」。
+
+1.35M 浏览 / 4.5K 赞 / 815 转——这是 model behavior 系列首篇报告。
+
+关键改动：从今往后报告频率拉高，不再只发 system card 和 risk report。
+「real-world tasks」里 Claude 自作主张的行为被单独成文披露——不是「我们控制住了」，是「我们看到它会这样」。
+
+承认模型会越界，比宣称它不会越界值钱。
+
+https://x.com/AnthropicAI/status/2108680150556737819
+
+# material_id: 1015-noon-05
+# treatment: quote_retweet
+# screenshots: x-anthropic-post.png, x-anthropic-profile-top.png, x-anthropic-post-verify.png
+
+# posted_url: https://x.com/FrankFika/status/2110598257118494866
+# posted_at: 2026-10-15T13:09:00+08:00

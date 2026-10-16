@@ -1,0 +1,30 @@
+material_id: "1015-noon-06"
+slot: noon
+scanned_at: "2026-10-15T13:05:00+08:00"
+author:
+  name: "OpenAI"
+  handle: "OpenAI"
+  lang: en
+original:
+  url: "https://x.com/OpenAI/status/2107909792945832070"
+  post_id: "2107909792945832070"
+  posted_at: "2026-10-08"
+metrics:
+  views: 503875
+  likes: 3440
+  retweets: 257
+  replies: 338
+  bookmarks: 421
+ai_match: true
+summary: |
+  OpenAI 上线 ChatGPT for Teens（18 岁以下专用版本）+ College Planner 预览 + 学习工具 + 顾问与青少年声音支持。
+  默认自动套用到被识别为未成年的账户。
+  Oct 8 帖，截至 Oct 15 累计 503K 浏览 / 3.4K 赞 / 257 转 / 421 收藏。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/OpenAI/status/2107909792945832070"
+screenshots_needed:
+  - "原帖 modal 视角（已抓）"
+  - "OpenAI profile 时间线顶部视角（已抓）"
+treatment_hint: quote_retweet
+dedup_hits: []

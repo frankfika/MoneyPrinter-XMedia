@@ -1,0 +1,1429 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-10-16T11:34:00+08:00",
+  "purpose": "按 post_id 去重",
+  "entries": [
+    {
+      "post_id": "2110891071706198431",
+      "handle": "SemiAnalysis_",
+      "first_seen_at": "2026-10-16T10:38:00+08:00",
+      "topic_signature": "google-tpuv7-vs-gb300-agent-bench",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm-01"
+    },
+    {
+      "post_id": "2110758191256715504",
+      "handle": "Gorden_Sun",
+      "first_seen_at": "2026-10-16T10:38:00+08:00",
+      "topic_signature": "gorden-sun-ai-sister-video-demo",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm-02"
+    },
+    {
+      "post_id": "2110769358402408926",
+      "handle": "lxfater",
+      "first_seen_at": "2026-10-16T10:38:00+08:00",
+      "topic_signature": "lxfater-v100-deepseek-opencode-free",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm-03"
+    },
+    {
+      "post_id": "2110733274448306267",
+      "author": "dotey",
+      "first_seen_at": "2026-10-16T01:14:06.063593+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-late-2-01",
+      "outputs_dir": "outputs/1016-late-2/dotey-anthropic-distill/",
+      "post_url": "https://x.com/dotey/status/2110733274448306267",
+      "posted_to_x": {
+        "own_post_id": "2110780715625599464",
+        "own_post_url": "https://x.com/FrankFika/status/2110780715625599464",
+        "posted_at": "2026-10-16T01:14:06.063593+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110550989279506534",
+      "author": "bindureddy",
+      "first_seen_at": "2026-10-16T01:14:06.063593+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-late-2-02",
+      "outputs_dir": "outputs/1016-late-2/bindureddy-argon-production/",
+      "post_url": "https://x.com/bindureddy/status/2110550989279506534",
+      "posted_to_x": {
+        "own_post_id": "2110780937558786208",
+        "own_post_url": "https://x.com/FrankFika/status/2110780937558786208",
+        "posted_at": "2026-10-16T01:14:06.063593+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2108966708740505828",
+      "author": "op7418",
+      "first_seen_at": "2026-10-16T01:14:06.063593+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-late-2-03",
+      "outputs_dir": "outputs/1016-late-2/op7418-grokbot-threads/",
+      "post_url": "https://x.com/op7418/status/2108966708740505828",
+      "posted_to_x": {
+        "own_post_id": "2110781169407299850",
+        "own_post_url": "https://x.com/FrankFika/status/2110781169407299850",
+        "posted_at": "2026-10-16T01:14:06.063593+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110600036476506158",
+      "author": "oran_ge",
+      "first_seen_at": "2026-10-15T22:18:10.013295+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-eve-02",
+      "outputs_dir": "outputs/1015-eve/oran-ge-anthropic-q3-income/",
+      "post_url": "https://x.com/oran_ge/status/2110600036476506158",
+      "posted_to_x": {
+        "own_post_id": "2110736877297004939",
+        "own_post_url": "https://x.com/FrankFika/status/2110736877297004939",
+        "posted_at": "2026-10-15T22:18:10.013295+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 4
+      }
+    },
+    {
+      "post_id": "2110715601454784965",
+      "author": "GoogleDeepMind",
+      "first_seen_at": "2026-10-15T22:25:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-night-03",
+      "outputs_dir": "outputs/1015-night/deepmind-synthid-time-best-inventions/",
+      "post_url": "https://x.com/GoogleDeepMind/status/2110715601454784965",
+      "posted_to_x": {
+        "own_post_id": "2110736604860174705",
+        "own_post_url": "https://x.com/FrankFika/status/2110736604860174705",
+        "posted_at": "2026-10-15T22:25:00+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2105909609487872075",
+      "author": "karpathy",
+      "first_seen_at": "2026-10-15T22:21:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-night-02",
+      "outputs_dir": "outputs/1015-night/karpathy-llm-land-or-water-eval/",
+      "post_url": "https://x.com/karpathy/status/2105909609487872075",
+      "posted_to_x": {
+        "own_post_id": "2110736402602180677",
+        "own_post_url": "https://x.com/FrankFika/status/2110736402602180677",
+        "posted_at": "2026-10-15T22:21:00+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2105819303471976479",
+      "author": "karpathy",
+      "first_seen_at": "2026-10-15T22:15:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-night-01",
+      "outputs_dir": "outputs/1015-night/karpathy-llm-output-formats/",
+      "post_url": "https://x.com/karpathy/status/2105819303471976479",
+      "posted_to_x": {
+        "own_post_id": "2110736178756633029",
+        "own_post_url": "https://x.com/FrankFika/status/2110736178756633029",
+        "posted_at": "2026-10-15T22:15:00+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110720940665372825",
+      "author": "AnthropicAI",
+      "first_seen_at": "2026-10-15T22:16:20.646473+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-eve-01",
+      "outputs_dir": "outputs/1015-eve/anthropic-fellowships-2027/",
+      "post_url": "https://x.com/AnthropicAI/status/2110720940665372825",
+      "posted_to_x": {
+        "own_post_id": "2110736418196820255",
+        "own_post_url": "https://x.com/FrankFika/status/2110736418196820255",
+        "posted_at": "2026-10-15T22:16:20.646473+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2106388373221118198",
+      "author": "sama",
+      "first_seen_at": "2026-10-15T16:01:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-pm-01",
+      "outputs_dir": "outputs/1015-pm/sama-ai-safety-religious/",
+      "post_url": "https://x.com/sama/status/2106388373221118198",
+      "posted_to_x": {
+        "own_post_id": "2110642240850960860",
+        "own_post_url": "https://x.com/FrankFika/status/2110642240850960860",
+        "posted_at": "2026-10-15T16:01:00+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2107909792945832070",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-15T13:05:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-noon-06",
+      "outputs_dir": "outputs/1015-noon/openai-chatgpt-for-teens/",
+      "post_url": "https://x.com/OpenAI/status/2107909792945832070",
+      "posted_to_x": {
+        "own_post_id": "2110598529383354515",
+        "own_post_url": "https://x.com/FrankFika/status/2110598529383354515",
+        "posted_at": "2026-10-15T05:10:00.000Z",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2108680150556737819",
+      "author": "AnthropicAI",
+      "first_seen_at": "2026-10-15T13:05:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-noon-05",
+      "outputs_dir": "outputs/1015-noon/anthropic-unintended-actions/",
+      "post_url": "https://x.com/AnthropicAI/status/2108680150556737819",
+      "posted_to_x": {
+        "own_post_id": "2110598257118494866",
+        "own_post_url": "https://x.com/FrankFika/status/2110598257118494866",
+        "posted_at": "2026-10-15T05:09:00.000Z",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2107596713791767021",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-15T13:05:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-noon-04",
+      "outputs_dir": "outputs/1015-noon/openai-frontier-math-model/",
+      "post_url": "https://x.com/OpenAI/status/2107596713791767021",
+      "posted_to_x": {
+        "own_post_id": "2110597893300310223",
+        "own_post_url": "https://x.com/FrankFika/status/2110597893300310223",
+        "posted_at": "2026-10-15T05:08:00.000Z",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110047081414987957",
+      "author": "AnthropicAI",
+      "first_seen_at": "2026-10-15T10:08:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-noon-01",
+      "outputs_dir": "outputs/1015-noon/anthropic-source-control/",
+      "post_url": "https://x.com/AnthropicAI/status/2110047081414987957",
+      "posted_to_x": {
+        "own_post_id": "2110555566519296183",
+        "own_post_url": "https://x.com/FrankFika/status/2110555566519296183",
+        "posted_at": "2026-10-15T02:17:08.000Z",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2107894997538525580",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-15T10:08:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-noon-02",
+      "outputs_dir": "outputs/1015-noon/openai-gpt6-intelligent-ui/",
+      "post_url": "https://x.com/OpenAI/status/2107894997538525580",
+      "posted_to_x": {
+        "own_post_id": "2110555831855157688",
+        "own_post_url": "https://x.com/FrankFika/status/2110555831855157688",
+        "posted_at": "2026-10-15T02:18:08.000Z",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2109795898909950247",
+      "author": "AnthropicAI",
+      "first_seen_at": "2026-10-15T10:08:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-noon-03",
+      "outputs_dir": "outputs/1015-noon/anthropic-distillation-defense/",
+      "post_url": "https://x.com/AnthropicAI/status/2109795898909950247",
+      "posted_to_x": {
+        "own_post_id": "2110556258671681827",
+        "own_post_url": "https://x.com/FrankFika/status/2110556258671681827",
+        "posted_at": "2026-10-15T02:21:08.000Z",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110039274922131792",
+      "author": "GoogleDeepMind",
+      "first_seen_at": "2026-10-15T08:49:42+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-am-01",
+      "outputs_dir": "outputs/1015-am/google-deepmind-gemini4-argon/",
+      "posted_to_x": {
+        "own_post_id": "2110533769727967326",
+        "own_post_url": "https://x.com/FrankFika/status/2110533769727967326",
+        "posted_at": "2026-10-15T00:52:56.953925+00:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110289695888511368",
+      "author": "AnthropicAI",
+      "first_seen_at": "2026-10-15T08:49:42+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-am-02",
+      "outputs_dir": "outputs/1015-am/anthropic-singapore-office/",
+      "posted_to_x": {
+        "own_post_id": "2110533735569588647",
+        "own_post_url": "https://x.com/FrankFika/status/2110533735569588647",
+        "posted_at": "2026-10-15T00:52:56.953925+00:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110442001749659890",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-15T08:49:42+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-am-03",
+      "outputs_dir": "outputs/1015-am/openai-eu-ai-agents/",
+      "posted_to_x": {
+        "own_post_id": "2110534221911806169",
+        "own_post_url": "https://x.com/FrankFika/status/2110534221911806169",
+        "posted_at": "2026-10-15T00:52:56.953925+00:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2109361546505966046",
+      "author": "karpathy",
+      "first_seen_at": "2026-10-15T15:08:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-pm-01",
+      "outputs_dir": "outputs/1015-pm/karpathy-frontier-5000/",
+      "post_url": "https://x.com/karpathy/status/2109361546505966046",
+      "posted_to_x": {
+        "own_post_id": "2110416897112248372",
+        "own_post_url": "https://x.com/FrankFika/status/2110416897112248372",
+        "posted_at": "2026-10-14T17:06:12.000Z",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110741355739963884",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-15T22:50:12+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-late-01",
+      "outputs_dir": "outputs/1015-late/openai-simons-math-5m/",
+      "post_url": "https://x.com/OpenAI/status/2110741355739963884",
+      "posted_to_x": {
+        "own_post_id": "2110745383081255200",
+        "own_post_url": "https://x.com/FrankFika/status/2110745383081255200",
+        "posted_at": "2026-10-15T22:52:03+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110485178929844666",
+      "author": "NVIDIA",
+      "first_seen_at": "2026-10-15T22:53:12+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-late-02",
+      "outputs_dir": "outputs/1015-late/nvidia-uk-ai-5startups/",
+      "post_url": "https://x.com/NVIDIA/status/2110485178929844666",
+      "posted_to_x": {
+        "own_post_id": "2110746175548874976",
+        "own_post_url": "https://x.com/FrankFika/status/2110746175548874976",
+        "posted_at": "2026-10-15T22:55:06+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110020524088934754",
+      "author": "oran_ge",
+      "first_seen_at": "2026-10-15T22:56:08+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1015-late-03",
+      "outputs_dir": "outputs/1015-late/oran-ge-muse-vs-grokbot/",
+      "post_url": "https://x.com/oran_ge/status/2110020524088934754",
+      "posted_to_x": {
+        "own_post_id": "2110746998727200998",
+        "own_post_url": "https://x.com/FrankFika/status/2110746998727200998",
+        "posted_at": "2026-10-15T22:58:26+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110750157272719562",
+      "author": "nvidia",
+      "first_seen_at": "2026-10-16T01:24:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-late-01",
+      "outputs_dir": "outputs/1016-late/nvidia-nemotron-35-supervl/",
+      "post_url": "https://x.com/nvidia/status/2110750157272719562",
+      "posted_to_x": {
+        "own_post_id": "2110765429623025716",
+        "own_post_url": "https://x.com/FrankFika/status/2110765429623025716",
+        "posted_at": "2026-10-16T01:30:00+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110423274413056230",
+      "author": "_akhaliq",
+      "first_seen_at": "2026-10-16T01:34:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-late-02",
+      "outputs_dir": "outputs/1016-late/akhaliq-videojev-system/",
+      "post_url": "https://x.com/_akhaliq/status/2110423274413056230",
+      "posted_to_x": {
+        "own_post_id": "2110766536264933473",
+        "own_post_url": "https://x.com/FrankFika/status/2110766536264933473",
+        "posted_at": "2026-10-16T01:37:00+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110413943034491358",
+      "author": "_akhaliq",
+      "first_seen_at": "2026-10-16T01:40:00+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-late-03",
+      "outputs_dir": "outputs/1016-late/akhaliq-thinking-inertia/",
+      "post_url": "https://x.com/_akhaliq/status/2110413943034491358",
+      "posted_to_x": {
+        "own_post_id": "2110766998028472325",
+        "own_post_url": "https://x.com/FrankFika/status/2110766998028472325",
+        "posted_at": "2026-10-16T01:42:00+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110778025629347999",
+      "author": "finkd",
+      "first_seen_at": "2026-10-16T01:16:19.843283",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-01",
+      "outputs_dir": "outputs/1016-late-engage/finkd-muse-spark-open/",
+      "post_url": "https://x.com/finkd/status/2110778025629347999",
+      "engaged": {
+        "own_reply_id": "2110781795721691172",
+        "own_reply_url": "https://x.com/FrankFika/status/2110781795721691172",
+        "engaged_at": "2026-10-16T01:16:19.843283",
+        "kind": "like+reply",
+        "context": "Muse Spark Open weights. Meta 把权重开放 + 锁死 M5 Ultra Mac Studios. 用户之前发了 oran_ge Muse 完成度帖子,自然延伸."
+      }
+    },
+    {
+      "post_id": "2110605686086529470",
+      "author": "op7418",
+      "first_seen_at": "2026-10-16T01:18:17.182268",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-02",
+      "outputs_dir": "outputs/1016-late-engage/op7418-jev-114-followup/",
+      "post_url": "https://x.com/op7418/status/2110605686086529470",
+      "engaged": {
+        "own_reply_id": "2110782281774440472",
+        "own_reply_url": "https://x.com/FrankFika/status/2110782281774440472",
+        "engaged_at": "2026-10-16T01:18:17.182268",
+        "kind": "like+reply",
+        "context": "op7418 11h ago: '顺便说一句，JEV 模型这次的更新几乎都命中了我们在 Next Token 20 多天前提到的它需要改进的部分'. 9.7K views, 7 replies, 41 likes. 直接连到用户之前的 VideoJev System 帖 2110765429623025716."
+      }
+    },
+    {
+      "post_id": "2110745227283845471",
+      "author": "vista8",
+      "first_seen_at": "2026-10-16T01:19:34.098430",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-03",
+      "outputs_dir": "outputs/1016-late-engage/vista8-ai-fakereply/",
+      "post_url": "https://x.com/vista8/status/2110745227283845471",
+      "engaged": {
+        "own_reply_id": "2110782608410022242",
+        "own_reply_url": "https://x.com/FrankFika/status/2110782608410022242",
+        "engaged_at": "2026-10-16T01:19:34.098430",
+        "kind": "like+reply",
+        "context": "vista8 2h ago: '也有点受不了 X 上的 AI 伪人回复了… 想和歸藏一样用 Jev 写个工具自动屏蔽拉黑了'. 6.2K views, 48 replies, 48 likes, 1 bookmark. 中文 AI 评论 + meta 观察."
+      }
+    },
+    {
+      "post_id": "2110057543305396244",
+      "author": "_akhaliq",
+      "first_seen_at": "2026-10-16T01:20:07.567766",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-04",
+      "outputs_dir": "outputs/1016-late-engage/akhaliq-embodied-turing-machines/",
+      "post_url": "https://x.com/_akhaliq/status/2110057543305396244",
+      "engaged": {
+        "own_reply_id": "2110782748269134290",
+        "own_reply_url": "https://x.com/FrankFika/status/2110782748269134290",
+        "engaged_at": "2026-10-16T01:20:07.567766",
+        "kind": "like+reply",
+        "context": "akhaliq 2 days ago: 'Embodied Turing Machines - Stateful Code for Robot Recursive Self-Improvement' paper. 18K views, 13 replies, 80 likes, 75 bookmarks. 论文 + 评价体系 take."
+      }
+    },
+    {
+      "post_id": "2110715237397868791",
+      "author": "karminski3",
+      "first_seen_at": "2026-10-16T01:22:24.792359",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-05",
+      "outputs_dir": "outputs/1016-late-engage/karminski3-intel-d270/",
+      "post_url": "https://x.com/karminski3/status/2110715237397868791",
+      "engaged": {
+        "own_reply_id": "2110783319713644798",
+        "own_reply_url": "https://x.com/FrankFika/status/2110783319713644798",
+        "engaged_at": "2026-10-16T01:22:24.792359",
+        "kind": "like+reply",
+        "context": "karminski3 4h ago: 'Intel 480G 显卡 D270 (OCP 峰会)'. 18.8K views, 34 replies, 130 likes, 64 bookmarks. 本地 AI 推理硬件话题."
+      }
+    },
+    {
+      "post_id": "2110774703996670439",
+      "author": "jiqizhixin",
+      "first_seen_at": "2026-10-16T01:24:54.228132",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-06",
+      "outputs_dir": "outputs/1016-late-engage/jiqizhixin-wam-leaderboard/",
+      "post_url": "https://x.com/jiqizhixin/status/2110774703996670439",
+      "engaged": {
+        "own_reply_id": "2110783931826254255",
+        "own_reply_url": "https://x.com/FrankFika/status/2110783931826254255",
+        "engaged_at": "2026-10-16T01:24:54.228132",
+        "kind": "like+reply",
+        "context": "jiqizhixin 36 min ago: World-action models booming — 一键四改没人能拆清楚哪个维度在涨. 1 reply, 1 like, 203 views. 中文 + ablation 论点 + WAM-Leaderboard 提议."
+      }
+    },
+    {
+      "post_id": "2110704962418463004",
+      "author": "ajs6888",
+      "first_seen_at": "2026-10-16T01:26:30.370767",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-07",
+      "outputs_dir": "outputs/1016-late-engage/ajs6888-opencode-privacy/",
+      "post_url": "https://x.com/ajs6888/status/2110704962418463004",
+      "engaged": {
+        "own_reply_id": "2110784336882708930",
+        "own_reply_url": "https://x.com/FrankFika/status/2110784336882708930",
+        "engaged_at": "2026-10-16T01:26:30.370767",
+        "kind": "like+reply",
+        "context": "回 ajs6888 -5h ago OpenCode 模型表隐私条款观察. 1 reply / 160 views. 维护长期对话伙伴关系."
+      }
+    },
+    {
+      "post_id": "2110749181459730789",
+      "author": "canghe",
+      "first_seen_at": "2026-10-16T01:27:20.239387",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-08",
+      "outputs_dir": "outputs/1016-late-engage/canghe-codex-quota/",
+      "post_url": "https://x.com/canghe/status/2110749181459730789",
+      "engaged": {
+        "own_reply_id": "2110784557729669595",
+        "own_reply_url": "https://x.com/FrankFika/status/2110784557729669595",
+        "engaged_at": "2026-10-16T01:27:20.239387",
+        "kind": "like+reply",
+        "context": "@canghe (style ref) 2h ago Codex GPT-6.1 sol ultra 用量. 9.6K views, 13 replies, 7 likes. 配 ChatGPT for Teens 收割逻辑."
+      }
+    },
+    {
+      "post_id": "2110784129658691756",
+      "author": "nvidia",
+      "first_seen_at": "2026-10-16T01:28:03.601579",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-09",
+      "outputs_dir": "outputs/1016-late-engage/nvidia-sferical-one/",
+      "post_url": "https://x.com/nvidia/status/2110784129658691756",
+      "engaged": {
+        "own_reply_id": "2110784735266128035",
+        "own_reply_url": "https://x.com/FrankFika/status/2110784735266128035",
+        "engaged_at": "2026-10-16T01:28:03.601579",
+        "kind": "like+reply",
+        "context": "@nvidia 2 min ago Sferical One 共享 AI 超算 (Jensen + Spotify eldsjäl + Sferical AI). 早 reply 窗口, 与之前 London 5 startups 帖呼应."
+      }
+    },
+    {
+      "post_id": "2110760973737107952",
+      "author": "FinanceYF5",
+      "first_seen_at": "2026-10-16T01:29:03.109882",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-10",
+      "outputs_dir": "outputs/1016-late-engage/financeyf5-e2b-sandbox/",
+      "post_url": "https://x.com/FinanceYF5/status/2110760973737107952",
+      "engaged": {
+        "own_reply_id": "2110784992066580825",
+        "own_reply_url": "https://x.com/FrankFika/status/2110784992066580825",
+        "engaged_at": "2026-10-16T01:29:03.109882",
+        "kind": "like+reply",
+        "context": "@FinanceYF5 1h ago E2B 沙箱 - 5个月到20亿 agent sandbox. 3 replies, 2 likes, 954 views. Claude Code runtime 对比视角."
+      }
+    },
+    {
+      "post_id": "2110759320162038107",
+      "author": "xiaohu",
+      "first_seen_at": "2026-10-16T01:29:38.571745",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-11",
+      "outputs_dir": "outputs/1016-late-engage/xiaohu-kling-4/",
+      "post_url": "https://x.com/xiaohu/status/2110759320162038107",
+      "engaged": {
+        "own_reply_id": "2110785142835007599",
+        "own_reply_url": "https://x.com/FrankFika/status/2110785142835007599",
+        "engaged_at": "2026-10-16T01:29:38.571745",
+        "kind": "like+reply",
+        "context": "@xiaohu 1h ago 可灵 AI Kling 4.0 上线 (30秒原生+10张关键帧). 6 replies, 21 likes, 4160 views. 视频生成话题延续."
+      }
+    },
+    {
+      "post_id": "2110725718615437447",
+      "author": "AlchainHust",
+      "first_seen_at": "2026-10-16T01:30:28.474231",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-12",
+      "outputs_dir": "outputs/1016-late-engage/alchainhust-self-media-quiz/",
+      "post_url": "https://x.com/AlchainHust/status/2110725718615437447",
+      "engaged": {
+        "own_reply_id": "2110785330739921292",
+        "own_reply_url": "https://x.com/FrankFika/status/2110785330739921292",
+        "engaged_at": "2026-10-16T01:30:28.474231",
+        "kind": "like+reply",
+        "context": "@AlchainHust 3h ago 自媒体敏感度测试 - 猜哪 2 条 10w+. 20 replies, 8 likes, 3306 views. 互动型 + 体感总结."
+      }
+    },
+    {
+      "post_id": "2110716276163412314",
+      "author": "shao__meng",
+      "first_seen_at": "2026-10-16T01:31:43.486891",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-13",
+      "outputs_dir": "outputs/1016-late-engage/shaomeng-google-sdd/",
+      "post_url": "https://x.com/shao__meng/status/2110716276163412314",
+      "engaged": {
+        "own_reply_id": "2110785663956402507",
+        "own_reply_url": "https://x.com/FrankFika/status/2110785663956402507",
+        "engaged_at": "2026-10-16T01:31:43.486891",
+        "kind": "like+reply",
+        "context": "@shao__meng 4h ago Google 5天 AI Agents 课程 / SDD 规格驱动. 10 replies, 25 likes, 1227 views. Vibe Coding 圈话题延伸."
+      }
+    },
+    {
+      "post_id": "2110738313309286609",
+      "author": "Pluvio9yte",
+      "first_seen_at": "2026-10-16T01:32:16.736912",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-14",
+      "outputs_dir": "outputs/1016-late-engage/pluvio9yte-codex-pricing/",
+      "post_url": "https://x.com/Pluvio9yte/status/2110738313309286609",
+      "engaged": {
+        "own_reply_id": "2110785804327117300",
+        "own_reply_url": "https://x.com/FrankFika/status/2110785804327117300",
+        "engaged_at": "2026-10-16T01:32:16.736912",
+        "kind": "like+reply",
+        "context": "@Pluvio9yte 3h ago Codex 25x  vs Claude Max 20  怎么发展的. 27 replies, 32 likes, 10898 views. AI 工具定价讨论."
+      }
+    },
+    {
+      "post_id": "2110330538825527330",
+      "author": "howie_serious",
+      "first_seen_at": "2026-10-16T01:32:56.520999",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-15",
+      "outputs_dir": "outputs/1016-late-engage/howie-argon-vs-opus/",
+      "post_url": "https://x.com/howie_serious/status/2110330538825527330",
+      "engaged": {
+        "own_reply_id": "2110785966172749884",
+        "own_reply_url": "https://x.com/FrankFika/status/2110785966172749884",
+        "engaged_at": "2026-10-16T01:32:56.520999",
+        "kind": "like+reply",
+        "context": "@howie_serious Oct 14 Gemini 4 Argon 代码能力不如 Opus 5.5 / 太慢太慢了. 11 replies, 32 likes, 12185 views. 模型延迟体验讨论."
+      }
+    },
+    {
+      "post_id": "2110332882904580147",
+      "author": "berryxia",
+      "first_seen_at": "2026-10-16T01:34:12.272430",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-16",
+      "outputs_dir": "outputs/1016-late-engage/berryxia-renoise-mcp/",
+      "post_url": "https://x.com/berryxia/status/2110332882904580147",
+      "engaged": {
+        "own_reply_id": "2110786287905231271",
+        "own_reply_url": "https://x.com/FrankFika/status/2110786287905231271",
+        "engaged_at": "2026-10-16T01:34:12.272430",
+        "kind": "like+reply",
+        "context": "@berryxia Oct 14 Renoise AI 端到端视频平台 + MCP. 31 replies, 71 likes, 21K views. 平台 + 工具生态话题."
+      }
+    },
+    {
+      "post_id": "2110711257309536711",
+      "author": "AI_Jasonyu",
+      "first_seen_at": "2026-10-16T01:34:47.462620",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-17",
+      "outputs_dir": "outputs/1016-late-engage/aijasonyu-realtime-live/",
+      "post_url": "https://x.com/AI_Jasonyu/status/2110711257309536711",
+      "engaged": {
+        "own_reply_id": "2110786437658694102",
+        "own_reply_url": "https://x.com/FrankFika/status/2110786437658694102",
+        "engaged_at": "2026-10-16T01:34:47.462620",
+        "kind": "like+reply",
+        "context": "@AI_Jasonyu 4h ago 实时互动直播技术. 24 replies, 85 likes, 94 bookmarks, 20K views. 工程向 LLM streaming 拼接讨论."
+      }
+    },
+    {
+      "post_id": "2110777601627496911",
+      "author": "bindureddy",
+      "first_seen_at": "2026-10-16T01:35:22.680611",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-18",
+      "outputs_dir": "outputs/1016-late-engage/bindureddy-ai-legal/",
+      "post_url": "https://x.com/bindureddy/status/2110777601627496911",
+      "engaged": {
+        "own_reply_id": "2110786573969326091",
+        "own_reply_url": "https://x.com/FrankFika/status/2110786573969326091",
+        "engaged_at": "2026-10-16T01:35:22.680611",
+        "kind": "like+reply",
+        "context": "@bindureddy 35 min ago AI legal review. 16 replies, 33 likes, 2304 views. 免责路径角度观察."
+      }
+    },
+    {
+      "post_id": "2110768360917262520",
+      "author": "ajs6888",
+      "first_seen_at": "2026-10-16T01:35:52.048914",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-19",
+      "outputs_dir": "outputs/1016-late-engage/ajs6888-back-conversation/",
+      "post_url": "https://x.com/ajs6888/status/2110768360917262520",
+      "engaged": {
+        "own_reply_id": "2110786705322393824",
+        "own_reply_url": "https://x.com/FrankFika/status/2110786705322393824",
+        "engaged_at": "2026-10-16T01:35:52.048914",
+        "kind": "like+reply",
+        "context": "回 ajs6888 - 在用户帖下 reply 的回复 (1h ago) \"长流程能跑多稳比能吃几种输入更让人好奇\" / 深答 Opus 5.5 vs Argon 60 步 agent loop 对比."
+      }
+    },
+    {
+      "post_id": "2110751207086043147",
+      "author": "Gorden_Sun",
+      "first_seen_at": "2026-10-16T01:36:28.027092",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-20",
+      "outputs_dir": "outputs/1016-late-engage/gorden-sun-ai-autonomy/",
+      "post_url": "https://x.com/Gorden_Sun/status/2110751207086043147",
+      "engaged": {
+        "own_reply_id": "2110786859786031408",
+        "own_reply_url": "https://x.com/FrankFika/status/2110786859786031408",
+        "engaged_at": "2026-10-16T01:36:28.027092",
+        "kind": "like+reply",
+        "context": "@Gorden_Sun 2h ago 图像视频生成系统自主规划 + 五级标准. 2 replies, 3 likes, 1010 views. AI 自主生成讨论."
+      }
+    },
+    {
+      "post_id": "2110786960080155103",
+      "author": "op7418",
+      "first_seen_at": "2026-10-16T01:37:58.584663",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-21",
+      "outputs_dir": "outputs/1016-late-engage/op7418-muse-spark-open-fresh/",
+      "post_url": "https://x.com/op7418/status/2110786960080155103",
+      "engaged": {
+        "own_reply_id": "2110787236317049236",
+        "own_reply_url": "https://x.com/FrankFika/status/2110787236317049236",
+        "engaged_at": "2026-10-16T01:37:58.584663",
+        "kind": "like+reply",
+        "context": "@op7418 34 sec ago Muse Spark Open (816B / 42B 激活 / 1T ctx / 2x M5 Ultra). 早期 reply 窗口 111 views 1 reply."
+      }
+    },
+    {
+      "post_id": "2110784662071398807",
+      "author": "AnthropicAI",
+      "first_seen_at": "2026-10-16T01:38:21.516759",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-22",
+      "outputs_dir": "outputs/1016-late-engage/anthropicai-metr-eval/",
+      "post_url": "https://x.com/AnthropicAI/status/2110784662071398807",
+      "engaged": {
+        "own_reply_id": "2110787335243939869",
+        "own_reply_url": "https://x.com/FrankFika/status/2110787335243939869",
+        "engaged_at": "2026-10-16T01:38:21.516759",
+        "kind": "like+reply",
+        "context": "@AnthropicAI 9 min ago Independent evaluators METR / employee-like access. 59 replies, 367 likes, 24K views. AI 安全评估透明度观察."
+      }
+    },
+    {
+      "post_id": "2110784877629202507",
+      "author": "_akhaliq",
+      "first_seen_at": "2026-10-16T01:38:45.463259",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-23",
+      "outputs_dir": "outputs/1016-late-engage/akhaliq-failure-env-gen/",
+      "post_url": "https://x.com/_akhaliq/status/2110784877629202507",
+      "engaged": {
+        "own_reply_id": "2110787433679958447",
+        "own_reply_url": "https://x.com/FrankFika/status/2110787433679958447",
+        "engaged_at": "2026-10-16T01:38:45.463259",
+        "kind": "like+reply",
+        "context": "@_akhaliq 8 min ago From Failures to Learnable Worlds (导航 agent 失败生成环境). 2 replies, 6 likes, 1135 views. 接之前 ETM 那条 post 为锚."
+      }
+    },
+    {
+      "post_id": "2110786602805195191",
+      "author": "ClementDelangue",
+      "first_seen_at": "2026-10-16T01:39:23.132932",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-24",
+      "outputs_dir": "outputs/1016-late-engage/clem-hf-muse-spark/",
+      "post_url": "https://x.com/ClementDelangue/status/2110786602805195191",
+      "engaged": {
+        "own_reply_id": "2110787592992194671",
+        "own_reply_url": "https://x.com/FrankFika/status/2110787592992194671",
+        "engaged_at": "2026-10-16T01:39:23.132932",
+        "kind": "like+reply",
+        "context": "@ClementDelangue (HuggingFace CEO) 3 min ago Meta is back! + Muse Spark Open HF card. 9 likes, 741 views. 高价值 KOL 互动."
+      }
+    },
+    {
+      "post_id": "2110784994675220502",
+      "author": "testingcatalog",
+      "first_seen_at": "2026-10-16T01:39:48.262903",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-25",
+      "outputs_dir": "outputs/1016-late-engage/testingcatalog-muse-spark/",
+      "post_url": "https://x.com/testingcatalog/status/2110784994675220502",
+      "engaged": {
+        "own_reply_id": "2110787690996404380",
+        "own_reply_url": "https://x.com/FrankFika/status/2110787690996404380",
+        "engaged_at": "2026-10-16T01:39:48.262903",
+        "kind": "like+reply",
+        "context": "@testingcatalog 9 min ago META Muse Spark Open HF release. 20 likes, 1850 views. Wait for first-mover demo."
+      }
+    },
+    {
+      "post_id": "2110785572336009552",
+      "author": "mattyryze",
+      "first_seen_at": "2026-10-16T01:40:12.376134",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-26",
+      "outputs_dir": "outputs/1016-late-engage/mattyryze-interpretability/",
+      "post_url": "https://x.com/mattyryze/status/2110785572336009552",
+      "engaged": {
+        "own_reply_id": "2110787795585483045",
+        "own_reply_url": "https://x.com/FrankFika/status/2110787795585483045",
+        "engaged_at": "2026-10-16T01:40:12.376134",
+        "kind": "like+reply",
+        "context": "@mattyryze 7 min ago Interpretability / alignment thread / closer spin out 暗示. 3 likes, 2 replies, 253 views. AI 安全透明讨论."
+      }
+    },
+    {
+      "post_id": "2110698080853229874",
+      "author": "akokoi1",
+      "first_seen_at": "2026-10-16T01:41:02.749462",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-27",
+      "outputs_dir": "outputs/1016-late-engage/akokoi1-prince-game/",
+      "post_url": "https://x.com/akokoi1/status/2110698080853229874",
+      "engaged": {
+        "own_reply_id": "2110788006038978810",
+        "own_reply_url": "https://x.com/FrankFika/status/2110788006038978810",
+        "engaged_at": "2026-10-16T01:41:02.749462",
+        "kind": "like+reply",
+        "context": "@akokoi1 5h ago 小王子 3D 游戏教程 (Sac pipeline). 4 replies, 31 likes, 8.1K views. 工程时间分配 take."
+      }
+    },
+    {
+      "post_id": "2110572895546323404",
+      "author": "servasyy_ai",
+      "first_seen_at": "2026-10-16T01:42:11.274482",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-28",
+      "outputs_dir": "outputs/1016-late-engage/servasyy-gemini-real-stat/",
+      "post_url": "https://x.com/servasyy_ai/status/2110572895546323404",
+      "engaged": {
+        "own_reply_id": "2110788284511351016",
+        "own_reply_url": "https://x.com/FrankFika/status/2110788284511351016",
+        "engaged_at": "2026-10-16T01:42:11.274482",
+        "kind": "like+reply",
+        "context": "@servasyy_ai 14h ago Gemini 一次复核通过率统计 (286 次交付真实数据). 38 replies, 6 likes, 6030 views. 工程数据 + 边界分析."
+      }
+    },
+    {
+      "post_id": "2110786904203710516",
+      "author": "AGTPinsights",
+      "first_seen_at": "2026-10-16T01:43:01.559653",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-late-engage-29",
+      "outputs_dir": "outputs/1016-late-engage/agtp-sakana-agentic-scientist/",
+      "post_url": "https://x.com/AGTPinsights/status/2110786904203710516",
+      "engaged": {
+        "own_reply_id": "2110788509510607241",
+        "own_reply_url": "https://x.com/FrankFika/status/2110788509510607241",
+        "engaged_at": "2026-10-16T01:43:01.559653",
+        "kind": "like+reply",
+        "context": "@AGTPinsights 6 min ago Sakana AI The Agentic Scientist v3 (parallel coding agents co-discovery). 0 replies / 0 likes / 37 views - very early window. Reproducibility 疑问延伸."
+      }
+    },
+    {
+      "post_id": "2110835673003667527",
+      "author": "ClementDelangue",
+      "first_seen_at": "2026-10-16T05:27:11.647411+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-0530-engage-01",
+      "outputs_dir": "outputs/1016-0530-engage/clementdelangue-microducks-assess/",
+      "post_url": "https://x.com/ClementDelangue/status/2110835673003667527",
+      "engaged": {
+        "own_reply_id": "2110844690883113309",
+        "own_reply_url": "https://x.com/FrankFika/status/2110844690883113309",
+        "engaged_at": "2026-10-16T05:27:11.647411+08:00",
+        "kind": "like+reply",
+        "context": "@ClementDelangue (HF CEO) 33 min ago Sending Microducks to assess @AnthropicAI. 51→52 likes, 3139 views. AI safety/eval transparency trend - HF+Anthropic+METR 三方评估跑起来了, logit-level access 需求."
+      }
+    },
+    {
+      "post_id": "2110841898076418336",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-16T05:27:11.647411+08:00",
+      "treatment": "like_only",
+      "material_id": "1016-0530-engage-02",
+      "outputs_dir": "outputs/1016-0530-engage/openai-rosalind-academic/",
+      "post_url": "https://x.com/OpenAI/status/2110841898076418336",
+      "engaged": {
+        "engaged_at": "2026-10-16T05:27:11.647411+08:00",
+        "kind": "like_only",
+        "context": "@OpenAI 8 min ago GPT-Rosalind Academic Plan (U.S. universities sponsored access for biology research). 335→404 likes, 34159→39645 views. Too crowded for value-add reply, like-only."
+      }
+    },
+    {
+      "post_id": "2110831315247301062",
+      "author": "omarsar0",
+      "first_seen_at": "2026-10-16T05:27:11.647411+08:00",
+      "treatment": "like_only",
+      "material_id": "1016-0530-engage-03",
+      "outputs_dir": "outputs/1016-0530-engage/omarsar0-cool-product/",
+      "post_url": "https://x.com/omarsar0/status/2110831315247301062",
+      "engaged": {
+        "engaged_at": "2026-10-16T05:27:11.647411+08:00",
+        "kind": "like_only",
+        "context": "@omarsar0 53m ago 'Cool product - best AI images...' thread 5→6 likes, 1941 views. AI product research thread (DAIR AI). Like-only, mid engagement."
+      }
+    },
+    {
+      "post_id": "2110830216515919974",
+      "author": "nvidia",
+      "first_seen_at": "2026-10-16T05:27:11.647411+08:00",
+      "treatment": "like_only",
+      "material_id": "1016-0530-engage-04",
+      "outputs_dir": "outputs/1016-0530-engage/nvidia-jensen-nordics/",
+      "post_url": "https://x.com/nvidia/status/2110830216515919974",
+      "engaged": {
+        "engaged_at": "2026-10-16T05:27:11.647411+08:00",
+        "kind": "like_only",
+        "context": "@nvidia 58m ago AI has a lot to learn from the Nordics. Tonight Jensen celebrates... GTC Berlin/Stockholm event coverage. 155→156 likes, 7012 views. Like-only."
+      }
+    },
+    {
+      "post_id": "2110797830361436604",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-16T06:04:21.799689+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-pulse-01",
+      "outputs_dir": "n/a (pulse like+reply, no material_pack)",
+      "post_url": "https://x.com/OpenAI/status/2110797830361436604",
+      "posted_to_x": {
+        "own_post_id": "2110853682317394018",
+        "own_post_url": "https://x.com/FrankFika/status/2110853682317394018",
+        "posted_at": "2026-10-16T06:04:21.799689+08:00",
+        "treatment_used": "reply_riding_traffic",
+        "media_count": 0
+      },
+      "notes": "GPT-Live-1.1 voice 6 languages rollout, 420K views, 3h old; like+reply"
+    },
+    {
+      "post_id": "2110841898076418336",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-16T06:04:21.799689+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-pulse-02",
+      "outputs_dir": "n/a (pulse like+reply, no material_pack)",
+      "post_url": "https://x.com/OpenAI/status/2110841898076418336",
+      "posted_to_x": {
+        "own_post_id": "2110853999419371979",
+        "own_post_url": "https://x.com/FrankFika/status/2110853999419371979",
+        "posted_at": "2026-10-16T06:04:21.799689+08:00",
+        "treatment_used": "reply_riding_traffic",
+        "media_count": 0
+      },
+      "notes": "GPT-Rosalind Academic Plan biology AI, 81K views, 47m old; like (already from 30-min cron) + reply"
+    },
+    {
+      "post_id": "2110674226961322076",
+      "author": "bindureddy",
+      "first_seen_at": "2026-10-16T06:04:21.799689+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-pulse-03",
+      "outputs_dir": "n/a (pulse like+reply, no material_pack)",
+      "post_url": "https://x.com/bindureddy/status/2110674226961322076",
+      "posted_to_x": {
+        "own_post_id": "2110854221360947670",
+        "own_post_url": "https://x.com/FrankFika/status/2110854221360947670",
+        "posted_at": "2026-10-16T06:04:21.799689+08:00",
+        "treatment_used": "reply_riding_traffic",
+        "media_count": 0
+      },
+      "notes": "Token spend moved Anthropic→OpenAI, 19.5K views, 11h old; like+reply"
+    },
+    {
+      "post_id": "2110846112152105136",
+      "author": "AnthropicAI",
+      "first_seen_at": "2026-10-16T05:58:00+08:00",
+      "treatment": "like_only",
+      "material_id": "1016-pulse-04",
+      "outputs_dir": "n/a (pulse like-only, no reply due to Draft.js draft corruption)",
+      "post_url": "https://x.com/AnthropicAI/status/2110846112152105136",
+      "engaged": {
+        "engaged_at": "2026-10-16T05:58:00+08:00",
+        "kind": "like_only",
+        "context": "@AnthropicAI 22m ago $5M for math AI research + Simons Foundation partnership ($5M + $15M = $20M total). 35K views, 438 likes. Like done; reply draft got truncated by Draft.js editor issue, abandoned to avoid posting garbage."
+      }
+    },
+    {
+      "post_id": "2110846329341837698",
+      "author": "dotey",
+      "first_seen_at": "2026-10-16T05:58:00+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-pulse-05",
+      "outputs_dir": "outputs/1016-pulse/dotey-opus-fast-mode/",
+      "post_url": "https://x.com/dotey/status/2110846329341837698",
+      "posted_to_x": {
+        "own_post_id": "2110854248242299368",
+        "own_post_url": "https://x.com/FrankFika/status/2110854248242299368",
+        "posted_at": "2026-10-16T05:58:00+08:00",
+        "treatment_used": "reply_riding_traffic",
+        "media_count": 0
+      },
+      "engaged": {
+        "engaged_at": "2026-10-16T05:58:00+08:00",
+        "kind": "like+reply",
+        "context": "@dotey 21m ago Opus 5.5 fast mode out of research preview, API 2x price ($8/$40 per M tokens). 1K views, 7 likes. /fast timing matters for agent loops (几十步跑批). Self-quote-embed @FrankFika/status/2110782281774440472 (JEV video understanding 复刻任务)."
+      }
+    },
+    {
+      "post_id": "2110840519156965691",
+      "author": "yetone",
+      "first_seen_at": "2026-10-16T05:58:00+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-pulse-06",
+      "outputs_dir": "outputs/1016-pulse/yetone-magpie-plugins/",
+      "post_url": "https://x.com/yetone/status/2110840519156965691",
+      "posted_to_x": {
+        "own_post_id": "2110854700992225687",
+        "own_post_url": "https://x.com/FrankFika/status/2110854700992225687",
+        "posted_at": "2026-10-16T05:58:00+08:00",
+        "treatment_used": "reply_riding_traffic",
+        "media_count": 0
+      },
+      "engaged": {
+        "engaged_at": "2026-10-16T05:58:00+08:00",
+        "kind": "like+reply",
+        "context": "@yetone 44m ago Magpie Magpie 全面插件化（订阅/Provider/中间件/路由/Agent/Page/MCP 工具都开放）. 1.4K views, 18 likes. Provider 拆出来省 sign-in + token refresh + 路由重写；下个版本该立插件间权限模型防 agent 拿别家 token."
+      }
+    },
+    {
+      "post_id": "2110855363616763922",
+      "author": "OpenAIDevs",
+      "first_seen_at": "2026-10-16T06:28:31+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-pulse-07",
+      "outputs_dir": "n/a (pulse like+reply, no material_pack)",
+      "post_url": "https://x.com/OpenAIDevs/status/2110855363616763922",
+      "posted_to_x": {
+        "own_post_id": "2110860170574418424",
+        "own_post_url": "https://x.com/FrankFika/status/2110860170574418424",
+        "posted_at": "2026-10-16T06:28:31+08:00",
+        "treatment_used": "reply_riding_traffic",
+        "media_count": 0
+      },
+      "notes": "@OpenAIDevs 15m ago 'You can just build things with Codex' hardware projects site launch. 132→148 likes / 8030→9029 views. /fast thinking on hardware-firmware flows (RP2040/ESP32 fork-edit) + self-quote-embed @FrankFika/status/2110782281774440472 (Codex 视频理解复刻帖)."
+    },
+    {
+      "post_id": "2110811286619693298",
+      "author": "bindureddy",
+      "first_seen_at": "2026-10-16T06:28:31+08:00",
+      "treatment": "reply_riding_traffic",
+      "material_id": "1016-pulse-08",
+      "outputs_dir": "n/a (pulse like+reply, no material_pack)",
+      "post_url": "https://x.com/bindureddy/status/2110811286619693298",
+      "posted_to_x": {
+        "own_post_id": "2110860284965552324",
+        "own_post_url": "https://x.com/FrankFika/status/2110860284965552324",
+        "posted_at": "2026-10-16T06:28:31+08:00",
+        "treatment_used": "reply_riding_traffic",
+        "media_count": 0
+      },
+      "notes": "@bindureddy 3h ago 'Meta should open source Meta Wonder' — China US open-source race frame. 97→102 likes / 7718→7787 views. Reply: open weights 长尾开发者香 + benchmark 不公开算力成本对比是空话 + 看 fine-tune 链是否一起放."
+    },
+    {
+      "post_id": "2110802233738641429",
+      "author": "nvidia",
+      "first_seen_at": "2026-10-16T06:28:31+08:00",
+      "treatment": "like_only",
+      "material_id": "1016-pulse-09",
+      "outputs_dir": "n/a (pulse like-only, no reply)",
+      "post_url": "https://x.com/nvidia/status/2110802233738641429",
+      "engaged": {
+        "engaged_at": "2026-10-16T06:28:31+08:00",
+        "kind": "like_only",
+        "context": "@nvidia 3h ago 'Want to win ASUS ProArt P14 RTX Spark laptop signed by Jensen?' #ShareYourSpark sweepstakes. 138→141 likes / 17K views. Like-only; sweepstakes 帖不适合 reply."
+      }
+    },
+    {
+      "post_id": "2110828155594559966",
+      "author": "testingcatalog",
+      "first_seen_at": "2026-10-16T06:28:31+08:00",
+      "treatment": "like_only",
+      "material_id": "1016-pulse-10",
+      "outputs_dir": "n/a (pulse like-only, no reply)",
+      "post_url": "https://x.com/testingcatalog/status/2110828155594559966",
+      "engaged": {
+        "engaged_at": "2026-10-16T06:28:31+08:00",
+        "kind": "like_only",
+        "context": "@testingcatalog 2h ago 'Black Forest Labs launched FLUX 3 Image Klein' 5.6B open-weight image model, runs on single consumer GPU, 4K native. 51→52 likes / 4.3K views. Like-only; image-gen 帖 reply 容易引战 baseline."
+      }
+    },
+    {
+      "post_id": "2110793952349577418",
+      "reply_id": "2110867593825505389",
+      "handle": "dotey",
+      "timestamp": "2026-10-16T06:55:00+08:00",
+      "treatment": "reply_riding_traffic",
+      "action": "like+reply",
+      "note": "Cheng Lou Handwired hand-weight trick — 80 likes 11.7K views 4h ago"
+    },
+    {
+      "post_id": "2110861420321759269",
+      "reply_id": "2110869265549234343",
+      "handle": "AIatMeta",
+      "timestamp": "2026-10-16T07:03:30+08:00",
+      "treatment": "reply_riding_traffic",
+      "action": "like+reply",
+      "note": "Meta Omnilingual ASR TIME Best Inventions 2026 — 82 likes 4.4K views 21m ago"
+    },
+    {
+      "post_id": "2110651055331770485",
+      "reply_id": null,
+      "handle": "_akhaliq",
+      "timestamp": "2026-10-16T06:57:00+08:00",
+      "treatment": "reply_riding_traffic",
+      "action": "like-only",
+      "note": "Player-1 paper highlights — 74 likes 13K views 14h ago",
+      "reply_to_post_id": "2110651055331770485",
+      "own_reply_id": "2110921258468835662",
+      "own_reply_url": "https://x.com/FrankFika/status/2110921258468835662",
+      "at": "2026-10-16T10:30:30+08:00",
+      "topic": "player-1-synthetic-experience-rl-beats-scale",
+      "upgrade_notes": "Round N+7 (2026-10-16 10:30): upgraded from like_only (06:57) to reply_riding_traffic. Reply text highlights +27.8 vs +17.7 SFT delta on MineDojo-300, 9B+RL > 35B-A3B+RL, synthetic experience as data architecture over model architecture."
+    },
+    {
+      "post_id": "2110834951130161622",
+      "reply_id": null,
+      "handle": "testingcatalog",
+      "timestamp": "2026-10-16T06:59:00+08:00",
+      "treatment": "like_only",
+      "action": "like-only",
+      "note": "Attio CRM + AI agents — 25 likes 4.3K views 2h ago (high views + low reply pattern)"
+    },
+    {
+      "post_id": "2110841899838046525",
+      "author": "OpenAI",
+      "first_seen_at": "2026-10-16T07:10:01.027773+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-am-01",
+      "outputs_dir": "outputs/1016-am/openai-rosalind-data-policy",
+      "post_url": "https://x.com/OpenAI/status/2110841899838046525",
+      "posted_to_x": {
+        "own_post_id": "2110870735619289325",
+        "own_post_url": "https://x.com/FrankFika/status/2110870735619289325",
+        "posted_at": "2026-10-16T07:10:01.027773+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110817988311998911",
+      "author": "nvidia",
+      "first_seen_at": "2026-10-16T07:11:09.053355+08:00",
+      "treatment": "quote_retweet",
+      "material_id": "1016-am-02",
+      "outputs_dir": "outputs/1016-am/nvidia-starmind-spacx",
+      "post_url": "https://x.com/nvidia/status/2110817988311998911",
+      "posted_to_x": {
+        "own_post_id": "2110871037567226086",
+        "own_post_url": "https://x.com/FrankFika/status/2110871037567226086",
+        "posted_at": "2026-10-16T07:11:09.053355+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110866531932316011",
+      "reply_id": "2110874973711806576",
+      "handle": "antigravity",
+      "timestamp": "2026-10-16T07:27:27+08:00",
+      "treatment": "reply_riding_traffic",
+      "action": "like+reply",
+      "note": "Google Antigravity Gemini 4 Argon Pro rollout — 1470→1508 likes / 34047 views / 32 min ago. Reply: Pro 毕业 / Argon 配额独立切割 / Antigravity IDE agent loop 接 Argon 推理增强.",
+      "material_id": "1016-pulse-11"
+    },
+    {
+      "post_id": "2110739088420806737",
+      "reply_id": "2110875087293616635",
+      "handle": "oran_ge",
+      "timestamp": "2026-10-16T07:27:27+08:00",
+      "treatment": "reply_riding_traffic",
+      "action": "like+reply",
+      "note": "AI Slop Native 孙学/薄肌/黄毛理论 — 20 likes / 8407 views / 8h ago. Reply: commit 前反向 prompt 调 AI 改回人类写法 + 没人拍板的 AI review 等于没 review.",
+      "material_id": "1016-pulse-12"
+    },
+    {
+      "post_id": "2110759134748684568",
+      "reply_id": null,
+      "handle": "vista8",
+      "timestamp": "2026-10-16T07:27:27+08:00",
+      "treatment": "like_only",
+      "action": "like-only",
+      "note": "Skill 阳谋 — 27→28 likes / 4997 views / 7h ago. Like-only;  阳谋 论点已 saturate 在 YunTechX reply 里铺开了.",
+      "material_id": "1016-pulse-13"
+    },
+    {
+      "post_id": "2110716791072985265",
+      "reply_id": null,
+      "handle": "oran_ge",
+      "timestamp": "2026-10-16T07:27:27+08:00",
+      "treatment": "like_only",
+      "action": "like-only",
+      "note": "Vibe Coding 自娱自乐 — 17→18 likes / 3858 views / 10h ago. Like-only; 同 handle oran_ge 已在 thread 1 reply 一条,保持 handle cadence.",
+      "material_id": "1016-pulse-14"
+    },
+    {
+      "post_id": "2110866535069651297",
+      "reply_id": null,
+      "handle": "antigravity",
+      "timestamp": "2026-10-16T08:02:26+08:00",
+      "treatment": "like_only",
+      "action": "like-only",
+      "note": "Antigravity followup Learn more docs/models — 51 likes 16K views (was on watchlist from prior round; followed my prior like+reply on main Argon post)"
+    },
+    {
+      "post_id": "2110832979656524283",
+      "reply_id": "2110883299652751394",
+      "handle": "OpenAIDevs",
+      "timestamp": "2026-10-16T08:02:26+08:00",
+      "treatment": "reply_riding_traffic",
+      "action": "like+reply",
+      "note": "Sites GA for Enterprise + EU data residency + private tunnel — 357→358 likes / 37K views. Reply: Sites 发 EU 数据驻留 + private tunnel + custom domain 合规开关,企业 IT 终于能用 codex vibe internal support site.",
+      "material_id": "1016-pulse-15"
+    },
+    {
+      "post_id": "2110877554945175677",
+      "reply_id": null,
+      "handle": "dotey",
+      "timestamp": "2026-10-16T08:02:26+08:00",
+      "treatment": "like_only",
+      "action": "like-only",
+      "note": "Antigravity Argon 中文解读 dotey 帖 — 13→16 likes 3.5K views 19min ago. Like-only; small Chinese 解读贴,riding same Antigravity Argon traffic as prior round main Argon engagement."
+    },
+    {
+      "post_id": "2110823738531037651",
+      "handle": "ChatGPT",
+      "timestamp": "2026-10-16T08:11:34.422340+08:00",
+      "treatment": "quote_retweet",
+      "action": "regular_post",
+      "note": "ChatGPT Chrome tabs control (Chat reads tabs / Work controls Chrome tabs) — 4h, 418K views. Own post 2110885633141191122 @ 08:09 with 2 imgs.",
+      "material_id": "1016-am2-01",
+      "posted_to_x": {
+        "own_post_id": "2110885633141191122",
+        "own_post_url": "https://x.com/FrankFika/status/2110885633141191122",
+        "posted_at": "2026-10-16T08:11:34.422340+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110820373369360481",
+      "handle": "SemiAnalysis_",
+      "timestamp": "2026-10-16T08:11:34.422340+08:00",
+      "treatment": "quote_retweet",
+      "action": "regular_post",
+      "note": "ASML hybrid bonding tool / threat to Besi — 3.5h, 16K views. Own post 2110885923202515420 @ 08:12 with 2 imgs.",
+      "material_id": "1016-am2-02",
+      "posted_to_x": {
+        "own_post_id": "2110885923202515420",
+        "own_post_url": "https://x.com/FrankFika/status/2110885923202515420",
+        "posted_at": "2026-10-16T08:11:34.422340+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110568515757355157",
+      "handle": "MaxForAI",
+      "timestamp": "2026-10-16T08:11:34.422340+08:00",
+      "treatment": "quote_retweet",
+      "action": "regular_post",
+      "note": "国行 Apple Intelligence launch — Apple智能+通义千问+通义万相 备案 / iOS 27.3 12月 — 20h, 11.8K views (below 15K threshold but high quality Chinese AI launch coverage). Own post 2110886135388049873 @ 08:15 with 2 imgs.",
+      "material_id": "1016-am2-03",
+      "posted_to_x": {
+        "own_post_id": "2110886135388049873",
+        "own_post_url": "https://x.com/FrankFika/status/2110886135388049873",
+        "posted_at": "2026-10-16T08:11:34.422340+08:00",
+        "treatment_used": "regular_post_x_auto_quoteembed",
+        "media_count": 2
+      }
+    },
+    {
+      "post_id": "2110699165051453771",
+      "reply_to_post_id": "2110699165051453771",
+      "own_reply_id": "2110891007047074184",
+      "own_reply_url": "https://x.com/FrankFika/status/2110891007047074184",
+      "author": "chenchengpro",
+      "treatment": "reply_riding_traffic",
+      "at": "2026-10-16T08:30:29.448301+08:00",
+      "topic": "agent-first-code-editor-mayoi",
+      "notes": "chenchengpro/Mayoi 12h ago 105 likes 22 replies — agent-first editor with Ghosty kernel + Claude Code screenshot paste. Reply uses self-quote embed 2110885633141191122 (ChatGPT Chrome tabs)."
+    },
+    {
+      "post_id": "2110888201137311748",
+      "author": "Huahuazo",
+      "treatment": "like_only",
+      "at": "2026-10-16T08:31:47.690784+08:00",
+      "topic": "vibe-coding-3d-little-prince-game-with-opus-5-5",
+      "notes": "Huahuazo 5m 0/0/0 fresh — 16 天用 Opus 5.5 + Tripo + Blender 把小王子做成 3D 剧情游戏 + 1 minute 3 seconds video demo, like only (5m 0 likes too cold for reply)"
+    },
+    {
+      "post_id": "2110884789863793792",
+      "post_id_canonical": "2110884789863797192",
+      "author": "RealHanyaHu",
+      "treatment": "like_only",
+      "at": "2026-10-16T08:31:47.690784+08:00",
+      "topic": "openai-sora-handing-to-hollywood-jason-konsenberg",
+      "notes": "HanyaHu 19m 4 likes — OpenAI 把 Sora 转手给卡森伯格牵头的好莱坞新公司, fresh news AI 关键词命中, like only"
+    },
+    {
+      "post_id": "2110788729539547636",
+      "reply_to_post_id": "2110788729539547636",
+      "own_reply_id": "2110893388425986388",
+      "own_reply_url": "https://x.com/FrankFika/status/2110893388425986388",
+      "author": "Khazix0918",
+      "treatment": "reply_riding_traffic",
+      "at": "2026-10-16T08:39:58.714633+08:00",
+      "topic": "kling-4-0-video-gen-call-stack-video-ai-competition",
+      "notes": "Khazix0918 'Kling 4.0 回来了' 6h ago 20 likes 5 replies — video gen call stack angle + 自 clone JEV 1.14.0 失败率 1/3. 自带 self-quote embed 2110782281774440472 (JEV 笔记)."
+    },
+    {
+      "post_id": "2110920479179723015",
+      "reply_to_post_id": "2110920479179723015",
+      "own_reply_id": "2110923798375797083",
+      "own_reply_url": "https://x.com/FrankFika/status/2110923798375797083",
+      "author": "FinanceYF5",
+      "treatment": "reply_riding_traffic",
+      "at": "2026-10-16T10:39:40+08:00",
+      "topic": "grokbot-x-bookmarks-second-brain-7-prompts",
+      "notes": "FinanceYF5 10s-4m 462 views — Grok Bot reads X bookmarks + 7 prompt templates for second brain. Reply uses self-quote embed 2110885633141191122 (ChatGPT Chrome tabs) — AI cross-product entry angle."
+    },
+    {
+      "post_id": "2110875873649811786",
+      "author": "jiqizhixin",
+      "treatment": "like_only",
+      "at": "2026-10-16T10:30:45+08:00",
+      "topic": "federated-openfold3-5-pharma-protein-drug-interaction-nature",
+      "notes": "jiqizhixin 2h 372 views / 1 reply — Federated OpenFold3 training across 5 pharma with 20K+ proprietary protein-small-molecule structures (Nature, Sep 14 2026). Like only (1 like too cold for reply)."
+    },
+    {
+      "post_id": "2110797209881149619",
+      "author": "vista8",
+      "treatment": "like_only",
+      "at": "2026-10-16T10:31:25+08:00",
+      "topic": "model-ui-orchestration-paseo-gpt6astra-multi-model-design",
+      "notes": "vista8 8h 30 likes 8.2K views — model UI orchestration: Gemini/Kimi/Opus 4 designs each, Paseo orchestrate, GPT-6 Astra coord. Like only (mentions Kimi in post — keep reply empty)."
+    },
+    {
+      "post_id": "2110923965107704110",
+      "treatment": "reply_riding_traffic",
+      "at": "2026-10-16T10:58:00+08:00",
+      "author": "MaxForAI",
+      "reply_id": "2110928715958145390",
+      "reply_url": "https://x.com/FrankFika/status/2110928715958145390",
+      "topic": "neural-networks-mechanistic-interpretability-agent-clean-feature",
+      "notes": "Nick Cammarata《Neural Networks Are Already Clean》:99-100% 视觉神经元 + 90% 32B 神经元可解释,Superposition 经典猫车 V 形误解"
+    },
+    {
+      "post_id": "2110927742833426942",
+      "treatment": "like_only",
+      "at": "2026-10-16T10:58:00+08:00",
+      "author": "aigclink",
+      "topic": "openai-realtime-api-oss-alternative-realtime-venus",
+      "notes": "Realtime-Venus 实时音视频感知+全双工语音+异步Harness,realtime Agent 开源替代 OpenAI Realtime API"
+    },
+    {
+      "source_post_id": "2110872881261601280",
+      "source_url": "https://x.com/testingcatalog/status/2110872881261601280",
+      "topic_signature": "testingcatalog-gemini-4-argon-antigravity-pro-rollout",
+      "posted_to_x": {
+        "own_post_id": "2110932242709283075",
+        "url": "https://x.com/FrankFika/status/2110932242709283075",
+        "posted_at": "2026-10-16T11:18:00+08:00",
+        "media_count": 2,
+        "treatment_used": "regular_post_x_auto_quoteembed"
+      }
+    },
+    {
+      "source_post_id": "2109479265653961213",
+      "source_url": "https://x.com/FinanceYF5/status/2109479265653961213",
+      "topic_signature": "sv-ai-company-geo-bay-area-density",
+      "posted_to_x": {
+        "own_post_id": "2110933022040367246",
+        "url": "https://x.com/FrankFika/status/2110933022040367246",
+        "posted_at": "2026-10-16T11:22:00+08:00",
+        "media_count": 2,
+        "treatment_used": "regular_post_x_auto_quoteembed"
+      }
+    },
+    {
+      "source_post_id": "2108899240907084067",
+      "source_url": "https://x.com/tuturetom/status/2108899240907084067",
+      "topic_signature": "tuturetom-opendesign-deepseek-v4-1-flash-8-dollar",
+      "posted_to_x": {
+        "own_post_id": "2110936592114413991",
+        "url": "https://x.com/FrankFika/status/2110936592114413991",
+        "posted_at": "2026-10-16T11:34:00+08:00",
+        "media_count": 2,
+        "treatment_used": "regular_post_x_auto_quoteembed"
+      }
+    }
+  ]
+}

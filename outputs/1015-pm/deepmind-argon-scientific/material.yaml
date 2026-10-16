@@ -1,0 +1,30 @@
+material_id: "1015-pm-03"
+slot: pm
+scanned_at: "2026-10-15T15:57:00+08:00"
+author:
+  name: "Google DeepMind"
+  handle: "GoogleDeepMind"
+  lang: en
+original:
+  url: "https://x.com/GoogleDeepMind/status/2110421861435879476"
+  post_id: "2110421861435879476"
+  posted_at: "2026-10-15T01:50:00+08:00"
+metrics:
+  views: 104669
+  likes: 1939
+  retweets: 289
+  replies: 146
+  bookmarks: 303
+ai_match: true
+summary: |
+  Google DeepMind 官方拆解 Gemini 4 Argon 在科研落地：量子计算、核聚变、蛋白质设计。
+  14h 前发，截至 Oct 15 累计 104K 浏览 / 1.9K 赞。
+  Argon 不只是 chat 升级——它已经在加速真实科学问题。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/GoogleDeepMind/status/2110421861435879476"
+screenshots_needed:
+  - "原帖视频+正文截图"
+  - "GoogleDeepMind profile 顶部视角"
+treatment_hint: quote_retweet
+dedup_hits: []

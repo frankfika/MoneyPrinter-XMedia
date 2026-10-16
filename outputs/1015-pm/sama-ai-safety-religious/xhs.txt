@@ -1,0 +1,21 @@
+# material_id: 1015-pm-01
+# author_handle: sama
+# source_url: https://x.com/sama/status/2106388373221118198
+# draft_at: 2026-10-15T23:06:00+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Sam Altman 公开警告：别把 AI 当宗教】
+
+Sam Altman 罕见公开表态 AI 安全边界：
+
+「把 AI 模型当宗教、让人放弃自己的判断去 surrender，这是真·安全问题。」
+
+不针对任何具体产品，是 OpenAI 掌门人自己先把 AI 拟人化风险点出来。
+
+7.1M 浏览 / 29K 赞 / 3.8K 转——这条不是水帖，留言区真在吵。顶部赞里有研究伦理的、有 AI 安全派的、有担心 AGI 加速的，三派都引用。
+
+技术圈谈 AI 安全很多年，但 AGI 阵营最高调的人主动划线——这是第一次。以前大家以为官方立场是「继续加速」，现在不是了。
+
+📎 Sam 原帖：https://x.com/sama/status/2106388373221118198
+
+#SamAltman #OpenAI #AI安全 #AGI #拟人化

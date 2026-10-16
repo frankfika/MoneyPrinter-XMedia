@@ -1,0 +1,18 @@
+AK 转发了篇有意思的小论文 —— Thinking Inertia：LLMs Keep Thinking When Told Not To。
+
+结论一句话：reasoning 模型，你让它「别想了，直接答」，它停不下来。
+停在 thinking 的概率远比预期高，behavior 像有惯性。
+
+训练时把长推理当奖励，sft 就给 stop-control 弄松了，
+最后 inference 时给「don't think」指令也压不住。
+
+工程影响：
+- 推理成本不好预测，agent loop 里一旦触发难刹住
+- 想关思考只能靠 prompt + system 强约束
+- 反思训练要单独做，不能光叠 reasoning 数据
+
+https://x.com/_akhaliq/status/2110413943034491358
+# posted_url: https://x.com/FrankFika/status/2110766998028472325
+# posted_at: 2026-10-16T01:42:00+08:00
+# treatment_used: regular_post_x_auto_quoteembed
+# media_count: 2

@@ -1,0 +1,19 @@
+OpenAI 把 GPT-6 + Intelligent UI 直接开放给所有 ChatGPT 用户。
+
+核心改动：不再只是问答框。
+- 复杂问题直接给可视化交互答案
+- 任务执行时即时弹出 interactive tools
+- 视觉化先于文字回答
+
+ChatGPT 现在会主动选"怎么答"，而不只是"答什么"。
+
+Pinned 帖，10 天 6.3M 浏览 / 23K 点赞 — 整个 ChatGPT 默认体验已经切到 GPT-6 + Intelligent UI。
+
+https://x.com/OpenAI/status/2107894997538525580
+
+# material_id: 1015-noon-02
+# treatment: quote_retweet
+# screenshots: x-openai-post.png, x-openai-profile-top.png
+
+# posted_url: https://x.com/FrankFika/status/2110555831855157688
+# posted_at: 2026-10-15T10:18:08+08:00

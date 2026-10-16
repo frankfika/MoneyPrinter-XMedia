@@ -1,0 +1,15 @@
+NVIDIA 官方账号今天就发了三个字：
+
+"Muse knows."
+
+引用的是 Alexandr Wang 看完 GTC 那段 Jensen Huang 谈话后的一句 "amen muse jensen, amen"。
+
+12.8 万浏览、2400+ 赞，评论区一半在玩"Muse knows"梗，一半在认真聊 xAI 和 NVIDIA 这条线到底是合作关系还是嘴炮互动。短短三个字，把圈内的疑问挂到官方嘴边——这比任何一篇博客都更有戏。
+
+https://x.com/NVIDIA/status/2110551546635444588
+
+# material_id: 1015-late-2-03
+# treatment: quote_retweet
+# screenshots: x-nvidia-post-detail.png, x-nvidia-post-thread.png, x-nvidia-profile-top.png, x-before-post.png, x-after-post.png, x-live-post.png
+# posted_url: https://x.com/FrankFika/status/2110751589128679885
+# posted_at: 2026-10-15T23:18:00+08:00

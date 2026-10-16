@@ -1,0 +1,24 @@
+material_id: 1016-am2-03
+slot: am2
+scanned_at: '2026-10-16T08:00:00+08:00'
+author:
+  name: Max For AI
+  handle: MaxForAI
+  lang: zh
+original:
+  url: https://x.com/MaxForAI/status/2110568515757355157
+  post_id: '2110568515757355157'
+  posted_at: '2026-10-15T12:00:00+00:00'
+metrics:
+  views: 11820
+  likes: 36
+  retweets: 4
+  replies: 14
+  bookmarks: 5
+ai_match: true
+summary: >-
+  国行 Apple Intelligence 终于要来了 — 工信部备案新增 Apple 智能 + 通义千问 + 通义万相 三家模型，iOS 27.3 预计 12 月落地。苹果折腾了两年，落地首发的还主要是两年前那批功能。
+evidence_links:
+  - https://x.com/MaxForAI/status/2110568515757355157
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (For You feed 2026-10-16 08:00)

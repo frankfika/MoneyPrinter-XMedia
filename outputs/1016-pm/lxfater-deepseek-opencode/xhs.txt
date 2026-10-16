@@ -1,0 +1,11 @@
+标题：DIY AI 推理又杀回来了 40K 浏览
+
+铁锤人 (lxfater) 花几万块攒 V100 老卡
+跑 DeepSeek V4.1 在 Opencode 上免费开放
+12 小时 40K 浏览
+
+V100 是 2017 年的卡
+DeepSeek V4.1 MoE 推理对显存要求比稠密低
+老硬件 + 推理模型 + 免费分发
+个人开发者又一次把大厂 API 定价打下来
+#DeepSeek #V100 #DIY #AI推理

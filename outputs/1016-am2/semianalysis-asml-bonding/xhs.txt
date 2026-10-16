@@ -1,0 +1,9 @@
+ASML 自己下场做 hybrid bonding 设备了
+
+这就是先进封装那条命门 —— 2.5D/3D 拼 HBM4/Chiplet 时核心工艺一直被 Besi 这家荷兰小厂独家垄断，产能和价格都是它说了算
+
+ASML 一旦补齐这环，等于把 GPU 和 HBM 的成本结构重新洗一次牌。对 Besi 是灭顶，对 NVIDIA/AMD/CSP 是利好
+
+open AI 大基建这条线的玩家又多了一张牌
+
+https://x.com/SemiAnalysis_/status/2110820373369360481

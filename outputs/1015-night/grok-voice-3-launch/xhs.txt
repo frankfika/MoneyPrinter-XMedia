@@ -1,0 +1,21 @@
+# material_id: 1015-night-01
+# author_handle: elonmusk
+# source_url: https://x.com/elonmusk/status/2110520607276499109
+# draft_at: 2026-10-15T08:48:00+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Grok Voice 3.0 上线｜实时语音客服的天要变了】
+
+马斯克 48 分钟前亲自转发 xAI 的 Grok Voice 3.0 发布会，一句话盖章："全球最强的对话语音模型"。
+
+这次 xAI 押的不是聊天，是实时语音客服：
+⚡️ 响应压到 1 秒内
+💰 单次通话成本低于其它 frontier 模型
+🗣️ 多语种切换接近实时
+
+对国内做客服/电话机器人的团队，是直接的替代信号。OpenAI Realtime、Gemini Live 的牌桌，又来一个硬件成本压到极限的对手。
+
+📎 原帖：马斯克 48min ago → quote SpaceX Super Intelligence
+🔗 https://x.com/elonmusk/status/2110520607276499109
+
+#AI #Grok #语音模型 #xAI #实时客服 #大模型

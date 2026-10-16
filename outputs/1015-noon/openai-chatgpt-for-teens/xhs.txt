@@ -1,0 +1,22 @@
+# material_id: 1015-noon-06
+# author_handle: OpenAI
+# source_url: https://x.com/OpenAI/status/2107909792945832070
+# draft_at: 2026-10-15T23:06:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【OpenAI 把 ChatGPT 切了个未成年人专版】
+
+ChatGPT for Teens 默认自动套到被识别为 18 岁以下的账户——不用手动开。
+
+同捆上线的还有：
+🎓 College Planner 预览
+📚 学习工具
+💬 顾问 / 青少年声音通道
+
+503K 浏览 / 3.4K 赞 / 257 转——争议不大，但「默认强开」这一刀挺重。
+
+这是 OpenAI 第一次为「年龄段」做产品切分，不是再做一个新功能。从产品视角看，默认强开比 opt-in 更需要底气——他们显然已经判断了法务 + 政策风险。
+
+📎 OpenAI 原帖：https://x.com/OpenAI/status/2107909792945832070
+
+#OpenAI #ChatGPT #未成年人保护 #CollegePlanner #AI教育

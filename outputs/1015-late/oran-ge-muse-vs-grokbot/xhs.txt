@@ -1,0 +1,24 @@
+# material_id: 1015-late-03
+# author_handle: oran_ge
+# source_url: https://x.com/oran_ge/status/2110020524088934754
+# draft_at: 2026-10-15T23:05:00+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【同一套模型，留存怎么差这么多】
+
+xAI 同时做了 Muse 和 Grok Bot——都用底层 Opus 5.5，但用下来一个天一个地：
+✨ Muse 完成度第一
+📉 Grok Bot 完成度不差，但留存上不去
+
+评论区挖出三个原因：
+1️⃣ 价格：Grok Bot 没有免费版，Muse / ChatGPT / Google Map 都有——上线第一秒就被价格劝退
+2️⃣ skill：没打磨好的 skill 直接卡住，没法指定模型也没法掉出 plan
+3️⃣ 价值兑现节奏：第一句话看不出完成度，等到用上才知道爽
+
+这事戳到了一个真问题：personal agent 的护城河不是模型，是「开门那一秒能不能解决一件具体的事」。
+
+Muse 做到了，所以留存回来；Grok Bot 模型更好，但用户走到那一步之前就走光了。
+
+📎 oran_ge 原帖：https://x.com/oran_ge/status/2110020524088934754
+
+#AI #xAI #Muse #GrokBot #personalagent #产品

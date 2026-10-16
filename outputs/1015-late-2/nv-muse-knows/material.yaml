@@ -1,0 +1,25 @@
+material_id: 1015-late-2-03
+slot: late-2
+scanned_at: '2026-10-15T23:10:00+08:00'
+author:
+  name: NVIDIA
+  handle: NVIDIA
+  lang: en
+original:
+  url: https://x.com/NVIDIA/status/2110551546635444588
+  post_id: '2110551546635444588'
+  posted_at: '2026-10-15T10:00:00+00:00'
+metrics:
+  views: 128562
+  likes: 2430
+  retweets: 211
+  replies: 93
+  bookmarks: 163
+ai_match: true
+summary: >-
+  NVIDIA 官方账号发了句"Muse knows."，引用 Alexandr Wang 的"amen muse jensen, amen"——把 xAI Muse + Jensen Huang 在 GTC 上的那段讲话一锤定音。12.8 万浏览、2430 赞，评论区一半在玩"Muse knows"梗，半是认真讨论 xAI / NVIDIA 关系。
+evidence_links:
+  - https://x.com/NVIDIA/status/2110551546635444588
+  - https://x.com/alexandr_wang/status/211055047...
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

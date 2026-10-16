@@ -1,0 +1,22 @@
+OpenAI 又撒钱了，方向比想象野。
+
+Simons Foundation 这次掏 $15M 做数学 + AI 工作坊 + 算力补贴，OpenAI 与 AnthropicAI 一起当联合伙伴。OpenAI 自己再额外加 $5M，专门给数学家用模型 + 算力。
+
+重点不是 $5M，是「验证 + 扩展 + 在 AI 的数学成果上再走一步」这一段：
+- 模型交答案 → 数学家交验算
+- 模型跑实验 → 数学家改命题
+- 模型卡壳 → 数学家给新思路
+
+之前 OpenAI 把 2200 万浏览的 frontier math 结果开源，圈里炸了"AI 终于会做正经数学了"。但做出来 ≠ 复现出来 ≠ 还能往前走。这 $5M 押的就是后半段。
+
+评论区已经有数学家出来认领算力了，这件事从「demo」变「discovery」的中间地带，被真金白银补上了。
+
+https://x.com/OpenAI/status/2110741355739963884
+
+# material_id: 1015-late-01
+# treatment: quote_retweet
+# screenshots: x-openai-simons-post.png, x-openai-profile-top.png
+
+
+# posted_url: https://x.com/FrankFika/status/2110745383081255200
+# posted_at: 2026-10-15T22:52:03+08:00

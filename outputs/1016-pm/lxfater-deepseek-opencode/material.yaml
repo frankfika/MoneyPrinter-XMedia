@@ -1,0 +1,24 @@
+material_id: 1016-pm-03
+slot: pm
+scanned_at: '2026-10-16T10:32:00+08:00'
+author:
+  name: 铁锤人 lxfater
+  handle: lxfater
+  lang: zh
+original:
+  url: https://x.com/lxfater/status/2110769358402408926
+  post_id: '2110769358402408926'
+  posted_at: '2026-10-16T00:30:00+08:00'
+metrics:
+  views: 39929
+  likes: 0
+  retweets: 0
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  开发者「铁锤人」花几万块攒 V100 老卡跑 DeepSeek V4.1,在 Opencode 上免费开放 — 39.9K 浏览,DIY AI 推理服务重新爆火
+evidence_links:
+  - https://x.com/lxfater/status/2110769358402408926
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

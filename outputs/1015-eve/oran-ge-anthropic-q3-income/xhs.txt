@@ -1,0 +1,23 @@
+# material_id: 1015-eve-02
+# author_handle: oran_ge
+# source_url: https://x.com/oran_ge/status/2110600036476506158
+# draft_at: 2026-10-15T23:05:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Anthropic Q3 168 亿，但市场说还不够】
+
+Anthropic 昨晚开了闭门投资人交流会——
+📈 Q3 收入 168 亿
+📊 Q2 才 110 多亿
+🚀 季度还有 ~50% 增长
+
+oran_ge 转的那篇里写得很直白：市场已经把所有增长预期透支完，50% 不够看。
+
+这是 AI 投资侧第一道真正的裂隙：
+过去两年讲的故事是「谁先冲到 100 亿 ARR」，现在轮到「增长能不能 cover 算力 + 推理的资本开销」。
+
+故事没换皮，但定价模型要换。
+
+📎 oran_ge 原帖：https://x.com/oran_ge/status/2110600036476506158
+
+#Anthropic #AI投资 #收入增长 #oran_ge #ARR

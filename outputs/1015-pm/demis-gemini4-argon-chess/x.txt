@@ -1,0 +1,20 @@
+诺奖得主 + DeepMind CEO 自己下场玩了。
+
+Demis 让 Gemini 4 Argon 直接 build 一个 3D wizard chess demo，
+59 秒视频里能看到物理碰撞 + 棋盘动画 + 3D 建模一次出来。
+他说这让他想起小时候 Amiga 上的 Battlechess。
+
+434K 浏览 / 5K 赞——这不是发布会 slide，是 CEO 自己在家玩出来的 demo。
+CEO 愿意花时间亲自跑模型 + 录视频上传，意味着这版模型他自己都觉得「能玩」。
+
+过去 frontier 模型 demo 都是研究员发的；
+现在诺奖级 leader 亲自下场 = 模型交互质量已经过了门槛。
+
+https://x.com/demishassabis/status/2110041008100843835
+
+# material_id: 1015-pm-02
+# treatment: quote_retweet
+# screenshots: x-demis-post.png, x-demis-profile-top.png
+
+# NOT POSTED — X media upload HTTP-429 rate-limited (2026-10-15 16:08 CST)
+# Material ready; retry once X rate limit clears

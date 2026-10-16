@@ -1,0 +1,24 @@
+material_id: 1016-pm2-03
+slot: pm2
+scanned_at: '2026-10-16T11:08:00+08:00'
+author:
+  name: AI News | TestingCatalog
+  handle: testingcatalog
+  lang: en
+original:
+  url: https://x.com/testingcatalog/status/2110872881261601280
+  post_id: '2110872881261601280'
+  posted_at: '2026-10-16T07:18:00+08:00'
+metrics:
+  views: 15105
+  likes: 395
+  retweets: 27
+  replies: 33
+  bookmarks: 29
+ai_match: true
+summary: >-
+  Google Gemini 4 Argon Antigravity 3 天放量:10-13 还是 Ultra only,10-16 起 Google AI Pro 订阅也能用,带专属周额度不挤 3.8 Flash 桶
+evidence_links:
+  - https://x.com/testingcatalog/status/2110872881261601280
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handle batch: testingcatalog)

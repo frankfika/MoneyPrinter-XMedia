@@ -1,0 +1,40 @@
+material_id: "1015-noon-03"
+slot: noon
+scanned_at: "2026-10-15T10:08:00+08:00"
+
+author:
+  name: "Anthropic"
+  handle: "AnthropicAI"
+  lang: en
+
+original:
+  url: "https://x.com/AnthropicAI/status/2109795898909950247"
+  post_id: "2109795898909950247"
+  posted_at: "2026-10-13T00:00:00+00:00"  # Oct 13
+  quoted: null
+
+metrics:
+  views: 2403966
+  likes: 6298
+  reposts: 1161
+  replies: 837
+  bookmarks: 2325
+
+ai_match: true
+
+summary: |
+  Anthropic 公开博客：过去几个月压下了针对 Claude 的 distillation attacks（蒸馏攻击）。
+  直白讲就是有人用 Claude 的输出反推训练自己的模型 — Anthropic 升级了多层防御。
+  48 小时 2.4M 浏览 / 6.3K 点赞 / 1.1K 转。
+
+evidence_links:
+  - https://x.com/AnthropicAI/status/2109795898909950247
+  - https://www.anthropic.com/research/defending-against-distillation
+
+screenshots_needed:
+  - 原帖正文 + 2.4M 浏览
+  - AnthropicAI 主页 timeline 顶部
+
+treatment_hint: quote_retweet
+dedup_hits: []
+source: hot-topic-tracker cua_repl scan (AnthropicAI timeline)

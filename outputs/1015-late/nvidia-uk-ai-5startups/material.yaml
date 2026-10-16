@@ -1,0 +1,48 @@
+material_id: "1015-late-02"
+slot: late
+scanned_at: "2026-10-15T22:50:00+08:00"
+
+author:
+  name: "NVIDIA"
+  handle: "NVIDIA"
+  lang: en
+
+original:
+  url: "https://x.com/NVIDIA/status/2110485178929844666"
+  post_id: "2110485178929844666"
+  posted_at: "2026-10-15T05:37:00+08:00"
+
+metrics:
+  views: 42617
+  likes: 430
+  retweets: 71
+  replies: 52
+  bookmarks: 32
+
+ai_match: true
+
+summary: |
+  Jensen Huang 伦敦一夜，NVIDIA 同时投了 5 家 UK AI 公司。
+  - boltz_bio（蛋白质设计）
+  - ForesightWorks（材料/能源）
+  - hivergeai（AI 编译器）
+  - PrimaMente（脑健康）
+  - Riverlane（量子计算）
+  从新药到量子，一晚 5 个领域。
+  17 小时破 4.2 万浏览；评论区已经把英国 AI 投资的"4.5B vs 美国 109B"对比挖出来了。
+
+evidence_links:
+  - label: "NVIDIA 原帖"
+    url: "https://x.com/NVIDIA/status/2110485178929844666"
+  - label: "NVIDIA 配套博文"
+    url: "https://blogs.nvidia.com/blog/.../uk-ecosystem-nvidia"
+  - label: "Ilyas 评论对比 UK/US AI 投资"
+    url: "https://x.com/ilyasaalmadani/status/2110549111305089321"
+
+screenshots_needed:
+  - "NVIDIA 原帖正文（带 boltz_bio 等 5 个 startup @）+ London 配图"
+  - "评论区片段（含 UK 投资对比）"
+
+treatment_hint: quote_retweet
+dedup_hits: []
+topic_signature: "nvidia-jensen-huang-uk-5-ai-startups-london"

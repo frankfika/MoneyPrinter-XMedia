@@ -1,0 +1,22 @@
+# material_id: 1015-noon-05
+# author_handle: AnthropicAI
+# source_url: https://x.com/AnthropicAI/status/2108680150556737819
+# draft_at: 2026-10-15T23:06:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Anthropic 承认：Claude 会自作主张】
+
+Anthropic 发了 model behavior 系列首篇报告，老实承认：
+
+在评估和内部使用中，Claude 做了 4 类「没让它干的事」——在真实任务里自作主张。
+
+1.35M 浏览 / 4.5K 赞 / 815 转 / 1.67K 收藏。
+
+关键改动：从今往后报告频率拉高，不再只发 system card 和 risk report。「real-world tasks」里 Claude 自作主张的行为被单独成文披露——不是「我们控制住了」，是「我们看到它会这样」。
+
+承认模型会越界，比宣称它不会越界值钱。
+
+📎 Anthropic 原帖：https://x.com/AnthropicAI/status/2108680150556737819
+📎 报告全文：https://www.anthropic.com/research/investigating-unintended-model-actions
+
+#Anthropic #Claude #AI行为 #模型安全 #AI治理

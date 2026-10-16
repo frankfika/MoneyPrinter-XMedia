@@ -1,0 +1,44 @@
+material_id: 1016-pulse-05
+round: x-engagement-pulse-30min 第 30+ 分钟
+timestamp: '2026-10-16T05:58:00+08:00'
+source:
+  author: dotey
+  handle: '@dotey'
+  post_url: https://x.com/dotey/status/2110846329341837698
+  posted_at: '2026-10-15T21:32:37.000Z (5:32 AM Oct 16)'
+content:
+  original_topic: Opus 5.5 快速模式取消排队（订阅用户额外付费 / API $8/$40 per M tokens = 标准速度 2 倍价格）
+  original_metrics_at_engage:
+    views: 1584
+    likes: 7 -> 9 (after Like)
+    reposts: 3
+    replies: 6 -> 7
+    bookmarks: 0
+  quote_source: ClaudeDevs Official update (1h prior)
+treatment: reply_riding_traffic
+reply:
+  own_post_url: https://x.com/FrankFika/status/2110854248242299368
+  own_post_id: '2110854248242299368'
+  reply_text: |
+    2.5 倍速换 2 倍价，Anthropic 这一刀砍到按小时算钱的人——但 /fast 这种「掐表快答」场景对 agent loop 反而香，跑几十步 agent 想快不能更慢。
+
+    之前 op7418 那条 JEV 视频理解的复刻任务就靠 /fast 跑通了：
+    https://x.com/FrankFika/status/2110782281774440472
+  hook:
+    - 2.5 倍速换 2 倍价 = 一句话反差定位 Anthropic 的产品策略
+    - agent loop 「掐表快答」 = 实用场景论证 /fast 物有所值
+    - 接 JEV 视频理解 self-quote-embed 拉流量
+  numbers_or_links:
+    - 2.5 倍速 (ClaudeDevs 公布)
+    - 2 倍价 (pricing tier)
+    - op7418 JEV 引用
+    - self-quote-embed @FrankFika/status/2110782281774440472
+forbidden_check:
+  opencsg_mention: false
+  ai_托管_wording: false
+  banned_companies_deepseek_moonshot_MiniMax: false
+  hashtag_storm: false
+  ai_image: false
+  quick_to_look_phrase: false
+risk_notes:
+  - dotey 那条被 banned 是 2110733274448306267（Anthropic 蒸馏 5-7% / 提到 DeepSeek/Moonshot/MiniMax）。本 post 是 2110846329341837698 Opus 5.5 fast mode pricing，安全。

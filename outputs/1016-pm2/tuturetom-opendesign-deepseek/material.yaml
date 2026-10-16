@@ -1,0 +1,24 @@
+material_id: 1016-pm2-02
+slot: pm2
+scanned_at: '2026-10-16T11:08:00+08:00'
+author:
+  name: Tom Huang
+  handle: tuturetom
+  lang: zh
+original:
+  url: https://x.com/tuturetom/status/2108899240907084067
+  post_id: '2108899240907084067'
+  posted_at: '2026-10-10T20:35:00+08:00'
+metrics:
+  views: 37565
+  likes: 120
+  retweets: 7
+  replies: 23
+  bookmarks: 86
+ai_match: true
+summary: >-
+  OpenDesign 100K GitHub stars 庆典:DeepSeek V4.1 Flash 满血版首月 8 美元、最高 120 美元额度(花的钱的 15 倍),也支持 API Key 接到 OpenCode / Hermes;Go/Plus/Pro/Max 最高额度翻倍到 $600,套餐价格不变
+evidence_links:
+  - https://x.com/tuturetom/status/2108899240907084067
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handle batch: tuturetom)

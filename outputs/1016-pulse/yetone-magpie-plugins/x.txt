@@ -1,0 +1,3 @@
+Provider 拆出来那一步最值钱——客户端写一遍 sign-in + token refresh + 路由就能省下，文档清楚，赞。
+
+下个版本插件间权限模型该立了：route + onUsage 都开了，agent 拿别家的 token 怎么防是必修课。

@@ -1,0 +1,20 @@
+Gemini 4 Argon 上线 1 天，已经在搞真科研了。
+
+DeepMind 官方发文列了 4 个方向：量子计算、核聚变、蛋白质设计……
+14h 内 104K 浏览 / 1.9K 赞——这不是「产品发布」的 hype，是「真在落地」的事实清单。
+
+关键点：科研场景过去要专门 fine-tune domain model，
+现在 Argon 直接吃 prompt + 跑科学推理。
+论文级问题开始「默认 LLM 先试一次」。
+
+模型卷了一年，最后真能跑物理仿真的还是 frontier 这几家。
+下一步是看谁能把科学计算 + agent 串起来。
+
+https://x.com/GoogleDeepMind/status/2110421861435879476
+
+# material_id: 1015-pm-03
+# treatment: quote_retweet
+# screenshots: x-deepmind-post.png, x-deepmind-profile-top.png
+
+# NOT POSTED — X media upload HTTP-429 rate-limited (2026-10-15 16:08 CST)
+# Material ready; retry once X rate limit clears

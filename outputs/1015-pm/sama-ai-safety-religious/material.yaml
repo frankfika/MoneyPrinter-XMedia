@@ -1,0 +1,30 @@
+material_id: "1015-pm-01"
+slot: pm
+scanned_at: "2026-10-15T15:57:00+08:00"
+author:
+  name: "Sam Altman"
+  handle: "sama"
+  lang: en
+original:
+  url: "https://x.com/sama/status/2106388373221118198"
+  post_id: "2106388373221118198"
+  posted_at: "2026-10-03"
+metrics:
+  views: 7143730
+  likes: 29055
+  retweets: 3835
+  replies: 6287
+  bookmarks: 4117
+ai_match: true
+summary: |
+  Sam Altman 罕见公开表态 AI 安全边界：把 AI 模型当宗教或放弃人类判断是「real safety issue」。
+  Oct 3 帖，截至 Oct 15 累计 7.1M 浏览 / 29K 赞 / 3.8K 转。
+  这是 AGI 阵营领头人第一次明确点出 AI 拟人化的安全风险。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/sama/status/2106388373221118198"
+screenshots_needed:
+  - "原帖 modal 视角"
+  - "sama profile 时间线顶部视角"
+treatment_hint: quote_retweet
+dedup_hits: []

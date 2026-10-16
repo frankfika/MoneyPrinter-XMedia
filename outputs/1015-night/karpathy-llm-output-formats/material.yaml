@@ -1,0 +1,24 @@
+material_id: 1015-night-01
+slot: night
+scanned_at: '2026-10-15T22:09:00+08:00'
+author:
+  name: Andrej Karpathy
+  handle: karpathy
+  lang: en
+original:
+  url: https://x.com/karpathy/status/2105819303471976479
+  post_id: '2105819303471976479'
+  posted_at: '2026-10-02T08:37:00+00:00'
+metrics:
+  views: 7855419
+  likes: 55530
+  retweets: 8055
+  replies: 1633
+  bookmarks: 81675
+ai_match: true
+summary: >-
+  Karpathy 给出 4 个 LLM 输出格式：Writing (ASD-STE100)、Diagrams、Web pages (HTML)、Explainer videos。7.85M 浏览 / 8.1 万收藏——karpathy 推特史上最高互动之一。
+evidence_links:
+  - https://x.com/karpathy/status/2105819303471976479
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-15 night)

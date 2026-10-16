@@ -1,0 +1,22 @@
+# material_id: 1015-eve-03
+# author_handle: GoogleDeepMind
+# source_url: https://x.com/GoogleDeepMind/status/2110715601454784965
+# draft_at: 2026-10-15T23:05:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【SynthID 进 TIME 榜单了，但难的不是技术】
+
+Google DeepMind 的 SynthID 入选 TIME 2026 年度最佳发明。
+
+180 亿张图片 + 视频已经被打上 AI 水印——目标是让普通人一眼分清「这是 AI 生成的」。
+
+但 180 亿是个有意思的数。全球一年新增的图片 / 视频量是千亿级别，180 亿只是其中一小部分。
+
+剩下没打标的，要么用别的水印方案，要么裸奔——标准七国八制。
+
+真正的难题从来不是技术——SynthID 已经够好了。
+真正的难题是「所有人都用同一把尺」。
+
+📎 DeepMind 原帖：https://x.com/GoogleDeepMind/status/2110715601454784965
+
+#SynthID #DeepMind #AI水印 #TIME #AI治理

@@ -1,0 +1,17 @@
+Anthropic 的 Q3 收入 168 亿，Q2 才 110 多亿——季度还有 50% 增长。
+
+但 oran_ge 转的那篇里写得很直白：市场已经把所有增长预期透支完，50% 不够看。
+
+这是 AI 投资侧第一道真正裂隙。
+过去两年讲的故事是「谁先冲到 100 亿 ARR」，现在轮到「增长能不能 cover 算力 + 推理的资本开销」。
+故事没换皮，但定价模型要换。
+
+https://x.com/oran_ge/status/2110600036476506158
+
+# material_id: 1015-eve-02
+# treatment: quote_retweet
+# screenshots: x-oran-ge-post.png, x-oran-ge-profile-top.png
+
+
+# posted_url: https://x.com/FrankFika/status/2110736877297004939
+# posted_at: 2026-10-15T22:18:10.013295+08:00

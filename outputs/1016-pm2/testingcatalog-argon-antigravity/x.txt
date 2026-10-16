@@ -1,0 +1,17 @@
+Google 这波速度是真的快。
+
+10-13 Antigravity 上 Gemini 4 Argon 还是 Ultra only，三天后 10-16 Google AI Pro 订阅就能用了 — 而且单独算周额度，不挤 3.8 Flash 的桶。
+
+Pro 用户等了三天，但这条线说明两件事：
+1）Argon 产能真的跟上了 — 不是 demo 那种「少量内测」
+2）Google 在把订阅当模型分销主战场 — 算力成本从 API 端转嫁到订阅端
+
+之前大模型订阅是「送你一个 chat 额度」，现在变成「送你一个特定模型的专属额度」。Argon 单独周额度一出，下一个模型也会这么分。
+
+算力分配权正式从用户手里回到平台手里。
+
+https://x.com/testingcatalog/status/2110872881261601280
+
+# material_id: 1016-pm2-03
+# treatment: quote_retweet
+# screenshots: x-testingcatalog-post.png, x-testingcatalog-profile-top.png

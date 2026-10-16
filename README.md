@@ -550,19 +550,13 @@ bash scripts/health-check.sh
 
 ### 给其他人同步(去掉私人内容)
 
-最小同步包(去掉 `private/account-safety.yaml` 和所有 `outputs/`,只保留可分享的 workflow / skill / state 模板 + `state/account-safety.yaml.sample` 模板):
+最小同步包(去掉 `private/account-safety.yaml`,其余**全部**进 git,作为完整工作流的运行轨迹):
 
 ```
-state/watchlist.yaml      (46 账号名单 = 公开)
-state/filter-rules.yaml
-state/schedule.yaml
-state/style-x.yaml
-state/style-xhs.yaml
-state/forbidden.yaml      (红线 = 公开)
+state/                    (全部 yaml + json 进 git,作为运行时状态唯一事实源)
 state/account-safety.yaml.sample  (模板,公开;接收方复制到 private/account-safety.yaml 后填写真实信息)
-state/seen-posts.json     (脱敏:删掉 own_post_id,保留 post_id dedup 模式)
-state/recent-picks.json   (脱敏:删掉 own_post_id)
-state/published-posts.json(脱敏:删掉 own_post_id)
+logs/                     (全部进 git:每次 cron / scan / launchd 触发的执行记录)
+outputs/                  (全部进 git:每次生成的 X / XHS 文案 + 真图 + material.yaml)
 skills/                   (整份公开)
 schemas/                  (整份公开)
 templates/                (整份公开)
@@ -570,7 +564,11 @@ scripts/                  (整份公开,launchd plist 需改路径)
 README.md                 (本文件)
 ```
 
-**不能分享**:`private/account-safety.yaml`(含登录态 + 个人信息)、`inbound-replies.json`、`outputs/`(含真图,可能是 Fang 私人素材)。
+**唯一不能分享**:`private/account-safety.yaml`(含登录态 + 封号信息)。
+
+> **注意**:`logs/launchd-stderr.log` 里会有 Codex session prompts 片段(UUID 化的);
+> `outputs/*/screenshots/` 是 X 公开帖子的真图;`state/published-posts.json` 含你和他人的 X 帖 URL。
+> 全部上 public repo 之前请确认这些可接受。
 
 ### 部署到第二台机器 checklist
 

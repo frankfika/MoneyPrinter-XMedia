@@ -1,0 +1,31 @@
+# material_id: 1015-am-01
+# author_handle: GoogleDeepMind
+# source_url: https://x.com/GoogleDeepMind/status/2110039274922131792
+# draft_at: 2026-10-15T23:07:00+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Gemini 4 Argon 全球上线，对位 GPT-6】
+
+Google 深夜掏了新模型——Gemini 4 Argon 全球可用。官方口径「从 start 到 finish 啃最难的问题」。
+
+挂出 12 小时：
+📈 2.3M views
+❤️ 6.1K likes
+🔁 1K reposts
+📌 官方账号直接置顶了
+
+三个硬骨头一起打：
+💻 coding
+🏢 企业 workflow
+🛡️ cyber defense
+
+三档入口分开：
+👤 日常用户 → Gemini App + Search AI Mode（AI Pro / Ultra）
+👨‍💻 开发者 → Gemini API + Antigravity + Google AI Studio
+🔬 科学家 → 申请 top usage tier
+
+这节奏是把 GPT-6 当目标对位。
+
+📎 DeepMind 原帖：https://x.com/GoogleDeepMind/status/2110039274922131792
+
+#Gemini4Argon #Google #DeepMind #GPT6 #AI模型 #Frontier

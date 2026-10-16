@@ -1,0 +1,27 @@
+# material_id: 1015-night-01
+# author_handle: elonmusk
+# source_url: https://x.com/elonmusk/status/2110520607276499109
+# draft_at: 2026-10-15T08:48:00+08:00
+# screenshots: [x-elonmusk-timeline.png, x-post-detail.png]
+
+Grok Voice 3.0 落地了。
+
+xAI 这次押的不是聊天，是「实时语音客服」——
+响应压到 1 秒内，成本比其它 frontier 模型都低。
+
+马斯克亲自转发 + 一句话盖章："全球最强的对话语音模型"。
+
+对国内做客服/电话机器人的团队，是直接的替代信号：
+- 响应延迟不再是壁垒
+- 单次通话成本可能跌破 1 美分
+- 多语种切换接近实时
+
+OpenAI Realtime / Gemini Live 的牌桌，
+又来一个对手，而且这次是硬件成本压到极致的玩家。
+
+原帖：
+https://x.com/elonmusk/status/2110520607276499109
+
+# posted_url: https://x.com/FrankFika/status/2110533735569588647
+# posted_at: 2026-10-15T08:55:00+08:00 (approx)
+# treatment_used: regular_post_x_auto_quoteembed

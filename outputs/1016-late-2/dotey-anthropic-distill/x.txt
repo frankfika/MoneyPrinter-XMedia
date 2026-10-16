@@ -1,0 +1,14 @@
+卧槽，Anthropic 蒸馏收入占营收 5% 到 7%。
+
+FT 援引 4 位知情人士：Anthropic 主动砍掉这块，因为对手用它训练竞品。
+按 Q2 营收 115 亿算，5.75 到 8 亿美元就为了让别人更难抄 Claude。
+2 月就点名 DeepSeek / 月之暗面 / MiniMax 用 2.4 万假账号蒸馏了 1600 万次对话。
+
+砍蒸馏换的是：对手更难靠抄答案追上来。
+代价是本季度数字难看——它在筹备上市。
+
+https://x.com/dotey/status/2110733274448306267
+# posted_url: https://x.com/FrankFika/status/2110780715625599464
+# posted_at: 2026-10-16T01:14:09.492705+08:00
+# treatment_used: regular_post_x_auto_quoteembed
+# media_count: 2

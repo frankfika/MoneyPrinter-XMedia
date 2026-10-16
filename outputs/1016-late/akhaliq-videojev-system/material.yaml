@@ -1,0 +1,26 @@
+material_id: 1016-late-02
+slot: late
+scanned_at: '2026-10-16T01:34:00+08:00'
+author:
+  name: AK (Papers With Code)
+  handle: _akhaliq
+  lang: en
+original:
+  url: https://x.com/_akhaliq/status/2110423274413056230
+  post_id: '2110423274413056230'
+  posted_at: '2026-10-15T03:25:00+00:00'
+metrics:
+  views: 32488
+  likes: 424
+  retweets: 62
+  replies: 13
+  bookmarks: 464
+ai_match: true
+summary: >-
+  VideoJev System — 一个模型同时搞定视频理解和交互(理解+编辑) — 22 小时前
+  AK 转发的论文聚合帖,32K 浏览,464 bookmarks,模型少见的"one-model-for-video-IO"路线。
+evidence_links:
+  - https://x.com/_akhaliq/status/2110423274413056230
+  - https://huggingface.co/papers/2610.18
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-16 Codex session)

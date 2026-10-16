@@ -1,0 +1,20 @@
+卧槽，Anthropic 工程师 5 月每天才合并 2,500 次代码变更，9 月就飙到 30,000+。
+
+12 倍。一个季度的事。
+
+他们被迫自研了整套 in-house source control — 因为老的那套是为人类规模设计的，agent 一多直接卡脖子。Engineering blog 长篇揭秘整套 source control 平台是怎么为 agent-scale 重写的：
+
+- PR / CI 流程全部重做成 machine-executable
+- 30K / 天 谁来 review？谁来 merge？测试谁来跑？新系统直接自动化
+- 配套的安全 + 回滚机制也按 agent 量级重设计
+
+12h 7.3M 浏览 / 24K 点赞 / 4.5K 转 — 行业拐点信号：agent 时代的基础设施，Anthropic 第一个完整掏出来。
+
+https://x.com/AnthropicAI/status/2110047081414987957
+
+# material_id: 1015-noon-01
+# treatment: quote_retweet
+# screenshots: x-anthropic-post.png, x-anthropic-profile-top.png
+
+# posted_url: https://x.com/FrankFika/status/2110555566519296183
+# posted_at: 2026-10-15T10:17:08+08:00

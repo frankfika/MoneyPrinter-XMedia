@@ -1,0 +1,25 @@
+material_id: 1016-am2-01
+slot: am2
+scanned_at: '2026-10-16T08:00:00+08:00'
+author:
+  name: ChatGPT (Official)
+  handle: ChatGPT
+  lang: en
+original:
+  url: https://x.com/ChatGPT/status/2110823738531037651
+  post_id: '2110823738531037651'
+  posted_at: '2026-10-16T04:02:00+00:00'
+metrics:
+  views: 418243
+  likes: 3962
+  retweets: 356
+  replies: 173
+  bookmarks: 1387
+ai_match: true
+summary: >-
+  ChatGPT 现在能直接控制你的 Chrome 标签页 — 在 Chat 里读跨标签信息，在 Work 里替你点开标签发消息、填表单、下载文件、整理一堆 tab。
+  4 小时，41.8 万播放，OpenAI 把「computer use」从开发者 API 下放到普通 Chrome 用户。
+evidence_links:
+  - https://x.com/ChatGPT/status/2110823738531037651
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (For You feed 2026-10-16 08:00)

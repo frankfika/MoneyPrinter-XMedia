@@ -1,0 +1,24 @@
+material_id: 1016-pm2-01
+slot: pm2
+scanned_at: '2026-10-16T11:08:00+08:00'
+author:
+  name: AI Will
+  handle: FinanceYF5
+  lang: zh
+original:
+  url: https://x.com/FinanceYF5/status/2109479265653961213
+  post_id: '2109479265653961213'
+  posted_at: '2026-10-12T11:00:00+08:00'
+metrics:
+  views: 43844
+  likes: 154
+  retweets: 36
+  replies: 9
+  bookmarks: 113
+ai_match: true
+summary: >-
+  湾区 AI 公司地理密度:Berkeley 周边 20km 内 21 家、Stanford 周边 26 家,OpenAI / Anthropic / xAI / Meta / Google DeepMind / NVIDIA 全挤在同一条走廊 — 人才 / 资本 / 大学 / 芯片上下游面对面碰撞
+evidence_links:
+  - https://x.com/FinanceYF5/status/2109479265653961213
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handle batch: FinanceYF5)

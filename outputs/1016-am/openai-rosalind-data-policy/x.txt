@@ -1,0 +1,16 @@
+OpenAI 把 GPT-Rosalind 给美国高校实验室用 12 个月,关键条款写得很硬:
+
+研究数据默认不用于训练。
+
+不是 opt-in 也不是"你可以退出",是直接 opt-out——上传就自动隔离。
+
+对比一下今年 4-5 月各家被起诉、被调查、被告 book deal 的连环暴雷,OpenAI 这条是第一次主动把"科研数据不进训练"做成产品默认。
+
+12 个月赞助 + trusted-access approval 才进研究数据集,这两条都是给"实验室数据敏感"准备的——基因序列、临床记录、化合物结构,过去都是闭源模型厂商的雷区。
+
+GPT-Rosalind 这个产品名之前没听过,看样子是 OpenAI 第一个专门做科研推理的子品牌。
+
+https://x.com/OpenAI/status/2110841899838046525
+
+# posted_url: https://x.com/FrankFika/status/2110870735619289325
+# posted_at: 2026-10-16T07:08:00+08:00

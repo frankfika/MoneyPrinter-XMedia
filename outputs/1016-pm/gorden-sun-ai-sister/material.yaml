@@ -1,0 +1,24 @@
+material_id: 1016-pm-02
+slot: pm
+scanned_at: '2026-10-16T10:32:00+08:00'
+author:
+  name: Gorden Sun
+  handle: Gorden_Sun
+  lang: zh
+original:
+  url: https://x.com/Gorden_Sun/status/2110758191256715504
+  post_id: '2110758191256715504'
+  posted_at: '2026-10-16T00:30:00+08:00'
+metrics:
+  views: 28025
+  likes: 522
+  retweets: 30
+  replies: 11
+  bookmarks: 15
+ai_match: true
+summary: >-
+  Gorden Sun 展示一个 AI 拟人「好姐妹」视频 demo — 28K 浏览 / 522 likes,引发中文 AI 圈对"AI 情感陪伴产品化"的讨论
+evidence_links:
+  - https://x.com/Gorden_Sun/status/2110758191256715504
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

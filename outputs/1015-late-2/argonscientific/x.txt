@@ -1,0 +1,15 @@
+Gemini 4 Argon 才上线一天，已经在三个硬核领域做出真东西：
+
+量子：把内部的 AlphaQubit 量子解码器塞进一个硬件 megakernel，推理吞吐直接翻倍；
+等离子体：研究人员用 Argon 找到两组新的反例，把 60 年没破掉的 Grad 猜想干掉了；
+酶工程：原本要几周的酶设计压到几小时，五个丝氨酸酯酶实验一次过。
+
+更猛的是：DeepMind 直接送 10000 名科学家 6 个月 Antigravity 顶配版免费。Argon 这次不是 demo，是真的把"AI for Science"从口号变成可复用的工具链。
+
+https://x.com/GoogleDeepMind/status/2110421861435879476
+
+# material_id: 1015-late-2-01
+# treatment: quote_retweet
+# screenshots: x-deepmind-post-detail.png, x-deepmind-post-thread.png, x-deepmind-profile-top.png, x-before-post.png, x-after-post.png, x-live-post.png
+# posted_url: https://x.com/FrankFika/status/2110750494390132844
+# posted_at: 2026-10-15T23:11:00+08:00

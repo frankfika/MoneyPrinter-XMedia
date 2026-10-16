@@ -1,0 +1,14 @@
+马斯克嘴里的 "Star Mind" 超算,NVIDIA 终于认领了。
+
+"比几乎所有人预期的都要好,明年量产"——Elon 这话放出来不到 5 小时 NVIDIA 就转发了,"The feeling is mutual. 💚",45K 涨得很快。
+
+Star Mind 是 SpaceX + NVIDIA 联合搭的 AI 训练集群,Elon 原帖暗示规模在 GB200/Stargate 这一档。
+
+Stargate 之后第二个"国家级 AI 算力"产品——但这次不是 OpenAI 主导,是 Elon 自掏 SpaceX 算力给 xAI 喂。
+
+把 SpaceX 那些闲置的星舰算力拿出来做 AI 训练,这种异构整合才是真正算力红利的下一步。
+
+https://x.com/nvidia/status/2110817988311998911
+
+# posted_url: https://x.com/FrankFika/status/2110871037567226086
+# posted_at: 2026-10-16T07:14:00+08:00

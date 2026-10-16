@@ -1,0 +1,26 @@
+material_id: 1016-late-03
+slot: late
+scanned_at: '2026-10-16T01:42:00+08:00'
+author:
+  name: AK (Papers With Code)
+  handle: _akhaliq
+  lang: en
+original:
+  url: https://x.com/_akhaliq/status/2110413943034491358
+  post_id: '2110413943034491358'
+  posted_at: '2026-10-15T02:35:00+00:00'
+metrics:
+  views: 16131
+  likes: 79
+  retweets: 11
+  replies: 20
+  bookmarks: 60
+ai_match: true
+summary: >-
+  Thinking Inertia 论文 — LLM 在被明确告诉"别想了"时,仍然继续 thinking/推理 —
+  reasoning 模型的 stop-control 失效,行为像有惯性,16K 浏览 + 60 bookmarks。
+evidence_links:
+  - https://x.com/_akhaliq/status/2110413943034491358
+  - https://huggingface.co/papers/2610.11
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-16 Codex session)

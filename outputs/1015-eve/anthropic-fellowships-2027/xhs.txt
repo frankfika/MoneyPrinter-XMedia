@@ -1,0 +1,21 @@
+# material_id: 1015-eve-01
+# author_handle: AnthropicAI
+# source_url: https://x.com/AnthropicAI/status/2110720940665372825
+# draft_at: 2026-10-15T23:05:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Anthropic 把 Fellowship 开放给了文科生】
+
+Anthropic 一口气开了两个 Fellowship，2027 年 1 月开干，四个月驻场：
+🔬 STEM Fellows：科学 + 工程背景
+🧠 Conceptual Reasoning Fellows：哲学 / 认知科学 / 经济 / 政策 / 法律
+
+重点是第二个——「概念推理」放给文科背景，是大模型押注推理从「算」延伸到「想」的信号。
+
+接下来要啃的概念推理、社会规范、长期决策，都不是纯数学能搞定的。文科研究者对「概念怎么用、边界在哪、判断怎么做」这件事比工程师熟太多。
+
+开放申请 1 小时就破 11 万浏览。文理双轨 + 4 个月驻场，Anthropic 押注的不只是模型，是研究生态本身。
+
+📎 Anthropic 原帖：https://x.com/AnthropicAI/status/2110720940665372825
+
+#Anthropic #Fellowship #概念推理 #文科 #AI研究

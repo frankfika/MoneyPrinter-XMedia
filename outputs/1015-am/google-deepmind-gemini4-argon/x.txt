@@ -1,0 +1,26 @@
+# material_id: 1015-am-01
+# treatment: quote_retweet
+# screenshots: x-deepmind-post-thread.png, x-deepmind-profile-top.png
+
+Google 深夜又掏新模型了。
+
+Gemini 4 Argon，全球可用。官方口径是「从 start 到 finish 啃最难的问题」——coding、企业 workflow、cyber defense 三个硬骨头一起打。
+
+挂出 12 小时：
+- 2.3M views
+- 6.1K likes
+- 1K reposts
+- 官方账号直接置顶了
+
+三档入口分开：
+- 日常用户 → Gemini App + Search AI Mode（AI Pro / Ultra）
+- 开发者 → Gemini API + Antigravity + Google AI Studio
+- 科学家 → 申请 top usage tier
+
+附 DeepMind Creative Producer 的 2:41 介绍视频 + 一张生成风的实拍图。
+这节奏是把 GPT-6 当目标对位。
+
+https://x.com/GoogleDeepMind/status/2110039274922131792
+
+# posted_url: https://x.com/FrankFika/status/2110533769727967326
+# posted_at: 2026-10-15T00:52:56Z

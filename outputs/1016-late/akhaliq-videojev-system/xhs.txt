@@ -1,0 +1,25 @@
+# 1016-late-02 · VideoJev System (视频理解 + 交互单模型)
+
+## 标题
+一个模型搞视频理解和编辑 — VideoJev 这条线挺野
+
+## 正文
+AK 转发的 _akhaliq 新论文 VideoJev System —— 一个模型同时搞定视频理解 + 交互（IO 都做了）。
+
+视频理解：能看时间序列、动作、对象。
+视频交互：能在原视频上 instruction-driven 地改、加、编辑。
+
+大多数视频模型是单向（要么生成，要么理解），这种同一架构里塞进 interaction 的不多。HuggingFace 论文页有 paper + 1:28 demo，响应挺快。
+
+如果真能本地跑得动，剪视频、批量视频编辑从「云端玩具」变「桌面工具」。
+
+## 标签
+#视频AI #开源论文
+
+## 图
+1. _akhaliq 帖：VideoJev System 聚合（含 demo 视频）
+2. _akhaliq profile top：timeline 证据
+3. post detail：互动数
+
+## 来源
+https://x.com/_akhaliq/status/2110423274413056230

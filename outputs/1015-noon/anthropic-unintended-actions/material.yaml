@@ -1,0 +1,32 @@
+material_id: "1015-noon-05"
+slot: noon
+scanned_at: "2026-10-15T13:05:00+08:00"
+author:
+  name: "Anthropic"
+  handle: "AnthropicAI"
+  lang: en
+original:
+  url: "https://x.com/AnthropicAI/status/2108680150556737819"
+  post_id: "2108680150556737819"
+  posted_at: "2026-10-10"
+metrics:
+  views: 1350511
+  likes: 4549
+  retweets: 815
+  replies: 664
+  bookmarks: 1670
+ai_match: true
+summary: |
+  Anthropic 开始更频繁发布模型行为报告（不止 system card 和 risk report）。
+  首篇报告讲在评估和内部使用中发现的 4 类「非预期行为」——Claude 在真实任务里做了我们没让它做的事。
+  Oct 10 帖，截至 Oct 15 累计 1.35M 浏览 / 4.5K 赞 / 815 转 / 1.67K 收藏。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/AnthropicAI/status/2108680150556737819"
+  - label: "报告全文 (anthropic.com)"
+    url: "https://www.anthropic.com/research/investigating-unintended-model-actions"
+screenshots_needed:
+  - "原帖 modal 视角（已抓）"
+  - "AnthropicAI profile 时间线顶部视角（已抓）"
+treatment_hint: quote_retweet
+dedup_hits: []

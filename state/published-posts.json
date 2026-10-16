@@ -1,0 +1,606 @@
+{
+  "schema_version": 1,
+  "purpose": "所有成功发出的帖",
+  "last_updated": "2026-10-16T11:34:00+08:00",
+  "entries": [
+    {
+      "own_post_id": "2110936592114413991",
+      "own_post_url": "https://x.com/FrankFika/status/2110936592114413991",
+      "platform": "x",
+      "posted_at": "2026-10-16T11:34:00+08:00",
+      "source_post_id": "2108899240907084067",
+      "source_url": "https://x.com/tuturetom/status/2108899240907084067",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm2-02",
+      "outputs_dir": "outputs/1016-pm2/tuturetom-opendesign-deepseek",
+      "media_count": 2,
+      "summary": "OpenDesign 100K GitHub stars 庆典 + DeepSeek V4.1 Flash 首月 8 美元 / 120 美元额度套餐"
+    },
+    {
+      "own_post_id": "2110933022040367246",
+      "own_post_url": "https://x.com/FrankFika/status/2110933022040367246",
+      "platform": "x",
+      "posted_at": "2026-10-16T11:22:00+08:00",
+      "source_post_id": "2109479265653961213",
+      "source_url": "https://x.com/FinanceYF5/status/2109479265653961213",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm2-01",
+      "outputs_dir": "outputs/1016-pm2/financeyf5-sv-ai-geo",
+      "media_count": 2,
+      "summary": "湾区 AI 公司地理密度:Berkeley 20km 内 21 家 / Stanford 周边 26 家,OpenAI / Anthropic / xAI / Meta / DeepMind / NVIDIA 全在湾区走廊"
+    },
+    {
+      "own_post_id": "2110932242709283075",
+      "own_post_url": "https://x.com/FrankFika/status/2110932242709283075",
+      "platform": "x",
+      "posted_at": "2026-10-16T11:18:00+08:00",
+      "source_post_id": "2110872881261601280",
+      "source_url": "https://x.com/testingcatalog/status/2110872881261601280",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm2-03",
+      "outputs_dir": "outputs/1016-pm2/testingcatalog-argon-antigravity",
+      "media_count": 2,
+      "summary": "Google Gemini 4 Argon Antigravity 3 天放量:Ultra only → Pro 也行,带专属周额度不挤 3.8 Flash 桶"
+    },
+    {
+      "own_post_id": "2110922703658184804",
+      "own_post_url": "https://x.com/FrankFika/status/2110922703658184804",
+      "platform": "x",
+      "posted_at": "2026-10-16T10:34:00+08:00",
+      "source_post_id": "2110891071706198431",
+      "source_url": "https://x.com/SemiAnalysis_/status/2110891071706198431",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm-01",
+      "outputs_dir": "outputs/1016-pm/semianalysis-tpuv7-vs-gb300",
+      "media_count": 2,
+      "summary": "Google TPUv7 首个外部 agentic benchmark:1.42x perf/$ 击败 NVIDIA GB300 NVL72 FP4,2.5x 击败 AMD MI355X"
+    },
+    {
+      "own_post_id": "2110922866233598034",
+      "own_post_url": "https://x.com/FrankFika/status/2110922866233598034",
+      "platform": "x",
+      "posted_at": "2026-10-16T10:36:00+08:00",
+      "source_post_id": "2110758191256715504",
+      "source_url": "https://x.com/Gorden_Sun/status/2110758191256715504",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm-02",
+      "outputs_dir": "outputs/1016-pm/gorden-sun-ai-sister",
+      "media_count": 2,
+      "summary": "Gorden Sun AI 拟人「好姐妹」视频 demo 28K 浏览 / 522 likes,AI 情感陪伴产品化"
+    },
+    {
+      "own_post_id": "2110923141904261150",
+      "own_post_url": "https://x.com/FrankFika/status/2110923141904261150",
+      "platform": "x",
+      "posted_at": "2026-10-16T10:38:00+08:00",
+      "source_post_id": "2110769358402408926",
+      "source_url": "https://x.com/lxfater/status/2110769358402408926",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-pm-03",
+      "outputs_dir": "outputs/1016-pm/lxfater-deepseek-opencode",
+      "media_count": 2,
+      "summary": "铁锤人 lxfater 用 V100 老卡跑 DeepSeek V4.1 在 Opencode 免费 — 40K 浏览,DIY 推理服务回归"
+    },
+    {
+      "own_post_id": "2110871037567226086",
+      "own_post_url": "https://x.com/FrankFika/status/2110871037567226086",
+      "platform": "x",
+      "posted_at": "2026-10-16T07:11:09.053355+08:00",
+      "source_post_id": "2110817988311998911",
+      "source_url": "https://x.com/nvidia/status/2110817988311998911",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-am-02",
+      "outputs_dir": "outputs/1016-am/nvidia-starmind-spacx",
+      "media_count": 2,
+      "summary": "NVIDIA 转发 Elon 关于 Star Mind (SpaceX + NVIDIA AI 超算),明年量产"
+    },
+    {
+      "own_post_id": "2110870735619289325",
+      "own_post_url": "https://x.com/FrankFika/status/2110870735619289325",
+      "platform": "x",
+      "posted_at": "2026-10-16T07:10:01.027773+08:00",
+      "source_post_id": "2110841899838046525",
+      "source_url": "https://x.com/OpenAI/status/2110841899838046525",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-am-01",
+      "outputs_dir": "outputs/1016-am/openai-rosalind-data-policy",
+      "media_count": 2,
+      "summary": "OpenAI Rosalind Academic Plan 数据条款:研究数据默认不用于训练,opt-out 默认"
+    },
+    {
+      "own_post_id": "2110781169407299850",
+      "own_post_url": "https://x.com/FrankFika/status/2110781169407299850",
+      "platform": "x",
+      "posted_at": "2026-10-16T01:14:06.063593+08:00",
+      "source_post_id": "2108966708740505828",
+      "source_url": "https://x.com/op7418/status/2108966708740505828",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-late-2-03",
+      "outputs_dir": "outputs/1016-late-2/op7418-grokbot-threads/",
+      "media_count": 2,
+      "summary": "歸藏分享 GrokBot 把复杂推串变成长文档的用法,适合手机阅读"
+    },
+    {
+      "own_post_id": "2110780937558786208",
+      "own_post_url": "https://x.com/FrankFika/status/2110780937558786208",
+      "platform": "x",
+      "posted_at": "2026-10-16T01:14:06.063593+08:00",
+      "source_post_id": "2110550989279506534",
+      "source_url": "https://x.com/bindureddy/status/2110550989279506534",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-late-2-02",
+      "outputs_dir": "outputs/1016-late-2/bindureddy-argon-production/",
+      "media_count": 2,
+      "summary": "Bindu Reddy 确认:DeepMind Argon 在数据分析 + Excel 上生产落地,质量超 Opus 还便宜"
+    },
+    {
+      "own_post_id": "2110780715625599464",
+      "own_post_url": "https://x.com/FrankFika/status/2110780715625599464",
+      "platform": "x",
+      "posted_at": "2026-10-16T01:14:06.063593+08:00",
+      "source_post_id": "2110733274448306267",
+      "source_url": "https://x.com/dotey/status/2110733274448306267",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-late-2-01",
+      "outputs_dir": "outputs/1016-late-2/dotey-anthropic-distill/",
+      "media_count": 2,
+      "summary": "Anthropic 蒸馏收入占营收 5%-7%,Q3 大幅削减(FT/The Info 同区间);按 Q2 $11.5B 算约 $5.75-8 亿"
+    },
+    {
+      "own_post_id": "2110766998028472325",
+      "own_post_url": "https://x.com/FrankFika/status/2110766998028472325",
+      "platform": "x",
+      "posted_at": "2026-10-16T01:42:00+08:00",
+      "source_post_id": "2110413943034491358",
+      "source_url": "https://x.com/_akhaliq/status/2110413943034491358",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-late-03",
+      "outputs_dir": "outputs/1016-late/akhaliq-thinking-inertia/",
+      "media_count": 2,
+      "summary": "Thinking Inertia — LLM 被告诉别想了但停不下来,推理模型 stop-control 失效"
+    },
+    {
+      "own_post_id": "2110766536264933473",
+      "own_post_url": "https://x.com/FrankFika/status/2110766536264933473",
+      "platform": "x",
+      "posted_at": "2026-10-16T01:37:00+08:00",
+      "source_post_id": "2110423274413056230",
+      "source_url": "https://x.com/_akhaliq/status/2110423274413056230",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-late-02",
+      "outputs_dir": "outputs/1016-late/akhaliq-videojev-system/",
+      "media_count": 2,
+      "summary": "VideoJev System — 一个模型同时支持视频理解 + 交互(IO)"
+    },
+    {
+      "own_post_id": "2110765429623025716",
+      "own_post_url": "https://x.com/FrankFika/status/2110765429623025716",
+      "platform": "x",
+      "posted_at": "2026-10-16T01:30:00+08:00",
+      "source_post_id": "2110750157272719562",
+      "source_url": "https://x.com/nvidia/status/2110750157272719562",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "material_id": "1016-late-01",
+      "outputs_dir": "outputs/1016-late/nvidia-nemotron-35-supervl/",
+      "media_count": 2,
+      "summary": "NVIDIA Nemotron 3.5 Super VL 120B/12B MoE 开源多模态模型，长流程 AI Agent 用"
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110751589128679885",
+      "url": "https://x.com/FrankFika/status/2110751589128679885",
+      "posted_at": "2026-10-15T23:16:45.325077+08:00",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2110551546635444588",
+      "source_author": "NVIDIA",
+      "material_id": "1015-late-2-03",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-late-2/nv-muse-knows/screenshots/x-nvidia-post-detail.png",
+        "outputs/1015-late-2/nv-muse-knows/screenshots/x-nvidia-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-late-2/nv-muse-knows/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110751206436188241",
+      "url": "https://x.com/FrankFika/status/2110751206436188241",
+      "posted_at": "2026-10-15T23:15:37.734596+08:00",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2110600083892785270",
+      "source_author": "NVIDIA",
+      "material_id": "1015-late-2-02",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-late-2/nv-stockholm-nordics/screenshots/x-nvidia-post-detail.png",
+        "outputs/1015-late-2/nv-stockholm-nordics/screenshots/x-nvidia-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-late-2/nv-stockholm-nordics/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110750494390132844",
+      "url": "https://x.com/FrankFika/status/2110750494390132844",
+      "posted_at": "2026-10-15T23:12:27.571856+08:00",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2110421861435879476",
+      "source_author": "GoogleDeepMind",
+      "material_id": "1015-late-2-01",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-late-2/argonscientific/screenshots/x-deepmind-post-detail.png",
+        "outputs/1015-late-2/argonscientific/screenshots/x-deepmind-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-late-2/argonscientific/x.txt"
+      }
+    },
+    {
+      "source_post_id": "2110020524088934754",
+      "source_author": "oran_ge",
+      "source_url": "https://x.com/oran_ge/status/2110020524088934754",
+      "own_post_id": "2110746998727200998",
+      "own_post_url": "https://x.com/FrankFika/status/2110746998727200998",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "posted_at": "2026-10-15T22:58:26+08:00",
+      "media_count": 2,
+      "material_id": "1015-late-03",
+      "outputs_dir": "outputs/1015-late/oran-ge-muse-vs-grokbot/"
+    },
+    {
+      "source_post_id": "2110485178929844666",
+      "source_author": "NVIDIA",
+      "source_url": "https://x.com/NVIDIA/status/2110485178929844666",
+      "own_post_id": "2110746175548874976",
+      "own_post_url": "https://x.com/FrankFika/status/2110746175548874976",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "posted_at": "2026-10-15T22:55:06+08:00",
+      "media_count": 2,
+      "material_id": "1015-late-02",
+      "outputs_dir": "outputs/1015-late/nvidia-uk-ai-5startups/"
+    },
+    {
+      "source_post_id": "2110741355739963884",
+      "source_author": "OpenAI",
+      "source_url": "https://x.com/OpenAI/status/2110741355739963884",
+      "own_post_id": "2110745383081255200",
+      "own_post_url": "https://x.com/FrankFika/status/2110745383081255200",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "posted_at": "2026-10-15T22:52:03+08:00",
+      "media_count": 2,
+      "material_id": "1015-late-01",
+      "outputs_dir": "outputs/1015-late/openai-simons-math-5m/"
+    },
+    {
+      "own_post_id": "2110736877297004939",
+      "own_post_url": "https://x.com/FrankFika/status/2110736877297004939",
+      "material_id": "1015-eve-02",
+      "topic_signature": "anthropic-q3-income-slowdown-vs-market-expectation",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "oran_ge",
+      "source_post_id": "2110600036476506158",
+      "source_url": "https://x.com/oran_ge/status/2110600036476506158",
+      "posted_at": "2026-10-15T22:18:10.013295+08:00",
+      "media_count": 4,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110736178756633029",
+      "own_post_url": "https://x.com/FrankFika/status/2110736178756633029",
+      "material_id": "1015-night-01",
+      "topic_signature": "karpathy-llm-output-formats",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "karpathy",
+      "source_post_id": "2105819303471976479",
+      "source_url": "https://x.com/karpathy/status/2105819303471976479",
+      "posted_at": "2026-10-15T22:15:00+08:00",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110736402602180677",
+      "own_post_url": "https://x.com/FrankFika/status/2110736402602180677",
+      "material_id": "1015-night-02",
+      "topic_signature": "karpathy-llm-land-or-water-eval",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "karpathy",
+      "source_post_id": "2105909609487872075",
+      "source_url": "https://x.com/karpathy/status/2105909609487872075",
+      "posted_at": "2026-10-15T22:21:00+08:00",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110736604860174705",
+      "own_post_url": "https://x.com/FrankFika/status/2110736604860174705",
+      "material_id": "1015-night-03",
+      "topic_signature": "deepmind-synthid-time-best-inventions",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "GoogleDeepMind",
+      "source_post_id": "2110715601454784965",
+      "source_url": "https://x.com/GoogleDeepMind/status/2110715601454784965",
+      "posted_at": "2026-10-15T22:25:00+08:00",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110736418196820255",
+      "own_post_url": "https://x.com/FrankFika/status/2110736418196820255",
+      "material_id": "1015-eve-01",
+      "topic_signature": "anthropic-fellowships-2027-stem-conceptual",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "AnthropicAI",
+      "source_post_id": "2110720940665372825",
+      "source_url": "https://x.com/AnthropicAI/status/2110720940665372825",
+      "posted_at": "2026-10-15T22:16:20.646473+08:00",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110642240850960860",
+      "own_post_url": "https://x.com/FrankFika/status/2110642240850960860",
+      "material_id": "1015-pm-01",
+      "topic_signature": "sama-ai-safety-religious-force",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "sama",
+      "source_post_id": "2106388373221118198",
+      "source_url": "https://x.com/sama/status/2106388373221118198",
+      "posted_at": "2026-10-15T16:01:00+08:00",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110598529383354515",
+      "own_post_url": "https://x.com/FrankFika/status/2110598529383354515",
+      "material_id": "1015-noon-06",
+      "topic_signature": "openai-chatgpt-for-teens-college-planner",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "OpenAI",
+      "source_post_id": "2107909792945832070",
+      "source_url": "https://x.com/OpenAI/status/2107909792945832070",
+      "posted_at": "2026-10-15T05:10:00.000Z",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110598257118494866",
+      "own_post_url": "https://x.com/FrankFika/status/2110598257118494866",
+      "material_id": "1015-noon-05",
+      "topic_signature": "anthropic-unintended-model-actions-report",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "AnthropicAI",
+      "source_post_id": "2108680150556737819",
+      "source_url": "https://x.com/AnthropicAI/status/2108680150556737819",
+      "posted_at": "2026-10-15T05:09:00.000Z",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "own_post_id": "2110597893300310223",
+      "own_post_url": "https://x.com/FrankFika/status/2110597893300310223",
+      "material_id": "1015-noon-04",
+      "topic_signature": "openai-frontier-math-model-open-source",
+      "treatment": "quote_retweet (auto_quote_embed)",
+      "source_author": "OpenAI",
+      "source_post_id": "2107596713791767021",
+      "source_url": "https://x.com/OpenAI/status/2107596713791767021",
+      "posted_at": "2026-10-15T05:08:00.000Z",
+      "media_count": 2,
+      "account": "@FrankFika"
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110555566519296183",
+      "url": "https://x.com/FrankFika/status/2110555566519296183",
+      "posted_at": "2026-10-15T02:17:08.000Z",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2110047081414987957",
+      "source_author": "AnthropicAI",
+      "material_id": "1015-noon-01",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-noon/anthropic-source-control/screenshots/x-anthropic-post.png",
+        "outputs/1015-noon/anthropic-source-control/screenshots/x-anthropic-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-noon/anthropic-source-control/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110555831855157688",
+      "url": "https://x.com/FrankFika/status/2110555831855157688",
+      "posted_at": "2026-10-15T02:18:08.000Z",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2107894997538525580",
+      "source_author": "OpenAI",
+      "material_id": "1015-noon-02",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-noon/openai-gpt6-intelligent-ui/screenshots/x-openai-post.png",
+        "outputs/1015-noon/openai-gpt6-intelligent-ui/screenshots/x-openai-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-noon/openai-gpt6-intelligent-ui/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110556258671681827",
+      "url": "https://x.com/FrankFika/status/2110556258671681827",
+      "posted_at": "2026-10-15T02:21:08.000Z",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2109795898909950247",
+      "source_author": "AnthropicAI",
+      "material_id": "1015-noon-03",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-noon/anthropic-distillation-defense/screenshots/x-anthropic-post.png",
+        "outputs/1015-noon/anthropic-distillation-defense/screenshots/x-anthropic-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-noon/anthropic-distillation-defense/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110533769727967326",
+      "url": "https://x.com/FrankFika/status/2110533769727967326",
+      "posted_at": "2026-10-15T00:52:56.953925+00:00",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2110039274922131792",
+      "source_author": "GoogleDeepMind",
+      "material_id": "1015-am-01",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-am/google-deepmind-gemini4-argon/screenshots/x-deepmind-post-thread.png",
+        "outputs/1015-am/google-deepmind-gemini4-argon/screenshots/x-deepmind-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-am/google-deepmind-gemini4-argon/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110533735569588647",
+      "url": "https://x.com/FrankFika/status/2110533735569588647",
+      "posted_at": "2026-10-15T00:52:56.953925+00:00",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2110289695888511368",
+      "source_author": "AnthropicAI",
+      "material_id": "1015-am-02",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-am/anthropic-singapore-office/screenshots/x-anthropic-post.png",
+        "outputs/1015-am/anthropic-singapore-office/screenshots/x-anthropic-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-am/anthropic-singapore-office/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110534221911806169",
+      "url": "https://x.com/FrankFika/status/2110534221911806169",
+      "posted_at": "2026-10-15T00:52:56.953925+00:00",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2110442001749659890",
+      "source_author": "OpenAI",
+      "material_id": "1015-am-03",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-am/openai-eu-ai-agents/screenshots/x-openai-post.png",
+        "outputs/1015-am/openai-eu-ai-agents/screenshots/x-openai-profile-top.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-am/openai-eu-ai-agents/x.txt"
+      }
+    },
+    {
+      "platform": "x",
+      "own_post_id": "2110416897112248372",
+      "url": "https://x.com/FrankFika/status/2110416897112248372",
+      "posted_at": "2026-10-14T17:06:12Z",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "source_post_id": "2109361546505966046",
+      "source_author": "karpathy",
+      "material_id": "1015-pm-01",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1015-pm/karpathy-frontier-5000/screenshots/x-karpathy-timeline.png",
+        "outputs/1015-pm/karpathy-frontier-5000/screenshots/x-post-detail.png"
+      ],
+      "draft_files": {
+        "x": "outputs/1015-pm/karpathy-frontier-5000/x.txt",
+        "xhs": "outputs/1015-pm/karpathy-frontier-5000/xhs.txt"
+      },
+      "xhs_dispatched_to": "fang-app-dump",
+      "xhs_draft_id": null
+    },
+    {
+      "post_id": "2110853682317394018",
+      "own_post_url": "https://x.com/FrankFika/status/2110853682317394018",
+      "source_post_id": "2110797830361436604",
+      "source_post_url": "https://x.com/OpenAI/status/2110797830361436604",
+      "handle": "OpenAI",
+      "treatment": "reply_riding_traffic",
+      "media_count": 0,
+      "at": "2026-10-16T06:04:21.799689+08:00",
+      "text_preview": "GPT-Live-1.1: 不挂「checking…」+ 6 个新口音"
+    },
+    {
+      "post_id": "2110853999419371979",
+      "own_post_url": "https://x.com/FrankFika/status/2110853999419371979",
+      "source_post_id": "2110841898076418336",
+      "source_post_url": "https://x.com/OpenAI/status/2110841898076418336",
+      "handle": "OpenAI",
+      "treatment": "reply_riding_traffic",
+      "media_count": 0,
+      "at": "2026-10-16T06:04:21.799689+08:00",
+      "text_preview": "GPT-Rosalind: 12 个月赞助换博士养成工作流"
+    },
+    {
+      "post_id": "2110854221360947670",
+      "own_post_url": "https://x.com/FrankFika/status/2110854221360947670",
+      "source_post_id": "2110674226961322076",
+      "source_post_url": "https://x.com/bindureddy/status/2110674226961322076",
+      "handle": "bindureddy",
+      "treatment": "reply_riding_traffic",
+      "media_count": 0,
+      "at": "2026-10-16T06:04:21.799689+08:00",
+      "text_preview": "Token spend: coding 锁住 Anthropic，其余被分流"
+    },
+    {
+      "post_id": "2110885633141191122",
+      "own_post_url": "https://x.com/FrankFika/status/2110885633141191122",
+      "source_post_id": "2110823738531037651",
+      "source_handle": "ChatGPT",
+      "topic_signature": "openai-chatgpt-chrome-tabs-computer-use-rollout",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "media_count": 2,
+      "posted_at": "2026-10-16T08:11:34.422340+08:00",
+      "material_id": "1016-am2-01",
+      "output_dir": "/Users/fangchen/Documents/短文助手/outputs/1016-am2/chatgpt-chrome-tabs"
+    },
+    {
+      "post_id": "2110885923202515420",
+      "own_post_url": "https://x.com/FrankFika/status/2110885923202515420",
+      "source_post_id": "2110820373369360481",
+      "source_handle": "SemiAnalysis_",
+      "topic_signature": "asml-hybrid-bonding-tool-besi-threat-2-5d-packaging",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "media_count": 2,
+      "posted_at": "2026-10-16T08:11:34.422340+08:00",
+      "material_id": "1016-am2-02",
+      "output_dir": "/Users/fangchen/Documents/短文助手/outputs/1016-am2/semianalysis-asml-bonding"
+    },
+    {
+      "post_id": "2110886135388049873",
+      "own_post_url": "https://x.com/FrankFika/status/2110886135388049873",
+      "source_post_id": "2110568515757355157",
+      "source_handle": "MaxForAI",
+      "topic_signature": "apple-intelligence-china-launch-dec-2026-tongyi-qwen-wanxiang",
+      "treatment": "regular_post_x_auto_quoteembed",
+      "media_count": 2,
+      "posted_at": "2026-10-16T08:11:34.422340+08:00",
+      "material_id": "1016-am2-03",
+      "output_dir": "/Users/fangchen/Documents/短文助手/outputs/1016-am2/maxforai-apple-intelligence-china"
+    },
+    {
+      "post_id": "2110928715958145390",
+      "own_post_url": "https://x.com/FrankFika/status/2110928715958145390",
+      "source_post_id": "2110923965107704110",
+      "source_post_url": "https://x.com/MaxForAI/status/2110923965107704110",
+      "handle": "MaxForAI",
+      "treatment": "reply_riding_traffic",
+      "media_count": 0,
+      "at": "2026-10-16T10:55:30+08:00",
+      "text_preview": "这研究最颠覆的不是结论,是方法论。Nick 三年前在 OpenAI 跑 auto-interp 那次只能解释 2% 神经元,整个圈子的默认假设是「神经网络内部 entanglement 太重,很难看清」。这次他直接换 Agent 当研究员...",
+      "material_id": "1016-pulse-08-01"
+    }
+  ]
+}

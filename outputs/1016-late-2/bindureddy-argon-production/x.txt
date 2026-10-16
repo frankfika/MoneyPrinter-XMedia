@@ -1,0 +1,15 @@
+真猛，DeepMind 的 Argon 已经有人上生产了。
+
+Bindu Reddy 刚发推：Argon 处理数据分析和 Excel 任务是「绝对的」。
+比 Opus 质量还高，价格还便宜。
+
+这不是 demo，是「Just flipped it on in production」。
+
+意味着 Argon 不只是论文 + 跑分，是真的能接进 BI 流程干活的模型。
+DeepMind 这一把，把 Claude 在企业数据场景的位置直接动了。
+
+https://x.com/bindureddy/status/2110550989279506534
+# posted_url: https://x.com/FrankFika/status/2110780937558786208
+# posted_at: 2026-10-16T01:14:09.492705+08:00
+# treatment_used: regular_post_x_auto_quoteembed
+# media_count: 2

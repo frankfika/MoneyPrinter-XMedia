@@ -1,0 +1,51 @@
+material_id: "1015-night-01"
+slot: night
+scanned_at: "2026-10-15T08:48:00+08:00"
+
+author:
+  name: "Elon Musk"
+  handle: "elonmusk"
+  lang: en
+
+original:
+  url: "https://x.com/elonmusk/status/2110520607276499109"
+  post_id: "2110520607276499109"
+  posted_at: "2026-10-15T08:00:00+08:00"  # 48 minutes before scan (08:00 → 08:48)
+  quoted:
+    author: "SpaceX Super Intelligence (@SpaceXSI)"
+    url: "https://x.com/SpaceXSI/status/2110416580899168305"
+    post_id: "2110416580899168305"
+    posted_at: "2026-10-15T01:48:00+08:00"  # 7h before scan
+
+metrics:
+  views: 467100
+  likes: 2128
+  retweets: 291
+  replies: 440
+  bookmarks: 78
+
+ai_match: true
+
+summary: |
+  elonmusk 转发 xAI/SpaceXSI 的 Grok Voice 3.0 发布会，称"全球最强的对话语音模型"。
+  原帖亮点：sub-1s 响应、客服场景最强、成本低于其它 frontier 模型。
+  原帖本身 48 分钟内 467K 浏览、440 回复、2.1K 赞、291 转。
+
+worth_posting_signals:
+  - 具体数字：sub-1s 响应、成本低于 frontier
+  - 产品发布：Grok Voice 3.0 GA
+  - 可截图验证：xAI 官方帖 + elonmusk 转发都在
+  - watchlist 命中：elonmusk 是官方 watchlist
+
+evidence_links:
+  - "https://x.com/elonmusk/status/2110520607276499109"
+  - "https://x.com/SpaceXSI/status/2110416580899168305"
+
+screenshots_needed:
+  - "x-elonmusk-timeline.png"
+  - "x-post-detail.png"
+
+treatment_hint: "quote_retweet_with_auto_quote_embed"
+
+dedup_hits: []
+source: "browser use · in-app browser · x.com/elonmusk 实时时间线"

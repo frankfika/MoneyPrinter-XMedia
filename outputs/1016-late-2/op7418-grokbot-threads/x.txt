@@ -1,0 +1,17 @@
+舒服了，X 上读推串终于不那么难受了。
+
+歸藏（guizang.ai）分享的 GrokBot 用法：
+把复杂难读的推串一键拼成长文档，手机端也能舒服看。
+
+具体场景：有人用 LLM 写了一段细节极丰富的 3D 龙建模过程，
+全是推串，原生 X 滚动起来要命。
+他直接让 Grok bot 把所有内容拉成一篇完整长文。
+
+不是大新闻，但是对「在 X 读长内容」这个真实痛点一个很轻的解法。
+手机党直接试。
+
+https://x.com/op7418/status/2108966708740505828
+# posted_url: https://x.com/FrankFika/status/2110781169407299850
+# posted_at: 2026-10-16T01:14:09.492705+08:00
+# treatment_used: regular_post_x_auto_quoteembed
+# media_count: 2

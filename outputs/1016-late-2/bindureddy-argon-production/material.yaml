@@ -1,0 +1,25 @@
+material_id: 1016-late-2-02
+slot: late-2
+scanned_at: '2026-10-16T01:55:00+08:00'
+author:
+  name: Bindu Reddy
+  handle: bindureddy
+  lang: en
+original:
+  url: https://x.com/bindureddy/status/2110550989279506534
+  post_id: '2110550989279506534'
+  posted_at: '2026-10-15T10:50:00+00:00'
+metrics:
+  views: 28790
+  likes: 55
+  retweets: 13
+  replies: 40
+  bookmarks: 15
+ai_match: true
+summary: >-
+  Bindu Reddy 确认：Google DeepMind 的 Argon 在数据分析和 Excel 任务上已上生产。
+  体感质量比 Opus 还高，价格还便宜。这是 Argon 发布后的第一波"上生产"实战反馈。
+evidence_links:
+  - https://x.com/bindureddy/status/2110550989279506534
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-16 Codex session)

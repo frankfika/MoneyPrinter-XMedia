@@ -1,0 +1,25 @@
+# material_id: 1015-late-02
+# author_handle: NVIDIA
+# source_url: https://x.com/NVIDIA/status/2110485178929844666
+# draft_at: 2026-10-15T23:05:00+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Jensen 一晚投了 5 家英国 AI 公司】
+
+老黄（Jensen Huang）上周在伦敦，一口气投了 5 家英国 AI 公司——
+蛋白质设计、能源材料、AI 编译器、脑健康、量子计算，一个晚上把半个 AI 版图都摸了一遍。
+
+这 5 家分别是：
+🧬 boltz_bio：蛋白质设计
+⚡ ForesightWorks：能源 / 材料
+🛠️ hivergeai：AI 编译器
+🧠 PrimaMente：脑健康
+⚛️ Riverlane：量子计算
+
+评论区更扎心的一组数字：英国 2024 年 AI 投资 $4.5B，美国是 $109.1B——差一个数量级。Jensen 这一晚的动作，更像是在帮伦敦"翻盘"。
+
+但同期英伟达股价 10 天掉了 10%。十年一遇的科技牛配上了十年第一次回撤，这次 London round 是招牌动作还是真金白银？
+
+📎 NVIDIA 原帖：https://x.com/NVIDIA/status/2110485178929844666
+
+#NVIDIA #JensenHuang #伦敦 #英国AI #AI投资 #量子计算

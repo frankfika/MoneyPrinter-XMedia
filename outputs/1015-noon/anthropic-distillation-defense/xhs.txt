@@ -1,0 +1,23 @@
+# material_id: 1015-noon-03
+# author_handle: AnthropicAI
+# source_url: https://x.com/AnthropicAI/status/2109795898909950247
+# draft_at: 2026-10-15T23:06:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Anthropic 公开讲怎么打蒸馏攻击了】
+
+Anthropic 发了新博客，系统讲他们怎么压 distillation attack：
+
+一句话：distillation attack 就是有人拿 Claude 的输出反推训练自己的模型——套壳 Claude，零成本蹭 API 输出。
+
+具体怎么做：
+🔍 prompt / response 加指纹 + 行为分析
+🚦 系统级 rate limit + 高频输出检测
+🎭 主动混淆 token-level 概率，让模仿者的训练数据被污染
+
+48h 2.4M 浏览 / 6.3K 点赞 / 1.1K 转。这是 AI 公司第一次系统对抗开源生态圈的蒸馏套壳——Claude 这条护城河还在。
+
+📎 Anthropic 原帖：https://x.com/AnthropicAI/status/2109795898909950247
+📎 博客全文：https://www.anthropic.com/research/defending-against-distillation
+
+#Anthropic #Claude #蒸馏攻击 #AI安全 #开源模型

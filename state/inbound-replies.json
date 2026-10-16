@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "last_updated": null,
+  "purpose": "记录已回的 inbound reply(别人对我帖的 reply),用于 dedup 防重复回 + 跟踪社区互动闭环",
+  "entries": []
+}

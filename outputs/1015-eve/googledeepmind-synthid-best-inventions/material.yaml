@@ -1,0 +1,31 @@
+material_id: "1015-eve-03"
+slot: eve
+scanned_at: "2026-10-15T19:55:00+08:00"
+author:
+  name: "Google DeepMind"
+  handle: "GoogleDeepMind"
+  lang: en
+original:
+  url: "https://x.com/GoogleDeepMind/status/2110715601454784965"
+  post_id: "2110715601454784965"
+  posted_at: "2026-10-15T19:00:00+08:00"
+metrics:
+  views: 21898
+  likes: 277
+  retweets: 33
+  replies: 79
+  bookmarks: 31
+ai_match: true
+summary: |
+  Google DeepMind 的 SynthID 入选 TIME 2026 年度最佳发明。
+  累计已给 180 亿张图片+视频打 AI 水印，让普通人能区分 AI 生成内容。
+  截至 Oct 15 19:55+08:00 累计 21.9K 浏览 / 277 赞 / 79 评论。
+  真难题不是技术，是「所有人都用同一把尺」。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/GoogleDeepMind/status/2110715601454784965"
+screenshots_needed:
+  - "原帖 modal 视角"
+  - "GoogleDeepMind profile 时间线顶部视角"
+treatment_hint: quote_retweet
+dedup_hits: []

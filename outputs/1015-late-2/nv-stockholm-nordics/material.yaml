@@ -1,0 +1,25 @@
+material_id: 1015-late-2-02
+slot: late-2
+scanned_at: '2026-10-15T23:10:00+08:00'
+author:
+  name: NVIDIA
+  handle: NVIDIA
+  lang: en
+original:
+  url: https://x.com/NVIDIA/status/2110600083892785270
+  post_id: '2110600083892785270'
+  posted_at: '2026-10-15T14:00:00+00:00'
+metrics:
+  views: 30062
+  likes: 175
+  retweets: 24
+  replies: 45
+  bookmarks: 6
+ai_match: true
+summary: >-
+  NVIDIA 在 GTC Berlin 前夕发"Hello Stockholm"，把北欧三国（瑞典/挪威/芬兰/丹麦）的 AI 生态盘了一遍：Spotify 用 GPU 加速播客推荐、ABB Robotics 用仿真训练工厂机器人、初创公司在瑞典语音转写 / 专利研究上跑开源模型。看似 demo 串烧，背后是 compute 投资 + 研究者社群两条腿。
+evidence_links:
+  - https://x.com/NVIDIA/status/2110600083892785270
+  - https://blogs.nvidia.com/blog/nordics-t
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

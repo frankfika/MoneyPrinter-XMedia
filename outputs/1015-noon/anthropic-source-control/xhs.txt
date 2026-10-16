@@ -1,0 +1,24 @@
+# material_id: 1015-noon-01
+# author_handle: AnthropicAI
+# source_url: https://x.com/AnthropicAI/status/2110047081414987957
+# draft_at: 2026-10-15T23:07:45+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【Anthropic 代码合并 4 个月涨 12 倍】
+
+Anthropic 5 月每天合并 2,500 次代码变更，9 月飙到 30000+，12 倍，一个季度的事。
+
+他们被迫自研整套 in-house source control，老的那套是为人类规模设计的，agent 一多直接卡脖子。
+
+Engineering blog 长篇揭秘整套平台怎么为 agent-scale 重写：
+
+🔄 PR / CI 流程全部 machine-executable
+🤖 30K / 天 review / merge / 测试都靠自动化
+🛡️ 安全 + 回滚也按 agent 量级重设计
+
+12h 7.3M 浏览 / 24K 点赞 / 4.5K 转——agent 时代的基础设施，Anthropic 第一个完整掏出来。
+
+📎 原帖：https://x.com/AnthropicAI/status/2110047081414987957
+📎 blog：https://www.anthropic.com/engineering/redesigning-source-control-at-anthropic
+
+#Anthropic #Agent #SourceControl #AI开发

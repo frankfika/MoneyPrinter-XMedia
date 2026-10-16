@@ -1,0 +1,13 @@
+DIY 推理服务又杀回来了。
+
+铁锤人 (lxfater) 拿几万块攒的 V100 老卡 + DeepSeek V4.1,直接挂到 Opencode 上免费 — 12 小时 40K 浏览。
+
+V100 已经是 2017 年的卡了,DeepSeek V4.1 MoE 推理对显存要求反而比稠密低得多,所以老硬件 + 推理模型 + 免费分发 = 个人开发者又一次把大厂的 API 定价打了下来。
+
+下一步就看 Qwen3 / GLM 之类的国产推理模型能不能也走这条路。
+
+https://x.com/lxfater/status/2110769358402408926
+
+# material_id: 1016-pm-03
+# treatment: quote_retweet
+# screenshots: x-name1.png, x-name2.png

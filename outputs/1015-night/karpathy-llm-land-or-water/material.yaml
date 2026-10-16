@@ -1,0 +1,24 @@
+material_id: 1015-night-02
+slot: night
+scanned_at: '2026-10-15T22:09:00+08:00'
+author:
+  name: Andrej Karpathy
+  handle: karpathy
+  lang: en
+original:
+  url: https://x.com/karpathy/status/2105909609487872075
+  post_id: '2105909609487872075'
+  posted_at: '2026-10-02T14:35:00+00:00'
+metrics:
+  views: 1399983
+  likes: 18962
+  retweets: 1212
+  replies: 686
+  bookmarks: 4840
+ai_match: true
+summary: >-
+  Karpathy 分享一个超简单 LLM eval：给模型 16,200 个经纬度，问「陆地 or 海洋？」。结果 Claude Opus 4.5 答对率 81.3%，Llama 5 答对 98%+——纯文本训练出来就能「画世界地图」。
+evidence_links:
+  - https://x.com/karpathy/status/2105909609487872075
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-15 night)
