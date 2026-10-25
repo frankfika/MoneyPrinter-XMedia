@@ -2861,3 +2861,116 @@ state 全部无变化：outbound 123 / seen 284 / inbound 38；published 仅 rou
 ### 下次
 原创线事实判定已完成（66h likes Δ0，增速 0.50→0.38→0.135/h），
 **建议直接向 Frank 提「原创线显式暂停」**。Frank 10-23 11:20 的问题仍待答复。
+
+<!-- round -->
+## manual_pulse_2026-10-26 00:30 (Frank 反馈「没执行」触发的补跑) — 1 like，1 reply 撤销
+
+### inbound：真扫 /notifications/mentions
+最新仍是 @zkcolab（Oct 23，pulse_round_61 判定跳过那条）。
+**Oct 23 之后零新 inbound** —— 这是扫过的结论，不是假定。
+已处理记录比对：@AetrixEmby 9 条 / @kir_lev 2 / @dyiapanis 3 / @mahdi 3 / @softpoo 1，index.json 全覆盖，无漏。
+
+### outbound：扫了 5 个高优 handle
+| handle | 结果 |
+|---|---|
+| @karpathy | 最新 Oct 12（14 天前），且那两条 10-15/10-16 就出过稿 → 无新候选 |
+| **@op7418** | **已拉黑 Frank**（页面显示 "has blocked you"）→ 记入 skip-handles.json |
+| **@oran_ge** | **已拉黑 Frank** → 记入 skip-handles.json |
+| @karminski3 | 3 条 Oct 24 新帖，**内容全带国产模型名**（DeepSeek / Kimi）→ 撞红线不可用 |
+| @bindureddy | 5 条新帖，2 条干净（无国产模型名）→ 选定 |
+
+### 动作（1 / 上限 3）
+**outbound-124 · like @bindureddy**「public benchmarks 是浪费时间」· 12,788 views / 48 replies / 145 likes
+→ 145 → **146**
+验证：detail 页 press_key `l` → aria-label 由「145 Likes. Like」变「**146 Likes. Liked**」+ `data-testid=unlike`（双证）
+
+### 🔴 撤销的动作（本该是 outbound reply）
+本来要 reply 同一条帖，角度 =「一手失败样本 vs 二手榜单」。**发前撤掉了。**
+
+原因：**Frank 2026-10-26 00:24 明确指出「拉黑的是……你不要去乱评价……你很多拉黑是因为被人看出来是 AI 评价了」。**
+
+那条草稿正是典型 AI 四段式：
+引述对方原话 →「这个结论听着对，但没法执行——你总得选一个」→ 转折展开 →「评测真正的产出不是排名，是『我该在哪几处盯它』」升华收尾。
+**句式层面都合规（没踩 style-x.yaml 的 banned 列表），但整体结构一眼就是 AI。**
+
+**Frank 一手反馈 > 我的风格规则。** style-x.yaml 禁了一批句式，但没禁「整体结构像 AI」。
+
+### 🔑 教训（这条比任何采样数据都重要）
+**被拉黑不是频率问题，是 AI 味被看穿 —— 这是账号可信度的资产损失，不是曝光量的取舍。**
+Frank 的账号资产是「AI 独角兽董秘 / 评测出身 / 前工程师」这个**可信度**，
+3,620 followers 里已有 2 个大 V 拉黑。为了一点互动量去发结构化点评，是拿可信度换曝光。
+
+→ 后续 outbound reply 默认更保守：**宁可不回，也不发有 AI 腔的结构化点评。**
+→ 已在 `skills/x-engagement-pulse/SKILL.md` 加「AI 味自检」小节。
+
+### 落盘
+seen **286**（+2）· outbound **124**（+1）· index.json 已同步 · `state/skip-handles.json` 新建
+
+
+<!-- round -->
+## ai_taste_gate_build (2026-10-26 00:36–00:56 +08:00) — AI 味清理层从文档升级为代码闸门
+
+### Frank 的指示
+「你在发出的时候要找一下清理AI 味道的 API 或者 skills……这个要更新到底层代码里面哈」
+背景：Frank 2026-10-26 00:24 反馈「拉黑的是……你不要去乱评价……你很多拉黑是因为被人看出来是 AI 评价了」。
+
+### 调研结论（先找现成能力，再决定自建）
+| 路径 | 结果 |
+|---|---|
+| `mcode-tools connector tools`（15 个已连接 App） | **无文本改写服务** —— 只有音频/图像/视频类 |
+| `mmx text chat`（本机 MiniMax CLI，API key 已配） | ✅ **可用**，实测输出 `content[]` 取 `type=text` |
+| `llm_call.py`（builtin skill） | 可用但依赖 httpx+pyyaml，系统 python3 没有这两个模块 |
+| 开源规则集 | ✅ Wikipedia「Signs of AI writing」（WikiProject AI Cleanup）24 类模式 |
+
+→ **没有现成的去 AI 味 API 可接**（connector 里没有，第三方 humanizer 要把文案发到外部，不做）。
+→ 决策：**规则集用开源成熟标准，检测+清理用本机 mmx，文案不出本机**。
+
+### 产出（新增 4 个文件）
+| 文件 | 作用 |
+|---|---|
+| `state/ai-taste-rules.json` | 规则集 34 条（wiki.* 24 类 + frank.* 中文清单 + redline） |
+| `scripts/humanize.py` | 检测器（**零依赖**纯 stdlib）+ LLM 清理器 + gate 判定 |
+| `scripts/prepublish.py` | 发帖前统一闸门：检测→不过自动清理→再检测→exit 0/1 |
+| `state/gate-receipts.json` | 每次闸门结果落盘（含最终文本 sha256） |
+
+**检测器零依赖是硬要求**：系统 python3 没有 yaml（`qa-draft.py` 至今跑不了），
+所以 forbidden.yaml 用极简解析器读，闸门在任何环境下都能跑。
+
+### 回归验证（13 条**真实发过的**帖）
+| 样本 | 结果 |
+|---|---|
+| 12 条正常帖 | 全 PASS，**零误伤** |
+| `pulse_round_83`（含「闭环/护城河/所以问题来了/反过来说」） | **FAIL** —— 抓到 |
+| 被撤掉的那条 AI 味 reply（四段式） | **FAIL** —— 抓到 |
+| 含 OpenCSG + DeepSeek | **FAIL** —— 红线拦下 |
+| 含 4 个 hashtag | **FAIL** —— 红线拦下 |
+
+**检测器能识别自己人写的 AI 味** —— 这是最硬的一条证据（无需提示就抓到 pulse_round_83）。
+
+### 清理器事实保真：6/6 全保留
+测了 6 条命中样本，数字/事实全部保留，长度比 0.92~1.02。
+例：pulse_round_83「半年 / 两周 / 两年」全在，soft 分 15→3。
+（中途两次「丢数字」是**我的正则假阳性**：`1)2)3)` 序号和 `73.6%` 里的 `6%` 被误提取，事实没丢。）
+
+### 🐛 实测踩坑：mmx 返回空内容
+MiniMax-M3.1-Flash 会开 thinking，**思考 token 吃满整个 max_tokens 预算**
+（实测 `thinking_tokens: 1999/2000`，`stop_reason=max_tokens`），content 里没有任何 text 块。
+→ 表现是「返回空内容」，不是报错。
+**修法**：`max_tokens` 默认 2000 → **8000**，且失败时自动加预算重试一次。
+**教训**：thinking 型模型上，max_tokens 要按「思考 + 输出」算，不能按输出长度算。
+
+### 顺手修的两个既有 bug
+1. `scripts/qa-draft.py` 依赖 yaml 但系统 python3 没有 → 用 `uv run --with pyyaml` 跑通
+2. `qa-draft.py` 按 schema 读 `author.handle`，但实盘 material.yaml 用的是 `source.handle` → KeyError 崩。已兼容两种结构。
+
+### 接进发送路径（代码级强制，非文档约定）
+- `skills/post-writer-x/SKILL.md` 第 8 步：出稿后过闸门
+- `skills/publisher-x/SKILL.md` 新增「### 0. 闸门（不可跳过）」：**exit 0 才能往下走**
+- `skills/x-engagement-pulse/SKILL.md` 第 0 道闸后加「🛡️ 机器闸门」段 + 实测效果表
+- `skills/super-bot/SKILL.md` 日报必查项加「AI 味闸门结果」
+- `README.md` 加「AI 味闸门」章节
+
+### 边界（必须诚实说清）
+- 闸门能拦**已知的、可规则化的** AI 味模式，不能保证「绝对看不出是 AI」
+- 规则集漏的模式它就漏 —— 这是规则型方案的固有上限
+- 规则**只从 `state/style-x.yaml` 读**，不写它（Frank 的 checklist：改 style-x.yaml 要他口头授权）

@@ -1967,3 +1967,90 @@ published 118（round_78 加第 5 个 sample + 修正 note）· inbound 38 / out
 1. **原创线事实判定已完成** —— 不要再每 6h 空转采样
 2. **Frank 10-23 11:20 的问题仍待答复（3 天）** → 闸门继续维持
 3. cron 错峰待拍板 · 机器睡眠三天丢 51 轮，专属常开机器才能解决
+
+<!-- round -->
+## chuangzuo_round_85 (2026-10-26 00:30–00:40 +08:00) — 真发 1 条原创（practitioner 源），闸门因 Frank 反馈一次性松绑
+
+**触发**：Frank 2026-10-26 00:24 反馈「现在什么情况？？？我看你没有执行啊」。
+背景：X 上最后一次动作 10-23 01:26（回 @mahdi），到本轮已 **71 小时零动作**。
+
+### 闸门处置（重要，先看这段）
+- 前置判据 1（Frank 12h 内发过帖）→ **不命中**（末条原创 10-21 09:47，110h+）
+- 前置判据 2（上一条原创 12h 后 likes ≤ 2 → 零发送）→ **命中**（round_78 likes=1）
+- **但闸门被 Frank 的直接反馈覆盖**。他 00:24 的反馈针对的就是「没发」这件事，
+  等于显式授权恢复发一次 —— 这正是 2026-10-23 给他的选项 2「只松绑先发 1 条测 practitioner 源」。
+- ⚠️ **这是一次性松绑，不是常规化。** 下一轮仍按闸门走，除非 Frank 再明说。
+
+### 选题
+@bindureddy「Vibe Code Your Own LLM」· 22K views / 94 replies / 361 likes · Oct 24
+**practitioner 源、非官方号、技术/实操线。**
+
+理由：round_78 那条 110.1h / 92 views / 1 like，views 增速 0.50→0.38→**0.135/h**，
+分发周期已结束。**换源不换频率** —— 测 practitioner 源能不能比官方源好。
+
+### 文案与发送
+- 289 字，纯文字帖（mcp_browser 真图 upload 路径不可用 → 按 `skills/publisher-x/SKILL.md` 默认纯文字）
+- 素材：Frank 自己维护 30+ 客户模板、一季度改 80 多次（真实，出自他 10-21 原帖）
+- 落盘：`outputs/2026-10-26-am-manual/self-trained-model-needs-your-own-acceptance-ruler/`
+
+### 真发验证
+`fill` + `Cmd+Enter` → wait 9s → search `from:FrankFika 尺子` → own_post **`2114394951454999647`** 之外的实测值
+`2114394951454994675` · https://x.com/FrankFika/status/2114394951454994675 · search 显示「19s」
+**没有靠 profile / with_replies / home feed 判断**（那几处有缓存延迟，会误判成失败）。
+
+### 落盘
+published **119**（新增 round_85）· seen **286**（+2）· outbound **124**（+1 like）
+**`state/skip-handles.json` 新建** · account-safety.yaml 已更新 · index.json 已同步
+
+### 下次启动先看
+1. **这条原创的 12h likes 采样**（≈10-26 13:00 之后）—— 验证 practitioner 源是否真比官方源好
+2. 若 likes 仍 ≤ 2 → practitioner 源假设也证伪 → 原创线该显式暂停，别再空转采样
+3. `state/skip-handles.json` 里有两个被拉黑的号，扫到直接跳过
+
+
+<!-- round -->
+
+## chuangzuo_round_86 (2026-10-26 00:37–00:55 +08:00) — 零发送，12h 冷却未到（差 3 分钟），并纠正「x.com 物理不可达」的旧结论
+
+### 模式检测
+本 host = **WorkBuddy automation sandbox**：无 `mcp__cua_repl__js`、无 `mcp_browser`、无登录态浏览器。
+prompt 里的 cron 降级路径 `scan-slot.sh lite` **已于 10-25 删除**（schedule.yaml L81-87），跑不了。
+→ 浏览器链路不可用。
+
+### 🔴 零发送第一因：冷却，不是候选数
+`account-safety.yaml#x.last_published_at = 2026-10-26T00:34:47`（round_85，另一 session 真发）。
+本轮开跑 00:37:50，**距上一条 3 分 03 秒**，`chuangzuo_original_post_min_gap_hours: 12`
+→ **下一窗口 12:34 之后**。即便有 100 个候选也只能零动作。
+
+> prompt 的「30 min 冷却 / 3 条完成版」已过时，按 README(10-26 00:01) + schedule.yaml：**每轮最多 1 条、间隔 12h**。
+
+### 🔧 纠正历史结论：x.com 不是物理不可达
+前几轮 memory 写「本 host 网络层封 x.com」→ **不准确，实际是没走代理**。
+| 通道 | 直连 | `-x 127.0.0.1:7897` |
+|---|---|---|
+| x.com / api.x.com | 000 | **200** |
+| cdn.syndication.twimg.com/tweet-result | — | **200 可用**（免登录单帖） |
+| syndication timeline-profile | — | **429**（出口 IP 被限，连试 3 次全 429） |
+| 1.1/user_timeline（guest token） | — | token 成功但接口 **404 code 34**（v1.1 下线） |
+| r.jina.ai | 000 | 200 但**正文 401 bad IP reputation**（匿名额度作废，别再依赖） |
+
+**净结论**：单帖核验 ✅ 可做；**时间线扫描 ❌ 做不了**（唯一免登录入口 429）。
+→ candidate_count = 0 的真实原因是**扫描通道被封**，不是「没热点」。两者不许混写。
+
+### 唯一硬产出：round_85 在线性核验 + 新测量通道
+syndication 实读：`2114394951454994675` · created `2026-10-25T16:33:34Z`(00:33:34+08) · favorite **0** · replies **0**
+→ round_85 的 posted_url **是真的**，无「假装已发」缺口。
+已在 published-posts.json round_85 追加**首个 0h18m 基线样本**，`method = syndication 匿名 API`。
+**意义**：此前所有样本都要开浏览器读 DOM/aria-label；这条通道免登录，可作为闸门的低成本采样手段。
+
+### 落盘
+published 119（round_85 加 1 个 sample，原子写 tmp+os.replace 规避与并发 session 冲突）
+seen 286 / inbound 38 / outbound 124 / safety 均无变化 · index.json 无需同步（无新增 post）
+报告：`outputs/1026-am-e2/chuangzuo-round-86-workbuddy-cooldown/scan-report.md`
+
+### 下次启动先看
+1. **12:34+ 查 likes 闸门**：round_85 若 12h 后 likes ≤ 2 → 按 README 继续零发送，不为产出而发
+2. **🔴 本 automation 与 chuangzuo cron 职责重叠**：它没有浏览器，每轮必然只能写「未发」，
+   产出的是「看起来跑了但没东西」的日志 = Frank 最反感的装忙。**建议停掉，或降级成只读核验器**
+   （读 syndication 补 metrics + 查轮次真空期），明确不承担发布
+3. 本轮与 round_85 撞车（它 00:30–00:40 在跑并真发）→ 双线并发写 state 有风险，本轮已用原子写

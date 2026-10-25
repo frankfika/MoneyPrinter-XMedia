@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-21T20:09:00+08:00",
+  "last_updated": "2026-10-26T00:34:47+08:00",
   "purpose": "记录非原创 outbound 动作(like / quote_retweet / reply_passive),区别于 published-posts.json 的原创 post",
   "entries": [
     {
@@ -1973,6 +1973,16 @@
       "treatment": "like_only",
       "like_delta": "1->2",
       "note": "round 56. dyiap 11:16AM 回复帖(21 views/2 likes): 'memory 不是 document store, 记忆会淡出; RAG 是另一类机制'. press_key 'l' on detail page. 验证: 视觉证据红心实心+2; NOTE: query kind=dom 只返回文档首个匹配 (本页是 dyiap 13h 根帖 '5 Likes. Like'), 不能用来判 detail 帖状态 — 必须滚到目标帖用视觉/元素证据. state 内无此 post_id 历史 like 记录, 故判定本轮真发 1->2"
+    },
+    {
+      "id": "outbound-131",
+      "timestamp": "2026-10-26T00:34:47+08:00",
+      "action_type": "like",
+      "target_handle": "bindureddy",
+      "target_post_id": "2113689615253299647",
+      "treatment": "like_only",
+      "like_delta": "145->146",
+      "note": "manual_pulse_2026-10-26. 帖=『Looking at public benchmarks is a total waste of time』(12,788 views/48 replies/145 likes). 路径: detail 页 press_key 'l'. 验证: aria-label 由『145 Likes. Like』变『146 Likes. Liked』+ data-testid=unlike(双证). 原计划的 reply 已撤(AI 味风险)."
     }
   ]
 }

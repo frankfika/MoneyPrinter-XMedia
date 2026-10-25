@@ -33,8 +33,22 @@ def check(label, ok, hint=""):
 if m_path.exists():
     m = yaml.safe_load(m_path.read_text())
     print(f"━━━ material: {m.get('material_id', '?')} ━━━")
-    print(f"  author: @{m['author']['handle']}  ·  post_id: {m['original'].get('post_id')}")
-    print(f"  views: {m['metrics']['views']:,}")
+    # 兼容两种 material 结构：
+    #   schema 版  → author.handle / original.post_id / metrics.views
+    #   实盘版     → source.handle / source.url / source.source_post_for_original
+    author = m.get("author") or {}
+    source = m.get("source") or {}
+    original = m.get("original") or {}
+    metrics = m.get("metrics") or {}
+
+    handle = author.get("handle") or source.get("handle") or "?"
+    post_id = original.get("post_id") or source.get("post_id") or "?"
+    views = (metrics.get("views")
+             or source.get("views")
+             or (source.get("source_post_for_original") or {}).get("views")
+             or 0)
+    print(f"  author: @{handle}  ·  post_id: {post_id}")
+    print(f"  views: {views:,}" if isinstance(views, int) else f"  views: {views}")
     print(f"  treatment: {m.get('treatment_hint', '?')}")
 
 print()

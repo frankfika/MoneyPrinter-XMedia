@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-10-26T00:34:47+08:00",
+  "purpose": "已确认 blocked 的账号，扫到直接跳过，不要再尝试 like/reply",
+  "handles": {
+    "op7418": {
+      "reason": "@op7418 has blocked you —— 2026-10-26 实测",
+      "detected_at": "2026-10-26",
+      "root_cause": "Frank 2026-10-26 反馈：被看出来是 AI 评价"
+    },
+    "oran_ge": {
+      "reason": "@oran_ge has blocked you —— 2026-10-26 实测",
+      "detected_at": "2026-10-26",
+      "root_cause": "Frank 2026-10-26 反馈：被看出来是 AI 评价"
+    }
+  }
+}

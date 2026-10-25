@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "purpose": "AI 味检测规则集 —— 文案发出前的机器可执行闸门。每条规则有 id / 类别 / 命中模式 / 严重度 / 说明。检测器 scripts/humanize.py 读这个文件。",
+  "sources": {
+    "wikipedia": "Wikipedia: Signs of AI writing (WikiProject AI Cleanup) —— 24 类 AI 写作模式，按英文原文归纳。",
+    "frank": "Frank 2026-10-26 直接反馈:「@op7418 / @oran_ge 拉黑你，是因为被看出来是 AI 评价了」+ 2026-10-20「有人说我的 ai 回复语感有点奇怪」。",
+    "style_x": "state/style-x.yaml#voice.anti_ai_slop（Frank 自己的中文反 AI 味清单）"
+  },
+  "severity_levels": {
+    "hard": "命中即拦 —— 发不出去，必须改写。",
+    "soft": "命中计分 —— 分数超阈值才拦。"
+  },
+  "rules": [
+    {
+      "id": "wiki.significance_inflation",
+      "category": "content",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "stands as", "serves as", "is a testament", "a vital role", "a significant role",
+        "a crucial role", "a pivotal moment", "a key turning point", "marks a shift",
+        "underscores", "highlights its importance", "reflects broader", "symbolizing its",
+        "contributing to the", "setting the stage for", "deeply rooted", "enduring",
+        "the evolving landscape", "in today's .* landscape", "testament to"
+      ],
+      "note": "把任意小事拔高成时代意义。中文对应：标志着、见证了、深刻诠释、推动了行业。"
+    },
+    {
+      "id": "wiki.ing_phrase",
+      "category": "content",
+      "severity": "soft",
+      "weight": 2,
+      "patterns": [
+        "highlighting", "underscoring", "emphasizing", "ensuring that", "reflecting on",
+        "symbolizing", "contributing to", "cultivating", "fostering", "encompassing",
+        "showcasing", "solidifying"
+      ],
+      "note": "-ing 结尾的假深度从句。中文：体现出、彰显了、推动着、助力着。"
+    },
+    {
+      "id": "wiki.promotional",
+      "category": "content",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "groundbreaking", "breathtaking", "must-visit", "renowned", "nestled",
+        "vibrant", "profound", "showcases", "exemplifies", "natural beauty",
+        "in the heart of", "commitment to"
+      ],
+      "note": "旅游 brochure 腔 / 安利腔。"
+    },
+    {
+      "id": "wiki.vague_attribution",
+      "category": "content",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "industry reports", "observers have cited", "experts argue", "some critics argue",
+        "studies show", "research suggests", "it is widely believed", "many believe"
+      ],
+      "note": "把观点挂到无名权威上。中文：业内普遍认为、专家表示、数据显示。"
+    },
+    {
+      "id": "wiki.challenges_section",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "despite (its|these|the)", "faces several challenges", "future outlook",
+        "challenges and legacy", "continues to thrive", "in conclusion",
+        "as we look (ahead|forward)", "the road ahead"
+      ],
+      "note": "公式化「挑战与展望」段。"
+    },
+    {
+      "id": "wiki.ai_vocab",
+      "category": "diction",
+      "severity": "soft",
+      "weight": 2,
+      "patterns": [
+        "additionally", "crucial", "delve", "enduring", "enhance", "fostering",
+        "garner", "interplay", "intricate", "intricacies", "pivotal", "showcase",
+        "tapestry", "testament", "underscore", "vibrant", "align with", "landscape"
+      ],
+      "note": "高频 AI 词。中文对应在 frank.zh_diction 里。"
+    },
+    {
+      "id": "wiki.copula_avoidance",
+      "category": "style",
+      "severity": "soft",
+      "weight": 2,
+      "patterns": [
+        "\\bserves as\\b", "\\bstands as\\b", "\\bmarks a\\b", "\\brepresents a\\b",
+        "\\bboasts\\b", "\\bfeatures\\b", "\\boffers a\\b"
+      ],
+      "note": "用「充当/担任」替代「是」。"
+    },
+    {
+      "id": "wiki.negative_parallelism",
+      "category": "structure",
+      "severity": "hard",
+      "weight": 5,
+      "patterns": [
+        "not just .{0,40}(it'?s|but it'?s|but)",
+        "not merely .{0,40}(it'?s|but)",
+        "not only .{0,40} but also",
+        "isn'?t (just |only )?about .{0,40}, it'?s",
+        "不只是.{0,20}(而是|更是)",
+        "不是.{0,20}(而是|只是)",
+        "与其说.{0,20}不如说"
+      ],
+      "note": "「不是 X，而是 Y」是 LLM 最强指纹 —— 中文 AI 味重灾区，Frank 亲口点名。硬拦截。"
+    },
+    {
+      "id": "wiki.rule_of_three",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "\\d\\)\\s*[^\\n]{2,20}\\n\\s*\\d\\)\\s*[^\\n]{2,20}\\n\\s*\\d\\)",
+        "[、，,]\\s*[^，。\\n]{2,12}[、，,]\\s*[^，。\\n]{2,12}[、，,]\\s*[^，。\\n]{2,12}",
+        "首先.{0,30}其次.{0,30}最后",
+        "一是.{0,25}二是.{0,25}三是"
+      ],
+      "note": "三段式连用 —— 15 条里 14 条是三段，节奏完全一样。"
+    },
+    {
+      "id": "wiki.synonym_cycling",
+      "category": "style",
+      "severity": "soft",
+      "weight": 2,
+      "patterns": [],
+      "note": "同义替换轮换（同一批东西换 3 个词说）。需要语义判断，检测器不做正则命中，交给 LLM 清理器。"
+    },
+    {
+      "id": "wiki.false_range",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 2,
+      "patterns": [
+        "from .{2,25} to .{2,25}, from .{2,25} to",
+        "从.{2,20}到.{2,20}[，,].{0,10}从.{2,20}到"
+      ],
+      "note": "假范围并列 —— 必须出现**两个** from-to 才算（单个「从 X 到 Y」是正常中文口语，不算命中）。"
+    },
+    {
+      "id": "wiki.em_dash",
+      "category": "style",
+      "severity": "soft",
+      "weight": 2,
+      "max_count": 2,
+      "note": "破折号（——）AI 用得比人多。正文超过 2 个即命中。"
+    },
+    {
+      "id": "wiki.emoji",
+      "category": "style",
+      "severity": "soft",
+      "weight": 2,
+      "max_count": 2,
+      "note": "AI 爱用 emoji 点缀标题/条目。超过 2 个即命中。"
+    },
+    {
+      "id": "wiki.collaborative_artifact",
+      "category": "content",
+      "severity": "hard",
+      "weight": 5,
+      "patterns": [
+        "i hope this helps", "of course!", "certainly!", "you'?re absolutely right",
+        "would you like", "let me know if", "here'?s (a|an|the) (overview|summary)",
+        "great question", "excellent point", "that'?s an excellent",
+        "希望.{0,6}(有帮助|对你有帮助)",
+        "如果你(需要|愿意|想).{0,12}(我可以|要不要|请告诉我)",
+        "请告诉我.{0,6}(需要|要不要)",
+        "这个问题问得好",
+        "总的来说",
+        "综上所述"
+      ],
+      "note": "聊天机器人的客套话被当正文发出去 —— 一眼 AI。硬拦截。"
+    },
+    {
+      "id": "wiki.knowledge_cutoff",
+      "category": "content",
+      "severity": "hard",
+      "weight": 5,
+      "patterns": [
+        "as of my last training", "up to my last training", "as of \\d{4}",
+        "based on available information", "while specific details are limited",
+        "it appears to have been established"
+      ],
+      "note": "训练截止免责声明。硬拦截。"
+    },
+    {
+      "id": "wiki.sycophantic",
+      "category": "content",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "you'?re absolutely right", "great point", "excellent point",
+        "you'?re right that", "that'?s a great", "说得太对了", "确实如此",
+        "你这个观点很对"
+      ],
+      "note": "谄媚语气。"
+    },
+    {
+      "id": "wiki.hedging",
+      "category": "style",
+      "severity": "soft",
+      "weight": 2,
+      "patterns": [
+        "could potentially possibly", "might have some", "it could be argued that",
+        "arguably", "somewhat", "relatively", "a bit", "or so",
+        "某种程度上", "可以说", "一定程度上", "相对而言", "某种程度上讲"
+      ],
+      "note": "过度对冲。"
+    },
+    {
+      "id": "wiki.filler",
+      "category": "style",
+      "severity": "soft",
+      "weight": 1,
+      "patterns": [
+        "in order to", "due to the fact that", "at this point in time",
+        "in the event that", "has the ability to", "it is important to note that",
+        "为了能够", "由于.{0,10}的原因", "在这个时候", "需要注意的是"
+      ],
+      "note": "填充句式。"
+    },
+    {
+      "id": "wiki.generic_conclusion",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "the future looks bright", "exciting times lie ahead",
+        "a major step in the right direction", "continues its journey toward excellence",
+        "未来可期", "大有可为", "值得期待", "开启了.{0,10}的新篇章",
+        "新征程", "开启了新的"
+      ],
+      "note": "空洞正能量收尾。"
+    },
+    {
+      "id": "wiki.negative_limitation",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 2,
+      "patterns": [
+        "while (it|they|this) .{0,30}(is|are|has) .{0,20}(limited|challenging|lacks)",
+        "尽管.{0,20}(有限|面临挑战|不足)",
+        "虽然在.{0,20}(方面|上).{0,15}(不足|有限)"
+      ],
+      "note": "「虽然…但…」的规整平衡句。"
+    },
+    {
+      "id": "frank.zh_diction",
+      "category": "diction",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "闭环", "护城河", "底层逻辑", "底层监控", "数据复利", "方法论",
+        "颗粒度", "抓手", "组合拳", "对齐", "赋能", "抓手",
+        "本质上是", "本质上", "归根结底", "换句话说", "值得注意的是",
+        "更重要的是", "这就是", "说个真话", "先说结论",
+        "我之前写过", "说到点子上了", "所以问题来了", "反过来说",
+        "所以真正的问题是"
+      ],
+      "note": "Frank 自己的中文 AI 味词表（state/style-x.yaml#voice.anti_ai_slop）。这些词每条都在用，是最像 AI 的部分。"
+    },
+    {
+      "id": "frank.quote_opening",
+      "category": "structure",
+      "severity": "hard",
+      "weight": 5,
+      "patterns": [
+        "^\\s*[「\"'“][^」\"'”]{6,}[」\"'”]\\s*这个(结论|说法|观点|判断)",
+        "^\\s*[「\"'“][^」\"'”]{6,}[」\"'”]\\s*(听着|听上去|说得)",
+        "这个结论(听着|听上去)(对|挺好)",
+        "没法执行"
+      ],
+      "note": "引述型开场 —— 2026-10-26 被撤掉那条 reply 的第 1 步（复述对方原话起手）。硬拦截。"
+    },
+    {
+      "id": "frank.agree_half",
+      "category": "structure",
+      "severity": "hard",
+      "weight": 5,
+      "patterns": [
+        "听着对.{0,6}但", "听着对.{0,10}不过", "一半同意",
+        "这个判断.{0,6}(对|没错).{0,6}但",
+        "确实.{0,6}但.{0,4}(不过|只是)",
+        "(没法|不能|难以)执行"
+      ],
+      "note": "「同意一半」—— 被撤掉那条 reply 的第 2 步。硬拦截。"
+    },
+    {
+      "id": "frank.pivot_expand",
+      "category": "structure",
+      "severity": "hard",
+      "weight": 5,
+      "patterns": [
+        "但真正的", "但其实关键", "问题来了", "其实关键是",
+        "真正的产出是", "但问题在于", "然而真正的",
+        "换个角度说", "往深了想",
+        "(^|[，。；\\n])真正的.{1,10}(是|不是)",
+        "(^|[，。；\\n])评测.{1,8}真正",
+        "真正的问题", "真正的区别", "真正的价值",
+        "本质上(是|在于)", "关键(在于|是)"
+      ],
+      "note": "转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。"
+    },
+    {
+      "id": "frank.symmetric_closing",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "真正的.{1,12}不是.{1,12}是",
+        "让.{2,20}变得",
+        "把.{2,20}变成",
+        "没有.{1,10}就没有",
+        "真正的.{2,10}能力",
+        "真正的.{2,10}价值",
+        "真正的.{2,10}区别",
+        "真正的.{2,10}问题"
+      ],
+      "note": "对仗升华收尾 —— 被撤掉那条 reply 的第 4 步。注意：数值型「从 X 到 Y / 从 X 涨到 Y」是正常口语，不算对仗，所以不匹配 from-to 结构。"
+    },
+    {
+      "id": "frank.rhetorical_closing",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "[？?][\"'”]?\\s*$",
+        "难道.{2,30}[吗吗]?\\s*$"
+      ],
+      "note": "反问结尾 —— 连续用了 15 条，X 上刷到就是 AI（3 条里最多 1 条）。"
+    },
+    {
+      "id": "frank.ad_ct",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "现在(就)?去看", "去看看", "赶紧去", "不妨试试", "值得一试",
+        "欢迎(大家)?(来)?(试|看|体验)", "欢迎试试", "快去(看|试|用)",
+        "记得去(看|试|用)", "建议(大家)?(去|试|看)",
+        "点开(链接|看)", "戳(链接|这里)", "收藏(起来|这篇)"
+      ],
+      "note": "安利腔 / 行动号召 —— style-x.yaml#structure.ending 明写「不写『快去看』式安利腔」。LLM 改写后最容易冒出来。"
+    },
+    {
+      "id": "frank.always_two_part",
+      "category": "structure",
+      "severity": "soft",
+      "weight": 3,
+      "patterns": [
+        "^[^\\n]{0,20}[，,]\\s*\\n?\\s*[^\\n]{0,20}[。.]\\s*$"
+      ],
+      "note": "结尾两句对称短句。配合 symmetric_closing 使用。"
+    }
+  ],
+  "gate": {
+    "hard_fail": true,
+    "soft_score_threshold": 10,
+    "max_hard_hits": 0,
+    "note": "hard 规则命中 ≥1 → 直接拦下。soft 规则加权求和 ≥ soft_score_threshold → 拦下。阈值按 Frank 实际反馈调，不要调松。"
+  },
+  "rewrite": {
+    "model": "MiniMax-M3.1-Flash-Preview",
+    "max_tokens": 8000,
+    "temperature": 0.9,
+    "min_length_ratio": 0.65,
+    "max_length_ratio": 1.45,
+    "note": "清理器走 mmx text chat（MiniMax 本地 CLI，已配 API key）。不要换成远程第三方 humanizer —— 文案不出本机。max_tokens 必须给足：MiniMax-M3.1-Flash 会开 thinking，思考 token 会吃掉整个预算（实测 1999/2000），导致返回空内容。长度比越界 = 内容被砍掉或注水，直接判失败。"
+  }
+}

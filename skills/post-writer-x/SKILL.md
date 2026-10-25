@@ -20,6 +20,12 @@ description: X 文案 — 接 hot-topic-tracker 出的素材包，按 `state/sty
 5. 按 `style-x.yaml#structure` 生成正文
 6. 落盘到 `outputs/<YYYY-MM-DD>-<slot>/<topic>/x.txt`
 7. 自检 `style-x.yaml#self_check`
+8. **过闸门**（不可跳过）：
+   ```bash
+   python3 scripts/prepublish.py outputs/<YYYY-MM-DD>-<slot>/<topic>/
+   ```
+   exit 0 才能交给 publisher-x。exit 1 = 改到过为止，或不发。
+   规则见 `state/ai-taste-rules.json`，检测器 `scripts/humanize.py`。
 
 ## 长度与结构
 

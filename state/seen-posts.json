@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-23T04:06:00+08:00",
+  "last_updated": "2026-10-26T00:34:47+08:00",
   "purpose": "按 post_id 去重",
   "entries": [
     {
@@ -3502,6 +3502,25 @@
       "seen_at": "2026-10-23T04:06:00+08:00",
       "context": "pulse_round_61 SKIPPED_NO_REPLY",
       "note": "明明就很桃 @zkcolab · 1h · 3 replies · 「客户改主意 成本全在下面」(回复我们). 跳过理由: 能想到的最强反驳('改一次成本在下面, 改三次成本是没人记得当初为什么这么定') 跟 Frank 近 29h 内已讲过三次的'未记录的东西会悄悄腐烂/没人知道它什么时候过期'是同一个论点. 回复它 = 用新外壳复述自己刚讲过的话, 属于凑量不是交锋. 若 @zkcolab 后续把这个点展开成具体案例或反问, 才是更好的目标."
+    },
+    {
+      "post_id": "2114394951454994675",
+      "handle": "FrankFika",
+      "seen_at": "2026-10-26T00:34:47+08:00",
+      "treatment": "own_posted",
+      "topic_signature": "self-trained-model-needs-your-own-acceptance-ruler",
+      "posted_to_x": true,
+      "own_post_url": "https://x.com/FrankFika/status/2114394951454994675",
+      "context": "chuangzuo_round_85 真发"
+    },
+    {
+      "post_id": "2113689615253299647",
+      "handle": "bindureddy",
+      "seen_at": "2026-10-26T00:34:47+08:00",
+      "treatment": "like_only",
+      "topic_signature": "public-benchmarks-are-waste-you-need-first-hand-failure-samples",
+      "context": "manual_pulse_2026-10-26 like 145->146",
+      "note": "本来还要 reply（角度=一手失败样本 vs 二手榜单），发前撤掉：Frank 2026-10-26 00:24 指出 @op7418/@oran_ge 拉黑是因为『被看出来是 AI 评价』。那条草稿是典型 AI 四段式(引述→同意一半→转折→升华)，撤。like 保留(不带文字)。"
     }
   ]
 }

@@ -19,6 +19,27 @@ description: X 发布 — 接 post-writer-x 出的 x.txt，**用 mcp_browser 在
 
 ## 工作流
 
+### 0. **闸门（不可跳过，代码级强制）**
+
+```bash
+python3 scripts/prepublish.py outputs/<YYYY-MM-DD>-<slot>/<topic>/
+```
+
+**exit 0 才能往下走。exit 1 = 不许发。**
+
+这个脚本做三件事：
+1. AI 味检测（`state/ai-taste-rules.json` —— Wikipedia「Signs of AI writing」24 类模式 + Frank 中文清单）
+2. 硬红线检测（OpenCSG / Chinese AI 公司名 / hashtag 风暴 / 安利腔）
+3. 不过 → 自动调 LLM 清理器改写 → 再检测；仍不过 → exit 1
+
+**为什么有这层**：2026-10-26 Frank 直接反馈「@op7418 / @oran_ge 拉黑你，是因为被看出来是 AI 评价了」。
+之前只靠本文档的文字规则拦，而那条被撤掉的 reply **句式全部合规、结构一眼就是 AI**。
+规则写在文档里挡不住人，所以做成了代码。
+
+- 清理成功会把新正文写回 `x.txt`（原文件备份为 `x.txt.pre-gate.bak`）
+- 每次闸门结果落盘 `state/gate-receipts.json`（含最终文本 sha256），事后可核对
+- **闸门 exit 1 时不要手工绕过**。要么改到过，要么不发 —— 宁可这轮零动作。
+
 ### 1. 打开 compose
 ```json
 {"action":"navigate","input":{"url":"https://x.com/compose/post"}}

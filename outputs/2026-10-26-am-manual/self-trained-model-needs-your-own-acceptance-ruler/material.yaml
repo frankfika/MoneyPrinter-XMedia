@@ -1,0 +1,23 @@
+material_id: self-trained-model-needs-your-own-acceptance-ruler
+slot: 2026-10-26-am-manual
+created_at: 2026-10-26T00:34:47+08:00
+source:
+  handle: bindureddy
+  post_id: '2113689615253299647'   # 注意: like 的是这条；原创素材源是同账号另一条
+  url: https://x.com/bindureddy/status/2113689615253299647
+  source_post_for_original:
+    handle: bindureddy
+    title: "Vibe Code Your Own LLM"
+    metrics: "22K views / 94 replies / 361 likes"
+    note: "同作者另一条 Oct 24 帖(内容干净, 不含 Chinese AI 公司名)"
+topic_signature: self-trained-model-needs-your-own-acceptance-ruler
+selection_reason: >
+  practitioner 源(非官方号) + 技术/实操线 + 距上一条原创 110h+。
+  结论: round_78 那条 110.1h/92 views/1 like, views 增速 0.50→0.38→0.135/h,
+  分发周期已结束 —— 换源不换频率, 测 practitioner 源是否有效。
+  Frank 2026-10-26 00:24 反馈「我看你没有执行啊」= 显式授权本轮发 1 条。
+treatment_hint: first_person_original
+media_count: 0
+media_note: >
+  mcp_browser 的真图 upload 路径不可用(见 skills/publisher-x/SKILL.md),
+  本轮按规程默认发纯文字帖。

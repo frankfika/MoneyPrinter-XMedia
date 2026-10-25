@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "purpose": "所有成功发出的帖",
-  "last_updated": "2026-10-25T23:52:00+08:00",
+  "last_updated": "2026-10-26T00:52:00+08:00",
   "entries": [
     {
       "id": "chuangzuo_round_72",
@@ -2154,6 +2154,41 @@
           "note": "第五个采样点. 与 10 分钟前的 manual_audit_2026-10-25 (110.1h/92 views) 近乎重复, 12 分钟 Δ+2 views 属小样本噪声, 不作为增速信号. 有意义窗口仍为 P1→P2→P3→P4: 79→82→85→92, likes 全程 Δ0"
         }
       ]
+    },
+    {
+      "id": "chuangzuo_round_85",
+      "timestamp": "2026-10-26T00:34:47+08:00",
+      "post_id": "2114394951454994675",
+      "url": "https://x.com/FrankFika/status/2114394951454994675",
+      "source": {
+        "trigger": "Frank-2026-10-26-00:24-反馈「我看你没有执行啊」→ 手动跑一轮",
+        "cron_id": null,
+        "note": "闸门例外：round_78 likes 闸门(likes=1≤2)本应拦截，Frank 00:24 直接反馈『没执行』= 显式授权恢复发。这正是 2026-10-23 给 Frank 的选项 2『只松绑先发 1 条测 practitioner 源』。源帖=@bindureddy『Vibe Code Your Own LLM』(22K views/94 replies/361 likes)，practitioner 源非官方号。"
+      },
+      "treatment": "regular_post_x_no_media",
+      "topic_signature": "self-trained-model-needs-your-own-acceptance-ruler",
+      "media_count": 0,
+      "character_count": 289,
+      "perspective_in_cluster": "自训模型的验收责任",
+      "cluster_description": "技术/实操线（practitioner 源）",
+      "metrics_samples": [
+        {
+          "sampled_at": "2026-10-26T00:52:00+08:00",
+          "alive_hours": 0.31,
+          "views": null,
+          "likes": 0,
+          "replies": 0,
+          "method": "cdn.syndication.twimg.com/tweet-result 匿名 API（favorite_count / conversation_count）",
+          "round": "workbuddy_automation_fef98705",
+          "note": "首个 0h18m 基线点，由 WorkBuddy automation 经本地代理 127.0.0.1:7897 读取；syndication 不返回 view 数，故 views=null。用途：给 12h 后的 likes 闸门提供增量起点。"
+        }
+      ],
+      "verification": {
+        "method": "search 真发验证（不用 profile/with_replies）",
+        "query": "from:FrankFika 尺子",
+        "own_post_url": "https://x.com/FrankFika/status/2114394951454994675",
+        "verified_at": "2026-10-26T00:34:47+08:00"
+      }
     }
   ]
 }

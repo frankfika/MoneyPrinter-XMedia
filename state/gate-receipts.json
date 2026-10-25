@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "receipts": [
+    {
+      "ts": "2026-10-26T00:43:10+0800",
+      "origin": "inline",
+      "sha256": "05465ec6c594ede8",
+      "chars": 221,
+      "rewritten": true,
+      "before": {
+        "soft_score": 12,
+        "hard_hits": [
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.zh_diction",
+          "frank.pivot_expand",
+          "frank.rhetorical_closing"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.pivot_expand] 命中「['问题来了']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。",
+          "SOFT 分 12 ≥ 阈值 10（AI 味过重）"
+        ]
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T00:43:13+0800",
+      "origin": "inline",
+      "sha256": "b3ef63f00e9cfe5a",
+      "chars": 50,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "all_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [redline.chinese_ai_company] 命中「['DeepSeek']」 — 不出现 Chinese AI 公司名（SKILL.md 硬红线）",
+          "HARD [redline.no_opencsg] 命中「['opencsg']」 — X 上不出现任何 OpenCSG / 公司业务宣传"
+        ]
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "all_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [redline.chinese_ai_company] 命中「['DeepSeek']」 — 不出现 Chinese AI 公司名（SKILL.md 硬红线）",
+          "HARD [redline.no_opencsg] 命中「['opencsg']」 — X 上不出现任何 OpenCSG / 公司业务宣传"
+        ]
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T00:43:13+0800",
+      "origin": "inline",
+      "sha256": "b9cc7daa86980108",
+      "chars": 160,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T00:43:27+0800",
+      "origin": "outputs/2026-10-26-am-manual/self-trained-model-needs-your-own-acceptance-ruler/x.txt",
+      "sha256": "86d7afddf48f6b0d",
+      "chars": 281,
+      "rewritten": true,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [
+          "wiki.negative_parallelism"
+        ],
+        "all_hits": [
+          "wiki.negative_parallelism"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [wiki.negative_parallelism] 命中「['不是\"哪张模板写得好\"，而是']」 — 「不是 X，而是 Y」是 LLM 最强指纹 —— 中文 AI 味重灾区，Frank 亲口点名。硬拦截。"
+        ]
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": false,
+        "reasons": [
+          "清理后 qa-draft 仍未通过"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-26T00:48:16+0800",
+      "origin": "inline",
+      "sha256": "b9cc7daa86980108",
+      "chars": 160,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    }
+  ]
+}

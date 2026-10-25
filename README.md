@@ -80,6 +80,8 @@ X 账号 `@FrankFika` 已登录在 in-app browser 里。
 │   ├── style-xhs.yaml         #   小红书文风
 │   ├── schedule.yaml          #   调度参数
 │   ├── index.json             #   ★ 去重索引（每轮只读这个，别全量 seen-posts.json）
+│   ├── ai-taste-rules.json    #   ★ AI 味规则集（闸门用，Wikipedia Signs-of-AI + 中文清单）
+│   ├── gate-receipts.json     #   ★ 闸门放行记录（含最终文本 sha256）
 │   ├── seen-posts.json        #   outbound 已处理帖全量记录
 │   ├── published-posts.json   #   已发原创帖记录
 │   ├── inbound-replies.json   #   已回 inbound 记录
@@ -96,6 +98,8 @@ X 账号 `@FrankFika` 已登录在 in-app browser 里。
 │
 ├── scripts/
 │   ├── tail-rounds.py         #   ★ 只读 memory 最后 N 段（别全量 cat）
+│   ├── prepublish.py          #   ★ 发帖前闸门（检测→自动清理→放行判定）
+│   ├── humanize.py            #   ★ AI 味检测器 + LLM 清理器
 │   ├── qa-draft.py            #   草稿自检
 │   ├── health-check.sh        #   环境体检
 │   └── publisher-xhs-dryrun.sh
@@ -213,6 +217,35 @@ outputs/
 1. 走 `skills/hot-topic-tracker` → 素材包 → `post-writer-x` → 文案 → `publisher-x` 真发
 2. 同选题出 `xhs.txt` 交给 Fang 手贴（账号封禁中）
 3. `python3 scripts/qa-draft.py outputs/<dir>/` 全 PASS 才算完成版
+4. `python3 scripts/prepublish.py outputs/<dir>/` exit 0 才许发（AI 味闸门）
+
+### 🛡️ AI 味闸门（2026-10-26 起，代码级强制）
+
+**背景**：Frank 2026-10-26 反馈 ——「@op7418 / @oran_ge 拉黑你，是因为被看出来是 AI 评价了」。
+之前只靠 SKILL.md 里的文字规则拦，但那条被撤掉的 reply **句式全部合规、结构一眼就是 AI**。
+规则写在文档里挡不住人，所以做成了代码。
+
+```bash
+# 原创帖
+python3 scripts/prepublish.py outputs/<YYYY-MM-DD>-<slot>/<topic>/
+# reply / 短评
+python3 scripts/prepublish.py --text "<正文>"
+```
+
+| 组件 | 作用 |
+|------|------|
+| `state/ai-taste-rules.json` | 规则集（Wikipedia「Signs of AI writing」24 类 + Frank 中文 AI 味清单） |
+| `scripts/humanize.py` | 检测器（零依赖）+ LLM 清理器（走本机 `mmx` CLI） |
+| `scripts/prepublish.py` | 发帖前统一闸门：检测 → 不过就自动清理 → 再检测 → exit 0/1 |
+| `state/gate-receipts.json` | 每次闸门结果落盘（含最终文本 sha256，事后可核对） |
+
+- 清理器**保留所有事实**（数字/链接/人名），只改结构
+- 清理后长度比越界（内容被砍/注水）直接判失败
+- 闸门 exit 1 时**不许手工绕过** —— 要么改到过，要么不发
+
+**已验证效果**（用 13 条真实发过的帖做回归）：12 条正常帖全 PASS 无误伤；
+含「闭环/护城河/所以问题来了」的那条被拦；被撤掉的 AI 味 reply 被拦；
+含 OpenCSG / DeepSeek / 4 个 hashtag 的样本全被红线拦下。
 
 ### Cron 批量
 - cron 触发 → 读对应 `skills/*/SKILL.md` → 执行

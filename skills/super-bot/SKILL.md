@@ -90,6 +90,33 @@ ls -la outputs/$(date +%Y-%m-%d)/ 2>/dev/null || echo "当日无 outputs 目录"
 - 跳过的（公司名 / ban / 7 天 dedup topic / `SKIPPED_NO_REPLY`）
 - 异常次数
 
+### 🛡️ AI 味闸门结果（2026-10-26 起必查）
+
+**背景**：Frank 2026-10-26 反馈 ——「@op7418 / @oran_ge 拉黑你，是因为被看出来是 AI 评价了」。
+为此新增了代码级闸门 `scripts/prepublish.py`（检测 + LLM 自动清理 + 放行判定）。
+
+日报里要报这一项：
+
+```bash
+python3 - <<'EOF'
+import json,pathlib,collections
+p=pathlib.Path('state/gate-receipts.json')
+if not p.exists(): print('尚无闸门记录'); raise SystemExit
+r=json.loads(p.read_text())['receipts']
+today=[x for x in r if x['ts'][:10]==__import__('datetime').datetime.now().strftime('%Y-%m-%d')]
+c=collections.Counter('PASS' if x['after']['passed'] else 'FAIL' for x in today)
+rw=sum(1 for x in today if x.get('rewritten'))
+print(f"今日闸门 {len(today)} 次: 通过 {c['PASS']} / 拦下 {c['FAIL']} / 自动清理 {rw}")
+for x in today:
+    if not x['after']['passed']:
+        print(f"  FAIL {x['origin']}: {x['after']['reasons'][:2]}")
+EOF
+```
+
+- **拦下数 > 0** → 日报里要点名是哪条、命中什么模式
+- **自动清理数 > 0** → 报清理前后 soft 分变化
+- 闸门记录含最终文本 sha256，可与实际发出的帖核对
+
 **主题分散度**
 - 从 `recent-picks.json` 看最近 7 天主题 signature —— 多样还是收敛？
 - 是否有 dedup 撑爆迹象（连续 3 天同 topic）

@@ -10,6 +10,11 @@ private/
 .AppleDouble
 .LSOverride
 
+# —— 本地 python venv（qa-draft.py 依赖 yaml，用 uv 建在项目内）——
+.venv/
+__pycache__/
+*.pyc
+
 # —— 编辑器 ——
 .vscode/
 .idea/
