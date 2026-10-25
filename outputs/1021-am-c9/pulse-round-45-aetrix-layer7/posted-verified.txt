@@ -1,0 +1,41 @@
+pulse round 45 — AetrixEmby layer 7 (2026-10-21 06:30–06:37 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+inbound: 1   original post: 0   outbound reply: 0   outbound like: 2   quote: 0
+total actions: 3
+
+Round discipline applied (2 rules added in earlier rounds, both fired here):
+  1. **Pre-flight density check**: checked /FrankFika/with_replies FIRST.
+     Frank's own manual posts were 21m and 27m old, nothing newer -> density eased,
+     round allowed to run (light).
+  2. **No original post**: cluster 23 was previewed 28 min ago by outbound-107,
+     and chuangzuo round 75 already decided its standalone is on hold 24h+.
+     Sending one now would be self-repetition.
+
+[inbound-034] reply @AetrixEmby   *** 7th layer of the account's deepest thread ***
+  target : https://x.com/AetrixEmby/status/2112667862175293757
+           "@FrankFika 把一个字段拆成三个各绑口径这招狠，删选项比写文档管用多了，
+            月底不吵架就是硬道理"  | 20m, 3 likes
+  in-reply-to own post 2112643907658072518
+  own    : https://x.com/FrankFika/status/2112673421708734624
+  verify : fill verified:true on first attempt (no INPUT_PARTIAL_EFFECT);
+           Cmd+Enter + wait 10s;
+           detail page a[aria-label*='second'] -> aria-label="2 seconds ago"
+           -> 2112673421708734624   (hit directly, with_replies not needed)
+  text   : 这招有个副作用，我当时没算进去。
+           字段拆成三个之后，对账不吵了，但改口径的成本换了个地方。
+           客户第二年改口说，我们现在按下单口径报。那三个月历史数据得重算，
+           引用"转化"的 6 张模板也得跟着改一遍。
+           所以拆字段的时候我加了一条规矩：同时写一行这个口径从哪天开始生效。
+           不然半年后没人记得哪个数字是哪套口径算出来的。
+
+[outbound-110] like @arkokoley 2112651283287220335   0 -> 1
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"
+
+[outbound-111] like @rafaelobitten 2112634978114691405  0 -> 1
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"
+  note   : this post was judged by chuangzuo round 75 as too small / overlapping
+           cluster 21 for an ORIGINAL post, but it fully clears the bar for a LIKE.
+           Reusing a scan result across rounds instead of rescanning.
+
+screenshot path: not attempted (continuous failure across rounds 40-45).

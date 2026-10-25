@@ -1,0 +1,25 @@
+material_id: 1018-noon-pre-02
+slot: noon-pre
+scanned_at: '2026-10-18T12:03:00+08:00'
+author:
+  name: AIGCLINK
+  handle: aigclink
+  lang: zh
+original:
+  url: https://x.com/aigclink/status/2111314222571512238
+  post_id: '2111314222571512238'
+  posted_at: '2026-10-17T12:31:00+00:00'
+metrics:
+  views: 37211
+  likes: 728
+  retweets: 154
+  replies: 32
+  bookmarks: 879
+ai_match: true
+summary: >-
+  有人开源了小学全学科知识图谱 os-taxonomy：1590 个知识点、3221 条依赖关系，覆盖科学/数学/英语 8 个学科，
+  对齐 NGSS/Common Core/英国国家课程。AI 可以拿来做家教、RAG 外挂，也有人包成 MCP 让 Agent 直接查"先学什么"。
+evidence_links:
+  - https://x.com/aigclink/status/2111314222571512238
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

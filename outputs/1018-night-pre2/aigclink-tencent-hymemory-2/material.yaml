@@ -1,0 +1,30 @@
+material_id: 1018-night-pre2-02
+slot: night-pre2
+scanned_at: '2026-10-18T02:25:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: AIGCLINK
+  handle: aigclink
+  lang: zh
+original:
+  url: https://x.com/aigclink/status/2111435662033666099
+  post_id: '2111435662033666099'
+  posted_at: '2026-10-17T21:00:00+08:00'
+metrics:
+  views: 135430
+  likes: 0
+  retweets: 0
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  腾讯混元开源 Hy-Memory 2.0 + MemHub：让不同 AI Agent（Cursor/Codex/WorkBuddy/Hermes 等）共享长期记忆，分 Chat/Working/Code 三层；写入模型 30B-A3B（每次激活 3B），本地常驻轻量。5h 13.5 万浏览。
+topic_signature: aigclink-tencent-hymemory-2-cross-agent-memory
+evidence_links:
+  - https://x.com/aigclink/status/2111435662033666099
+  - https://github.com/Tencent-Hunyuan/Hy-Memory
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-aigclink-post-detail.png
+  - screenshots/x-aigclink-post-detail-full.png
+  - screenshots/x-aigclink-profile-top.png

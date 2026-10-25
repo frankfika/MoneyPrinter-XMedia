@@ -1,0 +1,22 @@
+视频生成的现在，到底是个什么水位？
+
+宝玉（@oran_ge）今天拿 DSH + 刚发的 DeepSeek V4.1-Flash-1017 自己试了一把，
+50 分钟的产物原话："做了一个垃圾出来 😂"。
+
+不是他不会用，是现在这个组合还远没到"开箱即用"——
+脚本能跑、镜头会动，但你能一眼看出"这是 AI 拍"。
+
+这条有意思的点在于：他没藏拙，照实说了一个诚实的现场。
+视频生成进入"快但糙"的阶段，剩下来要啃的是质感。
+
+原帖下面还有人贴了 MiniMax / Vidu / Kling 的同期效果，
+只能说，大家都在同一条起跑线上比谁更早把最后 20% 补上。
+
+https://x.com/oran_ge/status/2111608203431776465
+
+# material_id: 1018-pm-02
+# treatment: quote_retweet
+# screenshots: x-oran-post-detail.png, x-oran-profile-top.png
+
+# posted_url: https://x.com/FrankFika/status/2111701219882533264
+# posted_at: 2026-10-18T14:08:00+08:00

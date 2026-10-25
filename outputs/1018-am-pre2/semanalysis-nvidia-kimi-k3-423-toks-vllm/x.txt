@@ -1,0 +1,17 @@
+卧槽，NVIDIA 工程师直接把 vLLM 拉出新高度了 🚀
+
+CentML 团队 Benjamin 写了一颗 12000 行 Megakernel（Cute DSL 写的，专门为 decode 设计），
+把 2.8T 参数的 Kimi K3 跑到 423 tok/s/user，比同硬件快 1.68x。
+
+关键点：
+- Cute DSL + 极致 Megakernel 融合
+- decode 专用 kernel
+- 已经在做 DeepSeek V4.1 同款优化
+
+推理优化的下一个 frontier 已经不是软件堆栈微调，是把整个 decode loop 编进一个 Megakernel 里。
+给这位 10x 工程师加鸡腿 🍗
+
+https://x.com/SemiAnalysis_/status/2111627094878790023
+
+# posted_url: https://x.com/FrankFika/status/2111654489044443547
+# posted_at: 2026-10-18T11:05:30+08:00

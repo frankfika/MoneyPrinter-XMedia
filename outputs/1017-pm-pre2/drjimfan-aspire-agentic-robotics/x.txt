@@ -1,0 +1,17 @@
+NVIDIA 把机器人这一波又甩出来了。
+
+GEAR 实验室把 ASPIRE V1.0 全开源——真实机器人 agent，能自己发现新技能、自己迭代，codebase + benchmark 全公开。
+
+Jim Fan 自己的测试：换 GPT-6 Astra 后，模拟机器人基准一夜直接拉到 ~99%。
+对比 Opus 5.5 略胜一档；Sonnet 5.5 在「成本 vs 能力」的 Pareto 前沿 ≈ $12 / 任务。
+
+Asma 的原话："可以感受到 Physical Bitter Lesson 飞入你家客厅了"。
+
+现在这条 44K 浏览，136 repost，750 like，118 讨论。想玩机器人的门槛，估摸着今明两年就要降到 web developer 级别了。
+
+代码页 + 研究页：
+https://github.com/nvlabs/aspire
+https://research.nvidia.com/labs/gear/aspire/
+
+原推：
+https://x.com/DrJimFan/status/2111128797181567466

@@ -1,0 +1,33 @@
+pulse_round_75 真发 verified record
+=====================================
+own_post_id: 2112303408082542645
+own_post_url: https://x.com/FrankFika/status/2112303408082542645
+posted_at: 2026-10-20T06:00:00+08:00
+source_handle: AetrixEmby
+source_post_url: https://x.com/AetrixEmby/status/2112289785192841643
+source_post_content: "时机和维度这俩词抓得准, 补录那一步省掉, 留痕才留得住"
+verification_method: mcp_browser_cmd_enter_100pct_bypass
+verification_evidence:
+  - source 帖 thread 顶部 '陈放Frank🕊️ @FrankFika · 1 second ago' (visible in semantic query)
+  - 'View post analytics' link href='/FrankFika/status/2112303408082542645/analytics' (article timestamp link)
+  - content 一致 (1) 实战经验是 webhook 推客户 dashboard / 2) 客户预期管理是底层逻辑 / 3) social hook 是产品本能)
+  - Replying to @AetrixEmby 链头
+真图_uploaded_to_X: false
+真图_upload_path_status: HARD_CONSTRAINT (mcp_browser 真图 upload 路径卡死 — data-testid='fileInput' 隐藏 input[type='file'] ref 拿不到, upload_files invalid_input 报错; mcp_browser 切换后 2026-10-18 14:42 起持续卡死, 累计 28 entries 真发 0 真图 emergency path)
+真图_screenshot_archive: cascade-mode screenshot 失败 (跟 chuangzuo round 64 pattern 一致), 转文本元数据替代 (跟 emergency path 接受 pattern)
+真发模式: regular_post_original_mode (跟 inbound-014 to inbound-021 cluster 一致)
+文案_verified_visible_segments:
+  段1: "留痕才留得住这话是 workflow 设计的核心 — 留痕不是写入动作, 是产品的一部分。"
+  段1 - 1): "实战经验是 webhook 推客户 dashboard — 关键事件触发自动推, 客户在他的 dashboard 能 share 到自己圈, 这一步比三维快照还重要。"
+  段1 - 2): "客户预期管理是底层逻辑 — 客户期待的是「自动给我看」, 不是「我额外去补」。补录那一步不存在, workflow 才稳。"
+  段1 - 3): "留痕留得住的关键是 social hook — 客户 share 到他自己圈不是配置项, 是产品长出来的本能。留痕如果不长出 social hook, 三维快照也只能停在数据库里。"
+  反问结尾: "那怎么让 social hook 这事, 是产品长出来的本能, 不是 marketing 单独造出来的?"
+character_count: 348 (verified textLength)
+char_count_zh_effective: 178
+line_breaks: "1)2)3)"
+hashtag_count: 0
+tab_reuse_applied: navigate(replaceCurrentTab: true) per Frank 0:33 tab 复用 feedback (从 notifications/mentions tab → AetrixEmby 52m 帖 detail page tab 复用 navigate 替代 open_tab)
+Frank_feedbacks_applied:
+  - Frank-2255-line-breaks: "1)2)3) line breaks 分段"
+  - Frank-0033-tab-reuse: "navigate(replaceCurrentTab: true) 替代 open_tab"
+thread_chain_context: 18 帖深聊 Pluvio9yte 20h AI 变现 → FrankFika 8h outbound-050 → AetrixEmby 8h → FrankFika 56m inbound-014 → AetrixEmby 43m → FrankFika 26m inbound-015 → AetrixEmby 1:47 AM → FrankFika 26m inbound-016 → AetrixEmby 2:26 AM → FrankFika 28m inbound-017 → AetrixEmby 2:41 AM → FrankFika 30m inbound-018 → AetrixEmby 53m → FrankFika 30m inbound-019 → AetrixEmby 53m → FrankFika 30m inbound-020 → AetrixEmby 4:39 AM → FrankFika 5:02 inbound-021 → AetrixEmby 5:08 reply Now → FrankFika 6:00 inbound-022 reply 新 (跟 round 51-72 cluster 一致 asset co-creation lock-in 续 + workflow 设计 social hook 是产品本能)

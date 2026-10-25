@@ -1,0 +1,14 @@
+牛。
+
+DeepMind 的 Gemini 4 Argon 在科学圈已经拿真东西出来了：
+
+🧮 量子：AlphaQubit 解码器塞进一个超大 kernel，吞吐量几乎翻倍
+🔥 等离子体：UMD 合作推翻近 60 年的 Grad 假设（arxiv 2610.07304）
+🧬 酶工程：从几周压到几小时，5 个丝氨酸酯酶实验验证
+
+最猛的一步——1 万名科学家，Antigravity 最高额度免费 6 个月。
+
+Argon 不是再写 benchmark，是真的踩进学科了。
+
+帖子 15 万浏览，引用论文 ↴
+https://x.com/GoogleDeepMind/status/2110421861435879476

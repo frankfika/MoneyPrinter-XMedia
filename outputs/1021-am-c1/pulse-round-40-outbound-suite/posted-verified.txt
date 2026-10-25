@@ -1,0 +1,33 @@
+pulse round 40 — outbound suite (2026-10-21 00:36–00:50 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+screenshot path: BLOCKED (Browser action failed in Electron main), 2 controlled retries after page settle.
+fallback: DOM-verified metadata archive below.
+
+[outbound-093] reply @KesselmanF
+  target : https://x.com/KesselmanF/status/2112582381580234882
+  own    : https://x.com/FrankFika/status/2112584418846273537
+  verify : a[href*='/FrankFika/status/'][aria-label] -> aria-label="1 second ago", href=/FrankFika/status/2112584418846273537
+  text   : The 1% positive reply rate is the tell. Sending was never the bottleneck — knowing the account was.
+           The part of "own the judgment" nobody prices in: the failure log. A rented commodity fails quietly.
+           Nobody upstream tells you which skill it grabbed, or that quality slid from 80% to 70% last month.
+           InstaAgent found that out the expensive way.
+
+[outbound-094] like @KesselmanF
+  target : https://x.com/KesselmanF/status/2112582381580234882
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"; top-level metrics 1 reply / 1 repost / 58 likes => 57 -> 58
+
+[outbound-095] reply @EnclavePolitics
+  target : https://x.com/EnclavePolitics/status/2112579039881830516
+  own    : https://x.com/FrankFika/status/2112586335278305286
+  verify : a[href*='/FrankFika/status/'][aria-label] -> aria-label="1 second ago", href=/FrankFika/status/2112586335278305286
+  text   : The file isn't the problem. I keep a few of them and they still rot.
+           What fixed re-learning for me: write the doc from what the agent got wrong, not from what the project is.
+           Every entry is one specific failure, so it stays small. It becomes a scar log, not a manual.
+           AGENTS.md gets abandoned because it asks you to describe the system before you've learned anything.
+
+[outbound-096] like @EnclavePolitics
+  target : https://x.com/EnclavePolitics/status/2112579039881830516
+  verify : [data-testid='unlike'] aria-label="2 Likes. Liked" => 1 -> 2
+
+round totals: inbound_reply 0 | original_post 0 | outbound_reply 2 | outbound_like 2 | quote 0 | actions 4 (<= 8)

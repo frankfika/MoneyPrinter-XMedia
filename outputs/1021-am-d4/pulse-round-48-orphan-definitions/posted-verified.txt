@@ -1,0 +1,56 @@
+pulse round 48 — orphaned definitions (2026-10-21 08:00–08:08 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+inbound: 0 (none pending; notifications scanned)
+original post: 0 (chuangzuo owns standalone — standing rule from round 47)
+outbound reply: 1   outbound like: 1   quote: 0
+total actions: 2
+
+Pre-flight density check: Frank's own manual posts 51m/57m old at last check, none new.
+New post (chuangzuo 76) at 50m: 15 likes, up from 7 at 20m. Trajectory healthy.
+
+[outbound-117] reply @jhasach   *** fulfils round 47's logged next-round candidate ***
+  target : https://x.com/jhasach/status/2112502135162339472
+           "We spent a year running a GTM agency... The work was fine.
+            The handover was missing. Failed AI projects usually aren't bad builds.
+            They're orphaned builds."
+           Their follow-up sets day-one exit criteria: who owns the number afterwards,
+           which runbooks exist, which tests catch drift. "If we can't name the owner,
+           we don't start."
+           Reach at reply time: 12 views / 2 likes / 1 reply.
+  own    : https://x.com/FrankFika/status/2112696046375805261
+  verify : fill INPUT_PARTIAL_EFFECT -> DOM verbatim check -> Cmd+Enter -> wait 10s;
+           detail page selector "Element not found" -> did NOT re-press Cmd+Enter
+           -> /FrankFika/with_replies -> aria-label="43 seconds ago" -> 2112696046375805261
+  text   : Orphaned builds is the right frame. One addition.
+           The thing that gets orphaned usually isn't the number. It's the definition
+           sitting behind the number.
+           I can hand someone a dashboard. Handing them what "转化" means that week is
+           the part that dies, because it was never written anywhere — it just lived in
+           the head of the person who set it.
+           Your day-one exit criteria are right. I'd add one: for every metric in the
+           handover, can you write the sentence you'd use to settle an argument about
+           it? If not, you're handing over a number without a meaning.
+           Which runbooks exist is the easy question. Which assumptions were never
+           written down is the expensive one.
+
+  trade-off note: deliberately replied to a 12-view post. Low exposure, high relevance.
+  This is a content-value call, not a reach call — recorded so the choice is auditable.
+
+[outbound-118] like @AetrixEmby 2112667862175293757   0 -> 1
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"
+  note   : back-fill like on inbound-034's target (replied but never liked).
+           Entered via CLEAN detail URL so the post is root — avoids the round-43 trap.
+
+Skipped this round (honest):
+  @proxyxd_s, @Cryonix and the "nobody reads the docs" results were mostly crypto-spam
+  accounts; @WoahVinnie (UFO cross-check) and @TraderSival are off-domain.
+  Ran two searches, found nothing that cleared the relevance bar, stopped at 1 like
+  rather than liking something merely to fill the "1-3 likes" line item.
+
+Account health:
+  chuangzuo 76 post   20m: 7 likes  ->  50m: 15 likes
+  cluster 21 (3h)     32 likes      cluster 20 (7h) 54  |  cluster 19 (8h) 44
+  @kir_lev reply      104 -> 114 likes
+
+screenshot path: not attempted (continuous failure across rounds 40-48).

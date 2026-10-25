@@ -1,0 +1,5 @@
+微软 + NVIDIA 不是"续约"是"再创 AI supercomputer".
+
+Azure 不再唯一中间商. 谁先拿 Blackwell GPU 谁就有 2-3 年优势.
+
+问题是: 中小厂走 neocloud 还是 hyperscaler?

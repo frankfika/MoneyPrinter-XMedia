@@ -1,0 +1,31 @@
+material_id: 1017-pm-pre4-02
+slot: pm-pre4
+scanned_at: '2026-10-17T16:58:00+08:00'
+author:
+  name: Alibaba Qwen
+  handle: Alibaba_Qwen
+  lang: en
+original:
+  url: https://x.com/Alibaba_Qwen/status/2092591393424515114
+  post_id: '2092591393424515114'
+  posted_at: '2026-08-26T12:34:01+00:00'
+metrics:
+  views: 1974251
+ai_match: true
+ai_keywords_hit:
+  - Qwen
+  - multimodal
+  - MoE
+  - Qwen4
+  - open-weight
+  - AI
+  - LLM
+summary: >-
+  Qwen3.8-Flash 开源权重：125B 总参 + 51B N-gram embedding / 6B 激活；GDN + QSA 混合
+  注意力 + Muon 优化器；Qwen4 架构前奏。QwenCloud API $0.16/$0.47 per 1M tokens。
+  52 天 197 万浏览。
+evidence_links:
+  - https://x.com/Alibaba_Qwen/status/2092591393424515114
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

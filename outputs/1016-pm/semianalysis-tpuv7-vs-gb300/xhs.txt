@@ -1,0 +1,11 @@
+标题：Google 这波把 NVIDIA 定价权啃了一块下来
+
+Google TPUv7 第一个外部 agentic benchmark 出来了
+1.42x perf/$ 直接锤 NVIDIA GB300 NVL72 FP4
+2.5x 锤 AMD MI355X
+
+关键是这三个对比条件全是"外部、非 Google workload、cost-based"
+不是内部吹跑出来的数字
+
+NVIDIA 接下来 2026 的定价权要被 TPU 啃掉一大块
+#AI芯片 #TPUv7 #Google #NVIDIA

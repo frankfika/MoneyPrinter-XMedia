@@ -1,0 +1,112 @@
+round: chuangzuo_round_67
+  timestamp: "2026-10-20T07:00:00+08:00"
+  trigger: Frank-chuangzuo-cron-30min-anchor-round-67
+  cron_id: d5c0d018-fcb4-4205-8f5e-35d41c0d1fb9
+  drift_minutes_from_round_66: 30
+candidate:
+  index: 1
+  of: 3
+  kol_handle: Barret_China
+  kol_post_id: "2099996680905269643"
+  kol_post_url: https://x.com/Barret_China/status/2099996680905269643
+  kol_post_views_at_scan: 46352
+  kol_post_engagement_at_scan: "88 replies / 76 reposts / 490 likes"
+  age_days_at_pick: 35
+  why_picked:
+    - views_high: 46,352 views = 3x threshold (15K minimum), 0 dedup
+    - ai_keyword_match: "Team 三类人 / AI 让三类特性合并 / 超级个体 OPC / Team 运转"
+    - no_forbidden_terms: no OpenCSG/DeepSeek/Moonshot/MiniMax
+    - frank_relevance: cluster 第 11 视角 — Team 三类人 + OPC 跟 round 53-66 工作流 cluster 一致
+    - cluster_continuation: round 52-66 cluster 11 视角 OPC 超级个体 + 工具杠杆 (跟 round 65 引擎/工具栏 metaphor 接力)
+scanned_handles_no_candidate_or_top3:
+  - handle: howie_serious
+    candidates:
+      - 18K views Oct 16 ChatGPT+chrome tabs integration 距今 5 天 略老 (<7d dedup 通过, 内容 AI 命中)
+    rank: 第二 (18K views, 但跟 round 66 距 only 30 min)
+  - handle: CuiMao
+    candidates:
+      - 16K views 7h "Claude 接入电视去广告" 距今 7h (略短 真发 cadence 太短)
+    rank: 第三 (16K views, 7h freshest 但距 last 真发 only 30 min cadence 太短)
+compass:
+  mode: regular_post_original_mode_no_quote_url_kol_anchor_team_workflow
+  source_post_cited: false
+  url_in_body: false
+  quote_retweet: false
+  x_auto_quote_embed: false
+  media_attached: false
+  media_upload_status: hard_constraint_browser_file_input_ref_unreachable
+  hashtag_count: 0
+  frank_wind: 短句+反问结尾+line breaks 1)2)3)+具体判断+数字例证+OPC + 工具杠杆+ Team 跳板 metaphor
+  perspective_in_cluster: 11
+  cluster_continuation: 跟 round 52-66 cluster 一致 AI workflow toolchain ecosystem perspective
+draft:
+  character_count: 370
+  char_count_zh_effective: 195
+  line_breaks: "1)2)3)"
+  hashtag_count: 0
+  text: |
+    AI 让 Team 三类人合并 — 这事比想象还重要。
+
+    1) 三类人: 定义问题 / 对结果负责 / 领域专家。AI 让三类特性同时落在一个人头上, 出现大量超级个体 OPC — 一人干三活, 比 hire 团队更快跑通。
+
+    2) 实战经验是 single person wear 3 hats — 创始人 + owner + 领域专家 一人干。早期 OPC 跑通全流程, 中期分 shape 出去, 后期 hire 团队接力。OPC 不是常态, 是 Team 跳板的早期阶段。
+
+    3) Team 的未来不在多而精, 在一人具备多关键 skill + AI 杠杆放大 — 单人决策 + 单人执行 + AI 工具链串联, 就能跑出 1 个赛道。
+
+    那 Team 设计的下一步 — 是给 OPC 加更多工具杠杆, 还是建多类型混合 Team?
+verification:
+  method: mcp_browser_cmd_enter_100pct_bypass
+  evidence: home timeline 顶部 '陈放Frank🕊️ @FrankFika · 1 second ago' + 'View post analytics' link /FrankFika/status/2112319430940303822/analytics + 'posted' toast + content 一致
+  tab_reuse: true
+  tab_reuse_method: navigate(replaceCurrentTab: true) per Frank 0:33 tab 复用 feedback
+  own_post_id: "2112319430940303822"
+  own_post_url: https://x.com/FrankFika/status/2112319430940303822
+anti_bot:
+  cooldown_minutes_since_round_66: 30
+  cooldown_minutes_required: 30
+  cooldown_status: satisfied
+state_updates:
+  - file: state/published-posts.json
+    added: chuangzuo_round_67
+    inserted_at_front: true
+  - file: state/seen-posts.json
+    added:
+      - "2099996680905269643"
+  - file: state/recent-picks.json
+    added:
+      - handle: Barret_China
+        post_id: "2099996680905269643"
+        topic_signature: team-three-roles-merged-by-ai-superindividual-opc-team-design-toolchain-leverage
+  - file: private/account-safety.yaml
+    updated:
+      - last_published_at
+      - last_published_post_id
+      - last_published_url
+      - last_published_round
+      - last_published_treatment
+      - last_published_topic_signature
+      - last_published_media_count
+honesty_principle_check:
+  candidate_count_actual: 3
+  candidate_count_reported: 3
+  top_picked: Barret_China 46,352 views Sep 16 (距今 35 天 but 高 views + 0 dedup + cluster 第 11 视角 强 punchy)
+  真图_uploaded: false
+  真图_uploaded_reason: mcp_browser 真图 upload 路径卡死 hard constraint (累计 31 chuangzuo + 1 pulse 真发 0 真图 emergency path)
+  真图_archival_path: outputs/1020-am-c7/barret-teams-three-types-ai-superindividual/screenshots/posted-verified.txt (cascade-mode screenshot 持续 全卡死)
+Frank_feedbacks_applied:
+  - Frank-1230-original-post-push: "切 regular post 原创 mode (跟 round 52-66 cluster 一致)"
+  - Frank-2255-line-breaks: "1)2)3) line breaks 分段"
+  - Frank-0033-tab-reuse: "navigate(replaceCurrentTab: true) 替代 open_tab"
+  - Frank-1200-no-red-line-words: "无 OpenCSG/DeepSeek/Moonshot/MiniMax 红线词 (Barret_China 帖不包含)"
+cluster_evolution:
+  perspective_1_round_52: AI foreman 19 century factory analogy
+  perspective_2_round_53: 富士康 90 年代 工头 cluster
+  perspective_3_round_54: code review pipeline 工头看战略
+  perspective_4_round_56: opus teaching cost
+  perspective_5_round_57: community flywheel 工序 marketplace
+  perspective_6_round_58: small model toolchain ecosystem Google vs Luna
+  perspective_7_round_59: karpathy capability gap funnel perception
+  perspective_8_round_64: open-weight AI image detector toolchain gatekeeper role
+  perspective_9_round_65: AI real entry point usage habit CN agent report 73 percent single model
+  perspective_10_round_66: toolchain anti consensus ordinary user vs expert entry habit vs model benchmark toolbar vs engine
+  perspective_11_round_67: team three roles merged by AI superindividual OPC team design toolchain leverage

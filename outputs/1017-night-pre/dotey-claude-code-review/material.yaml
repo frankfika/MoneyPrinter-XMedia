@@ -1,0 +1,36 @@
+material_id: 1017-night-pre-02
+slot: night-pre
+scanned_at: '2026-10-17T20:32:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: 宝玉 (@dotey)
+  handle: dotey
+  lang: zh
+original:
+  url: https://x.com/dotey/status/2111384189656252712
+  post_id: '2111384189656252712'
+  posted_at: '2026-10-17T17:30:00+00:00'
+source_original:
+  handle: ClaudeDevs
+  url: https://x.com/ClaudeDevs/status/2110866210573386065
+  post_id: '2110866210573386065'
+metrics:
+  views: 20902
+  likes: 181
+  retweets: 31
+  replies: 67
+  bookmarks: 226
+ai_match: true
+summary: >-
+  Anthropic 公开 Claude Code 团队代码审查做法：约 90% 的代码由 Claude 写，
+  6-9 月合并修改翻倍，需要撤回的比例反而降 40%。
+  引用 5 层带洞奶酪片比喻多层检查+终末兜底，附 20 分钟视频+完整文稿。
+topic_signature: dotey-claude-code-review-anthropic
+evidence_links:
+  - https://x.com/dotey/status/2111384189656252712
+  - https://x.com/dotey/status/2111384193141727261
+  - https://claude.dev/blog/code-review
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-dotey-post-detail.png
+  - screenshots/dotey-claude-code-review-cover.jpg

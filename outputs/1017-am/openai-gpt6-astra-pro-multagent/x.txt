@@ -1,0 +1,15 @@
+舒服了。ChatGPT 终于从「单线程问答」变成「多 agent 协作」。
+
+GPT-6 Astra Pro 这次升级同时干了两件事:
+1）response 更快 + plugins/tools 调用更稳
+2）拆任务给多个 agent 同时跑 —— 不是以前的「sequential tool calls」,是真并行,每个 agent 独立进度条,完了之后再 review
+
+Pro 用户现在 Tab 上就能用了。Plus/Team 估计下周开放。
+
+这意味着 ChatGPT 的下一步不是「更聪明的单个模型」,而是「一群 agents 协同」——agent harness 的工程深度,会快速追平模型本身的迭代速度。
+
+https://x.com/OpenAI/status/2111192259073094035
+
+# material_id: 1017-am-01
+# treatment: quote_retweet
+# screenshots: x-openai-banner.jpg, x-openai-avatar.jpg

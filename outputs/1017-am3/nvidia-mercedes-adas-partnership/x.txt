@@ -1,0 +1,12 @@
+NVIDIA x 奔驰放大招 —— 不是刷一波 PR,是把自动驾驶整套弹药上桌。
+
+车端打的是这一套:Hyperion 算力 + 传感器架构 + Alpamayo Stack 软件 + Halos 安全系统,合并进 Mercedes 的 MB.OS。Halos 直接叠了一套 parallel safety stack,既是冗余又是护栏。整套冲 SAE Level 4 —— 含 robolimousines 自动驾驶小巴。
+
+不只是驾驶。MO360 数字生产也跟进了:虚拟规划 + AI 质检,全球工厂网一起刷。
+
+Jörg Burzer(Mercedes CTO)原话:NVIDIA 是 automated driving 最重要的战略伙伴。Ali Kani(NVIDIA automotive VP):一起把 Hyperion 的计算 + 全栈安全落到路上,让自动驾驶变成日常。
+
+西方世界第一套城市点对点辅助驾驶就是这两家一起做的 —— 这次直接续约下一个十年,实打实 10 年的自动驾驶军备。
+
+https://nvidianews.nvidia.com/news/mercedes-benz-and-nvidia-expand-strategic-partnership-to-advance-safe-highly-automated-driving-in-the-next-decade
+https://x.com/nvidia/status/2111005194058179020

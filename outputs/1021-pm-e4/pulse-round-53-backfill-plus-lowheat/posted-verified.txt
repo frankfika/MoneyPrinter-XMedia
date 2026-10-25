@@ -1,0 +1,87 @@
+pulse round 53 · 2026-10-21 12:34–12:45 +0800
+模式: MiniMax Code session（mcp_browser alive）
+
+=== 本轮先修账，再跑动作 ===
+
+## ⚠️ 账目缺口修复（round 52 漏记两个动作）
+
+**发现**：12:35 开工核查 state 时发现 outbound-actions 末条仍是 outbound-125（10:36），
+但 round 52（10:47 触发）实际真发了 2 个动作，**当时被 cron 打断，没落盘**。
+
+**核实**（不是凭记忆，是去 X 查）：
+- outbound-126 回复 @dyiapianis → search "from:FrankFika 忘了" 命中，帖在 X 上（1h 前，22 views，1 reply 1 like）
+- outbound-127 like @dyiapianis → 详情页 unlike aria-label "2 Likes. Liked"
+
+**回填**：
+- outbound-actions 118 → **120**（+2，标注 BACKFILL）
+- seen-posts 276 → **278**（+2）
+- account-safety.yaml: last_outbound_reply 10:31 → **10:52**，last_outbound_like 10:36 → **10:55**
+
+**教训**：动作真发和 state 落盘是两步，中间任何打断都会留下缺口。
+**下一轮开工必须先查 state 末条跟 memory 末条是否对得上**，对不上先补账再跑新动作。
+这次是 cron 打断造成的，如果没查就会变成"发了但没人知道"的动作。
+
+---
+
+## 本轮动作（1 个）
+
+outbound-128 like @dyiapianis 根帖 2→3
+  target 2112680392763301913（5h，47 likes）
+  "Most agent memory is a vector database... That's glorified search. Real memory has four properties a vector index doesn't."
+  press_key 'l' 真发，unlike aria-label "3 Likes. Liked" 验证
+  注：outbound-122 只赞了根帖 0→1，本轮是赞线程内那条 47 likes 的
+
+## 主动不做（诚实记录）
+
+- **inbound 0**：@AetrixEmby 第 12 层（2h）是纯肯定——"签字和留档绑成一个动作这点太关键了"。
+  按既定策略「纯肯定则收尾，不开新层」，**不回复，让线程自然收住**。开第 13 层没有新内容可给。
+- **reply 0**：新 handle 扫描没跑（本轮预算用在补账 + 数据采样上）
+- **like 只做 1 个**：@softpoo 那条已赞过（round 50 outbound-121），跳过。
+  找第三条 like 时 @Truth Only 那条 URL 一直没拿到（`"Near-misses are the expensive part"` 搜索只命中 Frank 自己的帖），
+  **不硬凑**，1 个 like 就收。
+- **原创 post 0**：chuangzuo 独占 standalone。round 79 已确认账号低热期，本轮不抢。
+
+---
+
+## 📊 账号健康度：低热期结论已确认（补齐 chuangzuo round 79 的待办）
+
+| cluster | 主题 | 时长 | views | views/h |
+|---|---|---|---|---|
+| 23 | 技术向 · 地图会过期 | 5.4h | 37 | 6.9 |
+| 24 | 买方向 · 效率不能记账 | 4.5h | 29 | 6.4 |
+| 25 | 技术向 · dry→wet lab | 3.0h | 29 | 9.7 |
+
+cluster 25 的完整曲线：1h=21 → 2h=23 → 3h=29。**明显减速，21/h 是新帖红利不是真实速率。**
+
+**三条原创现在的 views/h 全部落在 6–10 区间，差异在噪声范围内。**
+round 79 的结论「账号整体低热期，跟主题无关」**已确认**。
+
+## 🔴 但低热期里有两个真实的好信号
+
+1. **@dyiapianis followed you**（1h）——outbound-126 那条回复换来了关注。
+   回复里的具体反驳（"省掉的正是维护里最烦的那一段"）比单纯附和更能留住人。
+2. **@softpoo liked outbound-126**（1h）——回复发出 1 小时内拿到 like。
+
+**这说明流量盘子在降，但互动质量在升。** 低热期不是账号在死，
+是触达变窄了但回复的吸引力没变。如果要恢复，方向不是"换个主题"，
+而是**提高单条回复的尖锐度**（像 outbound-126 那样直接反驳一个具体说法）。
+
+## 「互动抢分发位」假设：证伪
+
+round 79 留的假设是"pulse 的互动动作会掐断原创的分发"。
+本轮实测：cluster 25 在 round 52 发完 2 个动作后的 11 分钟里 views 21→23（+2），
+曲线是平的。**互动和原创没有互相掐断**，可以并行跑。
+
+---
+
+## 工具层观察
+- mcp_browser 偶发 `Validation failed: root: must not have additional properties`（本轮 4 次，重发即恢复）
+- search URL 的 `-filter:replies` 前缀在 live search 里无效（返回 Element not found）
+- 三词 AND 搜索再次踩坑（`from:softpoo Limbic honest` → No results），
+  退到单个引号短语 `"honest notes"` 立刻命中。**这条已经写进 round 51 的 memory，本轮又犯了一次——说明它该写进 SKILL.md 而不是 memory**
+
+## 落盘
+- outputs/1021-pm-e4/pulse-round-53-backfill-plus-lowheat/posted-verified.txt
+- outbound-actions **121**（+1 本轮 +2 backfill）/ seen-posts **279**（+3）
+- inbound-replies 37（无变化）/ published-posts 118（无变化）
+- account-safety: last_outbound_reply 10:52 / last_inbound_reply 10:20 / last_outbound_like 12:43

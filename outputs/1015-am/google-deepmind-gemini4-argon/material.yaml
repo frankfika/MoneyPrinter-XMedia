@@ -1,0 +1,31 @@
+material_id: 1015-am-01
+slot: am
+scanned_at: '2026-10-15T08:48:00+08:00'
+author:
+  name: Google DeepMind
+  handle: GoogleDeepMind
+  lang: en
+original:
+  url: https://x.com/GoogleDeepMind/status/2110039274922131792
+  post_id: '2110039274922131792'
+  posted_at: '2026-10-14T00:05:00+00:00'
+metrics:
+  views: 2300000
+  likes: 6100
+  retweets: 1000
+  replies: 351
+  bookmarks: 1500
+ai_match: true
+summary: >-
+  Google DeepMind pins "Gemini 4 Argon is now globally available" — frontier
+  capabilities across coding, enterprise workflows, and cyber defense; video +
+  image shipped. 2.3M views / 6.1K likes / 1K RT in <24h.
+evidence_links:
+  - https://x.com/GoogleDeepMind/status/2110039274922131792
+  - https://blog.google/technology/google-deepmind/
+screenshots_needed:
+  - 原帖正文+配图区
+  - 主页 timeline 上下文
+treatment_hint: quote_retweet
+dedup_hits: []
+source: hot-topic-tracker cua_repl scan (GoogleDeepMind timeline)

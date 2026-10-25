@@ -1,0 +1,12 @@
+LightSeek 跑了个推理 benchmark（叫 TokenSpeed），在 4× NVIDIA GB300 + NVFP4 上把 Qwen3.8-Flash-Next 跑到 685 output tokens/s 每用户——单人实时聊天完全够用那种。
+
+关键点在 NVFP4 量化 + 自研 inference kernel，开源实现已经放 GitHub（lightseekorg/t）。
+
+685 这个数一出来，GB300 在开源模型推理上的性价比就被填实了，Qwen 转发也认。
+https://x.com/Alibaba_Qwen/status/2110214931559899630
+
+# material_id: 1017-pm2-02
+# treatment: quote_retweet
+# screenshots: x-qwen-tokenspeed-post.png, x-qwen-tokenspeed-detail.png
+# posted_url: https://x.com/FrankFika/status/2111352684372697193
+# posted_at: 2026-10-17T15:06:46+08:00

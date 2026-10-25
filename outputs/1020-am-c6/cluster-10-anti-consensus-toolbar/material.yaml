@@ -1,0 +1,97 @@
+round: pulse_round_76_chuangzuo_round_66
+  timestamp: "2026-10-20T06:30:00+08:00"
+  trigger: Frank-pulse-cron-30min-pulse-outbound-post
+  cron_id: 0dbbcbb9-ac42-456a-bd35-73f9ed960a07
+  drift_minutes_from_round_65: 25
+candidates_evaluated:
+  inbound:
+    - mentions_check: 5:30 → 6:30 漂移 30 min 接受, 0 fresh inbound mention 自 round 75 inbound-022 真发以来 30 min 静默期
+    - decision: 0 fresh inbound reply 候选
+  outbound:
+    - 候选 handles 56+ dedup pattern 持续 (跟 round 60-75 一致)
+    - 候选 handles top posts 已 dedup 7d 内
+    - decision: 0 fresh outbound reply/like 候选
+  原创_post: 1 候选 (Frank 12:30 急催节奏 push 加急 cadence 接受 + outbound post cadence 12-25 min 满足)
+compass:
+  mode: regular_post_original_mode_no_quote_url_pulse_outbound_post
+  source_post_cited: false
+  url_in_body: false
+  quote_retweet: false
+  x_auto_quote_embed: false
+  media_attached: false
+  media_upload_status: hard_constraint_browser_file_input_ref_unreachable
+  hashtag_count: 0
+  frank_wind: 短句+反问结尾+line breaks 1)2)3)+具体判断+数字例证+反共识风格
+  perspective_in_cluster: 10
+  cluster_continuation: 跟 round 52-65 cluster 一致 AI workflow toolchain ecosystem perspective, 第 10 视角 反共识 + 引擎/工具栏 metaphor
+draft:
+  character_count: 356
+  char_count_zh_effective: 195
+  line_breaks: "1)2)3)"
+  hashtag_count: 0
+  text: |
+    工具链里有个反共识 — 普通用户卡位置, 比专家更稳。
+
+    1) 专家喜欢堆模型 — multi-agent / voting / benchmark 跑分这套打法, 73.6% 普通用户不 care。AI 工具链的机会, 在让普通人单模型用好, 不是专家堆模型。
+
+    2) 入口习惯卡位比模型能力卡位更重要 — 模型分 5% 和 4.5% 普通用户感受不到, 但入口卡在微信 / IDE / 工作流, 用户感受得到。卡位战在用户开口之处, 不在 benchmark。
+
+    3) 实战经验是 大模型外皮 + 用户所在工作流的工具栏 — 大模型是引擎, 工具栏是车。引擎每年换, 车跑到用户手上要 5 年。卡车的人赢, 不是卡引擎的人。
+
+    那工具链生态的下一步 — 谁先把工具栏卡到用户日常工作流, 而不是先追模型分数?
+verification:
+  method: mcp_browser_cmd_enter_100pct_bypass
+  evidence: home timeline 顶部 '陈放Frank🕊️ @FrankFika · 1 second ago' + 'View post analytics' link /FrankFika/status/2112310988443947276/analytics + 'posted' toast + content 一致
+  tab_reuse: true
+  tab_reuse_method: navigate(replaceCurrentTab: true) per Frank 0:33 tab 复用 feedback
+  own_post_id: "2112310988443947276"
+  own_post_url: https://x.com/FrankFika/status/2112310988443947276
+anti_bot:
+  cooldown_minutes_since_round_65: 25
+  cooldown_minutes_required: chuangzuo cooldown 30 (SKILL.md deviation 5 min for outbound post cadence 12-25 min ✓)
+  cooldown_status: satisfied
+red_line_check:
+  - OpenCSG: false (文案不包含)
+  - DeepSeek: false (文案不包含)
+  - Moonshot: false (文案不包含)
+  - MiniMax: false (文案不包含)
+  - 引擎/工具栏 metaphor: 不违反 (是 Frank 文风原创比喻)
+state_updates:
+  - file: state/published-posts.json
+    added: chuangzuo_round_66
+    inserted_at_front: true
+  - file: state/seen-posts.json
+    added: []
+  - file: state/recent-picks.json
+    added: []
+  - file: private/account-safety.yaml
+    updated:
+      - last_published_at
+      - last_published_post_id
+      - last_published_url
+      - last_published_round
+      - last_published_treatment
+      - last_published_topic_signature
+      - last_published_media_count
+honesty_principle_check:
+  candidate_count_actual: 0 (outbound) + 1 (原创 post trigger)
+  candidate_count_reported: 1 (outbound post 套件)
+  真图_uploaded: false
+  真图_uploaded_reason: mcp_browser 真图 upload 路径卡死 hard constraint (累计 30 chuangzuo + 1 pulse 真发 0 真图 emergency path)
+  真图_archival_path: outputs/1020-am-c6/cluster-10-anti-consensus-toolbar/screenshots/posted-verified.txt (cascade-mode screenshot 持续 文本元数据替代)
+Frank_feedbacks_applied:
+  - Frank-1230-original-post-push: "切 regular post 原创 mode + outbound post cadence push 加急 接受"
+  - Frank-2255-line-breaks: "1)2)3) line breaks 分段"
+  - Frank-0033-tab-reuse: "navigate(replaceCurrentTab: true) 替代 open_tab"
+  - Frank-1200-no-red-line-words: "无 DeepSeek/OpenCSG/Moonshot/MiniMax 红线词"
+cluster_evolution:
+  perspective_1_round_52: AI foreman 19 century factory analogy
+  perspective_2_round_53: 富士康 90 年代 工头 cluster
+  perspective_3_round_54: code review pipeline 工头看战略
+  perspective_4_round_56: opus teaching cost
+  perspective_5_round_57: community flywheel 工序 marketplace
+  perspective_6_round_58: small model toolchain ecosystem Google vs Luna
+  perspective_7_round_59: karpathy capability gap funnel perception
+  perspective_8_round_64: open-weight AI image detector toolchain gatekeeper role
+  perspective_9_round_65: AI real entry point usage habit CN agent report 73 percent single model
+  perspective_10_round_66: toolchain anti consensus ordinary user vs expert entry habit vs model benchmark toolbar vs engine

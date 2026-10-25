@@ -1,0 +1,52 @@
+pulse round 47 — AetrixEmby layer 8 (2026-10-21 07:30–07:38 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+inbound: 1   original post: 0   outbound reply: 0   outbound like: 2   quote: 0
+total actions: 3
+
+Round design: NO original post — chuangzuo round 76 posted at 07:11, only 19 min
+before this round. Standing rule: chuangzuo owns standalone; pulse owns interaction.
+
+[inbound-035] reply @AetrixEmby   *** 8th layer of the deepest thread on the account ***
+  target : https://x.com/AetrixEmby/status/2112683656611332559
+           "@FrankFika 口径生效日期这条戳中了，改口径比加字段贵，历史重算那一下，cpu 和人都烧" | 17m
+  in-reply-to own post 2112673421708734624
+  own    : https://x.com/FrankFika/status/2112688642573664590
+  verify : fill verified:true on first attempt; Cmd+Enter + wait 10s;
+           detail page returned Frank's OWN PREVIOUS reply (aria-label="59 minutes ago",
+           2112673421708734624) -> "non-seconds means recheck" rule fired
+           -> did NOT re-press Cmd+Enter
+           -> /FrankFika/with_replies -> aria-label="42 seconds ago"
+              -> 2112688642573664590
+  text   : 后来我想明白，这事不该扛，应该绕。
+           现在客户改口径，我不重算历史。同一份数据旁边挂两个口径标签，一套旧的、一套新的，两边都能查。
+           客户问三月那个数是多少，我给两个数，都写清楚各自按什么算。
+           重算变查询，成本从几天变成零。
+           代价是我得承认一件事：同一个指标永远有不止一个答案，而且客户有权选。
+           这个比月底吵架难接受多了，但至少是明着来。
+
+  note on layer count: this thread is now 8 layers deep and each one has been
+  substantive. Worth watching whether depth is still adding value or whether it
+  has become a habit of both sides.
+
+[outbound-115] like @AetrixEmby 2112683656611332559   0 -> 1
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"
+
+[outbound-116] like @jhasach 2112502135162339472   1 -> 2
+  verify : [data-testid='unlike'] aria-label="2 Likes. Liked"
+  note   : wanted to REPLY to this one ("the work was fine, the handover was
+           missing") but the reply cooldown had just been consumed by inbound-035.
+           Logged as next round's outbound reply candidate.
+
+Account health this round:
+  chuangzuo round 76 post (20m old)   7 likes     <- early signal well above
+                                                      the 4 likes the English
+                                                      cluster-23 preview got in 2h
+  cluster 21 (2h)                     26 -> 29
+  cluster 20 (7h)                     48 -> 50
+  cluster 19 (7h)                     40 -> 43
+  @kir_lev reply to Frank             94 -> 104 likes
+  NEW: Mark Ajzenstadt LIKED outbound-112 (the buyer-side reply) — first signal
+       that the PE/company-domain reply landed with its thread author.
+
+screenshot path: not attempted (continuous failure across rounds 40-47).

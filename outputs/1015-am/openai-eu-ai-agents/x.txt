@@ -1,0 +1,19 @@
+# material_id: 1015-am-03
+# treatment: quote_retweet
+# screenshots: x-openai-post.png, x-openai-profile-top.png
+
+OpenAI 刚发了一份欧洲 Economic Research 报告，结论一句话：
+
+欧盟中小企业 agentic AI 周活用户，5 个月涨了 8.1 倍。
+
+原帖那张图就是一根从 1× 拉到 8.7× 的曲线（5月到 10 月），配几个数字：
+- 一半以上的 EU 企业 AI 用量已经涉及 agent 类工具
+- 中小企业用户基数翻了 8 倍
+- 研究结论：从「更多人用」转向「用得更深」
+
+Europe 走 agentic 路径比美国还激进，OpenAI 想把这股劲拐成更深的企业付费。
+
+https://x.com/OpenAI/status/2110442001749659890
+
+# posted_url: https://x.com/FrankFika/status/2110534221911806169
+# posted_at: 2026-10-15T00:52:56Z

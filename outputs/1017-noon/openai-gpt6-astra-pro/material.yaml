@@ -1,0 +1,34 @@
+material_id: 1017-noon-01
+slot: noon
+scanned_at: 2026-10-17T12:03:00+08:00
+author:
+  name: OpenAI
+  handle: OpenAI
+  lang: en
+original:
+  url: https://x.com/OpenAI/status/2111192259073094035
+  post_id: "2111192259073094035"
+  posted_at: 2026-10-17T05:00:00+08:00
+  body_excerpt: |
+    GPT-6 Astra Pro in ChatGPT got an upgrade with faster responses and
+    improved use of plugins and tools. And now, multiple agents can tackle
+    different parts of a task in parallel. You can follow each agent's progress
+    and open completed tasks to review their work.
+metrics:
+  views: 881175
+  likes: 9903
+  retweets: 784
+  replies: 691
+  bookmarks: 1016
+ai_match: true
+summary: |
+  OpenAI 把 GPT-6 Astra Pro 在 ChatGPT 里升了一档:响应更快、插件/工具
+  调用更稳,然后——多个 agent 可以并行拆任务,各自跟进度、可点开看产物。
+  Pro 用户现在已经能用。7 小时 88 万浏览。
+evidence_links:
+  - https://x.com/OpenAI/status/2111192259073094035
+treatment_hint: quote_retweet
+source: "hot-topic-tracker cua_repl scan (handle batch: OpenAI)"
+media_urls:
+  - https://pbs.twimg.com/media/HUDAEy0a4AAdfz8.jpg?format=jpg&name=large
+  - https://pbs.twimg.com/media/HUsEKcobYAAf2Bg.jpg?format=jpg&name=large

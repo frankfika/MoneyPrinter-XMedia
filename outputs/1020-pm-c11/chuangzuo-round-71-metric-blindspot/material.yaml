@@ -1,0 +1,86 @@
+---
+id: chuangzuo_round_71
+timestamp: 2026-10-20T23:15:00+08:00
+treatment: regular_post_original_mode_no_quote_url_self_observation_perspective
+topic_signature: metric-measures-done-human-judges-right-semantics
+perspective_in_cluster: 19
+cluster_description: |
+  AI workflow toolchain ecosystem perspective (第 19 视角 指标测"做完没做完", 人判断"是不是我要的").
+  接 @jiqizhixin 17h 那条 (620 views) — "High aesthetic score. High text alignment. High human preference.
+  But look closer — the chair has three legs, the shadow falls the wrong way, the door handle floats in mid-air.
+  Traditional metrics pick the 'best' image, but humans judge it as physically wrong."
+  同时跟 chuangzuo_round_70 "模型跑通 ≠ 模型做对了" 连续 — round 70 讲 agent 给 diff 不给理由,
+  round 71 讲 agent 给完美报告但口径错. 同一件事的两面.
+
+scan_handles:
+  - GoogleDeepMind   # 命中 3 条: Minecraft 227K views (Oct 17, 3 天前) / Gemini 4 Argon 量子计算 172K (pinned Oct 15) / 3D 周期表 8.7K (16m fresh)
+  - servasyy_ai      # 命中 4 条: DeepSeek V4.1-Flash 单卡 4090 跑通 25K (Oct 18 pinned) / Open-Science Claude Code 实测 11K (Oct 19) / WAN 3.0 vs Seedance 5.2K (13h)
+  - jiqizhixin       # 命中 4 条: DeepInfer 开源 1.1K (6h) / 椅子三条腿物理错误 620 (17h) / Oneira 视频世界模型 601 (4h) / one-step 图像生成 1.3K (11h)
+
+candidate_count: 11
+candidate_top_picks:
+  - handle: jiqizhixin
+    topic: "椅子三条腿、阴影方向错、门把手悬空 — 传统指标选最优图, 人一眼看出物理错误"
+    views: 620
+    reason: "TOP 1 — 直接对上我 cluster 第 18/19 视角 (指标 vs 判断), 且是中文媒体, lang_priority [zh, en] 优先"
+  - handle: GoogleDeepMind
+    topic: "Four Gemini 4 Argon agents beat Minecraft from scratch in 27 hours — 2783 programs, no human help"
+    views: 227000
+    reason: "曝光 227K 最高, 但 Oct 17 距今 3 天且 multi-agent 话题我 cluster 已覆盖 (round 62/63 社区飞轮), 角度重叠风险"
+  - handle: servasyy_ai
+    topic: "给科学家用的 Claude Code：本地跑、可追溯、能换引擎的 Open-Science 实测"
+    views: 11000
+    reason: "第三候选 — 可追溯性话题跟 round 18 视角 (模型说不清自己知道什么) 呼应, 但跟 TOP 1 角度重叠"
+  - handle: jiqizhixin
+    topic: "DeepInfer from DeepSeek 开源推理框架"
+    views: 1100
+    reason: "涉及 DeepSeek 红线词 — 直接排除"
+  - handle: servasyy_ai
+    topic: "748B DeepSeek V4.1-Flash 单张 4090 跑通 20+ tok/s"
+    views: 25000
+    reason: "涉及 DeepSeek 红线词 — 直接排除"
+
+draft_topic_signature: metric-measures-done-human-judges-right-semantics
+character_count: 158
+media_count: 0
+media_count_reason: mcp_browser 真图 upload 路径卡死 hard constraint 累计 38 entries
+line_breaks: 无排比, 短句换行
+hashtag_count: 0
+anti_ai_slop_check:
+  无闭环/护城河/颗粒度/方法论: true
+  无所以问题来了/反过来说/本质上/归根结底: true
+  无1)2)3)排比: true
+  无反问结尾: true
+  有具体场景+数字(三条腿/三个字段/两层): true
+  结尾短句陈述: true
+  preferred_openings_used: "从动作/场景起手 — 先摆出椅子三条腿这个具体画面"
+  preferred_closings_used: "留个口子不答 — '这两件事之间隔着一层，谁都替不了。'"
+
+verification_plan:
+  method: mcp_browser Cmd+Enter + wait 10s → query text 看 @FrankFika · 1s (round 70 新铁律)
+  compose_url: https://x.com/compose/post
+  post_send_evidence:
+    - query text detail/home 页见 "@FrankFika · 1s" + 文案全文
+    - with_replies tab query dom a[href*='/FrankFika/status/'][aria-label] 抓 post_id
+  no_retry_rule: "wait 10s 后无 post_id 才考虑 retry, 且 retry 前必须 navigate away 避免 duplicate"
+
+source_inspiration:
+  - handle: jiqizhixin
+    topic: "High aesthetic score. High text alignment. High human preference. But look closer — the chair has three legs..."
+    not_referenced_in_post: true   # regular post 原创 mode 切, 不引用 KOL URL / post_id
+    angle_taken: "指标 vs 人判断的落差, 搬到 agent 交付场景上"
+
+cluster_progression:
+  18: "round 70 模型跑通 ≠ 做对 — agent diff 不给理由 = 盲签"
+  19: "round 71 指标测做完没做完, 人判断是不是我要的 — agent 报告完美但口径错 (本轮)"
+
+anti_bot_strategy:
+  - 距 chuangzuo_round_70 真发 22:33 = 42 min ✓ (远超 cooldown 30 min)
+  - 距 pulse round 36 outbound-087 reply 23:10 = 5 min (并行 cron, 但本轮是原创 post 不是 reply)
+  - 真图 0 hard constraint: regular_post 原创 mode + 0 URL 引用 + Cmd+Enter 真发
+  - X 反 bot 状态: 24h 内 8+ 真发, 0 次真限流 (round 33 的"反 bot 拦截"结论已被推翻)
+
+state_targets:
+  published-posts.json: round 71 entry 追加
+  account-safety.yaml#x.last_published_*: 更新到 round 71
+  memory.md: 追加 round 71 触发 / 真发 / 反风控 / cluster 19 累计

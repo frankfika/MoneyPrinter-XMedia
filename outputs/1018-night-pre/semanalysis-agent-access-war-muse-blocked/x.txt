@@ -1,0 +1,23 @@
+# material_id: 1018-night-pre-03
+# slot: night-pre
+# topic_signature: semanalysis-agent-access-war-muse-app-store-blocked
+# treatment_hint: quote_retweet
+# rule_check:
+#   length_zh: 274 (within 180-320)
+#   has_number: yes (#1 App Store, 1/3 美国购物/旅游网站, 30K views 19h)
+#   has_link: yes (original post)
+#   images: 3 真图 (post detail screenshot + 2 chart images)
+#   no_opencsg: yes
+#   no_ai_image: yes
+
+AI agent 的接入权争夺战，开打了。
+
+Meta 的 Muse 冲上 App Store 第一，然后 Amazon 直接封 —— Jefferies 测试发现，美国 1/3 的购物和旅游网站也跟封了它。
+
+同款剧情字节豆包在国内也在演：给所有 app 30 天窗口，要么接入、要么别来。
+
+模型层卷完了，agent 层抢入口、抢流量的硬仗刚开始。
+
+https://x.com/SemiAnalysis_/status/2111223778373935465
+# posted_url: https://x.com/FrankFika/status/2111515036833419747
+# posted_at: 2026-10-18T01:35:00+08:00

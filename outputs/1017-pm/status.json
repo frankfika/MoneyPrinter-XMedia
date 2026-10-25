@@ -1,0 +1,24 @@
+{
+  "slot": "1017-pm",
+  "scanned_at": "2026-10-17T15:02:30+08:00",
+  "mode": "codex_session_cron_slot",
+  "browser_subsystem": "DEAD",
+  "candidate_count": 0,
+  "completed_published": 0,
+  "completed_drafted": 0,
+  "posted_to_x_urls": [],
+  "xhs_status": "banned (利用 AI 托管进行发文/互动) — 未触发 publisher-xhs",
+  "blocking_facts": [
+    "cua_repl__js tool 仍挂载, 但 browser subsystem 完全空: listBrowsers/listTabs/getState.browsers 都返回 [], getBrowser({id:\"iab\"}) 报 'Browser is not available: iab', getBrowser({id:\"dot\"}) 报 'Browser Use plugin is not available in this context', createBrowserTab(\"iab\"|\"2\", ...) 都失败",
+    "r.jina.ai 兜底返回 403 AbuseAlleviationError (Anonymous access to domain x.com blocked until 2026-10-17 07:20 UTC); 本地无 Jina API key",
+    "mmx search 兜底: 12 个高优 handle (OpenAI/sama/AnthropicAI/karpathy/GoogleDeepMind/dotey/oran_ge/op7418/deepseek_ai/Alibaba_Qwen/NVIDIA/JensenHuang) 用 'from:<h> site:x.com' 都返回 0 命中, 通用聚合查询 'OpenAI Anthropic Karpathy NVIDIA DeepMind latest AI announcement today' 仅 1 条 token2x.com 二手转载"
+  ],
+  "candidate_breakdown": {
+    "tier1_official_handles_12": 0,
+    "lite_search_hits_x_com": 0,
+    "lite_search_hits_other_domains": 1
+  },
+  "self_session_pattern": "本 Codex session 与 1017-noon self session (pid 29024) 同一类型 — browser subsystem binding 一直是空; 已确认 5 次 getState() + 3 次 listBrowsers() + 2 次 createBrowserTab() 都死",
+  "scan_log": "logs/scan/1017-pm.log",
+  "next_action": "等下一次 Codex session (大概率 launchd 触发或 ad-hoc) 拿到活 cua_repl binding 后跑 Plan A 完整链路; 本轮不写 material.yaml / x.txt / posted_url"
+}

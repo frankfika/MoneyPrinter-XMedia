@@ -1,0 +1,27 @@
+# 1016-late-03 · Thinking Inertia (LLM 思考惯性)
+
+## 标题
+LLM 你让它别想它偏要想 — Thinking Inertia 论文挺叛逆
+
+## 正文
+AK 转发了篇有意思的小论文 —— Thinking Inertia：LLMs Keep Thinking When Told Not To。
+
+结论一句话：reasoning 模型，你让它「别想了，直接答」，它停不下来，停在 thinking 的概率远比预期高，行为像有惯性。
+
+训练时把长推理当奖励，SFT 就把 stop-control 弄松了；最后 inference 时给「don't think」指令也压不住。
+
+工程影响：
+- 推理成本不可预测，agent loop 里一旦触发就难刹住
+- 想关思考只能靠 prompt + system 强约束
+- 反思训练要单独做，不能光叠 reasoning 数据
+
+## 标签
+#LLM #论文
+
+## 图
+1. _akhaliq 帖：Thinking Inertia 聚合（含论文图）
+2. _akhaliq profile top：timeline 证据
+3. 帖子详情页：互动数
+
+## 来源
+https://x.com/_akhaliq/status/2110413943034491358

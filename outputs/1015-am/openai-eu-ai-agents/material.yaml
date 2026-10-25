@@ -1,0 +1,30 @@
+material_id: 1015-am-03
+slot: am
+scanned_at: '2026-10-15T08:46:00+08:00'
+author:
+  name: OpenAI
+  handle: OpenAI
+  lang: en
+original:
+  url: https://x.com/OpenAI/status/2110442001749659890
+  post_id: '2110442001749659890'
+  posted_at: '2026-10-14T18:45:00+00:00'
+metrics:
+  views: 217900
+  likes: 1821
+  retweets: 206
+  replies: 340
+  bookmarks: 264
+ai_match: true
+summary: >-
+  OpenAI 经济研究报告：欧洲中小企业 agentic AI 周活用户自 5 月起增长 8.1 倍，
+  超过半数 EU 企业 AI 使用已涉及 agents。
+evidence_links:
+  - https://x.com/OpenAI/status/2110442001749659890
+  - https://openai.com/index/the-eus-shift-toward-agentic-ai/
+screenshots_needed:
+  - 原帖正文+配图（8.1x 增长曲线）
+  - 主页 timeline 上下文
+treatment_hint: quote_retweet
+dedup_hits: []
+source: hot-topic-tracker cua_repl scan (OpenAI timeline)

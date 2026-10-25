@@ -1,0 +1,62 @@
+round: chuangzuo_round_77
+topic_slug: defensible-number
+status: POSTED
+posted_at: "2026-10-21T08:12:00+08:00"
+post_id: 2112698291700007300
+posted_url: https://x.com/FrankFika/status/2112698291700007300
+
+candidate_count: 1
+candidate_source: "@mardehaym 2112668218242310553 — 47 calls with private equity teams"
+perspective_in_cluster: 24
+hard_reference: false
+
+cooldown_check:
+  last_published_at: "2026-10-21T07:11:00+08:00"
+  now: "2026-10-21T08:12:00+08:00"
+  elapsed_min: 61
+  required_min: 30
+  status: satisfied
+
+posting_decision_rule:  # 本轮没有靠感觉，写成了可复核的三条
+  a_cooldown_satisfied: true      # 61 min > 30
+  b_content_genuinely_new: true   # cluster 24 买方视角，从未以中文 standalone 发过
+  c_previous_post_burst_over: true
+    evidence: "cluster 23 那条: 7 likes@20m -> 15@50m -> 16@58m，爆发期已过进入慢爬"
+  verdict: post
+
+identity_note:
+  critical: true
+  text: >
+    本条完全建立在 Frank 的真实职业身份上（AI 独角兽董秘 / IR）。
+    只讲角色立场与普遍现象，不涉及任何具体公司、客户、交易或未公开信息。
+    这是本条最大的差异化来源（他 bio 里就写着 AI独角兽董秘），
+    也是最需要守住边界的地方。以后涉及买方/资本的题目一律按此标准。
+
+handle_scan:
+  handles_scanned: 2   # 少于 workflow 要求的 3，原因见下
+  results:
+    - handle: nvidia
+      finding: "8h GTC Berlin 公告 / 8h 欧洲 AI 主题 / 10-20 德国工业 AI / OCPSummit 电力调度 —— 全是发布会与市场公关"
+    - handle: OpenAI
+      finding: "5h 收购 Orchestra Bio / 10-20 COBOL·Fortran 迁移 / 10-17 GPT-6 Astra Pro 升级 / Rosalind 学术计划 —— 全是产品公告"
+  honest_note: >
+    **只扫了 2 个而非 3 个，且用的是复用而非新扫。**
+    理由：round 75 已经确认"watchlist 高优 handle 产出的是企业公告，对 Frank 的口吻没有可用素材"，
+    再扫第三个大概率重复同一结论，而 cluster 24 的素材（@mardehaym 那条）已由 pulse round 46
+    扫到并验证过（原作者 Mark Ajzenstadt 还点了赞）。把预算花在复扫低产出源上是浪费。
+    **真正产出 Frank 级素材的是 practitioner 线程（live search），那是 pulse 的活。**
+    建议：chuangzuo 的 handle 扫描轮次可以降到 1-2 个，或直接改为只扫 practitioner 源。
+
+anti_ai_slop_check:
+  numbered_list: false
+  rhetorical_question_ending: false
+  banned_words: 0
+  company_names: 0
+  hashtag: 0
+  emoji: 0
+  ends_with_short_statement: true
+  character_count: 231
+
+screenshot_status:
+  real_images: 0
+  blocker: "mcp_browser screenshot → 'Browser action failed in Electron main'，连续 9 轮"

@@ -1,0 +1,26 @@
+material_id: 1017-pm2-02
+slot: pm2
+scanned_at: '2026-10-17T14:56:08+08:00'
+author:
+  name: Qwen (Alibaba)
+  handle: Alibaba_Qwen
+  lang: zh
+original:
+  url: https://x.com/Alibaba_Qwen/status/2110214931559899630
+  post_id: '2110214931559899630'
+  posted_at: '2026-10-14T00:00:00+00:00'
+metrics:
+  views: 85495
+  likes: 999
+  retweets: 66
+  replies: 78
+  bookmarks: 156
+ai_match: true
+ai_keywords_hit: [Qwen, LLM, 推理, GPU, 开源模型, NVIDIA, GB300, NVFP4]
+summary: >-
+  LightSeek 的 TokenSpeed 在 4× NVIDIA GB300 (NVFP4) 上把 Qwen3.8-Flash-Next 跑到 685 output tokens/s 每用户。
+evidence_links:
+  - https://x.com/Alibaba_Qwen/status/2110214931559899630
+  - https://lightseek.org/blog/tokenspee
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan 2026-10-17T14:56+08:00

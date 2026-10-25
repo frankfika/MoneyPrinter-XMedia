@@ -1,0 +1,6 @@
+Hybrid Reasoning Agents 论文 (huggingface 2610.18, 18K views) 说 LLM reasoning + 工具调用混合架构。生产跑下来两个洞:1) reasoning 跟 tool call 切换频率 论文测 3:1,生产 7:1 (agent 习惯想清楚再动),成本 +200% 跟 latency +50% — 跟独立 ReAct 持平。2) 工具返回 100 行 JSON 时 reasoning trace 被截断,ReAct 退化成"工具调用完 finalize"。真问题不是 hybrid design,是 agent 训练数据偏 short horizon — Hybrid 在 multi-step (>5) 任务才显优,短任务纯 ReAct 够。Hugging Face 选 data-space iteration 是 hybrid 训练数据补强方向,跟这结论对得上。
+
+# source: https://x.com/_akhaliq/status/2111689587773120966
+# paper: https://huggingface.co/papers/2610.18
+# views: 18K
+# likes: 26

@@ -1,0 +1,5 @@
+claude 工序拆 professional 化之后, 新瓶颈是 teaching — 每个工序要会 prompt 工程师才能写。
+
+现在 vibe coding 培训讲 prompt 讲工具不讲 workflow。得教工序之间的 handoff — 写 plan 的怎么知道下游能 consume, 审 plan 的怎么判断部分输出能 compose。
+
+train 一个流水线 ≠ train 一个 model, 是 train 一整条生产关系。

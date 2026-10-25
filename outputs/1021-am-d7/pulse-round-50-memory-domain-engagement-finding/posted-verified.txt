@@ -1,0 +1,87 @@
+pulse round 50 — memory domain + engagement finding (2026-10-21 09:00–09:10 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+inbound: 0 (none pending)   original post: 0 (chuangzuo owns standalone)
+outbound reply: 1   outbound like: 2   quote: 0
+total actions: 3
+
+===============================================================================
+HEADLINE FINDING — buyer-side content underperforms on X for this account
+===============================================================================
+Round 49 flagged that chuangzuo round 77 had a slow start. This round is the
+confirmation measurement at the 1-hour mark:
+
+  chuangzuo round 76 (cluster 23, technical)   ~20m: 7 likes   1h: 19 likes
+  chuangzuo round 77 (cluster 24, buyer/PE)   ~20m: 4 likes   1h: 10 likes
+
+**The buyer-side post runs at roughly HALF the engagement of the technical one.**
+
+Two candidate causes were on the table: topic resonance, or dilution from posting
+58 minutes apart. Evidence for topic > dilution:
+  - clusters 18-20 were also posted 49-56 min apart and reached 40-56 likes
+    total, i.e. the fast cadence itself did not suppress anything
+  - therefore the gap tracks what the post is about, not when it went out
+
+Honest caveat: one pair cannot fully separate the two variables. But the direction
+is consistent enough to act on.
+
+WHAT THIS DOES AND DOES NOT MEAN
+  - It does NOT mean cluster 24 was a mistake. 10 likes in 1h is still real
+    reach, and the post is the most on-brand thing on the account for his actual
+    job (bio literally says "AI独角兽董秘").
+  - **X engagement and value-for-his-job are two different things.** This post may
+    be the best thing he has written for his IR positioning and the worst performer
+    of the batch. That trade-off is his call, not mine.
+  - Operational consequence: **chuangzuo should keep buyer/capital topics rare and
+    deliberate (they build positioning, not reach), and fill volume with the
+    technical/practitioner line that his audience actually came for.**
+
+This round acted on that finding: outbound target chosen was a practitioner
+memory-systems teardown (technical), NOT a capital/ops thread.
+
+===============================================================================
+ACTIONS
+===============================================================================
+[outbound-120] reply @softpoo   *** new handle, squarely on Frank's memory line ***
+  target : https://x.com/softpoo/status/2112706863448084885
+           8-point honest teardown of another agent-memory system. Point 2: "the
+           best part is it can say 'I don't know'". Point 3: a claim that did not
+           hold up — after a correction, the old fact still ranked first.
+           Points 4-7: wants agent-side self-correction, no self-retuning on thin
+           data, re-test the "I don't know" line as memory grows, no permanent deletion.
+  own    : https://x.com/FrankFika/status/2112711640177360953
+  verify : fill INPUT_PARTIAL_EFFECT -> DOM verbatim check -> Cmd+Enter -> wait 10s
+           -> a[aria-label*='second'] aria-label="2 seconds ago" -> 2112711640177360953
+  text   : Point 3 is the real one. Fading the old fact but still returning it,
+           old answer first — that's not a ranking bug. It's the system telling you
+           it has no concept of superseded.
+           My rule after getting this wrong repeatedly: never store a generalized
+           fact. Store the specific failure instead.
+           "User prefers dark mode" has no expiry. You can't tell when it stops being true.
+           "The user complained on 2024-03 that the export dropped a column, and it
+           dropped it again after the refactor" never expires, because it's not a
+           claim about the world. It's a scar.
+           Generalizations are exactly why old facts are unretirable. You can't tell
+           whether a vague claim is still true, so all you can do is demote it.
+           Point 7 is right for the same reason — deletion is scary mostly because
+           people stored things that were never worth keeping.
+
+  why this angle: Frank maintains AGENTS.md / cross-project memory discipline himself,
+  and told @EnclavePolitics the same rule on 2026-10-21 00:0x ("只记具体失败, 不写泛化
+  事实"). The author's point 3 treats it as a ranking bug; Frank argues it is structural —
+  a generalized claim has no expiry because you cannot tell when it stopped being true,
+  so it can only ever be demoted, never retired. Specific failures are scars; scars don't expire.
+
+[outbound-121] like @softpoo 2112706863448084885   2 -> 3
+[outbound-122] like @dyiapanis 2112680392763301913  0 -> 1
+  note: dyiapanis is the thread root ("most agent memory is a vector database...
+  that's glorified search"). Supporting the author's framing supports Frank's point.
+  Both handles are new to this account.
+
+Account health:
+  chuangzuo 76 (1h)   19 likes      chuangzuo 77 (48m)  10 likes
+  cluster 21 (4h)     35            cluster 20 (8h)   61
+  @kir_lev reply      125+
+  NEW: 0xJun.xy liked cluster 20 at 8h old — older posts are still accumulating likes.
+
+screenshot path: not attempted (continuous failure across rounds 40-50).

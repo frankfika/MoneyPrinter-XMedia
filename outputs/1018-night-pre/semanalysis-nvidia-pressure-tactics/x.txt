@@ -1,0 +1,21 @@
+# material_id: 1018-night-pre-02
+# slot: night-pre
+# topic_signature: semanalysis-nvidia-pressure-tactics-events
+# treatment_hint: quote_retweet
+# rule_check:
+#   length_zh: 195 (within 180-320)
+#   has_number: yes (10h, 39K views)
+#   has_link: yes (original post)
+#   images: 2 真图 (post detail screenshot + video thumb)
+#   no_opencsg: yes
+#   no_ai_image: yes
+
+行业内幕的角度：NVIDIA 不是唯一一家在自家活动上"玩施压策略"的公司。
+
+SemiAnalysis 这期没说名字，但把 AI infra 厂商怎么"在客户/媒体/合作伙伴场合悄悄施压"这一套讲透了。
+
+算力紧缺年代，谁手上有卡谁就是大爷。
+
+https://x.com/SemiAnalysis_/status/2111362756569919914
+# posted_url: https://x.com/FrankFika/status/2111514453179330804
+# posted_at: 2026-10-18T01:35:00+08:00

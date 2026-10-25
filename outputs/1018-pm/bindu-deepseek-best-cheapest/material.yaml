@@ -1,0 +1,24 @@
+material_id: 1018-pm-01
+slot: pm
+scanned_at: '2026-10-18T14:00:00+08:00'
+author:
+  name: Bindu Reddy
+  handle: bindureddy
+  lang: en
+original:
+  url: https://x.com/bindureddy/status/2111660936469901326
+  post_id: '2111660936469901326'
+  posted_at: '2026-10-18T12:00:00+08:00'
+metrics:
+  views: 15660
+  likes: 293
+  retweets: 22
+  replies: 65
+  bookmarks: 37
+ai_match: true
+summary: >-
+  Bindu (Abacus.AI) 2 小时前发文：DeepSeek 刚放出"全球最佳、最便宜"的开源模型，扫开源榜顶，
+  击败 Muse Wonder、Haiku、Luna，成本/任务最低，但 Gemini 4 Argon 仍暂时领先。
+  配 1 张 leaderboard 截图，评论区两极：deepseek 真香 vs. Argon 还是王。
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handles: bindureddy)

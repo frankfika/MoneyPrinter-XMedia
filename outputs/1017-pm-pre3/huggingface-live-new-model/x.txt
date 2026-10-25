@@ -1,0 +1,11 @@
+HF 又一场 1 小时 21 分的 livestream——
+
+预告只写了 "New Open Weight Model"，模型名都没给。
+但这种开直播才给权重、还提前预告 18 小时的打法，
+基本上是 Hugging Face 的常规节奏：
+先把热度蓄好，让全平台讨论一起拉高首日 star。
+
+同周 Reflection Beam Apache 2.0 也是这个套路，
+HF 一边做平台一边抢开源流量，恐怖之处在于它的分发。
+
+https://x.com/huggingface/status/2111094948133216735

@@ -1,0 +1,29 @@
+material_id: 1018-night-pre2-01
+slot: night-pre2
+scanned_at: '2026-10-18T02:25:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: xiaohu
+  handle: xiaohu
+  lang: zh
+original:
+  url: https://x.com/xiaohu/status/2111447706782892495
+  post_id: '2111447706782892495'
+  posted_at: '2026-10-17T22:00:00+08:00'
+metrics:
+  views: 31548
+  likes: 0
+  retweets: 0
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  xiaohu：让模型自己修技能再重跑一遍，节奏感上来了——以前导演喊一声重拍，全剧组加班一周；现在只多一行 token 账单。AI 视频节奏修复实战。
+topic_signature: xiaohu-ai-video-rhythm-fix-2026-10
+evidence_links:
+  - https://x.com/xiaohu/status/2111447706782892495
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-xiaohu-post-detail.png
+  - screenshots/x-xiaohu-post-detail-full.png
+  - screenshots/x-xiaohu-profile-top.png

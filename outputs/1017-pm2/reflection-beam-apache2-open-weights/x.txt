@@ -1,0 +1,12 @@
+Reflection 这波直接全开源 Beam 模型权重（Apache 2.0），精度给三家：BF16、FP8 到 NVFP4，再配一个 DFlash2 drafter 一起做 speculative decoding。
+
+生态一下子就铺开了——40 多家合作伙伴同步上 HF，开源实现一摆，小团队就能搭自托管推理栈。
+
+HF 已经开了直播讲 beam 怎么搭，repo 同步放出来。
+https://x.com/huggingface/status/2111083685961445625
+
+# material_id: 1017-pm2-03
+# treatment: quote_retweet
+# screenshots: x-huggingface-beam-post.png, x-huggingface-beam-source.png
+# posted_url: https://x.com/FrankFika/status/2111352903629947105
+# posted_at: 2026-10-17T15:06:46+08:00

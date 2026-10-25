@@ -1,0 +1,25 @@
+material_id: 1015-late-2-01
+slot: late-2
+scanned_at: '2026-10-15T23:10:00+08:00'
+author:
+  name: Google DeepMind
+  handle: GoogleDeepMind
+  lang: en
+original:
+  url: https://x.com/GoogleDeepMind/status/2110421861435879476
+  post_id: '2110421861435879476'
+  posted_at: '2026-10-15T02:00:00+00:00'
+metrics:
+  views: 134491
+  likes: 2204
+  retweets: 343
+  replies: 168
+  bookmarks: 350
+ai_match: true
+summary: >-
+  Gemini 4 Argon 上线 24h 内，已经在量子纠错、等离子体物理、蛋白酶设计上做出真实突破：把 AlphaQubit 量子解码器塞进单一硬件 megakernel 推理翻倍；用 Argon 找出 Grad 猜想反例推翻 60 年假设；酶工程从几周压到几小时。还送 10000 名科学家 6 个月 Antigravity 高级版免费。
+evidence_links:
+  - https://x.com/GoogleDeepMind/status/2110421861435879476
+  - https://blog.google
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

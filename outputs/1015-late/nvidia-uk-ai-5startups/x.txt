@@ -1,0 +1,24 @@
+Jensen Huang 一晚上把英国 AI 全线打了一遍。
+
+NVIDIA 这波伦敦投资名单跟解题一样：
+- boltz_bio：蛋白质设计
+- ForesightWorks：能源 / 材料
+- hivergeai：AI 编译器
+- PrimaMente：脑健康
+- Riverlane：量子计算
+
+「从新药到量子」这一口什么都吃，让人想到一个老问题：英国 AI 投资 2024 年只有 $4.5B，美国是 $109.1B，差一个数量级。评论区已经有人在问这是不是 Jensen 在帮伦敦翻盘。
+
+评论区还有一条更刺的：英伟达股价 10 天掉了 10%，有人开始怀疑 Jensen 是 photo op 太密没空运营公司。十年一遇的科技牛配上十年来第一次股价回撤，这次 London round 是招牌动作还是真金白银？
+
+笑死，就因为 Jensen 在场，B 站水管都跟着响了一圈。
+
+https://x.com/NVIDIA/status/2110485178929844666
+
+# material_id: 1015-late-02
+# treatment: quote_retweet
+# screenshots: x-nvidia-uk-post.png, x-nvidia-profile-top.png
+
+
+# posted_url: https://x.com/FrankFika/status/2110746175548874976
+# posted_at: 2026-10-15T22:55:06+08:00

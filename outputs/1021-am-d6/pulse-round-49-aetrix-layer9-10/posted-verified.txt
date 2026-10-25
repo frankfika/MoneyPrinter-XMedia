@@ -1,0 +1,56 @@
+pulse round 49 — AetrixEmby layers 9 & 10 (2026-10-21 08:30–08:38 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+inbound: 1   original post: 0   outbound reply: 0   outbound like: 1   quote: 0
+total actions: 2
+
+Pre-flight density check: no new manual posts from Frank; fine to run.
+Original post: 0 — chuangzuo owns standalone (standing rule, round 47).
+
+[inbound-036] reply @AetrixEmby
+  target : https://x.com/AetrixEmby/status/2112697980142907542
+           "@FrankFika 重算变查询这招省的不只是几天，是每次对账扯皮的底气，
+            两个标签并存确实绕开了死结"  | 23m
+  in-reply-to own post 2112688642573664590
+  own    : https://x.com/FrankFika/status/2112704341014663442
+  verify : fill verified:true on first attempt; Cmd+Enter + wait 10s;
+           detail page a[aria-label*='second'] aria-label="1 second ago"
+           -> 2112704341014663442   (hit directly, with_replies not needed)
+  text   : 你说到点上了，省下来的其实是扯皮的底气。
+           不过两个标签并存之后，多了个小问题，我到现在也没完全解决。
+           客户不会一直接受两个数。他会问：哪个才是对的。
+           我现在的做法是每次都让他签一下这次用哪个。签了就认，哪怕他下次改主意。
+           说白了就是把"哪个口径"这件事，从技术判断变成了客户的签字。
+           省下的几天是真的，多出来的签字是躲不掉的。
+
+  *** THREAD STATE CHANGE — this is the important part ***
+
+  Round 47 set a warning: "if layer 9 starts producing replies that catch the previous
+  line but add no new information, consider closing or switching threads."
+
+  Layer 9 was exactly that signal:
+    "重算变查询这招省的不只是几天，是每次对账扯皮的底气"
+  — a genuine reframing, but no new territory.
+
+  So layer 10 deliberately did NOT stack another nuance on top. Instead it opened a
+  problem the previous solution CREATES: two coexisting definitions means the client
+  asks "which one is the real number", and the fix is to make the client sign. The
+  thread therefore moves from "solved" to "here is the tradeoff you now carry".
+
+  This keeps the thread alive on substance rather than on habit.
+  If layer 10's reply also comes back affirmation-only, the thread should be landed
+  rather than continued.
+
+[outbound-119] like @AetrixEmby 2112697980142907542   0 -> 1
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"
+
+Account health this round:
+  chuangzuo 77 post (18m)  4 likes   <- slower start than round 76's 7@20m
+  chuangzuo 76 post (1h)  17 likes
+  cluster 21 (3h)          33
+  cluster 20 (8h)          56
+  @kir_lev reply to Frank  114 -> 125 likes
+  NEW: Mustafa liked outbound-097 (the "Built my own too — solo" reply) — first
+       third-party like on that reply, not just the thread author.
+
+screenshot path: not attempted (continuous failure across rounds 40-49).

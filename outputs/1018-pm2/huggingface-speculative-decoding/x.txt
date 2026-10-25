@@ -1,0 +1,21 @@
+HF 那个 Local AI 202 直播预告我留意了下——
+
+3 个 talk 核心都是 speculative decoding：
+小模型 drafter 猜 token，大模型批量验证
+实践给到 2-3x speedup 几乎是稳定结果
+
+但真正有意思的是第三个：
+Google DeepMind 的 Maarten Grootendorst 拿 MTP Drafters
+去加速 Gemma-4——这等于把投机解码从"手工作坊"推到"流水线"。
+
+之前本地 7B-13B 端侧推不动，主要是 latency 卡死，
+speculative 这条路如果跑通，端侧 LLM 的可行性能直接拉高一档——
+RAG / agent 这种高 token 场景，本地跑不再是大模型专属。
+
+# material_id: 1018-pm2-03
+# treatment: regular_post
+# quote_rt_url: https://x.com/huggingface/status/2110350304613114226
+# screenshot: ./screenshots/source.jpg
+
+# posted_url:
+# posted_at:

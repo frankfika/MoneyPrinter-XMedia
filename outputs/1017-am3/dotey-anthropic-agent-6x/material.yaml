@@ -1,0 +1,39 @@
+material_id: 1017-am3-01
+slot: am3
+scanned_at: 2026-10-17T11:00:00+08:00
+author:
+  name: 宝玉
+  handle: dotey
+  lang: zh
+original:
+  url: https://x.com/dotey/status/2111223306061836484
+  post_id: "2111223306061836484"
+  posted_at: 2026-10-16T20:48:24+08:00
+  body_excerpt: |
+    Anthropic 公布内部数据：AI agent 工作时长已是员工 6 倍，
+    技术岗新招的初级员工占比从 27% 降到 9%
+metrics:
+  views: 17400
+  likes: 137
+  retweets: 39
+  replies: 85
+  bookmarks: 0
+ai_match: true
+summary: |
+  Anthropic 自己开了 AI agent:累计工作时长已是员工的 6 倍;
+  技术岗新招里初级比例从 27% 砍到 9% — AI 已经在吃入门岗。
+  80% 的 Claude 会话花在等员工回复;22% 的活是「管 AI」。
+  工程师人均代码提交 5 倍,代码被删率与人写无差。
+  1334 名员工 vs 1.1 万美国人对 AI 预期差距巨大:
+  2030 年 AI 出诺贝尔级发现,员工 91% 信,美国人只 39%。
+evidence_links:
+  - https://anthropic.com/research/employment-at-anthropic
+  - https://anthropic.com/research/ai-expectations-gap
+  - https://anthropic.com/research/expectations-for-the-future
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handle batch: dotey)
+media_urls:
+  - https://pbs.twimg.com/media/HUySPZ0W0AAB8Pu?format=jpg&name=large
+  - https://pbs.twimg.com/media/HUySVCEW0AAxvZ4?format=jpg&name=large
+  - https://pbs.twimg.com/media/HUySX-3XkAAegbr?format=jpg&name=medium
+  - https://pbs.twimg.com/media/HUySZ5WWQAEQDCN?format=jpg&name=900x900

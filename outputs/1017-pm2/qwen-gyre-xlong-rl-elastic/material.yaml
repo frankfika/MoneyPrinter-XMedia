@@ -1,0 +1,25 @@
+material_id: 1017-pm2-01
+slot: pm2
+scanned_at: '2026-10-17T14:56:08+08:00'
+author:
+  name: Qwen (Alibaba)
+  handle: Alibaba_Qwen
+  lang: zh
+original:
+  url: https://x.com/Alibaba_Qwen/status/2109633085658808515
+  post_id: '2109633085658808515'
+  posted_at: '2026-10-12T00:00:00+00:00'
+metrics:
+  views: 226753
+  likes: 3199
+  retweets: 421
+  replies: 143
+  bookmarks: 1298
+ai_match: true
+ai_keywords_hit: [RL, 训练, GPU, 推理, Agent]
+summary: >-
+  Qwen 推出 QwenGyre (弹性 RL 调度器)：可在 rollout 与 training 之间动态切 GPU，长程 agent 训练速度提升 1.85×。
+evidence_links:
+  - https://x.com/Alibaba_Qwen/status/2109633085658808515
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan 2026-10-17T14:56+08:00

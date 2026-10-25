@@ -1,0 +1,35 @@
+material_id: 1017-pm-pre3-01
+slot: pm-pre3
+scanned_at: '2026-10-17T16:25:00+08:00'
+author:
+  name: Bindu Reddy
+  handle: bindureddy
+  lang: en
+original:
+  url: https://x.com/bindureddy/status/2111163728389435420
+  post_id: '2111163728389435420'
+  posted_at: '2026-10-17T02:33:00+08:00'
+metrics:
+  views: 2452355
+  likes: 388
+  retweets: 22
+  replies: 41
+  bookmarks: 112
+ai_match: true
+ai_keywords_hit:
+  - AI
+  - LLM
+  - Agent
+  - Astra
+  - Opus
+  - Abacus
+  - prompt
+  - 3D
+  - iOS
+summary: >-
+  Abacus AI CEO Bindu Reddy 演示"一句话 prompt 生成 iOS native 3D 游戏"：Astra + Fable + Opus 5.5 串起来，38 秒出一个 Island Kart 赛车 demo；自带 free backend / auth / payments。13 小时 240 万浏览，388 like。评论里 dev 已经在替老软件工程师默哀。
+evidence_links:
+  - https://x.com/bindureddy/status/2111163728389435420
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

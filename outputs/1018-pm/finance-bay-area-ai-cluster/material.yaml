@@ -1,0 +1,24 @@
+material_id: 1018-pm-03
+slot: pm
+scanned_at: '2026-10-18T14:00:00+08:00'
+author:
+  name: AI Will (Han Wei Lang)
+  handle: FinanceYF5
+  lang: zh
+original:
+  url: https://x.com/FinanceYF5/status/2109479265653961213
+  post_id: '2109479265653961213'
+  posted_at: '2026-10-12T00:00:00+08:00'
+metrics:
+  views: 44763
+  likes: 157
+  retweets: 36
+  replies: 11
+  bookmarks: 115
+ai_match: true
+summary: >-
+  Han Wei Lang（AI Will）的 pinned 地图：Berkeley 周边 20km 有 21 家 AI 公司，Stanford 周边 26 家；
+  OpenAI、Anthropic、xAI、Meta、Google DeepMind、NVIDIA 和上下游几乎都挤在同一条湾区走廊上，
+  人才、资本、大学和产业每天面对面碰撞。
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handles: FinanceYF5)

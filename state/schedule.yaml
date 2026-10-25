@@ -1,48 +1,87 @@
+# 短文助手 · 调度参数
+#
+# 2026-10-25 重写：三条 cron 的实际调度搬进文件，配置本体在 runtime（cron_read / cron_update）。
+# 旧的 5-slot（am/noon/pm/eve/night）结构已作废 —— 实际跑的是 chuangzuo / pulse / super-bot 三条线。
+
 timezone: Asia/Shanghai
-cron_slots:
-- id: am
-  cron: 0 9 * * *
-  label: 早间
-- id: noon
-  cron: 0 12 * * *
-  label: 午间
-- id: pm
-  cron: 0 15 * * *
-  label: 下午
-- id: eve
-  cron: 0 18 * * *
-  label: 傍晚
-- id: night
-  cron: 0 21 * * *
-  label: 夜间
-max_picks_per_slot: 3
+
+# ─── 实际 cron ───
+crons:
+  super-bot:
+    cron_id: 6560e820-db95-4b83-91ad-4a0f7d4d3fd3
+    schedule: "0 9 * * *"
+    label: 每日 09:00 +08:00 汇报
+    session: new          # ★ 每轮独立 session，不要共用
+    skill: skills/super-bot/SKILL.md
+
+  pulse:
+    cron_id: 0dbbcbb9-ac42-456a-bd35-73f9ed960a07
+    schedule: "0 4,10,16,22 * * *"
+    label: 每 4 小时一轮互动（4 轮/天）
+    session: new          # ★ 每轮独立 session
+    skill: skills/x-engagement-pulse/SKILL.md
+
+  chuangzuo:
+    cron_id: d5c0d018-fcb4-4205-8f5e-35d41c0d1fb9
+    schedule: "30 3,15 * * *"
+    label: 每 12 小时一轮创作（2 轮/天）
+    session: new          # ★ 每轮独立 session
+    skill: skills/README.md
+
+# ─── 频率硬上限（Frank 2026-10-21 降频，最高优先级）───
+pulse_actions_per_round_max: 3
+pulse_inbound_reply_max: 1
+pulse_outbound_reply_max: 1
+pulse_outbound_like_max: 2
+pulse_original_post_max: 0        # pulse 不发原创，chuangzuo 独占
+
+chuangzuo_original_post_max: 1    # 每轮最多 1 条原创
+chuangzuo_original_post_min_gap_hours: 12
+
+# 原创间隔下限。真实节奏由上方的 min_gap_hours + 前置判据（likes 闸门）决定，
+# 这个 30 min 只是硬地板，不是目标。
 cooldown_between_posts_min: 30
+
+# ─── 前置判据（发之前必做，不是可选项）───
+publish_gates:
+  - id: frank_recent_post
+    desc: Frank 自己在 min_gap_hours 内发过帖 → 本轮零发送
+    check: /FrankFika/with_replies 顶部
+  - id: likes_gate
+    desc: 上一条原创 12h 后 likes 仍 ≤ 2 → 本轮零发送
+    check: 'query kind=dom 打 [data-testid="like"] 读 aria-label'
+
+# ─── 输出 ───
 output_root: /Users/fangchen/Documents/短文助手/outputs
-output_naming: <MMDD>-<topic-slug-or-A|B|C>
+output_naming: <YYYY-MM-DD>-<slot>
 output_files:
-- x.txt
-- xhs.txt
-- screenshots/*.png
-install_hint: '# 在 macOS 用户 crontab 里加：
+  - material.yaml
+  - x.txt
+  - xhs.txt
+  - screenshots/*.png
 
-  #   0 9,12,15,18,21 * * *  cd /Users/fangchen/Documents/短文助手 && bash scripts/run_slot.sh
-  >> logs/cron.log 2>&1
+memory_root: /Users/fangchen/Documents/短文助手/state/memory
+memory_keep_rounds: 30           # 主文件只留末 30 段，更早的进 archive/
 
-  # 或者用 launchd（更稳），见 scripts/launchd/com.codex.short-posts.plist
+# ─── 上下文纪律 ───
+# 每轮该读什么，不要全量 cat
+context_reads:
+  rules: skills/x-engagement-pulse/SKILL.md
+  dedup: state/index.json          # 不是 seen-posts.json
+  rules_yaml:
+    - state/forbidden.yaml
+    - state/style-x.yaml
+    - state/watchlist.yaml
+    - private/account-safety.yaml
+  rounds:
+    - python3 scripts/tail-rounds.py state/memory/pulse.md --rounds 3
+    - python3 scripts/tail-rounds.py state/memory/chuangzuo.md --rounds 2
+  budget_per_round_kb: 89         # 旧方案全量 cat ≈ 1276 KB
 
-  '
-cron_runner_implementation:
-  scripts:
-    scripts/run-all-slots.sh: 顺序跑 5 个 slot 的入口
-    scripts/scan-slot.sh: 单 slot 的 lite 扫描（mmx web search）
-    scripts/launchd/com.codex.short-posts.scheduler.plist: macOS launchd 配置（每 slot
-      触发 run-all-slots.sh）
-  limitations:
-    mmx_search_does_not_index_x: 'mmx 是通用 web 搜索，不支持 from: / site:x.com 准确过滤，X 反爬让多数
-      x.com URL 不出现在搜索结果里 → scan-slot.sh 在多数 slot 会 found 0 candidate(s)'
-    real_x_scan_needs_browser: 想真扫 X 时间线 + 抓实时浏览量，必须走 skills/hot-topic-tracker/SKILL.md
-      描述的 browser use 路径（mcp__cua_repl__js + x.com/<handle>）
-  install_hint_crontab: 0 9,12,15,18,21 * * *  cd /Users/fangchen/Documents/短文助手 &&
-    bash scripts/run-all-slots.sh >> logs/cron.log 2>&1
-  install_hint_launchd: cp scripts/launchd/com.codex.short-posts.scheduler.plist ~/Library/LaunchAgents/
-    && launchctl load ~/Library/LaunchAgents/com.codex.short-posts.scheduler.plist
+# ─── 已废弃（2026-10-25 移除）───
+# - 5-slot cron_slots（am/noon/pm/eve/night）→ 实际是三条独立 cron
+# - scripts/run-all-slots.sh / scripts/scan-slot.sh（lite 模式）
+#   schedule.yaml 原文自己写明：mmx 是通用 web 搜索，不支持 from: / site:x.com，
+#   X 反爬让多数 x.com URL 不出现在搜索结果里 → scan-slot.sh 在多数 slot 会 found 0 candidate(s)。
+#   留着只会让 agent 以为 lite 是一条可行路径。
+# - scripts/launchd/*.plist（已迁移到 runtime cron，launchctl list 里已无 job）

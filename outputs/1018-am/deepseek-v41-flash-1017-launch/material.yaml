@@ -1,0 +1,33 @@
+material_id: 1018-am-01
+slot: am
+scanned_at: '2026-10-18T10:12:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: DeepSeek
+  handle: deepseek_ai
+  lang: zh
+original:
+  url: https://x.com/deepseek_ai/status/2111375640717033777
+  post_id: '2111375640717033777'
+  posted_at: '2026-10-17T16:35:54+08:00'
+metrics:
+  views: 4853882
+  likes: 30844
+  retweets: 5830
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  DeepSeek V4.1-Flash-1017 上线：同价升级，Terminal-Bench 4.0 +11.1、ProgramBench +8.8，
+  DeepSWE v1.1 77.0 vs Opus 5 的 74.0；自反馈 RL 让"许愿式编程"成真——故宫 3D 建模、
+  网页赛车、《传送门2》复刻，少提示少素材几轮交互直接生成。Search/Fetch API 同步开放，
+  价格 5 元/千次。
+topic_signature: deepseek-v41-flash-1017-pareto-launch
+evidence_links:
+  - https://x.com/deepseek_ai/status/2111375640717033777
+  - https://api-docs.deepseek.com/news/260517-flash-1017
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-deepseek-v41-flash-1017-post.png
+  - screenshots/x-deepseek-v41-bench-1.jpg
+  - screenshots/x-deepseek-v41-bench-2.jpg

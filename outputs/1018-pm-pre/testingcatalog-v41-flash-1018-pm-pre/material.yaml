@@ -1,0 +1,27 @@
+material_id: 1018-pm-pre-02
+slot: pm-pre
+scanned_at: '2026-10-18T12:58:00+08:00'
+author:
+  name: TestingCatalog
+  handle: testingcatalog
+  lang: en
+original:
+  url: https://x.com/testingcatalog/status/2111199863689879841
+  post_id: '2111199863689879841'
+  posted_at: '2026-10-17T04:57:13+08:00'
+metrics:
+  views: 25500
+  likes: 489
+  retweets: 24
+  replies: 25
+  bookmarks: 29
+ai_match: true
+summary: >-
+  OpenAI 给 GPT-6 Astra Pro 升了个级：响应更快、插件和工具调用更顺手，多个 Agent 现在能并行接任务的不同部分，
+  还能逐个跟进每个 Agent 的进度、打开已完成任务复盘。现已对 Chat Pro 用户开放，Team 是否跟进还没说。
+  testingcatalog 顺便问了一句：GPT-6.1 Astra Pro 是不是也快了？
+evidence_links:
+  - https://x.com/testingcatalog/status/2111199863689879841
+  - https://x.com/OpenAI/status/2111192259073094035
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (slot 1018-pm-pre)

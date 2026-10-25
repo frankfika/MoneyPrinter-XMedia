@@ -1,0 +1,5 @@
+vibe coding 产品宣传从写脚本+剪片+调 BGM, 跳到丢一个 URL — 这种工序压缩跟 opus 工序化一个意思。
+
+model 不再是工具, 是中间 stdout。output 取决于 prompt 工艺。
+
+'看了宣传片想装但看不出实际用法' 这种 gap 怎么办?

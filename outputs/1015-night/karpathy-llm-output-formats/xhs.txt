@@ -1,0 +1,23 @@
+# material_id: 1015-night-01
+# author_handle: karpathy
+# source_url: https://x.com/karpathy/status/2105819303471976479
+# draft_at: 2026-10-15T23:05:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【未来我们大部分时间在「读 LLM 的输出」】
+
+karpathy 抛了一个观点：随着 LLM 越来越聪明，工程师会往「监督」的方向爬——大部分时间在读 LLM 给的东西，而不是写 prompt。
+
+他给了 4 个亲测好用的输出格式：
+✍️ Writing：让 LLM 用航空业 ASD-STE100 受控语言解释
+📊 Diagrams：直接让 LLM 出图，比文字好解析 10 倍
+🌐 Web pages：让 LLM 输出一段 HTML，就是个交互小网站
+🎬 Explainer videos：他最看好——3b1b 风格的讲解视频 + ElevenLabs 旁白，$10 就能跑
+
+本质：LLM 同时帮我们造那些「以前根本不值得做」的 throwaway 软件——网页、视频、应用。一个 loop，越用越猛。
+
+这条 7.85M 浏览 / 8.1 万收藏，是 karpathy 推特史上最高互动之一。
+
+📎 karpathy 原帖：https://x.com/karpathy/status/2105819303471976479
+
+#Karpathy #LLM #AI输出 #AI工具 #提示工程

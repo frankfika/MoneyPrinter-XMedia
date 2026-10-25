@@ -1,0 +1,18 @@
+Rust 大会上有人抛了个有意思的反直觉观点：
+
+> Rust 编译慢、产物大、AI 写 Rust 不快——但反过来，这种"缺点"反而是一个筛选信号。
+> 一个项目选 Rust，至少说明作者和 AI 还在认真磨合。
+
+宝玉直接接话说，自己现在大项目里只把局部核心组件留给 Rust，其他部分已经回到 Electron——不是语言不行，是 Agent 反馈循环太长，多任务并行普通机器根本跑不动。
+
+这话其实是 AI Coding 时代一个挺核心的工程问题：写代码的速度被"编译 / 测试 / 启动"卡住，模型再快也白搭。AI 写 Python、JS 顺，是因为反馈链短；写 Rust、C++ 就得等。
+
+我们做 AI Agent 工具时，"等反馈"才是真瓶颈。
+
+https://x.com/dotey/status/2111580933824655815
+# material_id: 1018-pm-pre-03
+# treatment: quote_retweet
+# screenshots: x-dotey-post.png, x-dotey-post-detail.png, x-dotey-profile.png, x-dotey-media1.jpg
+
+# posted_url: https://x.com/FrankFika/status/2111685221922034095
+# posted_at: 2026-10-18T13:06:04+08:00

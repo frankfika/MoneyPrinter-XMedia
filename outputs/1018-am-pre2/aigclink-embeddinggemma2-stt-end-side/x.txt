@@ -1,0 +1,20 @@
+端侧 STT 要变天了。
+
+有人把谷歌 EmbeddingGemma 2 改造成语音转文字模型：
+- M3 MacBook Air，1 小时音频 13 秒转完，处理速度 288×
+- WER 5%（领先 STT 2-3%，逼近 Whisper 大模型）
+- 不改 EmbeddingGemma 2 任何参数，只在上面训练一个轻量 Reader
+
+思路很狠：
+传统 STT = 声音 → 文字生成模型
+改造后 = 把音频切成块 → 编码成向量 → 在文本向量空间里检索最近词
+直接把转录从「生成问题」变成「检索问题」
+
+如果后续 reader 迭代能把 WER 压到 3% 以下，专用端侧 STT 市场估计要重新洗牌。
+
+#EmbeddingGemma2  #STT
+
+https://x.com/aigclink/status/2109967896449581351
+
+# posted_url: https://x.com/FrankFika/status/2111654920218607983
+# posted_at: 2026-10-18T11:06:11+08:00

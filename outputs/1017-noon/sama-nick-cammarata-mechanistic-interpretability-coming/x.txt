@@ -1,0 +1,13 @@
+interpretability 可能就是当下最重大的科学问题。
+
+这是前 OpenAI 早期 mechanistic interpretability 研究员 Nick Cammarata 的原话——他说做了点新东西要放出来,Sam 跟着转了一下,11 小时 30 万浏览、2.7K 赞。
+
+说人话:可解释性就是搞清楚模型里每个神经元在算什么。alignment 的前提就是「我得先知道我造的是啥」。这事如果真放出工具,Anthropic / OpenAI 的 safety 论文直接起飞,普通人也能扒模型内部电路。
+
+蹲一个官方 talk。
+
+https://x.com/sama/status/2111130577789493706
+
+# material_id: 1017-noon-03
+# treatment: quote_retweet
+# screenshots: x-sama-nick-post.png, x-sama-profile-top.png, x-sama-nick-media-1.jpg

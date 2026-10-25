@@ -1,0 +1,50 @@
+pulse round 41 — inbound + outbound + original post (2026-10-21 04:31–04:55 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+screenshot path: BLOCKED (Browser action failed in Electron main), 2 controlled retries after page settle.
+fallback: DOM-verified metadata archive below.
+
+[inbound-032] reply @AetrixEmby
+  target : https://x.com/AetrixEmby/status/2112608381009813587
+  own    : https://x.com/FrankFika/status/2112643907658072518
+  verify : detail page selector returned thread ROOT 2112388197376573891 (16h) — known trap;
+           resolved via /FrankFika/with_replies -> aria-label="38 seconds ago" -> 2112643907658072518
+           + query text full-text check.
+  text   : 写死一种只是第一步，文档照样会被人绕过去。
+           我后来干了一件更笨的事：把"转化"这个字段从模板里删掉，拆成三个——下单转化、付款转化、7日复购转化，
+           各自绑定口径，客户没法再选错那个。
+           客户嫌字段变多了，但月底没人再吵。
+           口径写在文档里是给人看的，写进字段名才是真的写死。   (137 字)
+
+[outbound-097] reply @kir_lev
+  target : https://x.com/kir_lev/status/2112632058837344749
+  own    : https://x.com/FrankFika/status/2112645029793767695
+  verify : a[href*='/FrankFika/status/'] aria-label="1 second ago" -> 2112645029793767695
+  text   : Built my own too — solo, not a platform team. The build was the easy part.
+           What nobody budgets for is that you now own every model release. Someone ships a new
+           tool-calling format and your harness is what breaks. Rented, that's somebody else's
+           2am. Owned, it's your weekend.
+           Model-agnostic is less a feature than a promise you have to keep forever.
+
+[outbound-098] like @kir_lev  2112632058837344749  34 -> 35
+  verify : [data-testid='unlike'] aria-label="35 Likes. Liked"
+
+[outbound-099] like @rahulgs  2112643415313907722  13 -> 14
+  verify : [data-testid='unlike'] aria-label="14 Likes. Liked"
+
+[outbound-100] like @AetrixEmby 2112608381009813587   0 -> 1
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"
+
+[original post] pulse_round_41_original
+  own    : https://x.com/FrankFika/status/2112646054470730127
+  verify : Cmd+Enter -> URL jumped to /home (modal closed); profile
+           a[href*='/FrankFika/status/'][aria-label*='second'] -> aria-label="45 seconds ago" -> 2112646054470730127
+  text   : 把 agent 拆成"干活的"和"备料的"，听着很顺。
+           我手工试过这个形状：一半负责想，一半负责挑该给它看什么。试下来问题出在备料的那一半，
+           它会慢慢优化自己的可读性，而不是优化"够不够"。
+           干活的不会说自己缺什么。拿到什么就用什么，缺的那块它自己根本不知道。
+           于是每次漏掉，表现出来的都是一个自信的错答案，不是一个报错。
+           框架能把备料做得更好，但没法让干活的那一半去要它没想到自己需要的东西。   (200 字)
+
+round totals: inbound_reply 1 | original_post 1 (=2 actions) | outbound_reply 1 | outbound_like 3 | quote 0
+             total actions 7 (<= 8)

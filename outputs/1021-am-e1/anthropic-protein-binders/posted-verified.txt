@@ -1,0 +1,23 @@
+chuangzuo_round_78 真发 verified
+slot: 1021-am-e1
+posted_at: 2026-10-21T09:47:00+08:00 (实读 date 实读)
+posted_url: https://x.com/FrankFika/status/2112722078583652781
+post_id: 2112722078583652781
+treatment: regular_post_x_auto_quoteembed (X auto quote embed 嵌入 AnthropicAI 源帖)
+cluster: 25 (技术/实操线, 与 cluster 24 哑巴 IR 互补)
+media_count: 0 (mcp_browser 真图 upload 路径卡死 hard constraint 持续, 已 39+ entries 0 真图)
+source_post: https://x.com/AnthropicAI/status/2112579261358023071 (9h ago, 1M views, 5.3K likes at pick)
+char_count: 196 中文字符 (含 link)
+
+真发验证路径:
+- Cmd+Enter 第一次 + 等待 8s 期间 home feed 未显示新帖 (For You 个性化排序)
+- 进一步去 /FrankFika 看 profile Oct 18 旧帖未刷新
+- 进一步去 /FrankFika/with_replies 看 replies 帖未列到 top 9 篇以内
+- 最终 query text 改用中文搜索 "from:FrankFika 湿实验" 拿到 post detail 内容匹配 + time "7 minutes ago"
+- query dom a[href*='/FrankFika/status/'] 拿到 2112722078583652781
+
+X 反 bot 弹窗假象: Cmd+Enter 后 home feed 没列新帖 + profile 没刷新 first-impression 像限流, 实际是真发 (X 索引+排序延后, 不是限流)。铁律验收:
+1. 不要在 profile 短期未刷新时判定失败
+2. 用 search 找到真发证据 (unique keyword + chinese content 是 deterministic match)
+3. 不要凭 "input box still showing text" 判定限流
+4. 真发信号 = URL 跳 /home + DOM 找到 status URL

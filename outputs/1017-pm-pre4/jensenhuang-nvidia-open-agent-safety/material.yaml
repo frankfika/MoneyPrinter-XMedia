@@ -1,0 +1,29 @@
+material_id: 1017-pm-pre4-01
+slot: pm-pre4
+scanned_at: '2026-10-17T16:58:00+08:00'
+author:
+  name: Jensen Huang
+  handle: JensenHuang
+  lang: en
+original:
+  url: https://x.com/JensenHuang/status/2104499465055023424
+  post_id: '2104499465055023424'
+  posted_at: '2026-09-28T09:12:26+00:00'
+metrics:
+  views: 10725157
+ai_match: true
+ai_keywords_hit:
+  - AI
+  - NVIDIA
+  - OpenShell
+  - Sentry
+  - agent
+  - agent safety
+summary: >-
+  NVIDIA 拉 100+ 行业伙伴推 Open Agent Safety Platform：OpenShell（开源安全 runtime，
+  给 AI agent 加可执行边界）+ Sentry（独立评估 + 董事会级 oversight）。19 天 1072 万浏览。
+evidence_links:
+  - https://x.com/JensenHuang/status/2104499465055023424
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

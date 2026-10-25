@@ -1,0 +1,26 @@
+material_id: 1017-am-02
+slot: am
+scanned_at: '2026-10-17T09:08:00+08:00'
+author:
+  name: Sam Altman
+  handle: sama
+  lang: en
+original:
+  url: https://x.com/sama/status/2111139227761266699
+  post_id: '2111139227761266699'
+  posted_at: '2026-10-16T16:56:00+08:00'
+  body_excerpt: 'The back of the Navier-Stokes milestone shirt is the last line of the chain-of-thought from the solution.'
+metrics:
+  views: 517800
+  likes: 373
+  retweets: 8
+  replies: 511
+  bookmarks: 1000
+ai_match: true
+summary: >-
+  Navier-Stokes 千禧问题被 GPT 系列解出来之后,Sam Altman 把模型最后一行 chain-of-thought 印在 milestone T 恤的背面发出来 — 这是「AI 解出数学开放问题第一次变成可穿戴纪念品」。chain-of-thought 印在 T 恤背面,这梗感拉满了。
+evidence_links:
+  - https://x.com/sama/status/2111139227761266699
+treatment_hint: first_person_original
+x_auto_quote_embed: true
+source: "hot-topic-tracker cua_repl scan (handle batch: sama)"

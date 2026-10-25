@@ -1,0 +1,32 @@
+material_id: 1017-pm-pre3-02
+slot: pm-pre3
+scanned_at: '2026-10-17T16:25:00+08:00'
+author:
+  name: Hugging Face
+  handle: huggingface
+  lang: en
+original:
+  url: https://x.com/huggingface/status/2111094948133216735
+  post_id: '2111094948133216735'
+  posted_at: '2026-10-17T00:00:00+08:00'
+metrics:
+  views: 23058
+  likes: 124
+  retweets: 21
+  replies: 28
+  bookmarks: 31
+ai_match: true
+ai_keywords_hit:
+  - HF
+  - Hugging Face
+  - Open Weight
+  - livestream
+  - AI
+  - model
+summary: >-
+  Hugging Face 直播预告"New Open Weight Model"，1h21m 长 livestream；模型名没给但节奏是 HF 常规打法——先预告蓄热度，再上权重。同周 Reflection Beam Apache 2.0 也是这个套路。
+evidence_links:
+  - https://x.com/huggingface/status/2111094948133216735
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

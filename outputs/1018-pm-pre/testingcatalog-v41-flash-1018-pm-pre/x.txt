@@ -1,0 +1,17 @@
+OpenAI 悄悄给 GPT-6 Astra Pro 升了一级。
+
+重点就一个：现在多个 Agent 能并行拆任务，每一步都能看到哪个 Agent 在做什么，做完还能直接点开看工作产物。
+
+Pro 用户已经在 Chat 里能用，Team 还没放出来。响应更快、工具调用更顺，这一波更像"工程化打磨"而不是模型升级。
+
+跟测试这个版本的人聊了两句，反馈是：批量任务并发上限比上次更激进，单条回答响应更短，做工程类任务的体感比写代码要明显好。
+
+GPT-6.1 Astra Pro 应该也快了 👀
+
+https://x.com/testingcatalog/status/2111199863689879841
+# material_id: 1018-pm-pre-02
+# treatment: quote_retweet
+# screenshots: x-testingcatalog-post.png, x-testingcatalog-post-detail.png, x-testingcatalog-profile.png, x-testingcatalog-media1.jpg
+
+# posted_url: https://x.com/FrankFika/status/2111685045945839860
+# posted_at: 2026-10-18T13:05:22+08:00

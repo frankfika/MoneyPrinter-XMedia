@@ -1,0 +1,16 @@
+AK 转发了篇新论文 —— VideoJev System。
+
+一个模型，搞定视频理解 + 交互（IO 都做了）。
+
+视频理解：能看时间序列、动作、对象。
+视频交互：能在原视频上 instruction-driven 地改、加、编辑。
+
+大多数视频模型是单向（生成 or 理解），这种同一架构里塞进 interaction 的不多。HuggingFace 论文页有 paper + 1:28 demo，看下来响应挺快。
+
+如果真能本地跑得动，剪视频、批处理都从「云端玩具」变成「桌面工具」。
+
+https://x.com/_akhaliq/status/2110423274413056230
+# posted_url: https://x.com/FrankFika/status/2110766536264933473
+# posted_at: 2026-10-16T01:37:00+08:00
+# treatment_used: regular_post_x_auto_quoteembed
+# media_count: 2

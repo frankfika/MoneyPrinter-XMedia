@@ -1,0 +1,28 @@
+material_id: 1018-pm-pre-03
+slot: pm-pre
+scanned_at: '2026-10-18T12:58:00+08:00'
+author:
+  name: 宝玉 (dotey)
+  handle: dotey
+  lang: zh
+original:
+  url: https://x.com/dotey/status/2111580933824655815
+  post_id: '2111580933824655815'
+  posted_at: '2026-10-17T14:32:55+08:00'
+metrics:
+  views: 21000
+  likes: 56
+  retweets: 12
+  replies: 80
+  bookmarks: 23
+ai_match: true
+summary: >-
+  宝玉转发 jolestar 关于 Rust 大会"Rust and AI"主题的讨论：Rust 编译吃 CPU、产物吃磁盘、AI 写 Rust
+  速度明显慢于其他语言；"缺点"反过来可能是筛选信号——选 Rust 的项目说明作者和 AI 还在磨合。
+  宝玉补一刀：自己现在只在局部核心组件用 Rust，其他回归传统 Electron，因为大项目编译慢，
+  让 Agent 拿到反馈的速度变慢，多任务并行普通机器跑不动。
+evidence_links:
+  - https://x.com/dotey/status/2111580933824655815
+  - https://x.com/jolestar/status/2111553994867028409
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (slot 1018-pm-pre)

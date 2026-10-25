@@ -1,0 +1,23 @@
+material_id: 1018-pm-02
+slot: pm
+scanned_at: '2026-10-18T14:00:00+08:00'
+author:
+  name: Orange AI (橙)
+  handle: oran_ge
+  lang: zh
+original:
+  url: https://x.com/oran_ge/status/2111608203431776465
+  post_id: '2111608203431776465'
+  posted_at: '2026-10-18T08:00:00+08:00'
+metrics:
+  views: 54781
+  likes: 107
+  retweets: 10
+  replies: 70
+  bookmarks: 11
+ai_match: true
+summary: >-
+  oran_ge（ListenHub / Cola 创始人）6 小时前用 DSH + 刚发的 DeepSeek V4.1-Flash-1017 试做视频，
+  50 分钟捣鼓出来一个"垃圾"。视频生成的 AI 速度起来了，但效果离可用还有距离，是个诚实的现场报告。
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handles: oran_ge)

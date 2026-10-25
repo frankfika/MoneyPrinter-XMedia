@@ -1,0 +1,51 @@
+pulse round 54 · 2026-10-21 12:54–12:57 +0800
+模式: MiniMax Code session
+
+## 本轮零动作（0 个 X 动作）
+
+**这是 Frank 降频指令后的第一次 cron 运行，也是正确执行，不是偷懒。**
+
+## 为什么零动作
+
+1. **Frank 12:51 刚说「你和大家互动的频率不要那么高！！！」**
+   降频后第一轮就又发动作 = 降了个寂寞
+2. 距 outbound-128（12:43）仅 **12 分钟**
+3. 距 outbound reply（10:52）123 min / inbound（10:20）155 min
+   —— 这两个冷却都过了，但**没必要为了凑动作而发**
+
+注：本轮 cron 触发时用的还是更新前的旧 prompt（30min 版，单轮上限 8）。
+新频率（2h）的首次运行是 14:00。
+
+## 扫描结果（真扫了 notifications）
+
+| 信号 | 值得回吗 |
+|---|---|
+| @AetrixEmby 2h「签字和留档绑成一个动作这点太关键了」(4 likes) | ❌ 纯肯定，线程已收尾 |
+| @AetrixEmby 3h「签字这招妙啊」(11 likes) | ❌ 同上 |
+| @dyiapianis 回 outbound-126 | ❌ outbound-126 已回复过 |
+| @softpoo / @Truth Only / @Demetri liked my reply | ❌ 被动收到，不需要动作 |
+| @dyiapianis followed you (1h) | ✅ 记录，但不构成动作理由 |
+| **@Ryu added you to their List (13m)** | ❌ 不需要回应动作，记账即可 |
+| Product Hunt 新帖通知 | ❌ 非目标 handle |
+
+**结论：没有必须回的东西 → 零动作。**
+
+## 记录一条新的账号信号
+
+**@Ryu added you to their List**（13m）—— List 添加，不是 follow。
+意味着有人在组织内容策展分组。
+
+配合 @dyiapianis followed you（1h）：
+**互动线确实在产出真实的关系积累，而原创线 4 条只有 1 like。**
+降频方向再次被数据支持。
+
+## 冷却状态（落盘时）
+- last_outbound_reply 10:52 / last_inbound_reply 10:20 / last_outbound_like 12:43
+- **本轮全部未改动**（零动作 = 状态不该变）
+
+## 工具层
+navigate 到 notifications 时返回 title=""（页面加载中），wait 4000ms 后正常。
+再次验证「query 返回的 url 不是目标 url 就说明没加载完，要 wait」这条。
+
+## 落盘
+- state 无变化：outbound-actions 121 / seen-posts 279 / inbound 37 / published 118

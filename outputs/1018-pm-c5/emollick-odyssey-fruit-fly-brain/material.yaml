@@ -1,0 +1,58 @@
+slot: 1018-pm-c5
+round: chuangzuo 23:20 cron (1h cadence)
+mode: MiniMax Code session (mcp_browser 真扫 + 真发)
+candidate_index: 01 / 01
+created_at: 2026-10-18T23:23:30+08:00
+
+source:
+  handle: emollick
+  post_url: https://x.com/emollick/status/2111672307139874844
+  post_id: 2111672307139874844
+  posted_ago: 11h
+  views: 73K
+  replies: 57
+  reposts: 55
+  likes: 1.1K
+  treatment: quote_retweet (emollick quote odysseyml 原帖,frank fika 引用 emollick quote URL 让 X auto quote embed)
+  embedded_source:
+    handle: odysseyml
+    summary: Odyssey 把果蝇脑塞进 Odyssey-3 frontier world model,模拟果蝇在 imagined 3D 世界自主飞行
+
+ai_keywords_hit:
+  - world model
+  - Odyssey-3
+  - frontier
+  - AI
+  - simulated agent
+  - neuroscience
+
+worth_signals:
+  - 具体数字: 果蝇脑 30 万神经元,线虫脑 302 神经元
+  - 反差 demo: 真脑 + simulated environment
+  - 可截图验证: emollick 帖 73K views,odysseyml 原帖可验证
+  - 跨学科临界点: 神经科学 + world model
+
+draft_decision:
+  strategy: quote_retweet (不写成 frank 第一人称个人经历,只评论 + 引用 emollick URL)
+  word_count_target: 90 字
+  voice: 短句+反问+具体判断+数字例证 (canghe/NFTCPS 风)
+  line_breaks: 必需 (Frank 22:55 反馈排版烂,1)2) 分块 + 反问 + 数字)
+  hashtags: 0
+  emoji: 0
+
+cooldown:
+  last_post_at: 2026-10-18T23:12:00+08:00 (post_id 2111837735178870858 v2 重发版)
+  cooldown_target_min: 12
+  earliest_post_at: 2026-10-18T23:24:00+08:00
+  ready_at: 2026-10-18T23:24:00+08:00
+
+screenshots:
+  - 0 真图 (mcp_browser image upload 系统 file picker 卡死,真图 0 是硬约束)
+  - 替代证据: emollick 帖 73K views + frank fika 帖真图存档 (post 真发后抓 detail page)
+
+forbidden_check:
+  opencsg: false
+  ai_images: false (N/A - 无图)
+  fabricated_experience: false (quote_retweet, 不写第一人称)
+  hashtag_storm: false (0 hashtag)
+  placeholder_captions: false

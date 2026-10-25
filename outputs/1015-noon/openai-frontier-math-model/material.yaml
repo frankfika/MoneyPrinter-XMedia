@@ -1,0 +1,31 @@
+material_id: "1015-noon-04"
+slot: noon
+scanned_at: "2026-10-15T13:05:00+08:00"
+author:
+  name: "OpenAI"
+  handle: "OpenAI"
+  lang: en
+original:
+  url: "https://x.com/OpenAI/status/2107596713791767021"
+  post_id: "2107596713791767021"
+  posted_at: "2026-10-07"
+metrics:
+  views: 22540232
+  likes: 40831
+  retweets: 11072
+  replies: 1889
+  bookmarks: 13730
+ai_match: true
+summary: |
+  OpenAI 发布内部 frontier 数学模型 + 开源 github.com/openai/math 仓库；与普林斯顿高等研究院 Mathematics and AI 顾问组合作。
+  Oct 7 帖，截至 Oct 15 累计 22.5M 浏览 / 40K 赞 / 11K 转 / 13.7K 收藏。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/OpenAI/status/2107596713791767021"
+  - label: "GitHub 仓库"
+    url: "https://github.com/openai/math"
+screenshots_needed:
+  - "原帖 modal 视角（已抓）"
+  - "OpenAI profile 时间线顶部视角（已抓）"
+treatment_hint: quote_retweet
+dedup_hits: []

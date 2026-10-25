@@ -1,0 +1,43 @@
+material_id: 1017-noon-03
+slot: noon
+scanned_at: 2026-10-17T12:09:00+08:00
+author:
+  name: Sam Altman
+  handle: sama
+  lang: en
+original:
+  url: https://x.com/sama/status/2111130577789493706
+  post_id: "2111130577789493706"
+  posted_at: 2026-10-17T01:00:00+08:00
+  body_excerpt: |
+    Quote Nick Cammarata (@nickcammarata) Oct 15:
+    "interpretability might be the most important scientific problem in the
+    world right now, as I don't think we can solve alignment if we don't
+    know what we're building. I think I have good news about it. I
+    co-authored early work in mechanistic interpretability at OpenAI..."
+  body_translation_zh: |
+    可解释性可能是当前全球最重大的科学问题——如果我们不知道自己在造
+    什么,就没法解决 alignment。Sam 转发 Nick 的观点:他参与过
+    OpenAI 早期 mechanistic interpretability 工作,有新消息要放。
+metrics:
+  views: 306960
+  likes: 2756
+  retweets: 126
+  replies: 164
+  bookmarks: 309
+ai_match: true
+summary: |
+  可解释性是 AI 安全、对齐、能不能放心用的关键钥匙。
+  Nick Cammarata 之前在 OpenAI 参与早期 mechanistic interpretability
+  工作(就是 Claude/ChatGPT 里那些「神经元到底在算什么」的研究),
+  Sam 转发说「好消息要来了」—— 大概率是新一代 mechanistic interp
+  工具上线,能让外部研究者扒模型内部电路了。
+  11 小时 30 万浏览、2756 赞,这事如果是真的,Anthropic / OpenAI 的
+  safety 叙事直接起飞。
+evidence_links:
+  - https://x.com/sama/status/2111130577789493706
+  - https://x.com/nickcammarata/status/2110758937000583533
+treatment_hint: quote_retweet
+source: "hot-topic-tracker cua_repl scan (handle batch: sama)"
+media_urls:
+  - https://pbs.twimg.com/media/HUuZaABbAAAYJtL.jpg?format=jpg&name=large

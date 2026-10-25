@@ -1,0 +1,24 @@
+intel D270 终于来了，480G 单卡显存，OCP 微缩放原生。
+
+跟现有对比一下:
+H100 80G × 6 = 480G —— 也就是说 intel 想用 1 张卡吃掉整个 H100 NVLink 桥接栈。
+
+FP8 跑 1.3 PFLOPS，FP4 推算 2.6 PFLOPS
+4bit/8bit 量化原生走硬件 XMX，不吃软件开销——
+
+硬件看上去确实把老黄按在地上打了。
+
+但真正卡的不是硬件，是软件栈。
+intel oneAPI / SYCL / PyTorch XPU 后端跟 CUDA 的成熟度差距，
+不是 1-2 年能追平的。
+
+卡买回来跑不起来 paper 上的数字，是个常见翻车点。
+这次的看点不是卡本身，是 intel 接下来 12 个月把生态做到哪。
+
+# material_id: 1018-pm2-02
+# treatment: regular_post
+# quote_rt_url: https://x.com/karminski3/status/2110715237397868791
+# screenshot: ./screenshots/source.jpg
+
+# posted_url: https://x.com/FrankFika/status/2111736951124660559
+# posted_at: 2026-10-18T16:31:20+08:00

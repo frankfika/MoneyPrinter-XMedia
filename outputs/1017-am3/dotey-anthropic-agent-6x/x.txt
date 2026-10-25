@@ -1,0 +1,15 @@
+Anthropic 把家底抖出来了 —— AI agent 工作时长已经是员工 6 倍。
+
+入门岗最受伤:技术岗新招里初级比例从 27% 砍到 9%,AI 真在吃入门岗。
+
+工程师人均代码提交半年涨 5 倍。研究跟踪 192 位开始用编程 agent 的工程师,他们用上之后自己写的代码明显增多,而且 agent 写的代码后来被删/撤回的比例,和人写的一样。
+
+新的瓶颈是人的注意力:Claude 80% 会话在等员工回。「管 AI」的工作占 Claude 使用时长从 2025 秋的 10% 涨到 2026 春的 22%。20% 员工说自己角色已经从亲手干活转去管一群 Claude。
+
+预期差更吓人:同样「2030 AI 能不能出诺贝尔级发现」,Anthropic 员工 91% 信,普通美国人 39%。
+
+Anthropic 自己说:这只是先行指标,不能直接套普通企业。
+
+https://anthropic.com/research/employment-at-anthropic
+https://anthropic.com/research/ai-expectations-gap
+https://x.com/dotey/status/2111223306061836484

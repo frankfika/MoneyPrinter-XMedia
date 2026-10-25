@@ -1,0 +1,5 @@
+claude 规划 + 其他 agent 执行 + claude 验收 — 多 agent 流水线。
+
+跟工程上写/审/部署分工一个意思, 把工序专业化推到 AI 层。但验收还是单点 bottleneck, claude 一次不过整个流水线 OK 也卡。
+
+下一步: 验收能不能也拆成多 agent 互校?

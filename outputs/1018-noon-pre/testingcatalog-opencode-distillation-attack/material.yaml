@@ -1,0 +1,26 @@
+material_id: 1018-noon-pre-03
+slot: noon-pre
+scanned_at: '2026-10-18T12:03:00+08:00'
+author:
+  name: TestingCatalog
+  handle: testingcatalog
+  lang: en
+original:
+  url: https://x.com/testingcatalog/status/2111536604351246541
+  post_id: '2111536604351246541'
+  posted_at: '2026-10-18T03:15:00+00:00'
+metrics:
+  views: 28617
+  likes: 327
+  retweets: 24
+  replies: 51
+  bookmarks: 54
+ai_match: true
+summary: >-
+  OpenCode 出事：1.4% Console 用户受"蒸馏攻击"波及，OpenAI/Anthropic/Google 的账户余额被刷。
+  OpenCode 称是因为一个退役遗留系统暴露了用户的 BYOK 密钥。这次事件意味着小服务商比大厂更不安全，
+  头部厂商的 token 也变得更值钱。
+evidence_links:
+  - https://x.com/testingcatalog/status/2111536604351246541
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

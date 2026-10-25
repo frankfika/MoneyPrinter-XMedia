@@ -1,0 +1,32 @@
+material_id: 1018-am-03
+slot: am
+scanned_at: '2026-10-18T10:12:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: AIGCLINK
+  handle: aigclink
+  lang: zh
+original:
+  url: https://x.com/aigclink/status/2111314222571512238
+  post_id: '2111314222571512238'
+  posted_at: '2026-10-17T12:31:51+08:00'
+metrics:
+  views: 33341
+  likes: 659
+  retweets: 142
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  网友开源了小学全学科知识图谱 os-taxonomy：1590 个知识点、3221 条依赖关系。可以拿来做
+  AI 家教或者 RAG 外挂，也能包成 MCP，让 Agent 直接查"学这个之前要掌握什么"、"到这个目标
+  的最近路径"。它把"先学什么 → 再学什么"显式化了，AI 不只答眼前的题，还能根据测评结果
+  识别缺失的前置知识，规划下一步。
+topic_signature: aigclink-os-taxonomy-knowledge-graph-k12
+evidence_links:
+  - https://x.com/aigclink/status/2111314222571512238
+  - https://github.com/os-taxonomy/os-taxonomy
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-aigclink-os-taxonomy-post.png
+  - screenshots/x-aigclink-os-taxonomy-video-thumb.jpg

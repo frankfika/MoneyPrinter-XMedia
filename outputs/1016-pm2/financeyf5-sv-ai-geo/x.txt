@@ -1,0 +1,15 @@
+湾区 AI 真正可怕的不是公司多，是它们离得太近。
+
+Berkeley 周边 20km 内塞了 21 家 AI 公司，Stanford 周边 26 家。OpenAI、Anthropic、xAI、Meta、Google DeepMind、NVIDIA — 这些名字几乎都挤在同一条湾区走廊里。
+
+人才、资本、大学、芯片上下游每天都在面对面碰撞。
+
+一个 Stanford 博士生上午在 Berkeley 上课、下午去 OpenAI 实习、晚上约 NVIDIA 的工程师吃饭 — 这种密度全世界没有第二个地方有。
+
+新想法从 Slack 消息变成工程 release 的速度，比其他任何地方快几倍。所以全球 90% 的前沿模型大概率还是会从这里冒出来。
+
+https://x.com/FinanceYF5/status/2109479265653961213
+
+# material_id: 1016-pm2-01
+# treatment: quote_retweet
+# screenshots: x-financeyf5-post.png, x-financeyf5-profile-top.png

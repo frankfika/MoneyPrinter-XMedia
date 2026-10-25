@@ -1,0 +1,55 @@
+round: chuangzuo_round_76
+topic_slug: the-map-goes-stale
+status: POSTED
+posted_at: "2026-10-21T07:11:00+08:00"
+post_id: 2112682732790972539
+posted_url: https://x.com/FrankFika/status/2112682732790972539
+
+candidate_count: 1
+candidate_source: "@mahdi 2112622390928646651 — Syntax was always going to expire..."
+perspective_in_cluster: 23
+hard_reference: false   # 只引论点不点人名, 主体走自己的交付观察
+
+cooldown_check:
+  last_published_at: "2026-10-21T04:45:00+08:00"
+  now: "2026-10-21T07:11:00+08:00"
+  elapsed_min: 146
+  required_min: 30
+  status: satisfied
+
+why_this_round_finally_posted:
+  round 73 因撞冷却未发
+  round 74 因 cluster 22 已由 outbound-101 预演而 hold
+  round 75 因同样理由 + 候选 0 而零发送
+  round 76: 冷却早已满足(146 min), 唯一障碍是自设的 24h hold。
+  本轮先用 profile 实测数据推翻了这个 hold 的依据 —— 见 decision_correction。
+
+decision_correction:
+  what_i_claimed_before: "pulse 的 outbound reply ROI 高于 chuangzuo 的原创 standalone"
+  why_it_was_wrong: >
+    上一轮拿 cluster-23 预演回复(4 likes) 对比 @kir_lev 回复(94 likes),
+    得出"原创不如互动"。这是**混淆了两个变量**——发帖位置 和 选题/作者是否接话。
+  actual_data_measured_on_profile:
+    - cluster 21 (actor/gatherer, 2h): 26 likes
+    - cluster 20 (agent 取代人, 7h): 48 likes
+    - cluster 19 (指标全绿, 7h): 40 likes
+    - cluster 18 (盲签, 8h): 48 likes
+  corrected_conclusion: >
+    **原创 standalone 稳定在 26-48 likes，是可靠通道；
+    回复是双峰的(4 或 94)，完全取决于原作者有没有接话。**
+    94 那条是运气(作者主动回评)，不是位置优势。
+    因此 24h hold 的依据不成立，本轮恢复发布。
+
+anti_ai_slop_check:
+  numbered_list: false
+  rhetorical_question_ending: false
+  banned_words: 0        # 闭环/护城河/底层逻辑/颗粒度/方法论/数据复利 均未出现
+  company_names: 0
+  hashtag: 0
+  emoji: 0
+  ends_with_short_statement: true
+  character_count: 210
+
+screenshot_status:
+  real_images: 0
+  blocker: "mcp_browser screenshot → 'Browser action failed in Electron main'，连续 7 轮"

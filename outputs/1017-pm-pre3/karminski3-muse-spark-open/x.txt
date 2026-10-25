@@ -1,0 +1,12 @@
+Meta 把 Muse Spark 开源了。
+
+816B 参数 / 激活 42B，1M 上下文，全模态。
+中文 AI 圈立刻拿来跟国产 flash 比——
+
+跟 DeepSeek-v4.1-flash (552B MoE + 196B Engram) 比预填只激活 8B 的架构思路完全不同路。
+跟 QwenGyre elastic RL 这种训练侧新东西也不是一个战场。
+
+Meta 这一步算是把"开源全模态"打到中文社区主战场了——
+下半场要看的就是谁能真的把端到端工作流跑起来。
+
+https://x.com/karminski3/status/2110849142490865909

@@ -1,0 +1,12 @@
+DeepSeek V4.1-Flash-1017 同价升上来了——Terminal-Bench 4.0 +11.1，DeepSWE v1.1 77.0 比 Opus 5 高 3 分，价格没动。
+
+这是性价比的帕累托推：模型跑得快 + 输出短 + benchmark 涨，相当于把"又快又便宜又强"三个轴一起拧。flash 档位和 Kimi K3、GLM 5.3 在部分指标上已经不虚了，部分超过 GPT-5.6-Sol。
+
+更值得看的是训练端的转向：基于自反馈的 RL，专门拉游戏开发、3D 建模从零搭项目的能力——"许愿式编程"。官方案例故宫 3D 建模、网页赛车、《传送门2》复刻，都能在少提示 + 少素材 + 几轮交互里直接生成。
+
+API 端两个新接口 Search/Fetch 同价 5 元/千次，搜索和拉取网页便宜了。
+
+x.com/deepseek_ai/status/2111375640717033777
+# material_id: 1018-am-01
+# treatment: quote_retweet
+# screenshots: x-deepseek-v41-flash-1017-post.png, x-deepseek-v41-bench-1.jpg, x-deepseek-v41-bench-2.jpg

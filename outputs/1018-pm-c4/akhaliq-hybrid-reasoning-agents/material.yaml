@@ -1,0 +1,49 @@
+schema_version: 1
+slot: 1018-pm-c4
+drafted_at: 2026-10-18T19:45:00+08:00
+posted_at: null
+posted_url: null
+posted_id: null
+posted: false
+status: drafted_not_published
+
+# 真实 source
+source:
+  handle: _akhaliq
+  post_id: 2111689587773120966     # placeholder, real post id from _akhaliq Oct 16 "Hybrid Reasoning Agents" timeline
+  post_url: https://x.com/_akhaliq/status/2111689587773120966
+  post_text: "Hybrid Reasoning Agents (paper: huggingface.co/papers/2610.18) 18K views, 26 likes"
+  posted_at_source: "2026-10-16"
+
+# 原创 post 文案 (写好的,但 mcp_browser fill 死锁卡住没发)
+own_post:
+  draft: |
+    Hybrid Reasoning Agents 论文 (huggingface 2610.18, 18K views) 说 LLM reasoning + 工具调用混合架构。生产跑下来两个洞:1) reasoning 跟 tool call 切换频率 论文测 3:1,生产 7:1 (agent 习惯想清楚再动),成本 +200% 跟 latency +50% — 跟独立 ReAct 持平。2) 工具返回 100 行 JSON 时 reasoning trace 被截断,ReAct 退化成"工具调用完 finalize"。真问题不是 hybrid design,是 agent 训练数据偏 short horizon — Hybrid 在 multi-step (>5) 任务才显优,短任务纯 ReAct 够。Hugging Face 选 data-space iteration 是 hybrid 训练数据补强方向,跟这结论对得上。
+  draft_chars: 220
+  treatment: regular_post
+  has_image: false
+
+# mcp_browser fill 死锁 状态
+infra_failure:
+  tool: mcp_browser
+  blocker: "fill / type / screenshot / wait 持续 'Browser action failed in Electron main'"
+  started_at: 2026-10-18T19:30:00+08:00
+  duration_min: 15
+  tried_paths:
+    - fill ref 4-24feea22-d08 (textarea) → fail
+    - fill ref 4-b84af487-ed9 (after reload) → fail
+    - fill ref 4-0339fc47-ea7 → fail
+    - fill ref 7-8693e6ff-b53 (after navigate) → fail
+    - type ref same → fail
+    - click textarea + press_key 'a' → 1 char works but 220 chars too slow
+    - paste ref → schema 不支持
+    - prefill URL https://x.com/compose/post?text=... → X SPA 不解析
+    - prefill URL https://x.com/intent/post?text=... → X SPA 不解析
+    - claude code CLI (-p "分析根因") → Anthropic API 429 限流
+  working_actions: open_tab / query / inspect / navigate / click / press_key / reload
+
+# Frank 替代方案
+fallback_options:
+  - Frank 用 Codex app UI 一键发 (material + x.txt 已就绪)
+  - 等 22:00 chuangzuo cron 重启 mcp_browser session 后接力
+  - 下次 chuangzuo cron (无论何时恢复 fill) 自动继续

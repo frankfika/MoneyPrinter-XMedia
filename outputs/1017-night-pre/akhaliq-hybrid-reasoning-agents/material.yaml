@@ -1,0 +1,30 @@
+material_id: 1017-night-pre-03
+slot: night-pre
+scanned_at: '2026-10-17T20:32:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: AK (@_akhaliq)
+  handle: _akhaliq
+  lang: en
+original:
+  url: https://x.com/_akhaliq/status/2111017984462602438
+  post_id: '2111017984462602438'
+  posted_at: '2026-10-16T00:00:00+00:00'
+metrics:
+  views: 16720
+  likes: 127
+  retweets: 24
+  replies: 25
+  bookmarks: 84
+ai_match: true
+summary: >-
+  Hugging Face papers 频道发「Hybrid Reasoning Agents」论文，
+  paper 在 huggingface.co/papers/2610.18，Ak 整理一个 50 秒混剪视频。
+topic_signature: akhaliq-hybrid-reasoning-agents-paper
+evidence_links:
+  - https://x.com/_akhaliq/status/2111017984462602438
+  - https://huggingface.co/papers/2610.18
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-akhaliq-post-detail.png
+  - screenshots/akhaliq-hybrid-reasoning-agents-thumb.jpg

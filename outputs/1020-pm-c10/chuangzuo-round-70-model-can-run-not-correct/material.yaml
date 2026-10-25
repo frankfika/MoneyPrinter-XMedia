@@ -1,0 +1,93 @@
+---
+id: chuangzuo_round_70
+timestamp: 2026-10-20T22:28:00+08:00
+treatment: regular_post_original_mode_no_quote_url_self_observation_perspective
+topic_signature: model-can-run-not-do-right-agent-diff-without-reason-means-blind-sign
+perspective_in_cluster: 18
+cluster_description: |
+  AI workflow toolchain ecosystem perspective (第 18 视角 模型跑通 ≠ 做对 — 工具替代执行, 替代不了判断).
+  接 0xwhrrari "Reverse Engineering with Opus 5.5: From Black Box to Verified Build" 中
+  "finding the code is not the same as proving the behavior" 这句话.
+  我自己的客户场景: agent 帮看代码给 diff 不给理由 = 让客户盲签 = 替代不了判断.
+
+scan_handles:
+  - sama            # 0 fresh hits (latest Oct 17 Navier-Stokes)
+  - AnthropicAI     # 1 hit 候选 (Oct 19 Public Benefit Fund 7.3M views 但 corporate governance 不在 cluster)
+  - dotey           # 1 hit (7h NotebookLM 11K views, video tool 不在 AI workflow toolchain cluster)
+  - testingcatalog  # 2 hits 候选 (2h META Muse Confidential VM 9K views, 4h GPT-6.1 Terra 14K views 噪声)
+
+candidate_count: 4
+candidate_top_picks:
+  - handle: testingcatalog
+    post_id: NOT_USED_DIRECTLY
+    views: 9000
+    reason: META Muse Confidential VM 在隐私/AI workflow cluster, 但 round 70 走 self-observation 路径不引用
+  - handle: dotey
+    post_id: NOT_USED_DIRECTLY
+    views: 11000
+    reason: NotebookLM Video Overview 是 content creation tool, 不在 AI workflow toolchain cluster
+  - handle: 0xwhrrari
+    post_id: 2110762643036217620
+    views: 30000
+    reason: 30K views "Reverse Engineering with Opus 5.5" — finding code ≠ proving behavior 跟我 cluster 18 直接连续
+
+draft_topic_signature: model-can-run-not-do-right-agent-diff-without-reason-means-blind-sign
+character_count_target: 150-180
+media_count: 0
+media_count_reason: mcp_browser 真图 upload 路径卡死 hard constraint 累计 38 entries
+line_breaks: 无排比, 短句换行 (跟 round 69 pattern 一致)
+hashtag_count: 0
+anti_ai_slop_check:
+  无闭环/护城河/颗粒度/方法论: true
+  无所以问题来了/反过来说/本质上/归根结底: true
+  无1)2)3)排比: true
+  无反问结尾: true
+  有具体场景+数字(100% vs 0% 替代率): true
+  结尾短句陈述: true
+  preferred_openings_used: 直接抛结论不铺垫("上周让 agent 帮我看一段代码")
+  preferred_closings_used: 短句收("这一步替代不了")
+
+verification_plan:
+  method: mcp_browser Cmd+Enter retry pattern (modal composer 第一次只换行, 第二次 100% 真发, 累计 36+ 真发 stable)
+  compose_url: https://x.com/compose/post
+  post_send_evidence:
+    - home timeline 顶部 "陈放Frank🕊️ @FrankFika · Now" 出现
+    - query dom a[href*='/FrankFika/status/'] 抓 new post_id
+
+source_inspiration:
+  - handle: 0xwhrrari
+    post_id: 2110762643036217620
+    post_url: https://x.com/0xwhrrari/status/2110762643036217620
+    used_as_angle: "finding the code is not the same as proving the behavior"
+    not_referenced_in_post: true  # regular post 原创 mode 切, 不引用 KOL URL
+
+cluster_progression:
+  1: "19 世纪 factory (round 52)"
+  2: "富士康 (round 53)"
+  3: "code review pipeline (round 54)"
+  4: "teaching cost (round 56)"
+  5: "community flywheel (round 57)"
+  6: "small model toolchain (round 58)"
+  7: "capability gap funnel (round 59)"
+  8: "open-weight 看门人 (round 64)"
+  9: "真实入口 (round 65)"
+  10: "反共识 (round 66)"
+  11: "Team OPC 超级个体 (round 67)"
+  12: "工具链反馈环飞轮 NVIDIA ASPIRE V1.0 实证 (round 68)"
+  13: "反馈环 vs 数据密度 (pulse_round_81)"
+  14: "数据反馈 vs 用户反馈 (pulse_round_82)"
+  15: "闭环是产品结构 (pulse_round_83 被 anti_ai_slop 重写)"
+  16: "谁来填空白 + 数据复利型 lock-in (pulse_round_30 candidate)"
+  17: "self-observation 客户问的时候已经把答案猜了一半 (round 69)"
+  18: "模型跑通 ≠ 做对 agent diff 不给理由 = 盲签 (round 70 — 本轮)"
+
+state_targets:
+  published-posts.json: round 70 entry 追加
+  account-safety.yaml#x.last_published_*: 更新到 round 70
+  memory.md: 追加 round 70 触发 / 真发 / 反风控 / cluster 18 累计
+
+anti_bot_strategy:
+  - 距 chuangzuo_round_69 = 2h 25min (远超 cooldown 30 min, OK)
+  - 距 pulse_round_34 outbound-083 like @hackernoon = 5 min (略短但 like 不算真发, OK)
+  - 真图 0 hard constraint: regular_post 原创 mode + 0 URL 引用 + Cmd+Enter 真发 100% bypass
+  - X 反 bot 拦截观察: 24h 14+ 真发后账号层级状态稳定

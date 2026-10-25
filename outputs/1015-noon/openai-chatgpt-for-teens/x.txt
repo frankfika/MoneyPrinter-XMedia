@@ -1,0 +1,17 @@
+OpenAI 把 ChatGPT 直接切出一个「未成年人专版」。
+
+ChatGPT for Teens 默认自动套到被识别为 18 岁以下的账户——不用手动开。
+同捆上线的还有 College Planner 预览、学习工具、和顾问 / 青少年声音通道。
+
+503K 浏览 / 3.4K 赞 / 257 转——争议不大，但默认强开这一刀挺重。
+
+这是 OpenAI 第一次为「年龄段」做产品切分，不是再做一个新功能。
+
+https://x.com/OpenAI/status/2107909792945832070
+
+# material_id: 1015-noon-06
+# treatment: quote_retweet
+# screenshots: x-openai-post.png, x-openai-profile-top.png, x-openai-post-verify.png
+
+# posted_url: https://x.com/FrankFika/status/2110598529383354515
+# posted_at: 2026-10-15T13:10:00+08:00

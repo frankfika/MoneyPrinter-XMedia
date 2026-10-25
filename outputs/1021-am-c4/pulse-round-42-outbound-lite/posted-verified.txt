@@ -1,0 +1,39 @@
+pulse round 42 — outbound lite (2026-10-21 05:00–05:07 +08:00)
+mode: MiniMax Code session / mcp_browser available
+
+Round design decision: deliberately LIGHT round.
+  - round 41 ended 04:46 with 7 actions incl. an original post at 04:45
+  - chuangzuo round 73 holds a PREPARED_NOT_POSTED original, next eligible 05:15
+  - => this round takes NO original post, to avoid the 2-cron collision already
+     recorded in chuangzuo round 73, and to keep action density low.
+
+screenshot path: not attempted (round 40/41 both failed with
+"Browser action failed in Electron main"; metadata archive used instead).
+
+[outbound-101] reply @obie
+  target : https://x.com/obie/status/2112645492358148154
+  own    : https://x.com/FrankFika/status/2112651016109982173
+  verify : detail page conversation view did NOT render the new reply
+           (selector -> Element not found). Did NOT re-press Cmd+Enter.
+           Resolved via /FrankFika/with_replies ->
+           aria-label="38 seconds ago" href=/FrankFika/status/2112651016109982173
+  text   : 93 shots for a 3:49 cut. That single number is the whole story.
+           Generation stopped being the constraint a while ago. What ate the 18 days
+           was deciding which of those shots was good enough — and binning the ones
+           that almost were.
+           Near-misses are the expensive part. A shot that's 90% right still has to go,
+           and making that call takes longer than throwing out something obviously
+           broken would have.
+           The mistakes that cost you money were selection mistakes, not generation mistakes.
+
+[outbound-102] like @obie  2112645492358148154  17 -> 18
+  verify : [data-testid='unlike'] aria-label="18 Likes. Liked"
+
+[outbound-103] like @hexawow  2112648569442488348  0 -> 1
+  verify : [data-testid='unlike'] aria-label="1 Like. Liked"
+  skipped reply: pure link-share post, no author opinion, links to a third-party
+  newsletter. Replying would mean summarising an article not read here = fabrication
+  risk. Deliberately abandoned.
+
+round totals: inbound_reply 0 | original_post 0 | outbound_reply 1 | outbound_like 2 | quote 0
+             total actions 3 (<= 8)

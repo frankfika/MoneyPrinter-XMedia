@@ -1,0 +1,16 @@
+Navier-Stokes 千禧问题被 GPT 敲开之后,Sam Altman 把「模型最后一行 chain-of-thought」印在 milestone T 恤的背面,直接发出来了。
+
+这块奖牌级的「AI 解出数学开放问题」,第一次变成可穿戴纪念品。
+
+T 恤正面用红线串起「Navier-Stokes」,背面是模型最后一步推导 — 用户穿着这件衣服走进数学系,所有人都知道你压轴的是哪一行公式。
+
+这条路线大概率是 OpenAI 的「Model CoT 文化纪念品」试水 — GPT-6 月,Pro 订阅,「老 Pro」周边,以后会用 AI 模型 milestone 的 hard copy 做物理世界的分发。
+
+OpenAI 卖 model API + Sam 卖文化周边,这两条线可能正在分叉。
+
+https://x.com/sama/status/2111139227761266699
+
+# material_id: 1017-am-02
+# treatment: first_person_original
+# x_auto_quote_embed: true
+# screenshots: x-sama-shirt.jpg, x-sama-avatar.jpg

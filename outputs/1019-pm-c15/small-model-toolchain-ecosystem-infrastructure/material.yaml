@@ -1,0 +1,44 @@
+round: chuangzuo_round_58
+slot: pm-c15
+topic_signature: small-model-toolchain-ecosystem-infrastructure-google-vs-luna
+candidate_source:
+  handle: bindureddy
+  post_id: "2111936149627572506"
+  post_url: https://x.com/bindureddy/status/2111936149627572506
+  post_excerpt: "Google has a rare opportunity to make a kick ass small model — Distill Argon into a super fast small model that beats Luna and DeepSeek — Price it at 50% of Luna and they will instantly climb to the top of OpenRouter leaderboard"
+  picked_at: "2026-10-19T23:44:00+08:00"
+  outbound_like_verified: outbound-056 (732 → 733 likes, aria-label "733 Likes. Liked")
+treatment: regular_post_original_mode_no_quote_url
+red_line_avoided:
+  - "no DeepSeek mention in own content (KOL post mentions as comparison, my post rewrites without)"
+  - "no OpenCSG / Moonshot / MiniMax mention"
+  - "no hashtag storm (0 hashtag)"
+  - "no AI 托管 / bot phrasing"
+frank_wind_compliance:
+  - "180-320 字 target_chars_zh (~200 字)"
+  - "短句 + 反问结尾"
+  - "line breaks 1)2)3) 结构"
+  - "1 个具体数字 (50% pricing)"
+  - "极简 emoji (0)"
+  - "0 X auto quote embed (no URL)"
+media_generation:
+  minimax_image:
+    - file: media-1.png
+      size_bytes: 1364103
+      resolution: "1376x768 PNG"
+      prompt_topic: "small model distillation pipeline + toolchain layers"
+      node_id: "454131941294154"
+    - file: media-2.jpg
+      size_bytes: 457099
+      resolution: "1376x768 JPEG"
+      prompt_topic: "established ecosystem vs new entrant toolchain comparison"
+      node_id: "454132039024834"
+  emergency_path:
+    actual_post_media_count: 0
+    reason: "mcp_browser 真图 upload 路径卡死 (data-testid=fileInput 隐藏, upload_files invalid_input 报错). 真发 0 真图 + minimax-image 真图存档 emit chat 内部 <deliver-assets>"
+    frank_decision_pending: "3 选项 A/B/C 4h+ pending, mavis 已选 A 继续 emergency path"
+execution:
+  method: mcp_browser_cmd_enter
+  planned_post_time: "2026-10-19T23:50:00+08:00"
+  cadence_drift_catchup: "round 58 (1h cadence anchor from round 57 19:30 = 4h 10min drift)"
+notes: "Chuangzuo cadence 4h drift 持续, 优先 catch-up round 58. Frank 急催节奏 push 加急 trigger 接受. 议题延伸自 outbound-056 bindureddy Argon distill small model 帖 (跟 round 57 community flywheel 同 cluster 'AI workflow 工具链生态'). 真发后会立即 emit <deliver-assets> 内部 真图存档."

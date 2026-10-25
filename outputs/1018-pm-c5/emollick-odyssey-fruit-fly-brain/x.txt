@@ -1,0 +1,16 @@
+Odyssey 干了件科幻的事。
+
+把果蝇脑塞进 world model。
+不是仿真果蝇行为。
+是真脑 + simulated environment。
+
+果蝇脑 30 万神经元 + 已知最完整连接组
+emollick: "interesting and viscerally unsettling" — 准。
+
+下一步更疯:
+线虫脑只有 302 神经元
+能不能 drive imagined world？
+
+神经科学 + world model 临界点。
+
+https://x.com/emollick/status/2111672307139874844

@@ -5,6 +5,14 @@ description: 小红书发布（草稿模式）— 默认**只把 xhs.txt + scree
 
 # 小红书发布
 
+> ⏸️ **当前停手（2026-10-25 起）**
+>
+> `private/account-safety.yaml#xhs.ban_status.is_banned = true` —— 小红书账号因 AI 托管发文被封。
+> **不要进创作者中心，不要登录，不要碰任何发布相关按钮。**
+>
+> 解封需要 Frank 同时给两个信号：`is_banned` 改为 `false` **且** Frank 显式说「可以存草稿了」。
+> 两者缺一，就停手。
+
 ## 决策（每次执行前先查 `private/account-safety.yaml#xhs.ban_status`）
 
 | is_banned | Fang 授权「可以存草稿」 | 动作 |

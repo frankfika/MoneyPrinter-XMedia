@@ -1,0 +1,25 @@
+Karpathy 那张 4 层漏斗我都看了三遍——
+
+6B (~75% 人口) 几乎没碰过 LLM
+1-2B (~20%) 把 ChatGPT 当高级 Google
+20M (0.2%) 真在用 frontier-grade LLM 搞生产
+5000 (0.00006%) 在内部玩 swarms of agents
+
+第一层到第二层是教育问题，
+第四层到第三层是 access 渠道问题，
+中间 20M 这个 gap 是 access 不对称，不是技能不对等——
+
+你身边有几个朋友日常用 Claude Code / Cursor / Cline
+写超过 1 个月?这比例可能比 0.2% 还低。
+
+我们以为的"AI 普及"其实只到第 2 层。
+第 3 层以下的玩法大众根本接触不到，
+连想象都想象不出来。
+
+# material_id: 1018-pm2-01
+# treatment: regular_post
+# quote_rt_url: https://x.com/karpathy/status/2109361546505966046
+# screenshot: ./screenshots/source.jpg
+
+# posted_url: https://x.com/FrankFika/status/2111731735700639985
+# posted_at: 2026-10-18T16:11:00+08:00

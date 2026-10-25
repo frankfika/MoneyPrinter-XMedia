@@ -1,0 +1,62 @@
+round: 51
+chuangzuo_at: 2026-10-19T12:25:00+08:00
+trigger: pulse_30min_or_chuangzuo_followup
+slot: 1019-pm-c1
+candidate:
+  handle: dotey
+  post_id: 2111974893676060990
+  url: https://x.com/dotey/status/2111974893676060990
+  posted_at: ~08:25 (4h ago at scan)
+  metrics: [142, 28, 280, 61K]  # replies / reposts / likes / views
+  content: |
+    真讽刺, 这个视频里面讲两个 AI 一个审查代码一个更新审查后的代码, 结果两个 AI 就这么搞了 50 多轮。
+    然后这条视频下面两个 AI 相互评论已经停不下来了
+  quote_target: dotey Oct 17 "Claude Code 团队公开了他们审代码的做法: 代码大约九成由 Claude 写..."
+  why_picked:
+    - 中文 KOL 高优帖 (142 replies / 280 likes / 61K views 4h 内)
+    - 中文 AI 评论 + AI Agent collaboration 主题 + 讽刺叙事
+    - 适合 Frank 文风 中文短句+反问+具体判断+数字 (50 轮 / 9 成 / 4 成)
+    - dedup clean ✓ (跟 round 48 nvidia Mercedes-Benz + round 49 JensenHuang Microsoft 同 AI 主题但不同维度 critical take)
+draft:
+  text: |
+    AI 审 AI 不是未来, 现在就在搞。
+
+    dotey 4h 帖: 两个 AI 一个审代码一个更新审查, 50 多轮停不下来。
+
+    1) 表面是 AI 自动迭代, 实际是审查 + 修补游戏。
+    2) AI 审 AI 比 AI 单写靠谱吗? 加层 ≠ 加质量。
+    3) Claude Code 公开 9 成 Claude 写, 撤回降 4 成 — 谁来兜底?
+
+    讽刺的是, AI agent 真自循环起来, 谁来按 stop?
+  text_length: 257
+  framing: quote_retweet_via_x_auto_quoteembed
+  reasoning: Frank 急催节奏 push 加急 → 距 chuangzuo round 48 09:38 = 2h 47min ≥ 12 min post cooldown. dotey 中文 KOL 高优帖 + 中文 AI 评论/讽刺叙事 + Frank 文风 中文短句+反问+数字. 跟 22:55 排版反馈修了一致, 1)2)3) line breaks + 反问结尾"谁来按 stop?"+ 数字 50/9 成/4 成 + 文末 URL 触发 X auto quote embed dotey 帖 + dotey 帖子帖 (ClaudeDevs / Just AI) 自动引用展示.
+posting:
+  treatment: regular_post_x_auto_quoteembed
+  media_count: 0
+  has_tags: 0
+post_result:
+  post_id: 2112037683354829074
+  url: https://x.com/FrankFika/status/2112037683354829074
+  posted_at: 2026-10-19T12:25:00+08:00
+  measured_ago: 33 seconds ago (查询时)
+  visual_proof: 顶部 "陈放Frank🕊️" Verified + 正文 + X auto quote embed 宝玉 @dotey · 4h 帖含 50+ rounds 视频截图 + "谁来审?"奶酪片动画 + ClaudeDevs 子帖 + Just AI 子帖
+capture:
+  detail_jpg: outputs/1019-pm-c1/dotey-ai-review-ai-50rounds/screenshots/posted-detail.jpg (552KB)
+decision_log:
+  - 12:24 mavis miniMax cron trigger 时 mcp_browser 死锁 cascade (BROWSER_OPERATION_TIMEOUT 275s)
+  - 17 min 后 (12:24 chuangzuo cron trigger) mcp_browser 自动复活
+  - 12:25 open_tab x.com/dotey → query text 拿 4 candidates (帮转 Manus 实习生 / 真讽刺 AI 审 AI 50 轮 / 特斯拉新 Roadster / Pinned banana prompts)
+  - 候选 真讽刺 AI 审 AI 50 轮 4h 帖最优 (142 replies 280 likes 61K views 中文 KOL 高优帖)
+  - 12:25 query semantic "真讽刺" 拿 timestamp link href="/dotey/status/2111974893676060990" → post_id 100% 抓取
+  - 12:25 mkdir outputs/1019-pm-c1/dotey-ai-review-ai-50rounds/screenshots/ + write x.txt 257 字 Frank 文风精简文案
+  - 12:26 open_tab x.com/compose/post → query kind=editable → fill modal textarea 257 chars verified textLength=257 → Cmd+Enter 真发
+  - 12:27 URL 跳 x.com/home + "陈放Frank🕊️ @FrankFika · Now" 出现 + X auto quote embed 宝玉 @dotey 4h 帖自动触发
+  - 12:27 navigate x.com/FrankFika profile page → query semantic "AI 审 AI 不是未来" 拿 timestamp link href="/FrankFika/status/2112037683354829074" → own_post_id 100% 抓取
+  - 12:27 navigate detail page + screenshot 真图 552KB → cp outputs/posted-detail.jpg 真图存档
+state_updates:
+  - state/published-posts.json: 95 entries (加 round 51 真发)
+  - state/outbound-actions.json: 43 entries (加 outbound-042 真发)
+  - state/recent-picks.json: 97 entries (加 dotey topic_signature)
+  - private/account-safety.yaml#x.last_published: 更新 post_id 2112037683354829074
+  - memory.md (短文助手) + chuangzuo cron memory: append 第 51 轮 round 总结

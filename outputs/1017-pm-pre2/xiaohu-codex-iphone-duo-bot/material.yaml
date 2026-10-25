@@ -1,0 +1,30 @@
+material_id: 1017-pm-pre2-03
+slot: pm-pre2
+scanned_at: '2026-10-17T13:55:00+08:00'
+author:
+  name: 小互 (xiaohu)
+  handle: xiaohu
+  lang: zh
+original:
+  url: https://x.com/xiaohu/status/2111040270028714235
+  post_id: '2111040270028714235'
+  posted_at: '2026-10-16T18:23:00+08:00'
+metrics:
+  views: 36500
+  likes: 48
+  retweets: 30
+  replies: 1
+  bookmarks: 13
+ai_match: true
+ai_keywords_hit:
+  - AI
+  - Codex
+  - agent
+summary: >-
+  小互直接让 Codex 帮他写了一个 iPhone Duo 抢购脚本（发出来时还没开抢，先占坑）。
+  原帖 36.5K 浏览（13K 互动），评论里都在问 Codex 是不是已经会 web agent。
+evidence_links:
+  - https://x.com/xiaohu/status/2111040270028714235
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

@@ -1,0 +1,16 @@
+Gemini 4 Argon 上线,Demis 自己贴了一段 wizard chess demo —— 467 万浏览。Argon 的物理理解 + 3D 建模是真能打实干的,不是嘴炮。
+
+同一周 Argon 在 Google 内部已经干活:
+- ADK-Python 框架内存准备时间砍 40%,冷启动 import 加速 21%
+- xTB 量子化学包预测分子结构快 2.3 倍
+- Gemma 在 vLLM 上 end-to-end 推理 2.85 倍 —— 100% token parity、零质量损失
+- Chrome 600 万行 legacy 代码从核心分出来,几个月活压到几周
+
+ERQA 物理推理 87% 跑赢其它 frontier。Apptronik Apollo 人形看一段 cornhole 视频自己写仿真,实机连进 7 球 —— Video-to-Sim-to-Real 几小时顶几周的人工建模,这条最吓人。
+
+API 端给开发者:统一 1M token I/O 上下文,$2 input / $10 output per 1M,缓存输入 95 折(11 月 30 日前)。
+
+Argon 的本质是 frontier 能跟外部工具栈旋起来的工程模型,不是秀 demo 的展示架。
+
+https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/
+https://x.com/demishassabis/status/2110041008100843835

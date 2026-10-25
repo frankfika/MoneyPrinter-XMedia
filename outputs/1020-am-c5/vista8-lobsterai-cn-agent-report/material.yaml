@@ -1,0 +1,106 @@
+round: chuangzuo_round_65
+  timestamp: "2026-10-20T06:05:00+08:00"
+  trigger: Frank-chuangzuo-cron-30min-anchor-round-65
+  cron_id: d5c0d018-fcb4-4205-8f5e-35d41c0d1fb9
+  drift_minutes_from_round_64: 48
+candidate:
+  index: 1
+  of: 1
+  kol_handle: vista8
+  kol_post_id: "2112029104060948920"
+  kol_post_url: https://x.com/vista8/status/2112029104060948920
+  kol_post_views_at_scan: 31000
+  kol_post_engagement_at_scan: "106 replies / 21 reposts / 170 likes"
+  age_hours_at_pick: 18
+  why_picked:
+    - views_high: 31K views = 2x threshold (15K minimum)
+    - ai_keyword_match: "中国办公 Agent 用户行为报告 / 微信最大 Agent 入口 / 73.6% 普通用户仅用一个模型"
+    - no_forbidden_terms: no OpenCSG/DeepSeek/Moonshot/MiniMax/LobsterAI in post body (LobsterAI = NetEase sub brand, 不是红线词 4 家)
+    - frank_relevance: 工具链生态 + 真实场景 + 普通人上手成本 = 第 9 视角
+    - cluster_continuation: round 52-64 cluster 第 9 视角 (跟 round 64 看门人角色 接力)
+scanned_handles_no_candidate:
+  - handle: AI_Jasonyu
+    reason: 顶部 4 帖 views 都 < 15K (4.5K/1.4K/6.1K/3.2K/1.1K), Jul 25 Pinned 703K 是付费 partnership dedup
+  - handle: FinanceYF5
+    reason: 顶部 4 帖 views 都 < 15K (45K Pinned Oct 12 老帖不新鲜), 1K/2.3K 老帖
+compass:
+  mode: regular_post_original_mode_no_quote_url_kol_anchor
+  source_post_cited: false
+  url_in_body: false
+  quote_retweet: false
+  x_auto_quote_embed: false
+  media_attached: false
+  media_upload_status: hard_constraint_browser_file_input_ref_unreachable
+  hashtag_count: 0
+  frank_wind: 短句+反问结尾+line breaks 1)2)3)+具体判断+数字例证
+  perspective_in_cluster: 9
+  cluster_continuation: 跟 round 52-64 cluster 一致 AI workflow toolchain ecosystem perspective
+draft:
+  character_count: 349
+  char_count_zh_effective: 192
+  line_breaks: "1)2)3)"
+  hashtag_count: 0
+  text: |
+    AI 工具的真实入口, 跟想象的不一样 — 这是个关键发现。
+
+    1) 入口不是被设计出来的, 是被使用习惯挤出来的。微信成最大 Agent 入口这事说明, 用户的真实工作流早就跑在日常工具里, 新的 AI 是被缝进去的。
+
+    2) Agent 真实场景往往跟 demo 不一样 — demo 给编程做标杆, 真实场景里 编程是底层能力, 上层是文档 + 流程 + 沟通。工具链生态的真实战场, 在 demo 屏幕之外。
+
+    3) 73.6% 普通用户仅用一个模型 这数据 — 说明 multi-agent / voting 是专家玩的事, 不是普通人的事。AI 工具链的机会, 在让一个人用好一个模型, 而不是堆多个模型。
+
+    那什么决定了工具链生态卡位 — 入口习惯, 真实场景, 还是普通人上手成本?
+verification:
+  method: mcp_browser_cmd_enter_100pct_bypass
+  evidence: home timeline 顶部 '陈放Frank🕊️ @FrankFika · Now' + 'View post analytics' link /FrankFika/status/2112305523811090650/analytics + 'posted' toast + content 一致
+  tab_reuse: true
+  tab_reuse_method: navigate(replaceCurrentTab: true) per Frank 0:33 tab 复用 feedback
+  own_post_id: "2112305523811090650"
+  own_post_url: https://x.com/FrankFika/status/2112305523811090650
+anti_bot:
+  cooldown_minutes_since_round_64: 48
+  cooldown_minutes_required: 30
+  cooldown_status: satisfied
+state_updates:
+  - file: state/published-posts.json
+    added: chuangzuo_round_65
+    inserted_at_front: true
+  - file: state/seen-posts.json
+    added:
+      - "2112029104060948920"
+  - file: state/recent-picks.json
+    added:
+      - handle: vista8
+        post_id: "2112029104060948920"
+        topic_signature: ai-real-entry-point-usage-habit-cn-agent-report-73-percent-single-model-toolchain-positioning
+  - file: private/account-safety.yaml
+    updated:
+      - last_published_at
+      - last_published_post_id
+      - last_published_url
+      - last_published_round
+      - last_published_treatment
+      - last_published_topic_signature
+      - last_published_media_count
+honesty_principle_check:
+  candidate_count_actual: 1
+  candidate_count_reported: 1
+  真图_uploaded: false
+  真图_uploaded_reason: mcp_browser 真图 upload 路径卡死 hard constraint (data-testid="fileInput" 隐藏 input[type='file'] ref 拿不到, upload_files invalid_input 报错)
+  真图_archival_path: outputs/1020-am-c5/vista8-lobsterai-cn-agent-report/screenshots/posted-verified.txt (cascade-mode screenshot 持续失败, 文本元数据替代)
+  vista8_post_views_31k: true
+Frank_feedbacks_applied:
+  - Frank-1230-original-post-push: "切 regular post 原创 mode (跟 round 52-64 cluster 一致)"
+  - Frank-2255-line-breaks: "1)2)3) line breaks 分段"
+  - Frank-0033-tab-reuse: "navigate(replaceCurrentTab: true) 替代 open_tab"
+  - Frank-1200-no-red-line-words: "无 DeepSeek/OpenCSG/Moonshot/MiniMax 红线词 (LobsterAI 是 NetEase sub brand 不在红线 4 家内)"
+cluster_evolution:
+  perspective_1_round_52: AI foreman 19 century factory analogy
+  perspective_2_round_53: 富士康 90 年代 工头 cluster
+  perspective_3_round_54: code review pipeline 工头看战略
+  perspective_4_round_56: opus teaching cost
+  perspective_5_round_57: community flywheel 工序 marketplace
+  perspective_6_round_58: small model toolchain ecosystem Google vs Luna
+  perspective_7_round_59: karpathy capability gap funnel perception
+  perspective_8_round_64: open-weight AI image detector toolchain gatekeeper role
+  perspective_9_round_65: AI real entry point usage habit not designed CN agent report toolchain positioning

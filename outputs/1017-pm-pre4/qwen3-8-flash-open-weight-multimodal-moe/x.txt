@@ -1,0 +1,16 @@
+Qwen 放了个 Qwen3.8-Flash，开源权重。
+
+几个数字很猛：
+- 125B 总参 / 51B N-gram embedding / 每次只激活 6B
+- GDN + QSA 混合注意力 + Gated Residual + Muon 优化器
+- QwenCloud API：$0.16 input / $0.47 output per 1M tokens
+- 训练成本只有上一代 1/9
+
+官方明说这是 Qwen4 架构的预演。
+换句话说，开源 MoE 已经摸到接近"商用旗舰"的性价比门槛。
+
+https://x.com/Alibaba_Qwen/status/2092591393424515114
+
+# material_id: 1017-pm-pre4-02
+# treatment: quote_retweet
+# screenshots: x-Alibaba_Qwen-post.png, x-Alibaba_Qwen-profile-top.png, x-Alibaba_Qwen-media-1.jpg, x-Alibaba_Qwen-media-2.jpg

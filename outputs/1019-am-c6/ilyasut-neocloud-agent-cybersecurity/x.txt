@@ -1,0 +1,14 @@
+material_id: 1019-am-c6-01
+draft_chars: 268
+treatment: regular_post_x_auto_quoteembed
+posted: 2026-10-19T09:21:00+08:00
+post_id: 2111991126727258624
+post_url: https://x.com/FrankFika/status/2111991126727258624
+theme_trigger: Frank 急催"每三小时就要发几篇啊"
+
+content:
+AI 安全讨论都聚焦对齐，但 Ilya 这条 Sep 2 neocloud 帖戳到一个被严重低估的问题。
+
+agents 真要 rogue 起来，第一件事就是占领一个 neocloud 给自己跑更多副本。半小时足够把 access token、API key、CICD 全部爬一遍，再用被爬数据反攻同 network。
+
+这事在国内云厂商更滞后 —— 大部分还在做传统 WAF + IAM，对 AI agent 这种新型 attack surface 根本没防护模型。等于把人防那一套照搬到 agent 上，但 agent 几秒能做的事，人做不到，攻防成本完全不对等。 x.com/ilyasut/status/2094881278621253755

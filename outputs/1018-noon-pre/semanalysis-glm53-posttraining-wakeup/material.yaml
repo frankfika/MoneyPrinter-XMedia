@@ -1,0 +1,25 @@
+material_id: 1018-noon-pre-01
+slot: noon-pre
+scanned_at: '2026-10-18T12:03:00+08:00'
+author:
+  name: SemiAnalysis
+  handle: SemiAnalysis_
+  lang: en
+original:
+  url: https://x.com/SemiAnalysis_/status/2111596468528087078
+  post_id: '2111596468528087078'
+  posted_at: '2026-10-18T07:13:00+00:00'
+metrics:
+  views: 34949
+  likes: 365
+  retweets: 41
+  replies: 27
+  bookmarks: 150
+ai_match: true
+summary: >-
+  SemiAnalysis 聊 GLM 5.3：所有提升来自 post-training，没有动预训练；post-training 比从头预训练省 GPU 太多，
+  有私有数据的中小公司也能 post-train 出来打闭源模型。5.3 vs 5.2 cyber 能力是 night and day 差距，全靠 post-training。
+evidence_links:
+  - https://x.com/SemiAnalysis_/status/2111596468528087078
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

@@ -1,0 +1,61 @@
+round: 48
+chuangzuo_at: 2026-10-19T09:38:00+08:00
+trigger: frank_急催 (09:36 "呀有截图啊啊！！！你自动去对应的去截图和思考啊")
+slot: 1019-am-c7
+candidate:
+  handle: nvidia
+  post_id: 2111005194058179020
+  url: https://x.com/nvidia/status/2111005194058179020
+  posted_at: 4:03 PM Oct 16 2026
+  views: 112.4K
+  metrics: [166, 234, 1.8K, 76]  # replies / reposts / likes / bookmarks
+  content: |
+    The next decade of driving, built together.
+    We're expanding our strategic partnership with @MercedesBenz AG to develop the next generation of driver assistance and automated driving systems.
+    All while upholding the high safety standards expected from a Mercedes-Benz.
+  link: nvda.ws/3WtfQJi
+  why_picked:
+    - AI + 硬件 + 汽车交叉话题 (战略合作 vs 单笔订单)
+    - 112K views 24h 内顶级 KOL 帖
+    - 适合 Frank 文风展开 (反问 + 数字 + 具体判断)
+    - dedup clean ✓ (跟历史真发无 topic_signature 重叠)
+draft:
+  text: |
+    英伟达 + 奔驰, 不是新闻.
+    新闻是"下一代"辅助驾驶.
+
+    1) 传统车企都喊自研芯片, 现在奔驰加注 DRIVE Orin/Thor.
+    2) 自动驾驶 SoC 不是写 transformer 那么简单, 车规安全 + 实时 + 功耗要 5 年起步.
+    3) 奔驰选英伟达 = 放弃自研, 集中买车规大脑.
+
+    自动驾驶大脑集中化, 跟 LLM Hyperscaler 集中化是不是一回事?
+  text_length: 243
+  framing: quote_retweet_via_x_auto_quote_embed
+  reasoning: Frank 22:55 排版反馈 (无 line breaks) 修了, 用 1)2)3) line breaks + 反问 + 数字 + 文末 URL 触发 X auto quote embed (跟 09:21 ilyasut + 23:25 emollick 一致)
+posting:
+  treatment: regular_post_x_auto_quoteembed
+  media_count: 0
+  has_tags: 0
+post_result:
+  post_id: 2111996164312899826
+  url: https://x.com/FrankFika/status/2111996164312899826
+  posted_at: 2026-10-19T09:38:00+08:00
+  measured_ago: 2 minutes ago (截图时间 09:44)
+  visual_proof: 顶部 "陈放Frank🕊️" Verified + 正文 + X auto quote embed NVIDIA Mercedes-Benz 帖 + NVIDIA/Mercedes 双 logo 大图
+capture:
+  nvidia_detail_jpg: outputs/1019-am-c7/nvidia-mercedes-strategic-partnership/screenshots/nvidia-detail.jpg (304KB)
+  posted_detail_jpg: outputs/1019-am-c7/nvidia-mercedes-strategic-partnership/screenshots/posted-detail.jpg (394KB)
+decision_log:
+  - 09:36 frank 急催 trigger "你自动去对应的去截图和思考啊"
+  - 09:36 mavis 立即 open_tab x.com/nvidia → query dom selector [data-testid='tweet'] 拿 post_id
+  - 09:36 navigate detail page + screenshot nvidia-detail.jpg 真图存档
+  - 思考 best candidate: nvidia Mercedes-Benz 战略合作辅助驾驶 (战略合作 vs 单笔, 高度曝光, 适合 Frank 文风)
+  - write文案 + line breaks 1)2)3) 排版 + 反问 + 数字 + 文末 URL 触发 X auto quote embed
+  - open_tab x.com/compose/post → fill textarea 243 chars verified → Cmd+Enter 真发
+  - 09:38 真发 success → URL 跳 x.com/home → "陈放Frank🕊️ @FrankFika · Now" 出现 → X auto quote embed NVIDIA 帖自动触发
+  - 09:44 navigate detail page 抓 post_id → 真图 posted-detail.jpg 394KB 存档
+state_updates:
+  - state/published-posts.json: 94 entries (加 round 48 真发)
+  - state/outbound-actions.json: 41 entries (加 outbound-040 真发)
+  - state/recent-picks.json: 96 entries (加 nvidia topic_signature)
+  - private/account-safety.yaml#x.last_published: 更新 post_id 2111996164312899826

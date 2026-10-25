@@ -1,0 +1,28 @@
+material_id: 1018-night-pre-02
+slot: night-pre
+scanned_at: '2026-10-18T01:29:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: SemiAnalysis
+  handle: SemiAnalysis_
+  lang: en
+original:
+  url: https://x.com/SemiAnalysis_/status/2111362756569919914
+  post_id: '2111362756569919914'
+  posted_at: '2026-10-17T07:44:59.000Z'
+metrics:
+  views: 39443
+  likes: 384
+  retweets: 47
+  replies: 33
+  bookmarks: 56
+ai_match: true
+summary: >-
+  SemiAnalysis 内部线: NVIDIA 不是唯一一家在自家活动上"施压策略"的公司;点出 AI infra 厂商对客户/媒体/合作伙伴的干扰手段;39K views 10h
+topic_signature: semanalysis-nvidia-pressure-tactics-events
+evidence_links:
+  - https://x.com/SemiAnalysis_/status/2111362756569919914
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/sema-nvidia-pressure-video-thumb.jpg
+  - screenshots/x-sema-nvidia-pressure-post-detail.png

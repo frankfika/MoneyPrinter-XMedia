@@ -5,6 +5,14 @@ description: 小红书文案（普通版）— 接 post-writer-x 的同一份素
 
 # 小红书文案（普通版）
 
+> ⏸️ **当前停手（2026-10-25 起）**
+>
+> `private/account-safety.yaml#xhs.ban_status.is_banned = true` —— 小红书账号因 AI 托管发文被封。
+>
+> **默认不跑这个 skill。** 每轮产出没人贴的小红书文案 = 纯浪费。
+>
+> 只有在 **Frank 明确说「这轮要小红书文案」** 时才启用；启用也只出 `xhs.txt`，由 Fang 手贴。
+
 ## 输入
 - 同 post-writer-x 的素材包 + 同一批 `screenshots/*.png`
 

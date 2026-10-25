@@ -1,0 +1,26 @@
+material_id: 1017-pm2-03
+slot: pm2
+scanned_at: '2026-10-17T14:56:08+08:00'
+author:
+  name: Hugging Face
+  handle: huggingface
+  lang: en
+original:
+  url: https://x.com/huggingface/status/2111083685961445625
+  post_id: '2111083685961445625'
+  posted_at: '2026-10-17T05:00:00+00:00'
+metrics:
+  views: 25635
+  likes: 86
+  retweets: 14
+  replies: 24
+  bookmarks: 13
+ai_match: true
+ai_keywords_hit: [open source, open weights, Apache 2.0, BF16, FP8, NVFP4]
+summary: >-
+  Reflection Beam 全平台可用、Apache 2.0 开源权重：BF16 + FP8 + NVFP4 + DFlash2 drafter，HF 直播 + 40+ 生态合作。
+evidence_links:
+  - https://x.com/huggingface/status/2111083685961445625
+  - https://x.com/reflection_ai
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan 2026-10-17T14:56+08:00

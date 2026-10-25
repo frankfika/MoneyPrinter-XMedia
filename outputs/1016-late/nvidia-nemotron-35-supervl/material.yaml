@@ -1,0 +1,26 @@
+material_id: 1016-late-01
+slot: late
+scanned_at: '2026-10-16T01:24:00+08:00'
+author:
+  name: NVIDIA
+  handle: nvidia
+  lang: en
+original:
+  url: https://x.com/nvidia/status/2110750157272719562
+  post_id: '2110750157272719562'
+  posted_at: '2026-10-16T00:25:00+00:00'
+metrics:
+  views: 21014
+  likes: 318
+  retweets: 53
+  replies: 38
+  bookmarks: 32
+ai_match: true
+summary: >-
+  NVIDIA 上线 Nemotron 3.5 Super VL 开源模型 — 120B 总参 / 12B 激活 MoE,
+  融合文本 / 图像 / 文档 / 视频理解 + 推理 + 工具调用,专门做长流程 AI Agent。
+evidence_links:
+  - https://x.com/nvidia/status/2110750157272719562
+  - https://x.com/NVIDIAAI/status/2110750142207799427
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-16 Codex session)

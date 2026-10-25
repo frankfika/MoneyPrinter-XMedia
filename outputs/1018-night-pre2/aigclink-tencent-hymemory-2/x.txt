@@ -1,0 +1,9 @@
+腾讯混元开源了 Hy-Memory 2.0，把"不同 AI Agent 不能共享记忆"这事儿真补上。
+
+配 MemHub，把 Cursor、Codex、WorkBuddy、Hermes 这些工具的历史对话汇成一个池，新 Agent 接上就能在已有上下文上继续干活。
+
+分三层：Chat Memory 记人和对话事实，Working Memory 记任务进展和经验适用条件，Code Memory 记代码改动为什么这么改。写入模型 30B-A3B 每次激活 3B，本地常驻不算重。
+
+x.com/aigclink/status/2111435662033666099
+# posted_url: https://x.com/FrankFika/status/2111533244416159972
+# posted_at: 2026-10-18T03:02:00+08:00

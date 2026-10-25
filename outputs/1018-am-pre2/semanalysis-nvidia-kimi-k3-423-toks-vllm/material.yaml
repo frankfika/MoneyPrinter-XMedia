@@ -1,0 +1,24 @@
+material_id: 1018-am-pre2-01
+slot: am-pre2
+scanned_at: '2026-10-18T10:58:00+08:00'
+author:
+  name: SemiAnalysis
+  handle: SemiAnalysis_
+  lang: en
+original:
+  url: https://x.com/SemiAnalysis_/status/2111627094878790023
+  post_id: '2111627094878790023'
+  posted_at: '2026-10-18T02:55:00+00:00'
+metrics:
+  views: 23694
+  likes: 0
+  retweets: 0
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  NVIDIA 通过 CentML 团队新写的 Megakernel（Cute DSL 12K LoC 融合），把 vLLM 在 2.8T 参数 Kimi K3 上跑到 423 tok/s/user，比同硬件快 1.68x。NVIDIA 已经在做 DeepSeek V4.1 的同款优化。
+evidence_links:
+  - https://x.com/SemiAnalysis_/status/2111627094878790023
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

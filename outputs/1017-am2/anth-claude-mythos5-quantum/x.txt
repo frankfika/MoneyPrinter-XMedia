@@ -1,0 +1,13 @@
+Anthropic 把 Claude 接进了量子电路设计 — 出来的电路比 SOTA 强一个数量级。
+
+Claude Mythos 5 这条线有意思:researcher 只给 plain-language prompt,模型从「想要更省 qubit」一路自动反推到电路拓扑 — 化学、材料、药物 simulate 用的 quantum algorithm 对 qubit 数极敏感,这次把门槛直接拉下了一档。
+
+官方还写了完整 ethics note — Mythos 5 是闭源模型,STEM Fellows Program 是有限内测。
+
+Claude 当「科研 co-pilot」的可行性,这次不是在 demo 里,是在 16 K+ views / 307K 浏览的可证伪 benchmark 里。Compute 这边 Anthropic 走的是 Mythos 系列而不是公开 opus — 看来 frontier 推理会先在闭源上加杠杆。
+
+https://x.com/AnthropicAI/status/2111152183240511640
+
+# material_id: 1017-am-03
+# treatment: quote_retweet
+# screenshots: x-anth-card.png, x-anth-avatar.jpg

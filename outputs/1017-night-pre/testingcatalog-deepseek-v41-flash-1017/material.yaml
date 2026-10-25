@@ -1,0 +1,35 @@
+material_id: 1017-night-pre-01
+slot: night-pre
+scanned_at: '2026-10-17T20:32:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: TestingCatalog (AI News)
+  handle: testingcatalog
+  lang: en
+original:
+  url: https://x.com/testingcatalog/status/2111380259295653976
+  post_id: '2111380259295653976'
+  posted_at: '2026-10-17T16:32:00+00:00'
+source_original:
+  handle: deepseek_ai
+  url: https://x.com/deepseek_ai/status/2111375640717033777
+  post_id: '2111375640717033777'
+metrics:
+  views: 20850
+  likes: 463
+  retweets: 36
+  replies: 43
+  bookmarks: 65
+ai_match: true
+summary: >-
+  DeepSeek-V4.1-Flash-1017 在自家 DeepSWE 1.1 基准拿到 77%，超过 GLM-5.3、Kimi K3、
+  GPT-5.6 Sol 和 Opus 5；输出更短、任务完成时间进一步压低，Pareto 改进性能+成本。
+topic_signature: testingcatalog-deepseek-v41-flash-1017-deepswe
+evidence_links:
+  - https://x.com/testingcatalog/status/2111380259295653976
+  - https://x.com/deepseek_ai/status/2111375640717033777
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-testingcatalog-post-detail.png
+  - screenshots/deepseek-v41-flash-1017-release-img1.jpg
+  - screenshots/deepseek-v41-flash-1017-release-img2.jpg

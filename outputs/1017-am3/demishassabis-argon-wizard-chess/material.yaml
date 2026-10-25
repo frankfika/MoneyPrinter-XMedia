@@ -1,0 +1,37 @@
+material_id: 1017-am3-02
+slot: am3
+scanned_at: 2026-10-17T11:00:00+08:00
+author:
+  name: Demis Hassabis
+  handle: demishassabis
+  lang: en
+original:
+  url: https://x.com/demishassabis/status/2110041008100843835
+  post_id: "2110041008100843835"
+  posted_at: 2026-10-13T16:12:33+08:00
+  body_excerpt: |
+    Gemini 4 Argon is amazing for knowledge work and coding - and it's super
+    fun to build with! We asked it to create this wizard chess game and it's
+    so cool to see Argon's physics understanding & 3D modelling capabilities
+metrics:
+  views: 467500
+  likes: 5100
+  retweets: 630
+  replies: 355
+  bookmarks: 0
+ai_match: true
+summary: |
+  Gemini 4 Argon 上线,Demis 自己贴了 wizard chess demo —— 4K 467 万浏览,
+  Argon 的物理理解和 3D 建模是真打实的能力(不是嘴炮)。
+  同一周 Argon 把 ADK-Python 框架内存准备时间砍 40%,xTB 量子化学包预测分子
+  快 2.3 倍,Chrome 600 万行 legacy 分层重构几个月变几周。
+  ERQA 物理推理 87% 拿第一名;Apptronik Apollo 人形机器人看一段 cornhole
+  视频自己建仿真落 7 球。
+evidence_links:
+  - https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/
+  - https://x.com/demishassabis/status/2110041008100843835
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handle batch: demishassabis)
+media_urls:
+  - https://i.ytimg.com/vi/LVEfFyijQ2c/hqdefault.jpg
+  - https://i.ytimg.com/vi/WwDApkotwy0/hqdefault.jpg

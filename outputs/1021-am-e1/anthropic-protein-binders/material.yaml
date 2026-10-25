@@ -1,0 +1,81 @@
+material_id: 1021-am-e1-anthropic-protein-binders
+round: chuangzuo_round_78
+slot: 1021-am-e1
+picked_at: 2026-10-21T09:36:00+08:00
+source:
+  handle: AnthropicAI
+  post_id: 2112579261358023071
+  url: https://x.com/AnthropicAI/status/2112579261358023071
+  text: >-
+    New on our Science Blog: designing protein binders against scorpion
+    neurotoxins. Scorpions sting about 1.2m people every year, and
+    antivenoms are often costly or in short supply. Claude has made an
+    early step toward finding new treatments.
+  posted_ago: 9h
+metrics_at_pick:
+  views: 1_000_000
+  replies: 364
+  reposts: 659
+  likes: 5300
+dedup:
+  by_post_id: clean
+  by_topic_signature: clean
+  recent_handle_repeat: none_recent
+topic_signature: claude-designs-protein-binders-wet-lab-paradigm
+ai_topic: protein-design-claude
+cluster: 25
+cluster_note: >-
+  本轮选技术/实操线 cluster 25。前一轮 chuangzuo_round_77 (cluster 24 哑巴 IR) 互动率
+  约为技术向的一半 (1h=10 likes vs 1h=19 likes)，Frank 决定 cluster 25 改走
+  科学 × AI 应用 — Claude 64 小时生成 30 万 designs、211 个送去湿实验。这是
+  AI 进入湿实验环节的范式转换，与 Frank 23:14 后强调"低美感、强执行力"的实操
+  风格一致。
+worth_posting_signals:
+  - 具体数字（64 小时 / 30 万 / 211 / 1.2m / $15M）
+  - 范式转换（dry lab → wet lab）
+  - 可截图验证（Anthropic 官方 Science Blog 链接）
+  - 跨学科（AI + 结构生物学 + 临床医学）
+filter_check:
+  min_view_count_15k: pass (1M)
+  ai_keyword_required: pass (Claude + protein + design)
+  lang_priority_zh: pass (中文 L1 文风)
+  not_dropped_handle: pass (AnthropicAI active)
+  no_company_self_promo: pass (零 OpenCSG/DeepSeek/Moonshot/MiniMax)
+treatment:
+  plan: regular_post
+  reason: 源帖为高优官方 Science Blog 发布，独立观点 + X auto quote embed 嵌入源帖
+  quote_embed_via_x_url: true
+  x_url_to_embed: https://x.com/AnthropicAI/status/2112579261358023071
+media:
+  count: 0
+  note: >-
+    mcp_browser 真图 upload 路径卡死 hard constraint 持续（data-testid="fileInput"
+    隐藏 input[type='file'] ref 拿不到，已 38+ entries 0 真图，Frank 默认接受）。
+    本轮走 0 图 emergency path，纯文字帖 + 源帖 URL。
+voice:
+  language: zh-CN
+  tone: 口语爆款风 + 技术实操
+  cluster_id: cluster-25-tech-ops
+  length_target: 180-230
+  openings_used: 具体事件起手 ("昨晚看到了 AnthropicAI 这条")
+  closings_used: 陈述句收 ("AI 暂时还替不了")
+  human_tells:
+    - 具体从业体感 ("我做评测那几年，没动过蛋白，但卡点一样")
+    - 承认范围局限 ("做评测那几年")
+    - 数字串连续但解释边界 ("几百")
+  banned_dict_check:
+    闭环: none
+    护城河: none
+    底层逻辑: none
+    颗粒度: none
+    方法论: none
+    数据复利: none
+  banned_opening_check:
+    - 'I 个 反过来式 X不是Y' -> none (after draft final draft)
+self_check:
+  has_specific_numbers: pass (64/30万/211/几百)
+  has_source_link: pass (AnthropicAI post URL embedded)
+  no_company_self_promo: pass
+  has_hashtag_storm: false
+  has_ai_generated_images: false (走 0 图 emergency)
+  length_in_band: pass (~196 中文字符)

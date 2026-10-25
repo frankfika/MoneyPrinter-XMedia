@@ -1,0 +1,21 @@
+DeepSeek 又上了个台阶。
+
+Bindu Reddy 刚发了一条：现在 DeepSeek 在开源榜上顶到第一，超过了 Muse Wonder、Haiku、Luna，
+按"每个任务的成本"算也是最便宜那一档。
+
+评论区两派在吵——
+
+一派觉得开源这次真把 Gemini 4 Argon 拉下神坛了；
+另一派觉得 Argon 还是写代码 / 长任务的王，DeepSeek 这种"性价比之王"追不上。
+
+站哪边这事不急着下结论，但有一个事实已经改了：
+"开源 = 弱" 这一刻是过去式了。
+
+https://x.com/bindureddy/status/2111660936469901326
+
+# material_id: 1018-pm-01
+# treatment: quote_retweet
+# screenshots: x-bindu-post-detail.png, x-bindu-profile-top.png
+
+# posted_url: https://x.com/FrankFika/status/2111700782471090521
+# posted_at: 2026-10-18T14:08:00+08:00

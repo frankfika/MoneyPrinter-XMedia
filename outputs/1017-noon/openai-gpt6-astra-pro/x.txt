@@ -1,0 +1,15 @@
+GPT-6 直接开挂了。
+
+OpenAI 今天给 ChatGPT Pro 用户推了个新档:同一个任务,可以同时派多个 agent 平行去做,谁干完了你点开就能看成果。
+
+7 小时 88 万浏览、近 1 万赞 —— 热度刚起飞。
+
+之前用 agent 都是「建一个、派活、等结果」的串行逻辑,现在终于同时能干好几件事了,研究、写代码、跑分析那种多线程场景直接起飞。
+
+Pro 已经能用,我等 Plus 也吃上这口。
+
+https://x.com/OpenAI/status/2111192259073094035
+
+# material_id: 1017-noon-01
+# treatment: quote_retweet
+# screenshots: x-openai-post.png, x-openai-profile-top.png, x-openai-media-1.jpg, x-openai-media-2.jpg

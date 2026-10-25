@@ -1,0 +1,24 @@
+material_id: 1018-am-pre2-02
+slot: am-pre2
+scanned_at: '2026-10-18T10:58:00+08:00'
+author:
+  name: Jensen Huang
+  handle: JensenHuang
+  lang: en
+original:
+  url: https://x.com/JensenHuang/status/2105348324484342238
+  post_id: '2105348324484342238'
+  posted_at: '2026-10-16T20:00:00+00:00'
+metrics:
+  views: 2147965
+  likes: 0
+  retweets: 0
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  昨天白宫，超 AI 各家签了「Superintelligence Accord」：建这个东西的公司负主要责任，内部管控 + 外部独立评估 + 董事会层级监督，签了就要担责。
+evidence_links:
+  - https://x.com/JensenHuang/status/2105348324484342238
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

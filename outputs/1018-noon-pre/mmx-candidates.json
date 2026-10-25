@@ -1,0 +1,7 @@
+{
+  "scanned_at": "2026-10-18T12:05:00+08:00",
+  "plan": "C-mmx-lite",
+  "note": "mmx organic results lack view_count → min_view_count=15000 filter cannot apply; candidates listed as reference only. NOT promoted to material.yaml without cua_repl.",
+  "candidate_count": 0,
+  "candidates": []
+}

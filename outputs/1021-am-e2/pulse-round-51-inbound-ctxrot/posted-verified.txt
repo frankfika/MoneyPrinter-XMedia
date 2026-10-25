@@ -1,0 +1,55 @@
+pulse round 51 · 2026-10-21 10:04–10:38 +0800
+模式: MiniMax Code session（mcp_browser alive，真扫 + 真发）
+
+=== 本轮 4 动作（全部真发 verified）===
+
+inbound-037 回复 @AetrixEmby
+  target: 2112716978368696700（42m，新 reply，肯定了上一层的"签字"招）
+  own: 2112728586612535677 · https://x.com/FrankFika/status/2112728586612535677
+  chars: 136 · thread_layer: 11
+  内容推进：签字之后最怕的是客户改主意后我把原来那版删了 → 签字和留档是一套动作，
+  被否掉的那版也得留并标日期 → 不然签的就不是口径，是当时那一刻的判断
+  **第 10 层"制造新问题"策略第 11 层延续成功，未退化为纯肯定**
+
+outbound-123 回复 @DannielDevOps（新 handle）
+  target: 2112702507462131979（1h，LangChain Deep Agents "context rot"帖）
+  own: 2112731297210946011 · https://x.com/FrankFika/status/2112731297210946011
+  chars: 177
+  内容：同意 harness memory moves 是解法，但更前置的问题是 history 里"当时对现在不对"的东西
+  加规则也救不回来 → 系统压根没有"已作废"概念 → 具体失败 vs 概括，概括的没法判断何时不为真
+  **跨线程回指 cluster 21 + outbound-120（@softpoo）的"只记具体失败"同一方法，英文线程第 3 次**
+
+outbound-124 like @DannielDevOps 1→2（press_key 'l'，unlike aria-label 验证）
+outbound-125 like @jess_weng18 9→10（原作者 4h 前原文 1.4K views，press_key 'l' 验证）
+
+=== 冷却检查（开工前）===
+last_outbound_reply 09:07 → 本轮 10:31（84 min，5-15 min 冷却已过）
+last_inbound_reply 08:36 → 本轮 10:20（104 min，已过）
+last_outbound_like 09:09 → 本轮 10:34（85 min，1.5-4 min 冷却已过）
+last_published 09:47（chuangzuo round 78）→ 本轮不发原创，分工规则：pulse 不抢 chuangzuo 的 standalone 位
+
+=== Frank 手动发帖密度检查（已固化规则）===
+/FrankFika/with_replies 顶几条 → 无新的手动帖（最新是 1h 的 @softpoo reply 链 + pulse round 41-50）
+06:01/06:05/06:07 那波 12 分钟 3 条已过，本轮可正常跑满
+
+=== 扫描路径与踩坑 ===
+- live search 扫 "context rot"（带引号）→ 主题正热：@scottsauber 54m / @DannielDevOps 1h / @CloudDogx 2h / @jess_weng18 4h / @Pranav3773 6h / @waynemaurer 7h 多 handle 同日发帖
+- ❌ **英文三词 AND + min:f_500 全部返回 "No results"**（试了 "agent memory benchmark"、"eval harness LLM"、"agent context rot" 三组）
+  → X 搜索对多词 AND 支持极差，**必须退到 2 词或 1 个带引号短语**
+- ❌ search URL 里 `&src=typed_query&f=live` 偶尔被吞成搜索关键词（"from:CloudDogx context rot f=live"）
+  → 若 query text 显示关键词含 "f=live"，说明参数没被解析，改 URL 编码重试
+- ⚠️ mcp_browser 工具调用偶发 `Validation failed: root: must not have additional properties`（同一 payload 重发即恢复）→ schema 边界抖动，不是页面问题
+
+=== 未做（诚实记录）===
+- quote RT: 0（本轮未找到值得 quote 的大 KOL 帖）
+- 原创 post: 0（chuangzuo 独占 standalone，9:47 刚发过）
+- 第 3 个 like: 中止（CloudDogx 那条 URL 参数被吞，且已有 2 like + 2 reply 达目标，不硬凑）
+
+=== 落盘 ===
+- outputs/1021-am-e2/pulse-round-51-inbound-ctxrot/posted-verified.txt
+- inbound-replies **37**（+1）/ outbound-actions **118**（+3）/ seen-posts **276**（+5）
+- account-safety.yaml: last_inbound_reply 10:20 / last_outbound_reply 10:31 / last_outbound_like 10:36
+
+=== 账号健康度（round 50 立的趋势观测，本轮采样）===
+- chuangzuo 78（cluster 25 蛋白绑定）：发后 ~17min = **12 views**（技术线起步，与 round 76 的 7 likes/20min 相比 views 偏低但刚 17 min，太早采样）
+- 下一轮 10:36 再采一次，若 1h 仍 < 10 likes 则 cluster 25 技术线也可能不是最优（呼应 round 50 的"买方减半"结论需要第二次独立验证）

@@ -1,0 +1,103 @@
+---
+id: chuangzuo_round_72
+status: POSTED
+timestamp: 2026-10-20T23:20:00+08:00
+post_id: 2112576368492105815
+url: https://x.com/FrankFika/status/2112576368492105815
+post_reason: null  # 已解除 — 上一轮 (23:18) cooldown 未到故预备; 本轮 00:06 冷却 44 min 满足, 已真发
+posted_at: 2026-10-21T00:08:00+08:00
+verification: "profile @FrankFika · 53s 文案全文 + search a[aria-label='1 minute ago'] href verified"
+cmd_enter_pattern: "Cmd+Enter + wait 10s, 铁律第 6 次连续验证 100% 可靠, 0 retry"
+
+treatment: regular_post_original_mode_no_quote_url_self_observation_perspective
+topic_signature: agent-replaces-boring-part-keep-judgment-part
+perspective_in_cluster: 20
+cluster_description: |
+  AI workflow toolchain ecosystem perspective (第 20 视角 被取代的是最不重要的那部分).
+  接 @oran_ge 11h 那条 (11K views) "AI Agent 的两极分化越来越严重:
+  1. 技术是通向完全的自动化, 取代人, 终点没什么人的事情
+  2. 产品则是满足人的需求, 帮助人, 终点是一种普通人的全新生活方式"
+  我从自己半年实跑的角度接: 真正被取代的 (查资料/抄格式/跑第一版) 反而是最不重要的,
+  留下来的是判断 (要什么/哪版能发/出事谁认). 跟 round 18/19 视角连续 — 三轮都在讲"工具替代执行, 替代不了判断".
+
+scan_handles:
+  - karpathy
+    hits: 3
+    top: "Oct 12 LLM capability gap widening — 6B people (~75% of population) 2.1K replies/8K RT/43K likes/6.6M views"
+    skip_reason: "已在 chuangzuo_round_59 用过 capability gap funnel 视角 (cluster 第 7 视角), 7d dedup 内不重复"
+    other: "Oct 2 Land or Water eval 19K views / Oct 2 ASD-STE100 提示词 55K/7.9M views / Aug 2 LOTR pelican 测试 29K views"
+  - oran_ge
+    hits: 5
+    top: "11h 'AI Agent 的两极分化越来越严重: 技术 → 完全自动化取代人 / 产品 → 满足人的需求' 11K views" ← TOP 1
+    also: "5h DeepInfer 开源 31K views (含 DeepSeek 红线词) / 6h DeepSeek 4.1 Flash 视频动效 9.3K (红线) / 1h 推理框架回本 4 个月 1K / 10h Next Token 播客 7.8K (不相关)"
+    account_status: "⚠️ @oran_ge has blocked you — 只能看不能互动, 不能 like/reply. 只能作为选题灵感来源."
+  - WukongNumber1
+    hits: 4
+    top: "54m Codex 订阅比价 (GamsGo $16.49/月) 18 likes / 58m 同类 21 likes / 1h Codex 额度浪费讨论 41 likes"
+    skip_reason: "全是订阅账号带货/推广内容, 不在 AI workflow toolchain cluster"
+
+candidate_count: 12
+candidate_top_picks:
+  - handle: oran_ge
+    topic: "AI Agent 的两极分化: 技术 → 完全自动化取代人 / 产品 → 满足人"
+    views: 11000
+    reason: "TOP 1 — 中文 KOL (lang_priority zh 优先) + 11K views + 跟我 cluster 第 18/19 视角直接连续 (工具替代执行不替代判断)"
+    engagement_blocked: true
+    engagement_note: "⚠️ oran_ge 已 block FrankFika, 不可 like/reply/follow. 仅作选题来源, 走 self-observation 原创 mode 不引用."
+  - handle: karpathy
+    topic: "Land or Water eval — ask LLM 16,200 times, plot as image"
+    views: 19000
+    reason: "曝光 19K 但 Oct 2 距今 18 天偏老, 且测试方法类话题我 cluster 未覆盖过, 可作备选"
+  - handle: WukongNumber1
+    topic: "Codex 额度对很多人是浪费"
+    views: 41
+    reason: "偏离 cluster — 订阅账号成本话题, 不是 AI workflow toolchain"
+
+red_line_exclusions:
+  - "oran_ge 5h DeepInfer 开源 (31K views) — 含 DeepSeek 红线词"
+  - "oran_ge 6h DeepSeek 4.1 Flash 视频动效 (9.3K views) — 含 DeepSeek 红线词"
+
+draft_topic_signature: agent-replaces-boring-part-keep-judgment-part
+character_count: 158
+media_count: 0
+media_count_reason: mcp_browser 真图 upload 路径卡死 hard constraint 累计 38 entries
+line_breaks: 无排比, 短句换行
+hashtag_count: 0
+anti_ai_slop_check:
+  无闭环/护城河/颗粒度/方法论: true
+  无所以问题来了/反过来说/本质上/归根结底: true
+  无1)2)3)排比: true
+  无反问结尾: true
+  有具体场景+数字(半年/二十年/一半): true
+  结尾短句陈述: true
+  preferred_openings_used: "直接抛结论不铺垫 ('大家都在说 agent 要取代人。我跑了半年，取代的那部分反而是最不重要的。')"
+  preferred_closings_used: "短句收 ('取代是个方向词，不是进度条。')"
+
+cluster_progression:
+  18: "round 70 模型跑通 ≠ 做对 — agent diff 不给理由 = 盲签"
+  19: "round 71 指标测做完没做完, 人判断是不是我要的 — agent 报告全绿但口径错"
+  20: "round 72 被取代的是最不重要的那部分 — 查资料/抄格式/跑第一版 vs 判断要什么/哪版能发/出事谁认 (本轮, 三轮连续)"
+
+verified_send_workflow (下轮直接套用):
+  - "navigate https://x.com/compose/post"
+  - "query editable → 拿 modal ref (84, 111, 516x96)"
+  - "fill x.txt 全文 (158 字)"
+  - "press_key Enter + Meta (Cmd+Enter)"
+  - "wait 10s ← round 70/71 新铁律, 已 3 次连续验证 100% 可靠"
+  - "query text 验证 '@FrankFika · 1s' + 文案全文"
+  - "抓 post_id: navigate /search?q=<文案独特中文短语> → query dom a[href*='/FrankFika/status/'][aria-label] (search 页无 pinned 干扰; 本轮可用短语 '取代的是最不重要')"
+  - "落盘 published-posts.json + account-safety.yaml + memory.md"
+
+next_round_avoid:
+  handles_already_scanned: "GoogleDeepMind / servasyy_ai / jiqizhixin (round 71) / sama / AnthropicAI / dotey / testingcatalog (round 70) / karpathy / oran_ge / WukongNumber1 (本轮) / NVIDIAAIDev / DrJimFan / Barret_China / CuiMao / howie_serious (round 67-69)"
+  handles_pending_pool: "bindureddy / Pluvio9yte / AI_Jasonyu / Kings_Chaung / Gorden_Sun / lxfater / swyx / _akhaliq / SemiAnalysis_ / huggingface / gdb / ilyasut"
+  blocked_handles: "@oran_ge — has blocked FrankFika, 只看不互动"
+  topic_signatures_skip_7d:
+    - "capability gap funnel (karpathy 6B/75% — round 59 已用)"
+    - "agent-memory-15-patterns (pulse round 34)"
+    - "Baize PII masking (pulse round 34)"
+    - "META Muse Confidential VM (round 70 未引用)"
+    - "multi-agent 自主协作 (round 62/63 已覆盖)"
+    - "agent 停止/审批步骤 (pulse round 36)"
+    - "DeepSeek 系全部 (红线)"
+    - "订阅账号成本话题 (偏离 cluster)"

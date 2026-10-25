@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-10-20T01:13:00+08:00",
+  "purpose": "近期选题记忆",
+  "entries": [
+    {
+      "handle": "karminski3",
+      "post_id": "2110849142490865909",
+      "topic_signature": "meta-muse-spark-open-source-1m-context-816b-moe-multi-modal",
+      "treatment": "like_only_diversify_handle_engagement",
+      "picked_at": "2026-10-19T19:35:00+08:00",
+      "round": "pulse_59"
+    },
+    {
+      "handle": "karminski3",
+      "post_id": "2111233801477411159",
+      "topic_signature": "meta-muse-spark-open-source-test-deepseek-flash-comparison",
+      "treatment": "reply_riding_traffic_regular_post_original_mode",
+      "picked_at": "2026-10-19T19:00:00+08:00",
+      "round": "pulse_58",
+      "own_reply_id": "2112137346863034399"
+    },
+    {
+      "handle": "Pluvio9yte",
+      "post_id": "2111978135495508154",
+      "topic_signature": "ai-monetization-attention-cognition-delivery-asset-paths",
+      "treatment": "like_only_continue_thread_engagement",
+      "picked_at": "2026-10-19T18:33:00+08:00",
+      "round": "pulse_57",
+      "own_reply_id": "2112129599467659567"
+    },
+    {
+      "handle": "tuturetom",
+      "post_id": "2111044476273910123",
+      "topic_signature": "claude-motion-opendesign-motion-opus55-alternative-tool-vendor-lock",
+      "treatment": "reply_riding_traffic_regular_post_original_mode",
+      "picked_at": "2026-10-19T18:14:00+08:00",
+      "round": "pulse_56",
+      "own_reply_id": "2112125482124935606"
+    },
+    {
+      "picked_at": "2026-10-19T17:39:00+08:00",
+      "handle": "Pluvio9yte",
+      "post_id": "2111978135495508154",
+      "topic_signature": "ai-monetization-attention-cognition-delivery-asset-paths",
+      "picked_for": "outbound-050_reply_regular_post_original_mode",
+      "reason": "Pluvio9yte 9h AI 变现 帖 18 replies + 42 reposts + 4.5K views + AI 商业模式 discourse. Frank 12:30 急催 regular post 原创 mode 接受, 写自己观察延伸 AI vs SaaS 商业模式 vs asset 沉淀. mcp_browser 自愈 (距 14:42 死锁 cascade 2h 49min).",
+      "action_result": "replied_at_2026-10-19T17:39"
+    },
+    {
+      "picked_at": "2026-10-19T14:08:00+08:00",
+      "handle": "AlchainHust",
+      "post_id": "2112054555714474354",
+      "topic_signature": "huashu-motion-vibe-coding-product-video-prompt-url-minimal-input",
+      "picked_for": "outbound-049_reply_regular_post_original_mode",
+      "reason": "AlchainHust 花叔 中文 AI 开发者 69.5K followers first scan. 31m trustmrr 帖 huashu-motion AI 工具 (提示词仅仅是把网站链接丢了进去) AI 主题命中. Frank 12:30 急催 regular post 原创 mode 接受, 写自己观察延伸 vibe coding 工序压缩观点. 注意: 跳过其他帖子含 DeepSeek 红线词",
+      "action_result": "replied_at_2026-10-19T14:08"
+    },
+    {
+      "picked_at": "2026-10-19T13:34:00+08:00",
+      "handle": "CuiMao",
+      "post_id": "2111880138099216491",
+      "topic_signature": "claude-orange-color-anthropic-brand-design",
+      "picked_for": "outbound-048_reply_regular_post_original_mode",
+      "reason": "CuiMao 中文 AI 开发者 78K followers first scan. 11h claude 橘黄色 帖 @claudeai 3.9K views + 87 reposts AI 主题命中. Frank 12:30 急催 regular post 原创 mode 接受, 写自己延伸 claude 色彩品牌资产观察",
+      "action_result": "replied_at_2026-10-19T13:34"
+    },
+    {
+      "picked_at": "2026-10-19T13:10:06.347205+08:00",
+      "handle": "Pluvio9yte",
+      "post_id": "2110722261158383982",
+      "topic_signature": "gemini-4-argon-aigc-multimodal-pipeline",
+      "picked_for": "outbound-047_reply_regular_post_original_mode",
+      "reason": "Frank 12:30 急催 regular post 原创 mode 接受. Pluvio9yte 帖 Gemini 4 Argon 多模态原生 vs Opus 5.5 诗人比喻 可延伸工业流水线工序可拆论点",
+      "action_result": "replied_at_2026-10-19T13:08"
+    },
+    {
+      "topic_signature": "ilyasut-sep-2-neocloud-agent-cybersecurity-cn-cloud-lag",
+      "handle": "ilyasut",
+      "source_post_id": "2094881278621253755",
+      "own_post_id": "2111991126727258624",
+      "first_picked_at": "2026-10-19T09:21:00+08:00",
+      "expires_at": "2026-10-26T09:21:00+08:00",
+      "note": "Frank 09:19 急催\"每三小时就要发几篇啊\" trigger; 真图 0 硬约束紧急绕过用纯文字; Quote Retweet of ilyasut Sep 2 neocloud 帖"
+    },
+    {
+      "topic_signature": "demishassabis-amie-clinical-utility-lancet-paper-real-world",
+      "handle": "demishassabis",
+      "picked_at": "2026-10-19T07:30:30+08:00",
+      "material_id": "1019-am-pulse-30-06",
+      "outbound_id": "outbound-035",
+      "outbound_action": "like",
+      "own_post_id": null,
+      "slot": "am-pulse-30",
+      "expires_at": "2026-10-26T07:30:30+08:00"
+    },
+    {
+      "topic_signature": "sama-navier-stokes-milestone-shirt-chain-of-thought-math-physics-ai",
+      "handle": "sama",
+      "picked_at": "2026-10-19T07:02:30+08:00",
+      "material_id": "1019-am-pulse-30-05",
+      "outbound_id": "outbound-034",
+      "outbound_action": "like",
+      "own_post_id": null,
+      "slot": "am-pulse-30",
+      "expires_at": "2026-10-26T07:02:30+08:00"
+    },
+    {
+      "topic_signature": "xiaohu-ai-bot-apikey-injection-test-gpt-claude-gemini-9h",
+      "handle": "xiaohu",
+      "picked_at": "2026-10-19T06:30:30+08:00",
+      "material_id": "1019-am-pulse-30-04",
+      "outbound_id": "outbound-033",
+      "outbound_action": "like",
+      "own_post_id": null,
+      "slot": "am-pulse-30",
+      "expires_at": "2026-10-26T06:30:30+08:00"
+    },
+    {
+      "topic_signature": "vista8-lex-fridman-cn-502-episodes-podcast-chinese-asr-translation",
+      "handle": "vista8",
+      "picked_at": "2026-10-19T06:00:30+08:00",
+      "material_id": "1019-am-pulse-30-03",
+      "outbound_id": "outbound-032",
+      "outbound_action": "like",
+      "own_post_id": null,
+      "slot": "am-pulse-30",
+      "expires_at": "2026-10-26T06:00:30+08:00"
+    },
+    {
+      "topic_signature": "akhaliq-few-step-generation-data-space-iteration-arxiv-2610-12102",
+      "handle": "_akhaliq",
+      "picked_at": "2026-10-19T05:30:30+08:00",
+      "material_id": "1019-am-pulse-30-02",
+      "outbound_id": "outbound-031",
+      "outbound_action": "like",
+      "own_post_id": null,
+      "slot": "am-pulse-30",
+      "expires_at": "2026-10-26T05:30:30+08:00"
+    },
+    {
+      "topic_signature": "aigclink-google-harness2-agent-execution-system-self-optimization-propose-probe-compose",
+      "handle": "aigclink",
+      "picked_at": "2026-10-19T05:00:30+08:00",
+      "material_id": "1019-am-pulse-30-01",
+      "outbound_id": "outbound-030",
+      "outbound_action": "like",
+      "own_post_id": null,
+      "slot": "am-pulse-30",
+      "expires_at": "2026-10-26T05:00:30+08:00"
+    },
+    {
+      "topic_signature": "emollick-odyssey-fruit-fly-brain-world-model-neuroscience",
+      "handle": "emollick",
+      "picked_at": "2026-10-18T23:25:00+08:00",
+      "material_id": "1018-pm-c5-01",
+      "own_post_id": "2111841014138945569",
+      "slot": "pm-c5",
+      "expires_at": "2026-10-25T23:25:00+08:00"
+    },
+    {
+      "topic_signature": "testingcatalog-opencode-distillation-attack",
+      "handle": "testingcatalog",
+      "picked_at": "2026-10-18T12:10:11.279885+08:00",
+      "material_id": "1018-noon-pre-03",
+      "own_post_id": "2111671055349956981",
+      "slot": "noon-pre",
+      "expires_at": "2026-10-25T12:10:11.284030+08:00"
+    },
+    {
+      "topic_signature": "aigclink-os-taxonomy-ai-tutor",
+      "handle": "aigclink",
+      "picked_at": "2026-10-18T12:08:42.093541+08:00",
+      "material_id": "1018-noon-pre-02",
+      "own_post_id": "2111670680353997188",
+      "slot": "noon-pre",
+      "expires_at": "2026-10-25T12:08:42.097481+08:00"
+    },
+    {
+      "topic_signature": "semanalysis-glm53-posttraining-wakeup-call",
+      "handle": "SemiAnalysis_",
+      "picked_at": "2026-10-18T12:06:00.566104+08:00",
+      "material_id": "1018-noon-pre-01",
+      "own_post_id": "2111669987178074371",
+      "slot": "noon-pre",
+      "expires_at": "2026-10-25T12:06:00.570657+08:00"
+    },
+    {
+      "topic_signature": "semanalysis-gpt7-agi-broadcom-vertical-integration-meme",
+      "handle": "SemiAnalysis_",
+      "picked_at": "2026-10-18T01:35:00+08:00",
+      "material_id": "1018-night-pre-01",
+      "own_post_id": "2111513916601925649",
+      "slot": "night-pre",
+      "expires_at": "2026-10-25T01:35:00+08:00"
+    },
+    {
+      "topic_signature": "semanalysis-nvidia-pressure-tactics-events",
+      "handle": "SemiAnalysis_",
+      "picked_at": "2026-10-18T01:35:00+08:00",
+      "material_id": "1018-night-pre-02",
+      "own_post_id": "2111514453179330804",
+      "slot": "night-pre",
+      "expires_at": "2026-10-25T01:35:00+08:00"
+    },
+    {
+      "topic_signature": "semanalysis-agent-access-war-muse-app-store-blocked",
+      "handle": "SemiAnalysis_",
+      "picked_at": "2026-10-18T01:35:00+08:00",
+      "material_id": "1018-night-pre-03",
+      "own_post_id": "2111515036833419747",
+      "slot": "night-pre",
+      "expires_at": "2026-10-25T01:35:00+08:00"
+    },
+    {
+      "topic_signature": "karpathy-opus5-lotr-render-pelican",
+      "handle": "karpathy",
+      "picked_at": "2026-10-17T17:07:34.541779+08:00",
+      "material_id": "1017-pm-pre4-03",
+      "own_post_id": "2111383273683538379",
+      "slot": "pm-pre4"
+    },
+    {
+      "topic_signature": "qwen3-8-flash-open-weight-multimodal-moe",
+      "handle": "Alibaba_Qwen",
+      "picked_at": "2026-10-17T17:07:34.541779+08:00",
+      "material_id": "1017-pm-pre4-02",
+      "own_post_id": "2111382861848953292",
+      "slot": "pm-pre4"
+    },
+    {
+      "topic_signature": "jensenhuang-nvidia-open-agent-safety-platform",
+      "handle": "JensenHuang",
+      "picked_at": "2026-10-17T17:07:34.541779+08:00",
+      "material_id": "1017-pm-pre4-01",
+      "own_post_id": "2111382517140111816",
+      "slot": "pm-pre4"
+    },
+    {
+      "topic_signature": "karminski3-meta-muse-spark-open-source-816b-moE",
+      "handle": "karminski3",
+      "picked_at": "2026-10-17T16:37:23.980459+08:00",
+      "material_id": "1017-pm-pre3-03",
+      "own_post_id": "2111375943982088639",
+      "slot": "pm-pre3"
+    },
+    {
+      "topic_signature": "huggingface-new-open-weight-model-livestream",
+      "handle": "huggingface",
+      "picked_at": "2026-10-17T16:36:15.676607+08:00",
+      "material_id": "1017-pm-pre3-02",
+      "own_post_id": "2111375607162638465",
+      "slot": "pm-pre3"
+    },
+    {
+      "topic_signature": "bindureddy-3d-mobile-apps-prompt-game",
+      "handle": "bindureddy",
+      "picked_at": "2026-10-17T16:34:35.837004+08:00",
+      "material_id": "1017-pm-pre3-01",
+      "own_post_id": "2111375241234743622",
+      "slot": "pm-pre3"
+    },
+    {
+      "source_post_id": "2111233972709564917",
+      "handle": "dotey",
+      "topic_signature": "dotey-ai-deepfake-interview",
+      "timestamp": "2026-10-17T13:21:00+08:00",
+      "expires_at": "2026-10-24T13:21:00+08:00",
+      "material_id": "1017-pm-pre-01",
+      "own_post_id": "2111327501133746521"
+    },
+    {
+      "source_post_id": "2111130577789493706",
+      "handle": "sama",
+      "topic_signature": "sama-nick-cammarata-mechanistic-interpretability-coming",
+      "timestamp": "2026-10-17T12:12:10+08:00",
+      "expires_at": "2026-10-24T12:12:10+08:00",
+      "material_id": "1017-noon-03",
+      "own_post_id": "2111308934753759368"
+    },
+    {
+      "source_post_id": "2111139227761266699",
+      "handle": "sama",
+      "topic_signature": "sama-navier-stokes-milestone-shirt-cot",
+      "timestamp": "2026-10-17T12:07:44+08:00",
+      "expires_at": "2026-10-24T12:07:44+08:00",
+      "material_id": "1017-noon-02",
+      "own_post_id": "2111308031250317595"
+    },
+    {
+      "source_post_id": "2111192259073094035",
+      "handle": "OpenAI",
+      "topic_signature": "openai-gpt6-astra-pro-multi-agent-parallel",
+      "timestamp": "2026-10-17T12:05:47+08:00",
+      "expires_at": "2026-10-24T12:05:47+08:00",
+      "material_id": "1017-noon-01",
+      "own_post_id": "2111307396790554859"
+    },
+    {
+      "source_post_id": "2108899240907084067",
+      "handle": "tuturetom",
+      "topic_signature": "tuturetom-opendesign-deepseek-v4-1-flash-8-dollar",
+      "timestamp": "2026-10-16T11:34:00+08:00",
+      "expires_at": "2026-10-23T11:34:00+08:00",
+      "material_id": "1016-pm2-02",
+      "own_post_id": "2110936592114413991"
+    },
+    {
+      "source_post_id": "2109479265653961213",
+      "handle": "FinanceYF5",
+      "topic_signature": "sv-ai-company-geo-bay-area-density",
+      "timestamp": "2026-10-16T11:22:00+08:00",
+      "expires_at": "2026-10-23T11:22:00+08:00",
+      "material_id": "1016-pm2-01",
+      "own_post_id": "2110933022040367246"
+    },
+    {
+      "source_post_id": "2110872881261601280",
+      "handle": "testingcatalog",
+      "topic_signature": "testingcatalog-gemini-4-argon-antigravity-pro-rollout",
+      "timestamp": "2026-10-16T11:18:00+08:00",
+      "expires_at": "2026-10-23T11:18:00+08:00",
+      "material_id": "1016-pm2-03",
+      "own_post_id": "2110932242709283075"
+    },
+    {
+      "source_post_id": "2110891071706198431",
+      "handle": "SemiAnalysis_",
+      "topic_signature": "google-tpuv7-vs-gb300-agent-bench",
+      "timestamp": "2026-10-16T10:38:00+08:00",
+      "expires_at": "2026-10-23T10:34:00+08:00",
+      "material_id": "1016-pm-01",
+      "own_post_id": "2110922703658184804"
+    },
+    {
+      "source_post_id": "2110758191256715504",
+      "handle": "Gorden_Sun",
+      "topic_signature": "gorden-sun-ai-sister-video-demo",
+      "timestamp": "2026-10-16T10:38:00+08:00",
+      "expires_at": "2026-10-23T10:36:00+08:00",
+      "material_id": "1016-pm-02",
+      "own_post_id": "2110922866233598034"
+    },
+    {
+      "source_post_id": "2110769358402408926",
+      "handle": "lxfater",
+      "topic_signature": "lxfater-v100-deepseek-opencode-free",
+      "timestamp": "2026-10-16T10:38:00+08:00",
+      "expires_at": "2026-10-23T10:38:00+08:00",
+      "material_id": "1016-pm-03",
+      "own_post_id": "2110923141904261150"
+    },
+    {
+      "topic_signature": "nvidia-starmind-spacx-elon-musk-ai-supercomputer",
+      "first_picked_at": "2026-10-16T07:11:09.053355+08:00",
+      "source_post_id": "2110817988311998911",
+      "author": "nvidia",
+      "own_post_id": "2110871037567226086",
+      "expires_at": "2026-10-23T07:14:00+08:00"
+    },
+    {
+      "topic_signature": "openai-rosalind-academic-plan-data-default-optout",
+      "first_picked_at": "2026-10-16T07:10:01.027773+08:00",
+      "source_post_id": "2110841899838046525",
+      "author": "OpenAI",
+      "own_post_id": "2110870735619289325",
+      "expires_at": "2026-10-23T07:08:00+08:00"
+    },
+    {
+      "topic_signature": "dotey-anthropic-distillation-5-to-7-percent-revenue",
+      "first_picked_at": "2026-10-16T01:14:06.063593+08:00",
+      "expires_at": "2026-10-23T01:14:06.063593+08:00"
+    },
+    {
+      "topic_signature": "bindureddy-argon-in-production-excel-data-analysis",
+      "first_picked_at": "2026-10-16T01:14:06.063593+08:00",
+      "expires_at": "2026-10-23T01:14:06.063593+08:00"
+    },
+    {
+      "topic_signature": "op7418-grokbot-threads-to-long-doc-mobile",
+      "first_picked_at": "2026-10-16T01:14:06.063593+08:00",
+      "expires_at": "2026-10-23T01:14:06.063593+08:00"
+    },
+    {
+      "topic_signature": "akhaliq-thinking-inertia-llms-keep-thinking-told-not-to",
+      "first_picked_at": "2026-10-16T01:40:00+08:00",
+      "expires_at": "2026-10-23T01:45:00+08:00"
+    },
+    {
+      "topic_signature": "akhaliq-videojev-one-model-video-understanding-interaction",
+      "first_picked_at": "2026-10-16T01:34:00+08:00",
+      "expires_at": "2026-10-23T01:45:00+08:00"
+    },
+    {
+      "topic_signature": "nvidia-nemotron-3-5-super-vl-open-source-agent",
+      "first_picked_at": "2026-10-16T01:24:00+08:00",
+      "expires_at": "2026-10-23T01:45:00+08:00"
+    },
+    {
+      "topic_signature": "nvidia-muse-knows-alexandr-wang-jensen-guanxi",
+      "first_picked_at": "2026-10-15T23:16:45.325077+08:00",
+      "expires_at": "2026-10-22T23:16:45.325077+08:00"
+    },
+    {
+      "topic_signature": "nvidia-stockholm-nordics-gtc-berlin-spotify-abb",
+      "first_picked_at": "2026-10-15T23:15:37.734596+08:00",
+      "expires_at": "2026-10-22T23:15:37.734596+08:00"
+    },
+    {
+      "topic_signature": "deepmind-argon-scientific-breakthroughs-quantum-plasma-protein",
+      "first_picked_at": "2026-10-15T23:12:27.571856+08:00",
+      "expires_at": "2026-10-22T23:12:27.571856+08:00"
+    },
+    {
+      "topic_signature": "anthropic-q3-income-slowdown-vs-market-expectation",
+      "first_picked_at": "2026-10-15T22:18:10.013295+08:00",
+      "expires_at": "2026-10-22T22:18:10.014154+08:00"
+    },
+    {
+      "topic_signature": "deepmind-synthid-time-best-inventions",
+      "first_picked_at": "2026-10-15T22:25:00+08:00",
+      "expires_at": "2026-10-22T22:17:19.758481+08:00"
+    },
+    {
+      "topic_signature": "karpathy-llm-land-or-water-eval",
+      "first_picked_at": "2026-10-15T22:21:00+08:00",
+      "expires_at": "2026-10-22T22:17:19.758481+08:00"
+    },
+    {
+      "topic_signature": "karpathy-llm-output-formats",
+      "first_picked_at": "2026-10-15T22:15:00+08:00",
+      "expires_at": "2026-10-22T22:17:19.758481+08:00"
+    },
+    {
+      "topic_signature": "anthropic-fellowships-2027-stem-conceptual",
+      "first_picked_at": "2026-10-15T22:16:20.646473+08:00",
+      "expires_at": "2026-10-22T22:16:20.647808+08:00"
+    },
+    {
+      "topic_signature": "sama-ai-safety-religious-force",
+      "first_picked_at": "2026-10-15T16:01:00+08:00",
+      "expires_at": "2026-10-22T16:01:00+08:00"
+    },
+    {
+      "topic_signature": "openai-chatgpt-for-teens-college-planner",
+      "first_picked_at": "2026-10-15T13:05:00+08:00",
+      "expires_at": "2026-10-22T13:05:00+08:00"
+    },
+    {
+      "topic_signature": "anthropic-unintended-model-actions-report",
+      "first_picked_at": "2026-10-15T13:05:00+08:00",
+      "expires_at": "2026-10-22T13:05:00+08:00"
+    },
+    {
+      "topic_signature": "openai-frontier-math-model-open-source",
+      "first_picked_at": "2026-10-15T13:05:00+08:00",
+      "expires_at": "2026-10-22T13:05:00+08:00"
+    },
+    {
+      "topic_signature": "karpathy-frontier-5000-tiers",
+      "first_picked_at": "2026-10-15T15:08:00+08:00",
+      "expires_at": "2026-10-22T15:08:00+08:00"
+    },
+    {
+      "topic_signature": "deepmind-gemini4-argon-launch",
+      "first_picked_at": "2026-10-15T08:49:42+08:00",
+      "expires_at": "2026-10-22T08:49:42+08:00"
+    },
+    {
+      "topic_signature": "anthropic-singapore-office-mou",
+      "first_picked_at": "2026-10-15T08:49:42+08:00",
+      "expires_at": "2026-10-22T08:49:42+08:00"
+    },
+    {
+      "topic_signature": "openai-eu-agentic-8x",
+      "first_picked_at": "2026-10-15T08:49:42+08:00",
+      "expires_at": "2026-10-22T08:49:42+08:00"
+    },
+    {
+      "topic_signature": "anthropic-source-control-agent-scale",
+      "first_picked_at": "2026-10-15T10:26:41.899121+08:00",
+      "expires_at": "2026-10-22T10:26:41.899122+08:00"
+    },
+    {
+      "topic_signature": "openai-gpt6-intelligent-ui",
+      "first_picked_at": "2026-10-15T10:26:41.899121+08:00",
+      "expires_at": "2026-10-22T10:26:41.899122+08:00"
+    },
+    {
+      "topic_signature": "anthropic-distillation-defense",
+      "first_picked_at": "2026-10-15T10:26:41.899121+08:00",
+      "expires_at": "2026-10-22T10:26:41.899122+08:00"
+    },
+    {
+      "topic_signature": "openai-simons-foundation-math-ai-5m",
+      "first_picked_at": "2026-10-15T22:50:12+08:00",
+      "expires_at": "2026-10-22T22:50:12+08:00"
+    },
+    {
+      "topic_signature": "nvidia-jensen-huang-uk-5-ai-startups-london",
+      "first_picked_at": "2026-10-15T22:53:12+08:00",
+      "expires_at": "2026-10-22T22:53:12+08:00"
+    },
+    {
+      "topic_signature": "xai-muse-vs-grokbot-retention-2026q4",
+      "first_picked_at": "2026-10-15T22:56:08+08:00",
+      "expires_at": "2026-10-22T22:56:08+08:00"
+    },
+    {
+      "topic_signature": "openai-gpt-live-1-1-voice-6-languages-rollout",
+      "first_picked_at": "2026-10-16T06:04:21.799689+08:00",
+      "expires_at": "2026-10-23T05:58:00+08:00"
+    },
+    {
+      "topic_signature": "openai-gpt-rosalind-academic-plan-biology-ai",
+      "first_picked_at": "2026-10-16T06:04:21.799689+08:00",
+      "expires_at": "2026-10-23T05:58:00+08:00"
+    },
+    {
+      "topic_signature": "bindureddy-token-spend-anthropic-to-openai-luna-driver",
+      "first_picked_at": "2026-10-16T06:04:21.799689+08:00",
+      "expires_at": "2026-10-23T05:58:00+08:00"
+    },
+    {
+      "source_post_id": "2110823738531037651",
+      "handle": "ChatGPT",
+      "topic_signature": "openai-chatgpt-chrome-tabs-computer-use-rollout",
+      "timestamp": "2026-10-16T08:11:34.422340+08:00",
+      "expires_at": "2026-10-23T08:11:34.423969+08:00",
+      "material_id": "1016-am2-01"
+    },
+    {
+      "source_post_id": "2110820373369360481",
+      "handle": "SemiAnalysis_",
+      "topic_signature": "asml-hybrid-bonding-tool-besi-threat-2-5d-packaging",
+      "timestamp": "2026-10-16T08:11:34.422340+08:00",
+      "expires_at": "2026-10-23T08:11:34.423969+08:00",
+      "material_id": "1016-am2-02"
+    },
+    {
+      "source_post_id": "2110568515757355157",
+      "handle": "MaxForAI",
+      "topic_signature": "apple-intelligence-china-launch-dec-2026-tongyi-qwen-wanxiang",
+      "timestamp": "2026-10-16T08:11:34.422340+08:00",
+      "expires_at": "2026-10-23T08:11:34.423969+08:00",
+      "material_id": "1016-am2-03"
+    },
+    {
+      "topic_signature": "agent-first-editor-mayoi-diff-orchestration",
+      "first_picked_at": "2026-10-16T08:30:29.448301+08:00",
+      "source_post_id": "2110699165051453771",
+      "author": "chenchengpro",
+      "own_post_id": "2110891007047074184",
+      "expires_at": "2026-10-23T08:30:29.449973+08:00"
+    },
+    {
+      "topic_signature": "video-gen-4-call-stack-role-consistency-multi-shot-audio-mcp",
+      "first_picked_at": "2026-10-16T08:39:58.714633+08:00",
+      "source_post_id": "2110788729539547636",
+      "author": "Khazix0918",
+      "own_post_id": "2110893388425986388",
+      "expires_at": "2026-10-23T08:39:58.716354+08:00"
+    },
+    {
+      "topic_signature": "neural-networks-mechanistic-interpretability-agent-clean-feature",
+      "first_picked_at": "2026-10-16T10:55:30+08:00",
+      "source_post_id": "2110923965107704110",
+      "author": "MaxForAI",
+      "own_post_id": "2110928715958145390",
+      "expires_at": "2026-10-23T10:55:30+08:00"
+    },
+    {
+      "source_post_id": "2111223306061836484",
+      "handle": "dotey",
+      "topic_signature": "dotey-anthropic-agent-6x",
+      "timestamp": "2026-10-17T11:00:00+08:00",
+      "expires_at": "2026-10-24T11:00:00+08:00",
+      "material_id": "1017-am3-01",
+      "own_post_id": "2111294159634227451"
+    },
+    {
+      "source_post_id": "2110041008100843835",
+      "handle": "demishassabis",
+      "topic_signature": "demishassabis-argon-wizard-chess",
+      "timestamp": "2026-10-17T11:00:00+08:00",
+      "expires_at": "2026-10-24T11:00:00+08:00",
+      "material_id": "1017-am3-02",
+      "own_post_id": "2111294672211734881"
+    },
+    {
+      "source_post_id": "2111005194058179020",
+      "handle": "nvidia",
+      "topic_signature": "nvidia-mercedes-adas-partnership",
+      "timestamp": "2026-10-17T11:00:00+08:00",
+      "expires_at": "2026-10-24T11:00:00+08:00",
+      "material_id": "1017-am3-03",
+      "own_post_id": "2111295062311342389"
+    },
+    {
+      "topic_signature": "bindureddy-argon-viz-f1-dashboard",
+      "own_post_id": "2111338864082329887",
+      "at": "2026-10-17T14:13:58+08:00",
+      "handle": "bindureddy"
+    },
+    {
+      "topic_signature": "drjimfan-aspire-agentic-robotics-v1",
+      "own_post_id": "2111339320468816355",
+      "at": "2026-10-17T14:13:58+08:00",
+      "handle": "DrJimFan"
+    },
+    {
+      "topic_signature": "xiaohu-codex-iphone-duo-bot",
+      "own_post_id": "2111339595514401170",
+      "at": "2026-10-17T14:13:58+08:00",
+      "handle": "xiaohu"
+    },
+    {
+      "source_post_id": "2109633085658808515",
+      "handle": "Alibaba_Qwen",
+      "topic_signature": "qwen-gyre-xlong-rl-elastic-1-85x",
+      "timestamp": "2026-10-17T15:06:46+08:00",
+      "expires_at": "2026-10-24T15:06:46+08:00",
+      "material_id": "1017-pm2-01",
+      "own_post_id": "2111352399369556250"
+    },
+    {
+      "source_post_id": "2110214931559899630",
+      "handle": "Alibaba_Qwen",
+      "topic_signature": "qwen-tokenspeed-flash-next-685-gb300",
+      "timestamp": "2026-10-17T15:06:46+08:00",
+      "expires_at": "2026-10-24T15:06:46+08:00",
+      "material_id": "1017-pm2-02",
+      "own_post_id": "2111352684372697193"
+    },
+    {
+      "source_post_id": "2111083685961445625",
+      "handle": "huggingface",
+      "topic_signature": "reflection-beam-apache2-open-weights",
+      "timestamp": "2026-10-17T15:06:46+08:00",
+      "expires_at": "2026-10-24T15:06:46+08:00",
+      "material_id": "1017-pm2-03",
+      "own_post_id": "2111352903629947105"
+    },
+    {
+      "source_post_id": "2111380259295653976",
+      "handle": "testingcatalog",
+      "topic_signature": "testingcatalog-deepseek-v41-flash-1017-deepswe",
+      "timestamp": "2026-10-17T20:51:37+08:00",
+      "expires_at": "2026-10-24T20:51:37+08:00",
+      "material_id": "1017-night-pre-01",
+      "own_post_id": "2111438284161421325",
+      "slot": "night-pre"
+    },
+    {
+      "source_post_id": "2111384189656252712",
+      "handle": "dotey",
+      "topic_signature": "dotey-claude-code-review-anthropic",
+      "timestamp": "2026-10-17T20:51:37+08:00",
+      "expires_at": "2026-10-24T20:51:37+08:00",
+      "material_id": "1017-night-pre-02",
+      "own_post_id": "2111439089409155412",
+      "slot": "night-pre"
+    },
+    {
+      "source_post_id": "2111017984462602438",
+      "handle": "_akhaliq",
+      "topic_signature": "akhaliq-hybrid-reasoning-agents-paper",
+      "timestamp": "2026-10-17T20:51:37+08:00",
+      "expires_at": "2026-10-24T20:51:37+08:00",
+      "material_id": "1017-night-pre-03",
+      "own_post_id": "2111439609100156993",
+      "slot": "night-pre"
+    },
+    {
+      "source_post_id": "2111447706782892495",
+      "handle": "xiaohu",
+      "topic_signature": "xiaohu-ai-video-rhythm-fix-2026-10",
+      "timestamp": "2026-10-18T02:30:00+08:00",
+      "expires_at": "2026-10-25T02:30:00+08:00",
+      "material_id": "1018-night-pre2-01",
+      "own_post_id": "2111524205053595749",
+      "slot": "night-pre2"
+    },
+    {
+      "source_post_id": "2111435662033666099",
+      "handle": "aigclink",
+      "topic_signature": "aigclink-tencent-hymemory-2-cross-agent-memory",
+      "timestamp": "2026-10-18T03:02:00+08:00",
+      "expires_at": "2026-10-25T03:02:00+08:00",
+      "material_id": "1018-night-pre2-02",
+      "own_post_id": "2111533244416159972",
+      "slot": "night-pre2"
+    },
+    {
+      "topic_signature": "deepseek-v41-flash-1017-pareto-launch",
+      "handle": "deepseek_ai",
+      "picked_at": "2026-10-18T10:15:12+08:00",
+      "material_id": "1018-am-01",
+      "own_post_id": "2111642027565965385",
+      "slot": "am",
+      "expires_at": "2026-10-25T10:15:12+08:00"
+    },
+    {
+      "topic_signature": "opencode-distillation-attack-1pct-console-keys-drained",
+      "handle": "testingcatalog",
+      "picked_at": "2026-10-18T10:16:19+08:00",
+      "material_id": "1018-am-02",
+      "own_post_id": "2111642342247878998",
+      "slot": "am",
+      "expires_at": "2026-10-25T10:16:19+08:00"
+    },
+    {
+      "topic_signature": "aigclink-os-taxonomy-knowledge-graph-k12",
+      "handle": "aigclink",
+      "picked_at": "2026-10-18T10:18:42+08:00",
+      "material_id": "1018-am-03",
+      "own_post_id": "2111642632804069649",
+      "slot": "am",
+      "expires_at": "2026-10-25T10:18:42+08:00"
+    },
+    {
+      "topic_signature": "semanalysis-nvidia-kimi-k3-423-toks-vllm-megakernel",
+      "handle": "SemiAnalysis_",
+      "picked_at": "2026-10-18T11:06:11.050927+08:00",
+      "material_id": "1018-am-pre2-01",
+      "own_post_id": "2111654489044443547"
+    },
+    {
+      "topic_signature": "jensen-white-house-superintelligence-accord",
+      "handle": "JensenHuang",
+      "picked_at": "2026-10-18T11:06:11.050927+08:00",
+      "material_id": "1018-am-pre2-02",
+      "own_post_id": "2111654708888924349"
+    },
+    {
+      "topic_signature": "aigclink-embeddinggemma2-stt-end-side-reader",
+      "handle": "aigclink",
+      "picked_at": "2026-10-18T11:06:11.050927+08:00",
+      "material_id": "1018-am-pre2-03",
+      "own_post_id": "2111654920218607983"
+    },
+    {
+      "topic_signature": "rust-and-ai-agent-feedback-loop-compile-cost",
+      "handle": "dotey",
+      "picked_at": "2026-10-18T13:06:04+08:00",
+      "material_id": "1018-pm-pre-03",
+      "own_post_id": "2111685221922034095",
+      "slot": "pm-pre",
+      "expires_at": "2026-10-25T13:06:04+08:00"
+    },
+    {
+      "topic_signature": "openai-gpt6-astra-pro-agent-parallel-upgrade",
+      "handle": "testingcatalog",
+      "picked_at": "2026-10-18T13:05:22+08:00",
+      "material_id": "1018-pm-pre-02",
+      "own_post_id": "2111685045945839860",
+      "slot": "pm-pre",
+      "expires_at": "2026-10-25T13:05:22+08:00"
+    },
+    {
+      "topic_signature": "deepseek-v41-flash-1017-launch-pareto",
+      "handle": "deepseek_ai",
+      "picked_at": "2026-10-18T13:04:37+08:00",
+      "material_id": "1018-pm-pre-01",
+      "own_post_id": "2111684854085751145",
+      "slot": "pm-pre",
+      "expires_at": "2026-10-25T13:04:37+08:00"
+    },
+    {
+      "topic_signature": "bindu-deepseek-best-cheapest-open-source",
+      "handle": "bindureddy",
+      "picked_at": "2026-10-18T14:08:00+08:00",
+      "material_id": "1018-pm-01",
+      "own_post_id": "2111700782471090521",
+      "slot": "pm",
+      "expires_at": "2026-10-25T14:08:00+08:00"
+    },
+    {
+      "topic_signature": "oran-ge-dsh-flash-video-50min-garbage",
+      "handle": "oran_ge",
+      "picked_at": "2026-10-18T14:08:00+08:00",
+      "material_id": "1018-pm-02",
+      "own_post_id": "2111701219882533264",
+      "slot": "pm",
+      "expires_at": "2026-10-25T14:08:00+08:00"
+    },
+    {
+      "topic_signature": "finance-bay-area-ai-cluster-21-26-map",
+      "handle": "FinanceYF5",
+      "picked_at": "2026-10-18T14:08:00+08:00",
+      "material_id": "1018-pm-03",
+      "own_post_id": "2111701437126427111",
+      "slot": "pm",
+      "expires_at": "2026-10-25T14:08:00+08:00"
+    },
+    {
+      "topic_signature": "nvidia-mercedes-strategic-partnership-driver-assistance-next-decade",
+      "handle": "nvidia",
+      "picked_at": "2026-10-19T09:36:00+08:00",
+      "material_id": "1019-am-c7-01",
+      "own_post_id": "2111996164312899826",
+      "slot": "am",
+      "expires_at": "2026-10-26T09:36:00+08:00"
+    },
+    {
+      "topic_signature": "dotey-4h-ai-review-ai-50-rounds-claude-code-9-tenths-written",
+      "handle": "dotey",
+      "picked_at": "2026-10-19T12:24:00+08:00",
+      "material_id": "1019-pm-c1-01",
+      "own_post_id": "2112037683354829074",
+      "slot": "pm",
+      "expires_at": "2026-10-26T12:24:00+08:00"
+    },
+    {
+      "topic_signature": "claude-code-9-tenths-ai-foreman-stop-role-19th-century-factory",
+      "handle": "FrankFika",
+      "picked_at": "2026-10-19T12:33:00+08:00",
+      "material_id": "1019-pm-c2-01",
+      "own_post_id": "2112040665655959640",
+      "slot": "pm",
+      "expires_at": "2026-10-26T12:33:00+08:00",
+      "treatment": "original_post_no_quote_url"
+    },
+    {
+      "handle": "bindureddy",
+      "post_id": "2111936149627572506",
+      "topic_signature": "google-rare-opportunity-distill-argon-fast-small-model-beats-luna-deepseek",
+      "treatment": "like_only_diversify_handle_engagement",
+      "picked_at": "2026-10-19T23:40:00+08:00",
+      "round": "pulse_60_continuation"
+    },
+    {
+      "topic_signature": "small-model-toolchain-ecosystem-infrastructure-google-vs-luna",
+      "handle": "FrankFika",
+      "picked_at": "2026-10-19T23:50:00+08:00",
+      "material_id": "1019-pm-c15-01",
+      "own_post_id": "2112209806685847767",
+      "slot": "pm",
+      "expires_at": "2026-10-26T23:50:00+08:00",
+      "treatment": "original_post_no_quote_url",
+      "round": "chuangzuo_round_58",
+      "source_handle": "bindureddy",
+      "source_post_id": "2111936149627572506"
+    },
+    {
+      "handle": "testingcatalog",
+      "post_id": "2112195306695647502",
+      "topic_signature": "anthropic-new-model-gemini-4-carbon-openai-terra-model-october-release",
+      "treatment": "like_only_diversify_handle_engagement",
+      "picked_at": "2026-10-20T00:08:00+08:00",
+      "round": "pulse_61"
+    },
+    {
+      "handle": "testingcatalog",
+      "post_id": "2112195306695647502",
+      "topic_signature": "anthropic-new-model-gemini-4-carbon-openai-terra-model-october-release",
+      "treatment": "reply_riding_traffic_regular_post_original_mode",
+      "picked_at": "2026-10-20T00:09:00+08:00",
+      "round": "pulse_61",
+      "own_reply_id": "2112215201940701642"
+    },
+    {
+      "handle": "aigclink",
+      "post_id": "2111314222571512238",
+      "topic_signature": "open-source-os-taxonomy-elementary-knowledge-graph-rag-mcp-agent",
+      "treatment": "like_only_diversify_handle_engagement",
+      "picked_at": "2026-10-20T00:14:00+08:00",
+      "round": "pulse_62"
+    },
+    {
+      "handle": "huggingface",
+      "post_id": "2112214753980612886",
+      "topic_signature": "local-ai-202-speculative-decoding-massive-speed-ups",
+      "treatment": "like_only_diversify_handle_engagement",
+      "picked_at": "2026-10-20T00:29:00+08:00",
+      "round": "pulse_63"
+    },
+    {
+      "handle": "SemiAnalysis_",
+      "post_id": "2112069964131713517",
+      "topic_signature": "datacenter-2027-acceleration-50gw-single-year-lease-contracts-chips-shortage",
+      "treatment": "like_only_diversify_handle_engagement",
+      "picked_at": "2026-10-20T00:34:00+08:00",
+      "round": "pulse_64"
+    },
+    {
+      "id": "pick-114",
+      "timestamp": "2026-10-20T01:00:00+08:00",
+      "handle": "Pluvio9yte",
+      "post_id": "2081648099680743554",
+      "url": "https://x.com/Pluvio9yte/status/2081648099680743554",
+      "topic_signature": "ai-video-55-skills-open-source-codex-hyperframes-heygen-indextts2",
+      "reason": "333K views + 1.9K likes AI 视频 Skill 开源 cluster; AI workflow 工具链生态跟 round 57/58 + outbound-061 datacenter 同 cluster",
+      "action_taken": "outbound-068 like 真发 verified"
+    },
+    {
+      "id": "pick-115",
+      "timestamp": "2026-10-20T01:13:00+08:00",
+      "handle": "karpathy",
+      "post_id": "PENDING_BACKFILL",
+      "url": "https://x.com/karpathy/status/PENDING_BACKFILL",
+      "topic_signature": "karpathy-llm-capability-gap-widening-6b-people-75-percent-population-funnel-perception-frontier-education-economy",
+      "reason": "6.6M views + 43K likes + 8K reposts + 2.1K replies — karpathy 近期最高优 1 帖; AI 现象观察延伸 cluster 第 7 视角",
+      "action_taken": "chuangzuo_round_59 真发 verified (regular post 原创 mode)"
+    }
+  ]
+}

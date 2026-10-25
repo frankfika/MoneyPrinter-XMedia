@@ -1,0 +1,33 @@
+material_id: 1017-pm-pre-01
+slot: pm-pre
+scanned_at: '2026-10-17T13:04:00+08:00'
+author:
+  name: 宝玉 (dotey)
+  handle: dotey
+  lang: zh
+original:
+  url: https://x.com/dotey/status/2111233972709564917
+  post_id: '2111233972709564917'
+  posted_at: '2026-10-17T07:12:00+00:00'
+  original_quoted_post:
+    handle: Loktar (@loktar00)
+    summary: First deepfake candidate caught in remote interview; glasses had a "ghost frame" — live face filter overlay was leaking.
+metrics:
+  views: 18410
+  likes: 39
+  retweets: 8
+  replies: 62
+  bookmarks: 9
+ai_match: true
+ai_keywords_hit:
+  - AI
+  - 换脸
+  - agent
+summary: >-
+  dotey 看到 AI 实时换脸被用在远程面试里,吐槽一个土办法"让他把手放在脸前晃一下"就能戳穿。
+  1.8 万浏览,Loktar 原帖视频 49 秒,讲第一例 deepfake 候选人面试实录。
+evidence_links:
+  - https://x.com/dotey/status/2111233972709564917
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

@@ -1,0 +1,25 @@
+# material_id: 1017-night-pre-02
+# slot: night-pre
+# topic_signature: dotey-claude-code-review-anthropic
+# treatment_hint: quote_retweet
+# rule_check:
+#   length_zh: 270 (within 180-320)
+#   has_number: yes (90%, 2x, -40%)
+#   has_link: yes (dotey post + claude.dev)
+#   images: 2 真图 (post detail + dotey cover)
+#   no_opencsg: yes
+#   no_ai_image: yes
+
+Anthropic 终于把 Claude Code 的代码审查姿势公开了。
+
+几个数字挺有意思：90% 的代码是 Claude 写的，6-9 月合并修改量翻了一倍多，但需要回滚的比例反而降了 40%。
+
+「奶酪片」那个比喻很到位 —— 每道检查都可能漏，多层叠起来才难漏，底下还有一张网兜底。
+
+最狠的一招：让 AI 审 AI。
+
+Claude Code 团队把代码审的流程、深度档位（Quick / Standard / Deep）都做成可配置的，团队级 / 企业级都能开。
+
+https://claude.dev/blog/code-review
+# posted_url: https://x.com/FrankFika/status/2111439089409155412
+# posted_at: 2026-10-17T20:51:37+08:00

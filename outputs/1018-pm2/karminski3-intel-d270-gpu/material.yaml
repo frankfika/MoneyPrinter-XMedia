@@ -1,0 +1,44 @@
+candidate_id: 02-karminski3-intel-d270-gpu
+source_url: https://x.com/karminski3/status/2110715237397868791
+source_author: karminski-牙医 (@karminski3)
+source_handle: karminski3
+source_post_id: "2110715237397868791"
+source_published_at: 2026-10-15
+source_metrics:
+  views: 43000
+  likes: 312
+  replies: 56
+  reposts: 29
+source_topic: Intel Crescent Island D270 480G 显存推理卡
+source_summary: |
+  karminski3 在 OCP 峰会评 intel D270:480G 单卡显存 / OCP 微缩放格式
+  原生 / FP8 1.3 PFLOPS 推算 FP4 2.6 PFLOPS / 4bit/8bit 量化走硬件
+  XMX 不吃软件开销。问题:NVFP4 不行,只有 N 卡能用。
+candidate_themes:
+  - 单卡 480G 显存意味着什么?
+  - OCP 微缩放格式:intel 自己起草的标准
+  - hardware XMX 加速 vs 软件模拟
+  - 单机推理不用 multi-card NVLink
+quote_rt_anchor: '480G 单卡显存,这是把老黄/水果按在地上打吗?'
+angle: |
+  Frank 的角度(具体延伸 + 反问):
+  480G 是 H100 (80G) 的 6 倍。意思是一张卡塞得下 70B 模型量化版
+  不需要 multi-card NVLink 桥接 —— 但问题是 intel 推理软件栈远不如
+  NVIDIA,实际能不能用还得看 oneAPI / SYCL / PyTorch XPU 后端
+  多久追上 CUDA 的成熟度。这个时间表,可能比硬件本身更卡。
+target_length: 150-180 字
+hashtag: 0
+engagement_hooks:
+  - 数字卡:480G vs H100 80G (6 倍显存)
+  - 反问:intel 硬件追上来,软件栈什么时候跟上 CUDA?
+  - 具体延伸:单机推理不用 NVLink 但要等软件生态
+risk_notes:
+  - 评论 karminski3 帖的角度,直接谈硬件不重复原帖大段引用
+  - 不直接讨论 DeepSeek (原帖作者提到,但 Frank post 不复述)
+  - 不讨论 OpenCSG / Moonshot / MiniMax
+posted: true
+posted_url: https://x.com/FrankFika/status/2111736951124660559
+posted_at: 2026-10-18T16:31:20+08:00
+prepared_at: 2026-10-18T16:09:00+08:00
+preparer: short-posts-chuangzuo cron 16:00 (d5c0d018)
+screenshot: ./screenshots/source.jpg

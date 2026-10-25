@@ -1,0 +1,31 @@
+material_id: "1015-pm-02"
+slot: pm
+scanned_at: "2026-10-15T15:57:00+08:00"
+author:
+  name: "Demis Hassabis"
+  handle: "demishassabis"
+  lang: en
+original:
+  url: "https://x.com/demishassabis/status/2110041008100843835"
+  post_id: "2110041008100843835"
+  posted_at: "2026-10-14"
+metrics:
+  views: 434296
+  likes: 5038
+  retweets: 614
+  replies: 333
+  bookmarks: 770
+ai_match: true
+summary: |
+  Demis Hassabis 让 Gemini 4 Argon 直接 build 一个 wizard chess 3D demo：
+  视频里能看出 Argon 的物理理解 + 3D 建模 + 编程能力是 frontier 级。
+  Oct 14 帖，截至 Oct 15 累计 434K 浏览 / 5K 赞。
+  这是诺奖得主 + DeepMind CEO 自己下场玩模型的第一手 demo，比发布会 slide 实在。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/demishassabis/status/2110041008100843835"
+screenshots_needed:
+  - "原帖视频+正文截图"
+  - "demishassabis profile 顶部视角"
+treatment_hint: quote_retweet
+dedup_hits: []

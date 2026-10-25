@@ -1,0 +1,29 @@
+material_id: 1018-night-pre2-03
+slot: night-pre2
+scanned_at: '2026-10-18T02:28:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: AIGCLINK
+  handle: aigclink
+  lang: zh
+original:
+  url: https://x.com/aigclink/status/2109967896449581351
+  post_id: '2109967896449581351'
+  posted_at: '2026-10-13T20:00:00+08:00'
+metrics:
+  views: 47300
+  likes: 0
+  retweets: 0
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  网友把谷歌 EmbeddingGemma 2 改造成 STT 端侧语音识别模型：M3 MacBook Air 上 1 小时音频 13 秒转写完，288× 速度，WER 5%。Embedding 把音频映射到和文本同一语义空间，再训练轻量 Reader 做最近词检索，把"生成"变成"检索"。
+topic_signature: aigclink-embeddinggemma2-voice-stt-trick
+evidence_links:
+  - https://x.com/aigclink/status/2109967896449581351
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-aigclink-embeddinggemma-voice-post.png
+  - screenshots/x-aigclink-embeddinggemma-voice-full.png
+  - screenshots/x-aigclink-profile-pinned.png

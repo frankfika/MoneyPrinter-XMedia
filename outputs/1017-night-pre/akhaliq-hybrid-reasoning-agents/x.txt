@@ -1,0 +1,23 @@
+# material_id: 1017-night-pre-03
+# slot: night-pre
+# topic_signature: akhaliq-hybrid-reasoning-agents-paper
+# treatment_hint: quote_retweet
+# rule_check:
+#   length_zh: 195 (within 180-320)
+#   has_number: yes (16720, 84 bookmarks)
+#   has_link: yes (akhaliq post + hf paper)
+#   images: 2 真图 (post detail + video thumb)
+#   no_opencsg: yes
+#   no_ai_image: yes
+
+AK 又一个新论文整理：Hybrid Reasoning Agents。
+
+核心思路是把快思考 / 慢思考 / 工具调用混合在同一套 agent loop 里，根据任务难度动态挑路径 —— 比纯 CoT 或纯 ReAct 之类单一范式更灵活。
+
+paper 和官方点子都在 HF papers 上，链接给到。
+
+50 秒 demo 是 AK 自己剪的，挑了两个对照 demo 看「知道什么时候思考、什么时候直接干」。
+
+https://huggingface.co/papers/2610.18
+# posted_url: https://x.com/FrankFika/status/2111439609100156993
+# posted_at: 2026-10-17T20:51:37+08:00

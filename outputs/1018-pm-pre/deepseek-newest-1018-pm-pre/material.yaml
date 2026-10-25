@@ -1,0 +1,27 @@
+material_id: 1018-pm-pre-01
+slot: pm-pre
+scanned_at: '2026-10-18T12:58:00+08:00'
+author:
+  name: DeepSeek
+  handle: deepseek_ai
+  lang: en
+original:
+  url: https://x.com/deepseek_ai/status/2111375640717033777
+  post_id: '2111375640717033777'
+  posted_at: '2026-10-17T16:35:54+08:00'
+metrics:
+  views: 5200000
+  thread_own_views: 339911
+  likes: 32190
+  retweets: 6061
+  replies: 1374
+  bookmarks: 6040
+ai_match: true
+summary: >-
+  DeepSeek 官宣 V4.1-Flash-1017：benchmark 全面提升、输出更短、速度更快，相对前代是性能和成本的帕累托改进。
+  同步在官网/App/API 上线；面向 DeepSeek Harness、腾讯 CodeBuddy、WorkBuddy 等做了优化，建议升级到 Harness v0.2.1-rc.1。
+evidence_links:
+  - https://x.com/deepseek_ai/status/2111375640717033777
+  - https://x.com/deepseek_ai/status/2111375646223933650
+treatment_hint: first_person_original
+source: hot-topic-tracker cua_repl scan (slot 1018-pm-pre)

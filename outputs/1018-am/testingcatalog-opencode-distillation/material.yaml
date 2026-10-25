@@ -1,0 +1,32 @@
+material_id: 1018-am-02
+slot: am
+scanned_at: '2026-10-18T10:12:00+08:00'
+source: hot-topic-tracker cua_repl scan
+author:
+  name: TestingCatalog
+  handle: testingcatalog
+  lang: en
+original:
+  url: https://x.com/testingcatalog/status/2111536604351246541
+  post_id: '2111536604351246541'
+  posted_at: '2026-10-18T02:08:06+08:00'
+metrics:
+  views: 25100
+  likes: 296
+  retweets: 22
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  OpenCode 昨天发官方声明：被"蒸馏攻击"，1.4% Console 用户的 OpenAI / Anthropic / Google
+  余额被刷掉，邮箱已通知。攻击者利用即将下线的老系统漏洞，第三方厂商 API key 是蒸馏数据集的常见来源。
+  用户反映有的损失几百刀，Anthropic 9-24 起已对"被拒请求"也收费。
+topic_signature: opencode-distillation-attack-1pct-console-keys-drained
+evidence_links:
+  - https://x.com/testingcatalog/status/2111536604351246541
+  - https://anthropic.com/news/detecting-and-preventing-distillation-attacks
+treatment_hint: quote_retweet
+screenshots:
+  - screenshots/x-testingcatalog-opencode-post.png
+  - screenshots/x-testingcatalog-opencode-statement-1.jpg
+  - screenshots/x-testingcatalog-opencode-statement-2.jpg

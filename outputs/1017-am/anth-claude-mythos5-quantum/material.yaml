@@ -1,0 +1,26 @@
+material_id: 1017-am-03
+slot: am
+scanned_at: '2026-10-17T09:08:00+08:00'
+author:
+  name: Anthropic
+  handle: AnthropicAI
+  lang: en
+original:
+  url: https://x.com/AnthropicAI/status/2111152183240511640
+  post_id: '2111152183240511640'
+  posted_at: '2026-10-16T17:47:00+08:00'
+  body_excerpt: 'Designing more efficient quantum circuits with Claude. Claude Mythos 5 designed quantum circuits that improve on the best published ones, sometimes by an order of magnitude or more.'
+metrics:
+  views: 307100
+  likes: 331
+  retweets: 3.1
+  replies: 264
+  bookmarks: 692
+ai_match: true
+summary: >-
+  Anthropic STEM Fellows Program 出了一篇论文:Claude Mythos 5 只接收 plain-language instruction,自动设计出比 SOTA 强一倍以上 efficiency 的量子电路。化学/材料/药物 simulate 用的 quantum 算法因此更快到「够实用」的边际。
+evidence_links:
+  - https://x.com/AnthropicAI/status/2111152183240511640
+  - https://www.anthropic.com/research/designing-efficient-quantum-circuits
+treatment_hint: quote_retweet
+source: "hot-topic-tracker cua_repl scan (handle batch: AnthropicAI)"

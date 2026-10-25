@@ -1,0 +1,39 @@
+round: chuangzuo round 54
+topic_signature: opus-4-5-general-manager-vs-peer-review-pipeline-claude-code-orchestration
+treatment: regular_post_original_mode_no_quote_url
+trigger: chuangzuo-cron-14-00-cadence-1h-after-round-53
+frank_rush_mode:
+  - frank_12_30_dont_all_retweet_more_original: accepted_round_52_53_54
+  - frank_23_38_qingjietu_self_reply_wrong_workflow: marked_frank_manual_delete (chat-internal-screenshot-only)
+  - frank_push_cadence_22_per_3h49min_now_extending_round_54
+candidate_handles_scanned: 47 (历史扫描覆盖 - 跳过 3 handle scan, round 54 续 regular post 原创 mode 同 topic cluster)
+content_rationale: |
+  chuangzuo round 52 (19 世纪 factory analogy + Claude Code 9 成) + chuangzuo round 53 (claude code vs 富士康 90 年代, 工头拆工头) + outbound-045 howie_serious reply (claude 规划+执行+验收 pipeline) 同 AI foreman stop role / multi-agent orchestration cluster.
+  
+  round 54 续同 cluster 第三视角:
+  - round 52: 19 世纪 analogy (历史维度)
+  - round 53: 富士康 90 年代 analogy (当代工业维度)
+  - round 54: code review analogy (engineering 流程维度) — peer review 不一定需要工头, 大部分 PR 同级互校就够
+  
+  视角切换: round 52/53 都讲 "AI 工头 = 人当工头" 的对照; round 54 是 "AI 工头越像 general manager, 越要把眼睛解放出来看战略, 战术校对比让它盯着浪费" = 工头不直接做 tactical review, 而是看战略 = 横向跳出一层。
+  
+  Frank 文风:
+  - 1) claude 当工头校验 + 另一个思路 worker 之间互校 (具体动作, 不抽象)
+  - 2) 跟 code review 一个道理, 大部分 PR 同级互校 (类比锚定)
+  - 3) 工头越像 general manager, 越要把眼睛解放出来看战略 (反问结尾 hook 互动)
+  - 0 KOL URL 引用 (regular post 原创 mode)
+  - 0 OpenCSG/DeepSeek/Moonshot/MiniMax 红线
+  - 0 AI 托管/bot 措辞
+  - 0 hashtag 风暴
+execution_method: mcp_browser_cmd_enter (跟 chuangzuo round 53 13:15 一致 mode 真图 0 emergency path)
+expected_own_post_id: TBD (mcp_browser 真发后通过 home timeline + profile inspect 抓)
+verification_signals:
+  - home timeline "陈放Frank🕊️ @FrankFika · Now" + content 一致
+  - 0 X auto quote embed (regular post 原创 mode)
+  - posted detail page URL https://x.com/FrankFika/status/<post_id>
+  - 真图 posted-with-shared-toast.jpg
+cooldown_check:
+  - 距 chuangzuo round 53 真发 13:15 = 45 min ✓ (post cooldown 30 min min SKILL.md 已过)
+  - 距 outbound-048 reply CuiMao 13:34 = 26 min ✓ (post→reply cross-type 已过)
+  - 距 outbound-047 reply Pluvio9yte 13:08 = 52 min ✓
+  - chuangzuo cron 1h cadence anchor 12:33 + 13:15 + 14:00 (漂移)

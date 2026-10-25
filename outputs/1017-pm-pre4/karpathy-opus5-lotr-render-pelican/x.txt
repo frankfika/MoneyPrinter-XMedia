@@ -1,0 +1,17 @@
+Karpathy 给 LLM 出新考题：
+
+"create an svg of pelican on a bicycle" 这种小测试该退场了。
+新玩法——给一段指环王第一章 + 1M token 预算（$10）+ Three.js 渲染。
+
+Opus 5 跑 2 小时，写 5500 行代码 procedurally 渲染整段故事。
+看着糙但能跑。
+
+评论里 MTorygreen 那句最狠：
+"2 小时 Opus 才 $10，便宜到这种程度，你就会试一百个 dumb idea。
+越便宜，世界静悄悄吃进去的算力越多。"
+
+https://x.com/karpathy/status/2083749667410727319
+
+# material_id: 1017-pm-pre4-03
+# treatment: quote_retweet
+# screenshots: x-karpathy-post.png, x-karpathy-profile-top.png, x-karpathy-post2-lotr-link.png, x-karpathy-lotr-demo-external.png

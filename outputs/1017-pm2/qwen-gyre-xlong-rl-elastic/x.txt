@@ -1,0 +1,12 @@
+阿里 Qwen 这波发了 QwenGyre——把 RL 训练里 rollout 和 training 的 GPU 比例从写死改成动态切，agent 长程训练整体速度直接 ×1.85。
+
+底层思路其实不绕：以前跑长程 agent RL，rollout 阶段吃 CPU 推理、training 阶段吃 GPU，GPU 经常空转。QwenGyre 把这俩块当一个弹性池，谁要 GPU 就给谁，长程任务不用打断。
+
+benchmark 的 1.85× 是平均数，跑越长的 agent 任务越好用。
+https://x.com/Alibaba_Qwen/status/2109633085658808515
+
+# material_id: 1017-pm2-01
+# treatment: quote_retweet
+# screenshots: x-qwen-gyre-post.png, x-qwen-timeline.png
+# posted_url: https://x.com/FrankFika/status/2111352399369556250
+# posted_at: 2026-10-17T15:06:46+08:00

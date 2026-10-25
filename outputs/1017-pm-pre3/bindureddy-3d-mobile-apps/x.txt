@@ -1,0 +1,12 @@
+一句话 prompt → iOS native 3D 游戏。
+
+Island Kart 这种级别，半年前还要 unreal+美术团队。
+现在 Abacus AI Agent + Astra/Fable/Opus 5.5 串起来，38 秒出活。
+
+13 小时 240 万浏览，388 like。
+评论已经开始替老软件工程师默哀了😂
+
+free backend/auth/payments 那个 etc 才是真事——
+基础设施这一块未来 6 个月就是 AI agent 的新战场。
+
+https://x.com/bindureddy/status/2111163728389435420

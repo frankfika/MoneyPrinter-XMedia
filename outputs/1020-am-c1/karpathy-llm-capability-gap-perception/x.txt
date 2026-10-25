@@ -1,0 +1,11 @@
+Karpathy 那张图很诚实 — AI capability gap 在加大, 不是缩窄。
+
+napkin math: 全球 60 亿人 (~75% 人口) 还在用 free tier 评估 AI 能力, 而 frontier 长什么样只占 1% 都不到的人见过。
+
+1) Free tier 给的是 2-3 年前的快照, 不是当下 frontier — 拿 stale sample 推 model 能力, 永远低估
+
+2) 真正见过 frontier 的是 paid 用户 + 开发者 — 人数 1% 都不到, 但他们对 AI 的判断和剩下 75% 完全是两个世界
+
+3) 这 1% 跟 75% 隔的不是 prompt 技巧, 是对 model 边界的正确认知 — 见过 frontier 才知道什么是不能做的
+
+下个问题不是 AI 强不强, 是谁先看到 frontier 长什么样。教育 + 工具民主化都绕不开这条 funnel。

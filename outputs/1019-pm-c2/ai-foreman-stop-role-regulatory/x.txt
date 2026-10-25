@@ -1,0 +1,9 @@
+Claude Code 公开 9 成代码 Claude 写, 撤回降 4 成 — 数字看起来吓人, 但更要问的是接下来。
+
+1) 19 世纪 factory 工序专业化 (writing/review/deploy 各专一), 现在 AI 写代码也是同一波逻辑。
+2) Factory 有 foreman 跟 safety inspector, AI 写代码谁来按 stop sign?
+3) 行业 baseline: 写作/审/部署全 AI 化, "AI foreman" 这个新角色还没人定义清楚。
+
+下一步不是"AI 写更多", 是"AI 写完谁按 stop"。
+
+问题是: stop role 是人类? 还是另一个 AI? 还是流程硬编码?

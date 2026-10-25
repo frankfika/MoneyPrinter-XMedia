@@ -1,0 +1,25 @@
+material_id: 1015-night-03
+slot: night
+scanned_at: '2026-10-15T22:09:00+08:00'
+author:
+  name: Google DeepMind
+  handle: GoogleDeepMind
+  lang: en
+original:
+  url: https://x.com/GoogleDeepMind/status/2110715601454784965
+  post_id: '2110715601454784965'
+  posted_at: '2026-10-15T20:53:00+08:00'
+metrics:
+  views: 21944
+  likes: 279
+  retweets: 34
+  replies: 79
+  bookmarks: 32
+ai_match: true
+summary: >-
+  Google DeepMind 的 SynthID 被 TIME 评为 2026 年度最佳发明。截至目前已经有 1800 亿张图片和视频被打上 SynthID 水印——AI 生成内容溯源进入主流。
+evidence_links:
+  - https://x.com/GoogleDeepMind/status/2110715601454784965
+  - https://goo.gle/4jsZxWF
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-15 night)

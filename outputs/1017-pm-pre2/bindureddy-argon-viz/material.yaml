@@ -1,0 +1,32 @@
+material_id: 1017-pm-pre2-01
+slot: pm-pre2
+scanned_at: '2026-10-17T13:55:00+08:00'
+author:
+  name: Bindu Reddy
+  handle: bindureddy
+  lang: en
+original:
+  url: https://x.com/bindureddy/status/2111313587289694646
+  post_id: '2111313587289694646'
+  posted_at: '2026-10-17T12:29:00+08:00'
+metrics:
+  views: 825457
+  likes: 347
+  retweets: 8
+  replies: 20
+  bookmarks: 48
+ai_match: true
+ai_keywords_hit:
+  - AI
+  - LLM
+  - agent
+  - dashboard
+  - Argon
+  - Abacus AI
+summary: >-
+  Bindu Reddy (Abacus AI CEO) 用自家 Argon 模型，给一句 prompt 直接生成 F1 实时数据仪表盘（圈速 / 策略 / 轮胎数据那种），发出来 1 小时就有 82.5 万浏览；评论里 Abacus 团队现场承诺可以接私人车队数据源（不只 F1）。
+evidence_links:
+  - https://x.com/bindureddy/status/2111313587289694646
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

@@ -1,0 +1,11 @@
+4 个 Gemini 4 Argon agent 联手 27 小时把 Minecraft 末影龙打下来了 — 全程没人。
+
+DeepMind open-endedness 团队把这 4 个 agent 关进一个 sandbox,只给 code + text 接口。2,783 个程序自己写,活儿自己分,笔记自己 share,bug 自己 debug,最后真把末影龙砍了。
+
+末影之地那 14 小时最狠:被龙砍死 69 次,直到它们发现末影水晶一直把龙的血锁在 1 滴 — 这是 agent 协作的顿悟时刻。
+
+520 美元 token,跑在 Argon 列表价上。
+
+「agent 协作 = 真研究」这次不是 demo——是 a research milestone。多 agent + 长任务 + 不崩,这才是 frontier lab 真要用的 pattern。
+
+https://x.com/GoogleDeepMind/status/2111127991401247033

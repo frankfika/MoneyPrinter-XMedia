@@ -1,0 +1,419 @@
+[
+  {
+    "handle": "AnthropicAI",
+    "status": "ok",
+    "len": 3199,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "nvidia",
+    "status": "ok",
+    "len": 3917,
+    "post_count": 1,
+    "posts": [
+      {
+        "rel_time": "23h",
+        "post_id": "2110731226776789366",
+        "view_count": 2110731226776789248,
+        "media_urls": [],
+        "status_url": "https://twitter.com/nvidia/status/2110731226776789366"
+      }
+    ],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "JensenHuang",
+    "status": "ok",
+    "len": 8901,
+    "post_count": 7,
+    "posts": [
+      {
+        "rel_time": "Oct 8",
+        "post_id": "2108035064441520342",
+        "view_count": 2107939627898400768,
+        "media_urls": [],
+        "status_url": "https://twitter.com/JensenHuang/status/2108035064441520342"
+      },
+      {
+        "rel_time": "Oct 7",
+        "post_id": "2107939627898400819",
+        "view_count": 2108035064441520384,
+        "media_urls": [],
+        "status_url": "https://twitter.com/JensenHuang/status/2107939627898400819"
+      },
+      {
+        "rel_time": "Sep 30",
+        "post_id": "2105348324484342238",
+        "view_count": 2105348324484342272,
+        "media_urls": [],
+        "status_url": "https://twitter.com/JensenHuang/status/2105348324484342238"
+      },
+      {
+        "rel_time": "Sep 28",
+        "post_id": "2104499465055023424",
+        "view_count": 2104499465055023360,
+        "media_urls": [],
+        "status_url": "https://twitter.com/JensenHuang/status/2104499465055023424"
+      },
+      {
+        "rel_time": "Sep 8",
+        "post_id": "2097118747509268885",
+        "view_count": 2107931213948203008,
+        "media_urls": [],
+        "status_url": "https://twitter.com/JensenHuang/status/2097118747509268885"
+      },
+      {
+        "rel_time": "Sep 7",
+        "post_id": "2097032374689120292",
+        "view_count": 2097118747509268992,
+        "media_urls": [],
+        "status_url": "https://twitter.com/JensenHuang/status/2097032374689120292"
+      },
+      {
+        "rel_time": "Sep 3",
+        "post_id": "2095482647355244762",
+        "view_count": 2109854282065305600,
+        "media_urls": [],
+        "status_url": "https://twitter.com/JensenHuang/status/2095482647355244762"
+      }
+    ],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "karpathy",
+    "status": "ok",
+    "len": 3372,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "sama",
+    "status": "ok",
+    "len": 6342,
+    "post_count": 6,
+    "posts": [
+      {
+        "rel_time": "Oct 7",
+        "post_id": "2107924408597950702",
+        "view_count": 2107924408597950720,
+        "media_urls": [],
+        "status_url": "https://twitter.com/sama/status/2107924408597950702"
+      },
+      {
+        "rel_time": "Oct 7",
+        "post_id": "2107894997538525580",
+        "view_count": 2107924408597950720,
+        "media_urls": [],
+        "status_url": "https://twitter.com/sama/status/2107894997538525580"
+      },
+      {
+        "rel_time": "Oct 7",
+        "post_id": "2107691261776052633",
+        "view_count": 2107691261776052736,
+        "media_urls": [],
+        "status_url": "https://twitter.com/sama/status/2107691261776052633"
+      },
+      {
+        "rel_time": "Oct 7",
+        "post_id": "2107623610483720463",
+        "view_count": 2110133232293564416,
+        "media_urls": [],
+        "status_url": "https://twitter.com/sama/status/2107623610483720463"
+      },
+      {
+        "rel_time": "Oct 3",
+        "post_id": "2106388373221118198",
+        "view_count": 2106388373221118208,
+        "media_urls": [],
+        "status_url": "https://twitter.com/sama/status/2106388373221118198"
+      },
+      {
+        "rel_time": "Oct 3",
+        "post_id": "2106189841813934140",
+        "view_count": 2106189841813934080,
+        "media_urls": [],
+        "status_url": "https://twitter.com/sama/status/2106189841813934140"
+      }
+    ],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "GoogleDeepMind",
+    "status": "ok",
+    "len": 6958,
+    "post_count": 5,
+    "posts": [
+      {
+        "rel_time": "Oct 13",
+        "post_id": "2110039274922131792",
+        "view_count": 2111038207240388864,
+        "media_urls": [],
+        "status_url": "https://twitter.com/GoogleDeepMind/status/2110039274922131792"
+      },
+      {
+        "rel_time": "2h",
+        "post_id": "2111038207240388770",
+        "view_count": 2111038207240388864,
+        "media_urls": [],
+        "status_url": "https://twitter.com/GoogleDeepMind/status/2111038207240388770"
+      },
+      {
+        "rel_time": "Oct 15",
+        "post_id": "2110715601454784965",
+        "view_count": 2110715601454785024,
+        "media_urls": [],
+        "status_url": "https://twitter.com/GoogleDeepMind/status/2110715601454784965"
+      },
+      {
+        "rel_time": "Oct 14",
+        "post_id": "2110421861435879476",
+        "view_count": 2110421861435879424,
+        "media_urls": [],
+        "status_url": "https://twitter.com/GoogleDeepMind/status/2110421861435879476"
+      },
+      {
+        "rel_time": "Oct 14",
+        "post_id": "2110190101707858039",
+        "view_count": 2110190101707857920,
+        "media_urls": [],
+        "status_url": "https://twitter.com/GoogleDeepMind/status/2110190101707858039"
+      }
+    ],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "OpenAI",
+    "status": "ok",
+    "len": 6835,
+    "post_count": 6,
+    "posts": [
+      {
+        "rel_time": "Oct 7",
+        "post_id": "2107894997538525580",
+        "view_count": 2110841898076418304,
+        "media_urls": [],
+        "status_url": "https://twitter.com/OpenAI/status/2107894997538525580"
+      },
+      {
+        "rel_time": "14h",
+        "post_id": "2110841898076418336",
+        "view_count": 2110841898076418304,
+        "media_urls": [],
+        "status_url": "https://twitter.com/OpenAI/status/2110841898076418336"
+      },
+      {
+        "rel_time": "17h",
+        "post_id": "2110797830361436604",
+        "view_count": 2110797830361436672,
+        "media_urls": [],
+        "status_url": "https://twitter.com/OpenAI/status/2110797830361436604"
+      },
+      {
+        "rel_time": "21h",
+        "post_id": "2110741355739963884",
+        "view_count": 2110740786169979136,
+        "media_urls": [],
+        "status_url": "https://twitter.com/OpenAI/status/2110741355739963884"
+      },
+      {
+        "rel_time": "21h",
+        "post_id": "2110740786169979088",
+        "view_count": 2110741355739963904,
+        "media_urls": [],
+        "status_url": "https://twitter.com/OpenAI/status/2110740786169979088"
+      },
+      {
+        "rel_time": "Oct 14",
+        "post_id": "2110442001749659890",
+        "view_count": 2110442001749659904,
+        "media_urls": [],
+        "status_url": "https://twitter.com/OpenAI/status/2110442001749659890"
+      }
+    ],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "Alibaba_Qwen",
+    "status": "ok",
+    "len": 3974,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "deepseek_ai",
+    "status": "ok",
+    "len": 2858,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "huggingface",
+    "status": "ok",
+    "len": 7972,
+    "post_count": 6,
+    "posts": [
+      {
+        "rel_time": "Oct 14",
+        "post_id": "2110350304613114226",
+        "view_count": 2110350304613114112,
+        "media_urls": [],
+        "status_url": "https://twitter.com/huggingface/status/2110350304613114226"
+      },
+      {
+        "rel_time": "Oct 8",
+        "post_id": "2108252563015422389",
+        "view_count": 2108251313645433088,
+        "media_urls": [],
+        "status_url": "https://twitter.com/huggingface/status/2108252563015422389"
+      },
+      {
+        "rel_time": "Oct 8",
+        "post_id": "2108251313645433010",
+        "view_count": 2108252563015422464,
+        "media_urls": [],
+        "status_url": "https://twitter.com/huggingface/status/2108251313645433010"
+      },
+      {
+        "rel_time": "Oct 2",
+        "post_id": "2106034221005312448",
+        "view_count": 2106034221005312512,
+        "media_urls": [],
+        "status_url": "https://twitter.com/huggingface/status/2106034221005312448"
+      },
+      {
+        "rel_time": "Oct 1",
+        "post_id": "2105683434035384360",
+        "view_count": 2105683434035384320,
+        "media_urls": [],
+        "status_url": "https://twitter.com/huggingface/status/2105683434035384360"
+      },
+      {
+        "rel_time": "Sep 10",
+        "post_id": "2098064044167225730",
+        "view_count": 1789056844341161728,
+        "media_urls": [],
+        "status_url": "https://twitter.com/huggingface/status/2098064044167225730"
+      }
+    ],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "testingcatalog",
+    "status": "ok",
+    "len": 4606,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "_akhaliq",
+    "status": "ok",
+    "len": 4595,
+    "post_count": 5,
+    "posts": [
+      {
+        "rel_time": "Oct 11, 2024",
+        "post_id": "1844746338396770616",
+        "view_count": 2111017984462602496,
+        "media_urls": [],
+        "status_url": "https://twitter.com/_akhaliq/status/1844746338396770616"
+      },
+      {
+        "rel_time": "4h",
+        "post_id": "2111017984462602438",
+        "view_count": 2111017984462602496,
+        "media_urls": [],
+        "status_url": "https://twitter.com/_akhaliq/status/2111017984462602438"
+      },
+      {
+        "rel_time": "19h",
+        "post_id": "2110784877629202507",
+        "view_count": 2110784877629202432,
+        "media_urls": [],
+        "status_url": "https://twitter.com/_akhaliq/status/2110784877629202507"
+      },
+      {
+        "rel_time": "Oct 15",
+        "post_id": "2110651055331770485",
+        "view_count": 2110651055331770368,
+        "media_urls": [],
+        "status_url": "https://twitter.com/_akhaliq/status/2110651055331770485"
+      },
+      {
+        "rel_time": "Oct 14",
+        "post_id": "2110423274413056230",
+        "view_count": 2110423274413056256,
+        "media_urls": [],
+        "status_url": "https://twitter.com/_akhaliq/status/2110423274413056230"
+      }
+    ],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "rowancheung",
+    "status": "ok",
+    "len": 3500,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "SemiAnalysis_",
+    "status": "ok",
+    "len": 2915,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "ylecun",
+    "status": "ok",
+    "len": 3200,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "AndrewYNg",
+    "status": "ok",
+    "len": 2239,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "demishassabis",
+    "status": "ok",
+    "len": 4093,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "gdb",
+    "status": "fail",
+    "len": 0,
+    "snippet": ""
+  },
+  {
+    "handle": "DrJimFan",
+    "status": "ok",
+    "len": 3155,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  },
+  {
+    "handle": "bindureddy",
+    "status": "ok",
+    "len": 2702,
+    "post_count": 0,
+    "posts": [],
+    "scanned_at": "2026-10-16T21:01:45"
+  }
+]

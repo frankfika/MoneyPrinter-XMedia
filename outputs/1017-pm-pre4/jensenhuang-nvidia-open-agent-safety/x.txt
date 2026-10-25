@@ -1,0 +1,16 @@
+NVIDIA 拉了 100+ 行业伙伴，搞 Open Agent Safety Platform。
+
+两个核心组件：
+- OpenShell：开源安全 runtime，AI agent 一举一动都有可执行边界
+- Sentry：独立外部评估 + 董事会级 oversight
+
+意思很明确——以后部署 AI agent 不只是"它能不能跑"，而是"它能不能被追责"。
+内部 controls + 独立审计 + 董事会签字，三层一起压。
+
+评论区已经在喊"AI 安全终于从 PPT 落到 runtime 了"。
+
+https://x.com/JensenHuang/status/2104499465055023424
+
+# material_id: 1017-pm-pre4-01
+# treatment: quote_retweet
+# screenshots: x-JensenHuang-post.png, x-JensenHuang-profile-top.png, x-JensenHuang-media-1.jpg, x-JensenHuang-media-2.jpg

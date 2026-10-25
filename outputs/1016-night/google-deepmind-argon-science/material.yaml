@@ -1,0 +1,39 @@
+material_id: "1016-night-002"
+slot: night
+scanned_at: "2026-10-16T20:21:00+08:00"
+
+author:
+  name: "Google DeepMind"
+  handle: "GoogleDeepMind"
+  lang: en
+
+original:
+  url: "https://x.com/GoogleDeepMind/status/2110421861435879476"
+  post_id: "2110421861435879476"
+  posted_at: "2026-10-14T17:25:56.000Z"
+
+metrics:
+  views: 154900
+  likes: 178
+  retweets: 302
+  replies: 392
+
+ai_match: true
+
+summary: "Gemini 4 Argon 解锁量子计算、核聚变、蛋白质设计科学突破：把量子纠错解码器吞吐量翻倍、推翻 60 年 Grad 假设、酶工程压成几小时、向 1 万名科学家免费开放 6 个月最高额度（154.9K 浏览）"
+
+evidence_links:
+  - label: "Grad 假设反例论文 arXiv"
+    url: "https://arxiv.org/abs/2610.07304"
+  - label: "Google blog: Gemini 4 Argon"
+    url: "https://blog.google/products/gemini/gemini-4-argon"
+  - label: "原帖（Google DeepMind 主帖 + 3 条 thread 跟进）"
+    url: "https://x.com/GoogleDeepMind/status/2110421861435879476"
+
+screenshots_needed:
+  - "原帖正文+配图区"
+  - "Google blog 标题卡（Argon 介绍）"
+
+treatment_hint: quote_retweet
+
+dedup_hits: []

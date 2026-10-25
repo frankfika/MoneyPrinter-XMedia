@@ -1,0 +1,37 @@
+material_id: "1016-night-001"
+slot: night
+scanned_at: "2026-10-16T20:21:00+08:00"
+
+author:
+  name: "Google DeepMind"
+  handle: "GoogleDeepMind"
+  lang: en
+
+original:
+  url: "https://x.com/GoogleDeepMind/status/2111038207240388770"
+  post_id: "2111038207240388770"
+  posted_at: "2026-10-16T10:15:04.000Z"
+
+metrics:
+  views: 21100
+  likes: 60
+  retweets: 19
+  replies: 33
+
+ai_match: true
+
+summary: "DeepMind + 全球科学家：AI 协助疾病检测、治疗和预防，从识别罕见基因变异到加速药物研发，10:15 刚发（1h 前），是当天最新帖之一"
+
+evidence_links:
+  - label: "Google for Health 博客原帖媒体卡"
+    url: "https://goo.gle/4i48Cmr"
+  - label: "原帖（Google DeepMind）"
+    url: "https://x.com/GoogleDeepMind/status/2111038207240388770"
+
+screenshots_needed:
+  - "原帖正文+配图区"
+  - "Google for Health 品牌标识/官方频道"
+
+treatment_hint: quote_retweet
+
+dedup_hits: []

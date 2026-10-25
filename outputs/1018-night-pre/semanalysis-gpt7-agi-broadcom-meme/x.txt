@@ -1,0 +1,23 @@
+# material_id: 1018-night-pre-01
+# slot: night-pre
+# topic_signature: semanalysis-gpt7-agi-broadcom-vertical-integration-meme
+# treatment_hint: quote_retweet
+# rule_check:
+#   length_zh: 196 (within 180-320)
+#   has_number: yes (GPT-7, 49K views, 14h)
+#   has_link: yes (original post)
+#   images: 2 真图 (post detail screenshot + meme image)
+#   no_opencsg: yes
+#   no_ai_image: yes
+
+SemiAnalysis 这条 meme 真的笑死。
+
+如果 GPT-7 真达到 AGI，OpenAI 可能连 Broadcom 都不要了 —— 224G SerDes、PD、供应链全部自己撸。
+
+一张图把"模型公司吃掉芯片公司"的剧本画出来了。
+
+AI 模型的智能天花板往上抬一点，整个 infra 层的分工就要重画一遍。
+
+https://x.com/SemiAnalysis_/status/2111292099068928496
+# posted_url: https://x.com/FrankFika/status/2111513916601925649
+# posted_at: 2026-10-18T01:35:00+08:00

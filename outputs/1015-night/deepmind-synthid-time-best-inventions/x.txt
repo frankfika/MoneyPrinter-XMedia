@@ -1,0 +1,21 @@
+Google 的 SynthID 上了 TIME 2026 年度最佳发明榜。
+
+一组数字感受一下规模：
+
+180,000,000,000 张图和视频已经被打上 SynthID 水印——1800 亿。
+
+水印嵌在像素里，肉眼看不见，但任何 SynthID 检测器都能秒识别「这是 AI 生成的」。
+
+DeepMind 的目标很明确：让普通人在刷手机时也能区分「哪张图是相机拍的、哪张是模型生成的」。现在 Gemini、Imagen、Whisk 全家桶都默认加 SynthID。
+
+评论区一句实话：180B watermarked and my feed is still 90% slop.
+
+水印是一回事，平台愿不愿意用是另一回事。技术到位 ≠ 落地到位。
+
+https://x.com/GoogleDeepMind/status/2110715601454784965
+
+# material_id: 1015-night-03
+# treatment: quote_retweet
+# posted_url: https://x.com/FrankFika/status/2110736604860174705
+# posted_at: 2026-10-15T22:25:00+08:00
+# own_post_id: 2110736604860174705

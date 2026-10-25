@@ -1,0 +1,10 @@
+OpenCode 昨晚发了官方声明：被一场"蒸馏攻击"摸进老系统，1.4% Console 用户的 OpenAI / Anthropic / Google key 被暴露，有的用户余额已经被刷——有人贴出来损失好几百美元。
+
+这事不是孤例。Anthropic 2 月和 9 月两份报告都说过：盗来的客户 API key 是蒸馏数据集的稳定供应链。这次 OpenCode 用的是"即将下线"的老系统漏洞，正好说明任何挂着凭据的服务都得假定"昨天还活着、明天就被翻"。
+
+如果你以前在 OpenCode Console 存过任何 provider key：现在就 revoke + rotate，包括云端凭证；回溯到 10-16 的账单；新 key 顺手挂个 spend limit。Anthropic 从 9-24 起连"被拒请求"都收费，光靠封禁救不回钱。
+
+x.com/testingcatalog/status/2111536604351246541
+# material_id: 1018-am-02
+# treatment: quote_retweet
+# screenshots: x-testingcatalog-opencode-post.png, x-testingcatalog-opencode-statement-1.jpg, x-testingcatalog-opencode-statement-2.jpg

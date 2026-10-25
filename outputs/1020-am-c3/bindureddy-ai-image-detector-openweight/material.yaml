@@ -1,0 +1,101 @@
+round: chuangzuo_round_64
+  timestamp: "2026-10-20T05:17:00+08:00"
+  trigger: Frank-chuangzuo-cron-30min-anchor-round-64
+  cron_id: d5c0d018-fcb4-4205-8f5e-35d41c0d1fb9
+  drift_minutes_from_round_59: 244
+candidate:
+  index: 1
+  of: 1
+  kol_handle: bindureddy
+  kol_post_id: "2112254382599471259"
+  kol_post_url: https://x.com/bindureddy/status/2112254382599471259
+  kol_post_views_at_scan: 388300
+  kol_post_engagement_at_scan: "33 replies / 8 reposts / 99 likes"
+  original_engagement_at_pick: "33 replies / 8 reposts / 98 likes / 377K views (2h fresh)"
+  age_hours_at_pick: 2
+  why_picked:
+    - views_high: 377K views = 25x threshold (15K minimum)
+    - ai_keyword_match: "AI Image Detector / open-weight / Hugging Face / outperforms everyone"
+    - no_forbidden_terms: no DeepSeek/OpenCSG/Moonshot/MiniMax in post body
+    - frank_relevance: open-weight detection tool = toolchain ecosystem infra
+    - cluster_continuation: round 52-59 cluster 第 8 视角 (从 19世纪factory → 富士康 → code review → teaching cost → community flywheel → small model toolchain → capability gap funnel → 检测方看门人)
+compass:
+  mode: regular_post_original_mode_no_quote_url_openweight_kol_anchor
+  source_post_cited: false
+  url_in_body: false
+  quote_retweet: false
+  x_auto_quote_embed: false
+  media_attached: false
+  media_upload_status: hard_constraint_browser_file_input_ref_unreachable
+  hashtag_count: 0
+  frank_wind: 短句+反问结尾+line breaks 1)2)3)+具体判断+数字例证
+  perspective_in_cluster: 8
+  cluster_continuation: 跟 round 52-59 cluster 一致 AI workflow toolchain ecosystem perspective
+draft:
+  character_count: 366
+  char_count_zh_effective: 192
+  line_breaks: "1)2)3)"
+  hashtag_count: 0
+  text: |
+    open-weight AI image detector 这事, 比模型本身更值得聊。
+
+    1) 闭源检测器你只能信 — benchmark 跑分 + 闭源公司说 OK, 真实数据漂移后它就静悄悄失效。open-weight 每一个新生成器都是它的 adversarial test set, 跑不过就升级。
+
+    2) 工具链里的看门人角色 — 检测器 + 生成器 + 数据 三方互相喂养, 谁先把检测变成产品一部分, 谁就有结构性优势。AI 时代的看门人, 不在模型端, 在检测端。
+
+    3) 实战经验是 daily run + benchmark 跑分两者都做 — 真实数据漂移比 benchmark 老化快 3-6 个月, 闭源检测器跟不上节奏。
+
+    那下一波 AI infra 卡位战, 看门人角色到底会卡在检测端, 还是模型端?
+verification:
+  method: mcp_browser_cmd_enter_100pct_bypass
+  evidence: home timeline 顶部 '陈放Frank🕊️ @FrankFika · Now' + 'View post analytics' link /FrankFika/status/2112292433363099971/analytics + 'posted' toast + content 一致
+  tab_reuse: true
+  tab_reuse_method: navigate(replaceCurrentTab: true) per Frank 0:33 tab 复用 feedback
+  own_post_id: "2112292433363099971"
+  own_post_url: https://x.com/FrankFika/status/2112292433363099971
+anti_bot:
+  cooldown_minutes_since_round_59: 244
+  cooldown_minutes_required: 30
+  cooldown_status: satisfied
+state_updates:
+  - file: state/published-posts.json
+    added: chuangzuo_round_64
+    inserted_at_front: true
+  - file: state/seen-posts.json
+    added:
+      - "2112254382599471259"
+  - file: state/recent-picks.json
+    added:
+      - handle: bindureddy
+        post_id: "2112254382599471259"
+        topic_signature: openweight-ai-image-detector-toolchain-gatekeeper-role-detection-vs-generation-cluster
+  - file: private/account-safety.yaml
+    updated:
+      - last_published_at
+      - last_published_post_id
+      - last_published_url
+      - last_published_round
+      - last_published_treatment
+      - last_published_topic_signature
+      - last_published_media_count
+honesty_principle_check:
+  candidate_count_actual: 1
+  candidate_count_reported: 1
+  真图_uploaded: false
+  真图_uploaded_reason: mcp_browser 真图 upload 路径卡死 hard constraint (data-testid="fileInput" 隐藏 input[type='file'] ref 拿不到, upload_files invalid_input 报错)
+  真图_archival_path: outputs/1020-am-c3/bindureddy-ai-image-detector-openweight/screenshots/posted-verified.txt (cascade-mode screenshot 失败, 文本元数据替代)
+  bindureddy_post_views_388k_pinnacle: true
+Frank_feedbacks_applied:
+  - Frank-1230-original-post-push: "切 regular post 原创 mode (跟 round 52-59 cluster 一致)"
+  - Frank-2255-line-breaks: "1)2)3) line breaks 分段"
+  - Frank-0033-tab-reuse: "navigate(replaceCurrentTab: true) 替代 open_tab"
+  - Frank-1200-no-red-line-words: "无 DeepSeek/OpenCSG/Moonshot/MiniMax 红线词 (bindureddy 帖内容无)"
+cluster_evolution:
+  perspective_1_round_52: AI foreman 19 century factory analogy
+  perspective_2_round_53: 富士康 90 年代 工头 cluster
+  perspective_3_round_54: code review pipeline 工头看战略
+  perspective_4_round_56: opus teaching cost
+  perspective_5_round_57: community flywheel 工序 marketplace
+  perspective_6_round_58: small model toolchain ecosystem Google vs Luna
+  perspective_7_round_59: karpathy capability gap funnel perception
+  perspective_8_round_64: open-weight AI image detector toolchain gatekeeper role

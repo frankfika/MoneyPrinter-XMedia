@@ -1,0 +1,33 @@
+material_id: 1017-pm-pre3-03
+slot: pm-pre3
+scanned_at: '2026-10-17T16:25:00+08:00'
+author:
+  name: karminski-牙医
+  handle: karminski3
+  lang: zh
+original:
+  url: https://x.com/karminski3/status/2110849142490865909
+  post_id: '2110849142490865909'
+  posted_at: '2026-10-16T20:00:00+08:00'
+metrics:
+  views: 16412
+  likes: 73
+  retweets: 12
+  replies: 33
+  bookmarks: 31
+ai_match: true
+ai_keywords_hit:
+  - Meta
+  - Muse
+  - 开源
+  - Open
+  - MoE
+  - DeepSeek
+  - Qwen
+summary: >-
+  Meta 开源 Muse Spark Open：816B MoE / 42B 激活，1M 上下文，全模态输入。中文 AI KOL karminski-牙医对比国产 flash 模型（DeepSeek-v4.1-flash 552B MoE + 196B Engram），分析激活参数差异。
+evidence_links:
+  - https://x.com/karminski3/status/2110849142490865909
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

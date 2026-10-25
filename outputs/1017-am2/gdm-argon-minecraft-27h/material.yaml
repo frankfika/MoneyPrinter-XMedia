@@ -1,0 +1,29 @@
+material_id: 1017-am2-01
+slot: am2
+scanned_at: '2026-10-17T10:03:00+08:00'
+author:
+  name: Google DeepMind
+  handle: GoogleDeepMind
+  lang: en
+original:
+  url: https://x.com/GoogleDeepMind/status/2111127991401247033
+  post_id: '2111127991401247033'
+  posted_at: '2026-10-17T00:11:50+08:00'
+  body_excerpt: Four Gemini 4 Argon agents beat Minecraft from scratch in 27 hours.
+    Operating in a sandbox using only code and text, they wrote 2,783 programs, divided
+    up jobs over chat, shared notes, and debugged errors together - all with no human
+    help
+metrics:
+  views: 107292
+  likes: 1664
+  retweets: 211
+  replies: 209
+  bookmarks: 284
+ai_match: true
+summary: DeepMind 4 个 Gemini 4 Argon agent 在 sandbox 沙盒里靠纯 code+text 接口 27 小时写出 2,783
+  个程序协作通关 Minecraft 末影龙,无人工介入。贴多收益:agentic long-horizon 任务首次可复现基准。
+evidence_links:
+- https://x.com/GoogleDeepMind/status/2111127991401247033
+- https://x.com/i/article/2111023397106770026
+treatment_hint: quote_retweet
+source: 'hot-topic-tracker cua_repl scan (handle batch: GoogleDeepMind)'

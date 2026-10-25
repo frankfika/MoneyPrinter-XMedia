@@ -1,0 +1,28 @@
+material_id: 1017-pm-pre4-03
+slot: pm-pre4
+scanned_at: '2026-10-17T16:58:00+08:00'
+author:
+  name: Andrej Karpathy
+  handle: karpathy
+  lang: en
+original:
+  url: https://x.com/karpathy/status/2083749667410727319
+  post_id: '2083749667410727319'
+  posted_at: '2026-08-02T03:00:09+00:00'
+metrics:
+  views: 6202324
+ai_match: true
+ai_keywords_hit:
+  - LLM
+  - Opus 5
+  - multimodal
+  - coding agent
+summary: >-
+  Karpathy 给 LLM 出新考题：Lord of the Rings 第一段 + 1M token 预算（$10）+ 三套
+  Three.js 渲染。Opus 5 跑 2 小时写 5500 行代码 procedurally 渲染故事。76 天 620 万浏览。
+evidence_links:
+  - https://x.com/karpathy/status/2083749667410727319
+  - https://karpathy.ai/lotr-movie/
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

@@ -1,0 +1,20 @@
+GLM 5.3 的提升，全是 post-training 干的。
+
+SemiAnalysis 最新一期提到一句关键的话："GLM 5.3 was built entirely by post-training the previous model. For me, that was a wake-up call."
+
+听起来像凡尔赛，但意思是——
+
+post-training 比从头预训练省 GPU 太多了。
+有私有数据的公司不再需要从头训练一个基础模型，直接在开源底座上 post-train 就能打过某些闭源模型。
+
+GLM 5.3 vs 5.2 在 cyber 能力上是 night and day 差距，结果全是 post-training 挤出来的。
+
+对中小公司是好消息：对 GPU 不够的团队来说，与其卷预训练，不如把"自己有的数据 + post-training 流程"做扎实。
+对头部玩家是坏消息：模型差异化越来越难守，靠 post-training 堆出来的能力别人也能堆。
+
+如果这条成立，未来 6 个月的模型榜单会有大量"低成本 post-train 出奇迹"的故事。
+
+https://x.com/SemiAnalysis_/status/2111596468528087078
+
+# posted_url: https://x.com/FrankFika/status/2111669987178074371
+# posted_at: 2026-10-18T12:06:00.566104+08:00

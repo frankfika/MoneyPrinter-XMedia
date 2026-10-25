@@ -1,0 +1,19 @@
+# material_id: 1015-am-02
+# treatment: quote_retweet
+# screenshots: x-anthropic-post.png, x-anthropic-profile-top.png
+
+Anthropic 在新加坡开了亚太第五个办公室。
+
+重点不是开办公室——是同步签了 MOU，和新加坡数码发展及新闻部（MDDI）合作 AI 安全 / 模型评测 / red-team / 公共部门负责任落地。
+
+新加坡人均 Claude 使用量全球第二，接近 6 倍人口预期：
+- GovTech 1500 名工程师在用 Claude Code
+- DBS / GIC 在用 Claude
+- Grab 的 Claude 销售助手一个季度省了 4 万小时
+
+亚太这步棋不是市场动作，是政府关系 + 评测基础设施一锅端。
+
+https://x.com/AnthropicAI/status/2110289695888511368
+
+# posted_url: https://x.com/FrankFika/status/2110533735569588647
+# posted_at: 2026-10-15T00:52:56Z

@@ -1,0 +1,81 @@
+round: chuangzuo_round_73
+topic_slug: generated-vs-validated
+status: SUPERSEDED_BY_OUTBOUND_101
+prepared_at: "2026-10-21T04:55:00+08:00"
+
+post_id: null
+posted_url: null
+posted_at: null
+
+blocker: >
+  【已作废，2026-10-21 05:10 判定】原稿 cluster 22 的核心论点已于 05:04 由
+  pulse round 42 的 outbound-101（回复 @obie，own post 2112651016109982173）公开交付，
+  用的正是同一套论证：生成量不再是瓶颈（93 shots 剪成 3:49），贵在筛掉 near-miss。
+  冷却虽将于 05:15 解除，但此时发 standalone 等于同一论点 11 分钟内讲两遍 —— 自重复。
+  故本稿标记 SUPERSEDED，不再发送。
+  revive 条件：Frank 明确要求发中文 standalone 版本，或距 outbound-101 已过 24h 以上
+  且 cluster 22 需要一个自有 timeline 上的落点。
+  已把"新问题域"列为下轮首要选题方向，本稿不再占用原创位。
+
+cooldown_check:
+  last_published_at: "2026-10-21T04:45:00+08:00"
+  now_at_prepare: "2026-10-21T04:55:00+08:00"
+  elapsed_min: 10
+  required_min: 30
+  next_eligible_at: "2026-10-21T05:15:00+08:00"
+
+perspective_in_cluster: 22
+cluster_description: >
+  AI agent 工具链视角（第 22 视角 — 生成成本趋零、验证成本没降，
+  产能上限从"造"移到"验"）
+
+trigger_material:
+  source_handle: AnthropicAI
+  source_post_age: 4h
+  source_post_views: 628K
+  cluster_fit: high
+  hard_reference: false
+  note: >
+    候选是 @AnthropicAI 4h 前那组蛋白设计帖：64 小时生成 300,000+ 设计，
+    实际送检 211 个。这对数字恰好是"生成 vs 验证"落差的最好锚点，
+    但硬引用会把帖子变成蹭大V转发，且和 cluster 20-21 的自述口吻割裂。
+    处理方式：只把 300,000 / 211 当公开事实点到即止，不点公司名、不做转述，
+    主体仍走 Frank 自己的交付观察。文中措辞为"刷到一条"，不做权威引证。
+
+self_observation_anchor: >
+  Frank 交付 AI 工作流给客户时的真实体感：agent 一次给十几份方案，
+  最终能用的常常就一份。不是质量差，是选择/验证的代价没跟着生成降。
+
+anti_ai_slop_check:
+  numbered_list: false
+  rhetorical_question_ending: false
+  pattern_not_x_but_y: 1   # 开头段一次，结尾刻意避开该句式
+  banned_words: 0          # 闭环/护城河/底层逻辑/颗粒度/方法论/数据复利 均未出现
+  company_names: 0
+  hashtag: 0
+  emoji: 0
+  ends_with_short_statement: true
+
+candidate_scan:
+  handles_scanned: 3
+  handle_results:
+    - handle: karpathy
+      fresh_posts: 0
+      note: "最新仍是 Oct 12 'capability gap widening'（6.6M views），round 59 已用过该视角，7d dedup 排除"
+    - handle: swyx
+      fresh_posts: 3
+      note: "3h 内 3 条热帖全部围绕 DeepSeek（DeepInfer 开源 / V4.1 Flash / 知乎原版），触发公司名红线，仅作选题参考不引用"
+    - handle: AnthropicAI
+      fresh_posts: 2
+      note: "4h 前蛋白设计双帖（628K / 73K views），选定为本轮 trigger"
+  candidate_count: 1
+  on_cluster_candidates: 1
+  note: >
+    本轮 on-cluster 候选只有 1 个，远不足 3。按规则不凑数、不为凑数降标准，
+    只跑这 1 个。swyx 的"只读 Twitter 就是在读被批准过的那部分"是个有意思的
+    元观察（上游说明已被筛过一轮），但偏离当前 cluster，本轮不写，留作后续备选。
+
+screenshot_status:
+  real_images: 0
+  blocker: "mcp_browser screenshot → 'Browser action failed in Electron main'，累计约 42 条"
+  fallback: "material + x.txt + posted-verified metadata"

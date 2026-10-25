@@ -1,0 +1,15 @@
+OpenDesign 100K GitHub stars 搞了个真狠的福利。
+
+DeepSeek V4.1 Flash 满血版首月 8 美元，最高 120 美元额度 — 相当于花的钱的 15 倍。也是 OpenCode Go 的两倍月额度。
+
+不光是 OpenDesign 里用，API Key 也能接 OpenCode、Hermes、Claude Code 继续用。Go/Plus/Pro/Max 套餐额度全翻倍，最多 $600，价格不变。
+
+之前我说 2026 是个人开发者把大厂 API 价格打下来的元年 — OpenDesign 这种 8 美元给 120 美元额度的事就是证据。
+
+DIY 跑大模型这条线是真的越来越便宜了。
+
+https://x.com/tuturetom/status/2108899240907084067
+
+# material_id: 1016-pm2-02
+# treatment: quote_retweet
+# screenshots: x-tuturetom-post.png, x-tuturetom-profile-top.png

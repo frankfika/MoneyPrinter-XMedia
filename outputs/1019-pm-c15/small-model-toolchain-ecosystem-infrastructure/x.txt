@@ -1,0 +1,9 @@
+搞 small model 的关键是 toolchain 生态。
+
+1) Google 真要 distill Argon 打 Luna, 定价打 50% — 这条路打得通
+2) 但 small model 真正难的不是参数, 是 workflow 配套 — 推理速度 + function calling + 上下文 + 工具集成
+3) Luna 已经把 small model 这个生态位吃下来了, Google 要突围, 工具链必须比它更全
+
+下个阶段: 谁能把 small model 的工具链做成基础设施, 谁就吃到下一波 mobile / edge AI 红利。
+
+参数战打完, 该打配套战了 — Google 这次会不会真下场?

@@ -1,0 +1,41 @@
+material_id: 1017-pm-pre2-02
+slot: pm-pre2
+scanned_at: '2026-10-17T13:55:00+08:00'
+author:
+  name: Jim Fan (DrJimFan)
+  handle: DrJimFan
+  lang: en
+original:
+  url: https://x.com/DrJimFan/status/2111128797181567466
+  post_id: '2111128797181567466'
+  posted_at: '2026-10-17T00:15:00+08:00'
+metrics:
+  views: 44044
+  likes: 750
+  retweets: 136
+  replies: 118
+  bookmarks: 413
+ai_match: true
+ai_keywords_hit:
+  - AI
+  - agent
+  - LLM
+  - GPT
+  - Astra
+  - robotics
+  - NVIDIA
+  - open source
+  - Opus
+  - Sonnet
+summary: >-
+  NVIDIA GEAR 把机器人 agentic 框架 ASPIRE V1.0 开源了（含真实机器人技能发现 + self-improvement）。
+  切到 GPT-6 Astra 后，模拟机器人基准一夜打满 ~99%。Opus 5.5 略胜一档；
+  Sonnet 5.5 在 cost vs capability 的 Pareto 前沿，$12 / 任务。
+  真机演示全公开，github.com/nvlabs/aspire + research.nvidia.com/labs/gear/aspire/ 可直接 clone。
+evidence_links:
+  - https://x.com/DrJimFan/status/2111128797181567466
+  - https://x.com/DrJimFan/status/2111128798645416006
+  - https://github.com/nvlabs/aspire
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan
+lang: zh

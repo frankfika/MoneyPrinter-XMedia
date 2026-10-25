@@ -1,0 +1,20 @@
+# material_id: 1015-pm-01
+# author_handle: karpathy
+# source_url: https://x.com/karpathy/status/2109361546505966046
+# draft_at: 2026-10-15T15:12:00+08:00
+# screenshots: [x-karpathy-timeline.png, x-post-detail.png]
+
+Karpathy 把全球 LLM 用户劈成 4 层，挺扎心。
+
+~60 亿人（75%）连 ChatGPT 长啥样都没见过；
+~10-20 亿当 Google 用；
+~2000 万专业用户在用 agent 写代码；
+~5000 人见过内部 frontier 系统——千 agent 协作数周。
+
+同一时刻，认知断成了 4 段。
+
+他那条 6.4M 浏览、43K 赞、7.8K 转。原帖：
+https://x.com/karpathy/status/2109361546505966046
+
+# posted_url: https://x.com/FrankFika/status/2110416897112248372
+# posted_at: 2026-10-14T17:06:12.000Z

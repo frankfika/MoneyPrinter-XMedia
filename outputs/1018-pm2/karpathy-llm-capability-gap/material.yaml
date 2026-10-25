@@ -1,0 +1,44 @@
+candidate_id: 01-karpathy-llm-capability-gap
+source_url: https://x.com/karpathy/status/2109361546505966046
+source_author: Andrej Karpathy (@karpathy)
+source_handle: karpathy
+source_post_id: "2109361546505966046"
+source_published_at: 2026-10-12
+source_metrics:
+  views: 6_500_000
+  reposts: 8000
+  likes: 43000
+  replies: ~1200
+source_topic: LLM 能力理解的 4 层漏斗差距扩大
+source_summary: |
+  Karpathy 重提 4 月旧帖:普通民众对 LLM 能力的理解与 frontier-grade
+  模型真实能力之间的 gap 在加宽,已从"两组人各说各话"变成"sharp funnel"
+  —— 6B 人(~75% 人口)基本没接触过;1-2B (~20%) 偶尔用 free-tier,
+  把 LLM 当高级 Google;20M (0.2%) 真正在用 frontier-grade 模型搞生产;
+  5000 (0.00006%) 内部 access 到 SWARMS 级 agent 集群。
+candidate_themes:
+  - 4 层漏斗比例悬殊
+  - frontier-grade 模型实际能力远超大众想象
+  - gap widening 不是教育问题,是 access 不对称
+quote_rt_anchor: '6B vs 5000,这个比例本身就是 bug。'
+angle: |
+  Frank 的角度(具体延伸 + 反问):
+  "身边搞 AI 的朋友里有几个真正日常在用 Claude Code / Cursor / Cline
+   写超过 1 个月?这比例可能比 karpathy 那个 0.2% 还低 —— 漏斗最底
+   端那 5000 个内部 access 的我们连想象都想象不到。"
+target_length: 150-180 字
+hashtag: 0
+engagement_hooks:
+  - 数字卡:6B vs 5000 (1.2M 倍差距)
+  - 反问:你身边几个人用 frontier-grade LLM >1 个月?
+  - 具体延伸:gap 的本质是 access 渠道不对称,不是技能
+risk_notes:
+  - 引用 karpathy 的比例是事实数据,非编造
+  - 文案纯原创,不引用原帖原话
+  - 不讨论 OpenCSG / DeepSeek / Moonshot / MiniMax
+posted: true
+posted_url: https://x.com/FrankFika/status/2111731735700639985
+posted_at: 2026-10-18T16:11:00+08:00
+prepared_at: 2026-10-18T16:09:00+08:00
+preparer: short-posts-chuangzuo cron 16:00 (d5c0d018)
+screenshot: ./screenshots/source.jpg

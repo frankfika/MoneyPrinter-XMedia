@@ -1,0 +1,13 @@
+ASPIRE V1.0 开源有意思, 不是工具本身, 是反馈环。
+
+NVIDIA lab 切换 backend model overnight, benchmarks saturated ~99%。 这不是单点能力, 是反馈环速度已经跑通。
+
+1) 工具越多 → 反馈数据越密
+2) 数据越密 → 模型越好用
+3) 模型越好用 → 工具用得更广
+
+NVIDIA 把 ASPIRE 开源, 不是慈善, 是让整个反馈环生态 接上 backend 一起加速。
+
+工具链生态的胜负手不在工具本身, 在谁的反馈环最快。 反馈环跑通了, 模型用 Astra 还是 GPT 都无所谓, 一夜 saturated。
+
+这就是 工具链生态的 实证。

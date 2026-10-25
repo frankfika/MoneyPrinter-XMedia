@@ -1,0 +1,37 @@
+material_id: "1016-night-003"
+slot: night
+scanned_at: "2026-10-16T20:21:00+08:00"
+
+author:
+  name: "Google DeepMind"
+  handle: "GoogleDeepMind"
+  lang: en
+
+original:
+  url: "https://x.com/GoogleDeepMind/status/2110190101707858039"
+  post_id: "2110190101707858039"
+  posted_at: "2026-10-14T02:05:00.000Z"
+
+metrics:
+  views: 72000
+  likes: 139
+  retweets: 57
+  replies: 633
+
+ai_match: true
+
+summary: "DeepMind 联手新加坡 GovTech：用开源 Gemma 在端侧做实时反诈检测；针对本地话术微调，不泄漏个人数据；解决新加坡过半诈骗都是社工攻击的现实痛点（72K 浏览）"
+
+evidence_links:
+  - label: "GovTech Singapore 官方账号"
+    url: "https://x.com/GovTechSG"
+  - label: "原帖（Google DeepMind）"
+    url: "https://x.com/GoogleDeepMind/status/2110190101707858039"
+
+screenshots_needed:
+  - "原帖正文+配图区"
+  - "配套 Antigravity 推广上下文（Google AI Pro 用户群同向）"
+
+treatment_hint: quote_retweet
+
+dedup_hits: []

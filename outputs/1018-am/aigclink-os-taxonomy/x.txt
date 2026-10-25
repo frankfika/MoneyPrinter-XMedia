@@ -1,0 +1,12 @@
+有人把小学全学科做成了一棵知识图谱：os-taxonomy，1590 个知识点，3221 条依赖关系，全开源。
+
+最香的不是数据本身，是结构——它把"先学什么 → 再学什么"显式化了。比如孩子要理解"水为什么会沸腾"，图谱会告诉你：先得有温度、热量、状态变化这三块前置知识。
+
+接法也开放：可以拿来做 AI 家教或 RAG 外挂；也能包成 MCP，让 Agent 直接查"到这个目标的最短路径"、"这套题背后缺的是哪个前置"。AI 不只是答眼前那一题，而是顺着图谱倒推回去定位薄弱环节。
+
+教育的三个真问题：学什么、怎么学、卡在哪——前两个现在能靠图谱结构 + LLM 联合答上，最后那个靠测评闭环才能真正识别"漏了哪一步"。
+
+x.com/aigclink/status/2111314222571512238
+# material_id: 1018-am-03
+# treatment: quote_retweet
+# screenshots: x-aigclink-os-taxonomy-post.png, x-aigclink-os-taxonomy-video-thumb.jpg

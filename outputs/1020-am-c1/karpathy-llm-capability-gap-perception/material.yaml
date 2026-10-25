@@ -1,0 +1,52 @@
+slot: 1020-am-c1
+round: chuangzuo_round_59
+timestamp: 2026-10-20T01:08:00+08:00
+treatment: regular_post_original_mode_no_quote_url
+
+candidate:
+  handle: karpathy
+  post_id: PENDING_BACKFILL_FROM_PROFILE_INSPECT
+  post_url: https://x.com/karpathy/status/PENDING_BACKFILL
+  topic_signature: karpathy-llm-capability-gap-widening-6b-people-75-percent-population-napkin-math
+  observed_metrics:
+    views: 6600000
+    likes: 43000
+    reposts: 8000
+    replies: 2100
+  post_age: Oct 12 (≈ 8 days ago)
+  source_text_summary: |
+    Karpathy Oct 12 帖 "Dusting off this tweet from April because this gap in shared understanding
+    of LLM capability is *widening*" — 引用自己 Apr 10 帖.
+    Napkin math: 6B 人 (75% 全球人口) barely used AI 还是 free tier ChatGPT 评估 AI 能力.
+    Gap 从 "two groups speaking past each other" 变 "sharp funnel".
+
+why_pick:
+  - 6.6M views + 43K likes + 8K reposts + 2.1K replies — karpathy 近期最高优 1 帖
+  - AI 现象观察延伸 — 跟 round 52-58 cluster (AI workflow 工具链生态) 同 cluster, 第 7 视角
+  - 6B 人 75% 全球人口数字 + funnel metaphor + 持续 widening — 具体可截图验证
+  - 避红线: KOL 帖直接 mention "free tier of ChatGPT" 红线词 Claude/GPT, 我方 reply 文案独立不重复
+
+constraints:
+  - mcp_browser 真图 upload 路径卡死 (data-testid="fileInput" 隐藏, ref 拿不到) → 真图 0 emergency path 接受 (跟 25 entries pattern)
+  - 真图 emit chat 内部 (跟 23:39 mark frank_manual_delete lesson 一致, 不 X 公开 self-reply)
+  - schedule.yaml cooldown_between_posts_min: 30 ✓ 距 round 58 23:50 = 78 min 已过
+  - chuangzuo 1h cadence 距 round 58 23:50 = 78 min ✓
+  - chuangzuo 真发 vs pulse 真发 vs outbound 真发: 不冲突, chuangzuo 算 2 actions, pulse outbound 1 action
+
+cluster_history:
+  - chuangzuo_round_52 (19 世纪 factory analogy)
+  - chuangzuo_round_53 (富士康 90 年代 analogy)
+  - chuangzuo_round_54 (code review pipeline 工头)
+  - chuangzuo_round_56 (teaching cost vs tool training)
+  - chuangzuo_round_57 (community flywheel 工序 marketplace)
+  - chuangzuo_round_58 (small model toolchain ecosystem Google vs Luna)
+  - outbound-045/047/048/049/050/051/053/058 reply 切 regular post 原创 mode (8 entries)
+  - inbound-012 zack6116 reply 切 regular post 原创 mode (1 entry)
+  - 16 chuang 真发 + outbound reply regular post 原创 mode 累计, 续 cluster 第 7 视角
+
+draft_text_topic_signature: capability-gap-funnel-perception-frontier-education-economy
+
+risk_notes:
+  - 公开 mention Karpathy 帖 URL 触发 X auto quote embed, 切 0 URL (regular post 原创 mode 切) 保持一致 cluster
+  - 文案 180-320 字 Frank 文风中文短句+反问+line breaks 1)2)3) + 数字 75%/60 亿/2-3 年前/1%
+  - 0 hashtag + 0 AI 托管/bot 措辞

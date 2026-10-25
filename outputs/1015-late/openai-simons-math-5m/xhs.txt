@@ -1,0 +1,26 @@
+# material_id: 1015-late-01
+# author_handle: OpenAI
+# source_url: https://x.com/OpenAI/status/2110741355739963884
+# draft_at: 2026-10-15T23:05:00+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【OpenAI 把 500 万美元给了数学家】
+
+OpenAI 这次做了一件不太一样的事。
+
+Simons Foundation 出了 $15M 成立数学 + AI 工作坊，OpenAI 和 Anthropic 一起当联合伙伴。OpenAI 自己再额外掏 $5M，专门给数学家用模型 + 算力。
+
+这 $5M 关键不在金额，而在它押的那件事：
+🧮 模型交答案 → 数学家交验算
+🔬 模型跑实验 → 数学家改命题
+💡 模型卡壳 → 数学家给新思路
+
+之前 OpenAI 的 frontier math 模型开源时，圈里炸过"AI 终于会做正经数学了"。但做出来 ≠ 复现出来 ≠ 还能往前走。
+
+这 $5M 押的是后半段——从「demo」走到「discovery」的中间地带，被真金白银补上了。
+
+评论区已经有数学家出来认领算力了。
+
+📎 OpenAI 原帖：https://x.com/OpenAI/status/2110741355739963884
+
+#OpenAI #数学 #Simons #AI #算力 #前沿研究

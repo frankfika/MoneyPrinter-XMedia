@@ -1,0 +1,34 @@
+material_id: 1017-am3-03
+slot: am3
+scanned_at: 2026-10-17T11:00:00+08:00
+author:
+  name: NVIDIA
+  handle: nvidia
+  lang: en
+original:
+  url: https://x.com/nvidia/status/2111005194058179020
+  post_id: "2111005194058179020"
+  posted_at: 2026-10-16T08:03:53+08:00
+  body_excerpt: |
+    The next decade of driving, built together. We're expanding our
+    strategic partnership with @MercedesBenz AG to develop the next
+    generation of driver assistance and automated driving systems.
+metrics:
+  views: 85300
+  likes: 1600
+  retweets: 187
+  replies: 121
+  bookmarks: 0
+ai_match: true
+summary: |
+  NVIDIA x 奔驰扩大自动驾驶合作 —— Hyperion 算力架构 + Alpamayo Stack 软件
+  + Halos 安全系统。MB.OS + 自动驾驶联合开发,目标 SAE Level 4 (robolimousines)。
+  MO360 数字生产也同步深化。Mercedes 把 NVIDIA 称作「最重要战略伙伴」。
+evidence_links:
+  - https://nvidianews.nvidia.com/news/mercedes-benz-and-nvidia-expand-strategic-partnership-to-advance-safe-highly-automated-driving-in-the-next-decade
+  - https://x.com/nvidia/status/2111005194058179020
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (handle batch: nvidia)
+media_urls:
+  - https://pbs.twimg.com/media/HUvMCL6WEAARtgZ?format=jpg&name=medium
+  - https://iprsoftwaremedia.com/219/files/202610/d8074bf73d259485ee16c0b53d2e2ccb/mercedes-benz-nvidia.jpeg
