@@ -152,13 +152,17 @@ ls -la outputs/$(date +%Y-%m-%d)/ 2>/dev/null || echo "当日无 outputs 目录"
 每次日报生成后 append 到 `state/memory/super-bot.md`：
 
 ```markdown
+<!-- round -->
 ### 日报 · YYYY-MM-DD
 [完整的日报 markdown]
 - 异常 / 升级: [...]
 - 决策记录: [...]
 ```
 
-每周末 prune 一次（保留日报摘要 + 异常，丢掉临时观察）。
+> ⚠️ **每个日报段前面必须有一行 `<!-- round -->`**（段边界标记）。
+> 读历史用：`python3 scripts/tail-rounds.py state/memory/super-bot.md --rounds 3`
+
+每周末 prune 一次（保留日报摘要 + 异常，丢掉临时观察）。prune 时**保留 `<!-- round -->` 分隔符**，否则段边界会断。
 
 ---
 

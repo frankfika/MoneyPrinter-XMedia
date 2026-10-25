@@ -1,14 +1,24 @@
-# state/memory/super-bot.md — 日报记录
-
 > 2026-10-25 从 `~/.codex/automations/super-bot/memory.md` 迁入项目内。
-> 调度：**每日 09:00 +08:00**（cron `0 9 * * *`）。
-> 规程：`skills/super-bot/SKILL.md`。
->
-> 读法：
-> ```bash
-> python3 scripts/tail-rounds.py state/memory/super-bot.md --rounds 3
-> ```
+> 2026-10-26 修正：迁移时用新头部**替换**原头部，丢失日报模板段 —— 已重建，原头部全文保留。
+> **轮次分隔符**：每个日报段前有 `<!-- round -->`。
+> **本文件只是日志，不是事实源。** 事实源是 `state/index.json` + `state/*.json`。
+> 读法（别全量 cat）：`python3 scripts/tail-rounds.py state/memory/super-bot.md --rounds 3`
 
+---
+
+# Super Bot · 日报历史
+
+> Super bot 是只读 + 报告层,不动 X。
+> 每次 cron 触发后 append 一段「日报 · YYYY-MM-DD」。
+> 每周 prune 一次(保留摘要 + 异常,丢掉临时观察)。
+
+---
+
+## 模板(首次 cron 跑时填)
+
+```markdown
+
+<!-- round -->
 ### 日报 · YYYY-MM-DD
 
 ## 今日概览
@@ -43,6 +53,7 @@
 - 1 句话总结:[...]
 ```
 
+<!-- round -->
 ### 日报 · 2026-10-19 (cron trigger 09:00 +08:00 准时)
 
 ## 今日概览
@@ -134,6 +145,7 @@
 ## 关注点 (从 super-bot 视角给 Frank)
 **Frank, 你的 23:38 急催 + 3 问 (排版/节奏/内容) pending 已 433+ min, 短文助手 24h 状态概览: 创作 chuangzuo 9 轮 0 真发 + pulse engagement 12 likes 试恢复延续 + 真图 0 硬约束持续 + Codex app 3 automation 未 PAUSE 双触发 X 限流 — 你的任何方向回答 (排版/节奏/内容) 我都能立即调整 chuangzuo 写文案 risk profile, 现在 Frank 完全离 chat 9h+ 深夜睡眠状态保守; 建议明天起来第一件事答 3 问或手动 PAUSE Codex app 3 automation + 清 X 草稿箱 5 条 draft.**
 
+<!-- round -->
 ### 日报 · 2026-10-21（覆盖 2026-10-20 09:58 → 2026-10-21 09:58 +0800）
 
 **模式**: cron 自动（每日 09:00 +08:00，MiniMax Code session）

@@ -192,6 +192,7 @@ XHS 默认停手（`private/account-safety.yaml#xhs.ban_status.is_banned = true`
 轮次记录追加到 `state/memory/pulse.md`：
 
 ```
+<!-- round -->
 ### pulse_round_N (YYYY-MM-DD HH:MM–HH:MM +08:00) — 一句话结论
 
 - 模式：MiniMax Code session / 浏览器不可用
@@ -201,6 +202,12 @@ XHS 默认停手（`private/account-safety.yaml#xhs.ban_status.is_banned = true`
 - 异常（限流 / 浏览器卡顿 / mcp_browser 不可用）
 - 新经验（可选）
 ```
+
+> ⚠️ **每个新轮次段前面必须有一行 `<!-- round -->`**（这是段边界标记）。
+> 不要靠标题猜边界 —— 轮次段内部的小节标题经常含 "pulse round" 这类关键词，
+> 按标题切会把一轮切成碎片，agent 读到的是半截记录。
+>
+> 读历史轮次用：`python3 scripts/tail-rounds.py state/memory/pulse.md --rounds 3`
 
 ## 相关文件
 

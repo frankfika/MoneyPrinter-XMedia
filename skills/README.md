@@ -81,7 +81,7 @@
 7. mcp_browser 真发：`fill` + `Cmd+Enter`（Meta+Enter）
 8. **验证**：Cmd+Enter 后**不要**查 profile / with_replies / home feed，用 search 拿 own_post URL
 9. 更新 `published-posts.json` / `seen-posts.json` / **`state/index.json`** / `account-safety.yaml`
-10. 轮次记录追加到 `state/memory/chuangzuo.md`
+10. 轮次记录追加到 `state/memory/chuangzuo.md`（**新段前加一行 `<!-- round -->`**）
 
 ## 每轮产出约定
 
