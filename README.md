@@ -1,5 +1,7 @@
 # 短文助手 · X 内容流水线
 
+> 📦 **换机器 / 换 AI 接手 → 先读 [`HANDOVER.md`](HANDOVER.md)**（含 cron prompt 原文、状态手术清单、验收标准）
+
 > Fang 的 X（Twitter）内容流水线 + **双向 engagement pulse bot**。
 > 沉淀在这里是为了**整体迁移**和**同步给团队成员 / 自己的另一台机器**。
 

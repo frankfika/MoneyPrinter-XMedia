@@ -145,6 +145,120 @@
         "reasons": []
       },
       "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T00:50:24+0800",
+      "origin": "inline",
+      "sha256": "b3ef63f00e9cfe5a",
+      "chars": 50,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "all_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [redline.chinese_ai_company] 命中「['DeepSeek']」 — 不出现 Chinese AI 公司名（SKILL.md 硬红线）",
+          "HARD [redline.no_opencsg] 命中「['opencsg']」 — X 上不出现任何 OpenCSG / 公司业务宣传"
+        ]
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "all_hits": [
+          "redline.chinese_ai_company",
+          "redline.no_opencsg"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [redline.chinese_ai_company] 命中「['DeepSeek']」 — 不出现 Chinese AI 公司名（SKILL.md 硬红线）",
+          "HARD [redline.no_opencsg] 命中「['opencsg']」 — X 上不出现任何 OpenCSG / 公司业务宣传"
+        ]
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:03:25+0800",
+      "origin": "inline",
+      "sha256": "eb0b95308b21c3ed",
+      "chars": 17,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "frank.always_two_part"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "frank.always_two_part"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:03:31+0800",
+      "origin": "inline",
+      "sha256": "94858f891f92cf54",
+      "chars": 39,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [
+          "frank.quote_opening",
+          "frank.agree_half",
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.quote_opening",
+          "frank.agree_half",
+          "frank.pivot_expand"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.quote_opening] 命中「['这个结论听着对', '没法执行']」 — 引述型开场 —— 2026-10-26 被撤掉那条 reply 的第 1 步（复述对方原话起手）。硬拦截。",
+          "HARD [frank.agree_half] 命中「['听着对，但', '没法执行']」 — 「同意一半」—— 被撤掉那条 reply 的第 2 步。硬拦截。",
+          "HARD [frank.pivot_expand] 命中「['问题来了']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。",
+          "清理后 AI 味分反而变高，保留原文"
+        ]
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [
+          "frank.quote_opening",
+          "frank.agree_half",
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.quote_opening",
+          "frank.agree_half",
+          "frank.pivot_expand"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.quote_opening] 命中「['这个结论听着对', '没法执行']」 — 引述型开场 —— 2026-10-26 被撤掉那条 reply 的第 1 步（复述对方原话起手）。硬拦截。",
+          "HARD [frank.agree_half] 命中「['听着对，但', '没法执行']」 — 「同意一半」—— 被撤掉那条 reply 的第 2 步。硬拦截。",
+          "HARD [frank.pivot_expand] 命中「['问题来了']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。",
+          "清理后 AI 味分反而变高，保留原文"
+        ]
+      },
+      "qa_exit": null
     }
   ]
 }

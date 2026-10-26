@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-10-26T10:02:22",
+  "note": "2026-10-26 闸门建成时的基线。FAIL 的样本是**已知的 AI 味样本**（含 Frank 被拉黑的真实反例）——它们必须一直 FAIL。",
+  "samples": {
+    "chuangzuo_round_72": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    },
+    "chuangzuo_round_71": {
+      "expect": "PASS",
+      "soft": 3,
+      "rule_ids": [
+        "wiki.rule_of_three"
+      ]
+    },
+    "chuangzuo_round_70": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    },
+    "chuangzuo_round_67": {
+      "expect": "PASS",
+      "soft": 3,
+      "rule_ids": [
+        "frank.rhetorical_closing"
+      ]
+    },
+    "chuangzuo_round_66": {
+      "expect": "PASS",
+      "soft": 3,
+      "rule_ids": [
+        "frank.rhetorical_closing"
+      ]
+    },
+    "chuangzuo_round_65": {
+      "expect": "PASS",
+      "soft": 3,
+      "rule_ids": [
+        "frank.rhetorical_closing"
+      ]
+    },
+    "chuangzuo_round_64": {
+      "expect": "PASS",
+      "soft": 6,
+      "rule_ids": [
+        "frank.rhetorical_closing",
+        "frank.symmetric_closing"
+      ]
+    },
+    "pulse_round_83": {
+      "expect": "FAIL",
+      "soft": 15,
+      "rule_ids": [
+        "frank.pivot_expand",
+        "frank.rhetorical_closing",
+        "frank.symmetric_closing",
+        "frank.zh_diction"
+      ]
+    },
+    "chuangzuo_round_69": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    },
+    "pulse_round_41_original": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    },
+    "chuangzuo_round_76": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    },
+    "chuangzuo_round_77": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    },
+    "chuangzuo_round_78": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    }
+  }
+}

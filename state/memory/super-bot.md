@@ -284,3 +284,102 @@
 - chuangzuo_round_78 **没有历史采样点**，不能说它 views 是涨到 79 还是 12.5h 就停住
 
 报告：`outputs/1023-am-e8/super-bot-daily-0900/daily-report.md`
+
+<!-- round -->
+### 日报 · 2026-10-26（覆盖 2026-10-25 09:00 → 2026-10-26 09:02 +08:00）
+
+## 一句话
+昨晚 03:38 笔记本一合盖，pulse / chuangzuo 两条 cron 一起断在网络层（`net::ERR_CONNECTION_CLOSED`），机器直到 09:01:53 才醒 —— **24 小时内 15 次 cron 投递只有 2 次落盘，丢了 12 轮**；最可惜的是 03:30 那轮 chuangzuo，浏览器是通的、候选已扫完、零发送判定已下，结果一个字没写下来。
+
+## 今日概览
+- 创作 pipeline：cron 投递 4 轮 / 落盘 1 轮（round_84）/ **另有 3 轮非 cron 执行落盘**（round_85 手动、round_86-87 WorkBuddy automation）/ 真发 1 条 / 零发送 3 轮
+- Engagement pulse：cron 投递 9 轮 / 落盘 1 轮（合并轮 67–71）/ 另有 1 轮手动补跑落盘 / inbound 回 0 条 / outbound reply 0 条 / like-only 1 条
+- 异常：断网打断 turn 2 轮（session status 实查）/ 浏览器不可用 2 轮 / 限流 0 次 / AI 味闸门硬拦截 3 次
+- 状态：🔴 需介入
+
+## 轮次真空期（12 轮）
+
+| cron | 投递 | 落盘 | 丢失 |
+|---|---|---|---|
+| pulse | 9 | 1（10-26 00:00 合并轮 67–71） | **8** |
+| chuangzuo | 4 | 1（10-26 00:00 round_84） | **3** |
+| super-bot | 2 | 0（本次即 09:01:53 那一跑） | **1**（10-25 09:00） |
+
+**时间窗口**：03:38:10 笔记本合盖进入 Clamshell Sleep → 09:01:53 首次真正唤醒，连续深睡 **5h24m**；期间只有 2–5 秒的 DarkWake 维护窗。
+
+**根因链（可查证）**
+1. 03:30:00 chuangzuo cron 触发，session `mvs_2d57a431…` 起来后浏览器是通的 —— 真扫了 @dotey 时间线、评估 5 个候选、判定「12h 冷却差 2h56m → 零发送 + 准备 staging draft」。
+2. 03:38:10 合盖休眠 → 网络断。
+3. 04:03:31 DarkWake 期间 pulse cron 触发，session `mvs_208ddb06…` 只走了第一步（read SKILL.md），04:03:33 机器再次入睡。
+4. 两个 session 的 `status` 都是同一条：`net::ERR_CONNECTION_CLOSED` / errorCode `50113` / errorSource `agent-runtime`。
+5. 老的共享 session `mvs_460dce56…`（`compressed: true`，三条 cron 共用）已于 10-26 00:08:42 以 `aborted / previous local runtime stopped` 收尾并 archived。
+
+**结论（结构性，不是偶发）**：**cron 投递状态 `delivered` ≠ 轮次执行。** 本地 cron 依赖 runtime 进程存活 + 网络在线；机器合盖休眠期间触发点无人执行，**且不补跑**（DarkWake 窗口偶尔会补投递一次，但网络立刻断，turn 照样死）。
+
+**按 SKILL.md 判据**：pulse 末轮 00:30 → 距今 8h32m > 2×4h → **真空期成立**；chuangzuo 末轮 03:05 → 距今 5h57m < 2×12h → 未过判据，但窗口内仍有 3 轮 cron 轮次丢失。
+
+**对 inbound 覆盖的影响**：最后一次真扫 Mentions 是 10-26 00:30（Frank 手动触发的补跑），结论「Oct 23 之后零新 inbound」。此后 **8.5 小时无人扫过 Mentions**；super-bot 不碰浏览器，无法补扫。睡眠期间进来的 inbound 依旧无人接。
+
+## 创作 pipeline
+- 已发 X URL：[https://x.com/FrankFika/status/2114394951454994675]（round_85，10-26 00:34:47 +08，289 字，无媒体）
+  - 源：@bindureddy「Vibe Code Your Own LLM」（22K views / 94 replies / 361 likes，practitioner 源）
+  - topic_signature：`self-trained-model-needs-your-own-acceptance-ruler`
+  - **触发方式：Frank 00:24 反馈「我看你没有执行啊」→ 手动跑，不是 cron**
+- 单帖实测数据：round_85 **只有 1 个采样点**（0h18m，syndication 匿名 API，likes 0 / replies 0 / views null）。**12h likes 闸门采样点 12:34 才到 → 本报告不对该帖表现下任何结论。**
+- 上一条 round_78（`2112722078583652781`）5 个 aria-label 采样点：44.3h→110.3h，views 79→82→85→92→94，**likes 全程 Δ0**，replies 全程 0 → 分发周期已结束（10-23 已就「原创线显式暂停」征询 Frank，仍待答复）
+- 零发送轮次：round_86（冷却差 3 分钟）/ round_87（冷却 2.5h）/ cron 03:30 那轮（冷却 2h56m，**且无浏览器记录的 WorkBuddy 那两轮另计**）
+- 异常：round_86/87 本机是 WorkBuddy automation sandbox（无 `mcp_browser`）→ 各 1 次浏览器不可用
+
+## Engagement pulse
+- inbound 回了谁：**0 条**（本窗口无 inbound reply；最后一次真扫 Mentions = 10-26 00:30，零新 inbound）
+- outbound like+reply 了谁：**0 条 reply**
+- like-only：[@bindureddy]（post `2113689615253299647`，12,788 views / 48 replies / 145→146 likes，aria-label + `data-testid=unlike` 双证）
+- 跳过：
+  - @op7418 / @oran_ge —— **已拉黑 Frank**，已写入 `state/skip-handles.json`
+  - @karminski3 —— 3 条新帖全带国产模型名，撞红线
+  - @karpathy —— 最新 Oct 12，无新候选
+  - @zkcolab —— `SKIPPED_NO_REPLY`
+  - 1 条 outbound reply **发前主动撤下**（AI 味四段式风险）
+- cooldown 命中：1 次（12h 冷却）
+
+## AI 味闸门结果
+- 收据 6 条，**全部落在 00:43–00:50 回归测试窗口** → 通过 3 / 拦下 3 / 自动清理 2
+- 拦下明细：2 条 `redline.chinese_ai_company`(DeepSeek) + `redline.no_opencsg`；1 条 origin=round_85 草稿，「清理后 qa-draft 仍未通过」
+- **清理前后 soft 分变化：数据不可用**（收据里 soft 字段为 null）
+- 🔴 **本窗口发出的唯一一条帖（round_85）过不了闸门**：用只读 `humanize.py scan` 复跑 `outputs/2026-10-26-am-manual/…/x.txt`，命中 HARD `wiki.negative_parallelism` ——「不是"哪张模板写得好"，而是"它什么时候会失效"」。该帖发布于 00:34:47，**早于闸门建成（00:36–00:56）**，所以没有收据。**这正是 Frank 点名的中文 AI 味最强指纹。**
+
+## 主题分散度
+**数据不可用，跳过。** `recent-picks.json` 115 条里 **63 条没有任何日期字段**；有日期的 52 条全部停在 10-17–10-20，最新一条 expires_at 是 10-26 23:50。7 天 dedup 窗口已失真，「连续 3 天同 topic」这类判断没有可靠依据。
+
+## 异常
+1. 🔴 断网打断 turn 2 轮（`ERR_CONNECTION_CLOSED` / 50113 / agent-runtime）
+2. 🔴 闸门未覆盖已发内容：round_85 是闸门上线前发的，事后复跑仍 FAIL
+3. 🟡 浏览器不可用 2 轮（WorkBuddy automation sandbox 无 `mcp_browser`）
+4. 🟡 限流 0 次
+5. 🟡 闸门硬拦截 3 次（全部来自回归测试，**生产路径尚无拦下记录**）
+6. 🟡 super-bot 自己 10-22 / 10-24 / 10-25 三天日报都没落地（cron 都投递了）—— Frank 00:24 的「我看你没有执行啊」指的就是这个
+7. 🟡 `super-bot.md` 的 10-23 日报**漏写 `<!-- round -->` 分隔符** → `tail-rounds.py --rounds 3` 读不到它，还把文件里的模板段当成一轮
+
+## 经验沉淀
+- **区分「投递了」和「跑了」有可查证手段**：cron 投递状态永远只有 `delivered`，但 `mavis session get <session_id>` 的 `status` 字段会写明轮次是怎么死的（`ERR_CONNECTION_CLOSED` / `aborted`）。配合 `cron_read --view runs` 的时间戳，能把每一轮的死法对上号 —— 不用猜。
+- **`pmset -g log` 是判真空期根因的第一手证据**：`Entering Sleep state due to 'Clamshell Sleep'` 直接指向合盖，不是猜测。
+- 补投递 ≠ 补执行：DarkWake 窗口会让 cron 补发一次错过的触发点，但网络几秒后就断，turn 照样死。
+
+## 明日建议
+- **建议人工介入（Frank 拍板）**
+  1. round_85 那条已发帖要不要处置 —— 带「不是 X，而是 Y」硬指纹，删 / 改 / 留着都不该由 bot 决定
+  2. 睡前合盖 = 三条 cron 全线空转。要么接常开电源防休眠，要么明确接受「睡觉期间 inbound 无人接」
+  3. 原创线是否显式暂停（round_78 已走 110h，likes Δ0；round_85 闸门采样点 12:34 才到）
+  4. WorkBuddy automation 与 chuangzuo cron 职责重叠，建议降级为只读核验器（round_86 自己的建议）
+- 候选池状态：**数据不可用**（recent-picks 已失真）
+- 主题分散度：**数据不可用**
+
+## 诚实边界
+- round_85 只有 1 个真实采样点，**未据此下任何结论**
+- 本轮未读 X 通知页，不存在「把 views 当 likes」的口径污染
+- round_78 的 likes/views 全部来自 aria-label 实测（可靠口径），非文本抽取
+- 全程只读：未调浏览器、未改 `state/*.json`、未改 `state/*.yaml`、未改 worker cron 配置
+- `state/*.json` 全部解析正常，无损坏
+
+- 异常 / 升级：断网打断 2 轮（pulse 04:03、chuangzuo 03:30）；闸门未覆盖 round_85 已发内容；super-bot 自身 10-22/24/25 日报缺失；10-23 日报缺 `<!-- round -->` 分隔符
+- 决策记录：本轮未做任何需 Frank 拍板的改动；全部为只读采集 + 本文件 append
