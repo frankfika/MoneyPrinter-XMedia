@@ -57,10 +57,17 @@ outputs/<档期>/    state/index.json    state/memory/*.md
 
 三条线共享 `state/` 事实源，各自独立 session（每轮全新上下文，不膨胀）。
 
-## 浏览器双通道（登录态互相独立！）
+## 浏览器通道（唯一：Codex 内置浏览器）
 
-| 通道 | 谁能用 | 登录态 | 用途 |
-|---|---|---|---|
+Fang 2026-10-30 拍板：**所有的都用内置浏览器**（`mcp__cua_repl__js`，用户可见真窗口）。
+xb.py + 专用 Chrome 通道停用（历史档案保留在 `scripts/browser/`）。
+
+前置条件链（缺一不可，agent 每轮自检）：
+1. Codex app → Work settings → 启用 **Local browser use**（未启用时 cua_repl 报 disabled，轮次零动作）
+2. Fang 在内置浏览器里**一次性登录** X 和小红书（含 2FA，只有人能做）
+3. agent 复核登录态后更新 `private/account-safety.yaml`
+
+---|---|---|---|
 | **Codex 内置浏览器**（`mcp__cua_repl__js`） | Codex 对话 + 有 cua_repl 的 automation | ⚠️ 需一次性登录 X / 小红书；**且当前 Work settings 已禁用浏览器控制**（2026-10-30 实测，启用后才可用） | X 发文、小红书代点发布 |
 | **xb.py + 专用 Chrome**（端口 9222） | 任何 shell / automation | ⚠️ X 未登录（`needs_login`） | 无 cua_repl 时的备选；只读扫描可用 |
 

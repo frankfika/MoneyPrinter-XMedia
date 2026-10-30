@@ -275,17 +275,15 @@ python3 scripts/prepublish.py --text "<reply 正文>"
 > `python3 scripts/browser/xb.py --action '{"action":"...","input":{...}}'`
 > action 集合、退出码（0 成功 / 1 action 失败 / 2 浏览器不可用）、selector 写法见 `skills/browser-use-utils/SKILL.md`。
 
-> ### ⚠️ 2026-10-27 实测：两条浏览器链路，登录态是两回事
+> ### ⚠️ 2026-10-30 起：唯一链路 = Codex 内置浏览器（Fang 拍板）
 >
-> | 链路 | profile | 登录态 | 能不能发 |
-> |---|---|---|---|
-> | `scripts/browser/xb.py` | `~/.shortbot-browser-profile` | **未登录** —— navigate 直接跳 `/i/jf/onboarding/web?...mode=login` | ❌ 发不了 |
-> | **内置浏览器**（`mcp_browser` / Electron FilePanel） | 会话自己的 profile | **已登录 @FrankFika** | ✅ 能发 |
+> | 链路 | 状态 |
+> |---|---|
+> | **Codex 内置浏览器**（`mcp__cua_repl__js`） | ✅ 唯一通道。登录态待 Fang 一次性登录（原 MiniMax Code Electron 的登录态随 runtime 作废）；发文 `press_key {"key":"Enter","modifiers":["Meta"]}` |
+> | `scripts/browser/xb.py`（专用 Chrome） | ⛔ 已停用（历史档案），不许用于 pulse |
 >
-> → **pulse 走内置浏览器。** `xb.py` 那条链路现在只能读不能发；
-> `private/account-safety.yaml#x.login_state = needs_login` 说的是 **xb.py 那条**，
-> 别把它读成「整个系统发不了」—— 这正是 chuangzuo_round_88（10-27 06:14）零发送的原因，
-> 那个结论**只对 xb.py 成立**。
+> 前置条件：Work settings 启用 Local browser use（未启用 → 本轮零动作，如实写原因）。
+> 内置浏览器未登录 → 零动作，把 URL 给 Fang。
 >
 > 内置浏览器侧的坑（pulse_round_73 实测）：
 > - 组合 OR 搜索一次扫多个高优 handle：`search?q=(from:a OR from:b OR from:c)`（省一半调用）；

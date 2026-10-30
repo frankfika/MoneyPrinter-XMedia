@@ -58,7 +58,7 @@
 
 ## 运行模式
 
-三条线全部跑在 **Codex Automations**（独立 cron session = 每轮全新上下文）里。浏览器动作双通道：有 `mcp__cua_repl__js` 走 Codex 内置浏览器；否则走仓库内 CLI `scripts/browser/xb.py`（Playwright + 专用 Chrome，CDP 9222）。两通道登录态互相独立，见 `skills/publisher-x/SKILL.md#浏览器通道`。
+三条线全部跑在 **Codex Automations**（独立 cron session = 每轮全新上下文）里。浏览器动作**唯一通道 = Codex 内置浏览器**（`mcp__cua_repl__js`，Fang 2026-10-30 拍板）；没有 cua_repl 或浏览器控制被禁 → 本轮如实报零动作，不走 xb.py。前置：Work settings 启用 Local browser use + Fang 在内置浏览器一次性登录。
 
 **没有模式分支了** —— 以前有「Codex session 模式 / Cron lite 模式」的二选一，
 现在 lite 那条路（`scripts/run-all-slots.sh` / `scan-slot.sh`）已删除：

@@ -31,10 +31,10 @@ web 源的数字/原话必须回原文核对。
 
 【选题源 · 两条通道都要扫】X 通道（watchlist 高优 handle）+ **非 X 通道**（`python3 scripts/sources.py --source all --limit 8 --text`，8 个源：aihot / tophub / decohack / gh-trending / producthunt / ph-buzzing / xbangdan / discoverhub，详见 skills/hot-topic-tracker/SKILL.md）。非 X 源不依赖浏览器，最稳。web 源的数字/原话必须回原文核对，摘要只是线索。
 
-【模式 · 双浏览器通道（2026-10-30 起）】开工先做模式检测：
-① 有 mcp__cua_repl__js 工具 → **Codex 内置浏览器通道**：开 x.com 查登录态（能进 home timeline / 有头像 = 已登录）；未登录 → 本轮零发送，status 写「内置浏览器未登录 X，需 Fang 一次性登录」。
-② 无 cua_repl → **xb.py 通道**：跑 `python3 scripts/browser/xb.py --action '{"action":"login_state"}'`；exit 2（BROWSER_UNAVAILABLE）→ 「浏览器不可用，本轮零动作」；logged_in=false → 「专用 Chrome（~/.shortbot-browser-profile）未登录 X，本轮零发送」。
-⚠️ 两通道登录态互相独立，各需一次性人工登录（含 2FA，只有人能做）。发文组合键写法**相反**：内置浏览器 `press_key {"key":"Enter","modifiers":["Meta"]}`；xb.py `press {"key":"Meta+Enter"}`（xb.py 只认字符串 key）。抄错 = 看起来成功但没发出去。
+【模式 · 唯一通道 = Codex 内置浏览器（Fang 2026-10-30 拍板：所有的都用内置浏览器）】开工先做模式检测：
+① 有 mcp__cua_repl__js 工具 → 开 x.com 查登录态（能进 home timeline / 有头像 = 已登录）；未登录 → 本轮零发送，status 写「内置浏览器未登录 X，需 Fang 登录」。
+② 无 cua_repl（或报 Local browser use is disabled）→ **本轮零发送**，status 如实写原因，**不许走 xb.py 发**（xb.py 通道已停用，仅历史档案）。
+⚠️ 发文组合键：内置浏览器 `press_key {"key":"Enter","modifiers":["Meta"]}`；不要用 xb.py 写法。
 
 【发布路径】xb.py 通道用 `fill` + `press {"key":"Meta+Enter"}`（**xb.py 只认字符串 key**，内部自己合成组合键）；Post button click 不可靠。Cmd+Enter 后不要查 profile / with_replies / home feed 判断真发，用 search 拿 own_post URL。不要盲 retry —— 第二次会触发 X 反重复拦截。
 ⚠️ 另一条通道（内置浏览器 `press_key`）的写法**相反**：必须 `{"key":"Enter","modifiers":["Meta"]}`，传字符串会被静默丢掉。

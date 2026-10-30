@@ -5,29 +5,29 @@ description: X 发布 — 接 post-writer-x 出的 x.txt，**在已登录的 X �
 
 # X 发布
 
-## 浏览器通道（先选对，否则白跑）
+## 浏览器通道（2026-10-30 起唯一通道 = Codex 内置浏览器）
 
-同一个系统里有**两条**浏览器链路，登录态各自独立 —— **选错那条会一路撞登录墙**：
+Fang 拍板：**所有的都用内置浏览器**。xb.py 通道停用（保留作历史档案，不再用于发布/互动）。
 
-| 通道 | 谁在用 | 登录态（2026-10-30 口径） | 说明 |
-|---|---|---|---|
-| **Codex 内置浏览器**（`mcp__cua_repl__js`） | Codex app 对话 / Codex Automations（有 cua_repl 的 session） | ⚠️ **待一次性登录**（原登录态在已退役的 MiniMax Code Electron 里，随 runtime 作废） | 用户可见真窗口；发文组合键 `press_key {"key":"Enter","modifiers":["Meta"]}` |
-| `scripts/browser/xb.py`（专用 Chrome `~/.shortbot-browser-profile`，CDP 9222） | 任何 shell / 无 cua_repl 的 automation session | **未登录** → 跳 `/i/jf/onboarding/web?...mode=login` | 只读可用；发文 `press {"key":"Meta+Enter"}`（只认字符串 key） |
+| 通道 | 状态 |
+|---|---|
+| **Codex 内置浏览器**（`mcp__cua_repl__js`） | ✅ 唯一发布通道。登录态 = Fang 在该浏览器里一次性登录 X（含 2FA）；发文组合键 `press_key {"key":"Enter","modifiers":["Meta"]}` |
+| `scripts/browser/xb.py`（专用 Chrome，CDP 9222） | ⛔ 已停用 |
 
-> ⚠️ `private/account-safety.yaml#x.login_state = needs_login` 说的是 **xb.py 那条**，
-> 别把它读成「整个系统发不了」。
-> 两条通道各需 Frank **一次性手动登录**（含 2FA，只有人能做）：内置浏览器里开 x.com 登录一次；
-> 想启用 xb.py 通道 → 在专用 Chrome 里开 x.com 登录一次，然后由 agent 复核 `login_state` 后改 yaml。
+> ⚠️ 前置条件链：① Codex app 的 Work settings 启用 **Local browser use**（未启用时 cua_repl 报
+> 「Local browser use is disabled in Work settings」）② Fang 在内置浏览器登录 X ③ agent 复核登录态后把
+> `private/account-safety.yaml#x.login_state` 改 `logged_in`。
+> 没有 cua_repl / 浏览器控制被禁 → 本轮零发送，如实写原因，**不许走 xb.py**。
 
 ## 前置
 
 - 读 `private/account-safety.yaml#x`
   - `publish_mode == agent` 才能自动发；`draft_only` / `manual` 退化为只出草稿
-  - `login_state` 是 **xb.py 那条链路**的判据；内置浏览器通道不受它约束
-- 选通道：
+  - `login_state` 是全局判据：内置浏览器登录后由 agent 复核并改为 `logged_in`
+- 通道检查：
   - **有 `mcp__cua_repl__js` → 走 Codex 内置浏览器**（先开 x.com 确认登录态，撞登录墙 → 本轮零发送）
-  - 没有 → 走 `xb.py`，并先 `login_state` 自检：未登录 → **本轮零发送**，
-    把草稿链接给 Frank，别再往下试（撞 10 次登录墙不会让它登录）
+  - 没有（或报 Local browser use is disabled）→ **本轮零发送**，把草稿链接给 Frank，
+    如实写原因，**不许走 xb.py**（已停用；撞 10 次登录墙不会让它登录）
 - 读 `state/forbidden.yaml#login_rules.x_login`
   - 遇 `We've temporarily limited your login` 立即停手
 - 读 `state/schedule.yaml#publish_gates` —— **闸门不通过就不发**

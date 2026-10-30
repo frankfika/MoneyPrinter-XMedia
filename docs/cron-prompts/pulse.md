@@ -14,10 +14,10 @@
 
 【硬约束】单轮总动作 ≤3（inbound reply ≤1 / **outbound reply 0** / outbound like ≤2）← Frank 2026-10-27「少评论，多干发原创」；原创 post 0；quote RT 0。不出现 OpenCSG / DeepSeek / Moonshot / MiniMax 等公司名；不写 AI 托管 / 自动互动 / bot 措辞；不堆 hashtag。XHS 由独立的发布线负责，本线不碰小红书。公开动作直接执行，不 ask_user 确认文案。
 
-【模式 · 双浏览器通道（2026-10-30 起）】开工先做模式检测：
-① 有 mcp__cua_repl__js 工具 → **Codex 内置浏览器通道**：开 x.com 查登录态；未登录 → 本轮零动作，status 写「内置浏览器未登录 X」。
-② 无 cua_repl → **xb.py 通道**：跑 `python3 scripts/browser/xb.py --action '{"action":"login_state"}'`；exit 2（BROWSER_UNAVAILABLE）→ 「浏览器不可用，本轮零动作」；logged_in=false → 「专用 Chrome 未登录 X，本轮零动作」。
-⚠️ 两通道登录态互相独立，各需一次性人工登录。like/reply 的按键写法两通道相反，见 skills/x-engagement-pulse/SKILL.md 发送路径铁律。
+【模式 · 唯一通道 = Codex 内置浏览器（Fang 2026-10-30 拍板）】开工先做模式检测：
+① 有 mcp__cua_repl__js → 开 x.com 查登录态；未登录 → 本轮零动作，status 写「内置浏览器未登录 X」。
+② 无 cua_repl（或报 Local browser use is disabled）→ **本轮零动作**，如实写原因，**不许走 xb.py**（已停用）。
+⚠️ like/reply 的按键写法见 skills/x-engagement-pulse/SKILL.md 发送路径铁律（press_key + modifiers 形式）。
 
 【频率】候选不足就少做，不要凑数。Frank 自己在 2 小时内发过帖 → 本轮降载到 1 个动作或零动作。
 
