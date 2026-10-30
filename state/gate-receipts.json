@@ -259,6 +259,1274 @@
         ]
       },
       "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:20:31+0800",
+      "origin": "inline",
+      "sha256": "929fe365f10ccc5a",
+      "chars": 167,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:28:51+0800",
+      "origin": "inline",
+      "sha256": "28f12aa5d4e50b0a",
+      "chars": 139,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:31:07+0800",
+      "origin": "inline",
+      "sha256": "be781d55f8a93282",
+      "chars": 131,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:36:39+0800",
+      "origin": "inline",
+      "sha256": "028eed485d9dc16e",
+      "chars": 152,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:37:52+0800",
+      "origin": "inline",
+      "sha256": "a0a087e443507efd",
+      "chars": 159,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:42:38+0800",
+      "origin": "inline",
+      "sha256": "97df995c5eb12c90",
+      "chars": 18,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "frank.always_two_part"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "frank.always_two_part"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:43:52+0800",
+      "origin": "inline",
+      "sha256": "6b6feb8377225d36",
+      "chars": 140,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:17+0800",
+      "origin": "inline",
+      "sha256": "fa857e34ad23ad28",
+      "chars": 66,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:17+0800",
+      "origin": "inline",
+      "sha256": "aa36b24607a4ff7a",
+      "chars": 94,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:17+0800",
+      "origin": "inline",
+      "sha256": "c406d243e2a275d2",
+      "chars": 50,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:21+0800",
+      "origin": "inline",
+      "sha256": "fa857e34ad23ad28",
+      "chars": 66,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:21+0800",
+      "origin": "inline",
+      "sha256": "aa36b24607a4ff7a",
+      "chars": 94,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:21+0800",
+      "origin": "inline",
+      "sha256": "c406d243e2a275d2",
+      "chars": 50,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:28+0800",
+      "origin": "inline",
+      "sha256": "7d4aefd2066e426b",
+      "chars": 51,
+      "rewritten": true,
+      "before": {
+        "soft_score": 9,
+        "hard_hits": [
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.zh_diction",
+          "frank.pivot_expand"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.pivot_expand] 命中「['问题来了', '真正的问题']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。"
+        ]
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:39+0800",
+      "origin": "inline",
+      "sha256": "c7d95630fdae42e7",
+      "chars": 38,
+      "rewritten": true,
+      "before": {
+        "soft_score": 9,
+        "hard_hits": [
+          "redline.no_placeholder_captions"
+        ],
+        "all_hits": [
+          "redline.no_placeholder_captions",
+          "wiki.rule_of_three",
+          "frank.ad_ct",
+          "frank.always_two_part"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [redline.no_placeholder_captions] 命中「['配图如下']」 — 文案不写「配图如下 / 见下图」等元说明（发出时图就在帖下）"
+        ]
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:47:44+0800",
+      "origin": "inline",
+      "sha256": "4de75b01ffa426a7",
+      "chars": 169,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:57:56+0800",
+      "origin": "inline",
+      "sha256": "aa36b24607a4ff7a",
+      "chars": 94,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:57:57+0800",
+      "origin": "inline",
+      "sha256": "e15f364105f5e63b",
+      "chars": 58,
+      "rewritten": false,
+      "before": {
+        "soft_score": 9,
+        "hard_hits": [
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.zh_diction",
+          "frank.pivot_expand"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.pivot_expand] 命中「['问题来了']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。"
+        ]
+      },
+      "after": {
+        "soft_score": 9,
+        "hard_hits": [
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.zh_diction",
+          "frank.pivot_expand"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.pivot_expand] 命中「['问题来了']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。"
+        ]
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-26T10:57:57+0800",
+      "origin": "inline",
+      "sha256": "163d5d08f371ce4a",
+      "chars": 32,
+      "rewritten": false,
+      "before": {
+        "soft_score": 9,
+        "hard_hits": [
+          "redline.no_placeholder_captions"
+        ],
+        "all_hits": [
+          "redline.no_placeholder_captions",
+          "wiki.rule_of_three",
+          "frank.ad_ct",
+          "frank.always_two_part"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [redline.no_placeholder_captions] 命中「['配图如下']」 — 文案不写「配图如下 / 见下图」等元说明（发出时图就在帖下）"
+        ]
+      },
+      "after": {
+        "soft_score": 9,
+        "hard_hits": [
+          "redline.no_placeholder_captions"
+        ],
+        "all_hits": [
+          "redline.no_placeholder_captions",
+          "wiki.rule_of_three",
+          "frank.ad_ct",
+          "frank.always_two_part"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [redline.no_placeholder_captions] 命中「['配图如下']」 — 文案不写「配图如下 / 见下图」等元说明（发出时图就在帖下）"
+        ]
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:20:15+0800",
+      "origin": "inline",
+      "sha256": "097dc1a17a9560db",
+      "chars": 82,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:20:15+0800",
+      "origin": "inline",
+      "sha256": "dc3c0acc151ef367",
+      "chars": 74,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:20:15+0800",
+      "origin": "inline",
+      "sha256": "91f4eaa56d0a2dc0",
+      "chars": 98,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:21:03+0800",
+      "origin": "inline",
+      "sha256": "d01e1eed2428a803",
+      "chars": 81,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:24:46+0800",
+      "origin": "inline",
+      "sha256": "6d2f451b46e954e6",
+      "chars": 80,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:24:46+0800",
+      "origin": "inline",
+      "sha256": "97b5ffc2cec7491d",
+      "chars": 84,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:24:46+0800",
+      "origin": "inline",
+      "sha256": "036210ce86195bf2",
+      "chars": 70,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:25:17+0800",
+      "origin": "inline",
+      "sha256": "70f0451e84038bf3",
+      "chars": 75,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T19:25:32+0800",
+      "origin": "inline",
+      "sha256": "3a5df4cde5ab7dc9",
+      "chars": 88,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T22:06:54+0800",
+      "origin": "inline",
+      "sha256": "e1045b8b6d566ffa",
+      "chars": 99,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T22:08:12+0800",
+      "origin": "inline",
+      "sha256": "d616dd3aa2fa6e0e",
+      "chars": 98,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-27T22:40:21+0800",
+      "origin": "outputs/1027-eve-s1/x.txt",
+      "sha256": "9b306dece58d194f",
+      "chars": 391,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": 0
+    },
+    {
+      "ts": "2026-10-28T03:34:14+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "161f8dad76b795bd",
+      "chars": 559,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:34:19+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "cba7ea2b546b1e23",
+      "chars": 557,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:34:32+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "ce8aa9e8b71c2421",
+      "chars": 543,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:34:38+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "5c3307dfe14acd4f",
+      "chars": 525,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:34:54+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "43b0e9c6c80a2297",
+      "chars": 506,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:34:58+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "f6543b46555cb823",
+      "chars": 504,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:35:03+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "a136118e171a77f0",
+      "chars": 504,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:35:11+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "ad3dcfd1a959c6b2",
+      "chars": 504,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": false,
+        "reasons": [
+          "qa-draft 未通过（见下方 qa 输出）"
+        ]
+      },
+      "qa_exit": 1
+    },
+    {
+      "ts": "2026-10-28T03:35:17+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "97e233dcc415e0e1",
+      "chars": 500,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": 0
+    },
+    {
+      "ts": "2026-10-28T04:04:26+0800",
+      "origin": "inline",
+      "sha256": "2561c86c1a7385cf",
+      "chars": 151,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-28T04:04:54+0800",
+      "origin": "inline",
+      "sha256": "8535c5c4628a4dac",
+      "chars": 157,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-28T08:44:54+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "97e233dcc415e0e1",
+      "chars": 500,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": 0
+    },
+    {
+      "ts": "2026-10-28T08:46:37+0800",
+      "origin": "outputs/1028-pm-judgment-deference/x.txt",
+      "sha256": "784780e1ba324fb8",
+      "chars": 500,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": 0
+    },
+    {
+      "ts": "2026-10-29T04:02:51+0800",
+      "origin": "outputs/1029-pm-gsa-procurement/x.txt",
+      "sha256": "57af10208eca63ff",
+      "chars": 458,
+      "rewritten": false,
+      "before": {
+        "soft_score": 6,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 6,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": 0
+    },
+    {
+      "ts": "2026-10-29T04:03:18+0800",
+      "origin": "outputs/1029-pm-gsa-procurement/x.txt",
+      "sha256": "87500b84480c8f2b",
+      "chars": 458,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": 0
+    },
+    {
+      "ts": "2026-10-29T14:52:19+0800",
+      "origin": "inline",
+      "sha256": "89fd3919e0f4c09d",
+      "chars": 761,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-29T17:00:07+0800",
+      "origin": "inline",
+      "sha256": "0a2d51ff5710dcb5",
+      "chars": 735,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-29T17:01:40+0800",
+      "origin": "inline",
+      "sha256": "bfe594c07d6361a2",
+      "chars": 737,
+      "rewritten": false,
+      "before": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 0,
+        "hard_hits": [],
+        "all_hits": [],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-30T08:59:18+0800",
+      "origin": "inline",
+      "sha256": "784277f9582af262",
+      "chars": 82,
+      "rewritten": false,
+      "before": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "after": {
+        "soft_score": 3,
+        "hard_hits": [],
+        "all_hits": [
+          "wiki.rule_of_three"
+        ],
+        "passed": true,
+        "reasons": []
+      },
+      "qa_exit": null
+    },
+    {
+      "ts": "2026-10-30T08:59:18+0800",
+      "origin": "inline",
+      "sha256": "ace87bb67bccdbff",
+      "chars": 32,
+      "rewritten": false,
+      "before": {
+        "soft_score": 9,
+        "hard_hits": [
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.zh_diction",
+          "frank.pivot_expand"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.pivot_expand] 命中「['问题来了']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。"
+        ]
+      },
+      "after": {
+        "soft_score": 9,
+        "hard_hits": [
+          "frank.pivot_expand"
+        ],
+        "all_hits": [
+          "frank.zh_diction",
+          "frank.pivot_expand"
+        ],
+        "passed": false,
+        "reasons": [
+          "HARD [frank.pivot_expand] 命中「['问题来了']」 — 转折展开 —— 被撤掉那条 reply 的第 3 步，AI 味最重。硬拦截。"
+        ]
+      },
+      "qa_exit": null
     }
   ]
 }

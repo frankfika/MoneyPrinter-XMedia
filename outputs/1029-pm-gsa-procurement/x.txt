@@ -1,0 +1,18 @@
+Anthropic 10 月 27 日跟 GSA 签了新协议，Claude 全线打 40% 折。
+
+Enterprise、Government、API 三个产品面第一次都能打折。州和地方、部落、属地政府都算在内。估摸给政府省 10 亿美元。
+
+我更在意另一句：机构不绑最低消费承诺，用多少付多少。
+
+做采购的都懂这句的分量。过去政府和企业买 AI 都得签最低消费额。卖方拿预付换折扣，买方把钱压在用不掉上。这条把预付门槛取消了 —— 风险从买方挪到卖方，等于供应商赌自己真能长出用量。
+
+数据这边：约 500 家联邦、州、地方机构已经在用 Claude，Claude for Government 周活比 2 月涨了约 8 倍，联邦文职机构用量一年涨了约 20 倍。
+
+Utah 的试点更具体：34 个开发者分到 10 个州机构，80% 半小时内拿到可用环境，71% 在四周结束时省下 20 多小时。
+
+https://www.anthropic.com/news/expanding-partnership-gsa
+
+# material_id: 1029-pm-gsa-procurement
+# source: https://www.anthropic.com/news/expanding-partnership-gsa
+# treatment_hint: first_person_original
+# verified_facts: 40% 折扣覆盖 Enterprise/Government/API 三产品面且首次全线 / 州和地方部落属地也算 / 省 10 亿美元（estimated）/ 不绑最低消费承诺按用量付费 / 约 500 家联邦州地方机构在用 / Claude for Government 周活自 2 月约 8 倍 / 联邦文职机构用量一年约 20 倍 / Utah 34 developers 跨 10 个州机构 80% 30 分钟 71% 省 20+ 小时

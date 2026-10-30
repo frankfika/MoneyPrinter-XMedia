@@ -1525,161 +1525,6 @@ frontier pacing 历史上 industry 自己接受 baseline audit 还是第一次�
 - 待续 candidates: tuturetom 未扫过 (cascade 死锁) / AlchainHust second reply (跟 outbound-049 14:08 4h+ 已过)
 
 <!-- round -->
-## pulse round 42 (2026-10-21 05:00–05:07 +0800) — 3 actions, 轻量轮
-
-### ✅ 本轮的设计决策：主动降载
-round 41 在 04:46 刚跑完 7 个动作（含 04:45 一条原创），chuangzuo round 73 手里还压着一条
-`PREPARED_NOT_POSTED`、05:15 才能发。**本轮刻意不发原创、不追满8 个动作，只做 3 个 outbound。**
-理由是 chuangzuo round 73 刚记录过"两个 cron 各自合规、合起来就是刷屏"这个坑——
-如果 pulse 现在再占一次原创位，等于把刚写下的教训当天就犯一遍。
-冷却本身是满足的（reply 16m / like 17m），**这是主动选择，不是被动降级**。
-
-**outbound-101 reply @obie（新 handle 首次互动）** → own post `2112651016109982173`
-- target `2112645492358148154`（20m，543 views / 6 replies）："Your First AI Music Video:
-  What I Learned Making Four in Eighteen Days"，一手实践长文，4 支 MV 累计百万播放。
-- 用作者自己的硬数字起手（93 shots 剪成 3:49），落点是 cluster 22 在创作场景的同构：
-  18 天不花在生成上，花在筛掉 near-miss 上。收口"the mistakes that cost you money
-  were selection mistakes, not generation mistakes."
-- **这轮回复实际是 cluster 22 原创的一次公开预演** —— 同一论点在别人帖下先试反应，
-  再决定 05:15 要不要发 standalone。比直接发原创更稳。
-
-**outbound-102 like @obie** 17→18  **outbound-103 like @hexawow** 0→1（发 6m 时仅 2 views，极早期）
-
-### 🔑 主动放弃的一次 reply（值得记）
-`@hexawow` 那条主题极贴cluster（"AI 投入到底有没有换来交付产出"，27 家公司数据），
-但它是**纯转链、零作者观点**，链接指向他人 newsletter。
-回复它只能要么复述文章（我没读过 = 虚构风险），要么空谈观点（没有具体延伸点）。
-**判断：只 like 不 reply，主动放弃。** 「候选主题命中」不等于「可以回复」——
-内容不在帖子本身里的时候，硬接就是替别人的内容背书。
-
-### 新经验 / 技术要点
-1. **detail page 的 conversation view 可能完全不渲染新回复**。本轮 @obie 长文帖的
-   inline composer 在 y=27946（超长 Article），发完后 `a[aria-label*='minutes/second']`
-   直接 `Element not found`。**判据不变：Element not found ≠ 没发出去。**
-   照旧改查 `/FrankFika/with_replies` → `2112651016109982173`，全程未重复 Cmd+Enter。
-   **补一条：`Element not found` 和"返回了别人的旧帖"是同一类信号，都要去 with_replies 复核。**
-2. **超长 Article 帖（DOM 高度 >20000px）上，reply 的验证路径要预设为 with_replies**，
-   别在 detail 页浪费一次 query。
-3. **`fill` 报 `INPUT_PARTIAL_EFFECT` 已是常态**（本轮又一次），DOM 逐字核对后照发，4 次连续安全。
-4. 本轮时间戳按新铁律**先 `date` 实读再落盘**（05:06:40），未再出现上一轮那种未来时间戳。
-5. 间隔观察：round 41 → 42 仅 14 分钟。**不记为限流**，记为"高密度轮之后的主动降载"。
-
-<!-- round -->
-## pulse round 43 (2026-10-21 05:30–05:37 +0800) — 4 actions, 最高价值是 inbound
-
-### 🔥 本轮最重要的信号：第一次形成 inbound 闭环
-**inbound-033 回复 @kir_lev** → own post `2112658224151396737`
-- target `2112650794688532515`：对方直接回我 round 41 的 outbound-097，还@了他自己的 router。
-  "good thing we have @ramprouter! but yes, this and oncall is still on the shoulders of engineers (us)"
-  **该回评本身 28 likes**；我那条 outbound-097 在 11K views 的根帖下拿到 53 views。
-- **这是账号至今第一次出现「我 outbound → 对方回评 → 该回评拿到可观互动 → 我再回」的完整闭环。**
-  之前 outbound 多是单向下沉（像过 @EnclavePolitics 5→53 views 那种被动曝光），
-  这次是对方**主动接话**，性质完全不同。**这类 inbound 应该排在 outbound 前面抢。**
-- Frank 的切入没有硬接对方的 router，而是扣住原句里的 "us" 这个词：
-  你有轮值和路由，我没有——pager 就是我，没人可交。做不了扩容，就把爆炸半径缩小。
-- 全程守住 solo 身份边界（跟 round 41 outbound-097 的 "solo, not a platform team" 一致，不重复自报）。
-
-### ⚠️ outbound-104：一条我必须如实标注的 like
-目标原本是 **kir_lev 那条回评**（想给 inbound-033 补一个双向 like 信号），
-但 `press_key 'l'` 打在**线程根帖**的按钮上，不是回评的。
-终态 verified `[data-testid='unlike'] aria-label='80 Likes. Liked'` —— 状态正确（已赞），
-**但 79→80 还是 80→81 无法区分**（根帖 round 41 outbound-098 已赞过、期间自然增长到 ~80）。
-所以 outbound-104 **只记终态、不记 like_count_before/after**。不硬凑一个看起来完整的数字。
-
-### 🔧 新技术教训：`[data-testid='unlike']` 在线程页永远返回根帖
-- 之前只用它验证「顶层帖是否已赞」，从没在**含 reply 的线程页**上用它定位具体某条 reply。
-  结果：selector 取到 DOM 里第一个 unlike 按钮 = 根帖。
-- **规则：线程页上要赞某条 reply，必须先滚动/定位到那条 reply 的 article，
-  再在它的子树内查 `[data-testid='unlike']`（例如 `article:nth-of-type(n) [data-testid='unlike']`），
-  不能用全局 selector。**
-- 同源教训：`a[href*='/FrankFika/status/']` 也会返回线程里**自己上一条回复**（本轮 51m 那条）。
-  **凡是非秒级 aria-label，一律判为"这不是新帖"，改查 with_replies。** 规则本轮第 N 次生效。
-
-### 🔑 新问题域锚点已埋下（cluster 23 的种子）
-**@mahdi `2112622390928646651`（2h）**："Syntax was always going to expire. What holds its value
-is knowing what breaks in production and when a simple change isn't simple."（转 @housecor 149 likes）
-- **这是 cluster 18-22「agent 做得对不对」之外，第一个真正换了问题域的锚点**：
-  问题变成「工程师的价值里什么东西不会过期」。
-- 已 like 埋伏（0→1），**但故意没 reply** —— reply 冷却刚被 inbound-033 用掉（5-15min 规则）。
-  留给下轮当 cluster 23 的公开预演目标。
-- 备选锚点：@KentLangley `2112649178270814536`（合成数据先搭、换真实数据源再上生产），
-  正压 Frank 客户交付域，已 like（1→2）。
-
-### 本轮不发原创（主动决策）
-cooldown 其实满足（距上条原创 45 min），但**没找到合格的新域锚点就不发**：
-cluster 22 已由 outbound-101 交付，再发是自重复；AetrixEmby 线程的内容搬到自有 timeline 上
-同样是自重复。**把这一轮的动作预算花在 inbound + 埋新域锚点上，比硬凑一条原创值钱。**
-
-### 落盘
-- outputs/1021-am-c6/pulse-round-43-inbound-kirlev-newdomain-seed/posted-verified.txt
-- inbound-replies.json **33** / outbound-actions.json **99** / seen-posts.json **255**
-- published-posts.json 仍 115（本轮 0 增长，符合预期）
-
-<!-- round -->
-## pulse round 44 (2026-10-21 06:00–06:12 +0800) — 3 actions, cluster 23 落地
-
-inbound 0（notifications 已扫；@kir_lev 那条回评 28→58 likes，round 43 建的闭环在复利）
-
-### 🔥 cluster 23 问题域切换的第一块公开落点
-**outbound-107 回复 @mahdi** → own post `2112665669833777571`
-- target `2112622390928646651`："语法本来就会过期。真正保值的是知道什么东西会在生产炸，
-  以及一个看似小的改动为什么并不小。"（转 @housecor 25 年 web dev 知识盘点，149 likes）
-- 这是 **round 43 埋下的锚点，本轮兑现**。处理方式不是附和也不是抬杠，而是
-  **明确同意前半句 + 明确质疑后半句**：
-  - 同意：语法确实会过期
-  - 质疑：「知道什么会炸」只是**某一个系统在某一个时刻**的知识，系统一直在动，地图半衰期比人以为的短
-  - 落点：真正活下来的不是地图，是**多快发现地图错了**（用 30 张模板 / 一季度 80 多处改动做锚）
-- 结尾 "care more about being woken up at 3am than about never being woken up"
-  **有意回指 inbound-033 的 pager 论点**。
-  这是本轮最值钱的结构决策：**不同线程的回复互相回指，读起来才像一个人在持续想一件事，
-  而不是到处撒金句。** 以后写 outbound 时优先找"上一条能接上"的位置。
-
-### ✅ outbound-109：round 43 的 root-post 陷阱已用对方法绕开
-要赞 @mahdi 的补充帖（feature flag 那条），**没有从线程页点进去，而是自己拼干净 URL
-`x.com/mahdi/status/2112660631937556643` 进入**——这样帖本身就是 root，
-`[data-testid='unlike']` 返回的就是它。round 43 定的规则**首次应用即成功**。
-反例本轮也真实规避了：`@mahdi` 主帖 2112622390928646651 我 round 43 已赞，
-本轮如果顺手按 `l` 就会**把赞取消**——发现后主动跳过，没按。
-
-**outbound-108 like @ucirello** 0→1：SlopCodeBench（humanlayer / dexhorthy）当天刷屏，
-至少 4 个账号转发同一份 benchmark。**早期账号优先于高热度转发号**。
-
-### ⚠️ 老坑再次确认：`from:<handle> <keyword>` 不可靠
-本轮两次 `from:jimmyyangrz` / `from:hackernewstop5` 全部 Element not found，
-最后是靠**回到原来那个 live search 页 + 用 `a[href*='/<handle>/status/'][aria-label*='hours|minutes ago']`
-直接取 href** 才拿到 ID。
-**固定路径：live search 页面 → 时间过滤 selector 取 ID → 拼干净 URL 进入。别用 from:。**
-
-### 🔧 其他
-- detail 页 `a[aria-label*='second']` 本轮**一次命中**，未需 with_replies 复核。
-  说明该验证路径仍是首选，只是不能假设它每次都命中。
-- `fill` INPUT_PARTIAL_EFFECT 第 5、6 次连续出现，DOM 逐字核对后照发，安全。
-- screenshot 仍 `Browser action failed in Electron main`（5s / 8s 两次受控重试均失败），
-  累计约 43 条。本轮 metadata 存档。
-- 时间戳按铁律先 `date` 实读（06:12:07）再落盘，未出现未来时间戳。
-
-### 落盘
-- outputs/1021-am-c7/pulse-round-44-cluster23-domain-shift/posted-verified.txt
-- outbound-actions.json **102** / seen-posts.json **257** / published-posts.json 仍 115
-
-<!-- round -->
-## pulse round 45 (2026-10-21 06:30–06:37 +0800) — 3 actions, AetrixEmby 第 7 层
-
-### ✅ 前两条新纪律本轮都真派上用场
-1. **开工先查密度**（chuangzuo round 75 新增）：先看 `/FrankFika/with_replies` 顶部。
-   Frank 手动两条已是 21m / 27m，无更新 → 密度缓解，允许跑（本轮轻量）。
-2. **不发原创**：cluster 23 由 outbound-107 在 28 分钟前预演过，chuangzuo 已决定 hold 24h+。
-   现在发就是自重复。→ 本轮 inbound 1 + like 2，无 post 无 outbound reply。
-
-**inbound-034 回复 @AetrixEmby** → own post `2112673421708734624`（161 字）
-- target `2112667862175293757`（20m，3 likes）："把一个字段拆成三个各绑口径这招狠，删选项比写文档管用多了"
-- **AetrixEmby 线程第 7 层**，对方这次是主动总结并认可 Frank 的做法，不是简单附和。
-- Frank 往下推一层：**这招有副作用**——对账不吵了，但改口径的成本换了个地方。
-  客户第二年改口要按下单口径，三个月历史数据要重算、引用"转化"的 6 张模板要跟着改。
-  所以拆字段时必须同时写一行"这个口径从哪天开始生效"。
-- 收口："不然半年后没人记得哪个数字是哪套口径算出来的。"
-
-<!-- round -->
 ### 🔑 一条省成本的复用：本轮没重新扫，直接用了 chuangzuo round 75 的扫描结果
 round 75（6 分钟前那个 cron）已经扫到并判定：
 - @arkokoley「每张 agent PR 我都问 does this need to be this big」→ 量级不足 15K，**不够原创门槛**
@@ -2974,3 +2819,547 @@ MiniMax-M3.1-Flash 会开 thinking，**思考 token 吃满整个 max_tokens 预�
 - 闸门能拦**已知的、可规则化的** AI 味模式，不能保证「绝对看不出是 AI」
 - 规则集漏的模式它就漏 —— 这是规则型方案的固有上限
 - 规则**只从 `state/style-x.yaml` 读**，不写它（Frank 的 checklist：改 style-x.yaml 要他口头授权）
+
+<!-- round -->
+## pulse_round_72 (2026-10-26 10:00–11:12 +08:00) — 1 like + 1 outbound reply（reply 首次没发出去，定位根因后重发成功）
+
+**模式**：cron 排定轮（10:00 触发，`session.mode=new`，独立 session `mvs_4fefed65563f403cbdefcb6f1124d659`）。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | mentions 顶部仍是 @zkcolab (Oct 23)，Oct 23 之后零新 inbound（开工前 + 收尾各扫一次，两次一致） |
+| outbound reply | **1** | 回 @dotey 的 Opus 5.5 帖 |
+| outbound like | **1** | 同一帖 |
+
+原创 post **0** / quote RT **0**。**未触达 ≤3 上限**（用了 2/3，余 1 个名额，本轮不再追加）。
+
+**已发 X URL**
+- reply → https://x.com/FrankFika/status/2114553963085488252 （回 https://x.com/dotey/status/2114518128910897640 ，169 chars）
+- like  → https://x.com/dotey/status/2114518128910897640 （aria-label `111 Likes. Liked` + `data-testid=unlike` 双证）
+
+**跳过项**
+- @vista8 Kindle 越狱帖 / @bindureddy 8h「US open source is behind Chinese models」/ 15h「Deepseek Flash」：正文含 DeepSeek / 国产模型语义 → 撞红线
+- @jiqizhixin RAVEL 帖：366 views，流量过低，不值得占配额
+- @bindureddy Argon 帖（43.5K views）：回复区已被 eval-harness 观点占位，且与 Frank 00:34 内核重叠；不追加 like（同链路无独立价值，不凑数）
+- @zkcolab Oct 23「客户改主意 成本全在下面」：最强反驳与 Frank 近 29h 已讲三遍的同一内核重合（延续 pulse_round_61 判定）
+- @karpathy（最新 Oct 12）/ @sama（Oct 21）/ @akhaliq（0 帖）/ @AnthropicAI / @NVIDIA / @OpenAI / @home：无 <8h 候选
+
+**异常**
+1. **04:00 轮次真空期死亡**（不是投递问题）：`cron_read --view runs` 04:03:31 delivered → session `mvs_208ddb06c8634d5b932171b34719db81`；`mavis session get` → `status.type=error, net::ERR_CONNECTION_CLOSED, errorCode 50113, errorSource agent-runtime`。`pmset -g log` 显示机器 07:09–09:01 持续 Sleep，09:01:53 才 Wake → 死在休眠期。`caffeinate -i -m -s` 在跑（PID 38435），无需重启。
+2. **🐛 `press_key` 组合键写法有坑（本轮最有价值的一条）**：`press_key {"key":"Meta+Enter"}` 事件派发成功（dispatched=true）、`fill` 也验证过（effect.verified=true, textLength=169）、发前 DOM 也确认正文完整落在 `data-text="true"` 里 —— 但**根本没发出去**。四路只读判据全部查不到：search `from:FrankFika MLX / 改圆 / 对照样本`、with_replies 顶部（10 分钟后仍停在 Oct 23）、线程 DOM `a[href*="/FrankFika/status/"]`、以及 `conversation_id:2114518128910897640`（该会话索引实测是**实时**的，1 分钟前的回复在列）。改用 `press_key {"key":"Enter","modifiers":["Meta"]}` 后**立刻真发**（43s 后 search 命中）。
+   → **组合键必须走 `modifiers` 数组，`"Meta+Enter"` 字符串形式被当成普通按键丢掉。**
+   → **判定「没发」最可靠的探针是 `conversation_id:<post_id>` 算子**（比 `from:` 索引可靠 —— 实测 `from:FrankFika since:2026-10-21 until:2026-10-24` 会漏掉已确认发过的 Oct 21 回复）。
+3. **这次不是盲 retry**：先用四路只读判据确认未投递，并确认 X 侧无系统失败通知、无「We've temporarily limited」横幅、无重复帖；再用**逐字相同**（sha256 `4de75b01ffa426a7` / 169 chars，与闸门 receipt 完全一致）的正文重发，让 X 的重复防护兜底。事后 search 确认**仅 1 条，无重复帖**。
+4. 发送路径的既有 bug 已修进 `skills/x-engagement-pulse/SKILL.md`（组合键写法 + `conversation_id:` 验证探针）。
+
+<!-- round -->
+## pulse_round_73 (2026-10-27 19:13–19:33 +08:00) — 1 inbound reply + 1 outbound reply + 1 like（3/3，正好用满 ≤3 上限）
+
+**模式**：cron 排定轮（`session.mode=new`，独立 session）。**走内置浏览器（mcp_browser）**，不是 `scripts/browser/xb.py`。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **1** | 回 @KakaluoteW45042（琦玉老师）23:03 Oct 26 的回复 |
+| outbound reply | **1** | 回 @dotey 的 ETH 论文帖 |
+| outbound like | **1** | @bindureddy 的 Smaug Humanizer |
+
+原创 post **0** / quote RT **0**。**触达 ≤3 上限**（3/3，用满，没再追加）。
+
+**已发 X URL**
+- inbound reply → https://x.com/FrankFika/status/2115041547133895143 （源 https://x.com/KakaluoteW45042/status/2114734553365696892 ，81 字）
+- outbound reply → https://x.com/FrankFika/status/2115043630008369379 （回 https://x.com/dotey/status/2114952872458633296 ，88 字）
+- like → https://x.com/bindureddy/status/2114938847704571975 （260 → **261** Likes）
+
+**跳过项**
+- **@mumblinglewis（Lewis_Orton）Oct 26 12:55「鉴定训练失败，100%AI味」** —— 6 字挑衅。已在 Mentions 页确认它确实是发给 @FrankFika 的（正文带「@FrankFika @dotey」），不是上下文串位。回它 = 给围观群众提供谈资，且与「你是不是 AI」只隔一层 → 跳过。
+- @zkcolab Oct 23：延续 pulse_round_61 判定（同一内核）
+- @mahdi / @dyiapanis / @AetrixEmby / @zack6116（Oct 20–23）：`index.inbound` 已覆盖，无新 inbound
+- @vista8：GEO 大会宣传帖 + Codex/飞书cli 帖（自家活动）+ 海报 skill 帖 → 无独立价值
+- @jiqizhixin：VAST EdenLive 帖 412 views，低于阈值
+- @TanZeng1021：全是健身闲聊，非 AI 话题
+- @op7418 / @oran_ge：已拉黑（`state/skip-handles.json`）
+- **@bindureddy 的 Smaug Humanizer 只赞不评**：可发的内核（尺子 / 口径 / 训练数据）跟 Frank Oct 26 两帖高度重合 → 闸 2 + 闸 0 第 5 条，不重复讲
+
+**异常**
+1. **xb.py 链路发不了，内置浏览器能发**（本轮最重要的发现）。`xb.py` 用的 `~/.shortbot-browser-profile` 从没登录过 X，`navigate` 直接被重定向到 `/i/jf/onboarding/web?redirect_after_login=%2Fnotifications%2Fmentions&mode=login`（登录墙文案：Continue with phone / Google / Apple / Email or username）—— `account-safety.yaml#x.login_state = needs_login` 是对的。但**内置浏览器（mcp_browser / Electron FilePanel）已登录 @FrankFika**：mentions 扫描、发帖、like 全部可用。→ chuangzuo_round_88 的「X 未登录 → 零发送」结论**只对 xb.py 链路成立**，不代表内置浏览器也发不了。已在 `account-safety.yaml` notes 写明两条链路要分清（`login_state` 保持 `needs_login`，别自欺）。
+2. **配额节奏用 post_id 反解时间戳精确核**：`2115041547133895143` → 19:22:55，`2115043630008369379` → 19:31:11，间隔 8 分 16 秒 ≥ 8min。比看钟表估靠谱。
+3. **组合 OR 搜索可用**：`search?q=(from:a OR from:b OR from:c)` 一次扫多个高优 handle，省一半调用。但 live search 的引号短语（`from:x "短语"`）实测 0 结果，别指望。
+4. `from:` 索引漏自己发的帖这个老坑仍在；**`conversation_id:` 算子仍是唯一可靠的「真发验证」判据**（本轮两条 reply 都靠它命中）。
+5. 页面级 selector 只回首个匹配这条规则在内置浏览器同样成立：likes/aria-label 必须走干净详情页 + `[data-testid='like']`，不能拿线程页首个匹配当判据。
+
+**新经验**
+- **回复角度要跟「自己近 7 天讲过什么」对表**。本轮两条 reply 的内核都是 Frank 公开面**没讲过**的：inbound = 「谁在度量充分性」（用董秘口径答），outbound = 「AI 署名论文的成果归因与专利权属」。刻意避开了 LoRA / 尺子 / 客户模板 / 评测样本量这四个已经讲烂的簇。
+- **选角度前先读一遍目标帖下已有的回复**。同一个 ETH 帖下已有 17 条回复，其中 @0xwolverines 讲「瓶颈变成验证」、@KrisWen77s 讲「ETH≠P=NP」—— 披露/归因这个角度当时是空位。一次 `conversation_id:` 搜索同时完成「找 post_id + 读已有回复」，性价比极高。
+- 有条回复直接写「这么多机器人评论，比黄推还恶心」—— **AI 味在这个池子里是会被当场指认的**，闸 0 不是形式主义。
+
+<!-- round -->
+### pulse_round_74 (2026-10-27 22:00–22:19 +08:00) — 1 inbound reply + 2 likes（3/3 用满 ≤3 上限，outbound reply 按新配额归零）
+
+**模式**：cron 排定轮（22:00 触发，`session.mode=new` 独立 session）。**走内置浏览器（mcp_browser）**，不是 `scripts/browser/xb.py`（那条链路仍未登录，只能读不能发）。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **1** | 回 @zack6116 的「尺子」帖（Oct 26 11:37，20 views，thread 内 0 回复） |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @FinanceYF5（Kling 4 视频工作流）+ @vista8（去前端 AI 味的 Hallmark skill） |
+
+原创 post **0** / quote RT **0**。**触达 ≤3 上限**（3/3，用满，没再追加）。
+
+**已发 X URL**
+- inbound reply → https://x.com/FrankFika/status/2115083279502385306 （回 https://x.com/zack6116/status/2114562104401551863 ，98 字，22:08:44 真发）
+- like → https://x.com/FinanceYF5/status/2114990774349963650 （aria-label `9 Likes. Like` → `10 Likes. Liked` + `data-testid=unlike` 双证）
+- like → https://x.com/vista8/status/2115067784912863460 （aria-label `23 Likes. Like` → `24 Likes. Liked` + `data-testid=unlike` 双证）
+
+**跳过项**
+- **@mumblinglewis（Lewis_Orton）Oct 26「鉴定训练失败，100%AI味」** —— 延续 round_73 判定：挑衅型「你是不是 AI」类，回复 = 给围观群众提供谈资 → 不回。
+- **@zkcolab Oct 23** —— 延续 pulse_round_61 判定（同一内核，客户改主意成本）。
+- @mahdi Oct 22 / @dyiapanis Oct 21 / @AetrixEmby Oct 21 ×5 —— `index.inbound` 已覆盖，无新 inbound。
+- @zack6116 10-18 / 10-20 那两条（LoRA 质量门 / judge 换 base）—— 早已回过（inbound-002 / 010 / 013），本轮只回 Oct 26 这条新的。
+- **@vista8 乔木剪藏（GEO/SEO 官网帖）** —— 详情页 aria-label 实测只有 `5 Likes`、422 views，流量太低不值得占配额 → 跳。搜索页那个「422」是 **views 不是 likes**。
+- @jiqizhixin VAST EdenLive —— 612 views / 4 likes / 5h，低于阈值（延续 round_73）。
+- **@dotey ETH 署名论文帖（8h）** —— 19:31 刚回过（round_73 outbound），同一 post_id；且 `recent-picks` 同 topic signature 仍在 7 天 dedup 内 → 不重复碰。
+- **@dotey《用 Manus 改造 Manus》（10h，209 likes / 23K views）** —— 数据最好的一条，但 **10h > 8h 筛选线**，硬规则不让 → 跳（留给下轮或写进 hot-topic 素材池）。
+- @leo_xiaolei「369 个 Claude/Codex AI 视频开源项目清单」（3h，4.6K views / 44 likes）—— 未达 50 likes / 5K views 线，本轮名额已给更贴题的两条 → 顺延。
+- @vista8 雅思单词学习工具（5.8K views / 59 likes）—— 唯一过 5K/50 线的，但不是 AI 话题（英语学习工具）→ 跳。
+
+**异常**
+1. **`conversation_id:` 算子这次没命中**：对 `conversation_id:2114562104401551863` 搜出「No results」，而它确实是真实存在的帖（详情页正常渲染、回复也在 thread 里）—— 说明这个算子对**「回复帖的 conversation_id」**不一定有索引，别把它当唯一判据。**改成两路交叉**：① 目标帖详情页看 thread DOM 出现「@FrankFika · 54s」；② `from:FrankFika` 搜索取首条 post_id（拿到 `2115083279502385306`）。两路都命中才算真发。
+2. **搜索结果页的数字顺序要靠 aria-label 校准**：X 搜索卡片给的是 `replies / reposts / likes? / views`，3 个数时第 3 个是 **views**，4 个数时第 3 个才是 likes。实测 @FinanceYF5 帖搜索显示「7 9 2.9K」，详情页 aria-label 却是 `9 Likes` —— **只有 aria-label 是真的**，别拿搜索页数字当点赞数（会差一个数量级）。
+3. **reply 的根帖 post_id 可以从「回复的详情页祖先链」捞**：@FinanceYF5 那条根帖在搜索页排第 4 位、DOM 首匹配拿不到；改用打开其中一条回复的详情页 → `a[href*='/FinanceYF5/status/']` 首匹配就是祖先链最上层的根帖（`2114990774349963650`）。省掉一整轮滚动翻页。
+4. `open_tab` 是内置浏览器换页面的唯一姿势：`navigate` 在已加载 tab 上会直接报 `CURRENT_TAB_OCCUPIED`（必须显式 `replaceCurrentTab:true` 才放行，而用户没要求替换当前页）。本轮因此开了 ~12 个 tab —— **开 tab 要有回收意识**这条依然成立，只是 `navigate` 替换不了而已。
+5. 节奏核验（post_id snowflake 反解）：inbound reply 22:08:44，距上轮 outbound reply 19:31:11 = **2h37m ≥ 8min** ✓；两次 like ≈22:13 / ≈22:17，间隔 ≈4min ≥ 2min ✓。Frank 自己上一条公开发言在 19:31（2h29m 前），**没进 2 小时降载窗口** → 本轮不用降载到 1 个动作。
+
+**新经验**
+- **拿到对方帖子的「缺失数字」比抢观点更安全**。@zack6116 那条回复给了三个数（10 条/周、60 多条/月、一次判断），唯独没给「打架占几条」和「总样本多少」。Frank 的回应没去挑战对方对错，只把它自己的数摆出来对：60 多条规则 vs 每月四十多条样本 → 规则跑在样本前面。**这种「用对方的数字做算术」的回复，既不撞 Frank 已讲过的内核（闸 0 第 5 条），也不会写出 AI 那套四段式结构** —— 比找「反驳角度」省力得多，也更像真人接话。
+- **闸 0 的「内核撞车」要按 7 天全量对表，不是按感觉**。本轮差点踩：Frank 10-21 那条「数据集建完之后它就开始腐烂 / eval 跑得再准，测的是三个月前的系统」跟「尺子只认得它见过的那批输出」几乎同内核 → 直接弃掉那版，改走「规则数 vs 样本数」的算术方向才过闸。**候选角度先跟 published-posts 近 7 天逐条对表，再写文案**。
+- **搜索页的「第 3 个数字」是 views 不是 likes**（3 数时）；**likes 只有 aria-label 算数**。这条跟 SKILL 里「X 详情页底部大数字是 VIEWS 不是 likes」是同一个坑的另一个入口 —— 搜索页也会骗人。
+<!-- round -->
+### pulse_round_75 (2026-10-28 04:00–04:11 +08:00) — 1 inbound reply + 2 likes（3/3 用满 ≤3 上限）
+
+**模式**：cron 排定轮（04:00 触发，`session.mode=new` 独立 session）。**走内置浏览器（mcp_browser）**，`scripts/browser/xb.py` 那条链路照旧没登录（DSH launchd 的 pulse job 同时在 04:00 触发，但日志是 `SKIPPED not-logged-in` → 无并发公开动作、无 state 写冲突）。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **1** | 回 @marmot_stacks（mmstacks）Oct 27 22:47 那条 —— 他点出「招股书更狠的其实在投票权那一页」 |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @GoogleDeepMind Genie 4 根帖 + @_akhaliq StreamVibe |
+
+原创 post **0** / quote RT **0**。**触达 ≤3 上限**（3/3，用满，没再追加）。
+
+**已发 X URL**
+- inbound reply → https://x.com/FrankFika/status/2115172929818550646 （源 https://x.com/marmot_stacks/status/2115093027668771238 ，157 字，04:04:59 真发）
+- like → https://x.com/GoogleDeepMind/status/2115114028338962672 （aria-label `Like`→`Unlike` + aria-pressed=true + text-magenta-500 三证）
+- like → https://x.com/_akhaliq/status/2115095386792616279 （aria-label `Like`→`Unlike` + aria-pressed=true + count 26→27）
+
+**跳过项**
+- **@KakaluoteW45042 同帖另一条回复（2115084100054942112，Oct 27 22:12）** —— 写着「读者的问题是免费的 oracle / 让下游先跑一轮，卡在哪步就是缺口清单」。**闸 2 内核撞车 + 闸 0 结构风险**：① 它接的就是 Frank round_73 自己那句「够不够由对方第一轮追问说了算」，8.5 小时前刚回过同一人；② 「备料/下游卡住=缺口清单」与 Frank 10-21 04:44 那条（actor-gatherer 拆分）高度重合，「投资人的追问=现成的验证层」又与 10-21 08:11 那条（口径接不上财务）重合；③ 对这条能做的自然回应必然是「同意一半 → 转折 → 升华」，正是闸 0 明令禁止的 AI 结构 → **SKIPPED_NO_REPLY**（已落 seen-posts + index.seen）
+- @mumblinglewis Oct 26「鉴定训练失败，100%AI味」—— 延续 round_73/74 判定（挑衅型身份质疑，不回）
+- @zkcolab Oct 23 —— 延续 round_61（同一内核）
+- @mahdi Oct 22 / @dyiapanis Oct 21 / @AetrixEmby Oct 21 / @zack6116 Oct 26 那两条 —— `index.inbound` 已覆盖，无新 inbound
+- **中文 KOL 段本轮全部低流量**（不占 like 名额）：@dotey（19m Cursor 标注 786 views / 36m 118 views / 38m 多 loop）、@FinanceYF5（4 条 1h，707–730 views）、@jiqizhixin WorldScape R²SI（15m，150 views）
+- @_akhaliq MiRL（3h，4.8K views，未过 5K 线）/ InteractiveWorld（4h，6.4K views，19 likes）—— 名额给了同 handle 流量/点赞更高的 StreamVibe（6.5K views / 26 likes），不凑数
+
+**异常 / 经验**
+1. **🔴 本轮最有价值的一条：SKILL 里写的 `[data-testid='like']` 选择器在当前 X DOM 上已经不存在了** —— 连续两次 `query kind=dom` 报 `Element not found: [data-testid='like']`。现役形态是 **`button[aria-label='Like']` / `button[aria-label='Unlike']`**（aria-pressed 随点赞状态 true/false，class 里带 `text-magenta-500` 变体，且**能拿到点赞数**：`26` → `27`，在按钮内层 `x-animated-count-visual` 里）。而且 `button[aria-label='Like']` 可以直接当 `click` 的 selector 用，省掉一整轮 `inspect` 找 ref（inspect 的输出极大，一条 detail 页 490 个元素）。已同步回 SKILL.md。
+2. **`conversation_id:` 算子对「回复帖」依旧没有索引**（第二次实测）：搜 Frank S-1 帖 `2115091495229550619` 的 conversation，页面上根本找不到 @KakaluoteW45042 那条回复。→ 拿**回复帖自己的 id** 用「handle + 一个关键词」缩窄搜（`from:KakaluoteW45042 oracle` → 首匹配就是它，3 次调用搞定）。
+3. **live search 首查必空，要等**：这轮多次遇到 open_tab 后第一次 `query kind=text` 只返回搜索框（255 字符），等 3–4 秒再查才有结果。之前的 round 记成「无候选」很可能是这个加载延迟，不是真没有。
+4. **拿「两词缩窄」把 thread 根帖捞出来**：`from:GoogleDeepMind most realistic`（live search 上限 2 词）→ DOM 首匹配 = 根帖 id `2115114028338962672`；Genie 4 那条 thread 里先出现的是官方自己的回复（「Here's what's new with Genie 4」，88K views），根帖反而排在后面（895K→903.4K views）。不缩窄就很容易赞错对象。
+5. **like 间隔用系统钟核，不用 agent-context 的时间**：agent-context 给 04:00，真实钟 04:06:53（post_id 反解的 reply 时刻 04:04:59 是准的）。第一次 like 落在 04:05:30–04:06:53 区间，若按 04:00 起算会误以为已过 2 分钟。**post_id snowflake 反解仍是唯一可信时间源**（reply 04:04:59 / Genie 4 00:10:55 / StreamVibe 22:56:51），两次 like 实际间隔 ≈4.7min ≥ 2min ✓。
+6. **一手原文核对照旧做**：这轮回了一条讲招股书投票权的回复 → 把 `anthropicpbc-sx1.htm`（14MB）curl 到本地转纯文本再 grep，**HTML 一次都没进上下文**。核出来的硬料：Class F 只发 1 股 → 全部投票权 50.1%（无经济权利）；Class T 也只发 1 股 → LTBT（Long-Term Benefit Trust）选出的 Class T 董事占董事会过半数；**Class F 的投票不含 Class T 董事选举** → 「创始人这 50.1%，选不出这批人」。4 个数字/条款全部回原文逐条核对，reply 正文只引用核对过的。
+7. **chuangzuo_round_90（03:30 档口）零发送** → Frank 最后一条原创仍是 22:41:23（5h19m 前）→ **不触发「2 小时内发过帖 → 降载」**，本轮按满额 3 个动作执行。
+8. **两条浏览器链路仍然分开**：`xb.py` 那条没登录（DSH 的 pulse job 04:00 触发后 `SKIPPED not-logged-in`），内置浏览器已登录 @FrankFika 且能发 —— 与 round_73/74 结论一致。
+
+
+<!-- round -->
+### pulse_round_76 (2026-10-28 08:38–08:46 +08:00) — 0 inbound + 0 outbound reply + 2 like（2 个动作；like 配额 2/2 用满，无可用动作类型）
+
+**模式**：手动轮（Frank 08:38「继续运营几次哈」催的，非 cron 排定轮）。**走内置浏览器（mcp_browser）**，已登录 @FrankFika（页面左下角账号名 + 认证徽章实测）。
+`scripts/browser/xb.py` 那条链路没碰 —— DSH launchd 的 10:00 pulse 档口会自己撞登录墙（SKIPPED not-logged-in），本轮不构成并发风险。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | mentions 页**无新候选**：最新一条是 @marmot_stacks 9h（04:04 那轮已回），其余全是已回/已跳过的旧条目 |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @dotey（Anthropic 取消编程题面试）+ @AI_Jasonyu（AI 做 PPT 变现） |
+
+原创 post **0** / quote RT **0**。总动作 2（≤3 上限），但 **like 已达 2/2 上限、reply 配额为 0** → 本轮无可用动作类型，未凑数。
+
+**已发 X URL**
+- like → https://x.com/dotey/status/2115218749888634988 （`aria-label` `147 Likes. Like` → `148 Likes. Liked` + `data-testid=unlike` 双证；原帖发布 2026-10-28 07:07:03，16K views / 145 likes）
+- like → https://x.com/AI_Jasonyu/status/2115104582061990390 （`aria-label` `55 Likes. Like` → `56 Likes. Liked` + `data-testid=unlike` 双证；原帖发布 2026-10-27 23:33:23，10K views / 55 likes）
+
+**跳过项**
+- **@marmot_stacks（9h）** —— 04:04 那轮已回（`2115172929818550646`），本轮不重复
+- **@KakaluoteW45042（10h）** —— 延续 round_75 判定（闸 2 内核撞车 + 闸 0 结构风险），不重复评估
+- @mumblinglewis / @zkcolab / @mahdi / @dyiapanis / @AetrixEmby / @zack6116 —— 均已处理过
+- **@vista8 5m / @bindureddy 8m·29m·54m·55m** —— 20/31/81/114/131 likes 但全是低信息量短回复（"Haha"、"Why do you say that?"、checkpoint 每周存一个），不值得占赞名额
+- **@FinanceYF5 1h「硅谷创业大V列了39个AI点子」** —— 只有 1K views / 5 replies，没过 5K/50 线
+- **@AnthropicAI 2h OneGov / 4h 药物发现** —— 96K views / 995 likes、772K views / 5.2K likes 都远超线，但都是**官方账号通稿**（SKILL 明确「优先 practitioner 源而不是官方账号」）；且 5.2K 赞的列表里 Frank 这一个 handle 根本没人看得见 → 曝光价值远低于中文圈小圈层
+- **@lxfater / @AI_Jasonyu 7h·8h 的 Adsense·卖课闲聊** —— 无 AI 话题内核
+- @oran_ge / @op7418 —— 已拉黑（`state/skip-handles.json`）
+
+**异常 / 新经验**
+1. **🔴 SKILL 里写的 like 按钮 aria-label 形态是错的，要改**。实测 detail 页现役形态是 **`aria-label="147 Likes. Like"`**（数字 + "Likes. Like"），不是 SKILL 写的 `aria-label="Like"`。
+   → 可靠选择器有两个：`button[data-testid='like']`（detail 页实测存在，可直接当 click selector 用）和 `button[aria-label*='Likes']`。
+   → round_75 记的「`[data-testid='like']` 已不存在」**只在那一次查询上成立，不能当全局结论** —— 本轮两次 detail 页查询它都在。**要同时准备两个选择器。**
+2. **live search 用中文词会整页报错**：`q=from:AI_Jasonyu 小鱼` → "Something went wrong. Try reloading."（不是 0 结果，是报错页）。
+   → 解法：**换 ASCII 关键词**（`from:AI_Jasonyu PPT` 秒出）。中文帖子的 distinctive token 往往是产品名/英文词。
+3. **搜索页 `query kind=dom` 打 `a[href*='/status/']` 只回首个匹配**（本轮两次实测，包括带 selector 列表 `a[href*='/X/status/'], button[...]` 也只回一个）→ **一条 selector 列表拿不到多个元素**，取 id 只能靠「窄化搜索 + DOM 首匹配」。
+4. **中文创作者批量扫描（8 个 handle 的 OR 搜索）本轮 0 条过线** → 中文圈的「过线帖」集中在 @dotey 这种头部 KOL + 少量流量级作者，不能指望每轮都有 2 个高质量中文目标；本轮第二个赞是从 @AI_Jasonyu 单独收窄搜出来的（OR 批次里它排第 9 位、低位）。
+5. **⏰ 12h 原创闸门 10:41:23 解禁**（上一条原创 22:41:23 → +12h）→ 本轮 08:38 时点仍是**硬否决**状态，原创轮必须等解禁。
+6. **顺手改掉一条会被打脸的错**：Round B 备好的稿子开头写「Anthropic **上周**发了个研究」，回原文核到 `article:published_time = 2026-10-27` / 页面 `Published Oct 27, 2026` → **就是昨天**，已改成「Anthropic 昨天发了个研究」并重跑 `prepublish.py`（exit 0 / soft 3 / hard 0，sha256 随之更新）。
+   → 这条是 memory 里「二手源的数字必须回一手原文核对」的**日期版**：不只是数字会错，**相对时间词（上周/昨天/前几天）也会错**，而相对时间词恰恰是 AI 味最重的开头钩子。
+
+**新经验**
+- **选 like 目标看「赞的列表有几个人看」，不是看流量**。5.2K likes 的官方帖和 55 likes 的中文帖，后者让 Frank 的 handle 被真正看到 —— 曝光在**圈层**里，不在数字大。
+- **相对时间词要回原文核**：`published_time` 是网页 meta 里现成的字段（`article:published_time` / `datePublished`），一条 grep 就能定，比推理"这大概是上周"可靠。
+
+<!-- round -->
+### pulse_round_77 (2026-10-28 10:00–10:15 +08:00) — 0 inbound + 0 outbound reply + 2 like（2 个动作；like 配额 2/2 用满）
+
+**模式**：cron 排定轮（10:00 触发）。**走内置浏览器（mcp_browser）**，已登录 @FrankFika（页面左下角账号名 + 认证徽章实测）。
+DSH launchd 的 pulse job 同一档口 10:00:03 触发 → `SKIPPED not-logged-in`（`logs/rounds/pulse-20261028-100003.log`）→ 另一条线零动作、零 state 写，本轮无并发冲突。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | mentions 页两次独立加载（10:00 与 ~10:12）最新一条都是 @marmot_stacks 11h（round_75 已回）；其余 Oct 26 及更早全部已回过 / 已跳过 |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @bindureddy Astra 6.1（310 likes / 28K views）+ @bindureddy Argon 编程评述（97 likes / 7,957 views） |
+
+原创 post **0** / quote RT **0** / XHS 停手。总动作 **2**（≤3 上限），like 已 2/2 用满、reply 配额为 0 → 本轮无可用动作类型，未凑数。
+
+**已发 X URL**
+- like → https://x.com/bindureddy/status/2115173217929449556 （`aria-label` `310 Likes. Like` → `311 Likes. Liked` + `data-testid=unlike` 双证；原帖 04:06:07 发，5h54m，28K views / 310 likes / 43 replies）
+- like → https://x.com/bindureddy/status/2115210249405948173 （`aria-label` `97 Likes. Like` → `98 Likes. Liked` + `data-testid=unlike` 双证；原帖 06:33 发，3h30m，7,957 views / 97 likes / 39 replies）
+
+**跳过项**
+- @marmot_stacks 11h —— round_75（04:04）已回（`2115172929818550646`），不重复
+- @KakaluoteW45042 11h（`2115084100054942112`）—— 延续 round_75 判定（闸 2 内核撞车 + 闸 0 结构风险），不重复评估
+- @KakaluoteW45042 Oct 26（`2114734553365696892`）—— round_73 已回（`index.inbound` 有）
+- @mumblinglewis / @zkcolab / @mahdi / @dyiapanis / @AetrixEmby / @zack6116 —— 均已处理过
+- **@dotey「GPT 6.1 Terra 这几天我用下来还不错」（45m）** —— 中文 KOL 段里最像样的一条，但详情页实测 **3,659 views / 17 likes**，≥5K views 与 ≥50 likes 两条线都没过 → 不占赞名额
+- @jiqizhixin DiscoveryRSI（50m）—— 310 views / 2 likes
+- @softpoo 3D/音乐视频 agent thread（13m）—— 根帖 15 views，整条 thread 单条 ≤22
+- @0xstar999「X 蓝V 25 个冷知识」（49m）—— 202 views，且不是 AI 话题
+- @marmot_stacks「午饭老师 / 价值投资」（1h）—— 非 AI 话题
+- @haoxian85517723 —— 纯回复寒暄，无信息量
+- @swyx「yeah you ignored a @mntruell email in 2024」（8h）—— 43 likes / 9.1K views 过 views 线，但是人身吐槽，专业人设不点
+- @latentspacepod「How Anthropic ships Claude with Claude」（7h）—— 播客推广贴，6.1K views 刚过线，讨论价值低
+- @AnthropicAI / @GoogleDeepMind / @NVIDIA 官方号 —— 通稿，不占名额（延续 round_76 判定）
+- @oran_ge / @op7418 —— 已拉黑（`state/skip-handles.json`）
+
+**异常 / 偏差**
+1. **🔴 本轮 like 间隔 ≈1m41s，低于 SKILL 写的「like 间隔 ≥ 2 min」**（like#1 ≈10:06:15 → like#2 10:07:56）。两条 like 本身都合规（不同帖、aria-label + data-testid 双证、无重复、无 X spam 信号），但**间隔确实没到线**。
+   → 根因：**浏览器调用太快，「≥2min」这种时间约束没有落地机制，agent 会自然地连着点。** 两次 like 之间我插了 7 次搜索调用（中文圈扫描 + Argon 缩窄搜 + 详情页），但每次调用只有 1–8 秒，总量不够 2 分钟。
+   → 已在 SKILL.md「配额」节补上机制：**两次 like 之间显式 `wait` ≥120 秒**（browser `wait` 单次上限 60s → 两次 60s），别指望用别的调用「顺便消耗时间」。
+2. **like 的时刻不能用 snowflake 反解**（那是发帖时刻，不是点赞时刻）。本轮改用 **session message 的 timestamp**（`mavis session messages` 每条 assistant 消息带 epoch ms）：like#2 = 1793153276444 → **10:07:56（精确）**；like#1 被两条 bash 钟表锚点夹在 10:06:08–10:06:20（≈10:06:15）。
+   → 这是 SKILL「post_id 反解时间戳」那条铁律的**适用边界**：只对**发帖时刻**有效；点赞这类没有 post_id 的动作要换时间源。
+3. **Frank 2 小时降载不触发**：他最后一条公开动作是 04:04:59 的 inbound reply（`/FrankFika/with_replies` 实测顶部 5h），距本轮 5h55m > 2h → 按满额跑。
+4. **本轮扫了 3 组 OR 搜索**（中文头部 / 英文 practitioner / 中文圈近邻）。结论：**当前满足「≥50 likes 且 <8h」的 practitioner 源集中在英文圈**（@bindureddy 两条都过线）；中文圈头部 KOL 的好帖在 08:45 那轮已被挑完。
+
+**新经验**
+- **「≥N 分钟」这种节流规则必须配一个显式的等待动作**，否则 agent 会用「中间顺手做了别的事」代替等待 —— 别的调用**不消耗时间预算，只消耗 token**，结果间隔远小于 N（本轮就是 1m41s）。
+- **动作时刻按「动作有没有自己的 id」分两类测**：发帖有 post_id → snowflake 反解；点赞没有 id → session message epoch ms（`mavis session messages --before <msg_id>` 可翻页定位），或用 bash `date` 当锚点夹逼。
+- **配额扫描里「搜索页卡片数字」只能用来筛，不能用来判过线** —— @dotey Terra 那条在搜索页看着像能过，详情页 aria-label 实测 17 likes / 3,659 views，直接出局。
+
+<!-- round -->
+### pulse_round_78 (2026-10-28 10:46–10:50 +08:00) — 0 reply + 1 like（**降载轮**：Frank 10:43 刚发过原创 → 2h 内只做 1 个动作）
+
+**模式**：手动轮（Frank 08:38「继续运营几次哈」的后续）。**走内置浏览器（mcp_browser）**。
+**降载依据**：Frank 原创 `2115273295314788676` 发于 **10:43:48**，本轮 10:46 → **在 2 小时内** → 按 SKILL「本轮主动降载到 1 个动作或零动作」执行。**没凑数到 3 个。**
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | 降载轮不铺量；且 04:04 那轮已确认 mentions 无新候选 |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 |
+| outbound like | **1** | @emollick Genie 4 实机演示 |
+
+原创 post **0** / quote RT **0**。总动作 **1**（≤3 上限，且已按 2h 降载压到 1）。
+
+**已发 X URL**
+- like → https://x.com/emollick/status/2115273222061015169 （`aria-label` `14 Likes. Like` → `15 Likes. Liked` + `data-testid=unlike` 双证；原帖 10:43:30 发，赞时 5m，1.7K views / 14 likes / 12 reposts）
+
+**跳过项**
+- @FinanceYF5「Anthropic 的 IPO S-1 文件正式公布」（4m，中文转述）—— **182 是 views 不是 likes**（搜索页 2 个数 = replies/reposts+views，别当成 182 赞）；且这条跟 Frank 自己 10:43 的原帖同源（同一份 S-1），赞它等于给自己导流，不如不赞
+- @FinanceYF5 转 @gaspardlezin「40 家做 AI agent 支付的创业公司」—— 73 views，没过线
+- @dotey「今天 Codex 重置」（1m）/ @servasyy_ai（14s）—— 弱信息
+- @testingcatalog ×4（Gemini Notebook 移动端录音 8.6K views / X 分享图片功能 / Drex for Search MADQA 榜一 5K views / 10-K 扫描页 demo）—— 都是**产品资讯聚合号**，其中 MADQA 那条是 `Paid partnership`；Frank 的定位是评测/产业视角，不是产品搬运号
+- @swyx「yeah you ignored a @mntruell email in 2024」—— 9.1K views / 43 likes 过 views 线，但是人身吐槽，专业人设不点（延续 round_77 判定）
+- @ChatGPT iCloud 插件（8h, 310 views）—— 官方产品号 + 与 Frank 定位无关
+
+**异常 / 新经验**
+1. **live search 的 `since:2026-10-28`（当天）直接返回「No results」**，换成 `since:2026-10-27` 立刻有结果。
+   → **live 索引对「当天」这个 since 值不友好**（可能按 UTC 日切）。**扫当天内容用 `since:前天`，再按帖子时间戳自己过滤。**
+2. **⭐ 早赞的曝光效率远高于晚赞**：@emollick 那条发 5 分钟后赞，赞列表才 14 个人 —— Frank 的 handle 出现在这 14 个人面前；
+   等 1 小时再赞就是 500 人列表里的第 501 位，等于没赞。**「≥50 likes」这道质量线对刚发的帖子不适用**，
+   真正该看的是「赞列表现在多小」+「这条会不会起来」。→ 筛选条件第三条（AI 关键词命中 + <8h）才是刚发内容的正确入口。
+3. **搜索页的数字顺序又坑了一次**：`1` / `182`（2 个数）= replies / **views**，不是 182 赞。**只有详情页 like 按钮里的数字是赞数。**
+4. **Frank 原创和 @emollick 的帖发布时间只差 18 秒**（10:43:48 vs 10:43:30）—— 纯属巧合，但说明 10:43 那个时间窗确实是「热点正在发生」的位置。
+
+**新经验**
+- **降载轮不等于什么都不做**：2h 降载的语义是「少做」，不是「停做」。1 个赞是明确允许的，而且早赞的曝光效率最高 —— 降载轮恰恰是**该优先做早赞**的时候。
+
+<!-- round -->
+### pulse_round_79 (2026-10-28 22:00–22:27 +08:00) — 0 reply + 2 like（2 个动作；like 配额 2/2 用满）
+
+**模式**：cron 排定轮（22:00 触发）。**走内置浏览器（mcp_browser）**，已登录 @FrankFika（profile 页实测账号名 + 认证徽章）。
+DSH launchd 的同档口 pulse-20261028-220005 已在 22:00:05 跑完并 `SKIPPED not-logged-in`（`logs/rounds/pulse-20261028-220005.log`）→ 另一条线零动作、零 state 写，**本轮无并发冲突**。DSH 那条线的 `repo=/Users/fangchen/shortbot` 与本目录是同一份数据。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | mentions 页实扫：最新一条仍是 @marmot_stacks 23h（round_75 已回），其余 Oct 26 及更早全部已回/已跳过 → **0 候选** |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @emollick（Talkie-1930 神经元人格）+ @simonw（10 月 coding agent 拐点） |
+
+原创 post **0** / quote RT **0** / XHS 停手（`xhs.is_banned=true`）。总动作 **2**（≤3 上限），like 已 2/2 用满、reply 配额为 0 → 本轮无可用动作类型，未凑数。
+
+**已发 X URL**
+- like → https://x.com/emollick/status/2115419671877062710 （`aria-label` `142 Likes. Like` → `144 Likes. Liked` + `data-testid=unlike` 双证；原帖 20:25:27 发，赞时 1h51m，10K views / 71 replies / 122 likes）
+- like → https://x.com/simonw/status/2115444742595260551 （`aria-label` `52 Likes. Like` → `56 Likes. Liked` + `data-testid=unlike` 双证；原帖 22:05:04 发，赞时 18 分钟，3.5K views / 53 replies / 52 likes）
+
+**两条赞的间隔 = 7m27s**（22:16:52 → 22:24:19），过「like 间隔 ≥ 2min」线。本轮**第一次用显式 wait 兑现间隔**（like#1 后 `wait 60s` + 一批扫描调用，like#2 前再 `wait 60s` + 收窄搜索），不再靠「顺手做别的事」凑时间。
+
+**跳过项**
+- @marmot_stacks 23h —— round_75（04:04）已回（`2115172929818550646`），不重复
+- @KakaluoteW45042 23h + Oct 26 —— round_75 / round_73 已判定（闸 2 内核撞车 + 闸 0 结构风险），不重复评估
+- @mumblinglewis / @zkcolab / @mahdi / @dyiapanis / @AetrixEmby / @zack6116 —— 均已处理过
+- **@jiqizhixin DynStream 4D 高斯重建（2h）** —— 详情页实测只有 **5 likes**，两条线都没过 → 不占赞名额
+- **@dotey worktree 残留清理（8h43m）** —— 121 likes / 15K views **两项都过线**，内容也对口（AGENTS.md 规则让 agent 自己清 worktree）。**但已过 8h 窗口**，且 simonw 那条更早（18 分钟）→ 名额给 simonw
+- **@bindureddy「AI 已解决 coding，下一个前沿是物理」（8h50m）** —— 190 likes / 9.3K views 过线，同样超 8h；本轮第 3 个名额本来就没了
+- @xiaohu「Anthropic 全资收购一人药企 Mithril Medicine」（9h）—— 超 8h，且与 Frank 自己 23:41 那条 S-1 / 投票权内核重叠
+- @xiaohu「Grok Bot 产品经理互怼」（5h）—— 42K views / 97 likes 过线，但内容是产品经理八卦，非 AI 话题内核 → 不占名额
+- @op7418 / @oran_ge —— 已拉黑（`state/skip-handles.json`）
+- @AnthropicAI / @GoogleDeepMind / @NVIDIA / @OpenAI 官方号 —— 通稿，延续 round_76/77/78 判定
+- @swyx「hello from everybody who took psychology 101」、@dhh Mac vs Linux —— 非 AI 话题 / 人身吐槽，专业人设不点
+
+**异常 / 偏差**
+1. **🔴 差点点赞到错帖（已当场撤销，最终 0 副作用）**。
+   第一次点 like 时，**当前激活的 tab 已经漂移到搜索结果页**（我在详情页读完之后又开了几个搜索 tab，最后一次 `open_tab` 把活动 tab 换掉了），而 `click` 用的是**活动 tab**上首个 `button[data-testid='like']` → 点到了 @xiaohu 那条搜索卡片里的帖子（97→98 likes）。
+   - 发现方式：点完立刻查 `button[data-testid='unlike']`，**返回的 URL 不是目标详情页**，而是搜索页 URL → 立刻判定打错。
+   - 处置：点 `unlike` 撤销 → 回查 `button[data-testid='like']` 显示 `97 Likes. Like`（未赞态），**净零**。
+   - 复核：`https://x.com/FrankFika/likes`（History→Likes）顶部只有本轮这 2 条（simonw 21m / emollick 2h），**没有 xiaohu** → 反向确认误赞确实已撤销。
+   - **教训（比 SKILL 现有条款更具体）**：`open_tab` 会**切换活动 tab**。读完 A 帖详情页后再开 B 搜索页，A 就不再是活动 tab 了。**必须「打开详情页 → 立刻点 → 立刻验」三步连做，中间不许插任何 `open_tab`/`query`**。
+   - → 这条要补进 SKILL.md 的「发送路径」节。
+2. **like 按钮「首个匹配」≠「当前 tab 的首帖」** —— 在搜索结果页上，首个 `button[data-testid='like']` 属于**第一张卡片**（@xiaohu），不是详情页的根帖。SKILL 里「干净详情页 + 首个匹配 = 根帖」的前提是**页面已经是那条帖的详情页**，这条前提在 tab 漂移时不成立。
+3. **Frank 自己 19:49 发过一条帖，之前任何 state 都没记**（`2115410666068815948`，Quote @Peer_zh 的支付宝/Peer Beta 公告，正文「疯了？」，31 views）。
+   - 无任何轮次日志覆盖 19:49（DSH chuangzuo 15:32 轮 NOT_LOGGED_IN 跳过、22:00 轮同样跳过）→ 只能是他手动发的。
+   - **已补账**：`published-posts.json` 新增条目（id `frank_manual_2026-10-28-1949`）+ `index.json#published` + `account-safety.yaml#x.last_published_at/post_id/url/round/treatment/topic_signature`。
+   - **为什么必须补**：chuangzuo 的 12h 闸门读 `account-safety.yaml#x.last_published_at`。不补的话，下一次 chuangzuo 轮（明天 03:30）会按 10:43:48 算 12h → **可能在 Frank 19:49 刚发过之后 7.5 小时就再发一条**，直接破掉「一天 2 条」的节奏。
+   - 补完后 12h 窗口顺延到 **明天 07:49**。
+4. **2h 降载不触发**：Frank 最后一条公开动作 19:49:39，本轮 22:00 起 → 间隔 **130 分钟 > 120 分钟** → 按满额跑（2 个赞）。
+   - 判据用 snowflake 反解 `2115410666068815948` → 19:49:39，而不是 `with_replies` 页面上的相对时间（那页对 quote RT 的排序会把这条排到 @marmot_stacks 后面去）。
+5. **顺手修了一个历史去重漏洞**：`index.json#published` **漏了 `chuangzuo_round_89` 的 `2115091495229550619`**（10-27 22:41 那条 S-1 帖）—— `published-posts.json` 里有、索引里没有。
+   - 后果：下一轮 chuangzuo 只读索引做去重时，会以为这条帖没发过 → **可能重复发同一个 S-1 内核**。
+   - 已补进 `index.published`（`d: 2026-10-27`）。现在 `published-posts.json` ↔ `index.published` **零缺失**。
+   - 交叉校验已跑：seen-posts 的 like 条目 → index.seen **0 缺失**；outbound-actions 的 like → index.outbound **0 缺失**；published-posts → index.published **0 缺失**。
+   - 另：`seen-posts.json` 里 12 个 post_id 重复是**历史遗留的合法重复**（同一帖的不同 treatment，如 quote_retweet + like_only 并存），不是撞号。
+
+**新经验**
+- **`open_tab` 会切活动 tab —— 点赞必须「开详情页 → 立刻点 → 立刻验 URL」三步连做**。中间任何一次 `open_tab`（哪怕是同一个目标帖的详情页）都可能把活动 tab 换掉，让 selector 命中另一张卡片。
+- **验证要额外看 URL，不只看按钮状态**：`unlike` 存在只说明「某个帖被赞了」，**URL 对不上就是赞错对象**。
+- **Frank 的 Likes 历史页（`/FrankFika/likes` → 跳 `/i/history/likes`）是最好的「我到底赞了什么」自查入口** —— 一屏就能看出本轮赞了哪几条、误赞有没有撤销。
+- **Frank 手动发的帖必须补进 state**：agent 轮次日志覆盖不到的公开动作，只有靠「对比平台侧真实时间线」才能发现 —— 而它直接决定 chuangzuo 的 12h 闸门。
+
+<!-- round -->
+### pulse_round_80 (2026-10-29 04:00–04:14 +08:00) — 0 reply + 2 like（2 个动作；like 配额 2/2 用满）
+
+**模式**：cron 排定轮（04:00 触发）。**走内置浏览器（mcp_browser）**，profile 页实测账号名「陈放Frank🕊️」+ 认证徽章 → 已登录 @FrankFika。
+DSH launchd 的同档口 pulse-20261029-040004 已 `SKIPPED NOT_LOGGED_IN`（xb.py 那条链路发不了，见下）→ **另一条线零动作、零 state 写，本轮无并发 pulse 冲突**。
+
+⚠️ 但**有并发 chuangzuo 写者**：`chuangzuo_round_92` 在 04:05–04:06 写了 `seen-posts.json` / `recent-picks.json` / `index.json`（web 源素材，非 X 互动）。
+→ 本轮 state 落盘用**并发安全脚本** `scripts/_round80_state_write.py`：写前重读盘 + 追加不覆盖 + **内容派生 id**（`outbound-like-00883` / `pick-00883`，不读「最后一个 id +1」）+ 原子写 + 写后校验。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | mentions 页实扫：最新一条仍是 @marmot_stacks（Oct 27，round_75 已回），其余 Oct 26 及更早全部已回/已跳过 → **0 候选** |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @bindureddy（Gemini Carbon 上 LiveBench）+ @dotey（Copilot 过时 / AI 去自动驾驶） |
+
+原创 post **0** / quote RT **0** / XHS 停手（`xhs.is_banned=true`）。总动作 **2**（≤3 上限），like 已 2/2 用满、reply 配额为 0 → 本轮无可用动作类型，未凑数。
+
+**已发 X URL**
+- like → https://x.com/bindureddy/status/2115509412400070883 （`aria-label` `135 Likes. Like` → `136 Likes. Liked` + `data-testid=unlike` + Likes 历史页顶部，双证；原帖 02:22:02 发，赞时 1h44m，24 replies / 135 likes / 5.6K views）
+- like → https://x.com/dotey/status/2115512767394275550 （`aria-label` `5 Likes. Like` → `6 Likes. Liked` + `data-testid=unlike` + Likes 历史页顶部，双证；原帖 02:35:22 发，赞时 1h34m，10 replies / 5 likes / 2.6K views）
+
+**两条赞的间隔 = 180 秒（3 分钟）**，过「like 间隔 ≥ 2min」线。间隔用**显式 wait 兑现**（60+60+30 秒），不靠「中间顺手做别的事」凑时间。
+动作时刻用 **session message timestamp**（epoch ms）取，不用 post_id 反解 —— 点赞没有 post_id，post_id 反解出的是**对方**发帖时刻。
+
+**对账**
+- `from:FrankFika` live search 首条 = `2115410666068815948` → snowflake 反解 **19:49:39**（Oct 28），与 `account-safety.yaml#x.last_published_at` **一致** → **无新手动帖要补账**。
+- **2h 降载不触发**：Frank 最后公开动作 19:49:39，本轮 04:00 起 → 间隔 **490 分钟 > 120 分钟** → 按满额跑（2 个赞）。
+- Like 历史页（`/FrankFika/likes` → `/i/history/likes`）顶部两条 = 本轮这 2 条，**无多余赞** → 本轮零误赞、零副作用。
+
+**跳过项**
+- @dotey「同好奇：百度在训练模型方面怎么会这么落后？」（1h）/「Google 发布 Gemini 4 Carbon 综合榜排第一」（1h）/「讨厌 AI 味也是一种洁癖」（45m，quote @huangyun_122）—— 同作者同时间窗，且 Carbon 内核已被本轮 bindureddy 那条占用；「AI 味洁癖」那条是转述他人观点，非独立观点
+- @dotey「感谢，我去试试看」「我都有用，至少我感觉不怎么样」（35m / 1h）—— 纯对话回复，无独立内容
+- @vista8「看 Simon 老哥写的最新一篇文章」（1h）—— 与 pick-249（simonw 同篇，Oct 28 22:24 已赞）同源 topic，7 天 dedup 内
+- @bindureddy「Love it! Google just announced Carbon… 5x cheaper」（2h）/「TBH this is still better than biology」（50m）/「Umm.. that's no good. Argon is currently discounted」（1h）—— 同作者同窗口，名额给 LiveBench 那条（更贴评测人设 + 更新）
+- @xiaohu「冲」（2h，5.3K views）—— 3 个字无内容，无法判断内核，不占名额
+- @testingcatalog ×4（Gemini 未发布 / OPENAI Pro 用户可用 iMessage 聊 Dots / etc.）—— 产品资讯聚合号，Frank 人设是评测/产业视角，非搬运号（延续 round_76–79 判定）
+- @SemiAnalysis_ ASE 面板级封装（28m，6.9K views）—— 半导体供应链，非 AI 内核
+- @OfficialLoganK / @satyanadella / @sundarpichai —— 被 dotey / bindureddy 转述的原帖，已由转述者代表；官方通稿跳过
+- @op7418 / @oran_ge —— 已拉黑（`state/skip-handles.json`）
+
+**异常 / 新经验**
+1. **DSH 那条线照旧 NOT_LOGGED_IN，但本轮「无并发」这句话的含义要说准**：无冲突的是 **pulse 线**，不是「整轮无并发」——
+   `chuangzuo_round_92` 确实在 04:05–04:06 并发写了同一批 state 文件（web 源素材）。**幸好 round_92 自己准备了并发安全脚本**，
+   本轮沿用同一套写法（内容派生 id），两边 id 不撞。**这验证了「内容派生 id」这条约定值得固化。**
+2. **`since:2026-10-28` 在 live search 里可用**（当天 `since:2026-10-29` 仍是 0 结果的老坑）→ 扫当天内容继续用 `since:前天` + 自己按时间戳过滤。
+3. **点赞时刻的取数顺序**：session message timestamp > bash `date` 锚点 > 估算。本轮 like#1 用 bash 锚点（04:06:21，click 在 04:06:16），
+   like#2 精确到 session message（04:09:16）→ **间隔 180 秒**。跨两个来源取时，注意 click 发生在 bash 锚点**之前**（工具调用返回即已执行）。
+4. **`query kind=dom` 的 aria-label 会同时带旧值和新值**：unlike 按钮的 HTML 里 `135` 和 `136` 两个数字都在（X 做的进出场过渡），
+   **判据要读 aria-label 字符串（`136 Likes. Liked`），不是读 HTML 里的孤立数字** —— 否则会把过渡中的旧值当成当前值。
+5. **早赞窗口再次生效**：@dotey 那条赞时只有 5 个赞、列表才 6 人 → Frank 的 handle 出现在列表最前段；
+   @bindureddy 那条 135 赞 / 5.6K views 已是中盘。**同样的 2 个赞名额，早的那条曝光效率高一个量级** —— 优先挑「发得晚但还没起来」的。
+
+**新经验**
+- **点赞判据要读 aria-label 整串**（`N Likes. Liked`），不要从按钮 HTML 里抠数字 —— X 的进出场动画会把旧值和新值同时留在 DOM 里。
+- **「发了多久」和「起来了没有」是两个独立维度**，早赞（发得晚、赞数小）比晚赞（发得久、赞数多）曝光效率高得多；筛选时优先「<2h 且 <20 赞」这类帖子。
+
+<!-- round -->
+### pulse_round_81 (2026-10-29 10:00–10:24 +08:00) — 0 reply + 2 like（2 个动作；like 配额 2/2 用满）
+
+**模式**：cron 排定轮（10:00 触发，run 记录 `cbb96aa4-8017-49c4-98b4-f0380390a03b`）。**走内置浏览器（mcp_browser）**，profile 页实测账号名「陈放Frank🕊️」+ 认证徽章 → 已登录 @FrankFika。
+
+**🔴 开工自检 · 排定档口台账（先查档口，再刷 X）**
+
+| 项 | 实测 | 结论 |
+|---|---|---|
+| 末轮时间戳 | pulse_round_80 收在 2026-10-29 04:14 | 距今 5h46m < 2×6h=12h |
+| 排定档口（pulse = `0 4,10,16,22` = **每 6 小时 4 轮/天**） | 10-29 10:00 / 04:00 · 10-28 22:00 / 10:00 / 04:00 · 10-27 22:00 | 本档口及之前各格**均有投递记录** |
+| cron 投递记录缺口 | **10-28 16:00 那一格无 run 记录** | 根因：合盖睡眠，触发器压根没触发（**不是**「跑了但崩」）—— 已在 10-29 日报记录，round_79（22:00）做了回溯补扫并确认那 12h 内零漏接 |
+| 本轮是否回溯补扫 | Mentions 页**本轮实扫**（不靠末轮时间戳推定） | ✅ 已扫，见下 |
+
+→ **判定：上一档口（04:00）未丢**（6h < 12h）；窗口内唯一缺口是 10-28 16:00（历史遗留，已被 round_79 补扫覆盖）。
+→ 但**本轮仍做了全量 Mentions 扫描**（Phase A 必做第一步），不拿「上一轮说没问题」当结论。
+
+**平台侧对账（每轮必做）**
+- `from:FrankFika` live search 首条 = `2115410666068815948` → snowflake 反解 **2026-10-28 19:49:39** → 与 `account-safety.yaml#x.last_published_at` **一致** → **无新手动帖，不补账**。
+- **2h 降载不触发**：Frank 最后公开动作距本轮 14h11m > 120 分钟 → 按满额跑（2 个赞）。
+
+**三个计数**
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | Mentions 页实扫：DOM 首条仍是 @marmot_stacks（Oct 27，round_75 已回 `2115093027668771238`），其余 Oct 26 及更早全部已回/已跳过 → **0 候选** |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @dotey（多 agent 并行 worktree 取舍）+ @jiqizhixin（具身 benchmark 与真机表现的落差） |
+
+原创 post **0** / quote RT **0** / XHS 停手（`xhs.is_banned=true`）。总动作 **2**（≤3 上限），like 已 2/2 用满、reply 配额为 0 → 本轮无可用动作类型，未凑数。
+
+**已发 X URL**
+- like → https://x.com/dotey/status/2115618084044349828 （`aria-label` `19 Likes. Like` → `20 Likes. Liked` + `data-testid=unlike` + URL 与目标一致 + Likes 历史页顶部，四证；原帖 09:33:52 发，赞时 **40 分钟**，19 个赞的列表 → Frank handle 排最前）
+- like → https://x.com/jiqizhixin/status/2115494806004613515 （`aria-label` `11 Likes. Like` → `12 Likes. Liked` + `data-testid=unlike` + URL 与目标一致 + Likes 历史页顶部，四证；原帖 01:24:00 发，赞时 8.9h，11 个赞）
+
+**两条赞的间隔 = 236 秒（3.94 分钟）**，过「like 间隔 ≥ 2min」线。间隔用**显式 wait 60+60 秒**兑现，不靠「中间顺手做别的事」凑时间。动作时刻取 **session message timestamp**（点赞没有 post_id，post_id 反解出的是**对方**发帖时刻）。
+
+**跳过项**
+- @bindureddy「The Chinese models have moved on to copying Astra! …Plus OpenAI gets 6-7% distillation revenue!」（5m，10 赞）—— **同属 SKILL 明令跳过的「5-7% 蒸馏营收」话题簇**（dotey 那条点名 DeepSeek/Moonshot/MiniMax）；且内容是「中国模型转抄 Astra」的负面框定 —— Frank 是中国 AI 公司的董秘，公开面沾这条对本人职业身份不利。**两条独立理由都指向跳过。**
+- @bindureddy「Love it! Carbon…5x cheaper」/「TBH this is still better than biology」—— 同作者同窗口，名额给更贴评测人设的那条
+- @dotey「ChatGPT Pro 送最高 500 美元 API 额度」（1h）—— 转述 @OpenAIDevs 官方通稿
+- @dotey「Replying to @LocationCk 比如你需要一次性处理一本长篇小说」—— 是回复帖，页面级 selector 首个匹配会落到根帖
+- @FinanceYF5 ×2（39 个 AI 点子 / Anthropic 哪些零件绝不外包）—— 分别是 Oct 23 老帖的清单聚合、官方通稿中文转述
+- @vista8「看 Simon 老哥写的最新一篇文章」（7h）—— 与 pick-249（simonw 同篇）同源 topic，7 天 dedup 内（延续 round_80 判定）
+- @emollick「Academics have to invest tremendous effort into a single paper…」（2h，136 赞 / 12K views）—— 赞列表已 136 人，Frank 排第 137 位，曝光效率差；且 emollick 12 小时内已被赞过两次
+- @_akhaliq「Hy-Nomas Towards Free-form Interactive World Generation」（4h）—— 论文+app 链接聚合，非评测判断
+- @jiqizhixin「Why make a VLM bigger if the same parameters can take another look?」（3h）—— 同作者另开一条，主题偏模型架构，不如具身那条贴人设
+- @simonw「Did you try the tree appreciation one?」（2h）—— 是回复帖
+- @op7418 / @oran_ge —— 已拉黑（`state/skip-handles.json`）
+- For-you / Home 时间线 —— 实扫发现被加密/Web3 与时政内容污染，无可用候选（不作为主扫描入口）
+
+**异常 / 新经验**
+1. **本轮状态落盘脚本自己抓到一个真 bug：`account-safety.yaml` 的 like 槽位顺序写反了。**
+   首版脚本按 `LIKES` 列表顺序写入槽位（slot1=dotey 10:14:14 / slot2=jiqizhixin 10:18:10），但**槽位约定是 slot1 = 最近一次赞** → 首版把「最近一次赞」记成了较早的那条。
+   写后校验（`last_outbound_like_at == 10:18:10 且 handle == jiqizhixin`）**当场 FAIL 并中止**，改成按 ts 倒序排入后重跑通过。
+   → **教训：写入脚本的「写后校验」必须校验「值与位置的对应关系」，不能只校验「值出现过」。** 只查「这个值在文件里」的话，顺序写反照样全绿。
+2. **系统 `python3` 没装 `yaml`** —— 校验子步骤直接 `ModuleNotFoundError` 崩掉（JSON 部分已落盘，**不是**数据损坏）。改用仓库自带的 `.venv/bin/python` 跑校验。
+   → 附带：`ModuleNotFoundError` 发生在**校验**阶段而非写入阶段 → 状态本身是完整的，但脚本以非零退出 → **「脚本报错」不等于「落盘失败」**，得先看报错发生在哪一步。
+3. **`seen-posts.json` 里存在 10 组重复 post_id、115 条 `id=null`**（`recent-picks`）/ 3 条 `id=null`（`outbound-actions`）—— **全部是历史遗留，非本轮引入**（已用 `git diff` 确认本轮新增的两条 post_id 在全库唯一）。
+   → 本轮 4 个新 id（`outbound-like-349828` / `pick-349828` / `outbound-like-613515` / `pick-613515`）**零碰撞**，内容派生 id 照常有效。
+4. **「早赞」判据再次生效**：@dotey 那条赞时 40 分钟、列表才 19 人 → Frank 的 handle 出现在最前段；@jiqizhixin 那条 11 人。**两个名额都给了「列表还小」的帖子**，没有一个是 136 赞 / 12K views 的大盘帖。
+5. **`since:2026-10-28` 在 live search 可用**（当天 `since:2026-10-29` 仍是 0 结果的老坑）→ 扫当天内容继续用 `since:前天` + 自己按 snowflake 时间戳过滤。
+6. **缩窄搜索关键词必须用 ASCII**：`from:dotey worktree` / `from:jiqizhixin embodied` 秒出并让 DOM 首匹配直接命中目标帖，省掉分辨「哪张卡片是哪条帖」的 token。
+
+**新经验**
+- **写后校验要校验「值 ↔ 位置」的映射**，不只是「值存在」—— 槽位顺序写反是校验能抓住、只查存在性就漏掉的那类 bug。
+- **跳过一条帖可以有两条独立理由**（本轮 bindureddy：话题簇在 SKILL 跳过清单里 + 对本人职业身份不利）—— **两条理由都成立时不要犹豫**，一条理由靠得住但不够硬。
+
+<!-- round -->
+### pulse_round_82 (2026-10-29 23:46–2026-10-30 00:06 +08:00) — 0 reply + 2 like（2 个动作；like 配额 2/2 用满）
+
+**模式**：cron 排定轮（22:00 档口）的**延迟补跑** —— 投递记录 runId `017d1a32-fd83-4f5b-9295-f3e7bdc920bb`，deliveredAt **2026-10-29 22:09:06**，投递进 session `mvs_ad00a975719f4022b4cc8bd3c326e22d`；**该 cron turn 本身零输出**，本轮由 api 路径在同一 session 内于 **23:46:29** 起跑（比排定晚 1h46m）。
+**通道**：内置浏览器 `mcp_browser` —— 左下角账号名「陈放Frank🕊️」+ 认证徽章 → 已登录 @FrankFika（`xb.py` 那条链路仍未登录，没碰）。
+
+**🔴 开工自检 · 排定档口台账（先查档口，再刷 X）**
+
+| 项 | 实测 | 结论 |
+|---|---|---|
+| 末轮时间戳 | pulse_round_81 收在 2026-10-29 10:24 | 距本轮 **13h22m > 2×6h = 12h** → 触发「上一档口丢失」判定 |
+| 排定档口（pulse = `0 4,10,16,22` = **每 6 小时 4 轮/天**） | 10-29 22:00 / 16:00 / 10:00 / 04:00 · 10-28 22:00 / 10:00 / 04:00 | 本档口及之前各格**均有投递记录**（除 10-28 16:00） |
+| **10-29 16:00 档口** | runId `4f860f4a-b8f8-4ef2-896f-b21ecf354d23`，session `mvs_b5fa940e3bc840d2aa793fb6ac1427f4`，**有投递记录、无轮次段** | 根因：**LLM provider 首包超时** —— session status = `error`，message `LLM request timed out: no response from the provider within 300000ms`，errorCode `50113`，errorSource `agent-runtime`。触发器**触发了**、prompt **投递了**，模型侧 300 秒没吐第一个 token → session 直接挂。**不是机器休眠。** |
+| **10-29 22:00 档口** | runId `017d1a32-fd83-4f5b-9295-f3e7bdc920bb`，22:09:06 投递进本 session；`session messages` 里该 cron turn **只有 user 消息、零 assistant 消息** | 同一根因的更轻症状：**整轮零输出**，连错误记录都没落进 session → 只能靠「投递记录在 + 轮次段不在」发现 |
+| 10-28 16:00 档口 | **无 run 记录** | 根因：合盖睡眠，触发器压根没触发 —— **与上面两格根因不同**，已由 round_79 回溯补扫覆盖 |
+
+→ **判定：16:00 与 22:00 两格连续丢失**，10:00 → 23:46 形成 **13h22m 空窗**。
+→ 按铁律本轮**做了全量 Mentions 回溯补扫**（不是拿末轮时间戳推定），结果见下。
+
+**平台侧对账（每轮必做）**
+- `from:FrankFika` live search 首条 = `2115791244064690547` → snowflake 反解 **2026-10-29 21:01:56** → 与 `account-safety.yaml#x.last_published_at`（2026-10-28 19:49:39 那条 Quote 根帖）**不一致** → **Frank 本人手动发了一条内容**（任何 agent 轮次日志都覆盖不到）。
+- 打开该帖详情页确证：正文「**@IncomprisSage 。。法国原住民都快成黑人了。。**」，形态 = **reply**（目标帖 @IncomprisSage `2115385755266601207`，2026-10-28 18:10:40），**不是根帖**。
+- ⚠️ **补账只写 reply 字段，`last_published_at` 一个字都没动** —— chuangzuo 的 12h 原创闸门只数根帖（`skills/README.md:82`「Quote 帖 = 根帖，计入 12h 窗口；只有 reply 不计入」）。若误写成 21:01:56，下一轮 chuangzuo（03:30）会以为「刚发过原创」→ 硬否决，把原创线饿死 —— 正是 2026-10-27 修过一次的老坑。
+  → 已补 5 处：`seen-posts.json`（**两条**：目标帖 `2115385755266601207`，`treatment=frank_manual_reply_not_agent`；以及 Frank 自己那条 reply `2115791244064690547`，`type=own_reply` / `parent_post_id` 指回目标帖 —— 仓库惯例：账号自己发出去的帖也要在 seen-posts 里留一条 own_reply，否则「我们处理过哪些帖」查不全）+ `outbound-actions.json`（`agent_generated: false`）+ `recent-picks.json`（dedup）+ `index.json#seen/#outbound`（目标帖 + own reply id 各一条）；`account-safety.yaml` 更新 `last_outbound_reply_at` / `_own_post_id` / `_target_post_id` / `_target_handle` / `_treatment` / `_topic_signature`。
+- **2h 降载不触发**：Frank 最后公开动作距本轮 **2h45m > 120 分钟** → 按满额跑（2 个赞）。
+
+**Mentions 回溯补扫（空窗期 10:24 → 23:46 全量实扫）**
+- Mentions 页**实扫**（`https://x.com/notifications/mentions`）：最新一条仍是 **@marmot_stacks Oct 27**（round_75 已回 `2115093027668771238`）→ **空窗期 13.7h 内零新增 inbound**。
+- 逐条对账（页上 11 条通知 vs 台账）：@marmot_stacks / @KakaluoteW45042 ×2（10-27 已回 + 10-26 已 skip）/ @zack6116 / @zkcolab / @mahdi / @dyiapanis ×2 / @AetrixEmby ×2 → 全部已在 `seen-posts` / `index#inbound`（已回或已跳过）。
+- **唯一缺口**：**@mumblinglewis Oct 26**「鉴定训练失败，100%AI味」（Replying to @FrankFika and @dotey）**从未进过任何台账** —— round_81 扫到过但没写账，等于每轮都要重新评估一次。→ 本轮补记 `skipped_no_reply` 留痕。
+  判据：**闸 1 身份质疑**（「鉴定失败 / 100% AI 味」= 质疑内容是不是 AI 写的）→ 默认不回，只留痕。已在 Mentions 页确证它确实是发给 @FrankFika 的，不是上下文串位。
+
+→ **inbound reply 候选 = 0** —— 这是**补扫证实 + 逐条对账**的结论，不是「没扫到」的推断。
+
+**三个计数**
+
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | 补扫后 0 候选（11 条通知逐条对账，唯一台账缺口 @mumblinglewis 属闸 1 跳过） |
+| outbound reply | **0** | Frank 2026-10-27「少评论，多干发原创」新配额 → 本轮不评论他人帖 |
+| outbound like | **2** | @vista8（个人网站加 X 式「随想」栏目 / 许愿式编程）+ @_akhaliq（多视角图 → 主体一致全向视频生成） |
+
+原创 post **0** / quote RT **0** / XHS 停手（本线不碰 XHS；另注：`account-safety.yaml#xhs.is_banned` 今天已改为 false，是 XHS 线自己的口径，与 pulse 无关）。
+总动作 **2**（≤3 上限），like 已 2/2 用满、reply 配额为 0 → 本轮无可用动作类型，未凑数。
+
+**已发 X URL**
+- like → **https://x.com/vista8/status/2115818384881508545** —— 详情页 `aria-label` `11 Likes. Like` → 点后 `12 Likes. Liked` + `data-testid=unlike` + URL 与目标一致 + Likes 历史页顶部，四证；原帖 22:49:47 发，赞时 **64 分钟**，赞列表才 **11 人** → Frank handle 排最前段
+- like → **https://x.com/_akhaliq/status/2115826286652248275** —— 详情页 `aria-label` `9 Likes. Like` → 点后 `10 Likes. Liked` + `data-testid=unlike` + URL 与目标一致 + Likes 历史页顶部，四证；原帖 23:21:11 发，赞时 **36 分钟**，赞列表才 **9 人** → 曝光效率最高的一条（Likes 页卡片此刻显示 11，是他人后续点赞，非本轮动作）
+
+**两次赞的间隔 = 176.853 秒（2.95 分钟）**，过「like 间隔 ≥ 2min」线。间隔用**显式 wait 60+60 秒**兑现，不靠「中间顺手做别的事」凑时间。动作时刻取 **session message timestamp**（点赞没有 post_id，post_id 反解出的是**对方**发帖时刻）。
+
+**跳过项**
+- @simonw「Fascinating case study of the sharpest edge of what you can do with agentic engineering in the Fable era」Quote（48m，**145 likes**）—— 内容极贴人设（引用「Spawn 十个人 / 30 倍薪资花在 token / 30 天 77,000 次改动」），但①赞列表已 145 人 → Frank 排第 146 位，曝光效率差一个量级；②同作者 pick-249（10-28 22:24 赞过「coding agent 拐点 + Opus 5.5 做游戏」）**7 天 dedup 窗口内**（expires 11-04），两格都给了它就重复了 → 记录在案不赞
+- @jiqizhixin WorldMemArena「86.83% memory recall but 50.14% QA-C」（50m）—— 内容是评测硬数据（最贴人设），但①赞列表 ~182 人，曝光效率差；②**内核撞车** —— round_81 刚赞过同作者的「模拟 benchmark 100% / 真机 0 次成功」（`embodied-benchmark-simulation-vs-real-robot-gap`，expires 11-05），同为「benchmark 分数 ≠ 真实效果」内核 → 本轮让位
+- @AnthropicAI「AI for Science expands to foundations and institutions」（32m）—— 官方公告，但 967 likes / 56K views → Frank 排第 968 位
+- @dotey「不能，取决于模型能力」（10m）/ @vista8「我之前有一个插件…」（38m）—— 均为回复帖，页面级 selector 首个匹配会落到根帖
+- @vista8「苍何是我好朋友…推荐下单购买」（1h）—— Quote 荐书，推广向
+- @simonw「飞龙绕城堡」（44m）—— 是回复帖，且与 pick-249「vibe game dev」同源 topic
+- @emollick「Academics have to invest tremendous effort into a single paper…」（15h）—— round_81 已评估（136 赞 / 12K views，emollick 12 小时内被赞过两次）
+- @op7418 / @oran_ge —— 已拉黑（`state/skip-handles.json`）
+- For-you / Home 时间线 —— 沿用 round_81 结论（被加密/Web3 与时政内容污染，无可用候选，不作主扫描入口）
+
+**异常 / 新经验**
+1. **🔴 本地 cron 轮次静默死亡的第三个根因：provider 首包超时**（此前只区分了「无 run 记录 = 机器睡着」和「有 run 记录但崩了」两种，现在第二种又分出两支）。
+   - **判据**：有投递记录 + 无轮次段 → 查那一轮自己的 session：`mavis session get --session-id <id>` 若 `status.type == "error"`、`errorCode == 50113`、message 含 `firstEventTimeoutMs` → **provider 300 秒首包超时**；更轻的症状是 `session messages` 里**只有 user 消息、零 assistant 消息**。
+   - **为什么难发现**：cron 台账里那一格显示 `delivered`，看起来像「跑过了」；`session get` 的 error 也只在会话记录里看得到，不主动查就完全静默。
+   - **可操作动作**：调大 `MCODE_LLM_FIRST_EVENT_TIMEOUT_MS`（或 host 的 `firstEventTimeoutMs`），否则每一格都有概率静默死。本轮两格连续中招，**建议优先处理这个**。
+2. **Frank 手动发的内容也要补账，但落点取决于「根帖还是 reply」** —— 10-28 那次是 Quote **根帖**（补 `last_published_at` + `published-posts.json`）；这次是 **reply**（只补 `last_outbound_reply_*`，**`last_published_at` 一字不动**）。两种手动动作的补账落点相反，写错一个就会让 chuangzuo 的 12h 闸门误判。
+3. **`index.json` 的写后校验不能一刀切要求「seen 和 outbound 同时存在」** —— skip 类记录（闸 1 留痕）只进 `seen`、**不进** `outbound`（没出手就不该进动作账）。本轮脚本首版把这条误判成「校验失败」重试了一次（数据本身是对的，重试后幂等跳过，无副作用）。
+4. **「早赞」判据第三次生效**：本轮两格都给了「赞列表 < 20 人」且发得晚的帖（11 人 / 9 人），没有一个是 145 / 967 赞的大盘帖；@simonw 那条 145 赞的虽然内容最贴人设，也让位了 —— 同一个赞名额，曝光效率差一个量级。
+5. **Mentions 页逐条对账发现了一个「扫到但没记账」的常驻缺口**（@mumblinglewis）—— 「扫过、0 候选」的结论成立，但**候选本身没进台账** → 每轮都要重新评估同一批旧帖。补记留痕后这条不会再复现。

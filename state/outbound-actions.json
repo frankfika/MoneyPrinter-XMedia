@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-26T00:34:47+08:00",
+  "last_updated": "2026-10-29T23:57:12+08:00",
   "purpose": "记录非原创 outbound 动作(like / quote_retweet / reply_passive),区别于 published-posts.json 的原创 post",
   "entries": [
     {
@@ -1983,6 +1983,339 @@
       "treatment": "like_only",
       "like_delta": "145->146",
       "note": "manual_pulse_2026-10-26. 帖=『Looking at public benchmarks is a total waste of time』(12,788 views/48 replies/145 likes). 路径: detail 页 press_key 'l'. 验证: aria-label 由『145 Likes. Like』变『146 Likes. Liked』+ data-testid=unlike(双证). 原计划的 reply 已撤(AI 味风险)."
+    },
+    {
+      "id": "outbound-132",
+      "timestamp": "2026-10-26T11:12:00+08:00",
+      "action_type": "reply",
+      "target_handle": "dotey",
+      "target_post_id": "2114518128910897640",
+      "target_post_url": "https://x.com/dotey/status/2114518128910897640",
+      "own_post_id": "2114553963085488252",
+      "url": "https://x.com/FrankFika/status/2114553963085488252",
+      "topic_signature": "universal-model-rounded-my-chinese-copy-fix-is-local-lora-and-sample-collection",
+      "treatment": "reply_riding_traffic",
+      "text_chars": 169,
+      "gate_receipt_sha256": "4de75b01ffa426a7",
+      "gate_receipt_ts": "2026-10-26T10:47:44+0800",
+      "verified": true,
+      "verifications": {
+        "thread_dom_permalink": true,
+        "thread_dom_text_verbatim": true,
+        "search_from_FrankFika_改圆": true,
+        "no_duplicate_second_post": true,
+        "conversation_id_operator": "live (dotey 会话索引含 1m 前回复, 证明索引实时)"
+      },
+      "note": "pulse_round_72. 宝玉@dotey『Opus 5.5 是真的好, 几乎全能』帖. 切口: 通用中文模型见太多像人话的样本, 一上手就把句子改圆; 去 AI 味最后还是自己在 Mac 上训 1.5B LoRA, 攒对照样本比训练更耗时间. 🐛 踩坑(必须记): 第一次 press_key {'key':'Meta+Enter'} dispatched=true 但**根本没发出去** —— search(from:FrankFika MLX/改圆/对照样本)、with_replies 顶部、线程 DOM、conversation_id:2114518128910897640 四路全部查不到; 且 X 无系统失败通知、无限流横幅. 改用 press_key {'key':'Enter','modifiers':['Meta']} 后立刻真发(43s 后 search 命中, post_id 2114553963085488252, 正文逐字一致). 这次不是盲 retry: 先用四路只读判据确认未投递, 再用**逐字相同**正文重发让 X 重复防护兜底, 事后确认仅 1 条无重复. 根因: press_key 组合键必须走 modifiers 数组, 'Meta+Enter' 字符串形式被当普通按键丢弃."
+    },
+    {
+      "id": "outbound-133",
+      "timestamp": "2026-10-26T11:02:00+08:00",
+      "action_type": "like",
+      "target_handle": "dotey",
+      "target_post_id": "2114518128910897640",
+      "target_post_url": "https://x.com/dotey/status/2114518128910897640",
+      "target_post_topic_signature": "opus-5-5-nearly-all-purpose-switching-cost-beats-quota-anxiety",
+      "treatment": "like_only",
+      "like_delta": "109->111",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_111_likes_liked": true
+      },
+      "note": "pulse_round_72. 同一帖(11.9K views). 路径: 干净详情页 press_key 'l'. 验证: aria-label 由『109 Likes. Like』变『111 Likes. Liked』+ data-testid=unlike(双证). 计数 +2 含同期自然增长. 未追加第二个 like: @bindureddy Argon 帖与本轮 reply 同链路无独立价值, 按『候选不足就少做』不凑数."
+    },
+    {
+      "id": "outbound-134",
+      "timestamp": "2026-10-27T19:23:30+08:00",
+      "action_type": "like",
+      "target_handle": "bindureddy",
+      "target_post_id": "2114938847704571975",
+      "target_post_url": "https://x.com/bindureddy/status/2114938847704571975",
+      "target_post_topic_signature": "smaug-humanizer-open-weights-gemma-humanize-ai-slop",
+      "treatment": "like_only",
+      "like_delta": "260->261",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_261_likes_liked": true
+      },
+      "note": "pulse_round_73. Smaug Humanizer（open-weights on HF，Gemma 底座，humanize your AI-generated text）1M views / 260 likes / 6h —— humanizer 方向与 Frank 自己训的去 AI 味 LoRA 同赛道，值得赞。发前查过 state/index.json 无此 post_id、recent-picks 无同 topic signature。路径: 干净详情页点 like 按钮。验证: aria-label 「260 Likes. Like」→「261 Likes. Liked」+ data-testid=unlike（双证）。只赞不评: 可发的内核（尺子 / 口径 / 训练数据）跟 Frank Oct 26 两帖高度重合，按闸 2 + 闸 0 第 5 条不重复讲。"
+    },
+    {
+      "id": "outbound-135",
+      "timestamp": "2026-10-27T19:31:11+08:00",
+      "action_type": "reply",
+      "target_handle": "dotey",
+      "target_post_id": "2114952872458633296",
+      "target_post_url": "https://x.com/dotey/status/2114952872458633296",
+      "own_post_id": "2115043630008369379",
+      "url": "https://x.com/FrankFika/status/2115043630008369379",
+      "topic_signature": "ai-authored-paper-attribution-and-ip-ownership-in-external-disclosure",
+      "treatment": "reply_riding_traffic",
+      "text_chars": 88,
+      "gate_receipt_sha256": "3a5df4cde5ab7dc9",
+      "gate_receipt_ts": "2026-10-27T19:25:32+0800",
+      "verified": true,
+      "verifications": {
+        "conversation_id_search": true,
+        "search_from_FrankFika": true
+      },
+      "note": "pulse_round_73. 宝玉贴 ETH 论文（OpenAI 宣布同一天，Anthropic 在 GitHub 放同结论论文，署名作者只有一个 Claude，1400 万输出 token 无人工输入），45K views / 116 likes / 5h。Frank 从董秘 / 对外披露口径切入：算法算公司研发的，还是模型自己发现的，两种写法不是一回事，真按第二种写专利算谁的。这是 Frank 近 7 天没在公开面讲过的角度（Oct 26 讲的「口径」是客户模板术语一致性，不是成果归因）。闸 0 机器闸门 exit 0、soft=0、sha256 3a5df4cde5ab7dc9、88 字。reply 间隔 ≥8min: inbound 19:22:55 → 本条 8min+ 后才发。"
+    },
+    {
+      "id": "outbound-136",
+      "timestamp": "2026-10-28T08:42:30+08:00",
+      "action_type": "like",
+      "target_handle": "dotey",
+      "target_post_id": "2115218749888634988",
+      "target_post_url": "https://x.com/dotey/status/2115218749888634988",
+      "target_post_topic_signature": "anthropic-coding-interview-removed-junior-engineer-momentum",
+      "treatment": "like_only",
+      "like_delta": "147->148",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_148_likes_liked": true
+      },
+      "note": "pulse_round_76 outbound-136；正文截断在「Felix Ries」；详情页 aria-label 147→148 likes + data-testid=unlike 双证"
+    },
+    {
+      "id": "outbound-137",
+      "timestamp": "2026-10-28T08:45:00+08:00",
+      "action_type": "like",
+      "target_handle": "AI_Jasonyu",
+      "target_post_id": "2115104582061990390",
+      "target_post_url": "https://x.com/AI_Jasonyu/status/2115104582061990390",
+      "target_post_topic_signature": "ai-ppt-side-hustle-college-student-ordinary-people-business",
+      "treatment": "like_only",
+      "like_delta": "55->56",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_56_likes_liked": true
+      },
+      "note": "pulse_round_76 outbound-137；详情页 aria-label 55→56 likes + data-testid=unlike 双证"
+    },
+    {
+      "id": "outbound-138",
+      "timestamp": "2026-10-28T10:06:15+08:00",
+      "action_type": "like",
+      "target_handle": "bindureddy",
+      "target_post_id": "2115173217929449556",
+      "target_post_url": "https://x.com/bindureddy/status/2115173217929449556",
+      "target_post_topic_signature": "astra-6-1-release-30-per-1m-output-tokens-beat-opus-5-5",
+      "treatment": "like_only",
+      "like_delta": "310->311",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_311_likes_liked": true
+      },
+      "note": "pulse_round_77；详情页 aria-label 310→311 likes + data-testid=unlike 双证"
+    },
+    {
+      "id": "outbound-139",
+      "timestamp": "2026-10-28T10:07:56+08:00",
+      "action_type": "like",
+      "target_handle": "bindureddy",
+      "target_post_id": "2115210249405948173",
+      "target_post_url": "https://x.com/bindureddy/status/2115210249405948173",
+      "target_post_topic_signature": "argon-bad-for-coding-not-steerable-instruction-following-hallucination",
+      "treatment": "like_only",
+      "like_delta": "97->98",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_98_likes_liked": true
+      },
+      "note": "pulse_round_77；详情页 aria-label 97→98 likes + data-testid=unlike 双证"
+    },
+    {
+      "id": "outbound-140",
+      "timestamp": "2026-10-28T10:49:37+08:00",
+      "action_type": "like",
+      "target_handle": "emollick",
+      "target_post_id": "2115273222061015169",
+      "target_post_url": "https://x.com/emollick/status/2115273222061015169",
+      "target_post_topic_signature": "genie4-realtime-world-model-mouse-scene-interactive-demo",
+      "treatment": "like_only",
+      "like_delta": "14->15",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_15_likes_liked": true
+      },
+      "note": "pulse_round_78 outbound-140；Frank 原创发布后 2h 内 → 降载到 1 个动作"
+    },
+    {
+      "id": "outbound-141",
+      "timestamp": "2026-10-28T22:16:52+08:00",
+      "action_type": "like",
+      "target_handle": "emollick",
+      "target_post_id": "2115419671877062710",
+      "target_post_url": "https://x.com/emollick/status/2115419671877062710",
+      "target_post_topic_signature": "talkie-1930-neuron-persona-locking-open-model-mechanistic-interpretability",
+      "treatment": "like_only",
+      "like_delta": "142->143（本轮 +1；点后读到 144，含并发自然增长）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_144_likes_liked": true,
+        "likes_page_top_entry": true
+      },
+      "note": "pulse_round_79；与 like#2 间隔 7m27s（>=2min 线）。详情页首个 like 按钮即根帖（该页 6 个 like 按钮 = 根帖 + 5 条回复，嵌套引用卡无 like 按钮）"
+    },
+    {
+      "id": "outbound-142",
+      "timestamp": "2026-10-28T22:24:19+08:00",
+      "action_type": "like",
+      "target_handle": "simonw",
+      "target_post_id": "2115444742595260551",
+      "target_post_url": "https://x.com/simonw/status/2115444742595260551",
+      "target_post_topic_signature": "october-inflection-point-coding-agents-opus-5-5-vibe-game-dev",
+      "treatment": "like_only",
+      "like_delta": "52->53（本轮 +1；点后读到 56，含并发自然增长）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_56_likes_liked": true,
+        "likes_page_top_entry": true
+      },
+      "note": "pulse_round_79；like#1 -> like#2 间隔 7m27s。Frank 的 Likes 历史页顶部两条 = 本轮这 2 条，反向证明误赞已撤销"
+    },
+    {
+      "id": "outbound-like-070883",
+      "timestamp": "2026-10-29T04:06:16+08:00",
+      "action_type": "like",
+      "target_handle": "bindureddy",
+      "target_post_id": "2115509412400070883",
+      "target_post_url": "https://x.com/bindureddy/status/2115509412400070883",
+      "target_post_topic_signature": "gemini-carbon-livebench-benchmark-launch-expectation",
+      "treatment": "like_only",
+      "like_delta": "135->136（本轮 +1；点后 aria-label 读 136）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_136_likes_liked": true,
+        "likes_page_top_entry": true
+      },
+      "note": "pulse_round_80；like#1。详情页先 query dom 读 aria-label='135 Likes. Like' 确认是目标帖，再 click，再 query dom 读 unlike='136 Likes. Liked'，URL 与目标一致。like#1 -> like#2 间隔 180 秒（3 分钟，过 ≥2min 线）"
+    },
+    {
+      "id": "outbound-like-275550",
+      "timestamp": "2026-10-29T04:09:16+08:00",
+      "action_type": "like",
+      "target_handle": "dotey",
+      "target_post_id": "2115512767394275550",
+      "target_post_url": "https://x.com/dotey/status/2115512767394275550",
+      "target_post_topic_signature": "copilot-obsolete-concept-ai-not-copilot-autopilot-era",
+      "treatment": "like_only",
+      "like_delta": "5->6（本轮 +1；点后 aria-label 读 6）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_6_likes_liked": true,
+        "likes_page_top_entry": true
+      },
+      "note": "pulse_round_80；like#2。发布后 1h34m、赞列表仅 6 人 → 早赞曝光窗口。详情页 read like(5 Likes) → click → read unlike(6 Likes. Liked)，URL 与目标一致"
+    },
+    {
+      "id": "outbound-like-349828",
+      "timestamp": "2026-10-29T10:14:14+08:00",
+      "action_type": "like",
+      "target_handle": "dotey",
+      "target_post_id": "2115618084044349828",
+      "target_post_url": "https://x.com/dotey/status/2115618084044349828",
+      "target_post_topic_signature": "worktree-parallel-agent-tasks-local-vs-cloud-verification-cost",
+      "treatment": "like_only",
+      "like_delta": "19->20（本轮 +1；点后 aria-label 读 20 Likes. Liked）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_liked": true,
+        "likes_page_top_entry": true,
+        "url_matches_target": true
+      },
+      "note": "pulse_round_81；like#1。详情页先 query dom 读 aria-label 确认是目标帖且未赞，再 click，再 query dom 读 unlike + aria-label='Liked'，URL 与目标一致。like#1 -> like#2 间隔 236 秒（3.94 分钟，过 ≥2min 线）；两次赞之间用显式 wait 60+60 秒兑现间隔，不靠顺手调用凑时间"
+    },
+    {
+      "id": "outbound-like-613515",
+      "timestamp": "2026-10-29T10:18:10+08:00",
+      "action_type": "like",
+      "target_handle": "jiqizhixin",
+      "target_post_id": "2115494806004613515",
+      "target_post_url": "https://x.com/jiqizhixin/status/2115494806004613515",
+      "target_post_topic_signature": "embodied-benchmark-simulation-vs-real-robot-gap-zero-plug-insertions",
+      "treatment": "like_only",
+      "like_delta": "11->12（本轮 +1；点后 aria-label 读 12 Likes. Liked）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_liked": true,
+        "likes_page_top_entry": true,
+        "url_matches_target": true
+      },
+      "note": "pulse_round_81；like#2。详情页先 query dom 读 aria-label 确认是目标帖且未赞，再 click，再 query dom 读 unlike + aria-label='Liked'，URL 与目标一致。like#1 -> like#2 间隔 236 秒（3.94 分钟，过 ≥2min 线）；两次赞之间用显式 wait 60+60 秒兑现间隔，不靠顺手调用凑时间"
+    },
+    {
+      "id": "outbound-like-508545",
+      "timestamp": "2026-10-29T23:54:15+08:00",
+      "action_type": "like",
+      "target_handle": "vista8",
+      "target_post_id": "2115818384881508545",
+      "target_post_url": "https://x.com/vista8/status/2115818384881508545",
+      "target_post_topic_signature": "personal-site-ai-posting-feature-one-prompt-vibe-programming-x-xhs-sync",
+      "treatment": "like_only",
+      "like_delta": "11->12（本轮 +1；点后 aria-label 读 12 Likes. Liked）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_liked": true,
+        "likes_page_top_entry": true,
+        "url_matches_target": true
+      },
+      "note": "pulse_round_82；like#1。详情页先 query dom 读 aria-label 确认是目标帖且未赞，再 click，再 query dom 读 unlike + aria-label='Liked'，URL 与目标一致。like#1 -> like#2 间隔 176.853 秒（2.95 分钟，过 ≥2min 线）；两次赞之间用显式 wait 60+60 秒兑现间隔，不靠顺手调用凑时间"
+    },
+    {
+      "id": "outbound-like-248275",
+      "timestamp": "2026-10-29T23:57:12+08:00",
+      "action_type": "like",
+      "target_handle": "_akhaliq",
+      "target_post_id": "2115826286652248275",
+      "target_post_url": "https://x.com/_akhaliq/status/2115826286652248275",
+      "target_post_topic_signature": "omnidirectional-subject-consistent-video-generation-multi-view-images-paper",
+      "treatment": "like_only",
+      "like_delta": "9->10（本轮 +1；点后 aria-label 读 10 Likes. Liked）",
+      "verified": true,
+      "verifications": {
+        "unlike_button_data_testid": true,
+        "aria_label_liked": true,
+        "likes_page_top_entry": true,
+        "url_matches_target": true
+      },
+      "note": "pulse_round_82；like#2。详情页先 query dom 读 aria-label 确认是目标帖且未赞，再 click，再 query dom 读 unlike + aria-label='Liked'，URL 与目标一致。like#1 -> like#2 间隔 176.853 秒（2.95 分钟，过 ≥2min 线）；两次赞之间用显式 wait 60+60 秒兑现间隔，不靠顺手调用凑时间"
+    },
+    {
+      "id": "outbound-reply-601207",
+      "timestamp": "2026-10-29T21:01:56+08:00",
+      "action_type": "reply",
+      "target_handle": "IncomprisSage",
+      "target_post_id": "2115385755266601207",
+      "target_post_url": "https://x.com/IncomprisSage/status/2115385755266601207",
+      "target_post_topic_signature": "france-indigenous-population-race-remark-reply-incompris-sage",
+      "treatment": "frank_manual_reply_not_agent",
+      "own_post_id": "2115791244064690547",
+      "own_post_url": "https://x.com/FrankFika/status/2115791244064690547",
+      "source": "frank_manual",
+      "agent_generated": false,
+      "verified": true,
+      "verifications": {
+        "from_search_first_result": true,
+        "snowflake_timestamp": true,
+        "own_post_page_title_matches": true
+      },
+      "note": "pulse_round_82 平台侧对账补账 —— 这条 reply 是 **Frank 本人手动发的**，不是任何 agent 轮次产出（轮次日志覆盖不到）。发现方式：`search?q=from:FrankFika` 首条 = 2115791244064690547，snowflake 反解 = 2026-10-29T21:01:56+08:00，比 account-safety.yaml#x.last_published_at（10-28 19:49:39 那条 Quote 根帖）新。⚠️ **它是一条 reply，不是根帖 → 不计入 chuangzuo 的 12h 闸门**，所以 last_published_at 保持不动；只更新 last_outbound_reply_* 系列。"
     }
   ]
 }

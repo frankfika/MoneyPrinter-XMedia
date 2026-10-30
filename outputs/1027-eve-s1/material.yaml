@@ -1,0 +1,52 @@
+material_id: "1027-eve-s1"
+slot: eve
+scanned_at: "2026-10-27T22:45:00+08:00"
+source_kind: web
+source_name: aihot            # 选题来自 aihot hot #1；数字回 SEC 原文核对
+
+author:
+  name: "Anthropic, PBC"
+  handle: "anthropic-pbc"
+  lang: en
+
+original:
+  url: "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm"
+  post_id: "url:77d8e79abd5f"
+  posted_at: "2026-10-26T09:00:11-04:00"
+
+signal: "aihot hot #1（26 篇报道 / 16 信源）；EDGAR 正式 S-1"
+metrics: null
+
+read_url: "https://aihot.news/story/82c796c0-3bf1-4c3a-8368-56913b4bf85d"
+
+# ── 已回 SEC 原文逐条核对的数字（anthropicpbc-sx1.htm，2026-10-26 提交）──
+# 营收（Six Months Ended June 30）: 2023 $41M / 2024 $386M / 2025 $4,585M /
+#   H1-2025 $1,163M / H1-2026 $16,286M → H1 同比 14.0 倍
+# 经营亏损: H1-2025 $(2,135)M → H1-2026 $(693)M（收窄）
+# 净亏损: H1-2026 $(80,748)M
+#   其中 change in FV of convertible notes / derivative liabilities / SAFEs = $(72,388)M（非现金）
+#   other income (expense), net = $(8,757)M（主要也是战略投资等公允价值变动）
+# 资产负债: 现金及等价物 $112,389M + 短期投资 $19,262M（2026-06-30）
+# 客户（截至 2026-09-30, TTM 收入口径）: >11,900 家 ≥$100K；>1,900 家 ≥$1M；约 250 家 ≥$10M
+# 毛利率：S-1 已于 2025 年改为按性质列报，**不再单列 gross profit** → 无法引用毛利率
+# "agent" 在 S-1 出现 129 次（含定义术语 "agent loop" / "agentic AI"）→ 不能说"招股书里没有 agent"
+# 广告承诺：下载到的 12.4MB 正文中搜不到 "no advertisement" / "never ... advertis" → 不引用
+# CSP 渠道收入占比: 11% / 32% / 47% / 48%（截至 2026-06-30 六个月为 48%）
+# SpaceXAI 安排: 向 NVIDIA 采购算力，累计最高 $120.5B，期限延至 2029
+# 知识工作者人口: 预计 2028 年超过 10 亿
+verified_facts:
+  - "拟在纳斯达克全球精选市场以代码 ANT 发行 Class A 普通股"
+  - "承销团首两位: Goldman Sachs & Co. LLC / Morgan Stanley"
+  - "发行价区间未填（'between $ and $'），注册声明尚未生效，生效前不得出售证券"
+  - "2026 上半年营收 162.86 亿美元，经营亏损 6.93 亿，净亏损 807 亿"
+
+evidence_links:
+  - label: "SEC S-1 原文（Anthropic, PBC，2026-10-26 提交）"
+    url: "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm"
+
+screenshots_needed:
+  - "EDGAR filing index（S-1 那一行 + filed 2026-10-26）"
+  - "S-1 Consolidated Statements of Operations Data（营收/经营亏损/净亏损三行）"
+
+treatment_hint: first_person_original
+dedup_hits: []

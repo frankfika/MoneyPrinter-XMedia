@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-23T01:26:00+08:00",
+  "last_updated": "2026-10-28T04:10:40+08:00",
   "purpose": "记录已回的 inbound reply(别人对我帖的 reply),用于 dedup 防重复回 + 跟踪社区互动闭环",
   "entries": [
     {
@@ -695,6 +695,42 @@
       "treatment": "inbound_replied",
       "text_chars": 113,
       "note": "pulse_round_59 补跑. 26.7h 真空期后机器唤醒, browser 恢复. Mahdi Oct 22 12:53AM 回复 Frank: 'Fair point. The specific facts go stale fast. What I think lasts is the habit of asking what else touches this before you change it. That part carries over to the next system.' (11 views) 本轮回应: 认这个习惯比记结论耐用, 但推到下一层 —— 习惯靠人肉扫依赖, 漏掉的依赖不会报错只悄悄不响; 反问'你凭什么知道那份清单是全的', 收在'没人写下来的那条正好就是出事的那条'. 真发验证: Cmd+Enter + wait 6s + search 'from:FrankFika 人肉扫依赖' 拿到 own_post 2113320369163821426 (31s ago)"
+    },
+    {
+      "id": "inbound-039",
+      "timestamp": "2026-10-27T19:22:55+08:00",
+      "source_handle": "KakaluoteW45042",
+      "target_post_id": "2114734553365696892",
+      "own_post_id": "2115041547133895143",
+      "url": "https://x.com/FrankFika/status/2115041547133895143",
+      "topic_signature": "who-measures-context-sufficiency-is-the-other-side-not-the-builder",
+      "treatment": "inbound_replied",
+      "text_chars": 81,
+      "note": "pulse_round_73. @KakaluoteW45042（琦玉老师，Ex-Alibaba 资深算法工程师 / AI 书籍作者，1,643 粉）23:03 Oct 26 回 Frank「手工试验」帖，78 views。index.inbound 无此 post_id = 真新 inbound。Frank 回应落在他自己问的「谁在度量充分性」上：用董秘口径答「一份材料够不够，由对方第一轮追问说了算」，不复述 Frank 近 7 天已讲过的 LoRA / 尺子 / 客户模板 / 评测样本量内核。闸 0 机器闸门 exit 0、soft=0、sha256 d01e1eed2428a803、81 字。发后 conversation_id 算子验证命中。"
+    },
+    {
+      "id": "inbound-040",
+      "timestamp": "2026-10-27T22:08:44+08:00",
+      "source_handle": "zack6116",
+      "target_post_id": "2114562104401551863",
+      "own_post_id": "2115083279502385306",
+      "url": "https://x.com/FrankFika/status/2115083279502385306",
+      "topic_signature": "ruler-rule-count-outpaces-sample-count-conflict-rate-is-the-real-readout",
+      "treatment": "inbound_replied",
+      "text_chars": 98,
+      "note": "pulse_round_74. 回 @zack6116 的「尺子」帖（Oct 26 11:37，20 views）。角度 = 规则数(60 多条/月) 跑在样本数(每周 10 条 ≈ 四十多条/月)前面，加上他没给的打架率这个读数。闸 0 exit 0，98 字。真发验证：thread DOM「@FrankFika · 54s」+ from:FrankFika 首条命中。"
+    },
+    {
+      "id": "inbound-041",
+      "timestamp": "2026-10-28T04:04:59+08:00",
+      "source_handle": "marmot_stacks",
+      "target_post_id": "2115093027668771238",
+      "own_post_id": "2115172929818550646",
+      "url": "https://x.com/FrankFika/status/2115172929818550646",
+      "topic_signature": "s1-voting-rights-class-f-one-share-50-1pct-ltbt-class-t-board-majority",
+      "treatment": "inbound_replied",
+      "text_chars": 157,
+      "note": "pulse_round_75. @marmot_stacks（mmstacks）Oct 27 22:47 回 Frank 的 S-1 帖，点出「招股书更狠的其实在投票权那一页」。Frank 的回应把那页读回来：Class F 只发 1 股 → 50.1% 投票权；Class T 也只发 1 股 → LTBT 选出的 Class T 董事占董事会过半数；创始人的 50.1% 选不出这批人。三个数字全部回 SEC 一手原文（anthropicpbc-sx1.htm）grep 核对，不是二手摘要。闸 0 机器闸门 exit 0（soft_score 0 / hard_hits 0）、157 字、sha256 8535c5c4628a4dac。发后 from:FrankFika 搜索首条命中 own_post。"
     }
   ]
 }

@@ -1,362 +1,134 @@
-# 短文助手 · X 内容流水线
+# 短文助手 · X + 小红书内容流水线
 
-> 📦 **换机器 / 换 AI 接手 → 先读 [`HANDOVER.md`](HANDOVER.md)**（含 cron prompt 原文、状态手术清单、验收标准）
+> 📦 **换机器 / 换 AI 接手 → 读 [`HANDOVER.md`](HANDOVER.md)**（历史决策、闸门原理、移交清单）
+> 项目真实路径 `/Users/fangchen/shortbot`；老路径 `/Users/fangchen/Documents/短文助手` 是 symlink。
 
-> Fang 的 X（Twitter）内容流水线 + **双向 engagement pulse bot**。
-> 沉淀在这里是为了**整体迁移**和**同步给团队成员 / 自己的另一台机器**。
-
----
-
-## TL;DR — 一分钟了解
-
-三件事，三条独立的 cron：
-
-| cron | 调度 | 干什么 |
-|------|------|--------|
-| **chuangzuo**（创作） | `30 3,15 * * *`（12h） | 扫 X → 选热帖 → 写文案 → browser use 真发 X |
-| **pulse**（互动） | `0 4,10,16,22 * * *`（4h） | **只 like+reply，不发新帖**。inbound（回别人的 reply）+ outbound（主动 like+reply 高优热帖） |
-| **super-bot**（汇报） | `0 9 * * *`（每日 09:00） | **只读 + 报告**，不动 X。读前两者日志 → 结构化日报 → 给 Fang |
-
-**Frank 只跟 super-bot 对话**，不直接看 worker。
-
-跑起来最低依赖：**MiniMax Code session + `mcp_browser`**。
-X 账号 `@FrankFika` 已登录在 in-app browser 里。
-
-> ⚠️ **2026-10-25 架构变更**：三个 cron 从「共用一个 session」改成**各自独立 session**（`session.mode=new`）。
-> 原因：共用 session 会让上下文无限膨胀（实测涨到 305K/512K tokens），触发 compaction 后大概率中断，
-> 且投递成功（`delivered`）≠ 轮次执行 —— 曾经出现过 **51.5 小时零落盘**。
-> **状态本来就全在 `state/` 文件里，session 不需要承载历史。**
+**这是什么**：Fang 的 X（Twitter）+ 小红书短文流水线 —— 自动选题 → 写稿 → AI 味闸门 → 真发 → 互动 → 日报。
+调度、生成、发布、验证全部在 **Codex app** 内完成（Automations + 内置浏览器 + 仓库脚本）。
 
 ---
 
-## 架构总览
+## TL;DR — 三条 Codex Automations
+
+| automation | 调度（Asia/Shanghai） | 干什么 | 权限 |
+|---|---|---|---|
+| `pipeline-12` 创作 | `30 3,15 * * *`（12h） | 扫 X + 非 X 源 → 选热帖 → 写文案 → 过闸门 → 真发 X | 可发原创帖 |
+| `x-pulse-6` 互动 | `0 4,10,16,22 * * *`（6h×4） | **只 like + reply，不发新帖**（inbound 回别人的 reply + outbound like 高优帖） | 单轮 ≤3 动作 |
+| `super-bot-09-00` 日报 | `0 9 * * *`（每日） | **只读 + 结构化日报**，轮次真空期必查 | 只读，绝不碰 X |
+
+**Fang 的日常只有一个动作：看 super-bot 日报。** 想手动操作时直接说人话（见下）。
+prompt 唯一事实源在 `docs/cron-prompts/<线>.md`；automation 每次开轮先读它，改规则改文件即生效。
+
+## Fang 怎么说，它就怎么做
+
+| 你说 | 它做 |
+|---|---|
+| 「写条 X，就说 xxx」「按这条新闻写」 | 走创作链路出稿，发前给你确认卡 |
+| 「跑一轮 pulse」 | 按 `skills/x-engagement-pulse/SKILL.md` 手动跑一轮互动 |
+| 「发小红书」「这个也发小红书」 | `publisher-xhs` 代点发布（已授权，节奏分散） |
+| 「今天 X 怎么样」「本周 summary」 | super-bot 即时只读摘要 |
+| 「以后 inbound 优先回中文 KOL」 | 先回话确认，你点头才改 state |
+
+---
+
+## 架构
 
 ```
-                      state/*.yaml + state/*.json（事实源）
-                                 │
-                ┌────────────────┼────────────────┐
-                ▼                                 ▼
-       创作 pipeline skill                  Engagement skill
-                │                                 │
-   hot-topic-tracker ─→ post-writer-x ─→        x-engagement-pulse
-   hot-topic-tracker ─→ post-writer-xhs         （inbound + outbound）
-                                 │                │
-                          publisher-x             │
-                          publisher-xhs           │
-                                 │                │
-                          outputs/<date>/         │
-                          （完成版落盘）           │
-                                                  ▼
-                                    state/inbound-replies.json
-                                    state/seen-posts.json
-                                    state/index.json（去重索引）
-                                    state/memory/*.md（轮次日志）
+        state/*.yaml + state/*.json（★ 唯一事实源）
+                    │
+   ┌────────┬───────┴────────┬──────────────┐
+   ▼        ▼                ▼              ▼
+ 创作线    小红书线        互动线          日报线
+ skills/  skills/        skills/        skills/
+ hot- →   post-writer-   x-engagement-  super-bot
+ topic →  xhs →          pulse
+ writer-x publisher-xhs
+   │        │                │              │
+ publisher-x │                │              │
+   ▼        ▼                ▼              ▼
+outputs/<档期>/    state/index.json    state/memory/*.md
+（落盘 + 真截图）  （去重索引）        （轮次日志）
+                    │
+        ┌───────────┴───────────┐
+        ▼                       ▼
+ Codex 内置浏览器           xb.py 专用 Chrome（CDP 9222）
+（cua_repl，真窗口）       （Playwright，~/.shortbot-browser-profile）
 ```
 
-**三条线共享 `state/` 下的事实源**（账号名单 / 规则 / 账号安全 / 禁忌）。
-**三条线各有独立 session，互不污染。**
+三条线共享 `state/` 事实源，各自独立 session（每轮全新上下文，不膨胀）。
+
+## 浏览器双通道（登录态互相独立！）
+
+| 通道 | 谁能用 | 登录态 | 用途 |
+|---|---|---|---|
+| **Codex 内置浏览器**（`mcp__cua_repl__js`） | Codex 对话 + 有 cua_repl 的 automation | ⚠️ 需一次性登录 X / 小红书；**且当前 Work settings 已禁用浏览器控制**（2026-10-30 实测，启用后才可用） | X 发文、小红书代点发布 |
+| **xb.py + 专用 Chrome**（端口 9222） | 任何 shell / automation | ⚠️ X 未登录（`needs_login`） | 无 cua_repl 时的备选；只读扫描可用 |
+
+> 两条通道都要 Fang **手动登录一次**（含 2FA，只有人能做）。登录后 agent 复核并更新
+> `private/account-safety.yaml`。专用 Chrome 由 launchd `com.fangchen.shortbot.browser` 保活。
 
 ---
 
-## 目录结构
+## 目录结构（2026-10-30 整理后）
 
 ```
-短文助手/
-├── README.md                  # 本文件
-├── skills/                    # 8 个 skill，每个一份 SKILL.md
-│   ├── README.md              # ★ 入口协议：整个流程怎么跑
-│   ├── browser-use-utils/     #   mcp_browser 工具封装
-│   ├── hot-topic-tracker/     #   扫 X → 出素材包
-│   ├── post-writer-x/         #   写 X 文案
-│   ├── post-writer-xhs/       #   写小红书文案
-│   ├── publisher-x/           #   真发 X
-│   ├── publisher-xhs/         #   小红书（当前停手，账号 banned）
-│   ├── super-bot/             #   ★ 首席汇报官（只读）
-│   └── x-engagement-pulse/    #   ★ 转评赞（只 like+reply）
-│
-├── state/                     # ★ 事实源
-│   ├── forbidden.yaml         #   红线（改前必读，团队不可改）
-│   ├── filter-rules.yaml      #   筛选规则
-│   ├── watchlist.yaml         #   X 账号名单
-│   ├── style-x.yaml           #   X 文风
-│   ├── style-xhs.yaml         #   小红书文风
-│   ├── schedule.yaml          #   调度参数
-│   ├── index.json             #   ★ 去重索引（每轮只读这个，别全量 seen-posts.json）
-│   ├── ai-taste-rules.json    #   ★ AI 味规则集（闸门用，Wikipedia Signs-of-AI + 中文清单）
-│   ├── gate-receipts.json     #   ★ 闸门放行记录（含最终文本 sha256）
-│   ├── seen-posts.json        #   outbound 已处理帖全量记录
-│   ├── published-posts.json   #   已发原创帖记录
-│   ├── inbound-replies.json   #   已回 inbound 记录
-│   ├── outbound-actions.json  #   outbound like/reply 全量
-│   ├── recent-picks.json      #   7 天 topic signature dedup
-│   └── memory/                #   ★ 轮次日志（主文件留末 30 段）
-│       ├── pulse.md
-│       ├── chuangzuo.md
-│       ├── super-bot.md
-│       └── archive/           #     轮转出去的历史（本地留，不进 git）
-│
-├── private/                   # 本机私有（不进 git）
-│   └── account-safety.yaml    #   登录态 + XHS ban 状态 + 限流历史
-│
-├── scripts/
-│   ├── tail-rounds.py         #   ★ 只读 memory 最后 N 段（别全量 cat）
-│   ├── prepublish.py          #   ★ 发帖前闸门（检测→自动清理→放行判定）
-│   ├── humanize.py            #   ★ AI 味检测器 + LLM 清理器
-│   ├── qa-draft.py            #   草稿自检
-│   ├── health-check.sh        #   环境体检
-│   └── publisher-xhs-dryrun.sh
-│
-├── outputs/                   # 完成版落盘（不进 git）
-│   └── <YYYY-MM-DD>-<slot>/<topic>/{material.yaml, x.txt, screenshots/}
-│
-└── logs/                      # 运行日志（不进 git）
+shortbot/
+├── README.md / HANDOVER.md    # 本文 / 历史与深度原理
+├── docs/cron-prompts/         # ★ 三条 automation 的 prompt 唯一事实源
+├── skills/                    # 8 个 skill（README.md 是入口协议）
+├── state/                     # ★ 事实源：规则 / 名单 / 去重索引 / 轮次日志 memory/
+├── scripts/                   # 闸门 / 体检 / 源抓取 / 浏览器 xb.py / QA
+├── outputs/                   # 完成版落盘（>7 天的在 outputs/archive/）
+├── private/                   # 账号安全（不进 git）
+├── logs/                      # 运行日志（不进 git）
+└── archive/                   # dsh-era 脚本、launchd plist、旧产物
 ```
 
----
+## 🛡️ 不被当成 AI（三道闸，代码级强制）
 
-## ★ 三个 cron
+背景：Frank 的老号被 @op7418 / @oran_ge 拉黑，原因是「被看出来是 AI 评价了」。所以：
 
-### 调度配置
+1. **第 0 道 · 机器闸门** `scripts/prepublish.py`（34 条结构+词+红线规则，改前必读 `state/ai-taste-rules.json`）
+   - 真发前必须 `python3 scripts/prepublish.py --text "<正文>" --no-rewrite` → **exit 1 不许发、不许绕过**
+   - 默认模式会自动改写后放行 = 绕过闸门，所以真发一律 `--no-rewrite`
+2. **第 1 道 · 身份质疑**（「你是 AI/bot 吗」）→ 默认不回，记一笔
+3. **第 2 道 · 内核撞车**（近 24h 讲过两遍的反驳）→ 不发
 
-通过 `cron_read` / `cron_update` 管理（不在文件里，配置存在 runtime）。
+小红书稿走 `python3 scripts/humanize.py scan <xhs.txt> --json`，软分必须 0。
 
-| cron | cron_id | 调度 | session |
-|------|---------|------|---------|
-| super-bot | `6560e820-db95-4b83-91ad-4a0f7d4d3fd3` | `0 9 * * *` | `mode=new`（独立） |
-| pulse | `0dbbcbb9-ac42-456a-bd35-73f9ed960a07` | `0 4,10,16,22 * * *` | `mode=new`（独立） |
-| chuangzuo | `d5c0d018-fcb4-4205-8f5e-35d41c0d1fb9` | `30 3,15 * * *` | `mode=new`（独立） |
+回归验证：`uv run --with pyyaml python3 scripts/gate-regression.py` → 12 PASS / 1 FAIL 为正常。
 
-```bash
-# 看配置和最近投递
-# → mcp_invoke tool_name=cron_read arguments={"view":"list"}
-# → mcp_invoke tool_name=cron_read arguments={"view":"runs","cron_id":"..."}
-```
+## 红线快速版（完整版 `state/forbidden.yaml`，每轮开工必读）
 
-### cron prompt 的规矩
+- ❌ pulse 模式不发新原创长帖 / Quote RT / 新 Post
+- ❌ 不出现 OpenCSG / 公司业务；❌ Chinese AI 公司名（DeepSeek / Moonshot / MiniMax…）
+- ❌ 不写 AI 托管 / 自动互动措辞；❌ AI 生成图占位；❌ 堆 hashtag（≤1）
+- ❌ XHS 固定时段连发；代点发布前必出确认卡（站点/账号/标题/正文/图/可见性）
+- ❌ 拿不到真实 URL = 没发；禁止装忙
 
-**prompt 只写「本轮硬约束 + 指向 SKILL.md」，不复制规程。**
+## 当前账号状态（2026-10-30）
 
-所有铁律（测量方法、发送路径、失败判据）都在 `skills/*/SKILL.md` 里，
-因为 `session.mode=new` 的新 session **没有任何历史上下文**，规程必须自包含。
+| 账号 | 状态 | 说明 |
+|---|---|---|
+| X `@FrankFika` | ⚠️ 两条浏览器通道都待一次性登录 | 登录前 automation 会诚实报「未登录，本轮零发送」 |
+| 小红书「弗兰克的思维导图」 | ✅ 已授权 agent 代点发布 | 登录态在内置浏览器，需在该浏览器里确认一次 |
 
-一个合格 prompt 约 12 行：模式检测 + 硬约束 + 频率上限 + 失败兜底 + 输出格式 + 指向 SKILL.md。
+## ⚠️ 轮次真空期（Codex Automations 的固有性质）
 
----
-
-## 上下文管理（省 token 的关键）
-
-**别全量 cat。** 每轮该读什么：
-
-```bash
-# 规程（读一次就够）
-skills/x-engagement-pulse/SKILL.md          # 12.8 KB
-
-# 去重 —— 只读索引，不读 147KB 的 seen-posts.json
-state/index.json                              # 47.6 KB
-
-# 规则
-state/forbidden.yaml  state/style-x.yaml  state/watchlist.yaml   # 合计 13 KB
-private/account-safety.yaml                                         # 5.7 KB
-
-# 轮次日志 —— 只读末 N 段
-python3 scripts/tail-rounds.py state/memory/pulse.md --rounds 3      # 3.9 KB
-python3 scripts/tail-rounds.py state/memory/chuangzuo.md --rounds 2  # 5.9 KB
-```
-
-**每轮上下文源合计 ≈ 89 KB**（旧方案 8 个文件全量 cat ≈ 1276 KB，**省 93%**）。
-
-写完 `state/seen-posts.json` / `inbound-replies.json` / `published-posts.json` 后，
-**必须同步 `state/index.json`**，否则下一轮去重会漏。
-
----
-
-## State 文件（关键事实源）
-
-| 文件 | 谁写 | 谁读 | 改动权限 |
-|------|------|------|----------|
-| `forbidden.yaml` | Fang | 全部 skill | **改前必读；团队不可改** |
-| `watchlist.yaml` | Fang | hot-topic-tracker, pulse | Fang 口头 |
-| `filter-rules.yaml` | Fang | hot-topic-tracker | Fang 口头 |
-| `schedule.yaml` | Fang | cron | Fang 口头 |
-| `style-x.yaml` | Fang | post-writer-x, pulse | Fang 口头 |
-| `style-xhs.yaml` | Fang | post-writer-xhs | Fang 口头 |
-| `account-safety.yaml`（private/） | Fang / agent | 全部 skill | **XHS 解封要 Fang 显式说** |
-| `index.json` | agent | pulse, hot-topic-tracker | agent 自动（**每次写 state 必须同步**） |
-| `seen-posts.json` | agent | hot-topic-tracker, pulse | agent 自动 |
-| `published-posts.json` | agent | post-writer-x, pulse | agent 自动 |
-| `inbound-replies.json` | agent | pulse | agent 自动 |
-| `outbound-actions.json` | agent | pulse, super-bot | agent 自动 |
-| `recent-picks.json` | agent | hot-topic-tracker | agent 自动 |
-
----
-
-## Outputs 落盘结构
-
-每条完成版落在 `outputs/<YYYY-MM-DD>-<slot>/<topic>/`：
-
-```
-outputs/
-└── 2026-10-25-am-c1/
-    └── anthropic-protein-wet-lab/
-        ├── material.yaml          # 源帖 ID / handle / 选题理由 / 真图路径
-        ├── x.txt                  # X 文案（已发布后附 posted_url）
-        ├── xhs.txt                # 小红书文案（等 Fang 手贴）
-        └── screenshots/
-            ├── x-source-post.png
-            ├── x-compose-empty.png
-            ├── x-before-post.png
-            ├── x-after-post.png
-            └── x-live-post.png
-```
-
-**真图强制**：`screenshots/*.png` 必须由 browser use 真抓，绝不用 AI 生成图占位。
-
----
-
-## 怎么用
-
-### 单条（最常见 —— Fang 在对话里说「按这个写」）
-1. 走 `skills/hot-topic-tracker` → 素材包 → `post-writer-x` → 文案 → `publisher-x` 真发
-2. 同选题出 `xhs.txt` 交给 Fang 手贴（账号封禁中）
-3. `python3 scripts/qa-draft.py outputs/<dir>/` 全 PASS 才算完成版
-4. `python3 scripts/prepublish.py outputs/<dir>/` exit 0 才许发（AI 味闸门）
-
-### 🛡️ AI 味闸门（2026-10-26 起，代码级强制）
-
-**背景**：Frank 2026-10-26 反馈 ——「@op7418 / @oran_ge 拉黑你，是因为被看出来是 AI 评价了」。
-之前只靠 SKILL.md 里的文字规则拦，但那条被撤掉的 reply **句式全部合规、结构一眼就是 AI**。
-规则写在文档里挡不住人，所以做成了代码。
-
-```bash
-# 原创帖
-python3 scripts/prepublish.py outputs/<YYYY-MM-DD>-<slot>/<topic>/
-# reply / 短评
-python3 scripts/prepublish.py --text "<正文>"
-```
-
-| 组件 | 作用 |
-|------|------|
-| `state/ai-taste-rules.json` | 规则集（Wikipedia「Signs of AI writing」24 类 + Frank 中文 AI 味清单） |
-| `scripts/humanize.py` | 检测器（零依赖）+ LLM 清理器（走本机 `mmx` CLI） |
-| `scripts/prepublish.py` | 发帖前统一闸门：检测 → 不过就自动清理 → 再检测 → exit 0/1 |
-| `state/gate-receipts.json` | 每次闸门结果落盘（含最终文本 sha256，事后可核对） |
-
-- 清理器**保留所有事实**（数字/链接/人名），只改结构
-- 清理后长度比越界（内容被砍/注水）直接判失败
-- 闸门 exit 1 时**不许手工绕过** —— 要么改到过，要么不发
-
-**已验证效果**（用 13 条真实发过的帖做回归）：12 条正常帖全 PASS 无误伤；
-含「闭环/护城河/所以问题来了」的那条被拦；被撤掉的 AI 味 reply 被拦；
-含 OpenCSG / DeepSeek / 4 个 hashtag 的样本全被红线拦下。
-
-### Cron 批量
-- cron 触发 → 读对应 `skills/*/SKILL.md` → 执行
-- 候选 = 0 → memory + status 老实写「未发，原因」，**不装忙**
-
-### 手动跑一轮
-> 「按 `/Users/fangchen/Documents/短文助手/skills/x-engagement-pulse/SKILL.md` 跑一轮 pulse」
-
-### Super-bot 手动查询（随时）
-> 「按 `/Users/fangchen/Documents/短文助手/skills/super-bot/SKILL.md` 帮我看下今天 X 互动」
-
-### 改规则
-任何时候 Fang 改规则 → 立刻改 `state/*.yaml` 并保留 changelog。
-
----
-
-## 状态变更 checklist（改 state 前必读）
-
-| 改什么 | 改哪份 | 谁授权 |
-|--------|--------|--------|
-| 增减 X 账号 | `watchlist.yaml` | Fang 口头 |
-| 改浏览量下限 / AI 关键词 | `filter-rules.yaml` | Fang 口头 |
-| X 文风 | `style-x.yaml` | Fang 口头 |
-| 小红书文风 | `style-xhs.yaml` | Fang 口头 |
-| X 发帖模式 | `account-safety.yaml#x.publish_mode` | Fang 口头 |
-| 小红书解封 / 改草稿权限 | `account-safety.yaml#xhs` | Fang **显式说**「可以存草稿了」 |
-| Pulse / chuangzuo 节奏配额 | cron 配置 + `skills/*/SKILL.md` | Fang 口头 |
-
----
-
-## 红线快速版（完整版见 `forbidden.yaml`）
-
-- ❌ 不发新原创长帖 / Quote RT / 新 Post（pulse 模式硬红线）
-- ❌ 不出现 OpenCSG / 公司业务
-- ❌ 不出现 Chinese AI 公司名：DeepSeek / Moonshot / MiniMax 等
-- ❌ 不写 AI 托管 / 自动互动 措辞在公开文案
-- ❌ 不写 AI 生成图 / 不堆 hashtag / 不写「配图如下 / 快去看」
-- ❌ XHS 自动发布 = 禁止（账号封禁中，只出草稿）
-
-**每轮开工前必读** `state/forbidden.yaml` 全文。
-
----
-
-## 当前账号安全状态（2026-10-25）
-
-| 账号 | 状态 | publish_mode |
-|------|------|--------------|
-| X (`@FrankFika`) | ✅ logged_in | agent（自动发） |
-| 小红书 | ⏸️ banned（AI 托管发文） | draft_only（只草稿） |
-
-任何「想改 XHS publish_mode → agent」的操作前，**必须**确认：
-1. `account-safety.yaml#xhs.ban_status.is_banned` 改为 `false`
-2. Fang **显式说**「可以存草稿了」
-3. 解封后只走 publisher-xhs 草稿模式，绝不点发布
-
----
-
-## 失败兜底原则
-
-1. **浏览器登录墙 / 验证码** → 把 URL 给 Fang，不自动过
-2. **X 限流**（"We've temporarily limited your login"）→ 立即停手，memory 写明，不装忙
-3. **2FA / 二次验证** → 立即停手，memory 写明
-4. **XHS 任何自动发布风险** → 立刻停手，关闭页面
-5. **任何「假装已发」行为** → 禁止；拿不到 URL 就是没发
-6. **mcp_browser 不可用** → 老实写「浏览器不可用，本轮零动作」
-7. **cron 投递成功 ≠ 轮次执行** → 日报必须查「轮次真空期」，见下
-
----
-
-## ⚠️ 轮次真空期（本地 cron 的固有性质）
-
-**cron 依赖 runtime 进程存活。机器一睡，触发点无人执行，且不补跑。**
-
-后果：
-- 睡眠期间进来的 inbound **完全没人接**
-- `cron_read` 看到的 `status: delivered` 只代表消息投进 session 了，**不代表那一轮跑完并落盘**
-
-判据（super-bot 日报必查）：`state/memory/*.md` 末轮时间戳 vs 现在的真实时间。
-距末轮 > 2 × 调度间隔 = 真空期，要写进日报。
-
-曾出现的实测：10-23 20:12 → 10-25 23:45，**51.5 小时零落盘，丢失 35 个排定轮次**。
-
-**这个性质本地 cron 改不掉。** 想让 Frank 睡觉时也有人接，只能把 pipeline 搬到常开机器上。
-
----
+cron 只在 **Codex app 运行且机器醒着** 时执行；睡眠/关机期间不触发、不补跑。
+super-bot 日报必查：memory 末轮时间戳 vs 真实时间，距末轮 > 2 × 调度间隔 = 真空期，写进日报。
 
 ## 日常运维
 
 ```bash
-# 体检：state 解析 + outputs 完整性
-bash scripts/health-check.sh
-
-# 单条草稿质检
-python3 scripts/qa-draft.py outputs/<date-slot>/<topic>/
-
-# 只读轮次日志末 N 段
-python3 scripts/tail-rounds.py state/memory/pulse.md --rounds 3
-
-# XHS 干跑判断（账号封禁时退出码 1）
-bash scripts/publisher-xhs-dryrun.sh
+bash scripts/health-check.sh                  # 体检：state 解析 + outputs 完整性
+python3 scripts/qa-draft.py outputs/<档期>/<topic>/   # 单条草稿质检
+python3 scripts/tail-rounds.py state/memory/pulse.md --rounds 3   # 轮次日志末 N 段
+bash scripts/publisher-xhs-dryrun.sh          # XHS 干跑判断
 ```
-
----
 
 ## 迁移说明
 
-搬到别的机器时：
-
-1. 整个文件夹直接搬（`private/` 和 `state/memory/archive/` 不进 git，需单独拷）
-2. 在目标机器上重建 3 个 cron（`cron_create`），**`session.mode` 一定要选 `new`**
-3. 浏览器工具名从 `mcp__cua_repl__js` 换成 `mcp_browser`（见 `skills/browser-use-utils/SKILL.md`）
-4. `private/account-safety.yaml` 里的登录态在目标机器上要重新确认
+1. 整个文件夹搬（`private/`、`logs/`、`state/memory/archive/` 不进 git，单独拷）
+2. Codex app 里重建 3 条 cron automations（prompt 从 `docs/cron-prompts/*.md` 第一个围栏块复制）
+3. 两条浏览器通道各自重新登录；`launchd` 只需保留 `com.fangchen.shortbot.browser` 保活专用 Chrome

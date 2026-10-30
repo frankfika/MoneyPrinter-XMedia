@@ -1,6 +1,6 @@
 {
   "created_at": "2026-10-26T10:02:22",
-  "note": "2026-10-26 闸门建成时的基线。FAIL 的样本是**已知的 AI 味样本**（含 Frank 被拉黑的真实反例）——它们必须一直 FAIL。",
+  "note": "2026-10-26 闸门建成时的基线。FAIL 的样本是**已知的 AI 味样本**（含 Frank 被拉黑的真实反例）——它们必须一直 FAIL。 新发的帖（round_89 等）在发后自动并入样本，跑出结果后回填本基线，避免每次跑都报『新增样本』偏差。",
   "samples": {
     "chuangzuo_round_72": {
       "expect": "PASS",
@@ -79,6 +79,11 @@
       "rule_ids": []
     },
     "chuangzuo_round_78": {
+      "expect": "PASS",
+      "soft": 0,
+      "rule_ids": []
+    },
+    "chuangzuo_round_89": {
       "expect": "PASS",
       "soft": 0,
       "rule_ids": []

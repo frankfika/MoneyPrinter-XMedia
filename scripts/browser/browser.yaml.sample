@@ -1,0 +1,46 @@
+# 短文助手 · 浏览器执行层配置样例
+#
+# 用法：复制成 /Users/fangchen/shortbot/private/browser.yaml（真实路径；旧 Documents/短文助手 是 symlink）
+#   cp scripts/browser/browser.yaml.sample private/browser.yaml
+# 注意 private/ 不进 git，真实配置放那里；这个文件只是样例（值都写通用默认）。
+#
+# 查找顺序：--config 参数 > 环境变量 XB_CONFIG > private/browser.yaml > scripts/browser/browser.yaml
+#
+# ⚠️ user_data_dir 绝对不要填 ~/Library/Application Support/Google/Chrome：
+#    ① macOS TCC 会让非 Chrome.app 进程读它时报 Operation not permitted
+#    ② Chrome 155 在默认 profile 上不监听 --remote-debugging-port（进程起得来、端口不开）
+
+# ─── 路径 1：CDP attach（优先；能复用登录态，不重启浏览器） ───
+# 需要 Chrome 启动时带 --remote-debugging-port=9222 --remote-allow-origins=*
+# 同 profile 已有实例在跑时，新实例的该参数会被 Chrome 忽略，所以必须让「原来那个」带参数重启。
+cdp: http://127.0.0.1:9222
+
+# ─── 路径 2：专属 persistent profile（CDP 不通时的兜底） ───
+# 登录态（cookie）存在这个目录里，跨调用/跨轮次复用。只有这个目录允许 automation 读写。
+user_data_dir: ~/.shortbot-browser-profile
+
+# 时区 / 语言（persistent context 路径生效；CDP attach 时由 Chrome 启动参数决定）
+locale: zh-CN
+timezone_id: Asia/Shanghai
+
+# ─── 超时（cron 防挂死） ───
+action_timeout_ms: 30000       # 单次调用的硬超时上限（SIGALRM，超时输出 {"code":"TIMEOUT"}）
+navigate_timeout_ms: 45000     # 单次 page.goto 的上限
+settle_ms: 800                 # navigate 后额外等多久让 SPA 渲染（X 首屏约 1s）
+
+# ─── 显示 ───
+# false = 有头（推荐：X 对无头更容易风控，且登录一次后能肉眼确认）
+# true  = 无头（cron 机器没人看时可用）
+headless: false
+viewport_width: 1366
+viewport_height: 900
+
+# ─── 代理 ───
+# auto   = 不加代理（本机实测 x.com 直连 200）
+# always = 强制走 proxy（直连不通时改这个）
+# never  = 明确不走代理
+proxy_mode: auto
+proxy: http://127.0.0.1:7897
+
+# 可选：显式指定 Chrome 可执行文件（不填则按 /Applications 和 PATH 自动找）
+chrome_path: ""

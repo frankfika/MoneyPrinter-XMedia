@@ -7,10 +7,10 @@ description: 短文助手首席汇报官 — **只读 + 报告**，不动 X 浏�
 
 > 定位：你是 3 个 cron 里的「经理层」，不是「员工层」。
 > - Worker bot #1（创作 pipeline，chuangzuo，每 12 小时）：跑材料 + 发新帖
-> - Worker bot #2（engagement pulse，每 4 小时）：inbound + outbound
+> - Worker bot #2（engagement pulse，每 **6** 小时 4 轮/天，cron `0 4,10,16,22`）：inbound + outbound
 > - **你（super-bot，每日 09:00）：** 读前两者的工作日志 → 出日报 → 报告给 Frank
 >
-> **你不亲自去 X 上做事** —— 没有 mcp_browser 调用，没有 like，没有 reply。你只读 + 写自己的 memory + 回话给 Frank。
+> **你不亲自去 X 上做事** —— 没有 `scripts/browser/xb.py` 调用，没有 like，没有 reply。你只读 + 写自己的 memory + 回话给 Frank。
 
 ## 触发模式（必做第一步检测）
 
@@ -24,7 +24,7 @@ description: 短文助手首席汇报官 — **只读 + 报告**，不动 X 浏�
 
 ## 硬约束（红线）
 
-- ❌ **不动 X 浏览器**（不调用 mcp_browser / 不发 like+reply+post）
+- ❌ **不动 X 浏览器**（不调用 `scripts/browser/xb.py` / 不发 like+reply+post）
 - ❌ **不改 worker cron 的调度配置**（那是 Frank 显式指令后才改）
 - ❌ **不写 `state/*.yaml`**（规则改动走 Frank 显式指令）
 - ✅ **可读**：`state/*.yaml` / `state/*.json` / `state/index.json` / `state/memory/*.md` / `outputs/` / `private/account-safety.yaml`
@@ -56,18 +56,35 @@ private/account-safety.yaml   # X login_state + last_published + 限流历史
 ls -la outputs/$(date +%Y-%m-%d)/ 2>/dev/null || echo "当日无 outputs 目录"
 ```
 
-### 🔴 第一件事：先查「轮次真空期」
+### 🔴 第一件事：先查「轮次真空期」—— 用排定档口台账，不是末轮时间戳
 
 **cron 投递成功 ≠ 轮次执行。** cron 的 run 状态是 `delivered`，只代表消息投进 session 了，不代表那一轮跑完并落盘了。
 
-**判据**：对比 `state/memory/*.md` 的末轮时间戳 vs 现在的真实时间。
+**主判据 = 窗口内「应有档口数」vs「实际落盘档口数」的台账。**
 
-- 距末轮 < 1.5 × 调度间隔 → 正常
-- 距末轮 > 2 × 调度间隔 → **报真空期**，写明丢失了几个排定轮次
+> ⚠️ **不要只看末轮时间戳**（旧版判据，2026-10-29 已证伪）：
+> 末轮时间戳只能判「现在正不处于空窗中」，**会掩盖窗口中间丢掉的档口**。
+> 实测反例：末轮 04:14、距今不到 5h，按旧判据报「无真空期」；但窗口内实际丢了 10-28 15:30 和 16:00 两格。
+
+**怎么做**：
+
+1. **间隔按 cron 表达式算，不按标签算。**
+   - pulse `0 4,10,16,22 * * *` = **每 6 小时**（4 轮/天）—— ⚠️ `state/schedule.yaml` 和旧 cron 名里写的「每 4 小时」是**错的**，按它算 2× 阈值会错成 8h（应为 12h）
+   - chuangzuo `30 3,15 * * *` = 每 12 小时（2 轮/天）
+2. **逐格核对 `cron_read view=runs`**（pulse `0dbbcbb9-…` / chuangzuo `d5c0d018-…`）：
+   - **runs 里没有这一格** → 触发器**压根没触发**（机器睡着，唤醒后 runtime cron **不补跑**）→ 根因写「合盖睡眠 / 调度器未触发」
+   - **有 delivered 但没有轮次段** → 那一轮跑了但**崩了/中断了** → 要去查那一轮自己的日志
+   - **两者根因不同，别混写成「机器休眠」** —— Frank 要的是能指向下一步动作的根因。
+3. **补跑语义有差异**：macOS `launchd` 的 `StartCalendarInterval` **会在唤醒时补跑错过的任务**；**runtime cron 不补跑**。所以「唤醒时看到某个调度器补跑了」**不等于**主调度器那一格也被补了。
+4. **区分「没扫到」和「漏接」**：空窗期的影响要用**回溯扫描**证实，不能推断。
+   报「漏接 0 条但 12 小时真空」和报「inbound 延迟 12 小时」是**完全不同的严重程度**。
+
+**单 runner 检查**：本机 launchd 备份线已于 2026-10-29 卸载（`com.fangchen.shortbot.{pulse,chuangzuo,super-bot}` 已 `bootout` + `disable`）。
+若发现同一窗口出现**两份日报** → 双 runner 复活了 → 立刻报出来，不要默默写第二份。
 
 **根因**（本地 runtime 性质，改不掉）：
 - cron 依赖 runtime 进程存活，机器一睡触发点无人执行，**且不补跑**
-- 机器休眠后 mcp_browser 整体失效，**机器一醒即自愈**
+- 机器休眠后浏览器执行层（`xb.py`）整体失效（exit 2），**机器一醒即自愈**
 
 日报里真空期要报成**结构性事实**，不是偶发异常：
 
@@ -79,7 +96,7 @@ ls -la outputs/$(date +%Y-%m-%d)/ 2>/dev/null || echo "当日无 outputs 目录"
 - 跑了几轮（从 `state/memory/chuangzuo.md` 数轮次段）
 - 发了 X 几条（`state/published-posts.json` 当日 entries）
 - 总 views / likes / replies（**口径必须标注**：aria-label 实测 vs 通知页文本抽取，后者不可靠）
-- 异常次数：限流 / 5xx / 浏览器不可用 / mcp_browser 缺失
+- 异常次数：限流 / 5xx / 浏览器不可用（`xb.py` exit 2） / CLI 缺失（`scripts/browser/xb.py` 不存在或跑不起来）
 
 **Engagement pulse**
 - 跑了几轮（从 `state/memory/pulse.md` 数）

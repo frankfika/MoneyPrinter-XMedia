@@ -1,8 +1,21 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-20T01:13:00+08:00",
+  "last_updated": "2026-10-29T23:57:12+08:00",
   "purpose": "近期选题记忆",
   "entries": [
+    {
+      "picked_at": "2026-10-28T03:36:00+08:00",
+      "handle": "anthropic",
+      "post_id": "url:543233bf7b25",
+      "topic_signature": "anthropic-rct-50-analysts-86-percent-follow-random-agent-lean",
+      "treatment": "first_person_original_web_source",
+      "picked_for": "chuangzuo_round_91_published",
+      "reason": "上一条原创（S-1 财报）12h 后 likes=1 → likes_signal 命中，换方向。改用 Anthropic RCT（50 名分析师跟随随机 agent 倾向 86%），与上一轮「AI 公司财报/资本层」簇完全不同。全部数字已回 anthropic.com 原文页核对，文案 500 字过 prepublish 闸门（exit 0, sha256 97e233dcc415e0e1），2 张真截图。判据 1 硬否决（距上一条原创仅 4h49m），留待 15:30 档口发布。",
+      "action_result": "published 2115273295314788676 at 2026-10-28T10:43:48+08:00",
+      "own_post_id": "2115273295314788676",
+      "own_post_url": "https://x.com/FrankFika/status/2115273295314788676",
+      "published_at": "2026-10-28T10:43:48+08:00"
+    },
     {
       "handle": "karminski3",
       "post_id": "2110849142490865909",
@@ -902,6 +915,284 @@
       "topic_signature": "karpathy-llm-capability-gap-widening-6b-people-75-percent-population-funnel-perception-frontier-education-economy",
       "reason": "6.6M views + 43K likes + 8K reposts + 2.1K replies — karpathy 近期最高优 1 帖; AI 现象观察延伸 cluster 第 7 视角",
       "action_taken": "chuangzuo_round_59 真发 verified (regular post 原创 mode)"
+    },
+    {
+      "id": "pick-116",
+      "timestamp": "2026-10-27T19:23:30+08:00",
+      "handle": "bindureddy",
+      "post_id": "2114938847704571975",
+      "url": "https://x.com/bindureddy/status/2114938847704571975",
+      "topic_signature": "smaug-humanizer-open-weights-gemma-humanize-ai-slop",
+      "reason": "1M views + 260 likes + 6h; humanizer / 去 AI 味 与 Frank 自己训的 LoRA 同赛道",
+      "action_taken": "outbound-134 like 真发 verified"
+    },
+    {
+      "id": "pick-117",
+      "timestamp": "2026-10-27T19:31:11+08:00",
+      "handle": "dotey",
+      "post_id": "2114952872458633296",
+      "url": "https://x.com/dotey/status/2114952872458633296",
+      "topic_signature": "ai-authored-paper-attribution-and-ip-ownership-in-external-disclosure",
+      "reason": "45K views + 116 likes + 5h; AI 署名论文的成果归因与专利权属，董秘 / 对外披露视角",
+      "action_taken": "outbound-135 reply 真发 verified"
+    },
+    {
+      "id": "pick-235",
+      "timestamp": "2026-10-27T22:08:44+08:00",
+      "handle": "zack6116",
+      "post_id": "2114562104401551863",
+      "url": "https://x.com/zack6116/status/2114562104401551863",
+      "topic_signature": "ruler-rule-count-outpaces-sample-count-conflict-rate-is-the-real-readout",
+      "reason": "inbound reply：尺子规则数 vs 样本数 + 打架率读数（20 views 但 thread 空角 + 对方是跟随者）",
+      "action_taken": "inbound-040 reply 真发 verified",
+      "expires_at": "2026-11-03T22:08:44+08:00"
+    },
+    {
+      "id": "pick-236",
+      "timestamp": "2026-10-27T22:13:00+08:00",
+      "handle": "FinanceYF5",
+      "post_id": "2114990774349963650",
+      "url": "https://x.com/FinanceYF5/status/2114990774349963650",
+      "topic_signature": "kling4-consistent-reference-image-video-workflow-script-first",
+      "reason": "Kling 4 多参考图一致性视频工作流（2.9K views / 9 likes / 6h，AI 关键词命中）",
+      "action_taken": "outbound-136 like 真发 verified",
+      "expires_at": "2026-11-03T22:13:00+08:00"
+    },
+    {
+      "id": "pick-237",
+      "timestamp": "2026-10-27T22:17:10+08:00",
+      "handle": "vista8",
+      "post_id": "2115067784912863460",
+      "url": "https://x.com/vista8/status/2115067784912863460",
+      "topic_signature": "frontend-skill-hallmark-ugly-but-no-ai-slop-codex-feel",
+      "reason": "去前端 AI 味的 Hallmark skill，跟 Frank 自己的去 AI 味 LoRA 同赛道（3.3K views / 23 likes / 1h）",
+      "action_taken": "outbound-137 like 真发 verified",
+      "expires_at": "2026-11-03T22:17:10+08:00"
+    },
+    {
+      "id": "pick-238",
+      "timestamp": "2026-10-28T04:10:40+08:00",
+      "handle": "marmot_stacks",
+      "post_id": "2115093027668771238",
+      "url": "https://x.com/marmot_stacks/status/2115093027668771238",
+      "topic_signature": "s1-voting-rights-class-f-one-share-50-1pct-ltbt-class-t-board-majority",
+      "reason": "他点出「招股书更狠的在投票权那一页」，Frank 回一手原文核实后的投票权结构（Class F 1 股 50.1% / Class T 1 股选董事会过半数）",
+      "action_taken": "pulse_round_75 inbound-041 reply 真发 verified",
+      "expires_at": "2026-11-04T04:10:40+08:00"
+    },
+    {
+      "id": "pick-239",
+      "timestamp": "2026-10-28T04:10:40+08:00",
+      "handle": "GoogleDeepMind",
+      "post_id": "2115114028338962672",
+      "url": "https://x.com/GoogleDeepMind/status/2115114028338962672",
+      "topic_signature": "genie4-world-model-realtime-photorealism-physics",
+      "reason": "Genie 4 世界模型发布（903.4K views / 10K likes / 3h56m），本轮流量最高",
+      "action_taken": "pulse_round_75 outbound-138 like 真发 verified",
+      "expires_at": "2026-11-04T04:10:40+08:00"
+    },
+    {
+      "id": "pick-240",
+      "timestamp": "2026-10-28T04:10:40+08:00",
+      "handle": "_akhaliq",
+      "post_id": "2115095386792616279",
+      "url": "https://x.com/_akhaliq/status/2115095386792616279",
+      "topic_signature": "streamvibe-proactive-video-agents-evolving-user-intent",
+      "reason": "StreamVibe proactive video agents 论文（6.5K views / 26 likes / 5h09m）",
+      "action_taken": "pulse_round_75 outbound-139 like 真发 verified",
+      "expires_at": "2026-11-04T04:10:40+08:00"
+    },
+    {
+      "id": "pick-242",
+      "timestamp": "2026-10-28T04:10:40+08:00",
+      "handle": "KakaluoteW45042",
+      "post_id": "2115084100054942112",
+      "url": "https://x.com/KakaluoteW45042/status/2115084100054942112",
+      "topic_signature": "reader-questions-as-free-oracle-downstream-gap-list",
+      "reason": "同帖另一条回复（读者的问题当免费 oracle / 下游缺口清单）—— 内核与 Frank 10-21 两条重叠，跳过",
+      "action_taken": "pulse_round_75 SKIPPED_NO_REPLY",
+      "expires_at": "2026-11-04T04:10:40+08:00"
+    },
+    {
+      "id": "pick-243",
+      "timestamp": "2026-10-28T08:42:30+08:00",
+      "handle": "dotey",
+      "post_id": "2115218749888634988",
+      "url": "https://x.com/dotey/status/2115218749888634988",
+      "topic_signature": "anthropic-coding-interview-removed-junior-engineer-momentum",
+      "reason": "Anthropic 工程经理取消编程题面试，16K views / 145 likes，中文 KOL 转的 practitioner 源",
+      "action_taken": "pulse_round_76 like_only",
+      "expires_at": "2026-11-04T08:42:30+08:00"
+    },
+    {
+      "id": "pick-244",
+      "timestamp": "2026-10-28T08:45:00+08:00",
+      "handle": "AI_Jasonyu",
+      "post_id": "2115104582061990390",
+      "url": "https://x.com/AI_Jasonyu/status/2115104582061990390",
+      "topic_signature": "ai-ppt-side-hustle-college-student-ordinary-people-business",
+      "reason": "AI 做 PPT 变现，10K views / 55 likes，≥5K views 且 ≥50 likes 双线过",
+      "action_taken": "pulse_round_76 like_only",
+      "expires_at": "2026-11-04T08:45:00+08:00"
+    },
+    {
+      "id": "pick-245",
+      "timestamp": "2026-10-28T10:06:15+08:00",
+      "handle": "bindureddy",
+      "post_id": "2115173217929449556",
+      "url": "https://x.com/bindureddy/status/2115173217929449556",
+      "topic_signature": "astra-6-1-release-30-per-1m-output-tokens-beat-opus-5-5",
+      "reason": "Astra 6.1 下周上线 / $30 per 1M output tokens，28K views / 310 likes，practitioner 源",
+      "action_taken": "pulse_round_77 like_only",
+      "expires_at": "2026-11-04T10:06:15+08:00"
+    },
+    {
+      "id": "pick-246",
+      "timestamp": "2026-10-28T10:07:56+08:00",
+      "handle": "bindureddy",
+      "post_id": "2115210249405948173",
+      "url": "https://x.com/bindureddy/status/2115210249405948173",
+      "topic_signature": "argon-bad-for-coding-not-steerable-instruction-following-hallucination",
+      "reason": "Argon 编程能力评述（不可引导 / 指令遵循差 / 幻觉），7,957 views / 97 likes，practitioner 源",
+      "action_taken": "pulse_round_77 like_only",
+      "expires_at": "2026-11-04T10:07:56+08:00"
+    },
+    {
+      "id": "pick-247",
+      "timestamp": "2026-10-28T10:49:37+08:00",
+      "handle": "emollick",
+      "post_id": "2115273222061015169",
+      "url": "https://x.com/emollick/status/2115273222061015169",
+      "topic_signature": "genie4-realtime-world-model-mouse-scene-interactive-demo",
+      "reason": "Genie 4 实时世界模型实机演示，@emollick（Wharton，AI 教育圈最大个人号之一）；原帖发布后 5 分钟赞 → 赞列表还很小，曝光效率最高",
+      "action_taken": "pulse_round_78 like_only",
+      "expires_at": "2026-11-04T10:49:37+08:00"
+    },
+    {
+      "id": "pick-248",
+      "timestamp": "2026-10-28T22:16:52+08:00",
+      "handle": "emollick",
+      "post_id": "2115419671877062710",
+      "url": "https://x.com/emollick/status/2115419671877062710",
+      "topic_signature": "talkie-1930-neuron-persona-locking-open-model-mechanistic-interpretability",
+      "reason": "Talkie-1930 神经元图谱 + 开源模型里按神经元激活锁定人格；@emollick（Wharton）是 AI 商业/教育圈最大个人号之一，10K views / 122 likes 早期赞列表小",
+      "action_taken": "pulse_round_79 like_only",
+      "expires_at": "2026-11-04T22:16:52+08:00"
+    },
+    {
+      "id": "pick-249",
+      "timestamp": "2026-10-28T22:24:19+08:00",
+      "handle": "simonw",
+      "post_id": "2115444742595260551",
+      "url": "https://x.com/simonw/status/2115444742595260551",
+      "topic_signature": "october-inflection-point-coding-agents-opus-5-5-vibe-game-dev",
+      "reason": "coding agent 能力拐点 + Opus 5.5 做游戏；发布后 18 分钟赞，赞列表只有 50 人左右，是本轮曝光效率最高的一条",
+      "action_taken": "pulse_round_79 like_only",
+      "expires_at": "2026-11-04T22:24:19+08:00"
+    },
+    {
+      "picked_at": "2026-10-29T04:06:00+08:00",
+      "handle": "anthropic",
+      "post_id": "url:16faca12f964",
+      "topic_signature": "anthropic-gsa-onegov-40pct-discount-no-minimum-commitment-government-procurement",
+      "treatment": "first_person_original_web_source",
+      "picked_for": "chuangzuo_round_92_draft_ready_not_published",
+      "reason": "判据③ likes_signal 命中（上一条原创 round_91 12h 后 likes=0）→ 换方向，本条走「AI × 政府采购 / 采购经济学」簇，与近 7 天各簇都不同。角度切在「不绑最低消费承诺 + 按实际用量付费」这句（IR 原生视角：采购方承诺被取消，供应商收入确定性与买方预算风险换位）。一手原文 anthropic.com/news/expanding-partnership-gsa 逐句核对 13/13 命中（40% 折扣覆盖 Enterprise/Government/API 三产品面且首次全线、州和地方部落属地也算、省 10 亿美元(estimated)、不绑最低消费承诺、约 500 家联邦州地方机构、Claude for Government 周活自 2 月约 8 倍、联邦文职机构一年约 20 倍、Utah 34 developers 跨 10 个州机构 80% 30 分钟 71% 省 20+ 小时）；X 侧 @bcherny 2115491259381072269 转发 Utah 数字与官网逐字一致，@AnthropicAI 官方帖确认协议名 OneGov。文案 458 字过 prepublish 闸门（exit 0, soft 0 / hard 0, sha256 87500b84480c8f2b），2 张真截图。判据①硬否决（距上一条原创 19:49:39 仅 8h16m < 12h），留待 15:30 档口发布。",
+      "action_result": "draft_ready_not_published",
+      "gate_sha256": "87500b84480c8f2b",
+      "material_dir": "outputs/1029-pm-gsa-procurement",
+      "published_at": null
+    },
+    {
+      "id": "pick-070883",
+      "timestamp": "2026-10-29T04:06:16+08:00",
+      "handle": "bindureddy",
+      "post_id": "2115509412400070883",
+      "url": "https://x.com/bindureddy/status/2115509412400070883",
+      "topic_signature": "gemini-carbon-livebench-benchmark-launch-expectation",
+      "reason": "Gemini Carbon 当天上 LiveBench，作者明确说「不认为是 #1，但会是有竞争力的」—— 评测视角的谨慎预期，正好是 Frank「评测出身」人设对得上的位置；发布后约 1h44m 赞，135 赞的列表仍是中小盘，Frank 的 handle 能被看到",
+      "action_taken": "pulse_round_80 like_only",
+      "expires_at": "2026-11-05T04:06:16+08:00"
+    },
+    {
+      "id": "pick-275550",
+      "timestamp": "2026-10-29T04:09:16+08:00",
+      "handle": "dotey",
+      "post_id": "2115512767394275550",
+      "url": "https://x.com/dotey/status/2115512767394275550",
+      "topic_signature": "copilot-obsolete-concept-ai-not-copilot-autopilot-era",
+      "reason": "「Copilot 已经是个过时的概念，AI 不再是副驾驶，我们希望 AI 去自动驾驶」—— 中文 AI 圈少见的产品观判断，和 Frank 讲的 agent 自主性内核相邻但不重复；发布后约 1h34m、只有 5 个赞，正是 round_78 总结的「早赞曝光效率最高」窗口",
+      "action_taken": "pulse_round_80 like_only",
+      "expires_at": "2026-11-05T04:09:16+08:00"
+    },
+    {
+      "id": "pick-349828",
+      "timestamp": "2026-10-29T10:14:14+08:00",
+      "handle": "dotey",
+      "post_id": "2115618084044349828",
+      "url": "https://x.com/dotey/status/2115618084044349828",
+      "topic_signature": "worktree-parallel-agent-tasks-local-vs-cloud-verification-cost",
+      "reason": "「能不用 Worktree 就不用，但并行任务一多、想不相互干扰，还是绕不开 worktree」—— 中文 KOL 里少见的多 agent 并行工程实践判断（云端并行 vs 本机验证 vs 云端成本），正好落在 Frank「前工程师 / 一手实践」人设上；发布 40 分钟就赞，赞列表才 19 人 → Frank 的 handle 出现在最前段（早赞曝光窗口）",
+      "action_taken": "pulse_round_81 like_only",
+      "expires_at": "2026-11-05T10:14:14+08:00"
+    },
+    {
+      "id": "pick-613515",
+      "timestamp": "2026-10-29T10:18:10+08:00",
+      "handle": "jiqizhixin",
+      "post_id": "2115494806004613515",
+      "url": "https://x.com/jiqizhixin/status/2115494806004613515",
+      "topic_signature": "embodied-benchmark-simulation-vs-real-robot-gap-zero-plug-insertions",
+      "reason": "「模拟 benchmark 100% 分，真机 11 次插拔 0 次成功 —— 具身分数取决于测试允许什么」—— benchmark 分数与真实部署之间的落差，正是 Frank「评测出身」的核心命题（呼应他 10-26 的「自训模型要自己的验收尺子」）；赞列表仅 11 人，早赞窗口内 Frank handle 靠前",
+      "action_taken": "pulse_round_81 like_only",
+      "expires_at": "2026-11-05T10:18:10+08:00"
+    },
+    {
+      "picked_at": "2026-10-29T14:51:00+08:00",
+      "handle": "anthropic",
+      "post_id": "url:16faca12f964",
+      "topic_signature": "anthropic-gsa-onegov-40pct-discount-no-minimum-commitment",
+      "treatment": "xhs_image_text_note_agent_published",
+      "picked_for": "xhs_round_1_published",
+      "reason": "复用 X 线已核事实的素材（13/13 一手核对 + @bcherny 交叉验证），不新开选题降低事实风险；XHS 版 762 字 / 7 标签 / 2 张 Anthropic 官网真截图；humanize soft_score 0 + prepublish passed",
+      "action_result": "published 6ae30e1b0000000033012638 at 2026-10-29T17:12:00+08:00",
+      "own_post_id": "6ae30e1b0000000033012638",
+      "own_post_url": "https://www.xiaohongshu.com/explore/6ae30e1b0000000033012638",
+      "published_at": "2026-10-29T17:12:00+08:00",
+      "platform": "xiaohongshu"
+    },
+    {
+      "id": "pick-508545",
+      "timestamp": "2026-10-29T23:54:15+08:00",
+      "handle": "vista8",
+      "post_id": "2115818384881508545",
+      "url": "https://x.com/vista8/status/2115818384881508545",
+      "topic_signature": "personal-site-ai-posting-feature-one-prompt-vibe-programming-x-xhs-sync",
+      "reason": "「给个人网站加了一个『随想』栏目…提示词就一句话…简单调试优化几轮就行了，AI 变强后，真的是『许愿式编程』」—— 一手 builder 实践 + 自己动手发 X/小红书，与 Frank「前工程师 + 自建发布流水线」几乎同一条线；发布 64 分钟、赞列表仅 11 人 → 早赞窗口内 Frank handle 靠前",
+      "action_taken": "pulse_round_82 like_only",
+      "expires_at": "2026-11-05T23:54:15+08:00"
+    },
+    {
+      "id": "pick-248275",
+      "timestamp": "2026-10-29T23:57:12+08:00",
+      "handle": "_akhaliq",
+      "post_id": "2115826286652248275",
+      "url": "https://x.com/_akhaliq/status/2115826286652248275",
+      "topic_signature": "omnidirectional-subject-consistent-video-generation-multi-view-images-paper",
+      "reason": "「OmniShowcase：多视角图像 → 主体一致的全向视频生成」—— 主体一致性跨视角是典型的质量评测维度，与 Frank「评测出身」合得来；发布 36 分钟、赞列表仅 9 人 → 曝光效率最高的一条",
+      "action_taken": "pulse_round_82 like_only",
+      "expires_at": "2026-11-05T23:57:12+08:00"
+    },
+    {
+      "id": "pick-601207",
+      "timestamp": "2026-10-29T21:01:56+08:00",
+      "handle": "IncomprisSage",
+      "post_id": "2115385755266601207",
+      "url": "https://x.com/IncomprisSage/status/2115385755266601207",
+      "topic_signature": "france-indigenous-population-race-remark-reply-incompris-sage",
+      "reason": "Frank 本人手动回过这条（France 原住民 / 种族话题）—— 非 agent 产出。记进 dedup 是为了不让后续轮次把这个话题再当成候选（该话题对外争议大，Frank 既然已经自己表过态，agent 不必再碰）",
+      "action_taken": "frank_manual_reply (非 pulse_round_82 动作)",
+      "expires_at": "2026-11-05T21:01:56+08:00"
     }
   ]
 }

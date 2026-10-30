@@ -12,8 +12,14 @@ description: X 文案 — 接 hot-topic-tracker 出的素材包，按 `state/sty
 
 ## 工作流
 1. 读素材包 + 规则
-2. 用 `mcp_browser` 打开 `material.yaml#original.url`，截原帖正文+配图区 → `screenshots/x-1.png`
+2. 打开 `material.yaml#original.url`，截原帖正文+配图区 → `screenshots/x-1.png`
+   （X 源走 `scripts/browser/xb.py`；web 源走**内置浏览器**（见 publisher-x 的「浏览器通道」）。
+   截图路径相对仓库根）
 3. 打开 `evidence_links[*].url`，截标题+关键段或关键图 → `screenshots/x-2.png`（可多张）
+   - **web 源**：`evidence_links[0].url` = 第三方原文 → 截它的标题 + 关键段落/关键数字
+   - **事实核对（web 源必做）**：正文里要用的每个数字 / 原话，回 `original.url` 核对。
+     aihot 的摘要**只是线索**，不许直接抄 —— 抄错了就是发出去的事实错误。
+     截不到原文（要登录 / 404）→ 换选题，别靠摘要硬写。
 4. 决定 `treatment_hint`：
    - `first_person_original`：用 Frank 自己的口吻自撰
    - `quote_retweet`：X 应用「引用转发 + 你的短评」
@@ -38,6 +44,14 @@ description: X 文案 — 接 hot-topic-tracker 出的素材包，按 `state/sty
 ## 输出
 - `outputs/<YYYY-MM-DD>-<slot>/<topic>/x.txt`
 - `outputs/<YYYY-MM-DD>-<slot>/<topic>/screenshots/*.png`
+
+## 引用规则（web 源）
+
+- 正文末尾贴 **`evidence_links[0].url`（第三方原文）**，不要贴站内阅读页（aihot 站内页等）。
+  X 会自动把文末链接渲染成引用卡片 —— 正好当出处，不用手动点 Quote RT。
+- 贴链接会触发 X 的 auto_quote_embed（见 `state/style-x.yaml#x_auto_behavior`），
+  所以**这类帖天然是「引用 + 短评」形态**，正文别写成自说自话的长论证。
+- 原文是英文/机器翻译站（aihot 收录的多是英文信源）→ 数字与专有名词照抄原文，不要自己翻译转述。
 
 ## 不做
 - 不发 X（交给 publisher-x）

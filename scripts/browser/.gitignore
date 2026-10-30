@@ -1,0 +1,5 @@
+# 这些是运行时产物，不进 git
+.state/
+.venv/
+*.png
+__pycache__/

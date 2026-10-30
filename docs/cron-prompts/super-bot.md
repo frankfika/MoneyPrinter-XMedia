@@ -1,19 +1,18 @@
-# cron · super-bot（每日 09:00）
+# automation · super-bot（Codex cron · 每日 09:00）
 
-- cronId（老机器）: `6560e820-db95-4b83-91ad-4a0f7d4d3fd3`
-- cron_name: `短文助手 · super-bot 日报 · 每日 09:00`
-- schedule: `0 9 * * *`
-- timezone: `Asia/Shanghai`
-- session: `{ "mode": "new" }`
-- model: `minimax/MiniMax-M3`
-- project: `/Users/fangchen/Documents/短文助手` ← **改成新机器路径**
+- automation_id: `super-bot-09-00`（Codex app → Automations · cron 类型）
+- schedule: `0 9 * * *`（Asia/Shanghai）= RRULE `RRULE:FREQ=DAILY;BYHOUR=1;BYMINUTE=0`（UTC）
+- target: Codex 项目「短文助手」(`71faead3-cd8e-49ec-be13-c9747d4927ac`) · local
+- session: 每轮独立进程 = 全新上下文
+- prompt 唯一事实源 = 本文件第一个 ``` 围栏块
+- 历史: 2026-10-30 起从 launchd+DSH 迁回 Codex Automations（旧 cron_id `6560e820` 已作废）
 
 ## prompt 原文（逐字复制）
 
 ```
 按 `/Users/fangchen/Documents/短文助手/skills/super-bot/SKILL.md` 跑日报（每日 09:00 +08:00 自动模式）。
 
-【硬约束】不动 X 浏览器（不调 mcp_browser，不发 like / reply / post）；不改 state/*.yaml；不改 worker cron 配置。只读 + 写自己的 state/memory/super-bot.md。
+【硬约束】不动 X 浏览器（不调 python3 scripts/browser/xb.py，不发 like / reply / post）；不改 state/*.yaml；不改 worker automation 配置。只读 + 写自己的 state/memory/super-bot.md。
 
 【必读源】state/memory/chuangzuo.md（末 2 段）、state/memory/pulse.md（末 3 段，用 scripts/tail-rounds.py 读，不要全量 cat）、state/index.json、state/published-posts.json、state/inbound-replies.json、private/account-safety.yaml、outputs/ 当日目录。
 

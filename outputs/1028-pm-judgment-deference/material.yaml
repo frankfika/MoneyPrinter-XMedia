@@ -1,0 +1,67 @@
+material_id: "1028-pm-judgment-deference"
+slot: pm
+scanned_at: "2026-10-28T03:35:00+08:00"
+source_kind: web
+source_name: aihot
+
+author:
+  name: "Anthropic"
+  handle: "anthropic"
+  lang: en
+
+original:
+  url: "https://www.anthropic.com/research/agents-judgment-calls"
+  post_id: "url:543233bf7b25"
+  posted_at: "2026-10-27T00:00:00+08:00"
+
+signal: "论文 / 研究发布"
+metrics: null
+ai_match: true
+
+summary: >-
+  Anthropic 2026-10-27 发布随机对照试验：50 名专业分析师用 Claude Code 做因果推断分析，
+  每个决策点的 agent「倾向」由抛硬币随机决定，分析师不知情。结果 86% 的选择跟随 agent 倾向
+  （无影响时应为 50%）；52% 的分析师事后仍称结论是「自己的判断」。
+
+evidence_links:
+  - label: "原文 · Anthropic Research"
+    url: "https://www.anthropic.com/research/agents-judgment-calls"
+  - label: "论文 PDF"
+    url: "https://www-cdn.anthropic.com/519c17a5d23a794e8b6d50a854048d0b61e0d73a.pdf"
+
+screenshots_needed:
+  - "原文页标题 + 摘要（含 86% / 52%）"
+  - "Results 段关键数字（86% / 54% vs 36% / 82% vs 61%）"
+
+treatment_hint: first_person_original
+
+dedup_hits: []
+
+# ── 一手原文核对（2026-10-28 03:33 内置浏览器实读 anthropic.com 原文页）──
+# aihot 摘要只说「50 名分析师 + agent 隐性倾向」，下面每个数字都回原文核过。
+verified_facts:
+  - "50 名专业分析师（61 人招募，11 人选择不用 agent 被排除）"
+  - "四个分析性决策 + 一个最终建议；agent 倾向由抛硬币随机指定，藏进 system prompt"
+  - "四个决策合计跟随 agent 倾向 86%（无影响时期望约 50%）"
+  - "分项：结果度量 92% / 比较方法 82% / 覆盖范围 81% / 加权方式 90%"
+  - "最终建议：agent 倾向推广时 54% 建议推广，反向时 36%（差 17 个百分点）"
+  - "仅用四次抛硬币结果，统计模型能预测 82% 的分析师建议；一直猜最常见建议是 61%"
+  - "已先表达自己偏好后，agent 反对时 60% 改主意，agent 同意时 6%（38 例，CI 24-82，样本小）"
+  - "52% 分析师称最终建议更像自己的判断，35% 说「基本或完全是自己」（n=48）"
+  - "77% 在解释理由时复述了 agent 的论证（有时逐字），仅 15% 归功于 agent"
+  - "48 人中只有 6 人猜到研究在测 AI 对其选择的影响，无人猜到倾向被随机指定"
+  - "不用 agent 的 11 人里 6 人（55%）犯严重方法学错误，用 agent 的 50 人里 3 人（6%）"
+  - "任务中位时长：用 agent 65 分钟，不用 90 分钟"
+  - "对照组模型为 Claude Opus 4.8（High effort）"
+  - "研究为公开论文：https://www-cdn.anthropic.com/519c17a5d23a794e8b6d50a854048d0b61e0d73a.pdf"
+
+# ── 查无实据 / 不可引用（回原文核对后剔除）──
+# - 「专家被 AI 完全取代」：原文结论相反 —— 用 agent 的组错误更少、速度更快（65 vs 90 分钟）
+# - 「模型越自信越有影响」：原文只列为 future work，未做实验
+# - 原文明确限制：单一任务、单一领域、单一模型，且 agent 倾向是被刻意加强的
+# - 11 人不用 agent 组更年轻/经验更少，两组不可直接比较
+
+# ── 选题簇（避开上一轮 S-1 财报簇；上一条 likes=1，需换方向）──
+topic_cluster: "AI 影响人类专业判断 / 随机对照实验"
+prev_cluster: "AI 公司财报与资本结构（S-1，round_89）"
+topic_signature: "anthropic-rct-50-analysts-86-percent-follow-random-agent-lean"

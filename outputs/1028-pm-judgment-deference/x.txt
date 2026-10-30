@@ -1,0 +1,24 @@
+Anthropic 昨天发了个研究，50 个专业分析师用 Claude Code 做因果推断分析。
+
+他们不知道的是，每个决策点上 agent 的"倾向"是抛硬币决定的。
+
+四个分析决策，分析师跟着 agent 倾向走的比例是 86%。没有影响的话应该是 50%。
+
+更要命的是事后问他们"这结论谁的意见"，52% 的人说是自己的判断，35% 说基本或完全是自己。77% 的人复述了 agent 的论证，只有 15% 归功于 agent。
+
+48 个人里只有 6 个猜到这研究在测 AI 对他们选择的影响，没人猜到倾向是随机给的。
+
+用 agent 的那批错误更少：不用 agent 的 11 人里 6 个犯了严重方法学错误，用的只有 3 个。
+
+这研究不等于"AI 取代专家"。它测的是当模型有明确倾向时，人会接住它，并且不觉得自己在接。
+
+它的限制也得看：单一任务、单一领域、单一模型，倾向还被刻意加强过。
+
+但"多个团队用同样模型得出同样结论，看起来像互相独立验证"，值得警惕。
+
+https://www.anthropic.com/research/agents-judgment-calls
+
+# material_id: 1028-pm-judgment-deference
+# source: https://www.anthropic.com/research/agents-judgment-calls
+# treatment_hint: first_person_original
+# verified_facts: 86% 跟随 agent 倾向（无影响应 50%）/ 52% 称是自己的判断 + 35% 基本或完全是 / 77% 复述 agent 论证 + 仅 15% 归功 agent / 48 人中 6 人猜到研究意图 / 不用 agent 组 55% 严重错误 vs 用组 6% / 单一任务单一领域单一模型且倾向被刻意加强

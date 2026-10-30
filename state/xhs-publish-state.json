@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "purpose": "小红书发布线状态 —— 门控判据的持久化台账。每次发布轮次先读这里，再读 private/account-safety.yaml#xhs。",
+  "last_updated": "2026-10-29T17:12:00+08:00",
+  "account": "弗兰克的思维导图",
+  "last_published_at": "2026-10-29T17:12:00+08:00",
+  "last_published_note_id": "6ae30e1b0000000033012638",
+  "last_published_title": "美国政府买Claude打4折，不用先交钱",
+  "last_published_status": "审核中",
+  "published_today_count": 1,
+  "published_dates": [
+    "2026-10-29"
+  ],
+  "published_note_ids": [
+    "6ae30e1b0000000033012638"
+  ],
+  "automation_enabled": false,
+  "automation_disabled_reason": "待探测验证：cron session 里内置浏览器的小红书登录态是否保持（探测结果见 state/memory/xhs-probe.md）。验证通过后才允许 cron 自动发。",
+  "pending_drafts": [],
+  "notes": [
+    "2026-10-29 17:12 首篇发布（人工触发，Frank 17:11 授权）。素材 1029-pm-gsa-procurement，2 张 Anthropic 官网真截图，762 字 / 7 标签，humanize soft_score 0。",
+    "2026-10-29 14:44 有一条来源不明的笔记（note_id 6ae2eb5b0000000036019fa9，无标题 / 2 图 / 已通过 / 曝光 2）—— 本机全部自动化链路已排除，非本仓库产出，待 Frank 确认来源。"
+  ]
+}

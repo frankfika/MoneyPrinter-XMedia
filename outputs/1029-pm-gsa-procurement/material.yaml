@@ -1,0 +1,104 @@
+material_id: "1029-pm-gsa-procurement"
+slot: pm
+scanned_at: "2026-10-29T03:56:00+08:00"
+source_kind: web
+source_name: anthropic-news + x-practitioner
+
+author:
+  name: "Anthropic"
+  handle: "anthropic"
+  lang: en
+
+original:
+  url: "https://www.anthropic.com/news/expanding-partnership-gsa"
+  post_id: "url:16faca12f964"
+  posted_at: "2026-10-27T00:00:00+08:00"
+
+signal: "官方公告 + 开发者侧佐证（@bcherny 转帖 1.2K likes / 69K views）"
+metrics: null
+ai_match: true
+
+summary: >-
+  Anthropic 与 GSA 签 OneGov 协议：Claude 全线产品给政府 40% 折扣（Claude Enterprise /
+  Claude for Government / Claude API），首次覆盖所有产品面，并延伸到州、地方、部落与属地政府。
+  折扣预计为政府省 10 亿美元，且机构不绑定最低消费承诺、按实际用量付费。
+  约 500 家联邦/州/地方政府机构已在用 Claude，Claude for Government 周活自 2 月涨约 8 倍，
+  联邦文职机构用量一年涨约 20 倍。
+
+evidence_links:
+  - label: "原文 · Anthropic News"
+    url: "https://www.anthropic.com/news/expanding-partnership-gsa"
+  - label: "官方 X 帖 · @AnthropicAI"
+    url: "https://x.com/AnthropicAI/status/2115446568952881666"
+  - label: "开发者侧 · @bcherny（Utah 试点数字）"
+    url: "https://x.com/bcherny/status/2115491259381072269"
+
+screenshots_needed:
+  - "原文页标题 + 40% 折扣 / OneGov 段"
+  - "关键段落（$1 billion / 无最低消费承诺 / 500 家机构 / Utah 试点）"
+
+treatment_hint: first_person_original
+
+dedup_hits: []
+
+# ── 一手原文核对（2026-10-29 03:31–03:56，curl 官方页 + meta + 逐句 grep，13/13 命中）──
+# canonical = https://www.anthropic.com/news/expanding-partnership-gsa
+# article:published_time = 2026-10-27T00:00:00.000Z · 页面 "Published Oct 27, 2026"
+verified_facts:
+  - "40% 折扣覆盖 Claude Enterprise、Claude for Government、Claude API 三个产品面"
+  - "原文：For the first time, the discount applies across every product surface"
+  - "折扣延伸到 state, local, tribal and territorial governments（州/地方/部落/属地）"
+  - "协议名 OneGov，原文：Government agencies can buy Claude at the OneGov discount through GSA's Multiple Award Schedule today"
+  - "折扣预计为政府省 $1 billion（estimated to save the government $1 billion）"
+  - "Agencies are not bound by a minimum spend commitment and will be able to pay for the usage they consume"
+  - "约 500 家美国联邦、州、地方机构已在用 Claude（Approximately 500 US federal, state, and local government organizations）"
+  - "Claude for Government 周活用户自 2 月涨约 8 倍（up about eightfold since February）"
+  - "联邦文职机构用量一年涨约 20 倍（usage across federal civilian agencies has grown about 20-fold in a year）"
+  - "Utah：Claude Code 给到 34 个开发者、跨 10 个州机构"
+  - "Utah：80% 在 30 分钟内拿到可用环境；71% 在四周试点结束时省下 20+ 小时"
+  - "某州 CIO：勒索软件响应 8 分钟 vs 常规 2-3 天"
+  - "某州 IT 开发：两天迁移近 900 个 API 方法，原定一个月工期"
+  - "某州 IT 主管：用 Claude Code 记录 12 个遗留代码库、映射 467 张数据库表、标出 27 项风险"
+  - "Claude for Government 近全功能对齐，FedRAMP High 授权级，2026 年 9 月 30 日正式 GA"
+  - "超过一半的州、最大的若干地方城市、最大的一些关键基础设施运营商参与了 SLTT 网络防御项目"
+
+# ── 交叉验证：@bcherny 转帖（内置浏览器实读，2026-10-29 03:58）──
+# @bcherny 原帖：Utah gave Claude Code to 34 developers across 10 state agencies.
+#   80% had a working environment within 30 minutes, 71% reported saving 20+ hours
+#   by the end of the four-week pilot.  → 与官方原文 Utah 段逐字一致
+# @bcherny 引用的 @AnthropicAI 官方帖：Under a new OneGov agreement, we are bringing Claude
+#   to federal, state, local, tribal, and territorial governments at 40% off.
+#   → OneGov 这个协议名出自官方 X 帖，官网原文只写 "the OneGov discount" 一处（ GSA MAS 渠道）
+#   → 官方帖 21h 前发，69K views / 1.2K likes（bcherny 转帖）
+verified_x_side:
+  - handle: "bcherny"
+    post_id: "2115491259381072269"
+    url: "https://x.com/bcherny/status/2115491259381072269"
+    published_at: "2026-10-29T01:09:00+08:00"
+    content: "Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a working environment within 30 minutes, 71% reported saving 20+ hours by the end of the four-week pilot."
+    cross_check: "与官网 Utah 段逐字一致（34 developers / 10 state agencies / 80% / 30 minutes / 71% / 20+ hours）"
+  - handle: "AnthropicAI"
+    url: "https://x.com/AnthropicAI"
+    content: "Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off."
+    note: "官方帖确认协议名 OneGov；发布时间 21h 前（相对 2026-10-29 03:58）"
+
+# ── 不可引用 / 需谨慎 ──
+not_quotable:
+  - "「OneGov 让政府采购周期从几年缩到几周」——原文只说可通过 GSA 的 Multiple Award Schedule 今日购买，没给采购周期数字"
+  - "「联邦机构 500 家都是新签的」——原文只说 now use Claude，没区分新签/存量"
+  - "「10 亿美元是确定省下的」——原文是 estimated to save，不能写成确定数"
+  - "「Claude 拿下政府市场第一」——原文无份额数据"
+  - "Utah 的 80%/71% 是四周试点样本外推，不能说成全美政府效果"
+
+# ── 角度选择（IR 原生，且与近 7 天各簇都不同）──
+# 簇记录：
+#   10-21 Claude 设计 protein binders（湿实验筛选）
+#   10-26 自训模型要自己的验收尺子
+#   10-27 S-1 净亏 807 亿其实是公允价值变动（AI 公司财报/资本层）
+#   10-28 Anthropic RCT 50 名分析师跟随随机 agent 倾向 86%（AI 影响力/人类判断）
+#   10-29 本条 → AI × 政府采购 / 采购经济学（先按量付费、后谈规模）
+angle_rationale: >-
+  判据③ likes 信号（上一条原创 12h 后 likes=0）要求换方向。本条走「AI × 政府采购 / 采购经济学」簇，
+  与上述四簇都不同。角度切在「不绑最低消费承诺 + 按实际用量付费」这句上 ——
+  这是 IR 出身最容易读出别人不读的那一层：采购方的承诺（commitment）被取消了，
+  供应商的收入确定性和采购方的预算风险之间换了位置。

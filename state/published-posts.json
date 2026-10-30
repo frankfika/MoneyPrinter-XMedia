@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "purpose": "所有成功发出的帖",
-  "last_updated": "2026-10-26T00:52:00+08:00",
+  "last_updated": "2026-10-29T17:52:00+08:00",
   "entries": [
     {
       "id": "chuangzuo_round_72",
@@ -2181,6 +2181,16 @@
           "method": "cdn.syndication.twimg.com/tweet-result 匿名 API（favorite_count / conversation_count）",
           "round": "workbuddy_automation_fef98705",
           "note": "首个 0h18m 基线点，由 WorkBuddy automation 经本地代理 127.0.0.1:7897 读取；syndication 不返回 view 数，故 views=null。用途：给 12h 后的 likes 闸门提供增量起点。"
+        },
+        {
+          "sampled_at": "2026-10-27T06:14:00+08:00",
+          "alive_hours": 29.66,
+          "views": null,
+          "likes": 0,
+          "replies": 1,
+          "method": "cdn.syndication.twimg.com/tweet-result 匿名 API（favorite_count=0 / conversation_count=1）",
+          "round": "chuangzuo_round_88 (WorkBuddy automation fef98705)",
+          "note": "29h40m 采样：likes 仍为 0 → 触发 README §3 前置判据「12h 后 likes ≤ 2 → 零发送」，round_88 因此零发送。replies 0→1 说明有 1 条对话但无点赞，属于低互动而非无曝光。"
         }
       ],
       "verification": {
@@ -2188,6 +2198,210 @@
         "query": "from:FrankFika 尺子",
         "own_post_url": "https://x.com/FrankFika/status/2114394951454994675",
         "verified_at": "2026-10-26T00:34:47+08:00"
+      }
+    },
+    {
+      "id": "chuangzuo_round_89",
+      "timestamp": "2026-10-27T22:41:23+08:00",
+      "post_id": "2115091495229550619",
+      "url": "https://x.com/FrankFika/status/2115091495229550619",
+      "source": {
+        "trigger": "Frank 2026-10-27 22:21「继续发推啊。多 agent 写作」",
+        "cron_id": null,
+        "note": "3 个 writer agent 并行出稿（财务层次 / 招股书措辞 / 递表时点），全部回 SEC 原文核对后择优。淘汰了 A 稿的『毛利率 85%』（S-1 自 2025 改按性质列报，已不单列 gross profit，原文不存在该数）与 B 稿的『整份招股书找不到 agent』（原文 agent 出现 129 次，含定义术语 agent loop / agentic AI）。采用的角度：723.88 亿非现金公允价值变动 vs 调整后经营利润 +16.18 亿。",
+        "material_id": "1027-eve-s1",
+        "source_kind": "web",
+        "source_name": "aihot",
+        "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm",
+        "edgar": "Anthropic, PBC · CIK 0002130357 · accession 0001628280-26-067168 · filed 2026-10-26",
+        "writers": [
+          {
+            "angle": "财务层次：807 亿净亏 vs 6.93 亿经营亏损",
+            "verdict": "部分采用（116 倍表述与 85% 毛利率被原文推翻）"
+          },
+          {
+            "angle": "招股书措辞信号：Virtual Collaborators / 永不展示广告",
+            "verdict": "弃用（『找不到 agent』原文证伪；广告承诺在下载正文中查无实据）"
+          },
+          {
+            "angle": "递表时点与定价姿态",
+            "verdict": "备用（事实全对，但同质化、缺独家数字）"
+          }
+        ]
+      },
+      "treatment": "regular_post_x_no_media",
+      "topic_signature": "s1-net-loss-is-fair-value-not-burn-adjusted-operating-income-positive",
+      "media_count": 0,
+      "character_count": 391,
+      "perspective_in_cluster": "AI 公司财报/资本层解读（首次进入该簇）",
+      "cluster_description": "财务/资本线（IR 出身视角）",
+      "metrics_samples": [],
+      "draft_text": "昨天 Anthropic 往 SEC 递了 S-1，代码 ANT，拟在纳斯达克全球精选市场上市。\n\n我翻这类文件有个习惯：先看损益表最下面那几行。\n\n上半年净亏损 807 亿美元。看着吓人，但这数不是烧钱烧出来的。\n\n其中 723.88 亿来自可转换票据、衍生负债和 SAFE 的公允价值变动。招股书自己写了一句：这些工具按市值计价，我们企业估值涨，这项费用就跟着涨。\n\n估值越高，账面亏得越多。\n\n经营那层要另看一个数：剔除股权激励等项后的调整后经营利润，H1 是正的 16.18 亿美元，调整后经营利润率 10%。\n\n同一份文件里两个数，方向相反。读招股书先得搞清自己在看哪一层。\n\nhttps://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm",
+      "gate_receipt": {
+        "sha256": "见 state/gate-receipts.json 最新一条",
+        "soft_score": 0,
+        "passed": true
+      },
+      "verified_numbers": {
+        "净亏损 H1-2026": "$80,748M ≈ 807 亿美元",
+        "公允价值变动（可转债/衍生负债/SAFE）": "$72,388M ≈ 723.88 亿美元",
+        "调整后经营利润 H1-2026": "+$1,618M ≈ +16.18 亿美元",
+        "调整后经营利润率 H1-2026": "10%",
+        "营收 H1-2026": "$16,286M ≈ 162.86 亿美元",
+        "经营亏损 H1-2026": "$(693)M",
+        "SBC H1-2026": "$2,185M",
+        "代码/交易所": "ANT · Nasdaq Global Select Market"
+      },
+      "verification": {
+        "method": "内置浏览器 mcp_browser：search?q=from:FrankFika+\"723.88\" 命中 /FrankFika/status/2115091495229550619（aria-label 30 seconds ago）+ 详情页渲染正文一致",
+        "posted_at_derived": "snowflake 反解 ((id>>22)+1288834974657)/1000 = 2026-10-27T22:41:23+08:00",
+        "secondary_check": "x.com/FrankFika/status/2115091495229550619 标题栏含正文全文",
+        "duplicate_check": "单条，未重发"
+      }
+    },
+    {
+      "id": "chuangzuo_round_91",
+      "timestamp": "2026-10-28T10:43:48+08:00",
+      "post_id": "2115273295314788676",
+      "url": "https://x.com/FrankFika/status/2115273295314788676",
+      "source": {
+        "trigger": "Frank 2026-10-28 08:38「继续运营几次哈」手动催发",
+        "cron_id": null,
+        "note": "12h 原创闸门 10:41:23 解禁后手动补发（10:43:48）。素材来自 chuangzuo_round_90 备的 Anthropic 随机对照试验（AI 智能体的隐性倾向如何影响 50 名专业分析师的判断决策）。发布前修了稿子开头的日期错误：「上周」→「昨天」（原文 meta article:published_time=2026-10-27，页面 Published Oct 27, 2026）。全部数字回一手原文核对：86%（分项 92/82/81/90）、52%/35% 自认判断、77% 复述论证 vs 15% 归功 agent、48 人中 6 人猜到研究意图、无 agent 组 11 人中 6 人严重方法学错误 vs 用组 50 人中 3 人。",
+        "material_id": "1028-pm-judgment-deference",
+        "source_kind": "web",
+        "source_name": "anthropic-research",
+        "canonical_url": "https://www.anthropic.com/research/agents-judgment-calls",
+        "paper": "https://www-cdn.anthropic.com/519c17a5d23a794e8b6d50a854048d0b61e0d73a.pdf",
+        "published_on": "2026-10-27"
+      },
+      "treatment": "regular_post_x_no_media",
+      "topic_signature": "agent-lean-deference-86pct-shared-model-consensus-not-independent-verification",
+      "media_count": 0,
+      "character_count": 500,
+      "perspective_in_cluster": "新簇：AI 研究结论的『伪独立验证』—— 多个团队用同一模型得出同一结论，看起来像互相独立验证，其实可能只是同一个模型偏好被复制",
+      "cluster_description": "AI 影响力/人类判断（与 10-27 S-1 财报/资本层、10-26 自训模型验收两个簇都不同）",
+      "metrics_samples": [
+        {
+          "id": "metrics-2115273295314788676-5m",
+          "sampled_at": "2026-10-28T10:48:48+08:00",
+          "alive_hours": 0.08,
+          "views": 11,
+          "likes": null,
+          "replies": null,
+          "round": "chuangzuo_round_91",
+          "method": "详情页明文 11 Views（发帖后 5 分钟）",
+          "note": "首个基线点，只有 views；likes 需 12h 后采样"
+        },
+        {
+          "id": "metrics-2115273295314788676-16h50m",
+          "sampled_at": "2026-10-29T03:34:00+08:00",
+          "sampled_at_precision": "±3min（round_92 03:30–04:10 窗口内的判据检查时点，精确分钟未单独记录）",
+          "alive_hours": 16.84,
+          "views": null,
+          "likes": 0,
+          "replies": null,
+          "round": "chuangzuo_round_92",
+          "method": "详情页 aria-label \"0 Likes. Like\"（读 aria-label 整串，不抠 HTML 孤立数字）",
+          "note": "12h 闸门判据实测点：likes=0 ≤ 2 → 触发「换选题方向」信号（不再否决发送）。views/replies 本次未采样 → null，不要当成 0。距 P1（5 分钟）Δ16h46m。**P1+P2 两个点，仍不足以做跨帖对比或评价内容表现。**"
+        }
+      ],
+      "draft_text": "Anthropic 昨天发了个研究，50 个专业分析师用 Claude Code 做因果推断分析。\n\n他们不知道的是，每个决策点上 agent 的\"倾向\"是抛硬币决定的。\n\n四个分析决策，分析师跟着 agent 倾向走的比例是 86%。没有影响的话应该是 50%。\n\n更要命的是事后问他们\"这结论谁的意见\"，52% 的人说是自己的判断，35% 说基本或完全是自己。77% 的人复述了 agent 的论证，只有 15% 归功于 agent。\n\n48 个人里只有 6 个猜到这研究在测 AI 对他们选择的影响，没人猜到倾向是随机给的。\n\n用 agent 的那批错误更少：不用 agent 的 11 人里 6 个犯了严重方法学错误，用的只有 3 个。\n\n这研究不等于\"AI 取代专家\"。它测的是当模型有明确倾向时，人会接住它，并且不觉得自己在接。\n\n它的限制也得看：单一任务、单一领域、单一模型，倾向还被刻意加强过。\n\n但\"多个团队用同样模型得出同样结论，看起来像互相独立验证\"，值得警惕。\n\nhttps://www.anthropic.com/research/agents-judgment-calls",
+      "gate_receipt": {
+        "sha256": "784780e1ba324fb8",
+        "soft_score": 3,
+        "hard_hits": [],
+        "qa_exit": 0,
+        "passed": true,
+        "note": "prepublish.py exit 0；正文 sha256 与发布时 fill 的 textLength=500 逐字校验一致"
+      },
+      "verified_numbers": [
+        "四个分析决策跟随 agent 倾向 86%（分项 92/82/81/90）",
+        "52% 说更接近自己的判断 + 35% 说基本或完全是自己的",
+        "77% 复述了 agent 的论证，只有 15% 归功于 agent",
+        "48 人中仅 6 人猜到研究在测 AI 对其选择的影响，无人猜到倾向是随机给的",
+        "不用 agent 的 11 人里 6 人（55%）犯严重方法学错误，用 agent 的 50 人里 3 人（6%）",
+        "中位用时 65 分钟 vs 不用 agent 的 90 分钟",
+        "限制：单一任务/单一领域/单一模型，倾向被刻意加强"
+      ],
+      "verification": {
+        "search": "search?q=from:FrankFika+Claude → 命中 /FrankFika/status/2115273295314788676",
+        "detail_page": "x.com/FrankFika/status/2115273295314788676 正文逐字一致 + 链接卡片（How AI agents shape experts' judgment calls / From anthropic.com）+ 时间戳 10:43 AM · Oct 28, 2026",
+        "snowflake": "2026-10-28T10:43:48+08:00（反解自 post_id，平台侧事实）",
+        "views_at_check": 11
+      }
+    },
+    {
+      "id": "frank_manual_2026-10-28-1949",
+      "timestamp": "2026-10-28T19:49:39+08:00",
+      "post_id": "2115410666068815948",
+      "url": "https://x.com/FrankFika/status/2115410666068815948",
+      "source": {
+        "trigger": "Frank 手动发布（pulse_round_79 对账发现，非任何 agent 轮次产出）",
+        "cron_id": null,
+        "note": "Quote @Peer_zh（支付宝上线 Peer Beta / USDC P2P 支付），正文仅「疯了？」二字，31 views。DSH chuangzuo 15:32 轮次 NOT_LOGGED_IN 跳过、pulse 22:00 轮次同样跳过 —— 无任何轮次日志覆盖 19:49，只能是 Frank 手动发"
+      },
+      "treatment": "quote_post_manual_no_media",
+      "topic_signature": "peer-xyz-alipay-usdc-p2p-payment-launch-quote-react",
+      "media_count": 0,
+      "character_count": 3,
+      "verification": {
+        "source": "x.com/FrankFika/status/2115410666068815948 详情页实测",
+        "timestamp_source": "snowflake 反解 ((id>>22)+1288834974657)/1000",
+        "views_at_check": 31
+      },
+      "metrics_samples": [
+        {
+          "id": "metrics-2115410666068815948-2h20m",
+          "sampled_at": "2026-10-28T22:10:00+08:00",
+          "sampled_at_precision": "±7min（pulse_round_79 22:00–22:27 窗口内，精确分钟未单独记录）",
+          "alive_hours": 2.34,
+          "views": 31,
+          "likes": null,
+          "replies": null,
+          "round": "pulse_round_79",
+          "method": "详情页明文 31 Views",
+          "note": "Frank 手动 Quote 帖（非 agent 产出）。补记是为让「Frank 自己发过帖」在 state 里有可查的采样点。likes/replies 未采样 → null。"
+        }
+      ]
+    },
+    {
+      "id": "xhs_round_1",
+      "timestamp": "2026-10-29T17:12:00+08:00",
+      "post_id": "6ae30e1b0000000033012638",
+      "url": "https://www.xiaohongshu.com/explore/6ae30e1b0000000033012638",
+      "platform": "xiaohongshu",
+      "source": {
+        "trigger": "Frank 2026-10-29 17:11「你集中一个时间去点吧。。或者分散去帮我点哈」→ 授权 agent 代点发布",
+        "cron_id": null,
+        "note": "复用 X 那轮已核事实的素材 1029-pm-gsa-procurement（Anthropic×GSA 40% 折扣，13/13 一手核对）；先按 17:07 的选择存草稿，17:11 改口后从草稿箱「编辑」→ 点红色「发布」键提交",
+        "material_id": "1029-pm-gsa-procurement",
+        "source_kind": "web",
+        "source_name": "anthropic-news",
+        "canonical_url": "https://www.anthropic.com/news/expanding-partnership-gsa"
+      },
+      "treatment": "xhs_image_text_note_agent_published",
+      "topic_signature": "anthropic-gsa-onegov-40pct-discount-no-minimum-commitment",
+      "media_count": 2,
+      "media_paths": [
+        "outputs/1029-pm-gsa-procurement/screenshots/x-1.png",
+        "outputs/1029-pm-gsa-procurement/screenshots/x-2.png"
+      ],
+      "draft_files": {
+        "xhs": "outputs/1029-pm-gsa-procurement/xhs.txt"
+      },
+      "character_count": 762,
+      "hashtag_count": 7,
+      "visibility": "public",
+      "ai_taste_check": {
+        "humanize_soft_score": 0,
+        "prepublish_passed": true
+      },
+      "verification": {
+        "method": "内置浏览器 mcp_browser → 笔记管理页 creator.xiaohongshu.com/new/note-manager",
+        "evidence": "note-card noteId=6ae30e1b0000000033012638 · 状态「审核中」· 标题逐字一致 · 时间 2026-10-29 17:12 · 5 项统计全 0",
+        "platform_url": "https://www.xiaohongshu.com/explore/6ae30e1b0000000033012638",
+        "no_retry": true
       }
     }
   ]
