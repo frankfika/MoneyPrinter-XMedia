@@ -14,7 +14,7 @@
 
 【硬约束】不动 X 浏览器（不调 python3 scripts/browser/xb.py，不发 like / reply / post）；不改 state/*.yaml；不改 worker automation 配置。只读 + 写自己的 state/memory/super-bot.md。
 
-【必读源】state/memory/chuangzuo.md（末 2 段）、state/memory/pulse.md（末 3 段，用 scripts/tail-rounds.py 读，不要全量 cat）、state/index.json、state/published-posts.json、state/inbound-replies.json、private/account-safety.yaml、outputs/ 当日目录。
+【必读源】state/memory/chuangzuo.md（末 2 段）、state/memory/pulse.md（末 3 段）、state/memory/xhs.md（末 2 段，小红书发布线 2026-10-30 拆分为独立线后必查；文件不存在就写「小红书线暂无历史」）——轮次日志都用 scripts/tail-rounds.py 读，不要全量 cat——以及 state/index.json、state/published-posts.json、state/inbound-replies.json、state/xhs-publish-state.json、private/account-safety.yaml、outputs/ 当日目录。
 
 【🔴 第一件事 · 查轮次真空期】对比 state/memory/*.md 末轮时间戳 vs 现在的真实时间。距末轮 > 2 × 调度间隔 = 真空期，必须写进日报：丢失轮次数 / 时间窗口 / 根因 / 对 inbound 覆盖的影响。cron 投递状态 delivered ≠ 轮次执行，本地 cron 依赖 runtime 存活、机器休眠不补跑。
 

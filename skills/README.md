@@ -20,13 +20,19 @@
            │ posted_url
            ▼
 ┌────────────────────┐
-│  post-writer-xhs   │  写小红书普通版
-└──────────┬─────────┘
-           │ xhs.txt
-           ▼
-┌────────────────────┐
+│  post-writer-xhs → │  ★ 小红书独立发布线（2026-10-30 拆出，chuangzuo 不碰）
 │  publisher-xhs     │  ✅ 代点发布：内置浏览器填稿 → 点发布（17:11 起授权）
 └────────────────────┘
+
+# ─── 小红书发布 pipeline（独立线，2026-10-30 从创作线拆出；不碰 X）───
+
+┌─────────────────────────┐
+│  post-writer-xhs →        │  独立选题/写稿（X 线不代笔）
+│  publisher-xhs          │  内置浏览器真窗口代点发布
+│  ★ automation 分散档口    │  每天 ≤1 条 / 间隔 ≥12h / ~50% 跳档
+│    （9:37/12:37/16:37/   │  automation_enabled=false 期间只跑登录态探测
+│     20:37 候选）          │
+└─────────────────────────┘
 
 # ─── Engagement pipeline（并列，不创作，只互动）───
 
@@ -53,6 +59,7 @@
 | post-writer-xhs | 按素材包写小红书文案 | chuangzuo pipeline（已复通） |
 | publisher-xhs | 内置浏览器填稿 + 点发布（**已授权**） | Frank 说要小红书时 |
 | browser-use-utils | 浏览器执行层 CLI（`scripts/browser/xb.py`）用法手册 | 全链路共享 |
+| **post-writer-xhs → publisher-xhs** | **小红书独立发布线：写稿 + 代点发布（不碰 X）** | **cron 分散档口 4 候选/天 + 手动喊** |
 | **x-engagement-pulse** | **inbound reply + outbound like+reply（不发新帖）** | **cron 每 6 小时（4 轮/天）** |
 | **super-bot** | **只读 + 报告 + 决策建议，不动 X** | **cron 每日 09:00 + 手动查询** |
 

@@ -82,8 +82,8 @@ crons:
 #   每次触发先读 `private/account-safety.yaml#xhs` 与 `state/xhs-publish-state.json`，
 #   决定「这一轮发不发、发哪一篇」，不满足条件就老实记「本轮零发布 + 原因」。
 xhs:
-  cron_id: null                  # 见下方 xhs_publish_cron（创建后回填）
-  schedule_candidates: ["37 9 * * *", "23 12 * * *", "41 16 * * *", "18 20 * * *"]
+  cron_id: "automation"          # Codex automation（2026-10-30 创建，显示名「小红书发布线·分散档口」）
+  schedule_candidates: ["37 9 * * *", "37 12 * * *", "37 16 * * *", "37 20 * * *"]
   label: 每天 4 个候选档口，随机挑 1~2 个执行
   session: new
   skill: skills/publisher-xhs/SKILL.md

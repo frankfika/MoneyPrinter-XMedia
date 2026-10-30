@@ -12,10 +12,12 @@
 
 | automation | 调度（Asia/Shanghai） | 干什么 | 权限 |
 |---|---|---|---|
-| `pipeline-12` 创作 | `30 3,15 * * *`（12h） | 扫 X + 非 X 源 → 选热帖 → 写文案 → 过闸门 → 真发 X | 可发原创帖 |
-| `x-pulse-6` 互动 | `0 4,10,16,22 * * *`（6h×4） | **只 like + reply，不发新帖**（inbound 回别人的 reply + outbound like 高优帖） | 单轮 ≤3 动作 |
-| `super-bot-09-00` 日报 | `0 9 * * *`（每日） | **只读 + 结构化日报**，轮次真空期必查 | 只读，绝不碰 X |
+| `pipeline-12` X 创作 | `30 3,15 * * *`（12h） | 扫 X + 非 X 源 → 选热帖 → 写文案 → 过闸门 → 真发 X。**不碰小红书** | 每轮最多 1 条原创 |
+| `automation` 小红书发布 | `37 9,12,16,20`（4 候选档口，轮内随机跳档 ~50%） | 独立线：选素材/写稿 → humanize 闸门 → 真窗口代点发布。**不碰 X** | 每天 ≤1 条、间隔 ≥12h |
+| `x-pulse-6` X 互动 | `0 4,10,16,22 * * *`（6h×4） | **只 like + reply，不发新帖**（inbound 回别人的 reply + outbound like 高优帖） | 单轮 ≤3 动作 |
+| `super-bot-09-00` 日报 | `0 9 * * *`（每日） | **只读 + 结构化日报**（三线全覆盖），轮次真空期必查 | 只读，绝不碰账号 |
 
+四个职责一条线一个，互不越界（Fang 2026-10-30 拍板拆分）。
 **Fang 的日常只有一个动作：看 super-bot 日报。** 想手动操作时直接说人话（见下）。
 prompt 唯一事实源在 `docs/cron-prompts/<线>.md`；automation 每次开轮先读它，改规则改文件即生效。
 
@@ -36,26 +38,26 @@ prompt 唯一事实源在 `docs/cron-prompts/<线>.md`；automation 每次开轮
 ```
         state/*.yaml + state/*.json（★ 唯一事实源）
                     │
-   ┌────────┬───────┴────────┬──────────────┐
-   ▼        ▼                ▼              ▼
- 创作线    小红书线        互动线          日报线
- skills/  skills/        skills/        skills/
- hot- →   post-writer-   x-engagement-  super-bot
- topic →  xhs →          pulse
- writer-x publisher-xhs
-   │        │                │              │
- publisher-x │                │              │
-   ▼        ▼                ▼              ▼
+   ┌──────────┬─────┴─────┬─────────────┬──────────────┐
+   ▼          ▼           ▼             ▼              ▼
+ X 创作线   小红书发布线  X 互动线    日报线
+ pipeline-  automation  x-pulse-6   super-bot-09-00
+ 12        （独立线）
+ skills/    skills/     skills/     skills/
+ hot- →    post-writer- x-engagement- super-bot
+ topic →   xhs →       pulse
+ writer-x  publisher-  （只 like+reply）
+   │       xhs
+ publisher-x │
+   ▼          ▼           ▼              ▼
 outputs/<档期>/    state/index.json    state/memory/*.md
 （落盘 + 真截图）  （去重索引）        （轮次日志）
                     │
-        ┌───────────┴───────────┐
-        ▼                       ▼
- Codex 内置浏览器           xb.py 专用 Chrome（CDP 9222）
-（cua_repl，真窗口）       （Playwright，~/.shortbot-browser-profile）
+                    ▼
+        Codex 内置浏览器（cua_repl，唯一通道，真窗口）
 ```
 
-三条线共享 `state/` 事实源，各自独立 session（每轮全新上下文，不膨胀）。
+四条线共享 `state/` 事实源，各自独立 session（每轮全新上下文，不膨胀）。
 
 ## 浏览器通道（唯一：Codex 内置浏览器）
 
