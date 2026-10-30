@@ -24,6 +24,15 @@
 #   安装器：scripts/install-cron.sh    单轮执行器：scripts/run-round.sh
 #   prompt 唯一事实源：docs/cron-prompts/*.md（run-round.sh 从围栏块抽取，不维护副本）
 
+# ══════════════════════════════════════════════════════════════
+# 2026-10-30 权威口径（Frank「多发布」+ 全内置浏览器）：调度器 = Codex Automations
+#   pipeline-12   = X 创作   30 3,9,15,21 * * *（4 档/天，原创间隔 ≥6h）
+#   automation    = 小红书    37 9,12,16,20 候选档口（≤2 条/天，间隔 ≥10h）
+#   x-pulse-6     = X 互动   0 4,10,16,22 * * *（单轮 ≤3 动作）
+#   super-bot-09-00 = 日报  0 9 * * *（只读）
+# 下方 executor/crons 块里的 Mavis cron_id 是历史存档，不再生效。
+# ══════════════════════════════════════════════════════════════
+
 timezone: Asia/Shanghai
 
 # ─── 实际 cron ───
@@ -43,7 +52,7 @@ executor:
 
 crons:
   super-bot:
-    cron_id: 6560e820-db95-4b83-91ad-4a0f7d4d3fd3   # ← 实际生效的就是它（Mavis runtime cron）
+    cron_id: "super-bot-09-00"   # Codex automation（2026-10-30；旧 Mavis id 6560e820 已作废）
     plist_label: com.fangchen.shortbot.super-bot
     schedule: "0 9 * * *"
     label: 每日 09:00 +08:00 汇报
@@ -51,7 +60,7 @@ crons:
     skill: skills/super-bot/SKILL.md
 
   pulse:
-    cron_id: 0dbbcbb9-ac42-456a-bd35-73f9ed960a07   # ← 实际生效的就是它（Mavis runtime cron）
+    cron_id: "x-pulse-6"   # Codex automation（2026-10-30；旧 Mavis id 0dbbcbb9 已作废）
     plist_label: com.fangchen.shortbot.pulse
     schedule: "0 4,10,16,22 * * *"
     label: 每 6 小时一轮互动（4 轮/天）   # ⚠️ 旧文案写「每 4 小时」是错的 —— 04/10/16/22 是每 6 小时
@@ -59,10 +68,10 @@ crons:
     skill: skills/x-engagement-pulse/SKILL.md
 
   chuangzuo:
-    cron_id: d5c0d018-fcb4-4205-8f5e-35d41c0d1fb9   # ← 实际生效的就是它（Mavis runtime cron）
+    cron_id: "pipeline-12"   # Codex automation（2026-10-30；旧 Mavis id d5c0d018 已作废）
     plist_label: com.fangchen.shortbot.chuangzuo
-    schedule: "30 3,15 * * *"
-    label: 每 12 小时一轮创作（2 轮/天）
+    schedule: "30 3,9,15,21 * * *"
+    label: 每 6 小时一轮创作（4 轮/天，2026-10-30 Frank「多发布」）
     session: new          # ★ 每轮独立 session
     skill: skills/README.md
 
@@ -88,9 +97,9 @@ xhs:
   session: new
   skill: skills/publisher-xhs/SKILL.md
   write_skill: skills/post-writer-xhs/SKILL.md
-  posts_per_day_max: 1           # 保守起步：刚解封，首篇还在审核中，看过审反馈再调
+  posts_per_day_max: 2           # 2026-10-30 Frank「多发布」自 1 上调（首篇已过审的假设下；若审核有异常，回退 1）
   posts_per_day_min: 1
-  min_gap_hours: 12              # 同一天两条之间至少隔 12 小时
+  min_gap_hours: 10              # 同一天两条之间至少隔 10 小时（2026-10-30 自 12 下调；9:37+20:37 档可支撑 2 条/天）
   draft_pool_required: true      # 必须先有 xhs.txt + ≥2 张真截图，才轮到发布
   ai_taste_gate: "humanize.py scan soft_score == 0 且 prepublish.py passed"
   confirm_card_before_publish: true   # 每次发布前出确认卡（讲清站点/账号/标题/正文/图片/可见性）
@@ -108,7 +117,7 @@ pulse_outbound_like_max: 2
 pulse_original_post_max: 0        # pulse 不发原创，chuangzuo 独占
 
 chuangzuo_original_post_max: 1    # 每轮最多 1 条原创
-chuangzuo_original_post_min_gap_hours: 12   # → 2 条/天（3:30 + 15:30），Frank 2026-10-27「多干发原创」
+chuangzuo_original_post_min_gap_hours: 6    # → 最多 4 条/天（3:30/9:30/15:30/21:30），Frank 2026-10-30「多发布」（自 12h 下调，10-27 口径是 2 条/天）
 # 互动差（likes ≤ 2）不再否决发送，只作为「换选题方向」的信号 → 见 publish_gates.likes_signal
 
 # 原创间隔下限。真实节奏由上方的 min_gap_hours + 前置判据（likes 闸门）决定，
@@ -119,7 +128,7 @@ cooldown_between_posts_min: 30
 publish_gates:
   - id: frank_recent_original_post
     desc: >-
-      Frank 自己在 min_gap_hours(12) 内发过**原创帖** → 本轮零发送（**硬否决**）。
+      Frank 自己在 min_gap_hours(6) 内发过**原创帖** → 本轮零发送（**硬否决**）。
       **只数根帖（原创），reply 不计入。**
     check: >-
       search?q=from:FrankFika 取首条 post_id + snowflake 反解发帖时刻，再与
@@ -139,7 +148,7 @@ publish_gates:
     action_when_hit: 顺延，不是零发送（留到下一个 12h 窗口）
   - id: likes_signal
     desc: >-
-      上一条原创 12h 后 likes 仍 ≤ 2 → **换选题方向**（不是否决发送）。
+      上一条原创 6h 后 likes 仍 ≤ 2 → **换选题方向**（不是否决发送）。
       2026-10-27 Frank「多干发原创」：这条闸门原本是硬否决，连否 3 轮（86/87/88），
       结果 40 小时零原创。互动差是**选题**问题，不是**发不发**问题 ——
       硬否决会让账号彻底停更，正好和 Frank 要的方向相反。

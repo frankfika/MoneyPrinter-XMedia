@@ -90,7 +90,7 @@
 1. 读 `state/*.yaml` + `state/index.json`（**不要全量读 seen-posts.json**）
 2. 读 `state/memory/chuangzuo.md` 末 2 段（`python3 scripts/tail-rounds.py state/memory/chuangzuo.md --rounds 2`）
 3. **发不发的前置判据**（必做，不是可选项）：
-   - **上一条原创距今 ≥ 12h** → 否则本轮零发送（硬否决）。
+   - **上一条原创距今 ≥ 6h** → 否则本轮零发送（硬否决；2026-10-30 Frank「多发布」自 12h 下调，4 档/天）。
      ⚠️ **只数原创帖（根帖），reply 不计入**（2026-10-27 修正）。
      旧口径把 reply 也算成「发过帖」，而 pulse 一天跑 4 轮、chuangzuo 一天 2 轮 ——
      只要 pulse 回一条 reply，12h 窗口就被占掉，chuangzuo 两个档口**双双 100% 被自己的回复饿死**。
@@ -128,7 +128,7 @@
 - **XHS 可代点发布**（`private/account-safety.yaml#xhs.agent_publish_allowed = true`），但操作层面 4 条硬约束必守：不碰平台 AI 功能 / 不改任何设置 / 走真窗口 / 节奏分散不连发
 - **诚实原则**：任何环节拿不到真实结果就写「未发」+ 原因，不许装忙
 - 原创间隔 ≥ 12 小时（`schedule.yaml#cooldown_between_posts_min` 是下限，不是目标）
-- **目标 2 条/天**（3:30 + 15:30 各一条）。互动差（likes ≤ 2）只调**选题方向**，不调**发不发**
+- **目标 3~4 条/天**（3:30 / 9:30 / 15:30 / 21:30 四档，2026-10-30 Frank「多发布」）。互动差（likes ≤ 2）只调**选题方向**，不调**发不发**
 - **pulse 的 outbound reply 已归零**（少评论）→ 注意力优先给原创
 
 ## 共同约束

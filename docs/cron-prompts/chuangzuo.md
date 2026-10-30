@@ -1,7 +1,7 @@
 # automation · 创作 pipeline（Codex cron · 每 12 小时）
 
 - automation_id: `pipeline-12`（Codex app → Automations · cron 类型）
-- schedule: `30 3,15 * * *`（Asia/Shanghai）= RRULE `RRULE:FREQ=DAILY;BYHOUR=19,7;BYMINUTE=30`（UTC）
+- schedule: `30 3,9,15,21 * * *`（Asia/Shanghai）= RRULE `RRULE:FREQ=DAILY;BYHOUR=19,1,7,13;BYMINUTE=30`（UTC）· 2026-10-30 Frank「多发布」从 2 档/天加密到 4 档/天
 - target: Codex 项目「短文助手」(`71faead3-cd8e-49ec-be13-c9747d4927ac`) · local
 - session: 每轮独立进程 = 全新上下文（等价旧 `session.mode=new`）
 - prompt 唯一事实源 = 本文件第一个 ``` 围栏块；改 prompt 改这里，再去 automation_update 同步
@@ -15,7 +15,7 @@
 【硬约束】每轮最多发 1 条原创，不要凑数。不出现 OpenCSG / DeepSeek / Moonshot / MiniMax；不写 AI 托管 / 自动互动措辞；XHS 由独立的发布线负责，本线不碰小红书（不生成 xhs.txt、不发小红书）。公开动作直接执行，不 ask_user 确认文案。
 
 【前置判据 · 必做，不是可选项】
-1. **上一条原创距今 ≥ 12h** → 否则本轮零发送（硬否决）。
+1. **上一条原创距今 ≥ 6h** → 否则本轮零发送（硬否决；2026-10-30 Frank「多发布」自 12h 下调）。
    ⚠️ **只数原创帖（根帖），reply 不计入**（2026-10-27 修正口径）。
    旧口径把 reply 也算成「发过帖」，而 pulse 一天跑 4 轮、chuangzuo 一天 2 轮 ——
    只要 pulse 回一条 reply，12h 窗口就被占掉，chuangzuo 两个档口**双双 100% 被自己的回复饿死**。

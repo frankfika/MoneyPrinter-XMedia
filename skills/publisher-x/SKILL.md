@@ -31,9 +31,9 @@ Fang 拍板：**所有的都用内置浏览器**。xb.py 通道停用（保留�
 - 读 `state/forbidden.yaml#login_rules.x_login`
   - 遇 `We've temporarily limited your login` 立即停手
 - 读 `state/schedule.yaml#publish_gates` —— **闸门不通过就不发**
-  - Frank 自己在间隔窗口内发过帖 → 零发送
-  - 上一条原创 12h 后 likes 仍 ≤ 2 → 零发送
-  - **不要为了「每轮要有产出」而发**
+  - Frank 自己在原创间隔窗口（当前 6h）内发过**根帖** → 零发送
+  - 上一条原创 6h 后 likes 仍 ≤ 2 → **换选题方向**（不否决发送，Frank 2026-10-27/10-30 口径）
+  - **不要为了「每轮要有产出」而发**（候选差就老实零发送）
 
 ## 工作流
 
