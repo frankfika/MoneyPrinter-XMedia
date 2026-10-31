@@ -1,38 +1,46 @@
 ---
 name: publisher-x
-description: X 发布 — 接 post-writer-x 出的 x.txt，**在已登录的 X 里真实发出**（内置浏览器 / xb.py 两条通道，见「浏览器通道」），回传帖 URL。本 skill **不写文案**；遇限流立即停，不假装已发。
+description: X 发布 — 接 post-writer-x 出的 x.txt，**在已登录的 X 里真实发出**（唯一通道 = xb.py，见「浏览器通道」），回传帖 URL。本 skill **不写文案**；遇限流立即停，不假装已发。
 ---
 
 # X 发布
 
-## 浏览器通道（2026-10-30 起唯一通道 = Codex 内置浏览器）
+## 浏览器通道（2026-10-31 起唯一通道 = xb.py）
 
-Fang 拍板：**所有的都用内置浏览器**。xb.py 通道停用（保留作历史档案，不再用于发布/互动）。
+**唯一浏览器通道** = 仓库内 CLI：
 
-| 通道 | 状态 |
-|---|---|
-| **Codex 内置浏览器**（`mcp__cua_repl__js`） | ✅ 唯一发布通道。登录态 = Fang 在该浏览器里一次性登录 X（含 2FA）；发文组合键 `press_key {"key":"Enter","modifiers":["Meta"]}` |
-| `scripts/browser/xb.py`（专用 Chrome，CDP 9222） | ⛔ 已停用 |
+```bash
+python3 scripts/browser/xb.py --action '<json>'
+```
 
-> ⚠️ 前置条件链：① Codex app 的 Work settings 启用 **Local browser use**（未启用时 cua_repl 报
-> 「Local browser use is disabled in Work settings」）② Fang 在内置浏览器登录 X ③ agent 复核登录态后把
-> `private/account-safety.yaml#x.login_state` 改 `logged_in`。
-> 没有 cua_repl / 浏览器控制被禁 → 本轮零发送，如实写原因，**不许走 xb.py**。
+Playwright 驱动专用 Chrome（profile `~/.shortbot-browser-profile`，CDP 9222，launchd `com.fangchen.shortbot.browser` 保活），**纯 DOM 操作、无视觉模型**。
+
+- 动作契约见 `scripts/browser/README.md`；原语：navigate / open_tab / wait / query / inspect / click / fill / press / screenshot / upload / login_state。
+- **`upload` 为 2026-10-31 新增**（小红书传图用）：
+  `{"action":"upload","input":{"selector":"input[type=file]","files":["/abs/a.png"]}}`
+- 前置：launchd 保活的专用 Chrome + Fang 在该浏览器（9222 窗口）**一次性登录 X**（含 2FA，只有人能做）。
+
+> 📌 历史决策：2026-10-30 曾短暂切到「Codex 内置浏览器（cua_repl）/ Computer Use AX」双通道；
+> **2026-10-31 起迁回 xb.py**，原因：本地化 + 无视觉（内置浏览器被组织策略禁用，AX 是视觉通道）。
 
 ## 前置
 
 - 读 `private/account-safety.yaml#x`
   - `publish_mode == agent` 才能自动发；`draft_only` / `manual` 退化为只出草稿
-  - `login_state` 是全局判据：内置浏览器登录后由 agent 复核并改为 `logged_in`
-- 通道检查：
-  - **有 `mcp__cua_repl__js` → 走 Codex 内置浏览器**（先开 x.com 确认登录态，撞登录墙 → 本轮零发送）
-  - 没有（或报 Local browser use is disabled）→ **本轮零发送**，把草稿链接给 Frank，
-    如实写原因，**不许走 xb.py**（已停用；撞 10 次登录墙不会让它登录）
+  - `login_state` 是全局判据：专用 Chrome 登录后由 agent 复核并改为 `logged_in`
+  - `publish_channel` = 发布通道标识，当前值 `xb_py`（唯一通道；历史值 `cua_repl` 已废止）
+- 通道检查（每轮开工必做）：
+  ```bash
+  python3 scripts/browser/xb.py --action '{"action":"login_state"}'
+  ```
+  - 已登录 → 走完整链路
+  - 未登录 → **本轮零动作**，如实记录「专用 Chrome 未登录，需 Fang 在 9222 窗口登录」，**不撞登录墙**（撞 10 次也不会让它登录）
+  - exit 2（`BROWSER_UNAVAILABLE`）→ 浏览器不可用，本轮零发送，如实写原因
 - 读 `state/forbidden.yaml#login_rules.x_login`
   - 遇 `We've temporarily limited your login` 立即停手
 - 读 `state/schedule.yaml#publish_gates` —— **闸门不通过就不发**
-  - Frank 自己在原创间隔窗口（当前 6h）内发过**根帖** → 零发送
-  - 上一条原创 6h 后 likes 仍 ≤ 2 → **换选题方向**（不否决发送，Frank 2026-10-27/10-30 口径）
+  - Frank 自己在原创间隔窗口（**当前 2h** —— 2026-10-31「每 2h 一发」自 6 再下调；口径源 `schedule.yaml#chuangzuo_original_post_min_gap_hours`）内发过**根帖** → 零发送
+  - 上一条原创 2h 后 likes 仍 ≤ 2 → **换选题方向**（不否决发送，Frank 2026-10-27/10-30 口径）
   - **不要为了「每轮要有产出」而发**（候选差就老实零发送）
 
 ## 工作流
@@ -60,13 +68,6 @@ python3 scripts/prepublish.py outputs/<YYYY-MM-DD>-<slot>/<topic>/
 
 ### 1. 打开 compose
 
-**内置浏览器通道**：
-```json
-{"action":"open_tab","input":{"url":"https://x.com/compose/post"}}
-```
-（当前 tab 已有页面时 `open_tab` 保留原页；`navigate` 在已加载 tab 上会 fail closed）
-
-**xb.py 通道**：
 ```bash
 python3 scripts/browser/xb.py --action '{"action":"navigate","input":{"url":"https://x.com/compose/post"}}'
 ```
@@ -84,29 +85,12 @@ python3 scripts/browser/xb.py --action '{"action":"fill","input":{"selector":"[d
 
 ### 3. 发送 —— **`fill` + `Cmd+Enter`**
 
-**内置浏览器通道**（`modifiers` 数组形式，**必须**）：
-```json
-{"action":"press_key","input":{"key":"Enter","modifiers":["Meta"]}}
-```
-
-**xb.py 通道**（注意：写法跟内置浏览器**相反**）：
 ```bash
 python3 scripts/browser/xb.py --action '{"action":"press","input":{"key":"Meta+Enter"}}'
 ```
 
-> ⚠️ **两条通道的组合键约定相反，别抄错**：
->
-> | 通道 | action | 写法 | 原因 |
-> |---|---|---|---|
-> | 内置浏览器 | `press_key` | `{"key":"Enter","modifiers":["Meta"]}` | `press_key` **只认 modifiers 数组** |
-> | xb.py | `press` | `{"key":"Meta+Enter"}` | `press` **只认字符串 key**，内部 `normalize_key()` 自己合成组合键 |
->
-> - 内置浏览器传 `{"key":"Meta+Enter"}` → **被当成普通按键丢掉**：`press` 返回 `dispatched=true`、
->   `fill` 也 `verified=true`、发前 DOM 里正文也完整躺在 composer 里，**但根本没发出去**
->   （pulse_round_72 实测：search / with_replies / 线程 DOM / `conversation_id:` 四路判据全部查不到）。
-> - xb.py 传 `{"key":"Enter","modifiers":["Meta"]}` → **`modifiers` 字段根本不读**，变成普通 Enter，
->   同样发不出去（而且这次连报错都没有）。
-> - 两条通道都改成各自的正确写法后都立刻真发。
+> ⚠️ xb.py 的 `press` **只认字符串 key**（`{"key":"Meta+Enter"}`），内部 `normalize_key()` 自己合成组合键；
+> 传 `{"key":"Enter","modifiers":["Meta"]}` 时 `modifiers` 字段根本不读，会变成普通 Enter，发不出去且没有报错。
 
 - **Post button click 不可靠** —— `tweetButtonInline` 是 disabled 的，AX 树里最先出现的永远是它
 - Cmd+Enter 后 **wait 8-10 秒**（不需要更久）：
@@ -137,16 +121,15 @@ python3 scripts/browser/xb.py --action '{"action":"navigate","input":{"url":"htt
 > ⚠️ **Cmd+Enter 后立刻查 profile / with_replies / home feed 会误判** —— 缓存延迟 8-30s，
 > 读了会以为没发出去，然后想「保险再发一次」→ 触发 X 反重复拦截。
 
-### 5. 配图（**当前默认不做**）
-`scripts/browser/xb.py` 的 action 集合里**没有 upload 动作**（只有 navigate / open_tab / wait / query / inspect / click / fill / press / screenshot / login_state），
-文件上传路径（隐藏 `input[type=file]` / filechooser）目前没有 CLI 入口 —— `data-testid="fileInput"` 的元素定位不到，硬试只会浪费调用。
+### 5. 配图（需要时走 `upload` 动作）
 
-**当前默认发纯文字帖。** 配图路径恢复前，不要在这上面反复试。
+xb.py 2026-10-31 起有 `upload` 动作：
 
-> 📌 内置浏览器通道**有 `upload_files` 动作**（可发真图），xb.py 没有。
-> 但 `state/style-x.yaml#must_have` 要求 ≥2 张真截图 —— 恢复配图时先确认
-> **截图文件已在 `outputs/<...>/screenshots/` 落盘**，再走 `upload_files`（路径必须是
-> 真实文件，参数就是路径数组，不要包成 target 对象）。
+```bash
+python3 scripts/browser/xb.py --action '{"action":"upload","input":{"selector":"input[type=file]","files":["/abs/path/a.png"]}}'
+```
+
+恢复配图时先确认**截图文件已在 `outputs/<...>/screenshots/` 落盘**（`state/style-x.yaml#must_have` 要求 ≥2 张真截图），`files` 必须是真实文件的绝对路径数组。
 
 ### 6. 落盘
 - `x.txt` 末尾追加 `# posted_url: <url>` + `# posted_at: <iso>`

@@ -1,11 +1,10 @@
-# automation · super-bot（Codex cron · 每日 09:00）
+# super-bot · 日报（launchd · 每日 09:00）
 
-- automation_id: `super-bot-09-00`（Codex app → Automations · cron 类型）
-- schedule: `0 9 * * *`（Asia/Shanghai）= RRULE `RRULE:FREQ=DAILY;BYHOUR=1;BYMINUTE=0`（UTC）
-- target: Codex 项目「短文助手」(`71faead3-cd8e-49ec-be13-c9747d4927ac`) · local
+- runner: launchd `com.fangchen.shortbot.super-bot` + scripts/run-round.sh（2026-10-31 起，Codex app Automations 已停用；旧 automation_id `super-bot-09-00` 作废）
+- schedule: `0 9 * * *`（Asia/Shanghai）
 - session: 每轮独立进程 = 全新上下文
 - prompt 唯一事实源 = 本文件第一个 ``` 围栏块
-- 历史: 2026-10-30 起从 launchd+DSH 迁回 Codex Automations（旧 cron_id `6560e820` 已作废）
+- 历史: 2026-10-30 起从 launchd+DSH 迁回 Codex Automations（旧 cron_id `6560e820` 已作废）；2026-10-31 迁回 launchd + codex exec
 
 ## prompt 原文（逐字复制）
 

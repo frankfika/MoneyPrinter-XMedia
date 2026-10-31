@@ -73,7 +73,7 @@ DEFAULT_CONFIG: Dict[str, Any] = {
 
 ACTION_NAMES = [
     "navigate", "open_tab", "wait", "query", "inspect",
-    "click", "fill", "press", "screenshot", "login_state",
+    "click", "fill", "upload", "press", "screenshot", "login_state",
 ]
 
 DEFAULT_UA = (
@@ -1118,6 +1118,25 @@ def action_fill(sess: BrowserSession, inp: Dict[str, Any]) -> Dict[str, Any]:
             "value_len": value_len, "cleared_before_fill": True}
 
 
+def action_upload(sess: BrowserSession, inp: Dict[str, Any]) -> Dict[str, Any]:
+    files = inp.get("files")
+    if not files or not isinstance(files, list):
+        raise XBError("BAD_INPUT", "upload 需要 input.files（绝对路径数组）")
+    paths = [str(Path(f).expanduser().resolve()) for f in files]
+    for p in paths:
+        if not Path(p).exists():
+            raise XBError("BAD_INPUT", "文件不存在: %s" % p)
+    page = sess.get_page(restore=True)
+    loc, meta = _locator_for(page, inp)
+    try:
+        loc.set_input_files(paths, timeout=clamp_ms(int(inp.get("timeout") or 15000)))
+    except Exception as exc:
+        raise XBError("ACTION_FAILED", "upload 失败 %r: %s" % (meta["selector"], str(exc).splitlines()[0]))
+    waited = _wait_settle(page, sess.cfg, inp.get("settleMs", 1500))
+    sess.remember(page)
+    return {"url": page.url, "target": meta, "uploaded": len(paths), "settle_ms": waited}
+
+
 _KEY_MAP = {
     "cmd": "Meta", "command": "Meta", "meta": "Meta", "super": "Meta",
     "ctrl": "Control", "control": "Control",
@@ -1357,6 +1376,7 @@ HANDLERS = {
     "inspect": action_inspect,
     "click": action_click,
     "fill": action_fill,
+    "upload": action_upload,
     "press": action_press,
     "screenshot": action_screenshot,
     "login_state": action_login_state,

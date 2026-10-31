@@ -126,3 +126,137 @@ Frank 指出风险不在文字而在**操作层面**（账号当初就是被判�
 3. 草稿箱「编辑」是二次发布的入口 —— 比重新填一遍更稳（标题/正文原样带过去）
 4. note_id 从笔记管理页 DOM 的 `data-impression` 里读，别自己编
 5. 节奏改为**分散**（见 `state/schedule.yaml#xhs`）—— 不固定单一时段，降低被判定为托管的机器特征
+
+<!-- round -->
+### xhs_round_3 (2026-10-31 01:32–01:55 +08:00) — **零发布**：内置浏览器通道仍被 Work 设置禁用；本轮只出完成版备稿
+
+**触发**：Codex automation「短文助手·小红书发布线·分散档口」本轮（自动化 session，独立上下文）。
+
+**模式**：`state/xhs-publish-state.json#automation_enabled=false` → 走**探测模式**；但探测通道本身不可用 → 本轮**零动作**（发布层面）。
+
+#### 通道探测（本轮实测，比上轮更细）
+`codex login status` = **Not logged in**（CLI 走 api-key provider）。按 prompt 走浏览器插件通道：
+- `setupBrowserRuntime()` **成功**（`browser-client.mjs` 导入 + setup 都过），`agent` 建起来了
+- `agent.browsers.list()` → **`Local browser use is disabled in Work settings`**
+- 逐个 backend 试：`iab` / `chrome` / `dot` / `mcpapps` / `edge` / `extension` → **全部同一个错**
+- 绕过 `browsers.get*` 直接 `nodeRepl.rpc('browser', {method:'execute', params:{type:'browser_user_get_tab_context', browser_id:'iab'}})` → **同一个错**
+- `environment:'orbit'`（另一套环境）→ **同一个错**
+
+**根因定位（比上轮明确一级）**：不是「没有 browser 插件」，也不是「cua_repl 缺失」，而是
+`browser-service.mjs` 里 `lue()/rce()` 的**签名校验**读 `BROWSER_USE_ACCESS_EXECUTOR_ID`（本机实测
+`["3213acf3-…","native-browser-plugin"]`）+ `BROWSER_USE_ACCESS_PIPE_PATH`（`/tmp/codex-app-tools/*.sock`），
+向 Codex app 的 access host 要一份签名回执；回执里的 `allowed` 由 **app 侧** `/wham/work/settings` 的
+`localBrowserUse` 决定（`sV()`：`settings?.localBrowserUse !== false`）。**该设置是账号级 Work 设置，
+本机不可改**（app.asar 里对应 `localBrowserUse` schema 是 `agentAccess:"hidden"` + `source: default|migrated|user`，
+不是本地 config.toml 可写项）。→ **本轮只能等 Fang 在 Codex Work 设置里开这一项**。
+上轮 memory 里「Local browser use is disabled」归因不变，但本轮补齐了：插件在、runtime 能起、**卡的是账号级开关**。
+
+**未走任何替代通道**：`scripts/browser/xb.py` 已停用（prompt 明令不许）；Pencil MCP 是另一个 app（`transport not connected to app: desktop`）；Computer Use AX（`@oai/sky/service`）在 node_repl 里报 `process is not defined`，起不来。
+→ 严格遵守「只走 Codex 内置浏览器真窗口」。
+
+#### 本轮产出：完成版备稿（草稿照出）
+`private/account-safety.yaml#xhs` 写明「两步完成前 XHS 发布线停手；**草稿照出**」—— 通道没通不等于不写稿。
+
+- **候选**：`outputs/1030-pm-ai-capex-cashflow/`（BBC「Google value plunges by $500bn as its own AI search hits ad sales」）
+  - 选它不选 `1030-pm-cursor-claude-code-supply-chain`：Cursor 供应链安全稿 **2026-10-30 21:40 已发 X**（post 2116164234329657435），两平台同稿撞车
+  - 截图 `screenshots/x-1.png` + `x-2.png` 各一张 —— **BBC 官网真截**（已开图肉眼核对：标题首屏 + Amazon 段），非 AI 生成图
+  - 事实全部来自 `material.yaml#verified_facts`（10-30 21:00 curl 原文逐条 grep 过），**未引用** `not_quotable` 三条（广告收入下滑无具体数字 / Jassy 两个万亿美元生意未指明 / 微软少花 50 亿≠砍项目）
+- **文案**：`outputs/1030-pm-ai-capex-cashflow/xhs.txt`
+  - 标题「谷歌AI吃广告，一天蒸发5000亿」= 17 字符 / 13.5 单位（XHS 上限 20 字符）
+  - 正文 519 字（含 1 emoji 👀，正文 0~2 emoji、破折号 0 个，均在阈值内）
+  - 6 个标签（3~8 区间）
+  - sha256 `2c9a9816b7d9c175e019eab568ef5fb87b9d7818ee679418265c97d436d67001`
+
+#### 闸门（三道全过，软分 0）
+| 闸门 | 结果 |
+|---|---|
+| `humanize.py scan xhs.txt --json` | **soft_score 0**，0 hits，passed |
+| `prepublish.py --text <正文> --no-rewrite --json` | **passed**，soft 0，hard 0 |
+| `qa-draft.py outputs/1030-pm-ai-capex-cashflow/` | **全部 PASS**（标题 13.5≤20 / 正文 519∈[300,700] / 标签 6 / 截图 2 / 红线词 0） |
+
+> 注：`prepublish --text` 若把标签行一起喂进去会误报 `redline.no_hashtag_storm`（那条 scope=[x]，XHS 标签是 3~8 个的正常形态）；
+> 1029 已发布稿同样如此。按「正文与标签分开」的既有口径跑，body+tags 分开送。
+
+#### 本轮没有做的事（红线）
+- **没发布**（automation_enabled=false + 通道不通，两条都不满足）
+- **没自己 flip `automation_enabled`** —— 那是 Frank 显式说「开」才动的开关
+- 没登录创作服务平台、没点任何发布键、没碰平台 AI 功能、没改任何可见性/定时发布设置
+- 没碰 X 线（`pipeline-12` / `x-pulse-6` 的产出原样保留，只借了素材包）
+
+#### 下一步（等 Fang）
+1. **Fang 在 Codex Work 设置里打开 Local browser use**（唯一硬阻塞；app 侧账号级开关，本机改不了）
+2. Fang 在 Codex 内置浏览器登录一次小红书「弗兰克的思维导图」（`account-safety.yaml#xhs.login_channel_status` 记的待办②）
+3. 两步齐了 → 本线自动进入探测 1/3，连续 3 轮通过后等 Fang 一句「开」，再由 Fang 显式 flip `automation_enabled`
+4. 通道一通，本稿（BBC/AI 现金流）可直接填进创作服务平台发布；标题/正文/图/可见性四要素已备齐
+
+<!-- round -->
+## 2026-10-31 04:38–04:46 （cron 轮 · automation「automation」· 第 3 轮）
+
+- 模式: **零动作**（探测模式 + 通道未通；跳档采样亦落在 SKIP）
+- 节奏闸门采样值:
+  | 项 | 值 |
+  |---|---|
+  | posts_per_day_max | 2 |
+  | min_gap_hours | 10 |
+  | 当天已发 | 0（published_dates = ["2026-10-29"]，今日 2026-10-31 不在其中） |
+  | 距 last_published_at(2026-10-29 17:12) | **35.45 h** ≥ 10 → 通过 |
+  | 随机跳档采样 | **SKIP**（secrets.randbelow(2)==0，50% 概率） |
+  | automation_enabled | **false** |
+  → 闸门本身全过，但**通道不通 + automation_enabled=false** 两条各自独立地否掉发布
+- 候选 + 发布单（未执行）:
+  - 候选: `outputs/1030-pm-ai-capex-cashflow/`（BBC「Google value plunges by $500bn as its own AI search hits ad sales」）
+    - 排除项: `1030-pm-cursor-claude-code-supply-chain` —— 2026-10-30 21:40 已发 X（post 2116164234329657435），两平台同稿撞车
+    - 排除项: `1031-am-sierra-arr` / `1031-am-doj-ghost-students` —— 属 X 创作线（只有 x.txt，无 xhs.txt），本线不碰
+  - 发布单（草稿已就绪，通道一通即可直接走「二次发布」）
+    - 站点: 小红书创作服务平台 · 账号「弗兰克的思维导图」
+    - 标题: `谷歌AI吃广告，一天蒸发5000亿`（17 字符 / 13.5 单位 ≤ 20）
+    - 正文: 519 字 + 6 标签（#AI #谷歌 #亚马逊 #微软 #财报 #科技观察）
+    - 图片: `screenshots/x-1.png`（BBC 首屏）+ `screenshots/x-2.png`（Amazon 段）—— 官网真截图
+    - 可见性: **公开可见**（不开定时发布）
+    - sha256: `2c9a9816b7d9c175e019eab568ef5fb87b9d7818ee679418265c97d436d67001`
+- 闸门复核（本轮重跑，仍全过）:
+  | 闸门 | 结果 |
+  |---|---|
+  | `humanize.py scan xhs.txt --json` | passed，**soft_score 0**，0 hits |
+  | `prepublish.py --text <正文> --no-rewrite --json` | **passed**，soft 0 / hard 0 |
+  | `qa-draft.py outputs/1030-pm-ai-capex-cashflow/` | **全部 PASS**（标题 13.5≤20 / 正文 519∈[300,700] / 标签 6 / 截图 2 / 红线词 0） |
+- note_id + URL: **无**（未发布）
+  - 原因 ① 通道不通：Work 设置 `Local browser use` 未启用 → `browser_user_get_tab_context` + `browsers.list()` + `browsers.get('iab')` 全报 "Local browser use is disabled in Work settings"（本机不可改）
+  - 原因 ② `automation_enabled=false`，等 Fang 显式说「开」才允许 flip
+- 异常: 无脚本异常（`qa-draft.py` / `prepublish.py` 需用 `./.venv/bin/python` 跑，系统 python3 缺 PyYAML）；无平台交互
+- 未动: 未自己 flip automation_enabled；未走 xb.py；未登录创作服务平台；未点任何发布键；未碰平台 AI 功能/可见性/定时发布；未碰 X 线
+
+<!-- round -->
+## 2026-10-31 08:37 档口（cron 探测轮 · 第 4 轮）
+
+- 时间戳: 2026-10-31 08:37 触发 → 10:02 收尾 Asia/Shanghai
+- 模式: **零动作（探测模式）** —— `automation_enabled=false` → 只允许探测；且探测通道不可用
+- 通道结论: **仍未开**（根因与第 2/3 轮完全一致，本轮只做一次确认，没再翻 app.asar / 没查插件清单）
+  - `nodeRepl.rpc('browser', {method:'execute', params:{type:'browser_user_get_tab_context', browser_id:'iab'}})`
+    → **"Local browser use is disabled in Work settings"**
+  - 本 session 工具清单**无** `mcp__cua_repl__js` → 按 prompt「无 cua_repl / 报 Local browser use is disabled → 本轮零动作」
+  - 归因不变: app 侧账号级 Work 开关 `localBrowserUse`，**本机不可改**
+- 节奏闸门采样（探测模式下仅采样留痕，未据以发布）:
+  | 项 | 值 | 判定 |
+  |---|---|---|
+  | `posts_per_day_max` | 2 | — |
+  | 当天已发 | 0（`published_dates=[2026-10-29]`） | 过 |
+  | `min_gap_hours` | 10 | — |
+  | 距 `last_published_at`（2026-10-29 17:12） | **40.83h** | 过（≥10） |
+  | 随机跳档采样 | `secrets.randbelow(2)==0` → **SKIP** | 本轮本也会零发布 |
+  | `automation_enabled` | **false** | 否掉发布（等 Fang 说「开」） |
+- 候选（未执行）: `outputs/1030-pm-ai-capex-cashflow/`（BBC「Google value plunges by $500bn as its own AI search hits ad sales」）
+  - 排除 `1030-pm-cursor-claude-code-supply-chain` —— 2026-10-30 21:40 已发 X，两平台同稿撞车
+  - 排除 `1031-am-sierra-arr` / `1031-am-doj-ghost-students` / `1031-am-tc-ai-capex-debt` —— 属 X 创作线（无 xhs.txt），本线不碰
+  - 备稿复核: `xhs.txt` 仍在位，sha256 `2c9a9816b7d9c175e019eab568ef5fb87b9d7818ee679418265c97d436d67001`（未变）
+  - 本轮**未重跑**三道闸门 —— 通道不通、不会进入发布路径，省一次运行
+- 发布单（备稿就绪，通道一通即可走「二次发布」流程）:
+  - 站点: 小红书创作服务平台 · 账号「弗兰克的思维导图」
+  - 标题: `谷歌AI吃广告，一天蒸发5000亿`（17 字符 ≤ 20）
+  - 正文: 519 字 + 6 标签 / 图片: `screenshots/x-1.png` + `x-2.png`（BBC 官网真截图）/ 可见性: **公开可见**
+- note_id + URL: **无**（未发布）
+  - 原因 ① 通道不通（Work 设置 `Local browser use` 未启用）
+  - 原因 ② `automation_enabled=false`
+  - 原因 ③ 本轮随机跳档采样 = SKIP
+- 异常: 无脚本异常；无平台交互（未登录创作服务平台、未点任何发布键）
+- 未动: `automation_enabled` 保持 false（未自己 flip）；未走 xb.py（已停用）；未碰平台 AI 功能/可见性/定时发布；未碰 X 线

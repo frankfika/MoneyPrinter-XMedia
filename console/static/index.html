@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>短文助手 · 控制台</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="dot"></span>
+    <h1>短文助手 · 控制台</h1>
+    <span class="sub">本地只读视图 · 事实源仍是仓库里的 state/</span>
+  </div>
+  <div class="top-right">
+    <span id="clock" class="clock"></span>
+    <button id="refresh" class="btn ghost">刷新</button>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="overview" class="active">总览</button>
+  <button data-tab="drafts">备稿</button>
+  <button data-tab="published">已发</button>
+  <button data-tab="outbound">互动台账</button>
+  <button data-tab="gate">闸门</button>
+  <button data-tab="rules">红线</button>
+  <button data-tab="ask">交给 Codex</button>
+</nav>
+
+<main id="main">
+  <section class="tab-panel active" id="tab-overview"></section>
+  <section class="tab-panel" id="tab-drafts"></section>
+  <section class="tab-panel" id="tab-published"></section>
+  <section class="tab-panel" id="tab-outbound"></section>
+  <section class="tab-panel" id="tab-gate"></section>
+  <section class="tab-panel" id="tab-rules"></section>
+  <section class="tab-panel" id="tab-ask"></section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

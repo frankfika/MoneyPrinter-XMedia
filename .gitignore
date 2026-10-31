@@ -35,3 +35,7 @@ outputs/**/screenshots/
 # —— 轮转出去的旧轮次：本地保留完整归档，不进版本库 ——
 state/memory/archive/
 
+
+# —— 2026-10-31 本地化迁移的清理归档（bak/杂物/含凭证风险的 ccswitch 导出，只留本机）——
+archive/cleanup-2026-10-31/
+ccswitch-export*

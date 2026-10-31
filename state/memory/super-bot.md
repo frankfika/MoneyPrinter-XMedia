@@ -1070,3 +1070,323 @@ launchd 上 `com.fangchen.shortbot.*` 共 **5 个** job，其中**只有 3 个�
 - **12h 原创闸门的 likes 采样点仍只有 2 个** —— 想让 likes 闸门有第三个点，需要在更长时间后再采一次。
 
 ::inbox-item{"urgency":"high","title":"4 项建议已全部执行完毕；launchd 双调度器已卸载并持久禁用，明天只会有 1 份日报","summary":"① 卸载 + 持久 disable 了 3 个 launchd 调度器（pulse / chuangzuo / super-bot），`launchctl print-disabled` 已确认，重启后仍不加载；三条线全部由 Mavis runtime cron 承接，覆盖无损（nextRun：pulse 10:00、chuangzuo 15:30、super-bot 明天 09:00）。② 三条 cron prompt + 三份 SKILL/README 全部加上了「排定档口台账」开工自检：档口间隔超 2 倍即判丢失、丢失则本轮回溯补扫 Mentions、每轮做平台侧对账补手动帖。③ super-bot 的真空期判据从「末轮时间戳」改成「档口台账」，SKILL 和 cron prompt 同步。④ schedule.yaml 四处漂移已修（launcher、3 处 cron_id 注释、每 4 小时→每 6 小时、outbound reply 上限 1→0、publish_gates 改用 from:FrankFika 对账）。⑤ published-posts.json 补回了 round_91 的 likes=0 采样点，并把异形的 metrics_samples 统一成 list。","action":"剩下 2 件需要你：一是**15:30 前不要合盖** —— GSA 稿已过闸门（sha 87500b84480c8f2b）、12h 闸门 07:49:39 已解禁、chuangzuo 轮次 nextRun 就是 15:30，昨晚这格就是在合盖睡眠里丢的（现在 AC 供电 73% 充电中，已 FullWake）。二是**要不要保留 xb.py 那条备用通道** —— ~/.shortbot-browser-profile 仍未登录 X，登录需要你本人过 2FA；不登录也没有双发风险，因为会发公开动作的调度器已经卸载了。附带说明：今天 09:01:36 那条 launchd 的 super-bot job 自己也跑了一份日报（它不碰 X 所以不是死的），所以今天有两份 2026-10-29 日报，两份都保留作为双 runner 事故证据，明天起只会有 1 份。","evidence":["launchctl print-disabled gui/501（3 个 => disabled）","launchctl list（仅剩 browser + restartdsh）","cron_read view=list（三条 cron enabled+active，nextRun 已核）","~/.dsh/storages/schedule.json（0 recurring task）","state/memory/super-bot.md:750-872（DSH 那份重复日报）与 874+（本报告）","state/published-posts.json#chuangzuo_round_91.metrics_samples（2 个采样点）","state/schedule.yaml:23,31,39,42,47,57"]}
+
+<!-- round -->
+### 日报 · 2026-10-30（Codex Automations 迁移后首日 · 统计窗口 10-29 09:05 → 10-30 21:50 +08:00）
+
+## 一句话
+调度层今天整体迁到 Codex Automations（4 条 cron 08:56 建、09:17 建），**首日三件事**：① X 互动线（`x-pulse-6`）**全天 0 次运行**（唯一没跑起来的线）；② X 创作线三次出稿但 **Codex 内置浏览器被 Work settings 禁用**，Cron 通道三连零发送；③ **21:40 靠 Frank 手动授权 + Computer Use AX 通道真发出 1 条原创**（Cursor 供应链投毒），这是今天唯一真正上 X 的内容。
+
+## 需要 Frank 知道（置顶）
+
+1. **🔴 `x-pulse-6`（X 互动 pulse）今天全天 0 次运行 —— 迁移后唯一没起来的线。**
+   `automation_runs` 表里今天只有 3 条历史记录（pipeline-12 09:32、automation 09:32、automation 12:37），**`x-pulse-6` 一条都没有**；`~/.codex/automations/x-pulse-6/` 下**没有 memory.md**（= 该 automation 从未执行过一轮）；全机 session 里也搜不到任何一条带 `只 like + reply，不发新帖` 提示词的 Codex 会话。
+   ⚠️ 后果：**X 互动线已停摆 ~21 小时**（上一轮真实 pulse 是 10-29 23:46–10-30 00:06 的 round_82，收尾时还做了 Mentions 全量回溯）。**inbound 覆盖存在真实缺口**，且这一段没做过任何回溯补扫 → 不能说「漏接 0 条」。
+2. **🟡 Codex 内置浏览器通道被 Work settings 全局禁用** —— `Local browser use is disabled in Work settings`，`getForUrl` / `browsers.list` / `documentation.get` 全部被同一句挡掉，且连本地纯调用都挡 → **无可绕过路径**（round_92 / 93 / 94 三轮全部零发送，验证了三次）。这是唯一还需要 Frank 本人在 Codex 设置里点一下开关的事。
+   ✅ **但绕路已验证成功**：21:40 那条是通过 **Frank 本人 Chrome（已登录 @FrankFika）+ Computer Use AX 通道**发出的 —— 不是 xb.py（那条 profile 仍未登录）。也就是说**发布通道本身是通的**，被卡的只是 Codex 内置浏览器这个前端。
+3. **🟠 `pipeline-12`（Codex cron）与 WorkBuddy chuangzuo automation 职责重叠**，今天两边都在跑：Codex 侧 round_92（09:32）/ round_94（20:52），WorkBuddy 侧 round_93（16:43）。**round 编号已被撞号重排**（详见下方异常 1）。要么二选一，要么明确分工。
+4. **🟠 迁移期真实档口丢失（不是机器睡眠，是"调度器还没建好"）**：今天 03:30/09:30/15:30/21:30 四档中，**03:30 档（Codex 侧）无人执行** —— 那时 Codex Automations 还没建（08:56 才建），而旧 Mavis runtime cron 线已在 10-30 早上被拆掉。**这一格是真的丢了**（无任何轮次段）。
+
+## 今日概览
+统计窗口：10-29 09:05 → 10-30 21:50；「今日」= 10-30 00:00 起。
+
+| 项目 | 窗口内 | 今日 |
+|---|---|---|
+| 创作 pipeline（Codex cron pipeline-12） | 2 轮（round_92 / round_94） | 2 轮 |
+| 创作 pipeline（WorkBuddy 侧代跑） | 1 轮（round_93） | 1 轮 |
+| **X 原创真发** | **1 条**（21:40，Cursor 供应链投毒） | **1 条** |
+| X 零发送轮次（浏览器被禁） | 3 轮 | 3 轮 |
+| Engagement pulse（x-pulse-6） | **0 轮**（该 automation 从未执行） | **0 轮** |
+| inbound reply | 0 | 0 |
+| outbound like | 4 | 0（今日无） |
+| outbound reply | 0（agent）/ 1（Frank 手动 @IncomprisSage） | 0（今日无） |
+| 小红书发布 | 1 条（10-29 17:12） | 0（今日无） |
+| 限流 / 2FA / xb.py exit 2 | 0 / 0 / 0 | 0 / 0 / 0 |
+| **状态** | 🟡 **注意**（内容侧已有 1 条真发；互动线停摆 + 通道待开） | |
+
+## 轮次真空期 🔴 成立：**pulse 线空转 ~21 小时；chuangzuo 丢 1 格（03:30）**
+
+按 SKILL 判据分两层看，两层结论不同：
+
+**① 末轮时间戳判据（会漏）**
+- pulse 末轮 = round_82（10-30 00:06 收尾）→ 距今 21h44m > 2×6h = 12h → **真空成立**
+- chuangzuo 末轮 = round_94（10-30 21:05）→ 距今 45 分钟 → 🟢 正常
+- super-bot 末轮 = 10-29 日报 → 距今 ~36h → 本 automation 迁移后首跑
+
+**② 排定档口台账（本轮实测，这才是主判据）**
+
+| 档口 | 线 | 投递记录 | 轮次段 | 结论 |
+|---|---|---|---|---|
+| 10-30 03:30 | chuangzuo | ❌ 无 | ❌ 无 | **丢失** —— 该时刻 Codex Automations 尚未建立（08:56 才建），旧 Mavis cron 线已拆 → 真丢格 |
+| 10-30 04:00 | pulse | ❌ 无 | ❌ 无 | **丢失**（同上，调度器未建） |
+| 10-30 09:30 | chuangzuo | ✅ 09:32:19 | ✅ round_92 | 正常 |
+| 10-30 09:37 | xhs | ✅ 09:32:22 | ✅（探测轮，零动作） | 正常 |
+| 10-30 10:00 / 16:00 / 22:00 | pulse | ❌ 无 | ❌ 无 | **丢失** —— 机器 10:20–13:23、14:59–17:36 合盖睡眠；且 `x-pulse-6` 全天无任何投递记录 |
+| 10-30 12:37 | xhs | ✅ 12:37:19 | ⚠️ **被用户中断** | 投递到了，但 13:24 被 turn_aborted，status 至今卡 IN_PROGRESS，无轮次段 |
+| 10-30 15:30 | chuangzuo | ❌（Codex 侧） | ✅ round_93（WorkBuddy 侧 16:43） | Codex 档口未跑，**由 WorkBuddy 顶班补上** |
+| 10-30 20:37 | xhs | ❌ 无 | ❌ 无 | **丢失**（20:17 机器重启） |
+| 10-30 21:30 | chuangzuo | ✅ 20:52:37 | ✅ round_94 | 正常（早 38 分钟触发） |
+| 10-31 01:00 | super-bot | ✅（本轮） | ✅ 本报告 | 正常 |
+
+- **机器侧根因（pmset 实测）**：10-30 10:20:17 合盖睡眠 → 13:23:45 才 FullWake；14:59–15:13、17:36–17:41、17:49–18:15 反复睡眠；**20:17:28 机器重启**（`kern.boottime`），Codex app 20:27:23 才起来。所以 10:00 / 16:00 / 20:37 三格的丢失 = **机器睡眠 + 重启**。
+- **调度侧根因（更关键）**：`x-pulse-6` 从 08:56 建好到 21:50，**跨过了它全部 4 个档口（10:00/16:00/22:00 + 02:00），一次都没被投递** —— 即使 08:29–13:24 机器是醒着的、app 也在跑。**这一条不是睡眠能解释的**，是 automation 本身没被触发（见下方异常 2）。
+- **对 inbound 覆盖的影响**：pulse 停摆 21h44m。round_82 收尾时（00:06）做过一次 Mentions 全量回溯，结论是「最新一条仍是 @marmot_stacks Oct 27，空窗 13.7h 内零新增」。**00:06 之后到现在没有任何一次扫描** → 这 21h44m 里的 inbound 状态是**未知**，不能报「漏接 0 条」，只能说「未扫描」。
+- **结构性结论（不变）**：本地 cron 依赖 runtime 存活，机器睡眠期间触发点无人执行且不补跑 —— 今天又多了一层：**Codex Automations 这条新线本身也没做到补跑**（03:30/04:00 两格直接消失）。
+
+## 创作摘要
+
+**今日唯一真发的一条**（21:40，Frank 手动授权，非 cron 产出）：
+- https://x.com/FrankFika/status/2116164234329657435
+- 素材：`1030-pm-cursor-claude-code-supply-chain`（Cursor 官方公告「Claude Code 扩展市场投毒」）
+- 447 字 · 2 张真实截图（cursor.com 公告页）· 闸门 soft 3 / PASS · sha `d35c7bac57cd451d`
+- ⚠️ **过程有波折**：首次发布（post_id `2116163230821478566`）**只带图没带正文** —— Computer Use 的 `set_value` 只改 DOM、不触发 X 的 React 状态；9:44 PM 改用剪贴板粘贴 + Edit post 补正文，**编辑后 status id 变更**，旧 id 已失效（指向 "There's a new version of this post"）。最终以 `2116164234329657435` 为准。
+- 实测：views **3** / replies **0**（刚发，非有效样本，**不据此下任何结论**）
+
+**三轮零发送（Codex cron + WorkBuddy 侧）**：
+| 轮次 | 时间 | 触发者 | 结果 |
+|---|---|---|---|
+| round_92 | 09:32–09:40 | Codex cron pipeline-12（09:30 档） | 零发送 · 备稿 Cursor 供应链投毒（sha `d35c7bac57cd451d`）|
+| round_93 | 16:43–16:52 | **WorkBuddy automation（fef98705）** | 零发送 · 同一备稿 + 13/12 一手核对 |
+| round_94 | 20:52–21:05 | Codex cron pipeline-12（21:30 档，早 38 分钟） | 零发送 · **改走 BBC 原文**，产出备稿 AI capex/现金流（sha `3bade5ee768fb2a7`，315 字，soft 0，2 张真实截图）|
+
+- **换簇确认**：今日两稿分属不同簇 —— Cursor 供应链安全（10-29 公告）/ AI capex 现金流（10-30 BBC）。与前 7 天（湿实验 binder / 验收尺子 / S-1 公允价值 / RCT 判断力 / GSA 采购）全部不同 → **主题仍分散，无 dedup 撑爆迹象**（近 7 天 25 个 pick，签名无连续 3 天同 topic）。
+- **AI 味闸门**：今日 15 条 receipt = **PASS 10 / FAIL 5 / 自动重写 0**。
+  - ⚠️ **5 条 FAIL 里有 4 条是自测样本，不是真实内容** —— 全部命中同一条硬规则 `frank.pivot_expand`（「问题来了」转折展开），来源是 21:0x 的 inline 探针（chars 14/23/30/31 的短字符串）+ 08:59 一次自测。**没有一条是当天要发的正文被拦**。
+  - 真实内容闸门结果：Cursor 稿 soft 3 PASS（16:49 / 20:54 / 21:28 三次过闸一致）· AI capex 稿 soft 0 PASS（21:04 两次）。
+
+## 互动摘要
+
+| 动作 | 窗口内 | 今日 |
+|---|---|---|
+| inbound reply | **0** | 0 |
+| outbound reply（agent） | 0 | 0 |
+| outbound like | 4 | **0** |
+| like-only | 4 | 0 |
+| 原创 post | 1（21:40 手动授权）| 1 |
+
+- 窗口内 4 个赞全部落在 10-29（agent 产出）：@dotey 10:14 · @jiqizhixin 10:18 · @vista8 23:54 · @_akhaliq 23:57。
+- 另 1 条 @IncomprisSage（10-29 21:01:56）是 **Frank 本人手动 reply**（`agent_generated: false`），round_82 平台侧对账时补记。
+- **今日（10-30）互动线零动作** —— 不是"没找到该点赞的人"，是 **`x-pulse-6` 这条 automation 一轮都没跑**。
+- 跳过项（来自 round_81/82）：@simonw（145 赞，赞列表太长曝光差 + 7 天 dedup 撞车）· @jiqizhixin（内核撞车）· @AnthropicAI（967 赞 / 56K views）· @dotey 回复帖 · @vista8 Quote 荐书 · @op7418 / @oran_ge（已拉黑）· For-you/Home 时间线（加密/Web3/时政污染）。
+- inbound 中文 KOL 比例：**今日 inbound 0 条 → 不可计算**。
+
+## 异常
+
+1. **🟠 `state/memory/chuangzuo.md` 轮次编号被撞号重排**（迁移期事故，已成事实）。
+   文件里现在同时存在两个 `chuangzuo_round_92`：
+   - L2339 `## chuangzuo_round_92 (2026-10-29 03:30–04:10)` —— 旧 Mavis 线的 10-29 03:30 轮（git HEAD 里就是它）
+   - L2461 `### chuangzuo_round_92 (2026-10-30 09:32–09:40)` —— 今天 09:32 的新轮
+   而 round_93 用的是 `##`（二级标题）、round_91/92/94 用 `###`（三级）→ **标题层级也不一致**。
+   → `scripts/tail-rounds.py` 靠 `<!-- round -->` 分隔符仍能正常切段（**读日志没问题**），但**任何按 round 编号做对账/引用的地方会取错轮**。另外迁移提交 `47bfe43` 把 10-29 的 round_92 段整体搬进了新文件，与今天的新 round_92 冲突。
+2. **🔴 `x-pulse-6` 建立了但从未被投递**（今天最该修的一个）。
+   证据链：① `automation_runs` 表中该 id **零行**；② `~/.codex/automations/x-pulse-6/` 下**无 memory.md**（其他三条 automation 都有，或已产出）；③ 全机 session 无该 prompt 的执行记录；④ `automations.last_run_at` = NULL，而 `next_run_at` = 2026-10-31 02:04:04 —— **调度器认为它"下次会跑"，但今天 4 个档口一个没触发**。
+   ⚠️ 注意：这**不能**用"机器睡眠"解释 —— 08:29–13:24 机器与 app 都在线，但 10:00 档口同样没触发。**根因需要 Codex app 侧查**（其他三条同样时段都能跑，所以不是全局调度器挂了，而是这条没被派发）。
+3. **🟡 XHS 12:37 轮被用户手动中断**（`turn_aborted` at 13:24:12），`automation_runs.status` 至今仍是 `IN_PROGRESS`，无轮次段、无 state 写入。xhs-probe 连续通过计数仍 0/3。
+4. **🟡 `console/` 与 `.infra_probe/` 是未提交的新目录**（`git status` 显示 untracked）—— 是今天 20:5x–21:4x 那批手动会话产出的自建面板（`http://127.0.0.1:8848`，29 项接口自检全绿），**不在 `state/` 治理范围内，super-bot 不做任何评价，只提示它们存在且未入库**。
+5. **🟢 10-29 03:30 轮与今日两轮的 sha256 口径差，已查明不是内容被改**：`prepublish.py` 哈希的是 **strip 掉 meta 行、`.strip()` 之后的正文**（447 字），磁盘文件多一个结尾换行（448 字）→ 两者同稿。round_93 当时记的「对不上」已在 round_94 复核澄清。
+
+## 明日建议
+
+1. **【最高优先 · 需要 Frank 亲手做】打开 Codex Settings → Work settings → Local browser use。**
+   这是 X 创作线 Cron 通道的唯一阻塞（3 轮验证）。但**优先级排序上它已不是"能不能发"的问题** —— 21:40 已证明 Frank 本人 Chrome + Computer Use AX 能发。所以真正要决定的是：**长期用哪条通道？**
+   - 方案 A：开 Local browser use → Codex cron 通道自愈，4 条 automation 口径统一（推荐）
+   - 方案 B：不开 → 接受"AX + Frank 本人 Chrome"为发布通道，把 cron 降级为只读扫描 + 备稿
+2. **【同样需要 Frank 亲手做】查 Codex app 为什么 `x-pulse-6` 没被派发。** 建议直接在 Codex App → Automations 面板看这条的 "next run" 是否在走、以及它的 02:00 档会不会触发。**X 互动线现在等于停摆** —— 而这条线是 inbound 的唯一探测器，停一天就等于 inbound 盲区多一天。
+3. **【拍板】`pipeline-12` 与 WorkBuddy chuangzuo automation 二选一。** 今天两边并行导致 round_92 撞号 + 15:30 档口双跑。建议：**留 Codex cron 一条**（它的档口台账是 Codex app 原生可见的），WorkBuddy 那条降级为"只读扫描 + 备稿"或直接停掉。
+4. **【修数据】统一 `chuangzuo.md` 的 round 编号与标题层级**（今天 10-29 与 10-30 都是 `###`，但 round_93 是 `##`），并在下次改动时把撞号的两个 round_92 拆开。此项属"改 state"范畴 → **需 Frank 点头再动**。
+5. **【今天新出现的第三件事待确认】21:40 那条 21:44 编辑后的 post_id 变更** —— `published-posts.json` 已记最终 id `2116164234329657435`，`account-safety.yaml#x.last_published_at` 也已同步到 21:40（**两者一致，无漂移**）。但**旧 id `2116163230821478566` 已失效**，后续任何对账都要用新 id。
+6. **【补扫】等 x-pulse-6 恢复后，第一件事补一次 Mentions 全量回溯**，把今天 00:06–21:50 这 21h44m 的 inbound 缺口补上（不能默认 0）。
+
+## 经验沉淀
+
+- **迁移期丢格 ≠ 睡眠丢格**：今天 03:30/04:00 两格丢在"新旧调度器交接的空窗"（新 automation 08:56 才建、旧 Mavis 线已拆），和"机器睡眠"是两回事，根因指向的动作也不同（前者查交接、后者查合盖）。**日报必须把这两类分开写**，否则 Frank 会去查错的方向。
+- **"投递记录有但没轮次段"还有第三种形态**：12:37 那轮 —— 投递成功、session 起来了，但被用户 turn_aborted 打断，status 卡在 IN_PROGRESS。这既不是触发器没触发，也不是 provider 超时，是**人为中断**。三种根因对应三种排查动作。
+- **发布通道 ≠ 浏览器通道**：Codex 内置浏览器被 Work settings 禁掉，但 Computer Use AX + 用户本人已登录的 Chrome 一样能把帖发出去（21:40 实证）。**"内置浏览器不可用"不等于"发不了"** —— 以后遇到这个阻塞，先报"通道 A 死了"，同时给"通道 B 可用"的实证，别写成"发不出去"。
+- **AX `set_value` 写不进 React 状态**：X 的编辑框不认 `set_value` 改 DOM —— 正文必须走剪贴板粘贴。这是 AX 发帖的第一个坑，值得固化进 publisher 技能。
+
+- **异常 / 升级**: 迁移期双调度器撞号（chuangzuo round_92 重复 + 标题层级不一致）；`x-pulse-6` 建立后全天零投递；XHS 12:37 轮被用户中断卡 IN_PROGRESS；内置浏览器通道被 Work settings 全局禁用（连续 3 轮零发送）；AX 通道 set_value 写不进 React 状态导致首次发帖丢正文、发后 id 变更；`automations.next_run_nominal_at` 字段按本地时解析 BYHOUR（与实际 UTC 派发口径差 8h，读该字段预测下一轮会错）。
+- **决策记录**: 本轮 super-bot **只读 + 报告**，未动 X、未 like/reply/post、未改 `state/*.yaml`、未改任何 automation 配置；仅追加了本文件（`state/memory/super-bot.md`）。
+
+<!-- round -->
+### 日报 · 2026-10-31（cron 自动 · 统计窗口 10-30 21:50 → 10-31 01:15 +08:00 · 24h 滚动 10-30 01:15 → 10-31 01:15）
+
+## 🔴 先看这两件（需要 Frank 拍板）
+
+1. **【自我更正 · 推翻昨天结论 #4】Codex Automations 的 RRULE `BYHOUR` 是按「本地时」解析的，不是 UTC。**
+   → 后果：**日报实际每天 01:00 CST 跑（不是 09:00）**；pipeline-12 实际 01:30/07:30/13:30/19:30；xhs 实际 01:37/04:37/08:37/12:37；x-pulse-6 实际 02:00/08:00/14:00/20:00。**四条线全部比文档早 8 小时。**
+   证据（三条独立）：
+   - 本轮自身：super-bot 在 **10-31 01:01:12 CST** 派发（app 连续存活，非补跑）；app 跑完后把 `next_run_nominal_at` 写成 **11-01 01:00:00 CST**、`next_run_at` 写成 11-01 01:01:34 CST。若按 UTC 读，这两字段应是 09:00 CST。
+   - 10-30 09:32:19/22 那对同时刻派发（pipeline-12 + xhs，间隔 3 秒）：xhs 若按 UTC 读，档口是 09:37 → 这次派发会「早 4 分 38 秒」，不可能。按本地读（01:37/04:37/08:37/12:37）则 08:37 档因 app 不在而错过 → 09:32 重启后补跑，成立。
+   - `next_run_nominal_at` 四个值全部只与本地读自洽：super-bot 01:00 CST、pipeline-12 01:30 CST、xhs 01:37 CST、x-pulse-6 02:00 CST。
+   **昨天的教训**：昨天拿「xhs 12:37 整点命中 + pipeline-12 09:32≈09:30」判成 UTC 派发口径 —— 这两条其实同时兼容本地读（12:37 在本地档口里；09:32 那次是补跑不是档口命中），证据本身不具区分力。昨天的指示「下轮对比 next_run_at 与当日实际投递时刻」是对的，照做即得结论。
+2. **`x-pulse-6`（X 互动线）连续第 2 天 0 派发 —— 今晚 02:00 CST 是判决时刻。**
+   证据已升级（昨天的证据链有缺陷，见下）：`state_5.sqlite#threads` 全量表 + `codex.db` 与 `codex-dev.db` 两个 `automation_runs` 表交叉核对 → x-pulse-6 迁移以来**一个 thread、一次派发都没有**；`last_run_at`=NULL；`~/.codex/automations/x-pulse-6/` 无 memory.md。
+   今晚 02:00 CST 它第一次拥有一个「机器醒着 + app 活着」的档口：`pmset` 实测 20:17:38 重启后 **Sleep/Wakes = 0**，app 20:27:21 起连续存活，Codex runtime 日志 13:24→20:52 有 448 分钟空档（昨晚那段时间 app 不在）。
+   → **若 02:00 仍不派发，睡眠/app-down 因素被彻底排除**，只剩 app 派发层本身（疑点：它的 `updated_at` 自 `created_at` 起从未变过，而另外三条都被写过）。
+
+## 一句话
+昨晚之后机器没再睡过、app 连续存活 4h48m，但**这个日报是 01:01 跑出来的** —— 因为 RRULE 的 BYHOUR 被 app 按本地时解析（不是 UTC），四条 automation 全部比文档早 8 小时；而 X 互动线 `x-pulse-6` 仍是唯一一条一次都没被派发的线，它今晚 02:00 将迎来迁移后第一个「机器醒着」的档口。
+
+## 今日概览（24h 滚动：10-30 01:15 → 10-31 01:15）
+- 创作 pipeline：跑了 **3 轮**（round_92 09:32 / round_93 16:43 WorkBuddy / round_94 20:52）· **cron 通道发 X 0 条** · 另有 **1 条手工授权真发**（21:40 post_id `2116164234329657435`，走 Frank 本人 Chrome + AX，非 cron 轮次产出）
+- Engagement pulse：跑了 **0 轮** · inbound **0** · outbound like+reply **0** · like-only **0** —— X 互动动作已连续 **25h14m 零动作**（最后一次是 10-29 23:57 的 like @_akhaliq）
+- 小红书线：探测轮 1 次（10-30 09:33，零动作，连续通过计数仍 **0/3**）· 12:37 那轮仍卡 IN_PROGRESS · 发布 0 条
+- 闸门（10-30 全天）：18 条 receipt → **PASS 12 / FAIL 6 / 自动清理 0**。6 条 FAIL 全部 `origin=inline`、同一条硬规则 `frank.pivot_expand`（命中「问题来了」），来自 Frank 手工 session 里的 inline 探针，**没有一条是当天要发的正文**。10-31 至今 0 条。
+- 异常：限流 0 · 浏览器不可用 **4 轮连续**（Work settings 禁用 Local browser use）· x-pulse-6 零派发 · XHS 轮次卡死 1 · 调度口径错位 1（全局）
+- 状态：🔴 **需介入**（X 互动线停摆 + 四条 automation 调度口径全部错 8 小时）
+
+## 轮次真空期 🔴 成立：**pulse 线连续 ~25 小时零轮次**
+
+按 SKILL 判据（末轮时间戳 + 排定档口台账）双层核对：
+
+**① 末轮时间戳判据**
+- pulse 末轮 = `pulse_round_82`（2026-10-29 23:46 → 10-30 00:06 收尾）→ 距今 **24h55m** > 2×6h = 12h → **真空成立**
+- chuangzuo 末轮 = `chuangzuo_round_94`（10-30 21:05）→ 距今 3h10m → 🟢 正常（下一档 01:30 档即将到）
+- super-bot 末轮 = 上一份日报（10-30 21:50）→ 距今 3h25m → 🟢 正常
+
+**② 排定档口台账（按「本地时」口径重算 —— 这正是本轮更正带来的变化）**
+
+x-pulse-6 迁移后应跑档口（本地时 02:00/08:00/14:00/20:00；文档写的 04:00/10:00/16:00/22:00 是 UTC 读，见上）：
+
+| 档口 | 落盘轮次 | 结论 | 根因（分层，不混写） |
+|---|---|---|---|
+| 10-30 14:00 | ❌ 无 | **丢失** | 机器 13:23:45 醒着，但 Codex runtime 13:24→20:52 无日志（app 不在）→ app-down |
+| 10-30 20:00 | ❌ 无 | **丢失** | 19:21 合盖睡眠 → 20:17:38 机器重启 → app 20:27:21 才起 |
+| 10-30 20:52 重启补跑批次 | ❌ x-pulse-6 未在其中 | **异常** | 同一批次里 super-bot + pipeline-12 都被补跑了，唯独它没有 → 非睡眠，是 app 派发层 |
+| 10-31 02:00 | 待观察 | — | 机器零睡眠 + app 连续存活 → **判决时刻** |
+
+- **对 inbound 覆盖的影响（不能报「漏接 0 条」）**：`pulse_round_82` 收尾（10-30 00:06）做过一次 Mentions 全量回溯，结论是「最新一条仍是 @marmot_stacks Oct 27」。**00:06 之后至今 ~25 小时没有任何一次扫描** → 这段 inbound 状态**未知**。`inbound-replies.json` 里 10-29 起 0 条新记录，只能说明「没记过账」，不能说明「没发生过」。
+- **结构性结论**：本地 cron 依赖 runtime 存活，睡眠期间不执行且不补跑 —— 但本轮发现**连「醒着的时候」也有整条线被跳过**（x-pulse-6），这是比睡眠更硬的问题。
+
+## 创作 pipeline（chuangzuo）
+- **cron 通道已发 X URL**：无（round_92/93/94 三轮全部零发送）
+- **非 cron 通道真发 1 条**（10-30 21:40，Frank 授权）：https://x.com/FrankFika/status/2116164234329657435
+  - 447 字 · 2 张真实截图（cursor.com 官方公告页）· 闸门 soft 3 / PASS · sha `d35c7bac57cd451d` · 最终 post_id（21:44 编辑后）`2116164234329657435`，旧 id `2116163230821478566` 已在 `seen-posts.json` 标 `own_posted_superseded` 留痕
+- **单帖实测数据**：只有 **21:44 一个采样点**（permalink 详情页口径：views 3 / replies 0）→ 按诚实边界，**单个采样点不得据此下任何互动结论**，本轮也无新采样
+- 轮次记录（**档口归属需按本地时重新理解**）：round_92 09:32 = 补跑（欠 01:30+07:30 两档）· round_93 16:43 = WorkBuddy automation 顶班 · round_94 20:52 = 补跑（欠 19:30 档）
+- 异常：内置浏览器被 Work settings 禁用，**连续第 4 轮零发送**（`Local browser use is disabled in Work settings`）；10-30 20:52 起 machine 零睡眠、app 连续存活，这条限制依然是纯通道阻塞
+
+## Engagement pulse
+- inbound reply：**0 条**（最后一条 recorded inbound 是 10-28 04:04 @marmot_stacks）
+- outbound like+reply：**0 条**（最后一次 outbound 动作 10-29 23:57 like @_akhaliq）
+- like-only：**0**
+- 跳过：无从统计（本轮无 pulse 轮次）
+- **X 互动动作连续 25h14m 零动作**，且 **~25h 的 inbound 完全未扫描**
+
+## 状态一致性核对（🟢 全绿）
+- `published-posts.json` 末条 = `2116164234329657435` @ 2026-10-30T21:40 ↔ `private/account-safety.yaml#x.last_published_post_id` / `last_published_at` **完全一致，无漂移**（昨天遗留的核对项 #5 已闭环）
+- `index.json#seen` / `#published` 两条 post id 都在（旧 id 有 superseded 留痕，非脏数据）
+- `seen-posts.json` 新 id 与旧 id 均在
+- **没有双 runner**：threads 表 10-30 只有 1 个 super-bot automation thread、10-31 1 个；launchd 里 `com.fangchen.shortbot.{pulse,chuangzuo,super-bot}` 三个 job 仍是 disabled/未加载（`launchctl list` 只剩 browser + restartdsh）
+
+## 异常
+| # | 异常 | 影响 |
+|---|---|---|
+| 1 | **RRULE BYHOUR 按本地时解析**（自我更正昨天结论） | 4 条 automation 全部比文档早 8h；日报变成 01:00 跑 |
+| 2 | **x-pulse-6 连续 2 天 0 派发**，且昨晚重启补跑批次里被跳过 | X 互动线停摆 25h+，inbound 盲区持续扩大 |
+| 3 | 内置浏览器被 Work settings 禁用（连续 4 轮） | 创作线 cron 通道永远只能备稿不能发 |
+| 4 | XHS 12:37 轮 status 卡 IN_PROGRESS（被用户 turn_aborted） | xhs-probe 连续通过计数 0/3，无法推进 |
+| 5 | **昨天的证据链缺陷（方法论修正）**：昨天用 `codex.db#automation_runs` 零行作为 x-pulse-6 未派发的证据① —— 但该表**本身不完整**（只有 3 行；另 3 行在 `codex-dev.db`，两表集合不重叠） | 结论没错但证据不可靠；正确口径 = `state_5.sqlite#threads`（全量、app 自己写的）+ 两库交叉核对 + memory.md 存在性 |
+| 6 | `chuangzuo.md` 里 round_92 撞号仍重复（L2339 旧轮 / L2461 新轮），round_93 标题层级 `##` 与 91/92/94 的 `###` 不一致 | 按编号对账会取错轮；tail-rounds.py 不受影响 |
+
+## 经验沉淀
+- **「存储字段按本地时、派发按 UTC」是错的 —— 两者都是本地时**。判定这类问题只能靠**同一条 automation 的两个独立读数**：一次「实际派发时刻」+ app 自己写下的 `next_run_nominal_at`/`next_run_at`。用「某次命中了某个看起来像档口的时刻」是弱证据（12:37 同时兼容两种读法，09:32 那次是补跑不是档口）。**昨天留下的那句「下轮对比 next_run_at 与实际投递时刻」才是正确方法，本轮照做即得答案。**
+- **同时刻成对派发 = 重启补跑，不是档口命中**。pipeline-12 + xhs 相隔 3 秒一起跑、super-bot + pipeline-12 相隔 2 秒一起跑，两次都紧跟 app 启动（09:31 升级、20:27 重启）→ 判档口命中必须排除补跑批次。
+- **`automation_runs` 表不可作唯一账本**：codex.db 与 codex-dev.db 两张表各自只存了一部分 run，行集合不重叠。**`state_5.sqlite#threads` 才是 app 写下的全量事实源**（含 title + created_at），判断「某 automation 派发过没有」一律用它。
+- **「一个采样点」要主动守住**：21:40 那条帖只有 21:44 的 views 3 / replies 0 一个采样点，本轮也没有新采样 → 日报里只报「有 1 个采样点」，不给互动结论、不做跨帖对比。
+
+## 明日建议（按优先级）
+1. 🔴 **修 RRULE 时区错位（需要你拍板，我没动任何 automation 配置）**：把 4 条 RRULE 改成「按本地 CST 写」——
+   `super-bot-09-00`: BYHOUR=**9** ｜ `pipeline-12`: BYHOUR=**3,9,15,21** ｜ `automation`(xhs): BYHOUR=**9,12,16,20** ｜ `x-pulse-6`: BYHOUR=**4,10,16,22**。
+   不改的话：日报永远凌晨 1 点、创作线永远 01:30/07:30/13:30/19:30、pulse 永远 02:00/08:00/14:00/20:00、xhs 永远 01:37/04:37/08:37/12:37。
+2. 🔴 **今晚 02:00 CST 盯 `x-pulse-6`**：这是它迁移后第一个「机器醒着 + app 连续存活」的档口（pmset：重启后 Sleep/Wakes=0）。**若仍 0 派发 → 睡眠因素彻底排除，属 app 派发层问题**，请在 Codex App 侧考虑重建该条 automation（可先试：编辑一次它的 prompt 让 `updated_at` 变化，看是否恢复派发）。
+3. 🟡 **01:30 / 01:37 两档 20 分钟内就到**（pipeline-12、xhs）：观察 pipeline-12 是否真发（浏览器仍被禁 → 大概率仍零发送，除非走 AX 绕路）；xhs 若跑，探测连续计数能否走到 1/3。
+4. 🟡 **补扫 inbound**：pulse 一恢复，第一件事是 Mentions 全量回溯 10-30 00:06 → 现在的 ~25h 缺口（不能默认 0）。
+5. 🟡 **内置浏览器**：Work settings 打开 Local browser use + 在内置浏览器登录 x.com（不解决这条，创作线每轮都停在「稿子备好、发不出去」）。
+6. 🟢 备稿 B 仍在等通道：`outputs/1030-pm-ai-capex-cashflow/x.txt` sha `3bade5ee768fb2a7` · 315 字 · soft 0 · BBC 一手 12/12 核对。
+
+- **异常 / 升级**: ① **自我更正** —— RRULE `BYHOUR` 实为本地时解析（推翻昨天结论 #4），4 条 automation 全部早 8 小时；② `x-pulse-6` 连续 2 天 0 派发，且昨晚重启补跑批次中被跳过（睡眠因素已排除，今晚 02:00 判决）；③ 内置浏览器 Work settings 禁用连续 4 轮；④ XHS 12:37 轮卡 IN_PROGRESS；⑤ 修正昨天的证据链缺陷（`automation_runs` 表不完整 → 改用 threads 表）；⑥ `chuangzuo.md` round_92 撞号仍未修（需 Frank 点头改 state）。
+- **决策记录**: 本轮 super-bot **只读 + 报告**，未动 X、未 like/reply/post、未改 `state/*.yaml`、未改任何 automation 配置（含 super-bot 自己的 RRULE —— 虽是我的配置，但属 worker 调度配置范畴，按硬约束只报告不擅改）；仅追加了本文件（`state/memory/super-bot.md`）。
+
+<!-- round -->
+### 日报 · 2026-10-31（补跑 · 统计窗口 10-30 21:50 → 10-31 17:40 +08:00）
+
+## 一句话
+**调度层事实与台账不符：`state/schedule.yaml` 声称「10-31 四条线已由 install-launchd.sh 重新装回」，但 `launchctl list` 实测四个调度 job 全都不在** → 今天 chuangzuo 丢 5+ 档、x6 pulse 丢 14:00 档（机器醒着丢的）、super-bot 自己的 09:00 档也丢了（本报告是 17:36 补跑）；X 侧 agent 发布通道实际全断，全靠 Frank 手动发（3 根帖 + 2 reply）和 pulse 线 Mavis 通道做互动（1 reply + 2 like）。
+
+## 今日概览
+| 项目 | 今日 |
+|---|---|
+| 创作 pipeline 落盘轮次 | 3 轮（round_95 01:45 另一 session / round_96 04:26 WorkBuddy 代跑 / round_97 06:00 Codex pipeline-12），**全部零发送** |
+| X 原创真发（agent 链路） | 1 条（04:50 DOJ 幽灵学生帖，Fang 会话内直接授权真发，走本人 Chrome + AX，**非 cron 轮次产出**） |
+| X 根帖（Frank 账号侧直发，pulse 对账补账） | 2 条（10:13 AI 基建债 `2116352771767349461` / 11:46 vibecoding `2116376167532097692`） |
+| X reply（Frank 手动） | 2 条（04:47 @LuBtc888 / 08:55 @RachidSettas「该」） |
+| Engagement pulse 落盘轮次 | 4 轮（round_83 x6 02:00 档零动作 / round_84 x6 08:00 档零动作 / round_85 Mavis 10:00 / round_86 Mavis 16:00） |
+| inbound reply | 1（round_85 回 @evvvvince，Cursor 供应链帖回复区） |
+| outbound like | 2（round_86：@xiaohu Subvocal AI 眼镜 + @jiqizhixin ScholarEvolve，**两条赞前 likes 均为 0**，Frank 排 liked-by 第 1 位） |
+| outbound reply | 0（配额 0，Frank 10-27 口径） |
+| 小红书发布 | 0（2 轮探测轮零动作：通道不通 + automation_enabled=false；备稿 capex 稿 sha256 未变） |
+| AI 味闸门 | 46 次：PASS 30 / FAIL 16 / 自动清理 1 —— FAIL 全部是 TC capex 稿（06:17–06:34 同稿打磨）与 capex 稿（01:51）的**草稿迭代**，最终落盘版均 PASS，无拦下后发出 |
+| 限流 / 2FA / 误发 | 0 / 0 / 0 |
+| **状态** | 🔴 **需介入**（调度器台账失实 + X agent 发布通道全断 + 备稿积压 2 篇） |
+
+## 轮次真空期 🔴 成立：全天 9+ 档口丢失，其中 3 档是机器醒着丢的
+
+按排定档口台账逐格核对（pmset 实测睡眠段：02:13–04:24 / 07:50–09:58 / 15:24–16:18）：
+
+| 档口 | 线 | 结果 | 根因 |
+|---|---|---|---|
+| 02:00 | pulse x6 | ✅ round_83（零动作） | 机器醒后补投递，04:40 收尾 |
+| 03:30 | chuangzuo | ✅ round_96（WorkBuddy 代跑，零发送） | 通道不通 |
+| 04:00 | pulse Mavis | ❌ **丢失** | 睡眠 + Mavis runtime 不在位（round_85 台账已记 MISSING） |
+| 06:00 | chuangzuo pipeline-12 | ✅ round_97 | — |
+| 08:00 | chuangzuo | ❌ **丢失** | 睡眠（07:50–09:58） |
+| 08:00 | pulse x6 | ✅ round_84（零动作） | 睡眠夹缝中 2 分钟探完 |
+| 09:00 | **super-bot（我自己）** | ❌ **丢失** | 睡眠 + launchd 未加载 + Codex automation 未派发 → 日报延迟 8.6h，本轮 17:36 补跑 |
+| 09:37 | xhs | ❌ **丢失** | 睡眠（xhs.md 只有 04:38 / 08:37 两轮，与 yaml「37 9,12,16,20」排定对不上，08:37 轮疑为代跑） |
+| 10:00 | chuangzuo | ❌ **丢失** | **机器醒着** —— pipeline-12 未派发 + launchd 不在 |
+| 10:00 | pulse Mavis | ✅ round_85 | — |
+| 12:00 | chuangzuo | ❌ **丢失** | **机器醒着**，同上 |
+| 12:37 | xhs | ❌ **丢失** | **机器醒着**，同上 |
+| 14:00 | chuangzuo + pulse x6 | ❌ **双双丢失** | **机器醒着** —— x-pulse-6 至今只派发过 02:00/08:00 两格（round_84 已记） |
+| 15:30 / 16:00 / 16:30 | chuangzuo | ❌ **丢失** | 睡眠（15:24–16:18）+ 调度器缺席 |
+| 16:00 | pulse Mavis | ✅ round_86（唤醒后 16:24 执行） | — |
+| 16:37 | xhs | ❌ **丢失** | 睡眠尾段 |
+
+- **根因分层**：① `launchctl list` 实测只有 `console / browser / restartdsh` 三个 job —— schedule.yaml 写的「四条线已装回」**不成立**，`logs/local/` 今天也只有本轮 super-bot 一份日志，launchd 线一轮都没跑；② Codex Automations 的 pipeline-12 / x-pulse-6 派发不稳定（醒着也不派）；③ Mavis runtime cron 反而是今天最稳的一条（10:00/16:00 都跑了）。**三条调度源并存但谁也不覆盖谁的空窗。**
+- **对 inbound 覆盖的影响**：**无已知漏接**。round_85 对 34h 空窗做了全量回溯补扫（抓到 3 候选，2 条是 Mentions 页漏的）；round_86 又实扫通知页 + 6 个自有原帖回复区证实 0 新增。当前未扫描区间 = 16:27 → 17:40（约 1.2h，属正常间隔）。
+
+## 创作 pipeline
+- **已发 X URL**：
+  - https://x.com/FrankFika/status/2116271569228181556（DOJ 幽灵学生，04:50，Fang 授权真发）
+  - https://x.com/FrankFika/status/2116352771767349461（AI 基建发债，10:13，Frank 直发）
+  - https://x.com/FrankFika/status/2116376167532097692（vibecoding → bot 对话框，11:46，Frank 直发）
+- **单帖实测数据**：DOJ 帖 round_97 采样 **53 views / 0 likes / 0 replies**（AX 树口径，**单采样点，不下结论**）；另两条暂无采样。
+- **备稿积压（均过闸门未发）**：`outputs/1031-am-sierra-arr/`（Sierra ARR 破 $400M，323 字，soft 0）、`outputs/1031-am-tc-ai-capex-debt/`（TechCrunch AI 基建发债，497 字，soft 3）。12h 原创闸门按 last_published_at=11:46 计 → **23:46 才解禁**，今晚无可发窗口。
+- **异常**：round_97 实测推翻了连续 5 轮的旧结论 —— **Computer Use AX 通道在 cron 上下文里可用**（sky.get_app_state / press_key 真执行），但 schedule.yaml 与 account-safety.yaml 仍写「AX 已废止 / 唯一通道 = xb.py」，而 xb.py profile 未登录 → **口径与现实矛盾，发布通道事实上全断**。
+
+## Engagement pulse
+- **inbound 回了谁**：@evvvvince（触发帖 Cursor 供应链 `2116164234329657435` 回复区，10-30 22:36 自动更新吐槽帖；round_85 回）——该条是 Mentions 页**漏掉**、逐帖翻回复区才抓到的。
+- **outbound like**：@xiaohu（https://x.com/xiaohu/status/2116445350865367066，16:24）+ @jiqizhixin（https://x.com/jiqizhixin/status/2116391715796099084，16:27），收尾自查 likes 页无误赞。
+- **like-only**：无（2 条即全部 like）。
+- **跳过**：@dotey ×2（67 赞已起量 / 传谣帖撞中文 AI 名强检）、@swyx、@bindureddy（已起量）、@lxfater（点赞吐槽 AI 机器人的帖 = 自曝，风险收益倒挂）、@oran_ge / @op7418（拉黑不扫）、@ajs6888 / @surlymochan（inbound 撞内核留痕 skip）。
+- **异常**：Codex 内置浏览器被 Work settings 禁用已连续 6 轮（x6 两轮零动作的直接原因）；Mavis 侧 mcp_browser 同名义但不受此限 —— 「内置浏览器被禁」只对 Codex runtime 成立。
+
+## 小红书发布线
+- 今日 2 轮探测（04:38 / 08:37–10:02），零发布。`xhs-publish-state.json`：automation_enabled=false（等 Frank 说「开」），通道被 Work settings `localBrowserUse` 禁（账号级，本机不可改）。
+- 备稿就绪：`outputs/1030-pm-ai-capex-cashflow/`「谷歌AI吃广告，一天蒸发5000亿」，sha256 `2c9a9816…67001` 未变，闸门全 PASS，通道一开即可走二次发布流程。
+- 09:37 / 12:37 / 16:37 三个排定档口均无落盘轮次（12:37 档机器醒着）。
+
+## 经验沉淀
+- **台账失实比调度器挂掉更危险**：schedule.yaml 写「已装回」→ 没人再查 → 四条线裸奔一天。以后日报把 `launchctl list | grep shortbot` 列为固定核对项。
+- **「机器醒着也丢档」是今天的新增根因**：10:00/12:00/12:37/14:00 四档丢失与睡眠无关，纯调度器缺席。
+- round_86 的可复用发现：「赞前 aria-label=0 Likes」是最强可测量信号，比「<2h 且 <20 赞」准。
+
+## 明日建议（需 Frank 拍板）
+1. 🔴 **核 launchd 安装真相**：`scripts/install-launchd.sh` 是否真执行成功？当前 launchctl 无四个 job —— 要么重装，要么把 schedule.yaml 的「已装回」改回实话。
+2. 🔴 **X 发布通道三选一**：① Codex Work settings 打开 Local browser use；② xb.py profile 人工登录一次（需你过 2FA）；③ 正式把 AX 通道从「已废止」改回「可用」（round_97 已实测 cron 里可用，与台账矛盾）。不定的话创作线继续零发送。
+3. 🟠 **多 runner 归一**：Mavis / Codex Automations / WorkBuddy 三家并存、互不补窗，建议只留一家 + 明确兜底。
+4. 🟡 今晚 20:00 / 22:00 档机器保持开盖醒着（或接受丢失）；XHS automation_enabled 仍等你一个「开」字。
+- 建议人工介入：**有，①②③ 均需 Frank 本人操作**。
+
+:::inbox-item{"urgency":"high","title":"调度层台账失实：schedule.yaml 说 launchd 四线已装回，launchctl 实测全不在；今天 9+ 档口丢失，super-bot 09:00 档也丢了","summary":"10-31 全天：chuangzuo 落盘 3 轮全零发送（08:00–16:30 五档连丢）；pulse 落盘 4 轮（Mavis 10:00/16:00 有动作：1 inbound reply + 2 like；Codex x6 两轮零动作）；xhs 2 轮探测零发布；super-bot 09:00 档丢失（机器睡眠 + 调度器缺席），本报告 17:36 补跑。根因分层：① launchctl list 只有 console/browser/restartdsh —— schedule.yaml 声称的『四条线已由 install-launchd.sh 装回』不成立，logs/local 今天只有本轮一份日志；② 10:00/12:00/12:37/14:00 四档是机器醒着丢的，纯调度器缺席，与睡眠无关；③ Mavis/Codex/WorkBuddy 三调度源并存互不补窗。inbound 无已知漏接（round_85/86 两次回溯实扫证实）。X 侧 agent 发布通道事实全断：内置浏览器被 Work settings 禁（连续 6 轮）、xb.py 未登录、AX 实测可用但台账写已废止 —— 今天 3 条根帖全靠 Frank 手动/授权发。","action":"三件需你本人拍板：① 核 install-launchd.sh 是否真跑过，要么重装 launchd 四 job、要么把 schedule.yaml 改回实话；② X 发布通道三选一：开 Codex Work settings 的 Local browser use / xb.py profile 人工登录（2FA）/ 把 AX 通道从『已废止』改回可用（round_97 已实测 cron 里真能动作）；③ 多 runner 归一，只留一家调度 + 明确兜底。另：今晚 20:00/22:00 档请保持机器开盖。","evidence":["launchctl list（2026-10-31 17:36 实测，无 chuangzuo/xhs/pulse/super-bot job）","state/schedule.yaml 2026-10-31 权威口径段","logs/local/（今日仅 super-bot-20261031-173622.log 一份）","pmset -g log（睡眠段 02:13–04:24 / 07:50–09:58 / 15:24–16:18）","state/memory/pulse.md pulse_round_83~86","state/memory/chuangzuo.md round_95~97","state/memory/xhs.md 04:38 / 08:37 两轮","state/xhs-publish-state.json（automation_enabled=false）","state/gate-receipts.json（今日 46 次：30 PASS / 16 FAIL / 1 清理，FAIL 全为草稿迭代）"]}

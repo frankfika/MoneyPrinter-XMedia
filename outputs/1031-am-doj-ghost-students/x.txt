@@ -1,0 +1,17 @@
+美国司法部刚起诉了 5 个人，身份是「幽灵学生」。教育部已经查出 83 万个可能造假的助学账户，真按幽灵学生算，总损失接近 1.3 亿美元。
+
+造假那侧全程用 AI：填 FAFSA、完成课程、甚至在网课教室里放一个假学生，让学校以为真人在上课。DOJ 的 McDonald 说，「看起来这个幽灵学生真的在把课上了」。
+
+抓的那侧也用 AI。自动打风险分，判高风险直接拒发。FTC 主席 Ferguson 的说法是，「电脑帮我们找到它，我们把钱留在机构里」。
+
+但这套东西有误伤。给个具体的：专注大学入学数据的 NCAN 顾问 Keller 说，很多低收入学生连驾照都没有。证件这一关就卡住，补材料可能还要再交一笔钱。
+
+自动化省下来的是审核人力，代价转手交给了最没余量的人。
+
+原文：https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/
+# material_id: 1031-am-doj-ghost-01
+# source: https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/
+# treatment_hint: first_person_original
+# verified_facts: 起诉 5 人（原文 five individuals / 5 arrests so far）/ 教育部查出 83 万个可能造假账户（over 830,000 potentially fraudulent）/ 若全为幽灵学生总损失接近 1.3 亿美元（close to $130 million）/ AI 用来填表、完成课程、在在线课堂造出假学生形象 / McDonald 原话 It looks like the ghost student is actually completing the class / FTC 主席 Ferguson 原话 The computers help us find it, and we keep the money in the agency / 自动系统打风险分，high risk 直接拒发 / NCAN 顾问 Keller：很多低收入学生没有驾照，可能被卡并额外付费
+# posted_url: https://x.com/FrankFika/status/2116271569228181556
+# posted_at: 2026-10-31T04:54:46+08:00

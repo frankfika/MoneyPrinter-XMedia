@@ -3363,3 +3363,293 @@ DSH launchd 的同档口 pulse-20261029-040004 已 `SKIPPED NOT_LOGGED_IN`（xb.
 3. **`index.json` 的写后校验不能一刀切要求「seen 和 outbound 同时存在」** —— skip 类记录（闸 1 留痕）只进 `seen`、**不进** `outbound`（没出手就不该进动作账）。本轮脚本首版把这条误判成「校验失败」重试了一次（数据本身是对的，重试后幂等跳过，无副作用）。
 4. **「早赞」判据第三次生效**：本轮两格都给了「赞列表 < 20 人」且发得晚的帖（11 人 / 9 人），没有一个是 145 / 967 赞的大盘帖；@simonw 那条 145 赞的虽然内容最贴人设，也让位了 —— 同一个赞名额，曝光效率差一个量级。
 5. **Mentions 页逐条对账发现了一个「扫到但没记账」的常驻缺口**（@mumblinglewis）—— 「扫过、0 候选」的结论成立，但**候选本身没进台账** → 每轮都要重新评估同一批旧帖。补记留痕后这条不会再复现。
+
+<!-- round -->
+### pulse_round_83_cron_x6 (2026-10-31 02:04–04:40 +08:00) — 本轮零动作：唯一通道（内置浏览器）被 Work settings 禁用；x-pulse-6 迁移后首次派发即撞上
+
+**模式**：Codex Automations cron · `x-pulse-6` · **该 automation 自 2026-10-30 08:56:15 建立以来的首次派发**（`state_5.sqlite#threads` 全库只有本轮 1 条 `Automation ID: x-pulse-6` 线程 `01a18dfb`，created_at 2026-10-31 02:04:12 CST）。
+**通道**：**唯一通道 = Codex 内置浏览器 —— 本轮不通 → 本轮零动作**（prompt 的模式检测 ② 命中）。
+
+#### 🔴 开工自检 · 排定档口台账（先查档口，再刷 X）
+
+| 项 | 实测 | 结论 |
+|---|---|---|
+| 末轮时间戳 | `pulse_round_82` 收在 2026-10-30 00:06 | 距今 **28.5h > 2×6h = 12h** → **判定「上一档口丢失」成立** |
+| x-pulse-6 建号时间 | `~/.codex/automations/x-pulse-6/automation.toml` created_at **2026-10-30 08:56:15** | 迁移到 Codex Automations 后到本轮之前**从未派发过** |
+| 本档口 | 本地 **02:00** 档（实际 02:04:12 投递） | ✅ 本格命中 |
+| 缺失档口 · 10-30 14:00 | 无线程记录 | 根因：**app 不在**（runtime 13:24→20:52 无日志，机器本身醒着） |
+| 缺失档口 · 10-30 20:00 | 无线程记录 | 根因：**app 派发层** —— 19:21 合盖睡眠 → 20:17:38 重启 → 20:27:21 app 起 → 20:52:35/37 补跑批次里 super-bot + pipeline-12 都派了，**唯独 x-pulse-6 没有**（机器重启后没有补跑这一格） |
+| 并发写者 | `state/memory/pulse.md` git 干净；`launchctl` 里只有 `com.fangchen.shortbot.browser` / `restartdsh`，无 pulse launchd job；xhs / pipeline-12 / super-bot 三个线程均已 PENDING_REVIEW 收尾 | 本轮**无并发 pulse 写者**，落盘无撞号风险 |
+
+→ **判定：10-30 的 14:00 与 20:00 两格连续丢失**，round_82（10-30 00:06）→ 本轮形成 **28.5h 空窗**。
+
+#### 通道检测（决定性，四条都实测，不是推测）
+
+| 通道 | 实测结果 |
+|---|---|
+| Codex 内置浏览器（`browser-client.mjs` @ `plugins/cache/openai-bundled/browser/26.1023.51421/`） | `setupBrowserRuntime()` → OK（执行器在位）；但 `agent.browsers.list()` / `getForUrl("https://x.com/FrankFika")` / `get(chrome\|extension\|browser\|iab)` / `documentation.get()` → **同一句 `Local browser use is disabled in Work settings`** |
+| `mcp__pencil__browser` | `transport not connected to app: desktop`（Pen.app 桌面端 MCP 未连；按 `open -a /Applications/Pen.app` 拉起后再试，仍是同一句） |
+| AX / Computer Use（`@oai/sky/service`） | `setup` 能拿到方法表（`list_apps`/`get_app_state`/`click`/`press_key`/`type_text`…），但 `execute` → **`Sky Computer Use native pipe is unavailable`**；`get_app_state` 还要 `nodeRepl.createElicitation`（cron 上下文没有该能力）→ **无人值守轮次不可用** |
+| `scripts/browser/xb.py` | 按 prompt 硬规则 **不走**（通道已停用，仅历史档案） |
+
+→ **命中 prompt 模式检测 ②：无 cua_repl（工具清单里只有 `mcp__node_repl__js` + `mcp__pencil__browser` + codex-app-tools）/ 明确报 `Local browser use is disabled` → 本轮零动作，如实写原因，不许走 xb.py。**
+
+#### 平台侧对账（每轮必做）—— 本轮做不了，如实记「未做」
+
+- `from:FrankFika` live search + snowflake 反解 **需要浏览器通道 → 本轮无法执行**。
+- 已知上限：`account-safety.yaml#x.last_published_at` = **2026-10-30T21:40:00+08:00**（post `2116164234329657435`，Frank 本人 Chrome 发的 Cursor 供应链帖），与那条手动发布一致 → **21:40 之前本机 state 与平台侧一致**。
+- ⚠️ **21:40 之后 Frank 若再手动发帖，本机 state 一概看不到**（不能据此声称「无手动帖」）。
+
+**2h 降载判据**：Frank 最后公开动作（21:40 那条根帖）距今 **6.9h > 120 分钟** → 降载不触发。（但通道先否，无实际动作。）
+
+#### Mentions 回溯补扫（按铁律本该本轮做）—— 做不了，记「数据不可用」
+
+- 铁律要求：档口丢失 → 本轮必须做一次全量 Mentions 回溯补扫，接住空窗期积压的 inbound。
+- 本轮 **通道不通 → 一次都扫不了** → 按铁律「不许把『没扫到』写成『没漏接』」，本轮记：**10-30 00:06 → 现在（28.5h）的 inbound 状态「该区间数据不可用」，不是「0 候选」。**
+
+**三个计数**
+
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | Mentions 页 **未扫描**（通道不通）—— 空窗期 inbound **状态未知**，不可报「0 候选」 |
+| outbound reply | **0** | 配额本就是 0（Frank 2026-10-27「少评论，多干发原创」） |
+| outbound like | **0** | 高优 handle timeline **一条都没扫** |
+
+原创 post **0** / quote RT **0** / XHS 不碰。**总动作 0** —— **未触达 ≤3 上限，但原因是通道不可用，不是候选不足**；不凑数。
+
+**已发 X URL**：无（本轮零动作）。
+
+**跳过项**
+- inbound 全量扫描 + 空窗期回溯补扫 —— 通道不通
+- outbound 扫描（高优 handle timeline 每轮至少 3 个）—— 通道不通
+- 平台侧对账（`from:FrankFika` + snowflake）—— 通道不通
+- outbound reply（配额 0）、原创 post / quote RT（配额 0）、XHS（不在本线职责内）—— 配额/职责原因，非通道原因
+
+**异常 / 新经验**
+1. **🔴 内置浏览器被 Work settings 禁用已连续第 5 轮**（chuangzuo 92/93/94/95 + 本轮 pulse）。根因是**账号级 Work 开关**（app 侧 `/wham/work/settings` 的 `localBrowserUse`），**本机改不了** —— 与 xhs 线本轮实测的结论一致（连直连 `nodeRepl.rpc browser_user_get_tab_context` 都是同一句）。→ **这是 X 两条线（创作 + 互动）共同的唯一瓶颈，需要在 Codex app 的 Work settings 里手动打开 Local browser use**。
+2. **x-pulse-6 迁移到 Codex Automations 后首次派发就撞上通道禁用** → 这条线自迁移以来 **0 动作**，且 10-30 的两格档口也丢了。
+3. **RRULE 时区口径：本线同样是「BYHOUR 按本地时解析」**。`automation.toml` 写 `BYHOUR=20,2,8,14`，本轮实际派发在**本地 02:04 CST**（= 本地 02:00 档），不是 `docs/cron-prompts/pulse.md` 声称的「04:00/10:00/16:00/22:00（UTC 读）」—— **文档与实际差 2 小时**。super-bot 那条线的自我更正（BYHOUR 按本地时）在本线同样成立。
+4. **AX（Computer Use）不是 cron 的可用兜底**：`@oai/sky/service` 在本轮能 setup 出方法表，但 execute 要 `native pipe` 且 `get_app_state` 要 `nodeRepl.createElicitation` —— 无人值守轮次两者都没有。10-30 21:40 那条能走 Chrome + AX 发出去，是因为**有 UI 会话 + Frank 授权的人工轮次**，不是 cron 轮次能复制的路径。
+5. **端口 9222 有 Chrome 在 LISTEN**（`Google` PID 84878 持有 `127.0.0.1:9222`）—— 这是 `xb.py` 的 CDP attach 目标，但按 prompt 硬规则**不许走**（通道已停用），本轮只作事实记录、没碰。
+6. **落盘说明**：本轮 **零动作 → 零候选**，没有 post_id 可入账 → `seen-posts.json` / `inbound-replies.json` / `outbound-actions.json` / `recent-picks.json` / `index.json` **一律未改**（`index.json` 无新增条目，无需同步；这不是漏同步，是本轮没有任何条目可写）。轮次记录只追加到 `state/memory/pulse.md`（本段）。
+
+<!-- round -->
+
+### pulse_round_84_cron_x6 (2026-10-31 08:00–08:02 +08:00) — 本轮零动作：唯一通道（内置浏览器）仍被 Work settings 禁用（第 6 轮连续）
+
+**模式**：Codex Automations cron · `x-pulse-6` · 本地 **08:00** 档（实际 08:00:44 起跑，RRULE `BYHOUR=8` 按本地时解析，与上一轮的时区结论一致）。
+**通道**：**唯一通道 = Codex 内置浏览器 —— 本轮实测仍不通 → 本轮零动作**（prompt 模式检测 ② 命中，不是凭上一轮记忆推定）。
+
+#### 通道实测（本轮重测，非沿用）
+
+| 通道 | 本轮实测 |
+|---|---|
+| Codex 内置浏览器（`browser-client.mjs` @ `plugins/cache/openai-bundled/browser/26.1023.51421/`） | `setupBrowserRuntime()` → OK；`agent.browsers.list()` + `getForUrl("https://x.com/FrankFika")` → **同一句 `Local browser use is disabled in Work settings`** |
+| `mcp__pencil__browser` | `transport not connected to app: desktop`（load-page x.com 实测，3 次重试同错） |
+| `scripts/browser/xb.py` | 按 prompt 硬规则 **不走**（通道已停用，仅历史档案）。端口 9222 Chrome 仍在 LISTEN（PID 84878），只作事实记录、没碰 |
+
+→ **根因不变：账号级 Work 开关（app 侧 `/wham/work/settings` 的 `localBrowserUse`），本机改不了 → 需要 Frank 在 Codex app 的 Work settings 里手动打开 Local browser use。** 这是 X 两条线（创作 + 互动）共同的唯一瓶颈。
+
+#### 🔴 开工自检 · 排定档口台账
+
+| 项 | 实测 | 结论 |
+|---|---|---|
+| 末轮时间戳 | `pulse_round_83_cron_x6` 收在 10-31 04:40 | 距今 **3.3h < 12h** → **上一档口未丢**（02:00 档 = round_83，04:00 档无排定——RRULE 本地时档口是 02/08/14/20） |
+| 并发写者 | `git status` 显示 `state/*.json` 为 chuangzuo 线 04:36–06:35 修改（非 pulse 线）；`launchctl` 里无 pulse job | 本轮无并发 pulse 写者 |
+
+#### 平台侧对账 —— 本轮做不了，如实记「未做」
+
+- `from:FrankFika` live search + snowflake 反解 **需要浏览器通道 → 本轮无法执行**。
+- 已知上限：`account-safety.yaml#x.last_published_at` = **2026-10-31T04:54:46+08:00**（post `2116271569228181556`，DOJ ghost-students 帖，chuangzuo 线 04:54 落账）→ **04:54 之前本机 state 与平台侧一致**；之后若 Frank 手动发帖，本机 state 看不到（不能声称「无手动帖」）。
+- **2h 降载不触发**：最后公开动作（04:54:46）距本轮 **3h06m > 120 分钟**。（但通道先否，无实际动作。）
+
+#### Mentions / outbound 扫描 —— 通道不通，一次都没扫
+
+- 按铁律「不许把『没扫到』写成『没漏接』」：**10-30 00:06 至今（约 32h）的 inbound 状态记「该区间数据不可用」，不是「0 候选」**。
+
+**三个计数**
+
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | Mentions 页未扫描（通道不通），空窗 inbound 状态未知，不可报「0 候选」 |
+| outbound reply | **0** | 配额本就是 0（Frank 2026-10-27） |
+| outbound like | **0** | 高优 handle timeline 一条都没扫 |
+
+原创 post **0** / quote RT **0** / XHS 不碰。**总动作 0** —— **未触达 ≤3 上限，原因是通道不可用，不是候选不足**；不凑数。
+
+**已发 X URL**：无（本轮零动作）。
+
+**跳过项**
+- inbound 全量扫描 + outbound 高优 handle 扫描 + 平台侧对账 —— 全部因通道不通
+- outbound reply / 原创 post / quote RT（配额 0）、XHS（不在本线职责内）—— 配额/职责原因，非通道原因
+
+**异常 / 新经验**
+1. **内置浏览器被 Work settings 禁用已连续第 6 轮**（chuangzuo 92/93/94/95 + pulse 83/84）。根因与解法不变（账号级开关，需 Frank 手动开）。
+2. **x-pulse-6 迁移到 Codex Automations 后共派发 2 轮（02:00 + 08:00），两轮全部零动作**；10-30 的 14:00/20:00 两格仍未补。
+3. **落盘说明**：零动作零候选 → `seen-posts` / `inbound-replies` / `outbound-actions` / `recent-picks` / `index.json` **一律未改**（无 post_id 可入账，非漏同步）；轮次记录只追加 `state/memory/pulse.md`（本段）。
+
+<!-- round -->
+### pulse_round_85 (2026-10-31 10:00–10:20 +08:00) — 1 inbound reply + 0 like（**降载轮**：Frank 08:55 刚发过 → 2h 内只做 1 个动作）· 通道恢复 · 补账 1 条手动帖
+
+**模式**：Mavis runtime cron · `0dbbcbb9`（pulse `0 4,10,16,22`）· 本地 **10:00** 档口（10:00:00 投递，runId `7d07d0cb-226c-4c49-b17a-9db48bdaf57c`，session `mvs_5ea0e37f82114b0ab9fd48c334c96654`）。
+**通道**：**内置浏览器 `mcp_browser` —— 本轮恢复可用**。实测 `x.com/notifications/mentions` 直开，左下角「陈放Frank🕊️ @FrankFika」+ 认证徽章 → 已登录。⚠️ 与 Codex 内置浏览器**不是同一个通道**：那条仍被 Work settings 禁用（Codex 侧 `x-pulse-6` 两轮全零动作），但 Mavis 侧的 `mcp_browser` 一直能登录 → **「内置浏览器被禁」这个结论只对 Codex runtime 成立，不能外推到 Mavis runtime**（见新经验 1）。
+
+#### 🔴 开工自检 · 排定档口台账（先查档口，再刷 X）
+
+| 项 | 实测 | 结论 |
+|---|---|---|
+| 末轮时间戳 | 末段 = `pulse_round_84_cron_x6`（Codex 侧，收在 10-31 08:02） | 距今 **2.3h < 12h** → **不触发「上一档口丢失」** |
+| 本线（Mavis `0dbbcbb9`）run 记录 | 10-29 22:09 → **10-30 04:00 / 10:00 / 16:00 / 22:00 / 10-31 04:00 五格全 MISSING** → 10-31 10:00 DELIVERED | 根因：Mavis runtime 侧进程/主机在 10-30 白天不在位（Codex app 侧同期也只派发了 x-pulse-6 的 02:00 / 08:00 两格） |
+| Codex `x-pulse-6` 侧 | `state_5.sqlite#threads` 全库只有 2 条 `x-pulse-6` 线程（10-31 02:04 / 08:00） | **两轮都零动作**（Codex 内置浏览器被禁），**没有替代 Mavis 侧补上 10-30 的缺口** |
+| 本轮档口 | 10:00 ✅ 本格命中 | — |
+
+→ **结论：两条 runner 各跑各的档口，谁也没覆盖谁的空窗。** Mavis 侧 10-30 的 5 格是真丢（无人派发），Codex 侧 10-31 的 2 格跑了但零动作 —— **pulse 线的「有效动作」上一次发生在 10-29 23:57（round_82 的 2 个赞），到本轮空了 34h**。
+→ 按铁律「末轮新 ≠ 中间没丢」，本轮**做了全量 Mentions 回溯补扫**（不是拿末轮时间戳推定）。
+
+**平台侧对账（每轮必做）** — 本轮**做了**，且抓到一条漏账
+- `from:FrankFika` live search 首条 = `2116333139459191114` → snowflake 反解 **2026-10-31 08:55:14** → 与 `account-safety.yaml#x.last_published_at`（04:54:46 那条 DOJ 根帖）**不一致** → **Frank 本人 08:55 手动发了一条**（任何 agent 轮次日志都覆盖不到）。
+- 详情页确证：正文「**该**」，形态 = **reply**（回复 @RachidSettas `2116155959563489780`，原帖讲「支持姆巴佩言论的公司当天被警察上门搜查」），**不是根帖**。
+- ⚠️ **补账只写 reply 字段，`last_published_at` 一个字都没动** —— chuangzuo 的 12h 原创闸门只数根帖（`skills/README.md:82`）。误写成 08:55 会让下一轮 chuangzuo（12:00 档）以为「刚发过原创」→ 硬否决，把原创线饿死 —— 正是 2026-10-27 修过一次的老坑。
+- 已补 6 处：`seen-posts`（**两条**：目标帖 `2116155959563489780` `treatment=frank_manual_reply_not_agent` + Frank 自己那条 `2116333139459191114` `type=own_reply`）+ `outbound-actions`（`agent_generated: false`）+ `recent-picks` + `index.json#seen/#outbound`；`account-safety.yaml` 更新 `last_outbound_reply_*`（旧主 LuBtc888 → `_v4`）+ **本轮自己的 reply 更新 `last_inbound_reply_*`**（旧主 marmot_stacks → `_v2`、旧 `_v2` AetrixEmby → `_v3`）。
+- **2h 降载触发**：Frank 最后公开动作 08:55:14，距本轮 **1.32h < 120 分钟** → 本轮总动作上限从 3 降到 **1**。→ **本轮只做 1 个动作（inbound reply），不赞、不评论他人帖、不凑数**。
+
+#### Mentions 回溯补扫（空窗期 10:29 23:57 → 10:31 10:00 全量实扫）
+
+- Mentions 页**实扫**（`x.com/notifications/mentions`）：共 11 条可见通知，**逐条对账 `index.json`** —— @marmot_stacks / @KakaluoteW45042 ×2 / @zack6116 / @zkcolab / @mahdi / @dyiapanis ×2 / @AetrixEmby ×2 / @mumblinglewis 全部已在台账（已回或已 skip）。
+- 🔴 **但 Mentions 页漏了 2 条**：真正的新 inbound 不在通知页，而在 **Frank 10-30 21:40 Cursor 供应链帖的回复区**里。逐帖打开原帖详情页才发现：
+  | handle | post_id | 时刻 | 内容 | 处置 |
+  |---|---|---|---|---|
+  | @evvvvince | `2116177320453046720` | 10-30 22:36 | 「最坑在自动更新 装的人啥也没点 一觉起来就是 2.1.313 了 带 agent 的插件真该默认关掉自动更新」 | ✅ **本轮回这条**（唯一给新角度的） |
+  | @surlymochan | `2116164554535190623` | 10-30 22:0x | 「名字挂着 Anthropic 的命名空间…这哪是用户疏忽，分明是市场审核在裸奔」 | 留痕 skip（与 @ajs6888 同集群 + 撞内核） |
+  | @ajs6888 | `2116172693523612043` | 10-30 22:17 | 「挂着官方命名空间确实很难辨认，插件市场审核得跟上啊」 | 留痕 skip（撞内核） |
+
+→ **inbound reply 候选 = 3 条**（不是 1 条）—— 这 3 条**全部落在 33h 空窗期**，若只扫 Mentions 页会漏掉其中 2 条（其中 1 条正是本轮唯一回的那条）。
+→ **「inbound 盲区」实为 10-29 23:57 → 10-31 10:00 约 34h**，本轮已补扫证实（不是「没漏接」的推断）。
+
+#### 三个计数
+
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **1** | @evvvvince（@ajs6888 / @surlymochan 留痕 skip） |
+| outbound reply | **0** | 配额本就是 0（Frank 2026-10-27「少评论，多干发原创」） |
+| outbound like | **0** | 2h 降载 → 总动作上限 1，已被 inbound reply 占满；**不凑数** |
+
+原创 post **0** / quote RT **0** / XHS 停手（本线不碰 XHS）。**总动作 1** —— **未触达 ≤3 上限，但受 2h 降载约束只做 1 个**（Frank 08:55 刚发过）。
+
+**已发 X URL**
+- **https://x.com/FrankFika/status/2116353294327226621** —— 回 @evvvvince（其帖 `https://x.com/evvvvince/status/2116177320453046720`）。正文 110 字：`睡一觉版本号就换了。／命名空间难认，好歹是装之前的事…自动更新这一步压根不存在——11 个小时里推过去的，用户没机会分辨自己装的是哪一版。／agent 插件的自动更新我倾向默认关掉，更新改成弹一下让人点。`
+  - **真发验证（两路交叉）**：① `from:FrankFika` live search 首条 = `2116353294327226621`（aria-label「20 seconds ago」）② 目标帖详情页 thread DOM 出现「陈放Frank🕊️ @FrankFika · 10:15 AM · Oct 31, 2026」且正文**逐字对上**。→ 两路都命中 = 真发。
+  - 发送路径：`fill` → `press_key {"key":"Enter","modifiers":["Meta"]}` → wait 9s，**一次真发未重试**（X 的反重复拦截是真 spam 信号）。
+  - 动作时刻：snowflake 反解 **10:15:19**（精确到秒）。
+  - 闸门：`scripts/prepublish.py --text` **exit 0**，soft_score **0**，sha256 `050057ea89e9c95c`（= `gate-receipts.json` 10:15:09 那条 receipt）。
+
+**跳过项**
+- @ajs6888（`2116172693523612043`）—— **SKIPPED_NO_REPLY**：与 Frank 10-30 21:40 原帖内核重复（原帖已说「装的人根本分不出来」+「把整个市场关掉才是当事故处理」）；该 handle 历史上已被回过多次（10-18/10-19/10-20），本轮无新增量。
+- @surlymochan（`2116164554535190623`）—— **SKIPPED_NO_REPLY**：与 @ajs6888 同集群（命名空间难辨 + 市场审核缺位），且撞原帖内核；本轮配额只有 1 个动作，给更有增量的 @evvvvince。
+- outbound scan（高优 handle timeline，`from:simonw OR from:jiqizhixin OR from:dotey OR from:vista8 OR from:_akhaliq OR from:emollick OR from:karminski3`）—— **实扫了**，但 2h 降载后无动作配额。扫到的 @dotey 58m「做了一个 DeepSeek Harness 插件」等均为**回复帖**（页面级 selector 首个 like 会落到根帖），且 @dotey「baoyu-design v2.1 加评论功能」19h / 8.7K views 属大盘帖（92 赞 → Frank 排第 93 位，曝光效率差）——**记在案，均未赞**。
+- outbound reply（配额 0）、原创 post / quote RT（配额 0）、XHS（不在本线职责内）—— 配额/职责原因，非通道原因。
+
+**异常 / 新经验**
+1. 🔴 **「内置浏览器被 Work settings 禁用」是 Codex runtime 专属结论，不能外推到 Mavis runtime。** 同一台机器、同一个账号：Codex 侧 `x-pulse-6` 连续 2 轮（10-31 02:00 / 08:00）全零动作，根因是 Codex 内置浏览器被账号级 Work 开关禁用；而 Mavis 侧 `mcp_browser` 本轮**实测直接打开并已登录 @FrankFika**。→ **排查通道时必须按「哪个 runtime 在跑」分头测**，否则会把「一个 runtime 坏了」误判成「整条线死了」，进而放弃一个本来能用的通道。
+2. 🔴 **Mentions 页会漏掉「回复 Frank 原帖」的 inbound —— 补扫必须逐帖打开自己近期的原帖看回复区。** 本轮 Mentions 页只有 11 条、全在台账里，看起来「零新增」；实际 3 条新 inbound 全在 Cursor 原帖的回复区（其中 2 条连 Mentions 都没进）。**只扫 Mentions 页 → 会把「3 条候选」误判成「0 条候选」。**
+3. **两条 runner 不会互相兜底。** Mavis `0dbbcbb9` 与 Codex `x-pulse-6` 各跑各的档口（Mavis 4/10/16/22，Codex 2/8/14/20），实测 10-30 白天 Mavis 侧 5 格全 MISSING、Codex 侧那段时间也没派发 —— 叠加后 pulse 线的**有效动作空了 34h**。→ 判断「这条线还活着吗」必须看**两个 runner 的并集**，且要看的是「有效动作」而不只是「轮次段」。
+4. **2h 降载判据要查「平台侧最后公开动作」，不是只查 state。** 本轮 state 里 Frank 最后记录是 04:54，但平台侧对账发现他 08:55 又发了一条 → 差 **1.3h**（< 2h）→ 降载触发。**若只看 state 会误判成 5h+，从而多发 2 个动作。**
+5. **`last_inbound_reply_at` 也是闸门输入，不只是 `last_published_at`。** `state/schedule.yaml:147` 的 `last_text_action_spacing`（≥30min）读的是 `last_published_at / last_outbound_reply_at / last_inbound_reply_at` 三个字段 —— 本轮 agent 自己那条 reply 若不更新 `last_inbound_reply_*`，下一轮 chuangzuo 会按 10-28 的旧值算间隔，可能 30 分钟后就在本条 reply 之后立刻发。
+6. **槽位轮转用「整块替换」而不是「逐行改名」** —— 本轮首版脚本按行 rename 时，`last_outbound_reply_own_post_id` 先被改名消耗，后面「主槽位→新值」那步就找不到锚点了（`找不到待替换行`）。**整块替换 + 写后校验才稳。**
+7. **写后校验要断言「该没动的字段确实没动」。** 本轮校验显式断言 `last_published_at == 2026-10-31T04:54:46+08:00` + `last_published_post_id` + `last_published_url` + `last_published_round` + `last_published_topic_signature` 五个字段全等，且 like 槽位与 xhs 段未动 —— 校验脚本第一次跑还因「字符串 vs YAML datetime」报了假阳性（`last_published_at` 无引号 → yaml 解析成 datetime），**说明校验的期望值类型必须跟 YAML 实际解析类型对齐，否则假阳性会掩盖真问题**。
+8. **闸门脚本的 sha256 与 receipt 的 chars 口径差 4**（114 vs 110）—— 差在换行符计数（`fill` 回读 textLength 114 含换行；我自算的 110 是去掉 `\n` 的净字数）。**两个数都记进台账并标注口径**，别在下一轮误判成「闸门记录和实际发送不一致」。
+
+**落盘**：`seen-posts.json` +6 / `inbound-replies.json` +1（inbound-042）/ `outbound-actions.json` +2（一条 `agent_generated: true` 本轮 reply、一条 `agent_generated: false` Frank 手动 reply）/ `recent-picks.json` +2 / `index.json`（seen +6 / inbound +1 / outbound +4 / published **+0** —— reply 不进 published 段）/ `private/account-safety.yaml`（reply 槽位轮转 + `last_published_at` 未动）。全部 tmp + `os.replace` 原子写 + 写后校验（条目数 = 写前 + 预期新增，且逐条断言「值 ↔ 位置」映射；skip 类记录**只进 `#seen` 不进 `#outbound`**）。
+
+<!-- round -->
+### pulse_round_86 (2026-10-31 16:00–16:35 +08:00) — 2 个 like（0 inbound）+ 🔴 补账 2 条漏账根帖（**改写 chuangzuo 12h 闸门**）
+
+**模式**：Mavis runtime cron · `0dbbcbb9`（pulse `0 4,10,16,22`）· 本地 **16:00** 档口（16:12:28 送达，runId `14d37269-bbac-4381-910d-714124838ef1`，session `mvs_9631456f84f44d0ebe28781ff59df52b`）。
+**通道**：内置浏览器 `mcp_browser`（electron-file-panel）—— 实测已登录 @FrankFika（左下角「陈放Frank🕊️」+ 认证徽章），本轮全部动作走这条通道。
+
+#### 🔴 开工自检 · 排定档口台账（先查档口，再刷 X）
+
+| 项 | 实测 | 结论 |
+|---|---|---|
+| 末轮时间戳 | `pulse_round_85`（10-31 10:00–10:20） | 距今 **6.3h < 12h** → 不触发「上一档口丢失」 |
+| 本线 `cron_read view=runs` | 10-31 10:00:00 DELIVERED（runId `7d07d0cb…`）→ **本轮 16:12:28 DELIVERED**（runId `14d37269…`） | 本档口命中 ✅ |
+| 窗口内是否有中间档口 | 10:00 → 16:00 之间**没有**排定档口（pulse = 0 4,10,16,22） | 无空窗 |
+| 上一次空窗 | 10-30 的 04:00/10:00/16:00/22:00 + 10-31 04:00 五格 MISSING | **round_85 已全量回溯补扫**（10-29 23:57 → 10-31 10:00），本轮不重复 |
+
+→ **本轮无档口丢失**（末轮 6.3h < 12h，且窗口内无中间档口）。
+→ ⚠️ **但「档口没丢」≠「平台侧没漏账」** —— 本轮平台侧对账照样抓到 2 条漏账根帖（见下）。漏账的来源是**账号侧直发**，跟调度器健康度无关。
+
+**平台侧对账（每轮必做）** — 本轮**做了**，抓到 2 条
+- `from:FrankFika` live search 首条 = `2116376167532097692` → snowflake 反解 **2026-10-31 11:46:13** → 与 `account-safety.yaml#x.last_published_at`（04:54:46 DOJ 帖）**不一致**
+- 继续往下核：**第 3 条 = `2116352771767349461` → 10:13:15**（AI 基建债帖）
+- 两条都是**根帖**（详情页无 "Replying to"）；`media_count` 实测 **0**（详情页 DOM 查 `[data-testid='tweetPhoto']` → Element not found，链接卡片不算 media）
+- → 两条**不在任何 agent 轮次日志里**（`chuangzuo.md` 末轮 = round_97 06:35；`published-posts.json` mtime = 10-31 04:54）→ 账号侧直发
+- ⚠️ **补账落点：根帖 → 4 处全写，含 `last_published_at`**
+  - `last_published_at` 04:54:46 → **11:46:13**（取最新那条根帖）；旧值轮转 `last_published_v2_*`（不覆盖只轮转）
+  - **这直接改写 chuangzuo 的 12h 原创闸门**：不补账的话，15:30 档会按 04:54 算窗口 → 在 Frank 11:46 那条之后仅 **3.7h** 就再发一条 → 直接破掉「一天 2 条」节奏。补账后 12h 窗口到 **23:46** → 15:30 档硬否决，明天 03:30 档才解禁。
+  - 已补：`published-posts` +2 / `index#published` +2 / `seen-posts` +2 / `outbound-actions` +2（`agent_generated: false`）/ `recent-picks` +2
+- **2h 降载判据**：Frank 最后公开动作 = **11:46:13**，距本轮开工 4.4h > 120min → **不降载**，走全配额（≤3）
+- 「回复 / 原创」分槽位的老坑本轮**不适用**：两条都是根帖，都进 12h 窗口。
+
+#### Inbound 扫描（Phase A）—— 实扫，**0 候选**
+
+- **Mentions 页实扫**（`x.com/notifications/mentions`）：11 条可见通知 —— @ajs6888(18h) / @marmot_stacks / @KakaluoteW45042 ×2 / @mumblinglewis / @zack6116 / @zkcolab / @mahdi / @dyiapanis ×2 / @AetrixEmby ×2 —— **逐条对账 `index.json`，全部已在台账，0 新增**。
+- **逐帖打开自有原帖的回复区**（round_85 教训：Mentions 页会漏掉「回复你原帖」的 inbound，不能只扫通知页）：
+
+| 原帖 | 时刻 | 回复 | 结论 |
+|---|---|---|---|
+| `2116376167532097692` vibecoding | 10-31 11:46 | 0 | 无 |
+| `2116352771767349461` AI 基建债 | 10-31 10:13 | 0 | 无 |
+| `2116271569228181556` DOJ 幽灵学生 | 10-31 04:50 | 0 | 无 |
+| `2116164234329657435` Cursor 供应链 | 10-30 21:44 | 3 | 全在台账：@evvvvince 已回(10:15) / @ajs6888 skip / @surlymochan skip |
+| `2116163230821478566`（已被替换的帖） | 10-30 21:40 | 0 | 页面显示「There's a new version of this post」 |
+| `2115410666068815948` Quote @Peer_zh | 10-28 19:49 | 0 | 无 |
+
+→ **inbound 候选 = 0** → 本轮**没有 inbound reply**（不是「没扫」是「扫完证实 0」，6 个原帖回复区 + 通知页全覆盖）。
+
+#### Outbound 扫描（Phase B）—— 3 组 OR 搜索，30+ 个 watchlist handle
+
+| 候选 | 数据 | 处置 |
+|---|---|---|
+| **@xiaohu** Subvocal AI 眼镜 | 发帖 3 分钟前 · 根帖 · **赞前 0 likes** | ✅ **赞**（Frank 排 liked-by 第 1 位）|
+| **@jiqizhixin** ScholarEvolve | 3h · 根帖 · 437 views · **赞前 0 likes** | ✅ **赞**（Frank 排 liked-by 第 1 位）|
+| @dotey「Tibo 送重置卡」 | 2h · 根帖 · 16K views · **67 likes** | 不赞 —— 赞列表已 67 人，Frank 排第 68 位，曝光效率差一个量级 |
+| @swyx「everything is fine why are you asking」 | 4h · 根帖 · 6.9K views · 66 likes | 不赞 —— 已起量，位置靠后 |
+| @bindureddy「AI trends」 | 42m · 根帖 · 2.6K views · 55 likes | 不赞 —— 已起量 |
+| @Gorden_Sun 谷歌 TPU 上太空（Quote） | 3h · 根帖 · 1.1K views | 不赞 —— 12 赞已起量 + 名额已满 |
+| @dotey「Claude Fable 5 权重疑似造假」（引 DeepSeek V4.1 Flash） | 5h · 15K views | 不赞 —— 传谣帖 + 撞中文 AI 名强检话题 |
+| @lxfater「评论区的AI伪人太多了」 | 1h · 1.6K views | 不赞 —— **内容是吐槽评论区 AI 机器人，点赞一条抱怨机器人的帖等于自曝**，风险收益倒挂 |
+| @dotey 54m reply / @vista8 / @berryxia 等回复帖 | — | 不赞 —— 回复帖，页面级 like 首匹配会落到根帖（round_79 事故口径）|
+| @oran_ge / @op7418 | — | 不扫 —— 这两位把 Frank 拉黑了 |
+
+#### 三个计数
+
+| 动作 | 数量 | 说明 |
+|---|---|---|
+| inbound reply | **0** | 实扫 0 候选（通知页 + 6 个原帖回复区逐帖实扫）|
+| outbound reply | **0** | 配额本就是 0（Frank 2026-10-27「少评论，多干发原创」）|
+| outbound like | **2** | @xiaohu + @jiqizhixin —— **触达 ≤2 上限** |
+
+原创 post **0** / quote RT **0** / XHS 停手（本线不碰 XHS）。**总动作 2 ≤ 3** —— 未触达总上限，但 like 配额已满。
+**2 次 like 间隔**：两次显式 `wait`（60s × 2）夹住，**最坏情况间隔 2 分 11 秒 > 2 分钟线** ✅。
+
+**已发 X URL**（本轮无发帖、无 reply，只有 2 个赞）
+- **https://x.com/xiaohu/status/2116445350865367066** —— 赞 @xiaohu Subvocal AI 眼镜帖。赞前 `aria-label="0 Likes. Like"` → 赞后 `data-testid="unlike"` + `aria-label="1 Like. Liked"`，**验证时 query 返回的 URL = 目标详情页 URL**（防打错对象）。动作时刻 ≈ **16:24:43**（bash `date` 锚点夹逼，区间 [16:24:35, 16:24:48]）。
+- **https://x.com/jiqizhixin/status/2116391715796099084** —— 赞 @jiqizhixin ScholarEvolve 帖。赞前 `0 Likes. Like` → 赞后 `1 Like. Liked`，URL 校验同上。动作时刻 ≈ **16:27:05**（区间 [16:26:59, 16:27:06]）。
+- **收尾自查**：`https://x.com/FrankFika/likes`（跳 `/i/history/likes`）顶部正是这两条，往下是 10-29 的 @_akhaliq / @vista8 —— **无误赞、无多余动作** ✅
+
+**跳过项**
+- 全部 outbound reply（配额 0）/ 原创 post（配额 0）/ quote RT（配额 0）/ XHS（不在本线职责内）—— 配额或职责原因，非通道原因。
+- 8 条 outbound 候选（见上表）—— 曝光效率或内容风险原因，**不是配额不够**。
+
+**异常 / 新经验**
+1. 🔴 **档口没丢 ≠ 平台侧没漏账。** 本轮 cron 台账干净（10:00 → 16:00 档口命中、窗口内无中间档口），但平台侧对账照样抓到 **2 条**漏账根帖。→ **「每轮开工做平台侧对账」不能因为「档口没丢」就省掉** —— 漏账来源是账号侧直发（不在任何 agent 轮次日志里），与调度器健康度无关。
+2. 🔴 **12h 原创闸门的输入 `last_published_at` 会漏，且漏了就直接破节奏。** 本轮补账把 04:54 改成 11:46 → 15:30 档从「可发」变成「硬否决」。**漏一天账 = 破一次节奏。**
+3. ⭐ **「赞前 likes=0」是最强的可测量信号。** 本轮两条候选赞前 likes 都是 **0**（不是「<20」）→ 赞完 Frank 就是 liked-by 第 1 位。→ 筛选条件可以再收紧：**优先 DOM 实测 `aria-label="0 Likes. Like"` 的帖**，比「<2h 且 <20 赞」的目测准得多，且判据现成可自动化。
+4. **回复帖直接放弃，不试。** 本轮 3 条候选是回复帖；页面级 like selector 的首个匹配会落到根帖（round_79 已因此误赞过一次并撤销）。风险已知就不重复冒险。
+5. **本机没有 PyYAML**（python3 / 3.11 / 3.12 / 3.13 / /usr/bin/python3 全都没有）→ YAML 校验改用 macOS 自带 **ruby 的 psych**（`ruby -ryaml`）。校验失败自动从 `.bak` 回滚 —— 本轮第一次跑就因「quoted 字符串 vs Time 对象」假阳性触发回滚（已修：`t()` 统一转 ISO 字符串再比，**期望值类型必须跟 YAML 实际解析类型对齐**，否则假阳性会掩盖真问题）。
+6. **本轮 session 的 tool_call 时间戳查不到**：`~/.minimax/sqlite.db#session_messages` 与 `nexus/nexus.db#messages` 对本 session 都是 0 行（session 还在内存里没落库）→ 点赞时刻退回 bash `date` 锚点夹逼（SKILL 允许的兜底口径），并把**区间**写进台账而不是编一个精确值。
+7. **账号侧直发的根帖，`media_count` 可以在详情页 DOM 核对**：`query kind=dom` 打 `[data-testid='tweetPhoto']` → "Element not found" = 无图片（链接卡片不算 media）。比填 0 可靠。
+8. **本轮 0 inbound 是「扫完证实 0」**：通知页 11 条 + **6 个自有原帖回复区**逐帖实扫，覆盖到 10-28 19:49 的 Quote 帖为止。不是「没扫、假定 0」。
+
+**落盘**：`seen-posts.json` +4（2 like + 2 自有根帖）/ `outbound-actions.json` +4（2 like `agent_generated: true` + 2 直发根帖 `agent_generated: false`）/ `published-posts.json` +2 / `recent-picks.json` +4 / `index.json`（seen +4 / outbound +4 / published +2 / **inbound +0**）/ `private/account-safety.yaml`（`last_published_*` → 11:46:13 + 旧值轮转 `_v2`；`last_outbound_like_*` 主槽位 + `_2_` 新增、旧 4 格轮转 `_3_`~`_6_`；**inbound/outbound reply 槽位未动**；xhs 段未动）。全部 tmp + `os.replace` 原子写 + 写后校验（条目数 = 写前 + 预期新增；逐条断言「值 ↔ 位置」映射；YAML 用 ruby 解析校验，失败自动回滚）。

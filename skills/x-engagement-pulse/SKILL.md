@@ -143,6 +143,12 @@ XHS **不在 pulse 的职责范围** —— 本 skill 只做 X 的 like + reply�
    > 刚发内容的正确入口是第三条「AI 关键词命中 + < 8h」，再用「赞列表现在多小」二次排序。
    > → 实测对照（round_80 同轮两个赞）：@dotey 发 1h34m / 5 赞 → 列表 6 人，Frank 排最前；
    >   @bindureddy 发 1h44m / 135 赞 → 列表中盘。同样一个名额，曝光效率差一个量级。
+   >
+   > ⭐⭐ **最强信号是「赞前 likes = 0」—— 可直接 DOM 实测**（round_86 实测）
+   >   两条候选赞前 `aria-label="0 Likes. Like"` → 赞完 Frank 就是 **liked-by 第 1 位**。
+   >   → 筛选时**优先「赞前 0 赞」的根帖**，比「<2h 且 <20 赞」的目测准，且判据现成可自动化：
+   >   详情页 `query kind=dom` 打 `button[data-testid='like']` 读 aria-label 就能拿到。
+   >   → 反例：赞前 55/66/67 赞的帖（@bindureddy / @swyx / @dotey Tibo），Frank 排第 56–68 位 → 一律不赞。
 3. 已发过的直接 drop —— **查 `state/index.json` 的 `seen` 段**，不要全量加载 `seen-posts.json`
 4. 跳过的：
    - dotey 5-7% 蒸馏营收帖引用 simonw 主帖（带 DeepSeek/Moonshot/MiniMax）
@@ -275,31 +281,30 @@ python3 scripts/prepublish.py --text "<reply 正文>"
 > `python3 scripts/browser/xb.py --action '{"action":"...","input":{...}}'`
 > action 集合、退出码（0 成功 / 1 action 失败 / 2 浏览器不可用）、selector 写法见 `skills/browser-use-utils/SKILL.md`。
 
-> ### ⚠️ 2026-10-30 起：唯一链路 = Codex 内置浏览器（Fang 拍板）
+> ### ⚠️ 2026-10-31 起：唯一链路 = xb.py（专用 Chrome，CDP 9222，DOM 无视觉）
 >
 > | 链路 | 状态 |
 > |---|---|
-> | **Codex 内置浏览器**（`mcp__cua_repl__js`） | ✅ 唯一通道。登录态待 Fang 一次性登录（原 MiniMax Code Electron 的登录态随 runtime 作废）；发文 `press_key {"key":"Enter","modifiers":["Meta"]}` |
-> | `scripts/browser/xb.py`（专用 Chrome） | ⛔ 已停用（历史档案），不许用于 pulse |
+> | `scripts/browser/xb.py`（专用 Chrome，profile `~/.shortbot-browser-profile`，launchd `com.fangchen.shortbot.browser` 保活） | ✅ 唯一通道。登录态 = Fang 在 9222 窗口一次性登录 X |
+> | Codex 内置浏览器（cua_repl）/ Computer Use AX | ⛔ 已废止（组织策略禁用 / 视觉通道） |
 >
-> 前置条件：Work settings 启用 Local browser use（未启用 → 本轮零动作，如实写原因）。
-> 内置浏览器未登录 → 零动作，把 URL 给 Fang。
+> 前置自检：`python3 scripts/browser/xb.py --action '{"action":"login_state"}'`。
+> 未登录 → **本轮零动作**，如实记录「专用 Chrome 未登录，需 Fang 在 9222 窗口登录」，不撞登录墙。
 >
-> 内置浏览器侧的坑（pulse_round_73 实测）：
+> xb.py 侧的坑：
 > - 组合 OR 搜索一次扫多个高优 handle：`search?q=(from:a OR from:b OR from:c)`（省一半调用）；
 >   但 live search 的引号短语 `from:x "短语"` 实测 **0 结果**，别指望。
-> - `press_key` 组合键仍走 `modifiers` 数组：`{"key":"Enter","modifiers":["Meta"]}`。
+> - 发送组合键 `press {"key":"Meta+Enter"}`（**字符串 key**，`modifiers` 字段不读）。
 > - 真发验证仍用 `conversation_id:` 算子（`from:` 索引会漏自己刚发的新帖）。
 > - likes 用 `query kind=dom` 打 `[data-testid='like']` / `[data-testid='unlike']` 读 aria-label，
 >   必须走**干净详情页**（线程页首个匹配可能跟目标无关）。
 > - 配额节奏别看钟表估：**post_id 是 snowflake，反解时间戳能拿到精确到秒的发帖时刻**
 >   （`ts = ((id >> 22) + 1288834974657) / 1000`），用它核「reply 间隔 ≥ 8min」。
 >
-> ### 🧭 内置浏览器操作补充（pulse_round_74 实测）
+> ### 🧭 操作补充（pulse_round_74 实测）
 >
-> - **换页面只有 `open_tab` 能用**：`navigate` 在已加载的 tab 上直接报 `CURRENT_TAB_OCCUPIED`，
->   必须显式 `replaceCurrentTab:true` 才放行 —— 而 cron 场景没人要求「替换当前页」→ **一律 `open_tab`**。
->   代价是一轮开十几个 tab，开完就别再回读（每开一个都是一次上下文消耗）。
+> - **换页面**：`navigate` 到目标 URL 即可；需要保留当前页时用 `open_tab`（会切换活动页，注意别在旧页上动作）。
+>   开完 tab 就别再回读（每开一个都是一次上下文消耗）。
 > - **要拿到「根帖」的 post_id（它在搜索页排第 3/4 位，DOM 首匹配拿不到）**：
 >   打开该 thread 里任意一条回复的**详情页** → `query kind=dom` 打 `a[href*='<handle>/status/']`，
 >   **首匹配就是祖先链最上层的根帖**（比翻页滚动便宜得多，2026-10-27 实测省掉一整轮滚动）。
@@ -317,8 +322,8 @@ python3 scripts/prepublish.py --text "<reply 正文>"
 
 ### 发送路径（唯一稳定方式）
 
-1. **`fill` + `Cmd+Enter`（Meta+Enter）是唯一稳定真发路径**（CLI：`fill` 填正文 → `press {"key":"Enter","modifiers":["Meta"]}`）。Post button click 不可靠
-   > 🐛 **组合键必须走 `modifiers` 数组**。`{"key":"Meta+Enter"}` 字符串形式**会被当成普通按键丢掉** —— `press` 仍返回 `dispatched=true`、`fill` 也 `verified=true`、发前 DOM 里正文也完整，但**根本没发出去**（2026-10-26 pulse_round_72 实测：search / with_replies / 线程 DOM / `conversation_id:` 四路判据全部查不到）。改用 `{"key":"Enter","modifiers":["Meta"]}` 实测立刻真发。
+1. **`fill` + `Cmd+Enter`（Meta+Enter）是唯一稳定真发路径**（CLI：`fill` 填正文 → `press {"key":"Meta+Enter"}`）。Post button click 不可靠
+   > 🐛 **xb.py 的 `press` 只认字符串 key**。传 `{"key":"Enter","modifiers":["Meta"]}` 时 `modifiers` 字段根本不读，变成普通 Enter，发不出去且没有报错。
 2. `fill` 一次性填入完整正文（比逐字 type 可靠）
 3. 填完后 **wait 8-10 秒**，不需要更久
 4. **真发验证的唯一判据**：search 拿到 own_post 的 post_id 和 URL
@@ -473,6 +478,15 @@ open_tab(目标帖详情页 URL)  →  click(selector)  →  query(kind=dom) 验
 > 撞号的后果**不报错、不丢数据**，只是去重索引里出现重复主键 → 表现为「某个候选莫名其妙被跳过」，
 > 极难归因，且只在并发窗口出现。**追加型记录天然抗并发，只有自增 id 会撞。**
 
+> 🔧 **改 `private/account-safety.yaml` 的校验口径**（round_86 实测）
+> - 本机系统 python（`python3` / 3.11 / 3.12 / 3.13 / `/usr/bin/python3`）**都没有 PyYAML**；
+>   仓库自带 **`.venv/bin/python`（PyYAML 6.0.3）** 可用 → 优先用它。
+> - 没有 venv 时用 **macOS 自带 ruby 的 psych**：`ruby -ryaml -e "..."`（本轮就是这么验的）。
+> - ⚠️ **期望值的类型必须跟 YAML 实际解析类型对齐**：`last_published_at` 无引号 → 解析成 `Time`；
+>   `last_outbound_like_at` 有引号 → 解析成字符串。拿字符串去比 `Time` 会**假阳性 FAIL**，
+>   本轮第一次跑就因这个假阳性触发了回滚（已修：统一转 ISO 字符串再比）。
+> - 校验失败**必须从 `.bak` 回滚**，别带着半写状态往下走。
+
 ## 失败 / 限流
 
 - **「We've temporarily limited your login」** → 立即停手，memory 写「本轮停手，触发 login 限流」
@@ -534,6 +548,16 @@ open_tab(目标帖详情页 URL)  →  click(selector)  →  query(kind=dom) 验
 - agent 轮次日志覆盖不到 **Frank 手动发的帖**（pulse_round_79 就发现 19:49 有一条 Quote @Peer_zh 的帖，任何轮次日志里都没有 —— DSH 那两轮都 `NOT_LOGGED_IN` 跳过了）；
 - 而 **`last_published_at` 是 chuangzuo 的 12h 闸门输入** —— 不补的话，下一轮 chuangzuo 会按旧时间算 12h，**可能在 Frank 刚发过之后 7.5 小时就再发一条**，直接破掉「一天 2 条」的节奏；
 - 也直接影响 pulse 自己的 **2h 降载判据**（Frank 2 小时内发过帖 → 本轮降载到 1 个动作或零动作）。
+
+> 🔴 **「档口没丢」不能作为跳过平台侧对账的理由**（round_86 实测）
+>
+> 2026-10-31 16:00 档口：cron 台账**完全干净**（10:00 → 16:00 档口命中、窗口内无中间档口），
+> 平台侧照样抓到 **2 条漏账根帖**（10:13:15 / 11:46:13，账号侧直发，不在任何 agent 轮次日志里）。
+> → **漏账的来源是「账号侧直发」，与调度器健康度无关** → 平台侧对账是**每轮必做项**，不是「档口出问题时才做」。
+> → 后果实测：不补账 → `last_published_at` 停在 04:54 → chuangzuo 15:30 档会在 Frank 11:46 那条之后**仅 3.7h** 就再发一条。
+> → **根帖补账时 `media_count` 用详情页 DOM 核对**：`query kind=dom` 打 `[data-testid='tweetPhoto']` →
+>   「Element not found」= 无图片（链接卡片不算 media）。比直接填 0 可靠。
+> → **补根帖时 `last_published_at` 取「最新那条根帖」**，旧值轮转到 `_v2`（不覆盖只轮转）。
 
 **补账要写 4 处**（缺一处下一轮还是错的）：
 1. `state/published-posts.json` → 加条目（id 用 `frank_manual_<日期>-<HHMM>` 区分于轮次 id，`source.note` 写明「手动发布，非任何 agent 轮次产出」）

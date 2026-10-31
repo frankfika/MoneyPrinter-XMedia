@@ -1,0 +1,61 @@
+# 素材包 · 2026-10-30 21:30 档（Codex pipeline-12 · round_94）— 备料档（通道不通，未发）
+# 通道说明：内置浏览器（browser-client / 原 cua_repl）报 "Local browser use is disabled in Work settings"
+#   → 本轮零发送；本包为下一窗口的第二备选（第一备选 = Cursor 供应链安全稿）。
+
+material_id: "1030-pm-ai-capex-01"
+slot: pm
+scanned_at: "2026-10-30T21:04:00+08:00"
+source_kind: web
+source_name: aihot
+
+author:
+  name: "BBC News"
+  handle: "bbc"
+  lang: en
+
+original:
+  url: "https://www.bbc.com/news/articles/cm9qzdqpxy48o"
+  post_id: "url:21f09b4af674"          # sha1 前 12 位
+  posted_at: "2026-10-30T20:30:00+08:00"  # BBC 站内标注 "44 minutes ago"（抓取时 21:02）
+
+signal: "行业（aihot 10-30 05:29 条目 · BBC 一手原文）"
+metrics: null
+read_url: null
+
+ai_match: true                          # 命中关键词：AI / 搜索 / 云 / 资本开支
+
+summary: "同一天三份财报给出三种定价：Alphabet 营收涨 25% 却一天蒸发 5000 多亿美元（股价跌超 12%、创半年新低，原因是自家 AI 概要开始吃搜索广告收入）；Amazon 自由现金流负 420 亿美元、三个月花销涨 6 倍、盘后跌 6%；微软少花 50 亿 AI、云涨 30%、股价跌不到 1%。角度切现金流久期：市场把'AI 吃广告'和'AI 要烧钱'当两件事，其实三家都在用养 AI 的现金池喂 AI，差别在谁的钱能撑多久。"
+
+evidence_links:
+  - label: "BBC 一手原文"
+    url: "https://www.bbc.com/news/articles/cm9qzdqpxy48o"
+  - label: "aihot 线索页"
+    url: "https://www.bbc.com/news/articles/cm9qzdqpxy48o"
+
+# —— 回原文逐条核对（2026-10-30 21:00，curl 官方页 → 转纯文本 → 逐句 grep）——
+verified_facts:
+  - "标题：Google value plunges by $500bn as its own AI search hits ad sales（抓取时 BBC 标注 44 minutes ago）"
+  - "Alphabet 一天蒸发 just over $500bn (£374bn)，市值从前一天 $3.97 trillion 降到 $3.46 trillion"
+  - "股价 plummeted over 12%，创 six-month low"
+  - "Alphabet Q3（三个月到 9 月底）total revenue 同比 +25%，到 $127.6bn；未达分析师预期，广告业务尤甚"
+  - "CBO Philipp Schindler：Google 的 \"AI mode\"（对话式回答）正在侵蚀传统搜索结果旁边的广告收入"
+  - "Schindler 同时表示对轨迹 \"very good about our trajectory\""
+  - "Kim Scott（前 Google 广告业务负责人，BBC Today 节目）：Google 宁可 \"rather eat its own lunch than allow someone else to eat their lunch\"，也要让自家 AI 概要打自己的搜索收入；Google 成立之初就是拿长期赌注押技术，\"even if they hurt the firm in the short term\""
+  - "Amazon：盘后跌 6%；季度销售 +11% 到 $201bn；cash flow negative $42bn；花销在三个月里涨了 six-fold"
+  - "Jassy：这次豪赌有机会做出 not one, but two businesses，未来各自可能带来 $1 trillion（他点名自研芯片 + Bedrock，未指定是哪两个）"
+  - "Jassy 原话：\"there is not one tool to rule the world\"；\"People always assume whatever is in the lead early on will be the only thing that people use - it's never true.\""
+  - "Jassy 原话：把支出摊到接下来 25 年 \"would be more convenient\"，但 \"That's not the world we live in\"；\"We can fund this plan, and I think it will forever change the size, the revenue, the free cash flow of Amazon.\""
+  - "Microsoft：当天跌不到 1%；AI 投入少花约 $5bn；营收 +19% 到 $92.3bn；云 +30% 到 $63bn；Nadella 说 Copilot 的 automated tasks 自 7 月以来 nearly double，日活同比 +500%"
+
+not_quotable:
+  - "「Alphabet 是被 AI 摘要干掉搜索广告」—— 原文只说 AI mode 正在侵蚀广告收入 + 未达分析师预期（广告业务尤甚），没给出广告收入的具体下滑数字，不能量化"
+  - "「Jassy 说的两个万亿美元生意就是芯片和 Bedrock」—— 原文明确说他没有指明是哪两个（'Jassy did not specify what two Amazon businesses those may be'），只提到芯片与 Bedrock 是他反复讲的商业机会"
+  - "「微软 AI 少花 50 亿是因为砍掉了 AI 项目」—— 原文说的是 AI 投入少花约 $5bn，另有一周前宣布裁员数千人，两件事不要并成一条因果"
+
+screenshots_needed:
+  - "BBC 原文标题 + 首屏（Google 市值/AI mode 段）→ 已抓 screenshots/x-1.png（742,909 B）"
+  - "BBC 原文 Amazon 段（-6% / -$42bn / six-fold / Jassy 原话）→ 已抓 screenshots/x-2.png（282,835 B）"
+
+treatment_hint: first_person_original
+dedup_hits: []                          # index.json#seen 325 项无 url:21f09b4af674 命中
+gate_notes: "文案 sha256 与闸门结果见 state/memory/chuangzuo.md round_94"

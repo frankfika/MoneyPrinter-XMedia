@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-29T21:01:56+08:00",
+  "last_updated": "2026-10-31T16:27:05+08:00",
   "purpose": "按 post_id 去重",
   "entries": [
     {
@@ -3953,6 +3953,198 @@
       "source": "frank_manual",
       "agent_generated": false,
       "context": "pulse_round_82 平台侧对账补账 —— 这条 reply 是 **Frank 本人手动发的**（不在任何 agent 轮次日志里）。发现方式：from:FrankFika 搜索首条 + snowflake 反解 = 21:01:56，比 account-safety.yaml last_published_at（10-28 19:49:39 的 Quote 根帖）新。⚠️ 它是 reply 不是根帖 → 不计入 chuangzuo 12h 闸门，last_published_at 保持不动。正文：「@IncomprisSage 。。法国原住民都快成黑人了。。」"
+    },
+    {
+      "post_id": "url:f5c413d73956",
+      "handle": "cursor-blog",
+      "type": "inbound_kol_post_seen",
+      "seen_at": "2026-10-30T16:50:00+08:00",
+      "treatment": "web_source_material_only",
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "topic_signature": "cursor-marketplace-poisoned-claude-code-extension-anthropic-namespace-ssh-backdoor-5000-users",
+      "context": "chuangzuo_round_93 素材源（web 源 aihot 线索）。一手原文 cursor.com/blog/claude-code-extension-security-notice（Oct 29, 2026），12 项事实回原文逐句核对（5,000 用户 / 2:27am–1:35pm PT / 2.1.313 / :8099 beacon / com.apple.sysmond.plist / 市场整体关停重建）。aihot 早前「4100 用户」数字无一手来源，列入 not_quotable。"
+    },
+    {
+      "post_id": "url:21f09b4af674",
+      "handle": "bbc",
+      "type": "inbound_kol_post_seen",
+      "seen_at": "2026-10-30T21:06:00+08:00",
+      "treatment": "web_source_material_only",
+      "url": "https://www.bbc.com/news/articles/cm9qzdqpxy48o",
+      "topic_signature": "alphabet-500bn-ai-search-ad-revenue-amazon-negative-42bn-fcf-sixfold-spend-microsoft-5bn-less-ai-cloud-30pct",
+      "context": "chuangzuo_round_94 素材源（web 源 aihot 线索 → BBC 一手原文）。12 项事实回原文逐句核对：Alphabet 一天蒸发 just over $500bn / 股价跌超 12% 创半年新低 / 市值 $3.97tn→$3.46tn / Q3 营收 +25% 到 $127.6bn / Amazon 自由现金流 -$42bn 花销三个月 six-fold / 季度销售 +11% 到 $201bn / 盘后跌 6% / 微软少花 ~$5bn AI、云 +30% 到 $63bn、跌不到 1%。3 条不可引用说法列入 not_quotable（AI 摘要导致广告下滑的具体数字 / Jassy 那两个万亿美元生意到底是哪两个 / 微软少花与裁员不可并成一条因果）。"
+    },
+    {
+      "post_id": "2116164234329657435",
+      "handle": "FrankFika",
+      "seen_at": "2026-10-30T21:44:00+08:00",
+      "treatment": "own_posted",
+      "topic_signature": "cursor-claude-code-extension-marketplace-supply-chain-attack",
+      "posted_to_x": true,
+      "own_post_url": "https://x.com/FrankFika/status/2116164234329657435",
+      "media_count": 2,
+      "context": "Fang 2026-10-30 21:40 直接授权发布（Codex 会话内真发，走用户本人 Chrome 通道）"
+    },
+    {
+      "post_id": "2116163230821478566",
+      "handle": "FrankFika",
+      "seen_at": "2026-10-30T21:40:00+08:00",
+      "treatment": "own_posted_superseded",
+      "topic_signature": "cursor-claude-code-extension-marketplace-supply-chain-attack",
+      "posted_to_x": true,
+      "own_post_url": "https://x.com/FrankFika/status/2116163230821478566",
+      "context": "首次发布版本（仅图无正文），已被 21:44 的编辑版取代，见 published-posts.json#chuangzuo_2026-10-30-2140_cursor_supply_chain"
+    },
+    {
+      "post_id": "url:1a9f926a45b8",
+      "handle": "arstechnica",
+      "seen_at": "2026-10-31T01:45:00+08:00",
+      "treatment": "web_source_material",
+      "topic_signature": "doj-ghost-students-830k-accounts-130m-loss-ai-fake-attendance-automated-detection-false-positive-low-income-students",
+      "url": "https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/",
+      "posted_to_x": false,
+      "context": "round_95 备料（闸门+通道双否决，本轮未发）：DOJ 幽灵学生 / 83 万账户 / AI 伪造网课出席"
+    },
+    {
+      "post_id": "2116271569228181556",
+      "handle": "FrankFika",
+      "seen_at": "2026-10-31T04:54:46+08:00",
+      "treatment": "own_posted",
+      "topic_signature": "doj-ghost-students-ai-fraud-student-loans-130-million",
+      "posted_to_x": true,
+      "own_post_url": "https://x.com/FrankFika/status/2116271569228181556",
+      "media_count": 4,
+      "context": "Fang 2026-10-31 04:50 直接授权真发；2h 节奏第一条；走 Fang 本人 Chrome + Computer Use AX 通道"
+    },
+    {
+      "post_id": "url:f1f6194d2036",
+      "handle": "techcrunch",
+      "seen_at": "2026-10-31T06:30:00+08:00",
+      "treatment": "web_source_used_for_draft",
+      "topic_signature": "techcrunch-ai-capex-740b-debt-326b-negative-fcf-anthropic-ipo",
+      "posted_to_x": false,
+      "own_post_url": null,
+      "media_count": 0,
+      "context": "round_97 备稿（TechCrunch 一手，AI 基建发债/负自由现金流簇）；2h 闸门未到，本轮未发"
+    },
+    {
+      "post_id": "2116177320453046720",
+      "handle": "evvvvince",
+      "type": "inbound_reply_source",
+      "seen_at": "2026-10-31T10:15:19+08:00",
+      "treatment": "inbound_replied",
+      "source_post_id": "2116177320453046720",
+      "source_post_url": "https://x.com/evvvvince/status/2116177320453046720",
+      "own_reply_id": "2116353294327226621",
+      "own_reply_url": "https://x.com/FrankFika/status/2116353294327226621",
+      "reply_posted_at": "2026-10-31T10:15:19+08:00",
+      "reply_text_chars": 110,
+      "parent_post_id": "2116164234329657435",
+      "context": "pulse_round_85 inbound reply：@evvvvince 在 Frank 10-30 21:40 Cursor 供应链帖下（post 2116164234329657435）说『最坑在自动更新 装的人啥也没点 一觉起来就是 2.1.313』，是唯一给出新角度（自动更新路径）的 inbound。回文接的是『自动更新这一步压根不存在』这条，110 字，引 11 小时窗口 + 5000 人，不重复原帖已讲的『关停整个市场』。"
+    },
+    {
+      "post_id": "2116353294327226621",
+      "handle": "FrankFika",
+      "type": "own_post",
+      "seen_at": "2026-10-31T10:15:19+08:00",
+      "treatment": "inbound_replied",
+      "url": "https://x.com/FrankFika/status/2116353294327226621",
+      "posted_at": "2026-10-31T10:15:19+08:00",
+      "context": "pulse_round_85 inbound reply 自身。sha256 050057ea89e9c95c（= gate-receipts.json 里 10:15:09 那条 receipt 的 sha，chars 114 对齐闸门记录）。组合键 {\"key\":\"Enter\",\"modifiers\":[\"Meta\"]}，一次真发不重试。"
+    },
+    {
+      "post_id": "2116155959563489780",
+      "handle": "RachidSettas",
+      "type": "inbound_reply_source",
+      "seen_at": "2026-10-31T08:55:14+08:00",
+      "treatment": "frank_manual_reply_not_agent",
+      "source_post_id": "2116155959563489780",
+      "source_post_url": "https://x.com/RachidSettas/status/2116155959563489780",
+      "own_reply_id": "2116333139459191114",
+      "own_reply_url": "https://x.com/FrankFika/status/2116333139459191114",
+      "reply_posted_at": "2026-10-31T08:55:14+08:00",
+      "context": "pulse_round_85 平台侧对账发现：Frank 本人 08:55 手动回了一条（正文『该』，回复 @RachidSettas 关于『支持姆巴佩言论的公司当天被警察上门搜查』的帖）。非任何 agent 轮次产出。**形态=reply → 不计入 chuangzuo 12h 原创闸门，last_published_at 一个字都不动。**"
+    },
+    {
+      "post_id": "2116333139459191114",
+      "handle": "FrankFika",
+      "type": "own_reply",
+      "parent_post_id": "2116155959563489780",
+      "parent_handle": "RachidSettas",
+      "observed_at": "2026-10-31T08:55:14+08:00",
+      "treatment": "frank_manual_reply_not_agent",
+      "url": "https://x.com/FrankFika/status/2116333139459191114",
+      "context": "pulse_round_85 平台侧对账：Frank 本人手动发的 reply（agent_generated=false）。仓库惯例：账号自己发出去的帖也要在 seen-posts 留一条 own_reply，否则『我们处理过哪些帖』查不全。"
+    },
+    {
+      "post_id": "2116172693523612043",
+      "handle": "ajs6888",
+      "type": "inbound_reply_source",
+      "seen_at": "2026-10-30T22:00:00+08:00",
+      "treatment": "skipped_no_reply",
+      "source_post_id": "2116172693523612043",
+      "source_post_url": "https://x.com/ajs6888/status/2116172693523612043",
+      "reply_posted_at": null,
+      "context": "pulse_round_85 空窗期补扫到的 inbound，未回。SKIPPED_NO_REPLY：与 Frank 10-30 21:40 原帖内核重复（原帖已说『装的人根本分不出来』+『把整个市场关掉才是当事故处理』）；该 handle 历史上已多次被回（10-18/10-19/10-20），本轮无新增量，且内容是纯认同不需要补充事实。原文：挂着官方命名空间确实很难辨认，插件市场审核得跟上啊"
+    },
+    {
+      "post_id": "2116164554535190623",
+      "handle": "surlymochan",
+      "type": "inbound_reply_source",
+      "seen_at": "2026-10-30T22:00:00+08:00",
+      "treatment": "skipped_no_reply",
+      "source_post_id": "2116164554535190623",
+      "source_post_url": "https://x.com/surlymochan/status/2116164554535190623",
+      "reply_posted_at": null,
+      "context": "pulse_round_85 空窗期补扫到的 inbound，未回。SKIPPED_NO_REPLY：与 @ajs6888 同集群（命名空间难辨 + 市场审核缺位），且与 Frank 原帖内核重复；本轮配额只有 1 个动作（2h 降载），给更有增量的 @evvvvince。原文：名字挂着 Anthropic 的命名空间，正常人根本分不出来吧。这哪是用户疏忽，分明是市场审核在裸奔"
+    },
+    {
+      "post_id": "2116445350865367066",
+      "handle": "xiaohu",
+      "type": "outbound_like_target",
+      "seen_at": "2026-10-31T16:24:43+08:00",
+      "treatment": "like_only",
+      "source_post_id": "2116445350865367066",
+      "source_post_url": "https://x.com/xiaohu/status/2116445350865367066",
+      "post_url": "https://x.com/xiaohu/status/2116445350865367066",
+      "reply_posted_at": null,
+      "context": "pulse_round_86 outbound like #1（早赞位）。@xiaohu 根帖：Subvocal AI 眼镜 —— 不出声、靠感知发声肌肉动作解析输入，团队宣称 >200 wpm，附 16h 前的种子轮原帖。\n**赞前 likes=0 → 赞后 Frank 排 liked-by 第 1 位**（早赞优势最大的一条：赞列表最小 + 帖子最新）。"
+    },
+    {
+      "post_id": "2116391715796099084",
+      "handle": "jiqizhixin",
+      "type": "outbound_like_target",
+      "seen_at": "2026-10-31T16:27:05+08:00",
+      "treatment": "like_only",
+      "source_post_id": "2116391715796099084",
+      "source_post_url": "https://x.com/jiqizhixin/status/2116391715796099084",
+      "post_url": "https://x.com/jiqizhixin/status/2116391715796099084",
+      "reply_posted_at": null,
+      "context": "pulse_round_86 outbound like #2。@jiqizhixin（机器之心）根帖：UCSB + Microsoft 的 ScholarEvolve —— 演化的是 LLM 外围的 harness（工具 / 记忆 / 工作流），模型参数固定不动。\n**赞前 likes=0 → 赞后 Frank 排 liked-by 第 1 位**。"
+    },
+    {
+      "post_id": "2116352771767349461",
+      "handle": "FrankFika",
+      "type": "own_post",
+      "seen_at": "2026-10-31T10:13:15+08:00",
+      "treatment": "frank_manual_post_not_agent",
+      "url": "https://x.com/FrankFika/status/2116352771767349461",
+      "post_url": "https://x.com/FrankFika/status/2116352771767349461",
+      "posted_at": "2026-10-31T10:13:15+08:00",
+      "reply_posted_at": null,
+      "context": "pulse_round_86 平台侧对账补账：账号侧直发的**根帖**（无 'Replying to'）—— AI 基建的钱从债市借：五家今年合计发债 3260 亿美元，Alphabet FCF -91 亿连续两季为负。\n证据：from:FrankFika live search 抓到 → snowflake 反解发帖时刻 2026-10-31T10:13:15+08:00；chuangzuo.md 末轮 = round_97（10-31 06:35）、published-posts.json mtime = 10-31 04:54 → 该帖不在任何 agent 轮次产出里。\n⚠️ **形态=根帖 → 计入 chuangzuo 的 12h 原创闸门**（skills/README.md:82：Quote 帖=根帖计入，reply 不计入）。"
+    },
+    {
+      "post_id": "2116376167532097692",
+      "handle": "FrankFika",
+      "type": "own_post",
+      "seen_at": "2026-10-31T11:46:13+08:00",
+      "treatment": "frank_manual_post_not_agent",
+      "url": "https://x.com/FrankFika/status/2116376167532097692",
+      "post_url": "https://x.com/FrankFika/status/2116376167532097692",
+      "posted_at": "2026-10-31T11:46:13+08:00",
+      "reply_posted_at": null,
+      "context": "pulse_round_86 平台侧对账补账：账号侧直发的**根帖**（无 'Replying to'）—— vibecoding 做出来的东西，不出 1 个月就能直接在 grokbot 之类的 bot 对话框实现。\n证据：from:FrankFika live search 抓到 → snowflake 反解发帖时刻 2026-10-31T11:46:13+08:00；chuangzuo.md 末轮 = round_97（10-31 06:35）、published-posts.json mtime = 10-31 04:54 → 该帖不在任何 agent 轮次产出里。\n⚠️ **形态=根帖 → 计入 chuangzuo 的 12h 原创闸门**（skills/README.md:82：Quote 帖=根帖计入，reply 不计入）。"
     }
   ]
 }

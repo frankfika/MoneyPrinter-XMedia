@@ -1,0 +1,61 @@
+# 素材包 · 2026-10-30 pm 档（WorkBuddy automation 轮，round_93）
+# 通道说明：本环境无 cua_repl（Local browser use 未启用），xb.py profile 未登录 X
+#   → 真发不可行；本轮只出完成版备稿（material + x.txt + 2 张真截图），供下一窗口真发。
+
+material_id: "1030-pm-01"
+slot: pm
+scanned_at: "2026-10-30T16:43:09+08:00"
+source_kind: web
+source_name: aihot
+
+author:
+  name: "Cursor (Anysphere)"
+  handle: "cursor-blog"
+  lang: en
+
+original:
+  url: "https://cursor.com/blog/claude-code-extension-security-notice"
+  post_id: "url:f5c413d73956"          # sha1 前 12 位
+  posted_at: "2026-10-29T00:00:00+08:00"  # 公告落款 Oct 29, 2026（美西，精确时刻未给）
+
+signal: "行业（aihot 置顶 10-30 15:46）"
+metrics: null
+read_url: null
+
+ai_match: true                          # 命中关键词：AI / Claude / Agent 生态
+
+summary: "Cursor 扩展市场被投毒：恶意版 Anthropic.claude-code 2.1.313 挂着 Anthropic 命名空间上架 11 小时，最多 5000 用户受影响，装上会塞 SSH 后门公钥；Cursor 直接把整个市场关停重建、轮换全部密钥。角度切信任模型：名字里的 `Anthropic.` 前缀不是背书。"
+
+evidence_links:
+  - label: "Cursor 官方安全公告（原文）"
+    url: "https://cursor.com/blog/claude-code-extension-security-notice"
+  - label: "aihot 线索页"
+    url: "https://x.com/cursor_ai/status/2116074289053175808"
+
+# —— 回原文逐条核对（2026-10-30 16:45，curl 官方页 → 转纯文本 → 逐句 grep）——
+verified_facts:
+  - "公告落款 Oct 29, 2026；涉事包 Anthropic.claude-code version 2.1.313"
+  - "原话：This malicious version of the extension was not developed by Anthropic（不是 Anthropic 发的）"
+  - "At most 5,000 users were affected（最多 5000 用户；官方将直接联系）"
+  - "投放窗口：between about 2:27am PT and 1:35pm PT today（约 11 小时）"
+  - "恶意行为：收集 hostname/username/OS/架构/home 目录/环境变量名/工作目录/Git email/公网 IP"
+  - "往 authorized_keys 塞攻击者 SSH 公钥；尝试开启本机 SSH 服务 + 反向隧道"
+  - "macOS/Windows 上开启 SSH 服务需管理员权限；恶意代码自身有错，大多数机器该步失败，攻击者无法经隧道登录"
+  - "但公钥仍被添加、持久化仍被安装、主机信息仍被回传（官方明说：仍要按补救步骤处理）"
+  - "持久化：macOS LaunchAgent ~/Library/LaunchAgents/com.apple.sysmond.plist（伪装系统名）；Windows 计划任务跑 SYSTEM + Startup 脚本兜底；后台脚本约每 60 秒重试"
+  - "回传：HTTP POST 到 :8099/beacon；IoC 外部 134[.]209[.]82[.]225:8099，本机回环 127.0.0.1:8099"
+  - "攻击者服务器已下线（Cursor 联系云服务商处理）；官方分发渠道与其他版本无受影响证据"
+  - "处置：立即下架 → 为谨慎起见整个 VSCode Marketplace 关停 → 审计确认无其他扩展被篡改 → 轮换密钥 → 重建市场 → 重新上线"
+
+not_quotable:
+  - "「aihot 早前版本写 4100 用户受影响」—— 现行官方页只有 At most 5,000，4100 无一手来源，不引用"
+  - "「攻击者窃取了源码/密钥」—— 公告未说，只说轮换密钥是出于处置"
+  - "「市场关停 X 小时」—— 公告未给关停时长"
+
+screenshots_needed:
+  - "官方公告页首屏（标题+What happened）→ 已抓 screenshots/x-1.png"
+  - "官方公告页 What we did / What you should do 段 → 已抓 screenshots/x-2.png（同一官方页裁切）"
+
+treatment_hint: first_person_original
+dedup_hits: []                          # index.json#seen 324 项无 url:f5c413d73956 命中
+gate_notes: "文案 sha256 与闸门结果见本轮轮次段（state/memory/chuangzuo.md round_93）"

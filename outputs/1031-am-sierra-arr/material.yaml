@@ -1,0 +1,51 @@
+# 素材包 · 2026-10-31 03:30 档（WorkBuddy automation 代跑 · round_95）— 备料档（浏览器通道不通，未发）
+# 通道说明：xb.py login_state exit 0 但 logged_in=false（探测页导航超时 about:blank）
+#   → X 无法真发；本包为下一窗口备稿。前置判据①②均放行（上次原创 21:40 距今 6h46m），被否的只有通道。
+
+material_id: "1031-am-sierra-arr-01"
+slot: am
+scanned_at: "2026-10-31T04:31:00+08:00"
+source_kind: web
+source_name: aihot
+
+author:
+  name: "Sierra（官方博客）"
+  handle: "sierra.ai"
+  lang: en
+
+original:
+  url: "https://sierra.ai/blog/our-customers-ambition-is-accelerating-our-growth"
+  post_id: "url:b14e39232143"          # sha1 前 12 位
+  posted_at: "2026-10-30"              # 官博署名日期 October 30, 2026
+
+signal: "行业（aihot latest 第 4 条 · Sierra 官方博客一手原文）"
+metrics: null
+read_url: null
+
+ai_match: true                          # 命中关键词：AI agent / ARR / 企业客户
+
+summary: "Bret Taylor 的 AI agent 公司 Sierra 官宣 ARR 突破 4 亿美元，Q3 单季新增超 1.5 亿（超过去年全年）；倍速在加快：100→200M 用 6 个月，200→400M 只用 5 个月。客户覆盖近一半财富 50 强，一家 400 亿营收的美国零售商从首次会面到 agent 上线只花 27 天。商业模式按结果计费（贷款重组/保险理赔/成交），不按 token 用量。角度切 agent 商业化最硬的一份实证答卷。"
+
+evidence_links:
+  - label: "Sierra 官方博客一手原文"
+    url: "https://sierra.ai/blog/our-customers-ambition-is-accelerating-our-growth"
+  - label: "aihot 线索条目（10-30 20:50）"
+    url: "https://aihot.news/api/v1/agent/latest"
+
+# —— 回原文逐条核对（2026-10-31 04:29，curl 官方页 + 代理 7890 → 转纯文本 → 逐句 grep）——
+verified_facts:
+  - "标题：Our customers' ambition is accelerating our growth，署名 Bret Taylor / Clay Bavor，日期 October 30, 2026"
+  - "「We launched Sierra just over two and a half years ago」—— 创办刚过两年半"
+  - "「This week, we hit $400M+ in ARR」—— 本周 ARR 突破 4 亿美元"
+  - "「adding over $150M+ in ARR in Q3 alone. That's more ARR in one quarter than we generated all of last year」—— Q3 单季新增超 1.5 亿，超过去年全年"
+  - "「we took six months to double from $100M to $200M ARR, and only five months to double from $200M to $400M」—— 100→200M 用 6 个月，200→400M 只用 5 个月"
+  - "Ghostwriter：本月一家年营收 $40B+ 的美国大型零售商「went from first meeting to live agent in 27 days」"
+  - "「we now work with almost 50% of the Fortune 50」—— 客户覆盖近一半财富 50 强"
+  - "「You pay for outcomes, not tokens used — a loan refinanced, an insurance claim paid, a sale closed, a customer retained」—— 按结果计费，不按 token"
+  - "Poppy 开放标准：与 50+ 企业共建，点名 Meta、Rocket、Shopify、Stripe、Walmart 等"
+  - "背景（站内相关帖）：2026-05-04 官宣融资 $950M，估值超 $15B"
+
+not_quotable:
+  - "「Sierra 是增长最快的 AI 公司」—— 原文无此说法，不可外推"
+  - "「27 天 = 行业最快」—— 原文只说这一家的案例，无横向比较"
+  - "「ARR 4 亿 = 盈利」—— 原文只讲 ARR，未提利润/现金流，不可混写"

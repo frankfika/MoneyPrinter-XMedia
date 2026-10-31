@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "purpose": "小红书发布线状态 —— 门控判据的持久化台账。每次发布轮次先读这里，再读 private/account-safety.yaml#xhs。",
-  "last_updated": "2026-10-29T17:12:00+08:00",
+  "last_updated": "2026-10-31T10:02:05.176175+08:00",
   "account": "弗兰克的思维导图",
   "last_published_at": "2026-10-29T17:12:00+08:00",
   "last_published_note_id": "6ae30e1b0000000033012638",
   "last_published_title": "美国政府买Claude打4折，不用先交钱",
   "last_published_status": "审核中",
-  "published_today_count": 1,
+  "published_today_count": 0,
   "published_dates": [
     "2026-10-29"
   ],
@@ -16,9 +16,32 @@
   ],
   "automation_enabled": false,
   "automation_disabled_reason": "待探测验证：cron session 里内置浏览器的小红书登录态是否保持（探测结果见 state/memory/xhs-probe.md）。验证通过后才允许 cron 自动发。",
-  "pending_drafts": [],
+  "pending_drafts": [
+    {
+      "prepared_at": "2026-10-31T01:55:00+08:00",
+      "material_id": "1030-pm-ai-capex-01",
+      "dir": "outputs/1030-pm-ai-capex-cashflow",
+      "title": "谷歌AI吃广告，一天蒸发5000亿",
+      "text_file": "outputs/1030-pm-ai-capex-cashflow/xhs.txt",
+      "screenshots": [
+        "screenshots/x-1.png",
+        "screenshots/x-2.png"
+      ],
+      "visibility": "公开可见",
+      "gates": {
+        "humanize_soft_score": 0,
+        "prepublish_passed": true,
+        "qa_draft_passed": true
+      },
+      "sha256": "2c9a9816b7d9c175e019eab568ef5fb87b9d7818ee679418265c97d436d67001",
+      "status": "备稿就绪 · 未发布（通道未开 + automation_enabled=false；2026-10-31 04:46 复核三闸门仍全过）"
+    }
+  ],
   "notes": [
     "2026-10-29 17:12 首篇发布（人工触发，Frank 17:11 授权）。素材 1029-pm-gsa-procurement，2 张 Anthropic 官网真截图，762 字 / 7 标签，humanize soft_score 0。",
-    "2026-10-29 14:44 有一条来源不明的笔记（note_id 6ae2eb5b0000000036019fa9，无标题 / 2 图 / 已通过 / 曝光 2）—— 本机全部自动化链路已排除，非本仓库产出，待 Frank 确认来源。"
+    "2026-10-29 14:44 有一条来源不明的笔记（note_id 6ae2eb5b0000000036019fa9，无标题 / 2 图 / 已通过 / 曝光 2）—— 本机全部自动化链路已排除，非本仓库产出，待 Frank 确认来源。",
+    "2026-10-31 01:55 cron 轮（探测模式）：零发布。内置浏览器通道仍被 Codex 账号级 Work 设置 'Local browser use' 禁用（插件在、runtime 能起，iab/chrome/dot/mcpapps/edge/extension 全 backend + 直连 rpc + orbit 全报 'Local browser use is disabled in Work settings'），本机不可改。本轮产出完成版备稿 outputs/1030-pm-ai-capex-cashflow/xhs.txt（BBC/AI 现金流；2 张 BBC 官网真截图；humanize soft_score 0 / prepublish passed / qa-draft 全 PASS）。automation_enabled 保持 false（未自己 flip）。",
+    "2026-10-31 04:46 cron 轮（第 3 轮）：零动作。通道复核 —— browser service setup 成功（插件在、runtime 能起），但 browser_user_get_tab_context + agent.browsers.list() + agent.browsers.get('iab') 全报 'Local browser use is disabled in Work settings'（根因不变：app 侧账号级 Work 开关 localBrowserUse，本机不可改）；本 session 无 mcp__cua_repl__js；Pencil MCP transport not connected。节奏闸门采样：posts_per_day_max=2 / min_gap_hours=10 / 当天已发=0 / 距上次发布 35.45h（过）/ 随机跳档=SKIP。备稿 outputs/1030-pm-ai-capex-cashflow 三道闸门重跑仍全过（soft_score 0 / prepublish passed / qa-draft 全部 PASS），sha256 未变。automation_enabled 保持 false（未自己 flip）。",
+    "2026-10-31 08:37 cron 轮（第 4 轮，08:37 本地档口）：零动作。通道复核 —— nodeRepl.rpc('browser', {method:'execute', params:{type:'browser_user_get_tab_context', browser_id:'iab'}}) 仍报 'Local browser use is disabled in Work settings'（根因不变：app 侧账号级 Work 开关 localBrowserUse，本机不可改）；本 session 无 mcp__cua_repl__js。节奏闸门采样：posts_per_day_max=2 / min_gap_hours=10 / 当天已发=0 / 距上次发布 40.83h（过）/ 随机跳档采样=SKIP（secrets.randbelow(2)==0）。备稿 outputs/1030-pm-ai-capex-cashflow 仍在位（sha256 2c9a9816… 未变，本轮未重跑闸门——通道不通不消耗闸门运行）。automation_enabled 保持 false（未自己 flip）。"
   ]
 }

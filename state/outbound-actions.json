@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-29T23:57:12+08:00",
+  "last_updated": "2026-10-31T16:27:05+08:00",
   "purpose": "记录非原创 outbound 动作(like / quote_retweet / reply_passive),区别于 published-posts.json 的原创 post",
   "entries": [
     {
@@ -2316,6 +2316,94 @@
         "own_post_page_title_matches": true
       },
       "note": "pulse_round_82 平台侧对账补账 —— 这条 reply 是 **Frank 本人手动发的**，不是任何 agent 轮次产出（轮次日志覆盖不到）。发现方式：`search?q=from:FrankFika` 首条 = 2115791244064690547，snowflake 反解 = 2026-10-29T21:01:56+08:00，比 account-safety.yaml#x.last_published_at（10-28 19:49:39 那条 Quote 根帖）新。⚠️ **它是一条 reply，不是根帖 → 不计入 chuangzuo 的 12h 闸门**，所以 last_published_at 保持不动；只更新 last_outbound_reply_* 系列。"
+    },
+    {
+      "id": "outbound-reply-226621",
+      "timestamp": "2026-10-31T10:15:19+08:00",
+      "action": "reply",
+      "target_handle": "evvvvince",
+      "target_post_id": "2116177320453046720",
+      "target_post_url": "https://x.com/evvvvince/status/2116177320453046720",
+      "target_post_topic_signature": "cursor-plugin-auto-update-no-user-consent-agent-plugin-default-off",
+      "treatment": "inbound_replied",
+      "own_post_id": "2116353294327226621",
+      "own_post_url": "https://x.com/FrankFika/status/2116353294327226621",
+      "agent_generated": true,
+      "context": "pulse_round_85 inbound reply 真发：fill → press_key {key:Enter,modifiers:[Meta]} → wait 9s → from:FrankFika live search 首条 post_id=2116353294327226621（20s ago）+ 详情页 thread DOM 出现『陈放Frank🕊️ @FrankFika · 10:15 AM · Oct 31, 2026』且正文逐字对上 → 两路交叉验证真发。无重试（X 反重复拦截是真 spam 信号）。",
+      "verification": "search from:FrankFika 首条 + 详情页 thread DOM 双路命中，正文逐字一致",
+      "risk_notes": "N/A"
+    },
+    {
+      "id": "outbound-reply-191114",
+      "timestamp": "2026-10-31T08:55:14+08:00",
+      "action": "reply",
+      "target_handle": "RachidSettas",
+      "target_post_id": "2116155959563489780",
+      "target_post_url": "https://x.com/RachidSettas/status/2116155959563489780",
+      "target_post_topic_signature": "manual-reply-rachidsettas-mbappe-statement-company-police-raid",
+      "treatment": "frank_manual_reply_not_agent",
+      "own_post_id": "2116333139459191114",
+      "own_post_url": "https://x.com/FrankFika/status/2116333139459191114",
+      "agent_generated": false,
+      "context": "pulse_round_85 平台侧对账补账：Frank 本人 08:55 手动发的 reply（正文『该』，回复 @RachidSettas）。任何 agent 轮次日志都覆盖不到。**形态=reply → 不计入 chuangzuo 12h 原创闸门**（skills/README.md:82：Quote 帖=根帖计入，reply 不计入）。",
+      "verification": "from:FrankFika live search 首条 post_id + snowflake 反解 08:55:14 + 详情页确认『Replying to @RachidSettas』",
+      "risk_notes": "N/A"
+    },
+    {
+      "id": "outbound-like-367066",
+      "timestamp": "2026-10-31T16:24:43+08:00",
+      "action": "like",
+      "target_handle": "xiaohu",
+      "target_post_id": "2116445350865367066",
+      "target_post_url": "https://x.com/xiaohu/status/2116445350865367066",
+      "target_post_topic_signature": "subvocal-ai-glasses-silent-speech-input-200wpm",
+      "treatment": "like_only",
+      "agent_generated": true,
+      "context": "pulse_round_86 outbound like #1（早赞位）。@xiaohu 根帖：Subvocal AI 眼镜 —— 不出声、靠感知发声肌肉动作解析输入，团队宣称 >200 wpm，附 16h 前的种子轮原帖。\n**赞前 likes=0 → 赞后 Frank 排 liked-by 第 1 位**（早赞优势最大的一条：赞列表最小 + 帖子最新）。",
+      "verification": "干净详情页（/status/<id>）→ query kind=dom 打 button[data-testid='like'] 读赞前 aria-label 『0 Likes. Like』→ click → 再打 button[data-testid='unlike'] 读『1 Like. Liked』，且 query 返回的 URL = 目标详情页 URL（防打错对象，round_79 事故口径）",
+      "risk_notes": "零文字动作，不带文案，X 风控基本无感；两次 like 之间显式 wait 2×60s（间隔 >2min）"
+    },
+    {
+      "id": "outbound-like-099084",
+      "timestamp": "2026-10-31T16:27:05+08:00",
+      "action": "like",
+      "target_handle": "jiqizhixin",
+      "target_post_id": "2116391715796099084",
+      "target_post_url": "https://x.com/jiqizhixin/status/2116391715796099084",
+      "target_post_topic_signature": "scholarevolve-agent-harness-evolution-ucsb-microsoft",
+      "treatment": "like_only",
+      "agent_generated": true,
+      "context": "pulse_round_86 outbound like #2。@jiqizhixin（机器之心）根帖：UCSB + Microsoft 的 ScholarEvolve —— 演化的是 LLM 外围的 harness（工具 / 记忆 / 工作流），模型参数固定不动。\n**赞前 likes=0 → 赞后 Frank 排 liked-by 第 1 位**。",
+      "verification": "干净详情页（/status/<id>）→ query kind=dom 打 button[data-testid='like'] 读赞前 aria-label 『0 Likes. Like』→ click → 再打 button[data-testid='unlike'] 读『1 Like. Liked』，且 query 返回的 URL = 目标详情页 URL（防打错对象，round_79 事故口径）",
+      "risk_notes": "零文字动作，不带文案，X 风控基本无感；两次 like 之间显式 wait 2×60s（间隔 >2min）"
+    },
+    {
+      "id": "outbound-post-349461",
+      "timestamp": "2026-10-31T10:13:15+08:00",
+      "action": "post",
+      "target_handle": "FrankFika",
+      "target_post_id": "2116352771767349461",
+      "target_post_url": "https://x.com/FrankFika/status/2116352771767349461",
+      "target_post_topic_signature": "ai-infra-debt-msft-alphabet-amazon-meta-oracle-326b-bonds-fcf-negative",
+      "treatment": "frank_manual_post_not_agent",
+      "agent_generated": false,
+      "context": "pulse_round_86 平台侧对账补账：账号侧直发的根帖（AI 基建的钱从债市借：五家今年合计发债 3260 亿美元，Alphabet FCF -91 亿连续两季为负）。**agent_generated=false —— 下一轮不得把它当成 agent 产出继承节奏闸门**。形态=根帖 → 计入 chuangzuo 12h 原创闸门。",
+      "verification": "from:FrankFika live search post_id + snowflake 反解 + 详情页确认根帖形态（无 Replying to）",
+      "risk_notes": "N/A"
+    },
+    {
+      "id": "outbound-post-097692",
+      "timestamp": "2026-10-31T11:46:13+08:00",
+      "action": "post",
+      "target_handle": "FrankFika",
+      "target_post_id": "2116376167532097692",
+      "target_post_url": "https://x.com/FrankFika/status/2116376167532097692",
+      "target_post_topic_signature": "vibecoding-to-bot-chat-window-one-month",
+      "treatment": "frank_manual_post_not_agent",
+      "agent_generated": false,
+      "context": "pulse_round_86 平台侧对账补账：账号侧直发的根帖（vibecoding 做出来的东西，不出 1 个月就能直接在 grokbot 之类的 bot 对话框实现）。**agent_generated=false —— 下一轮不得把它当成 agent 产出继承节奏闸门**。形态=根帖 → 计入 chuangzuo 12h 原创闸门。",
+      "verification": "from:FrankFika live search post_id + snowflake 反解 + 详情页确认根帖形态（无 Replying to）",
+      "risk_notes": "N/A"
     }
   ]
 }

@@ -25,27 +25,32 @@
 #   prompt 唯一事实源：docs/cron-prompts/*.md（run-round.sh 从围栏块抽取，不维护副本）
 
 # ══════════════════════════════════════════════════════════════
-# 2026-10-30 权威口径（Frank「多发布」+ 全内置浏览器）：调度器 = Codex Automations
-#   pipeline-12   = X 创作   30 3,9,15,21 * * *（4 档/天，原创间隔 ≥6h）
-#   automation    = 小红书    37 9,12,16,20 候选档口（≤2 条/天，间隔 ≥10h）
-#   x-pulse-6     = X 互动   0 4,10,16,22 * * *（单轮 ≤3 动作）
-#   super-bot-09-00 = 日报  0 9 * * *（只读）
-# 下方 executor/crons 块里的 Mavis cron_id 是历史存档，不再生效。
+# 2026-10-31 权威口径（本地化 + 无视觉）：调度器 = 本机常驻 scripts/scheduler.sh + codex exec
+#   scheduler.sh 每 30s 醒一次按档口 fire scripts/run-round.sh（pid 文件 logs/local/.scheduler.pid，
+#   停止：touch logs/local/.scheduler-stop 或 kill 该 pid；启动：nohup bash scripts/scheduler.sh &）
+#   chuangzuo = X 创作 30 分 × 偶数时（每 2h，:30 错开 pulse 的 :00）
+#   xhs       = 小红书  37 9,12,16,20 候选档口（≤2 条/天，间隔 ≥10h）
+#   pulse     = X 互动  0 4,10,16,22（单轮 ≤3 动作）
+#   super-bot = 日报    0 9（只读）
+#   单轮执行器：scripts/run-round.sh <line>（codex exec -s danger-full-access，prompt 抽自
+#   docs/cron-prompts/<line>.md 第一个围栏块；日志 logs/local/）
+#   浏览器唯一通道 = xb.py（专用 Chrome，CDP 9222，DOM 无视觉）；
+#   Codex 内置浏览器（组织策略禁用）与 AX（视觉通道）已废止。
+#   （launchd 方案保留在 scripts/install-launchd.sh，备选；机器重启后 scheduler.sh 需重拉，
+#    要开机自启就换 launchd 那条。）
+# 下方 executor/crons 块里的 Mavis/Codex cron_id 均为历史存档，不再生效。
 # ══════════════════════════════════════════════════════════════
 
 timezone: Asia/Shanghai
 
 # ─── 实际 cron ───
 executor:
-  launcher: runtime_cron                  # Mavis runtime cron（2026-10-29 起为唯一调度器）
-  command: 'runtime cron (cron_read/cron_update)'
+  launcher: launchd                       # 2026-10-31 起：本机 launchd 为唯一调度器
+  command: 'scripts/run-round.sh <line>（codex exec）'
   session: new
   runner: scripts/run-round.sh
   per_line_lock: true                  # 同一条线不并发；跨线可并行
-  retired_launchd:                    # 2026-10-29 已 bootout + disable（持久化）
-    - com.fangchen.shortbot.pulse
-    - com.fangchen.shortbot.chuangzuo
-    - com.fangchen.shortbot.super-bot
+  retired_launchd: []                  # 2026-10-31 四条线已由 scripts/install-launchd.sh 重新装回
   kept_launchd_not_schedulers:        # 不是调度器，留着无害
     - com.fangchen.shortbot.browser    # xb.py 链路的 Chrome 实例（--user-data-dir=.shortbot-browser-profile）
     - com.fangchen.shortbot.restartdsh # DSH desktop profile 的 host 重启，与 shortbot 调度无关
@@ -117,7 +122,7 @@ pulse_outbound_like_max: 2
 pulse_original_post_max: 0        # pulse 不发原创，chuangzuo 独占
 
 chuangzuo_original_post_max: 1    # 每轮最多 1 条原创
-chuangzuo_original_post_min_gap_hours: 6    # → 最多 4 条/天（3:30/9:30/15:30/21:30），Frank 2026-10-30「多发布」（自 12h 下调，10-27 口径是 2 条/天）
+chuangzuo_original_post_min_gap_hours: 2    # → 最多 12 条/天，Frank 2026-10-31「每 2h 一发」（自 6 再下调；10-30 是 6h，10-27 是 12h）
 # 互动差（likes ≤ 2）不再否决发送，只作为「换选题方向」的信号 → 见 publish_gates.likes_signal
 
 # 原创间隔下限。真实节奏由上方的 min_gap_hours + 前置判据（likes 闸门）决定，
@@ -128,7 +133,7 @@ cooldown_between_posts_min: 30
 publish_gates:
   - id: frank_recent_original_post
     desc: >-
-      Frank 自己在 min_gap_hours(6) 内发过**原创帖** → 本轮零发送（**硬否决**）。
+      Frank 自己在 min_gap_hours(2) 内发过**原创帖** → 本轮零发送（**硬否决**）。
       **只数根帖（原创），reply 不计入。**
     check: >-
       search?q=from:FrankFika 取首条 post_id + snowflake 反解发帖时刻，再与
@@ -148,7 +153,7 @@ publish_gates:
     action_when_hit: 顺延，不是零发送（留到下一个 12h 窗口）
   - id: likes_signal
     desc: >-
-      上一条原创 6h 后 likes 仍 ≤ 2 → **换选题方向**（不是否决发送）。
+      上一条原创 2h 后 likes 仍 ≤ 2 → **换选题方向**（不是否决发送）。
       2026-10-27 Frank「多干发原创」：这条闸门原本是硬否决，连否 3 轮（86/87/88），
       结果 40 小时零原创。互动差是**选题**问题，不是**发不发**问题 ——
       硬否决会让账号彻底停更，正好和 Frank 要的方向相反。

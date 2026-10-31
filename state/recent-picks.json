@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-29T23:57:12+08:00",
+  "last_updated": "2026-10-31T16:27:05+08:00",
   "purpose": "近期选题记忆",
   "entries": [
     {
@@ -1193,6 +1193,125 @@
       "reason": "Frank 本人手动回过这条（France 原住民 / 种族话题）—— 非 agent 产出。记进 dedup 是为了不让后续轮次把这个话题再当成候选（该话题对外争议大，Frank 既然已经自己表过态，agent 不必再碰）",
       "action_taken": "frank_manual_reply (非 pulse_round_82 动作)",
       "expires_at": "2026-11-05T21:01:56+08:00"
+    },
+    {
+      "id": "pick-cursor-1030pm",
+      "timestamp": "2026-10-30T16:50:00+08:00",
+      "handle": "cursor-blog",
+      "post_id": "url:f5c413d73956",
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "topic_signature": "cursor-marketplace-poisoned-claude-code-extension-anthropic-namespace-ssh-backdoor-5000-users",
+      "reason": "AI 编程工具供应链投毒：恶意版 Anthropic.claude-code 2.1.313 挂官方命名空间上架 11h、最多 5000 用户、SSH 后门 + 60s 重试回传；Cursor 处置是整个市场关停重建+轮换密钥。角度：名字里的 Anthropic. 前缀不是背书。",
+      "action_taken": "draft_ready_not_published（本环境无 cua_repl、xb.py 未登录 → 真发不可行，备稿供下一窗口）",
+      "output_dir": "outputs/1030-pm-cursor-claude-code-supply-chain",
+      "expires_at": "2026-11-06T16:50:00+08:00"
+    },
+    {
+      "id": "pick-bbc-ai-capex-1030pm",
+      "timestamp": "2026-10-30T21:06:00+08:00",
+      "handle": "bbc",
+      "post_id": "url:21f09b4af674",
+      "url": "https://www.bbc.com/news/articles/cm9qzdqpxy48o",
+      "topic_signature": "alphabet-500bn-ai-search-ad-revenue-amazon-negative-42bn-fcf-sixfold-spend-microsoft-5bn-less-ai-cloud-30pct",
+      "reason": "三家巨头同日报表给出三种定价：Alphabet 营收 +25% 仍一天蒸发 5000 多亿（自家 AI 概要吃搜索广告）；Amazon 自由现金流 -420 亿美元、三个月花销涨 6 倍、盘后跌 6%；微软少花 50 亿 AI、云涨 30%、跌不到 1%。角度：市场把「AI 吃广告」和「AI 要烧钱」当两件事，其实三家都在用养 AI 的现金池喂 AI，差别在现金流久期。",
+      "action_taken": "draft_ready_not_published（内置浏览器 Local browser use 被禁 → 真发不可行，备稿供下一窗口；闸门 exit 0 / soft_score 0 / sha256 3bade5ee768fb2a7）",
+      "output_dir": "outputs/1030-pm-ai-capex-cashflow",
+      "expires_at": "2026-11-06T21:06:00+08:00"
+    },
+    {
+      "id": "pick-arstechnica-ghost-students-1031am",
+      "timestamp": "2026-10-31T01:45:00+08:00",
+      "handle": "arstechnica",
+      "post_id": "url:1a9f926a45b8",
+      "url": "https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/",
+      "topic_signature": "doj-ghost-students-830k-accounts-130m-loss-ai-fake-attendance-automated-detection-false-positive-low-income-students",
+      "reason": "DOJ 首次大规模打击「幽灵学生」：起诉 5 人，教育部查出 83 万个可能造假的助学账户（若全成立损失近 1.3 亿美元）。造假用 AI 填表/刷课/造假学生形象，打假用自动化风险分级；NCAN 顾问指没有驾照的低收入学生会被误伤卡住。角度：两边都用 AI，自动化省下的审核人力由最没余量的人承担。",
+      "action_taken": "draft_ready_not_published（判据① 硬否决：距上一条原创仅 3h52m < 6h；且内置浏览器 Local browser use 被禁 → 备稿供 09:30 档；闸门 exit 0 / soft_score 0 / sha256 43be8cee697d88fb）",
+      "output_dir": "outputs/1031-am-doj-ghost-students"
+    },
+    {
+      "id": "pick-sierra-arr-1031am",
+      "timestamp": "2026-10-31T04:36:00+08:00",
+      "handle": "sierra.ai",
+      "post_id": "url:b14e39232143",
+      "url": "https://sierra.ai/blog/our-customers-ambition-is-accelerating-our-growth",
+      "topic_signature": "sierra-arr-400m-q3-150m-accelerating-doubling-fortune-50-outcome-based-pricing-bret-taylor",
+      "reason": "Bret Taylor 的 Sierra 官宣 ARR 破 4 亿美元：Q3 单季新增 1.5 亿超去年全年；100→200M 用 6 个月、200→400M 只用 5 个月；近一半财富 50 强客户；$40B+ 零售商 27 天上线；按结果计费不按 token。官方博客一手数字 12 项全核对。",
+      "action_taken": "draft_ready_not_published",
+      "output_dir": "outputs/1031-am-sierra-arr",
+      "note": "X 浏览器通道不通（xb.py logged_in=false）→ 备稿不发；qa-draft 全 PASS / humanize soft_score 0 / 3 张官网真图"
+    },
+    {
+      "id": "pick-tc-capex-debt-1031am",
+      "timestamp": "2026-10-31T06:30:00+08:00",
+      "handle": "techcrunch",
+      "post_id": "url:f1f6194d2036",
+      "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+      "topic_signature": "techcrunch-ai-capex-740b-debt-326b-negative-fcf-anthropic-ipo",
+      "reason": "TechCrunch 一手：四家今年 capex 超 7400 亿美元；Alphabet Q3 自由现金流 -91 亿连续第二季为负、Amazon 过去 12 个月 -424 亿、Meta -21 亿，微软唯一为正 +186 亿；S&P Global Market Intelligence：五家 2026 合计发债 3260 亿 = 去年三倍；Anthropic 已递 IPO 招股，FT 报道黑石提醒可能拿不到投资级评级。角度：基建的钱从利润转到债市，风险传导到信用评级层。14 条一手事实已逐句核对。",
+      "action_taken": "draft_ready_not_published",
+      "output_dir": "outputs/1031-am-tc-ai-capex-debt",
+      "note": "2h 闸门：距上一条原创 1h05m < 2h → 本轮零发送，顺延 08:00 档（届时 3.1h）。闸门 exit 0 / humanize soft_score 3 / 3 张 TechCrunch 官网真图 / x.txt 497 字"
+    },
+    {
+      "id": "pick-226621",
+      "timestamp": "2026-10-31T10:15:19+08:00",
+      "handle": "evvvvince",
+      "post_id": "2116177320453046720",
+      "url": "https://x.com/evvvvince/status/2116177320453046720",
+      "topic_signature": "cursor-plugin-auto-update-no-user-consent-agent-plugin-default-off",
+      "reason": "pulse_round_85 inbound reply 的话题签名：Cursor 插件供应链 × 自动更新默认关闭。7 天 dedup 窗口内 agent 不必再碰同内核。",
+      "expires_at": "2026-11-07"
+    },
+    {
+      "id": "pick-191114",
+      "timestamp": "2026-10-31T08:55:14+08:00",
+      "handle": "RachidSettas",
+      "post_id": "2116155959563489780",
+      "url": "https://x.com/RachidSettas/status/2116155959563489780",
+      "topic_signature": "manual-reply-rachidsettas-mbappe-statement-company-police-raid",
+      "reason": "pulse_round_85 补账：Frank 本人手动表过态的话题（姆巴佩言论公司被搜查），agent 不必再碰。",
+      "expires_at": "2026-11-07"
+    },
+    {
+      "id": "pick-367066",
+      "timestamp": "2026-10-31T16:24:43+08:00",
+      "handle": "xiaohu",
+      "post_id": "2116445350865367066",
+      "url": "https://x.com/xiaohu/status/2116445350865367066",
+      "topic_signature": "subvocal-ai-glasses-silent-speech-input-200wpm",
+      "reason": "pulse_round_86 outbound like：xiaohu 的帖（赞前 likes=0）。7 天内 agent 不重复同题。",
+      "expires_at": "2026-11-07"
+    },
+    {
+      "id": "pick-099084",
+      "timestamp": "2026-10-31T16:27:05+08:00",
+      "handle": "jiqizhixin",
+      "post_id": "2116391715796099084",
+      "url": "https://x.com/jiqizhixin/status/2116391715796099084",
+      "topic_signature": "scholarevolve-agent-harness-evolution-ucsb-microsoft",
+      "reason": "pulse_round_86 outbound like：jiqizhixin 的帖（赞前 likes=0）。7 天内 agent 不重复同题。",
+      "expires_at": "2026-11-07"
+    },
+    {
+      "id": "pick-349461",
+      "timestamp": "2026-10-31T10:13:15+08:00",
+      "handle": "FrankFika",
+      "post_id": "2116352771767349461",
+      "url": "https://x.com/FrankFika/status/2116352771767349461",
+      "topic_signature": "ai-infra-debt-msft-alphabet-amazon-meta-oracle-326b-bonds-fcf-negative",
+      "reason": "pulse_round_86 补账：账号已自己表过态的话题（AI 基建的钱从债市借：五家今年合计发债 3260 亿美元，Alphabet FCF -91 亿连续两季为负），agent 不必再碰。",
+      "expires_at": "2026-11-07"
+    },
+    {
+      "id": "pick-097692",
+      "timestamp": "2026-10-31T11:46:13+08:00",
+      "handle": "FrankFika",
+      "post_id": "2116376167532097692",
+      "url": "https://x.com/FrankFika/status/2116376167532097692",
+      "topic_signature": "vibecoding-to-bot-chat-window-one-month",
+      "reason": "pulse_round_86 补账：账号已自己表过态的话题（vibecoding 做出来的东西，不出 1 个月就能直接在 grokbot 之类的 bot 对话框实现），agent 不必再碰。",
+      "expires_at": "2026-11-07"
     }
   ]
 }

@@ -1,5 +1,12 @@
 # 短文助手 · 移交手册
 
+> :arrows_counterclockwise::arrows_counterclockwise::arrows_counterclockwise: **2026-10-31 第四次移交（Codex app → 本机 launchd，无视觉）**：
+> 调度层 = 本机 launchd 四条线（`com.fangchen.shortbot.{chuangzuo,pulse,xhs,super-bot}`）+
+> `scripts/run-round.sh`（`codex exec -s danger-full-access`，走本机 cc-switch 代理）。
+> 浏览器唯一通道 = **xb.py**（专用 Chrome，CDP 9222，纯 DOM、无视觉模型）；
+> Codex 内置浏览器被组织策略禁用、AX 是视觉通道，两者均已废止。
+> 安装：`bash scripts/install-launchd.sh`。当前权威口径以 README.md 与 state/schedule.yaml 顶部横幅为准。
+
 > **给接手方（新 AI / 新机器）读的第一份文件。**
 > 读完这一份，你应该能独立跑起整条流水线，且不会把 Frank 的账号资产玩坏。
 >

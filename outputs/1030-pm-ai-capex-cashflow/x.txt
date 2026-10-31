@@ -1,0 +1,16 @@
+Amazon 这个季度的自由现金流是负 420 亿美元，三个月花销涨了 6 倍。
+
+分析师几次追问为什么不把这笔钱摊到 25 年慢慢花。Jassy 承认那样「会更方便」，然后补了一句：我们不是在这样的世界里生活。
+
+Alphabet 那边营收涨了 25% 到 1276 亿美元，照样一天蒸发 5000 多亿，股价跌超 12% 创半年新低。微软少花 50 亿在 AI 上，云涨 30%，股价跌不到 1%。
+
+同一天这三家其实都在讲同一场 AI 军备竞赛，花钱的姿势差得很远。
+
+现金流扛不扛得住，才是我看 AI 生意的第一问。
+
+BBC：https://www.bbc.com/news/articles/cm9qzdqpxy48o
+
+# material_id: 1030-pm-ai-capex-01
+# source: https://www.bbc.com/news/articles/cm9qzdqpxy48o
+# treatment_hint: first_person_original
+# verified_facts: Amazon Q3 自由现金流负 420 亿美元 / 花销三个月涨 6 倍 / 季度销售 +11% 到 2010 亿 / 盘后跌 6% / Jassy 承认摊到 25 年「会更方便」但「That's not the world we live in」/ Alphabet 营收 +25% 到 1276 亿 / 一天蒸发 5000 多亿 / 股价跌超 12% 创半年新低 / 微软少花 50 亿 AI 云涨 30% 股价跌不到 1%

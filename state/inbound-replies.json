@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-28T04:10:40+08:00",
+  "last_updated": "2026-10-31T10:15:19+08:00",
   "purpose": "记录已回的 inbound reply(别人对我帖的 reply),用于 dedup 防重复回 + 跟踪社区互动闭环",
   "entries": [
     {
@@ -731,6 +731,18 @@
       "treatment": "inbound_replied",
       "text_chars": 157,
       "note": "pulse_round_75. @marmot_stacks（mmstacks）Oct 27 22:47 回 Frank 的 S-1 帖，点出「招股书更狠的其实在投票权那一页」。Frank 的回应把那页读回来：Class F 只发 1 股 → 50.1% 投票权；Class T 也只发 1 股 → LTBT 选出的 Class T 董事占董事会过半数；创始人的 50.1% 选不出这批人。三个数字全部回 SEC 一手原文（anthropicpbc-sx1.htm）grep 核对，不是二手摘要。闸 0 机器闸门 exit 0（soft_score 0 / hard_hits 0）、157 字、sha256 8535c5c4628a4dac。发后 from:FrankFika 搜索首条命中 own_post。"
+    },
+    {
+      "id": "inbound-042",
+      "timestamp": "2026-10-31T10:15:19+08:00",
+      "source_handle": "evvvvince",
+      "target_post_id": "2116177320453046720",
+      "own_post_id": "2116353294327226621",
+      "url": "https://x.com/FrankFika/status/2116353294327226621",
+      "topic_signature": "cursor-plugin-auto-update-no-user-consent-agent-plugin-default-off",
+      "treatment": "inbound_replied",
+      "text_chars": 110,
+      "note": "pulse_round_85（Mavis runtime cron 10:00 档，本轮通道恢复）。Frank 08:55 手动发帖 → 2h 降载触发 → 本轮总动作 1（只这 1 条 inbound reply）。闸门 exit 0 / soft_score 0 / sha256 050057ea89e9c95c。"
     }
   ]
 }

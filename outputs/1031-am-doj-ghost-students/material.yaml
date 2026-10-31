@@ -1,0 +1,67 @@
+# 素材包 · 2026-10-31 01:30 档（Codex pipeline-12 · round_95）— 备料档（闸门+通道双否决，未发）
+# 阻断原因（两条独立）：① 判据① 硬否决 —— 上一条原创 2026-10-30 21:40，距今仅 3h52m < 6h；
+#   ② 内置浏览器通道 Work settings 仍禁用（Local browser use is disabled）。
+# 本包为 09:30 档（判据① 放行：11h50m）的第一备选。
+
+material_id: "1031-am-doj-ghost-01"
+slot: am
+scanned_at: "2026-10-31T01:42:00+08:00"
+source_kind: web
+source_name: aihot
+
+author:
+  name: "Ars Technica"
+  handle: "arstechnica"
+  lang: en
+
+original:
+  url: "https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/"
+  post_id: "url:1a9f926a45b8"          # sha1 前 12 位
+  posted_at: "2026-10-31T00:53:00+08:00"  # 原文页面署名时间 Oct 31, 2026 12:53 AM（站点美东时区）
+
+signal: "行业（aihot 10-31 00:53 条目 · Ars Technica 一手原文）"
+metrics: null
+read_url: null
+
+ai_match: true                          # 命中关键词：AI / 自动检测 / 身份核验
+
+summary: "美国司法部首次大规模打击「幽灵学生」：五人被起诉，AI 被用来填 FAFSA、刷网课、甚至在在线课堂里造出一个假学生形象，好让学校以为真人在线。教育部已识别出 83 万个可能造假的助学账户，若全部成立损失接近 1.3 亿美元；但真正落到这批被起诉的人头上的实际损失是 3200 万美元。角度切「两边都在用 AI」：造假用 AI 伪装成人，打假用自动化系统打标——FTC 主席 Ferguson 说「电脑帮我们找到它，我们把钱留在机构里」。而这套自动化会误伤真学生：没有驾照的低收入学生可能拿不出身份证，被误判、被加收费用。"
+
+evidence_links:
+  - label: "Ars Technica 一手原文"
+    url: "https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/"
+
+# —— 回原文逐条核对（2026-10-31 01:40，curl 官方页 → 转纯文本 → 逐句 grep，14/14 命中）——
+verified_facts:
+  - "标题：Thousands of \"ghost students\" use AI to steal millions in student loans, DOJ says"
+  - "作者 Ashley Belanger（senior policy reporter，芝加哥）；页面署名 Oct 31, 2026 12:53 AM；栏目标签 \"5 arrests so far\""
+  - "美国已起诉 five individuals（5 人），这是首次针对「幽灵学生」的广泛联邦打击（first broad federal crackdown）"
+  - "DOJ 从「与肯尼亚国民有关的一个网络」查扣 超过 $750,000 的加密货币；数据分析帮助标记出疑似欺诈者"
+  - "DOJ 国家欺诈执法部门助理总检察长 Colin M. McDonald 说这是 \"this is the first international seizure of its kind in Kenya\""
+  - "McDonald 原话：\"It looks like the ghost student is actually completing the class.\"；\"Some even create the appearance of a fake student in an online classroom to trick schools into believing a real person is present. The goal is to keep the ghost student in school for as long as possible, semester after semester after semester.\""
+  - "教育部（DOE）已 \"identified over 830,000 potentially fraudulent federal student aid accounts created by using this PII of US citizens\""
+  - "DOJ：如果这些账户全是幽灵学生，总损失 close to $130 million"
+  - "与这批被捕者直接相关的实际损失：\"more than $32 million in actual loss tied to these specific subjects\"，官方称 \"we believe that actual total is substantially higher\""
+  - "个案一：一名被告用多个银行账户收取 超过 700 笔 欺诈退款，合计 approximately $1,439,548"
+  - "个案二（Inside Higher Ed 报道）：一人收到 超过 $1 million 存款，关联 超过 300 个欺诈学生账户"
+  - "造假流程：购买美国人的 PII（多针对高中毕业直接就业、从未上大学的人）→ 填 FAFSA 申请入学 → 助学金先打给学校 → 余额退到骗子控制的账户；几十名美国人开了账户做资金通道（money mules）"
+  - "教育部与部分高校正在考虑加收费用（adding fees）来挡这类欺诈；辩方担心费用和在线身份核验会变成低收入学生的门槛"
+  - "教育部次长 Nicholas Kent 指控拜登政府 \"turned off nearly every fraud detection measure\"；新规要求学生对着摄像头实时举政府签发的证件做在线身份核验"
+  - "FTC 主席 Andrew Ferguson 原话：\"The computers help us find it, and we keep the money in the agency\"；称欺诈可以解决而不必额外配人手资源"
+  - "自动系统给人打风险评级，标记 high risk 的申请直接拒绝；NCAN 顾问 MorraLee Keller 说 \"a lot of low-economic kids may not have secured, for example, a driver's license\"，可能因此卡在申请流程里，还可能多付费用"
+  - "8 月教育部确认 6 月 29 日至 7 月 6 日的技术故障，导致欺诈评估结果没同步到部分 FAFSA 表格，发现后已重跑处理"
+
+not_quotable:
+  - "「AI 造假的规模是 83 万个账户」—— 原文的 83 万是 DOE 识别出的 \"potentially fraudulent\" 账户，且 1.3 亿是「若全部成立」的上限，不能说成已确认的造假规模"
+  - "「幽灵学生已经骗走 1.3 亿美元」—— 1.3 亿是假设全部 83 万账户都是幽灵学生的推算上限；实际已确认的损失只有这批被捕者对应的 3200 万美元"
+  - "「AI 让这些学生通过了验证」—— 原文说的是 AI 用来填表、完成课程、伪造在线课堂出席形象，身份核验环节被突破的具体手法原文没有讲"
+  - "「拜登政府放任欺诈三年」—— Kent 的指控是「上任时几乎所有欺诈检测措施都被关掉了」，是当事方表态，不是经独立核实的结论"
+
+screenshots_needed:
+  - "Ars 原文标题 + 首屏（5 arrests so far / Ashley Belanger / Oct 31 12:53 AM / DOJ 查扣 75 万加密货币）→ 已抓 screenshots/x-1.png（904,337 B）"
+  - "Ars 原文 McDonald 原话 + 83 万账户 / 1.3 亿 / 3200 万实际损失段 → 已抓 screenshots/x-2.png（441,348 B）"
+  - "Ars 原文 Keller 段（没有驾照的低收入学生被卡 / 可能多付费用）→ 已抓 screenshots/x-3.png（388,007 B）"
+
+treatment_hint: first_person_original
+dedup_hits: []                          # index.json#seen 328 项无 url:1a9f926a45b8 命中
+gate_notes: "文案 sha256 与闸门结果见 state/memory/chuangzuo.md round_95"

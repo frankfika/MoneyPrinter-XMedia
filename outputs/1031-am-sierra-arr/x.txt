@@ -1,0 +1,14 @@
+Bret Taylor 的 Sierra，创办两年半，年经常性收入刚过 4 亿美元。
+
+Q3 一个季度新增 1.5 亿，比去年全年还多。增速还在加快：去年翻倍到 2 亿花了 6 个月，这轮翻倍到 4 亿，只用了 5 个月。
+
+客户里快一半是财富 50 强。一家年营收 400 亿的美国零售商，从第一次开会到 agent 上线，只花 27 天。
+
+他们的收钱方式也特别：按结果计费。比如一笔保险理赔结案了钱才到账，不看 token 用量。
+
+数字都出自 10 月 30 日的官博，原文在这：https://sierra.ai/blog/our-customers-ambition-is-accelerating-our-growth
+
+# material_id: 1031-am-sierra-arr-01
+# source: https://sierra.ai/blog/our-customers-ambition-is-accelerating-our-growth
+# treatment_hint: first_person_original
+# verified_facts: ARR 400M+（本周官宣）/ Q3 新增 150M+ 超去年全年 / 100→200M 六个月，200→400M 五个月 / 近一半财富 50 强 / $40B+ 零售商 27 天上线 / 按结果计费不按 token

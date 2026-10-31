@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-10-29T23:57:12+08:00",
+  "last_updated": "2026-10-31T16:27:05+08:00",
   "purpose": "去重索引 —— 每轮只读这个，不要全量加载 state/seen-posts.json（147KB）。写完 state/*.json 后必须同步本文件。",
   "key_legend": {
     "t": "处理类型桶 like/reply/inbound/own/quote/skip/other",
@@ -1758,6 +1758,116 @@
       "a": [
         "reply"
       ]
+    },
+    "url:f5c413d73956": {
+      "t": "other",
+      "h": "cursor-blog",
+      "d": "2026-10-30",
+      "u": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "a": [
+        "material"
+      ]
+    },
+    "url:21f09b4af674": {
+      "t": "other",
+      "h": "bbc",
+      "d": "2026-10-30",
+      "u": "https://www.bbc.com/news/articles/cm9qzdqpxy48o",
+      "a": [
+        "material"
+      ]
+    },
+    "2116164234329657435": {
+      "t": "own",
+      "h": "FrankFika",
+      "d": "2026-10-30"
+    },
+    "2116163230821478566": {
+      "t": "own",
+      "h": "FrankFika",
+      "d": "2026-10-30"
+    },
+    "url:1a9f926a45b8": {
+      "t": "other",
+      "h": "arstechnica",
+      "d": "2026-10-31",
+      "u": "https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/",
+      "a": [
+        "material"
+      ]
+    },
+    "url:b14e39232143": {
+      "t": "other",
+      "h": "sierra.ai",
+      "d": "2026-10-30"
+    },
+    "2116271569228181556": {
+      "t": "own",
+      "h": "FrankFika",
+      "d": "2026-10-31"
+    },
+    "url:f1f6194d2036": {
+      "t": "web",
+      "h": "techcrunch",
+      "d": "2026-10-30"
+    },
+    "2116177320453046720": {
+      "t": "inbound",
+      "h": "evvvvince",
+      "d": "2026-10-31"
+    },
+    "2116353294327226621": {
+      "t": "own",
+      "h": "FrankFika",
+      "d": "2026-10-31"
+    },
+    "2116155959563489780": {
+      "t": "inbound",
+      "h": "RachidSettas",
+      "d": "2026-10-31"
+    },
+    "2116333139459191114": {
+      "t": "own",
+      "h": "FrankFika",
+      "d": "2026-10-31"
+    },
+    "2116172693523612043": {
+      "t": "skip",
+      "h": "ajs6888",
+      "d": "2026-10-30"
+    },
+    "2116164554535190623": {
+      "t": "skip",
+      "h": "surlymochan",
+      "d": "2026-10-30"
+    },
+    "2116445350865367066": {
+      "t": "like",
+      "h": "xiaohu",
+      "d": "2026-10-31",
+      "u": "https://x.com/xiaohu/status/2116445350865367066",
+      "a": [
+        "like_only"
+      ]
+    },
+    "2116391715796099084": {
+      "t": "like",
+      "h": "jiqizhixin",
+      "d": "2026-10-31",
+      "u": "https://x.com/jiqizhixin/status/2116391715796099084",
+      "a": [
+        "like_only"
+      ]
+    },
+    "2116352771767349461": {
+      "t": "own",
+      "h": "FrankFika",
+      "d": "2026-10-31"
+    },
+    "2116376167532097692": {
+      "t": "own",
+      "h": "FrankFika",
+      "d": "2026-10-31"
     }
   },
   "inbound": {
@@ -2075,6 +2185,11 @@
       "d": "2026-10-28",
       "h": "marmot_stacks",
       "rid": "inbound-041"
+    },
+    "2116177320453046720": {
+      "d": "2026-10-31",
+      "h": "evvvvince",
+      "rid": "inbound-042"
     }
   },
   "published": {
@@ -2729,6 +2844,26 @@
     "6ae30e1b0000000033012638": {
       "u": "https://www.xiaohongshu.com/explore/6ae30e1b0000000033012638",
       "d": "2026-10-29"
+    },
+    "2116164234329657435": {
+      "u": "https://x.com/FrankFika/status/2116164234329657435",
+      "d": "2026-10-30"
+    },
+    "2116163230821478566": {
+      "u": "https://x.com/FrankFika/status/2116163230821478566",
+      "d": "2026-10-30"
+    },
+    "2116271569228181556": {
+      "u": "https://x.com/FrankFika/status/2116271569228181556",
+      "d": "2026-10-31"
+    },
+    "2116352771767349461": {
+      "u": "https://x.com/FrankFika/status/2116352771767349461",
+      "d": "2026-10-31"
+    },
+    "2116376167532097692": {
+      "u": "https://x.com/FrankFika/status/2116376167532097692",
+      "d": "2026-10-31"
     }
   },
   "outbound": {
@@ -3788,6 +3923,62 @@
         "reply"
       ],
       "d": "2026-10-29",
+      "h": "FrankFika"
+    },
+    "2116177320453046720": {
+      "a": [
+        "reply"
+      ],
+      "d": "2026-10-31",
+      "h": "evvvvince"
+    },
+    "2116353294327226621": {
+      "a": [
+        "reply"
+      ],
+      "d": "2026-10-31",
+      "h": "FrankFika"
+    },
+    "2116155959563489780": {
+      "a": [
+        "reply"
+      ],
+      "d": "2026-10-31",
+      "h": "RachidSettas"
+    },
+    "2116333139459191114": {
+      "a": [
+        "reply"
+      ],
+      "d": "2026-10-31",
+      "h": "FrankFika"
+    },
+    "2116445350865367066": {
+      "a": [
+        "like"
+      ],
+      "d": "2026-10-31",
+      "h": "xiaohu"
+    },
+    "2116391715796099084": {
+      "a": [
+        "like"
+      ],
+      "d": "2026-10-31",
+      "h": "jiqizhixin"
+    },
+    "2116352771767349461": {
+      "a": [
+        "post"
+      ],
+      "d": "2026-10-31",
+      "h": "FrankFika"
+    },
+    "2116376167532097692": {
+      "a": [
+        "post"
+      ],
+      "d": "2026-10-31",
       "h": "FrankFika"
     }
   }

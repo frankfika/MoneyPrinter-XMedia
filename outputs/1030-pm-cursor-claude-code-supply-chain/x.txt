@@ -1,0 +1,13 @@
+Cursor 的插件市场被人投毒了，投的还是 Claude Code 这个包。
+
+包名叫 Anthropic.claude-code 2.1.313，Cursor 公告原话：这一版不是 Anthropic 发的。名字里挂着 Anthropic 的命名空间，装的人根本分不出来。
+
+窗口只有 11 个小时（10月29日 2:27am–1:35pm PT），最多 5000 个用户中招。装上之后它收主机信息、往 authorized_keys 塞攻击者的公钥、每 60 秒重试一次反向 SSH 隧道。大多数机器上隧道连不上 —— 恶意代码自己写挂了，但公钥和持久化还是留下了。
+
+Cursor 的处置比想象中重：下架只是第一步，把自家插件市场整个关停，审计确认没别的包被动过，轮换密钥，重建，再上线。
+
+出了安全事故，锁单个包是止损。把整个市场关掉，才是当事故处理。
+
+公告：https://cursor.com/blog/claude-code-extension-security-notice
+# posted_url: https://x.com/FrankFika/status/2116164234329657435
+# posted_at: 2026-10-30T21:40:00+08:00
