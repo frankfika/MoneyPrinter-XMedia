@@ -1,0 +1,29 @@
+# 1016-late-01 · NVIDIA Nemotron 3.5 Super VL 开源模型发布
+
+## 标题
+NVIDIA 开源 120B/12B MoE 多模态模型 — 这次真给 Agent 用
+
+## 正文
+NVIDIA Nemotron 家族又扩了，这次是 3.5 Super VL。
+
+120B 总参数 / 12B 激活的 MoE 架构，一个模型同时搞定：
+- 文本 / 图像 / 文档 / 视频 多种输入
+- reasoning 链式思考
+- tool use 外部工具调用
+
+关键是官方直接点名"长流程 AI Agent"——之前那些跑两步就停的脚本 agent 想换掉。
+
+开源 + 12B 激活，意味着可以自己 post-training，单卡跑 12B 部分，对中小团队很友好。
+
+硬件 + 模型两层绑定，agent 时代的牌 NVIDIA 还是想一手抓。
+
+## 标签
+#NVIDIA #开源模型
+
+## 图
+1. NVIDIA 官帖：Nemotron 3.5 Super VL 发布（含视频）
+2. NVIDIA profile top：帖子在 timeline 上的证据
+3. 帖子详情页：互动数据
+
+## 信息来源
+https://x.com/nvidia/status/2110750157272719562

@@ -1,0 +1,17 @@
+OpenAI 把内部 frontier 数学模型整套开源了。
+
+22.5M 浏览 / 40K 赞 / 11K 转 / 13.7K 收藏——发出来 8 天还在跑。
+关键数字：跟 IAS（普林斯顿高等研究院）独立 Mathematics and AI 顾问组一起做的，不是单方面宣称。
+
+仓库里给的是「broad range of new mathematical results」——不是 demo，是可复现的研究产出。
+
+模型 + 数据 + 工具链全公开。同行终于能复现 frontier 级别的数学推理。
+
+https://x.com/OpenAI/status/2107596713791767021
+
+# material_id: 1015-noon-04
+# treatment: quote_retweet
+# screenshots: x-openai-post.png, x-openai-profile-top.png, x-openai-post-verify.png
+
+# posted_url: https://x.com/FrankFika/status/2110597893300310223
+# posted_at: 2026-10-15T13:08:00+08:00

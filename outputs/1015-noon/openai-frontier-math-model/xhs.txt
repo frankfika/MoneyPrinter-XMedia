@@ -1,0 +1,20 @@
+# material_id: 1015-noon-04
+# author_handle: OpenAI
+# source_url: https://x.com/OpenAI/status/2107596713791767021
+# draft_at: 2026-10-15T23:06:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【OpenAI 把数学 frontier 模型全套开源了】
+
+OpenAI 发了内部 frontier 数学模型 + 开源 github.com/openai/math 仓库，与普林斯顿高等研究院 Mathematics and AI 顾问组合作。
+
+22.5M 浏览 / 40K 赞 / 11K 转 / 13.7K 收藏——发出来 8 天还在跑。
+
+关键数字：跟 IAS（普林斯顿高等研究院）独立顾问组一起做的，不是单方面宣称。
+
+仓库里给的是「broad range of new mathematical results」——不是 demo，是可复现的研究产出。模型 + 数据 + 工具链全公开。同行终于能复现 frontier 级别的数学推理。
+
+📎 OpenAI 原帖：https://x.com/OpenAI/status/2107596713791767021
+📎 GitHub 仓库：https://github.com/openai/math
+
+#OpenAI #数学模型 #开源 #普林斯顿 #AI科研 #Frontier

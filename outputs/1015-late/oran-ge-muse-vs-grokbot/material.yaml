@@ -1,0 +1,48 @@
+material_id: "1015-late-03"
+slot: late
+scanned_at: "2026-10-15T22:58:00+08:00"
+
+author:
+  name: "Orange AI (oran_ge)"
+  handle: "oran_ge"
+  lang: zh
+
+original:
+  url: "https://x.com/oran_ge/status/2110020524088934754"
+  post_id: "2110020524088934754"
+  posted_at: "2026-10-13T22:51:00+08:00"
+
+metrics:
+  views: 62956
+  likes: 65
+  retweets: 12
+  replies: 72
+  bookmarks: 44
+
+ai_match: true
+
+summary: |
+  oran_ge 把 xAI 的 Muse 和 Grok Bot 放一起对比：
+  - Muse 用下来完成度第一
+  - Grok Bot 完成度这么高，但留存怎么这么低？
+  评论区把原因挖出来：
+  - Grok Bot 没有免费版（Muse / ChatGPT / Google Map 都有）
+  - 没有现成 skill 就不会用，没法指定模型也没法调 plan
+  - 价值出现得太晚，第一句话看不出完成度
+  62.9K 浏览、72 回复——这是 personal agent 战场第一波公开吐槽。
+
+evidence_links:
+  - label: "oran_ge 原帖"
+    url: "https://x.com/oran_ge/status/2110020524088934754"
+  - label: "Halfstep 半步评论（解释留存原因）"
+    url: "https://x.com/banbudev/status/2110043957874880833"
+  - label: "Zach 评论（skill 依赖）"
+    url: "https://x.com/1999Zach22/status/2110051518435262550"
+
+screenshots_needed:
+  - "oran_ge 原帖（Muse vs GrokBot 文字 + 配图）"
+  - "评论区精华（留存原因：免费 / skill / 完成度）"
+
+treatment_hint: quote_retweet
+dedup_hits: []
+topic_signature: "xai-muse-vs-grokbot-retention-2026q4"

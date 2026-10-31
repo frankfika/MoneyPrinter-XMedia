@@ -1,0 +1,43 @@
+material_id: 1016-pulse-06
+round: x-engagement-pulse-30min 第 30+ 分钟
+timestamp: '2026-10-16T05:58:00+08:00'
+source:
+  author: yetone
+  handle: '@yetone'
+  post_url: https://x.com/yetone/status/2110840519156965691
+  posted_at: '2026-10-15T21:09:31.000Z (5:09 AM Oct 16)'
+content:
+  original_topic: Magpie 全面插件化（订阅/Provider/中间件/路由/Agent/Page/MCP 工具/usage hook 都向社区开放，npm 一行安装）
+  original_metrics_at_engage:
+    views: 1414
+    likes: 18 -> 19 (after Like)
+    reposts: 3
+    replies: 4 -> 5
+    bookmarks: 13
+  links_in_source:
+    - usemagpie.ai/docs/plugins
+    - github.com/magpie-communi
+    - npm @magpie-community/tools-calc
+treatment: reply_riding_traffic
+reply:
+  own_post_url: https://x.com/FrankFika/status/2110854700992225687
+  own_post_id: '2110854700992225687'
+  reply_text: |
+    Provider 拆出来那一步最值钱——客户端写一遍 sign-in + token refresh + 路由就能省下，文档清楚，赞。
+
+    下个版本插件间权限模型该立了：route + onUsage 都开了，agent 拿别家的 token 怎么防是必修课。
+  hook:
+    - Provider 提取 = 大量客户端重复劳动简化
+    - 路由 + onUsage 已经预留，但缺权限模型（未来插件互信 / token 隔离）
+  numbers_or_links:
+    - Provider / onUsage / route (原帖技术关键词)
+    - agent 取 token 风险（开放性问题）
+forbidden_check:
+  opencsg_mention: false
+  ai_托管_wording: false
+  banned_companies_deepseek_moonshot_MiniMax: false
+  hashtag_storm: false
+  ai_image: false
+  quick_to_look_phrase: false
+risk_notes:
+  - Magpie 截图含 DeepSeek / Claude / Kimi 等 logo（截图来自原帖第三方页面 usemagpie.ai），非我文案自创；不踩 banned

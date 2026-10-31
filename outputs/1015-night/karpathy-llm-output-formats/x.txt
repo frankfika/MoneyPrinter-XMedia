@@ -1,0 +1,20 @@
+karpathy 抛了一个观点：未来我们大部分时间都在「读 LLM 的输出」，而不是写 prompt。
+
+他给了 4 个格式，亲测好用：
+
+1. Writing：让 LLM 用 ASD-STE100 解释。航空业用的受控语言，干净好读。
+2. Diagrams：直接让 LLM 出图，比文字好解析 10 倍。
+3. Web pages：让 LLM 输出一段 HTML，就是一个交互小网站。
+4. Explainer videos：他最看好——让 LLM 生成 3b1b 风格的讲解视频，配 ElevenLabs 旁白。$10 预算就能跑。
+
+本质：随着 LLM 越来越聪明，工程师会往「监督」的方向爬；而 LLM 同时也在帮我们造那些「以前根本不值得做」的 throwaway 软件——网页、视频、应用。
+
+一个 loop，越用越猛。
+
+https://x.com/karpathy/status/2105819303471976479
+
+# material_id: 1015-night-01
+# treatment: quote_retweet
+# posted_url: https://x.com/FrankFika/status/2110736178756633029
+# posted_at: 2026-10-15T22:15:00+08:00
+# own_post_id: 2110736178756633029

@@ -1,0 +1,31 @@
+material_id: "1015-eve-02"
+slot: eve
+scanned_at: "2026-10-15T19:55:00+08:00"
+author:
+  name: "Orange AI"
+  handle: "oran_ge"
+  lang: zh
+original:
+  url: "https://x.com/oran_ge/status/2110600036476506158"
+  post_id: "2110600036476506158"
+  posted_at: "2026-10-15T11:00:00+08:00"
+metrics:
+  views: 18870
+  likes: 42
+  retweets: 7
+  replies: 46
+  bookmarks: 11
+ai_match: true
+summary: |
+  oran_ge 转发明浩即刻评论：Anthropic 昨晚开闭门投资人交流会，Q3 收入 168 亿、
+  Q2 110 多亿，季度增长 ~50%；市场已把增长预期透支，50% 不够看。
+  截至 Oct 15 19:55+08:00 累计 18.9K 浏览 / 42 赞 / 46 评论。
+  AI 投资侧第一道真正的裂隙：增长故事不变，定价模型要换。
+evidence_links:
+  - label: "原帖"
+    url: "https://x.com/oran_ge/status/2110600036476506158"
+screenshots_needed:
+  - "原帖 modal 视角"
+  - "oran_ge profile 时间线顶部视角"
+treatment_hint: quote_retweet
+dedup_hits: []

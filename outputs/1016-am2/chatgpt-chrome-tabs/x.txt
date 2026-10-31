@@ -1,0 +1,9 @@
+OpenAI 这波直接把 computer use 下放到普通 Chrome 用户了
+
+ChatGPT 现在能跨标签读你的内容、在 Work 里替你点 Chrome 标签 — 发消息、填表单、下文件，甚至帮你把那一堆没关的 tab 自动归组
+
+4 小时 41.8 万播放，连 OpenAI 官方号都亲自出来交作业，说明这事对他们的 agent 战略是个关键节点
+
+2026 是 agent 真开始「长进」操作系统的元年
+
+https://x.com/ChatGPT/status/2110823738531037651

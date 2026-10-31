@@ -1,0 +1,25 @@
+oran_ge 一句话戳中 personal agent 战场。
+
+xAI 的 Muse vs Grok Bot：
+- 同样底层 Opus 5.5
+- Muse 「完成度第一」
+- Grok Bot 完成度不差，但留存上不去
+
+评论区已经聊出三件事：
+- 价格：Grok Bot 没有免费版，Muse / ChatGPT / Google Map 都有——上线第一秒就被价格劝退
+- skill 门槛：没打磨好的 skill 直接卡住，没办法指定模型也没法掉出 plan
+- 价值兑现节奏：第一句话看不出完成度，等到用上才知道爽
+
+这其实是同一件事：personal agent 的护城河不是模型，是「开门那一秒能不能解决一件具体的事」。Muse 做到了，所以留存回来；Grok Bot 模型更好，但用户走到那一步之前就走光了。
+
+最后还是回到了 oran_ge 自己说的那句话：产品 sense。
+
+https://x.com/oran_ge/status/2110020524088934754
+
+# material_id: 1015-late-03
+# treatment: quote_retweet
+# screenshots: x-oran-muse-post.png, x-oran-profile.png
+
+
+# posted_url: https://x.com/FrankFika/status/2110746998727200998
+# posted_at: 2026-10-15T22:58:26+08:00

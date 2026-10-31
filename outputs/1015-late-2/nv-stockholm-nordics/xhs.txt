@@ -1,0 +1,10 @@
+GTC Berlin 前一天，NVIDIA 在 X 上一句 "Hello, Stockholm" 把北欧三国 AI 生态盘了一遍：
+
+🎧 Spotify：GPU 加速播客推荐
+🤖 ABB Robotics：把机器人训练扔进 NVIDIA 仿真，撞机零成本
+🇸🇪 本地初创：开源模型做瑞典语转写 / 专利检索
+🔬 研究社群 + compute 投资：背后真正的护城河
+
+不是 demo 串烧——是 NVIDIA 把"compute + 研究者社群"卖给欧洲的真实路径。GTC 这种地推动作，硅谷之外用得比谁都勤。
+
+#AI #NVIDIA #GTCBerlin

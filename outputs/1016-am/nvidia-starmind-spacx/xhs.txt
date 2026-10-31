@@ -1,0 +1,10 @@
+SpaceX + NVIDIA 联合搭的 AI 训练集群,代号 Star Mind。
+
+Elon 自己嘴炮:"比几乎所有人预期的都要好,明年量产。"
+NVIDIA 5 小时后转发认领,放了个 💚。
+
+45K 浏览,2.6K 点赞,这是 Stargate 之后第二个"国家级 AI 算力"产品——但这次 Elon 是把 SpaceX 闲置的星舰算力给 xAI 喂。
+
+异构算力整合,真正算力红利的下一步。
+
+#AI算力 #NVIDIA #SpaceX

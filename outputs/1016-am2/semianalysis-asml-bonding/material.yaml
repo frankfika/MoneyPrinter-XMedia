@@ -1,0 +1,24 @@
+material_id: 1016-am2-02
+slot: am2
+scanned_at: '2026-10-16T08:00:00+08:00'
+author:
+  name: SemiAnalysis
+  handle: SemiAnalysis_
+  lang: en
+original:
+  url: https://x.com/SemiAnalysis_/status/2110820373369360481
+  post_id: '2110820373369360481'
+  posted_at: '2026-10-16T03:49:00+00:00'
+metrics:
+  views: 16074
+  likes: 113
+  retweets: 11
+  replies: 11
+  bookmarks: 30
+ai_match: true
+summary: >-
+  ASML 自己做 hybrid bonding（混合键合）设备来了 — 这套先进封装的关键工艺，Besi 一直独家垄断，ASML 入场意味着 2.5D/3D 封装 HBM4/GPU 玩家的成本结构要重新谈。
+evidence_links:
+  - https://x.com/SemiAnalysis_/status/2110820373369360481
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (SemiAnalysis_ timeline 2026-10-16 08:00)

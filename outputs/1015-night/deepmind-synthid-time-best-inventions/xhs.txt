@@ -1,0 +1,22 @@
+# material_id: 1015-night-03
+# author_handle: GoogleDeepMind
+# source_url: https://x.com/GoogleDeepMind/status/2110715601454784965
+# draft_at: 2026-10-15T23:05:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【180 亿张图已经被打上 AI 水印】
+
+Google DeepMind 的 SynthID 进了 TIME 2026 年度最佳发明榜。
+
+累计给 180 亿张图片 + 视频打了 AI 水印——像素里嵌着，肉眼看不见，但任何 SynthID 检测器秒识别「这是 AI 生成的」。
+
+DeepMind 的目标很朴素：让普通人刷手机时能分清「哪张是相机拍的、哪张是模型生成的」。现在 Gemini、Imagen、Whisk 全家桶都默认加 SynthID。
+
+但评论区一句大实话：
+"180B watermarked and my feed is still 90% slop."
+
+水印是一回事，平台愿不愿意用是另一回事。技术到位 ≠ 落地到位。
+
+📎 DeepMind 原帖：https://x.com/GoogleDeepMind/status/2110715601454784965
+
+#SynthID #DeepMind #AI水印 #TIME #AI生成

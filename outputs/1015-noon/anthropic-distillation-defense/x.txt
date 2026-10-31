@@ -1,0 +1,19 @@
+Anthropic 终于公开讲他们怎么打 distillation attack 了。
+
+一句话：distillation attack 就是有人拿 Claude 的输出反推训练自己的模型 — 套壳 Claude，零成本蹭 API 输出。
+
+过去几个月他们压下了这事有效性，新博客讲具体怎么做：
+- prompt / response 加指纹 + 行为分析
+- 系统级 rate limit + 高频输出检测
+- 主动混淆 token-level 概率，让模仿者的训练数据被污染
+
+48h 2.4M 浏览 / 6.3K 点赞 / 1.1K 转。这是 AI 公司第一次系统对抗开源生态圈的蒸馏套壳 — Claude 这条护城河还在。
+
+https://x.com/AnthropicAI/status/2109795898909950247
+
+# material_id: 1015-noon-03
+# treatment: quote_retweet
+# screenshots: x-anthropic-post.png, x-anthropic-profile-top.png
+
+# posted_url: https://x.com/FrankFika/status/2110556258671681827
+# posted_at: 2026-10-15T10:21:08+08:00

@@ -1,0 +1,38 @@
+material_id: 1016-pm2-04
+slot: pm2
+scanned_at: '2026-10-16T11:25:00+08:00'
+author:
+  name: Elon Musk
+  handle: elonmusk
+  lang: en
+topic_signature: tesla-roadster-flying-musk-evidence
+original:
+  url: https://x.com/elonmusk/status/2110913107094606330
+  post_id: '2110913107094606330'
+  posted_at: '2026-10-16T07:30:00+08:00'
+  pinned: true
+metrics:
+  views: 6786988
+  replies: 11068
+  retweets: 35873
+  likes: 227503
+  bookmarks: 18672
+  body_excerpt: 'Turns out the future does have flying cars (官方置顶 · 附带 Tesla Roadster demo 15s 视频)'
+ai_match: false
+is_global_news: true
+summary: >-
+  2026-10-15 美中时间,特斯拉在德州 SpaceX McGregor 测试场正式演示第二代 Roadster。
+  现场用 10 个 SpaceX 冷气推进器 + 600L 压缩空气 + 车底负压风扇吸附系统,先后做出了
+  倒挂爬曲线坡 → 翻过来腾空几秒落地 / 飞跃 Cybercab/Cybertruck/Semi/Model Y/Model 3
+  两段动作;0-60 mph 实测 0.81 秒。Elon Musk demo 完成后 deadpan 说 "Well, it worked",
+  Lars Moravy(特斯拉 VP)补了一句 "Flying cars are real"。pinned 那条 "Turns out the
+  future does have flying cars" 6.8M views、227K likes。是 Elon Musk 自 2017 年画饼
+  9 年以来第一次真飞。
+evidence_links:
+  - https://x.com/elonmusk/status/2110913107094606330
+  - https://www.hindustantimes.com/trending/flying-cars-are-real-elon-musk-unveils-tesla-roadster-2-that-takes-flight-watch-101792118914005.html
+  - https://us.cnn.com/2026/10/15/business/tesla-unveils-what-it-says-is-a-flying-car
+  - https://auto.jrj.com.cn/2026/10/16103058739187.shtml
+  - https://www.teslarati.com/tesla-cybertruck-cgi-video-giga-texas/
+treatment_hint: first_person_original
+source: Fang 单链触发(用户:tesla 能飞这条你也发一个推特啊)

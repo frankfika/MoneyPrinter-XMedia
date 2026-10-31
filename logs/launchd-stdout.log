@@ -1,0 +1,141 @@
+# 短文助手 · 1015-night 二次运行 Status Report
+
+**运行时间**：2026-10-15 22:47 (Asia/Shanghai)  
+**automation**：`users-fangchen-documents-skills-readme-md-1-state-watc`  
+**memory.md** 已追加本次记录（35 行）
+
+---
+
+## 模式检测
+
+| 检查项 | 结果 |
+|--------|------|
+| `mcp__cua_repl__js` 工具挂载 | ✓ 有 |
+| `cua.listBrowsers()` | ✗ `[]` 空 |
+| `cua.getBrowser({id:"iab"})` | ✗ "Browser is not available" |
+| `cua.getBrowser({id:"mcpapps"})` | ✗ "Browser is not available" |
+| `cua.listTabs()` | ✗ `[]` 空 |
+| **实际可用模式** | **Cron 模式兜底**（lite scan-slot.sh） |
+
+→ 工具满足"有 cua_repl"判定条件但运行时无可用 browser 实例，与 README 二分模型（cron vs Codex session）不完全匹配。按 README「降级」指引走 lite 路径。
+
+---
+
+## candidate_count
+
+**`0`**
+
+`bash scripts/scan-slot.sh night` 输出：
+```
+[2026-10-15T22:47:28+08:00] scan-slot.sh SLOT=night DATE=1015 (lite: web search only)
+[2026-10-15T22:47:30+08:00] scan-slot done.
+  found 0 candidate(s)
+```
+
+候选为 0 的双重原因：
+1. **mmx_search 局限**：不支持 `from:` / `site:x.com`，X 反爬导致 x.com URL 几乎不在搜索结果里（README/automation.toml 已声明）。
+2. **1015-night 高优 handle 已被清空**：karpathy×2 + GoogleDeepMind SynthID 已被平行1015-night agent 在 22:15-22:25 完成并写入 `state/seen-posts.json` / `state/published-posts.json`。
+
+## 完成版落盘
+
+**本轮新增：`0` 条**
+
+`outputs/1015-night/` 现状（无新增）：
+```
+deepmind-synthid-time-best-inventions/  (平行 agent 22:25 完成 ✓)
+karpathy-llm-land-or-water/              (平行 agent 22:21 完成 ✓)
+karpathy-llm-output-formats/             (平行 agent 22:15 完成 ✓)
+grok-voice-3-launch/                     (08:47 lite 占位空壳，screenshots/=0 不算完成版)
+```
+
+`grok-voice-3-launch/` 是早间 lite scan 留的占位（仅 material.yaml + x.txt + xhs.txt，无真图、无 posted_url），未触碰。
+
+## 已发 X URL
+
+**本轮：`0` 条（candidate_count=0，无可发素材）**
+
+1015 当日累计已发（旁证，未本轮新增）：
+| own_post_id | topic | source_author | media_count |
+|---|---|---|---|
+| 2110533769727967326 | google-deepmind-gemini4-argon | GoogleDeepMind | 2 |
+| 2110533735569588647 | anthropic-singapore-office | AnthropicAI | 2 |
+| 2110534221911806169 | openai-eu-ai-agents | OpenAI | 2 |
+| 2110555566519296183 | anthropic-source-control | AnthropicAI | 2 |
+| 2110555831855157688 | openai-gpt6-intelligent-ui | OpenAI | 2 |
+| 2110556258671681827 | anthropic-distillation-defense | AnthropicAI | 2 |
+| 2110598529383354515 | openai-chatgpt-for-teens | OpenAI | 2 |
+| 2110598257118494866 | anthropic-unintended-actions | AnthropicAI | 2 |
+| 2110597893300310223 | openai-frontier-math-model | OpenAI | 2 |
+| 2110642240850960860 | sama-ai-safety-religious | sama | 2 |
+| 2110736178756633029 | karpathy-llm-output-formats | karpathy | 2 |
+| 2110736402602180677 | karpathy-llm-land-or-water-eval | karpathy | 2 |
+| 2110736604860174705 | deepmind-synthid-time-best-inventions | GoogleDeepMind | 2 |
+| 2110736418196820255 | anthropic-fellowships-2027 | AnthropicAI | 2 |
+| 2110736877297004939 | anthropic-q3-income-slowdown | oran_ge | 4 (filechooser 双触发) |
+
+## XHS 状态
+
+`bash scripts/publisher-xhs-dryrun.sh` 退出码 **`1`（按预期停手）**：
+- `account-safety.yaml#xhs.ban_status.is_banned = true`
+- ban_reason：`利用 AI 托管进行发文/互动（多篇未通过）`
+- `publish_mode = draft_only` / `login_state = unknown`
+- → **未碰 publisher-xhs**，未登录创作者中心，无申诉试探。
+
+## 异常 / 阻塞
+
+1. **🆕 cua_repl tool 已挂载但无 browser 实例**——本次新发现的边界状态。既有 README/automation.toml 的"cron vs Codex session"二分模型把判定条件定在"工具挂载"，但运行时 `listBrowsers=[]` 让真扫无法进行。建议下一步明确"有 cua_repl **且**有可用 browser"才算 Codex session 模式，否则一律降级 lite。
+2. **平行 agent 干扰**：22:15-22:25 平行 1015-night agent 已把当晚高优 handle（karpathy×2 + DeepMind）的近期真帖清空，本轮候选池事实上已被打空；本次靠 seen-posts.json dedup 也没漏出。
+3. **1015 当日 OpenAI/AnthropicAI/GoogleDeepMind/karpathy 4 个高优 handle 已被 6+ 次轮扫打光**，1015-night 若恢复 cua_repl 真扫，下一档 fallback 是 JensenHuang / NVIDIA / dotey / oran_ge / op7418 / deepseek_ai / Alibaba_Qwen 中次优 handle。
+4. **`outputs/1015-night/grok-voice-3-launch/` 是早间 lite scan 占位空壳**（screenshots/=0，无 posted_url），结构合法但不算数，可在下轮清理或补抓真图。
+5. **cooldown 30 min**：本轮 0 发，不触发限流；上一次 2110736877297004939 (22:18:50) → 本轮 22:47:30，间隔 28 min 略低于 30 min 但未发，无影响。
+
+---
+
+## 一句话结论
+
+`candidate_count=0`、完成版落盘 `0`、已发 X `0`、XHS 按预期停手；本轮根本阻塞是 **cua_repl tool 挂载但无 browser 实例**，已降级到 lite 兜底，1015-night 高优 handle 也已被平行 agent 清空。memory.md 已落本次记录。
+# Status · 2026-10-15T23:01:30+08:00 · Codex session 触发 · post-1015-late 第 2 轮
+
+| 字段 | 值 |
+|------|---|
+| **candidate_count** | **0** |
+| **完成版落盘** | **0 条**（无新增 `outputs/1015-night/*/`） |
+| **已发 X URL** | **0 条**（无可发素材） |
+| **XHS 状态** | 仍 banned（`state/account-safety.yaml#xhs.ban_status.is_banned=true`），未碰 `publisher-xhs` |
+| **异常 / 阻塞** | **cua_repl 工具在线但 host 无任何 browser 实例** → 降级 lite scan → 仍 0 候选 |
+
+## 链路实际跑过的步骤
+
+1. ✅ 读 `skills/README.md` → 判定 Codex session 模式（cua_repl 已挂载）
+2. ✅ 读 `state/*.yaml` × 9 + `state/seen-posts.json` + `state/recent-picks.json` + `state/published-posts.json` + memory.md（最近一轮 22:58:30 已发 3 条：OpenAI Simons / NVIDIA UK / oran_ge Muse）
+3. ✅ 优先 cua_repl 真扫 watchlist：
+   - `cua.getState().browsers = []`
+   - `cua.listBrowsers() = []`
+   - `cua.createBrowserTab("iab", …)` → `Browser is not available`
+   - `cua.createBrowserTab("chrome", "https://x.com/FrankFika", {visible:true})` → 首次成功但 binding 立即失效
+   - `cua.getBrowser({id:"iab"/"chrome"/"2"})` → 全部 `Browser is not available`
+4. ⤵️ 降级 → 跑 `bash scripts/scan-slot.sh night`（按 README §Cron 模式兜底）
+5. ❌ `found 0 candidate(s)` —— mmx_search 不索引 x.com + 1015-night 高优 handle 候选池已被 22:21 / 22:25 / 22:58 三轮打空（karpathy ×2、DeepMind、AnthropicAI、OpenAI、NVIDIA、oran_ge 全部已发）
+6. 🛑 候选 = 0 → 按 README "候选 0 → memory + status 写明，不要硬塞" 规则停手
+7. ✅ memory.md 已追加本轮记录（$CODEX_HOME/automations/.../memory.md §2026-10-15T23:01:30）
+8. ✅ 本轮 0 candidate / 0 posted 全部如实报
+
+## 与上一轮（22:58:30）的对照
+
+| | 22:58:30 (1015-late-01..03) | 23:01:30 (本轮) |
+|---|---|---|
+| cua_repl browser | ✅ 可用 | ❌ 0 个实例 |
+| 候选 | 3（OpenAI / NVIDIA / oran_ge） | 0 |
+| 完成版落盘 | 3 | 0 |
+| 已发 X | 3 条 URL | 0 |
+| XHS | banned 未动 | banned 未动 |
+
+## 给 Fang 的下一步建议（最高优先级）
+
+**下一轮要恢复真扫，最小动作 = 在 Codex 内置浏览器里手动打开任意一个网页**（或在 iab 打开 `https://x.com/FrankFika`）—— 这样 `cua.listBrowsers()` 才会返回非空。否则每轮都只能跑 lite 兜底、且连续 5 轮命中 0（01:18 / 07:57 / 08:45 / 22:47 / 23:01），实际等于 22:00 后停摆。
+
+如果不想每轮手动开 iab，可考虑：把 `scripts/launchd/com.codex.short-posts.scheduler.plist` 的 21:00 之前的 cron slot 也启用 codex exec（保持每 3h 一发，0:00 / 03:00 / 06:00 …），让真扫在 21:00 节点尽量命中；或者让 Codex app 保持前台运行（之前 Codex app automation 抽风疑似与 foreground 状态相关）。
+
+::
+
+`::inbox-item{type="status",slot="post-1015-late-2",candidates=0,posted_x=0,xhs="banned",blocks="cua_repl:no_browser+scan_slot:0_hit"}`

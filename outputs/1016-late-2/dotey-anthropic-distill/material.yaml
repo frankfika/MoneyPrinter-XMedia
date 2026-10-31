@@ -1,0 +1,29 @@
+material_id: 1016-late-2-01
+slot: late-2
+scanned_at: '2026-10-16T01:55:00+08:00'
+author:
+  name: 宝玉
+  handle: dotey
+  lang: zh
+original:
+  url: https://x.com/dotey/status/2110733274448306267
+  post_id: '2110733274448306267'
+  posted_at: '2026-10-15T22:55:00+00:00'
+metrics:
+  views: 21469
+  likes: 55
+  retweets: 13
+  replies: 40
+  bookmarks: 15
+ai_match: true
+summary: >-
+  Anthropic 告诉投资人：蒸馏收入占公司营收 5%-7%，Q3 已经大幅削减。
+  来源 FT 援引 4 位直接知情人士 + The Information 同区间报道。
+  按 Q2 营收 $11.5B 推算约 $5.75-8 亿；2 月点名 DeepSeek / 月之暗面 /
+  阿里用 2.4 万虚假账号绕限制蒸馏 1600 万次对话。Anthropic 正在筹备上市。
+evidence_links:
+  - https://x.com/dotey/status/2110733274448306267
+  - https://x.com/simonw/status/2110731740863725604
+  - https://ft.com/content/11632d
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-16 Codex session)

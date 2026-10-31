@@ -1,0 +1,44 @@
+material_id: "1015-late-01"
+slot: late
+scanned_at: "2026-10-15T22:43:00+08:00"
+
+author:
+  name: "OpenAI"
+  handle: "OpenAI"
+  lang: en
+
+original:
+  url: "https://x.com/OpenAI/status/2110741355739963884"
+  post_id: "2110741355739963884"
+  posted_at: "2026-10-15T22:35:00+08:00"
+
+metrics:
+  views: 46092
+  likes: 456
+  retweets: 51
+  replies: 89
+  bookmarks: 34
+
+ai_match: true
+
+summary: |
+  OpenAI 给 Simons Foundation 数学 AI 计划投 $5M（基金本身 $15M）。
+  数学家拿这笔钱验证、扩展 AI 的数学成果，还能调用 OpenAI 的模型 + 算力。
+  把"AI 解数学"从演示变成科学发现的关键一步。
+  9 分钟破 3.8 万浏览，22:43 现在 4.6 万，跟 AnthropicAI 一起成为 Simons 联合伙伴。
+
+evidence_links:
+  - label: "OpenAI 原帖"
+    url: "https://x.com/OpenAI/status/2110741355739963884"
+  - label: "Simons Foundation 原帖"
+    url: "https://x.com/SimonsFdn/status/..." 
+  - label: "FT 报道（背景）"
+    url: "https://ft.com/content/11632d"
+
+screenshots_needed:
+  - "OpenAI Simons 帖正文 + Simons quote"
+  - "OpenAI 帖子评论区片段"
+
+treatment_hint: quote_retweet
+dedup_hits: []
+topic_signature: "openai-simons-foundation-math-ai-5m"

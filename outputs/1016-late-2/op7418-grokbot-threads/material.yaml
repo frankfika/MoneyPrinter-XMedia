@@ -1,0 +1,26 @@
+material_id: 1016-late-2-03
+slot: late-2
+scanned_at: '2026-10-16T01:55:00+08:00'
+author:
+  name: 歸藏 (guizang.ai)
+  handle: op7418
+  lang: zh
+original:
+  url: https://x.com/op7418/status/2108966708740505828
+  post_id: '2108966708740505828'
+  posted_at: '2026-10-15T18:00:00+00:00'
+metrics:
+  views: 60444
+  likes: 200
+  retweets: 30
+  replies: 20
+  bookmarks: 50
+ai_match: true
+summary: >-
+  歸藏分享 GrokBot 把复杂推串内容拼成长文档的用法，适合手机阅读。
+  示例：LLM 用纯代码完成细节丰富的 3D 龙建模分享过程，Grok bot
+  一键把所有内容拉成可读长文。简单但实用的工作流 tip。
+evidence_links:
+  - https://x.com/op7418/status/2108966708740505828
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan (2026-10-16 Codex session)

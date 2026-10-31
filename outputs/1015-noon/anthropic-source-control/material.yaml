@@ -1,0 +1,40 @@
+material_id: "1015-noon-01"
+slot: noon
+scanned_at: "2026-10-15T10:08:00+08:00"
+
+author:
+  name: "Anthropic"
+  handle: "AnthropicAI"
+  lang: en
+
+original:
+  url: "https://x.com/AnthropicAI/status/2110047081414987957"
+  post_id: "2110047081414987957"
+  posted_at: "2026-10-14T17:30:00+00:00"  # 17h before scan (Oct 14 17:30 UTC = Oct 15 02:30 Shanghai)
+  quoted: null
+
+metrics:
+  views: 7292205
+  likes: 24609
+  reposts: 4510
+  replies: 1062
+  bookmarks: 18906
+
+ai_match: true
+
+summary: |
+  Anthropic 自研 in-house source control：5 月每天合并约 2,500 次代码变更，9 月已涨到每天 30,000+ 次。
+  老的基础设施是为人类规模设计的，现在直接被 agent 数量卡住脖子。Engineering blog 长篇揭秘。
+  12 小时内 7.3M 浏览 / 24K 点赞 / 4.5K 转。
+
+evidence_links:
+  - https://x.com/AnthropicAI/status/2110047081414987957
+  - https://www.anthropic.com/engineering/redesigning-source-control-at-anthropic
+
+screenshots_needed:
+  - 原帖正文 + 7.3M 浏览
+  - AnthropicAI 主页 timeline 顶部
+
+treatment_hint: quote_retweet
+dedup_hits: []
+source: hot-topic-tracker cua_repl scan (AnthropicAI timeline)

@@ -1,0 +1,40 @@
+material_id: "1015-noon-02"
+slot: noon
+scanned_at: "2026-10-15T10:08:00+08:00"
+
+author:
+  name: "OpenAI"
+  handle: "OpenAI"
+  lang: en
+
+original:
+  url: "https://x.com/OpenAI/status/2107894997538525580"
+  post_id: "2107894997538525580"
+  posted_at: "2026-10-08T00:00:00+00:00"  # Pinned, Oct 8
+  quoted: null
+
+metrics:
+  views: 6303150
+  likes: 23679
+  reposts: 3414
+  replies: 1374
+  bookmarks: 6616
+
+ai_match: true
+
+summary: |
+  OpenAI 把 GPT-6 + Intelligent UI 全部铺开给所有 ChatGPT 用户。
+  Intelligent UI 强调"动态 + 视觉化 + 即时交互工具"，不再只是问答框。
+  Pinned 帖。10 天 6.3M 浏览 / 23K 点赞 / 3.4K 转。
+
+evidence_links:
+  - https://x.com/OpenAI/status/2107894997538525580
+  - https://openai.com/
+
+screenshots_needed:
+  - 原帖正文 + 6.3M 浏览
+  - OpenAI 主页 timeline 顶部（GPT-6 为 Pinned 第一条）
+
+treatment_hint: quote_retweet
+dedup_hits: []
+source: hot-topic-tracker cua_repl scan (OpenAI timeline)

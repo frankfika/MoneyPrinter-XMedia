@@ -1,0 +1,4 @@
+2.5 倍速换 2 倍价，Anthropic 这一刀砍到按小时算钱的人——但 /fast 这种「掐表快答」场景对 agent loop 反而香，跑几十步 agent 想快不能更慢。
+
+之前 op7418 那条 JEV 视频理解的复刻任务就靠 /fast 跑通了：
+https://x.com/FrankFika/status/2110782281774440472

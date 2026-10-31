@@ -1,0 +1,25 @@
+# material_id: 1015-night-02
+# author_handle: karpathy
+# source_url: https://x.com/karpathy/status/2105909609487872075
+# draft_at: 2026-10-15T23:05:30+08:00
+# 状态：XHS 仍封禁，本稿仅供 Fang 手贴
+
+【LLM 从没见过图，但它会画世界地图】
+
+karpathy 给了一个超简单的评估方法：给模型 16,200 个随机经纬度坐标，纯文本格式，问「这片是陆地还是海洋？」——把答案画成图。
+
+结果炸了：
+🎯 Claude Opus 4.5 → 81.3%
+🎯 Claude Sonnet 4.5 → 91.5%
+🎯 Llama 5 → 98%+
+🎯 Fable 5.1 → 98.2%
+
+所有模型都能画出一张还挺像样的世界地图。
+
+karpathy 的 takeaway：这是「压缩互联网」的副作用。LLM 从来没见过图像，只是读了海量文本——人类对地理位置的描述足够密集到让模型「内化」出地球长什么样。
+
+9 行 prompt，零图，0 token 视觉输入，纯文本推理出全球地理。开源 LLM 已经在某些维度赶上甚至超过闭源大模型。
+
+📎 karpathy 原帖：https://x.com/karpathy/status/2105909609487872075
+
+#Karpathy #LLM #开源模型 #Claude #Llama #AI评估

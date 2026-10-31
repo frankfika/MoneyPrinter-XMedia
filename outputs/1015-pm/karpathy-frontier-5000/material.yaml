@@ -1,0 +1,43 @@
+material_id: "1015-pm-01"
+slot: pm
+scanned_at: "2026-10-15T15:08:00+08:00"
+
+author:
+  name: "Andrej Karpathy"
+  handle: "karpathy"
+  lang: en
+
+original:
+  url: "https://x.com/karpathy/status/2109361546505966046"
+  post_id: "2109361546505966046"
+  posted_at: "2026-10-12"
+
+metrics:
+  views: 6421333
+  likes: 43071
+  retweets: 7884
+  replies: 2004
+  bookmarks: 29865
+
+ai_match: true
+
+summary: |
+  Karpathy 把全球 LLM 使用者分成 4 层：
+  ~60 亿人几乎没碰过 LLM（75%），
+  ~10-20 亿人当 Google 用，
+  ~2000 万专业用户做 agent，
+  ~5000 人见过内部 frontier 级系统（千 agent 协作、数周软件项目）。
+  引用 4 月 10 日老帖，6.4M 浏览、43K 赞、7.8K 转、29.8K 收藏。
+
+evidence_links:
+  - label: "原帖（引用 4/10 旧帖）"
+    url: "https://x.com/karpathy/status/2109361546505966046"
+  - label: "4 月原帖"
+    url: "https://x.com/karpathy/status/...apr10..."
+
+screenshots_needed:
+  - "Karpathy 原帖正文+4 层 tier 数字"
+  - "热门评论 / 时间线顶部一段"
+
+treatment_hint: quote_retweet
+dedup_hits: []

@@ -1,0 +1,5 @@
+=== slot=am ===
+[2026-10-15T01:19:13+08:00] scan-slot.sh SLOT=am DATE=1015 (lite: web search only)
+[2026-10-15T01:19:14+08:00] scan-slot done.
+=== slot=noon ===
+[2026-10-15T01:19:16+08:00] scan-slot.sh SLOT=noon DATE=1015 (lite: web search only)

@@ -1,0 +1,24 @@
+material_id: 1016-pm-01
+slot: pm
+scanned_at: '2026-10-16T10:32:00+08:00'
+author:
+  name: SemiAnalysis
+  handle: SemiAnalysis_
+  lang: en
+original:
+  url: https://x.com/SemiAnalysis_/status/2110891071706198431
+  post_id: '2110891071706198431'
+  posted_at: '2026-10-16T09:11:00+08:00'
+metrics:
+  views: 15743
+  likes: 0
+  retweets: 0
+  replies: 0
+  bookmarks: 0
+ai_match: true
+summary: >-
+  Google TPUv7 首个外部 agentic benchmark:1.42x perf/$ 击败 NVIDIA GB300 NVL72 FP4,2.5x 击败 AMD MI355X — 三家 AI 芯片直接对比
+evidence_links:
+  - https://x.com/SemiAnalysis_/status/2110891071706198431
+treatment_hint: quote_retweet
+source: hot-topic-tracker cua_repl scan

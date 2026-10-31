@@ -1,0 +1,14 @@
+Google DeepMind 的 SynthID 进了 TIME 2026 年度发明榜。
+
+累计已经给 180 亿张图片 + 视频打了 AI 水印——目标就一个：让普通人能一眼分清「这是 AI 生成的」。
+
+但 18 亿是个有意思的数。
+全球一年新增图片/视频量是千亿级别，180 亿只是其中一小部分。剩下没打标的，要么是别的水印方案，要么是裸奔。
+
+真正的难题不是技术，是「所有人都用同一把尺」。
+
+https://x.com/GoogleDeepMind/status/2110715601454784965
+
+# material_id: 1015-eve-03
+# treatment: quote_retweet
+# screenshots: x-googledeepmind-post.png, x-googledeepmind-profile-top.png

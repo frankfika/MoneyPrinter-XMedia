@@ -1,0 +1,30 @@
+material_id: 1015-am-02
+slot: am
+scanned_at: '2026-10-15T08:46:00+08:00'
+author:
+  name: Anthropic
+  handle: AnthropicAI
+  lang: en
+original:
+  url: https://x.com/AnthropicAI/status/2110289695888511368
+  post_id: '2110289695888511368'
+  posted_at: '2026-10-14T08:40:00+00:00'
+metrics:
+  views: 557900
+  likes: 3128
+  retweets: 377
+  replies: 391
+  bookmarks: 317
+ai_match: true
+summary: >-
+  Anthropic 第五个亚太办公室落地新加坡，与政府签 AI 安全 MOU。新加坡人均
+  Claude 使用量全球第二，6 倍人口预期；1500 名 GovTech 工程师已用 Claude Code；
+  DBS / GIC / Grab 都在用。
+evidence_links:
+  - https://x.com/AnthropicAI/status/2110289695888511368
+screenshots_needed:
+  - 原帖正文+链接卡
+  - 主页 timeline 上下文
+treatment_hint: quote_retweet
+dedup_hits: []
+source: hot-topic-tracker cua_repl scan (AnthropicAI timeline)
